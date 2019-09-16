@@ -1,4 +1,4 @@
-# ailia-sdk
+# ailia SDK
 
 ## About ailia SDK
 
