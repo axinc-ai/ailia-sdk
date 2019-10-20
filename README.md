@@ -12,7 +12,7 @@ ONNX opset=10, CaffeModel
 
 |OS|Architecture|Accelerator|Library|
 |:---|:---|:---|:---|
-|Windows|x86, x64|C++AMP, OpenCL, cuDNN|dll|
+|Windows|x86, x64|C++AMP, cuDNN|dll|
 |Mac|x64|MetalPerformanceShaders|dylib, bundle|
 |iOS|armv7a, arm64|MetalPerformanceShaders|a|
 |Android|armv7a, arm64,x86|RenderScript, OpenCL|so,a|
