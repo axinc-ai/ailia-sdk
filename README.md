@@ -10,13 +10,13 @@ ONNX opset=10, CaffeModel
 
 ## Architecture
 
-|OS|Backend|
-|:--|:--|
-|Windows|C++AMP, cuDNN|
-|Mac|MetalPerformanceShaders|
-|iOS|MetalPerformanceShaders|
-|Android|RenderScript, OpenCL|
-|Linux|OpenCL, cuDNN|
+|OS|Architecture|Accelerator|Library|
+|:---|:---|:---|:---|
+|Windows|x86, x64|C++AMP, OpenCL, cuDNN|dll|
+|Mac|x64|MetalPerformanceShaders|dylib, bundle|
+|iOS|armv7a,arm64,x64|MetalPerformanceShaders|a|
+|Android|armv7a,arm64,x86|RenderScript, OpenCL|so,a|
+|Linux|x64|OpenCL, cuDNN|so|
 
 WIP : DirectML, MKLDNN, OpenVX
 
