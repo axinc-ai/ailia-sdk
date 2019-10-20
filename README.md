@@ -8,6 +8,10 @@ ailia SDK is a cross-platform high speed inference SDK. It provides a consistent
 
 [ailia SDK that realizes high-speed deep learning inference is adopted in the CLIP STUDIO PAINT.](https://www.axell.co.jp/ir/pdf/AXELL_PR20190717.pdf)
 
+## Documentation
+
+[ailia-sdk/wiki](https://github.com/axinc-ai/ailia-sdk/wiki)
+
 ## More Information
 
 ax Inc. : https://axinc.jp/en/
