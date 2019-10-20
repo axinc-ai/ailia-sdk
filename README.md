@@ -8,7 +8,7 @@ ailia SDK is a cross-platform high speed inference SDK. It provides a consistent
 
 ONNX opset=10, CaffeModel
 
-## Architecture
+## Supporting Platform
 
 |OS|Architecture|Accelerator|Library|
 |:---|:---|:---|:---|
