@@ -34,6 +34,10 @@ WIP : DirectML, MKLDNN, OpenVX
 
 ## More Information
 
+ailia models : https://github.com/axinc-ai/ailia-models
+
+export to onnx : https://github.com/axinc-ai/export-to-onnx
+
 ax Inc. : https://axinc.jp/en/
 
 ailia SDK : https://ailia.jp/en/
