@@ -4,6 +4,22 @@
 
 ailia SDK is a cross-platform high speed inference SDK. It provides a consistent C++ API on Windows, Mac, iOS and Android, and makes good use of the GPU, if available, to serve accelerated computing. We are planning to expand our support to embedded devices using OpenCL and OpenVX.
 
+## Supporting Model Format
+
+ONNX opset=10
+
+## Architecture
+
+|OS|Backend|
+|:--|:--|
+|Windows|C++AMP, cuDNN|
+|Mac|MetalPerformanceShaders|
+|iOS|MetalPerformanceShaders|
+|Android|RenderScript, OpenCL|
+|Linux|OpenCL, cuDNN|
+
+WIP : DirectML, MKLDNN, OpenVX
+
 ## Documentation
 
 [ailia-sdk/wiki](https://github.com/axinc-ai/ailia-sdk/wiki)
