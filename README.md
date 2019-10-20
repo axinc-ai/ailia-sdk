@@ -20,7 +20,7 @@ ONNX opset=10
 
 WIP : DirectML, MKLDNN, OpenVX
 
-## Documentation
+## API
 
 [ailia-sdk/wiki](https://github.com/axinc-ai/ailia-sdk/wiki)
 
