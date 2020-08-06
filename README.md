@@ -2,7 +2,7 @@
 
 ## About ailia SDK
 
-ailia SDK is a cross-platform high speed inference SDK. It provides a consistent C++ API on Windows, Mac, iOS and Android, and makes good use of the GPU, if available, to serve accelerated computing. We are planning to expand our support to embedded devices using OpenCL and OpenVX.
+[ailia SDK](https://ailia.jp/en/) is a cross-platform high speed inference SDK. The ailia SDK provides a consistent C++ API on Windows, Mac, Linux, iOS, Android and Jetson. It supports Unity, Python and JNI for efficient AI implementation. The ailia SDK makes great use of the GPU via Vulkan and Metal to serve accelerated computing.
 
 ## Supporting Model Format
 
@@ -12,17 +12,36 @@ ONNX opset=10, CaffeModel
 
 |OS|Architecture|Accelerator|Library|
 |:---|:---|:---|:---|
-|Windows|x86, x64|C++AMP, cuDNN|dll|
-|Mac|x64|MetalPerformanceShaders|dylib, bundle|
-|iOS|armv7a, arm64|MetalPerformanceShaders|a|
-|Android|armv7a, arm64, x86|RenderScript, OpenCL|so, a|
+|Windows|x86, x64, arm64|C++AMP, cuDNN|dll|
+|Mac|x64|Metal|dylib, bundle|
+|iOS|armv7a, arm64|Metal|a|
+|Android|armv7a, arm64, x86|RenderScript, Vulkan|so, a|
 |Linux|x64|OpenCL, cuDNN|so|
+|Jetson|x64|cuDNN|so|
 
-WIP : DirectML, MKLDNN, OpenVX
+## Install ailia SDK
 
-## API
+- [Download a free evaluation version of ailia SDK](https://ailia.jp/en/trial)
+- Unzip ailia SDK
+- Find the location of Python site-packages directory
+```
+python -c "import site; print (site.getsitepackages())"
+```
 
-[ailia-sdk/wiki](https://github.com/axinc-ai/ailia-sdk/wiki)
+- Copy the ​ailia ​folder located in the ​python f​older to site-packages
+- Copy library files (dll or dylib or so) from the folder library to site-packages/ailia
+
+## Pre-trained models
+
+ailia MODELS : https://github.com/axinc-ai/ailia-models
+
+## Documents
+
+blog : https://medium.com/axinc
+
+export to onnx : https://github.com/axinc-ai/export-to-onnx
+
+api : https://github.com/axinc-ai/ailia-sdk/wiki
 
 ## Case
 
@@ -32,16 +51,8 @@ WIP : DirectML, MKLDNN, OpenVX
 
 [DLLAB Engineer Days : ONNX Export & Optimize](https://www.slideshare.net/KazukiKyakuno/dllab-engineer-days-onnx-export-optimize)
 
-## More Information
-
-ailia models : https://github.com/axinc-ai/ailia-models
-
-export to onnx : https://github.com/axinc-ai/export-to-onnx
+## Contact
 
 ax Inc. : https://axinc.jp/en/
-
-ailia SDK : https://ailia.jp/en/
-
-## Contact
 
 contact@axinc.jp
