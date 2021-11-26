@@ -8,9 +8,11 @@ SDK for optimized running of many popular neural networks on multiple platform
 
 [ailia SDK](https://ailia.jp/en/) is a cross-platform high speed inference SDK. The ailia SDK provides a consistent C++ API on Windows, Mac, Linux, iOS, Android, Jetson and RaspberryPi. It supports Unity, Python and JNI for efficient AI implementation. The ailia SDK makes great use of the GPU via Vulkan and Metal to serve accelerated computing.
 
+<!--
 ## ailia SDK API
 
 [C++ (JP)](https://axinc-ai.github.io/ailia-sdk/api/cpp/jp/)
+-->
 
 ## ailia SDK Tutorial
 
