@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: ailia_detector.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_65956747a6f6d37dadfdcf67b1aa1faa.html">export</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">ailia_detector.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>AILIA 物体検出ライブラリ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="ailia_8h_source.html">ailia.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ailia__format_8h_source.html">ailia_format.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ailia_detector.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="ailia__detector_8h__incl.png" border="0" usemap="#aailia__detector_8h" alt=""/></div>
+<map name="ailia__detector_8h" id="aailia__detector_8h">
+<area shape="rect" title="AILIA 物体検出ライブラリ" alt="" coords="43,5,152,32"/>
+<area shape="rect" href="ailia_8h.html" title="推論ライブラリ" alt="" coords="19,80,75,107"/>
+<area shape="rect" href="ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="99,80,199,107"/>
+<area shape="rect" href="ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="5,155,88,181"/>
+</map>
+</div>
+</div>
+<p><a href="ailia__detector_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__AILIADetectorObject.html">_AILIADetectorObject</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a2c39f99634b68cc986a95bc3db747862"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a2c39f99634b68cc986a95bc3db747862">AILIA_DETECTOR_OBJECT_VERSION</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:a2c39f99634b68cc986a95bc3db747862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c26e71aa3fe846a930eb0103012deb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a31c26e71aa3fe846a930eb0103012deb">AILIA_DETECTOR_ALGORITHM_YOLOV1</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a31c26e71aa3fe846a930eb0103012deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633ba67c4112803ca96c8ce0aae1dbd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a633ba67c4112803ca96c8ce0aae1dbd2">AILIA_DETECTOR_ALGORITHM_YOLOV2</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:a633ba67c4112803ca96c8ce0aae1dbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d1a5860a085e60bf92bca39bde8439"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#ad8d1a5860a085e60bf92bca39bde8439">AILIA_DETECTOR_ALGORITHM_YOLOV3</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:ad8d1a5860a085e60bf92bca39bde8439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c07080cd33ce2b40f8541e45a765eb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a2c07080cd33ce2b40f8541e45a765eb9">AILIA_DETECTOR_ALGORITHM_YOLOV4</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:a2c07080cd33ce2b40f8541e45a765eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4bcbc67eee7238179d18b97cf80104"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a6c4bcbc67eee7238179d18b97cf80104">AILIA_DETECTOR_ALGORITHM_YOLOX</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:a6c4bcbc67eee7238179d18b97cf80104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28bd73425edd89fbd20d8b3f0e244e47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a28bd73425edd89fbd20d8b3f0e244e47">AILIA_DETECTOR_ALGORITHM_SSD</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="separator:a28bd73425edd89fbd20d8b3f0e244e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352993eb21311c738b50d41b8f3bdebf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a352993eb21311c738b50d41b8f3bdebf">AILIA_DETECTOR_FLAG_NORMAL</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a352993eb21311c738b50d41b8f3bdebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a40537f16d4b949a2f8ab7057e091e71d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIADetectorObject.html">_AILIADetectorObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a></td></tr>
+<tr class="separator:a40537f16d4b949a2f8ab7057e091e71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:acb3b4ae959b7c15ceca7034b48b62539"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#acb3b4ae959b7c15ceca7034b48b62539">ailiaCreateDetector</a> (struct AILIADetector **detector, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range, unsigned int algorithm, unsigned int category_count, unsigned int flags)</td></tr>
+<tr class="memdesc:acb3b4ae959b7c15ceca7034b48b62539"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを作成します。  <a href="ailia__detector_8h.html#acb3b4ae959b7c15ceca7034b48b62539">[詳解]</a><br /></td></tr>
+<tr class="separator:acb3b4ae959b7c15ceca7034b48b62539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8a4b5b262231404fd5a38b4560abd1"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a9f8a4b5b262231404fd5a38b4560abd1">ailiaDestroyDetector</a> (struct AILIADetector *detector)</td></tr>
+<tr class="memdesc:a9f8a4b5b262231404fd5a38b4560abd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを破棄します。  <a href="ailia__detector_8h.html#a9f8a4b5b262231404fd5a38b4560abd1">[詳解]</a><br /></td></tr>
+<tr class="separator:a9f8a4b5b262231404fd5a38b4560abd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db22154f11fe44b7e27a95fadf34ef2"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a7db22154f11fe44b7e27a95fadf34ef2">ailiaDetectorCompute</a> (struct AILIADetector *detector, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format, float threshold, float iou)</td></tr>
+<tr class="memdesc:a7db22154f11fe44b7e27a95fadf34ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">物体検出を行います。  <a href="ailia__detector_8h.html#a7db22154f11fe44b7e27a95fadf34ef2">[詳解]</a><br /></td></tr>
+<tr class="separator:a7db22154f11fe44b7e27a95fadf34ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a453116dfe6d50b57fb543fd599b7e6eb"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a453116dfe6d50b57fb543fd599b7e6eb">ailiaDetectorGetObjectCount</a> (struct AILIADetector *detector, unsigned int *obj_count)</td></tr>
+<tr class="memdesc:a453116dfe6d50b57fb543fd599b7e6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出結果の数を取得します。  <a href="ailia__detector_8h.html#a453116dfe6d50b57fb543fd599b7e6eb">[詳解]</a><br /></td></tr>
+<tr class="separator:a453116dfe6d50b57fb543fd599b7e6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac831a97ef163e1d100ade8542cbc111e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#ac831a97ef163e1d100ade8542cbc111e">ailiaDetectorGetObject</a> (struct AILIADetector *detector, <a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
+<tr class="memdesc:ac831a97ef163e1d100ade8542cbc111e"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出結果を取得します。  <a href="ailia__detector_8h.html#ac831a97ef163e1d100ade8542cbc111e">[詳解]</a><br /></td></tr>
+<tr class="separator:ac831a97ef163e1d100ade8542cbc111e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1cec9ad05d78a51af1017e1b02e948"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a3b1cec9ad05d78a51af1017e1b02e948">ailiaDetectorSetAnchors</a> (struct AILIADetector *detector, float *anchors, unsigned int anchors_count)</td></tr>
+<tr class="memdesc:a3b1cec9ad05d78a51af1017e1b02e948"><td class="mdescLeft">&#160;</td><td class="mdescRight">YoloV2などのためにアンカーズ (anchorsまたはbiases) の情報を設定します。  <a href="ailia__detector_8h.html#a3b1cec9ad05d78a51af1017e1b02e948">[詳解]</a><br /></td></tr>
+<tr class="separator:a3b1cec9ad05d78a51af1017e1b02e948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd9e4385de790b5fc031317bd81573e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a9bd9e4385de790b5fc031317bd81573e">ailiaDetectorSetInputShape</a> (struct AILIADetector *detector, unsigned int input_width, unsigned int input_height)</td></tr>
+<tr class="memdesc:a9bd9e4385de790b5fc031317bd81573e"><td class="mdescLeft">&#160;</td><td class="mdescRight">YoloV3またはYoloXでのモデルへの入力画像サイズを指定します。  <a href="ailia__detector_8h.html#a9bd9e4385de790b5fc031317bd81573e">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bd9e4385de790b5fc031317bd81573e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>AILIA 物体検出ライブラリ </p>
+<dl class="section author"><dt>著者</dt><dd>AXELL Corporation </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2021/07/28 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a28bd73425edd89fbd20d8b3f0e244e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28bd73425edd89fbd20d8b3f0e244e47">&#9670;&nbsp;</a></span>AILIA_DETECTOR_ALGORITHM_SSD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_ALGORITHM_SSD&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31c26e71aa3fe846a930eb0103012deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c26e71aa3fe846a930eb0103012deb">&#9670;&nbsp;</a></span>AILIA_DETECTOR_ALGORITHM_YOLOV1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_ALGORITHM_YOLOV1&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a633ba67c4112803ca96c8ce0aae1dbd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633ba67c4112803ca96c8ce0aae1dbd2">&#9670;&nbsp;</a></span>AILIA_DETECTOR_ALGORITHM_YOLOV2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_ALGORITHM_YOLOV2&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8d1a5860a085e60bf92bca39bde8439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d1a5860a085e60bf92bca39bde8439">&#9670;&nbsp;</a></span>AILIA_DETECTOR_ALGORITHM_YOLOV3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_ALGORITHM_YOLOV3&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c07080cd33ce2b40f8541e45a765eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c07080cd33ce2b40f8541e45a765eb9">&#9670;&nbsp;</a></span>AILIA_DETECTOR_ALGORITHM_YOLOV4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_ALGORITHM_YOLOV4&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c4bcbc67eee7238179d18b97cf80104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4bcbc67eee7238179d18b97cf80104">&#9670;&nbsp;</a></span>AILIA_DETECTOR_ALGORITHM_YOLOX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_ALGORITHM_YOLOX&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a352993eb21311c738b50d41b8f3bdebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352993eb21311c738b50d41b8f3bdebf">&#9670;&nbsp;</a></span>AILIA_DETECTOR_FLAG_NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_FLAG_NORMAL&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c39f99634b68cc986a95bc3db747862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c39f99634b68cc986a95bc3db747862">&#9670;&nbsp;</a></span>AILIA_DETECTOR_OBJECT_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_DETECTOR_OBJECT_VERSION&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="a40537f16d4b949a2f8ab7057e091e71d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40537f16d4b949a2f8ab7057e091e71d">&#9670;&nbsp;</a></span>AILIADetectorObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__AILIADetectorObject.html">_AILIADetectorObject</a> <a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="acb3b4ae959b7c15ceca7034b48b62539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3b4ae959b7c15ceca7034b48b62539">&#9670;&nbsp;</a></span>ailiaCreateDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateDetector </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector **&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>algorithm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>category_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>検出オブジェクトを作成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>検出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">format</td><td>ネットワークの画像フォーマット (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">channel</td><td>ネットワークの画像チャンネル (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">range</td><td>ネットワークの画像レンジ (AILIA_NETWORK_IMAGE_RANGE_*) </td></tr>
+    <tr><td class="paramname">algorithm</td><td>検出アルゴリズム(AILIA_DETECTOR_ALGORITHM_*) </td></tr>
+    <tr><td class="paramname">category_count</td><td>検出カテゴリ数(VOCの場合は20、COCOの場合は80、などを指定) </td></tr>
+    <tr><td class="paramname">flags</td><td>追加オプションフラグ(AILIA_DETECTOR_FLAG_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a9f8a4b5b262231404fd5a38b4560abd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8a4b5b262231404fd5a38b4560abd1">&#9670;&nbsp;</a></span>ailiaDestroyDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyDetector </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector *&#160;</td>
+          <td class="paramname"><em>detector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>検出オブジェクトを破棄します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>検出オブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7db22154f11fe44b7e27a95fadf34ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db22154f11fe44b7e27a95fadf34ef2">&#9670;&nbsp;</a></span>ailiaDetectorCompute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorCompute </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector *&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>iou</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>物体検出を行います。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>検出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">src</td><td>画像データ(32bpp) </td></tr>
+    <tr><td class="paramname">src_stride</td><td>1ラインのバイト数 </td></tr>
+    <tr><td class="paramname">src_width</td><td>画像幅 </td></tr>
+    <tr><td class="paramname">src_height</td><td>画像高さ </td></tr>
+    <tr><td class="paramname">src_format</td><td>画像フォーマット (AILIA_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">threshold</td><td>検出しきい値(0.1f等)(小さいほど検出されやすくなり、検出数増加) </td></tr>
+    <tr><td class="paramname">iou</td><td>重複除外しきい値(0.45f等)(小さいほど重複を許容せず検出数減少) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="ac831a97ef163e1d100ade8542cbc111e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac831a97ef163e1d100ade8542cbc111e">&#9670;&nbsp;</a></span>ailiaDetectorGetObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorGetObject </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector *&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>obj_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>検出結果を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>検出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">obj</td><td>オブジェクト情報 </td></tr>
+    <tr><td class="paramname">obj_idx</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_DETECTOR_OBJECT_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。  <a class="el" href="ailia_8h.html#aa1a5d4d2263d82681f3f6250552f1b92" title="推論を行い推論結果を取得します。">ailiaPredict()</a> を一度も実行していない場合は <a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a> が返ります。 検出結果は推定確率順でソートされます。 </dd></dl>
+
+</div>
+</div>
+<a id="a453116dfe6d50b57fb543fd599b7e6eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a453116dfe6d50b57fb543fd599b7e6eb">&#9670;&nbsp;</a></span>ailiaDetectorGetObjectCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorGetObjectCount </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector *&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>obj_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>検出結果の数を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>検出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">obj_count</td><td>オブジェクト数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a3b1cec9ad05d78a51af1017e1b02e948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1cec9ad05d78a51af1017e1b02e948">&#9670;&nbsp;</a></span>ailiaDetectorSetAnchors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorSetAnchors </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector *&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>anchors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>anchors_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>YoloV2などのためにアンカーズ (anchorsまたはbiases) の情報を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>検出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">anchors</td><td>アンカーズの寸法 (検出ボックスの形状、高さと幅) </td></tr>
+    <tr><td class="paramname">anchors_count</td><td>アンカーズの数 (anchorsの配列サイズの半分) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。  YoloV2などは学習時に決定された複数の検出ボックスを使用して物体検出を行います。このAPIで学習時に決定された検出ボックスの形状を設定することで、正しい推論を行います。 anchorsには{x,y,x,y...}の形式で格納します。 anchors_countが5の場合、anchorsは10次元の配列になります。 </dd></dl>
+
+</div>
+</div>
+<a id="a9bd9e4385de790b5fc031317bd81573e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bd9e4385de790b5fc031317bd81573e">&#9670;&nbsp;</a></span>ailiaDetectorSetInputShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorSetInputShape </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector *&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>input_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>input_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>YoloV3またはYoloXでのモデルへの入力画像サイズを指定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>検出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">input_width</td><td>モデルの入力画像幅 </td></tr>
+    <tr><td class="paramname">input_height</td><td>モデルの入力画像高さ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。  YoloV3では単一のモデルが任意の入力解像度に対応します。(32 の倍数制限あり) YoloXでは単一のモデルが任意の入力解像度に対応します。 計算量の削減等でモデルへの入力画像サイズを指定する場合この API を実行してください。 <a class="el" href="ailia__detector_8h.html#acb3b4ae959b7c15ceca7034b48b62539" title="検出オブジェクトを作成します。">ailiaCreateDetector()</a> () と <a class="el" href="ailia__detector_8h.html#a7db22154f11fe44b7e27a95fadf34ef2" title="物体検出を行います。">ailiaDetectorCompute()</a> () の間に実行する必要があります。 この API を実行しない場合、デフォルトの 416x416 を利用します。 YOLOv3またはYOLOX 以外で実行した場合、 <a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a> を返します。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

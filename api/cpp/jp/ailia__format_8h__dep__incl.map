@@ -1,0 +1,7 @@
+<map id="ailia_format.h" name="ailia_format.h">
+<area shape="rect" id="node1" title="AILIA フォーマット定義・変換" alt="" coords="227,5,327,32"/>
+<area shape="rect" id="node2" href="$ailia__classifier_8h.html" title="物体識別ライブラリ" alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node3" href="$ailia__detector_8h.html" title="AILIA 物体検出ライブラリ" alt="" coords="144,80,253,107"/>
+<area shape="rect" id="node4" href="$ailia__feature__extractor_8h.html" title="AILIA 特徴抽出ライブラリ" alt="" coords="277,80,437,107"/>
+<area shape="rect" id="node5" href="$ailia__pose__estimator_8h.html" title="AILIA 骨格検出・顔特徴点検出ライブラリ" alt="" coords="462,80,613,107"/>
+</map>

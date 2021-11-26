@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: ailia_audio.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_65956747a6f6d37dadfdcf67b1aa1faa.html">export</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ailia_audio.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ailia__audio_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#if       !defined(INCLUDED_AILIA_AUDIO)</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define            INCLUDED_AILIA_AUDIO</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#if !defined(AILIA_API)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    #if defined(_MSC_VER) &amp;&amp; !defined(_WIN64)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">        #define AILIA_API __stdcall</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">   22</a></span>&#160;<span class="preprocessor">        #define AILIA_API</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#adbae6663112279e070a757917c865f9d">   39</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_WIN_TYPE_HANN                   (1) </span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#ae897c7219615adcb3c6005363c0e96db">   49</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_WIN_TYPE_HAMMING                (2) </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a8a7409ed948ccf3e12b742cebd51270a">   60</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_STFT_CENTER_NONE                (0) </span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#abf12aa3feaa939ec41cae1fe0b8f0dfb">   70</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_STFT_CENTER_ENABLE              (1) </span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a9ff36c9b812927253653a77eb5959b06">   80</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_STFT_CENTER_SCIPY_DEFAULT       (2) </span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a9fe841d88f51f76c92a07a6a5fd2fbcd">   91</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FFT_NORMALIZE_NONE              (0) </span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a074e61d0e5a97ba12ff9edcfed631654">  101</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FFT_NORMALIZE_LIBROSA_COMPAT    (1) </span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#af075ba878926da3063b5c95bfcd1a8c1">  111</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FFT_NORMALIZE_PYTORCH_COMPAT    (1) </span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#af8711e54ff1e9babfe8071be40264e8f">  121</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FFT_NORMALIZE_SCIPY_COMPAT      (2) </span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a97c9166d30790140d1f1b76f044f390d">  132</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_MEL_NORMALIZE_NONE              (0) </span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a6d95544df241c8d35010e476383daec7">  142</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_MEL_NORMALIZE_ENABLE            (1) </span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#adeca7b4226d49f1932befb9da5945183">  153</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_MEL_SCALE_FORMULA_HTK           (1) </span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#acb21da8968b26cf8eaea564800950b0a">  163</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_MEL_SCALE_FORMULA_SLANYE        (0) </span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a5d53b005ca62c8784dc73cae86767096">  174</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_PHASE_FORM_COMPLEX              (1) </span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a54849b2090e37a1663ca46f5fa061b29">  184</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_PHASE_FORM_REAL                 (0) </span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a9be80ec183fc92b5c31c5b8bcba83583">  195</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FILTFILT_PAD_NONE               (0) </span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#ade54a6c8168944adbfb58fea07dd5f95">  205</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FILTFILT_PAD_ODD                (1) </span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a2f4deaea2550c2b3faa1ce54da869286">  215</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FILTFILT_PAD_EVEN               (2) </span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#ad0229c5797b4edb198b9b12812c7d8a6">  225</a></span>&#160;<span class="preprocessor">    #define AILIA_AUDIO_FILTFILT_PAD_CONSTANT           (3) </span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#ad786b198ffb1883968894253b9c66713">  248</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#ad786b198ffb1883968894253b9c66713">ailiaAudioLog1p</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> src_n);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a2606766d4ef7611fe037d9de953854ef">  278</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a2606766d4ef7611fe037d9de953854ef">ailiaAudioConvertPowerToDB</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> src_n, <span class="keywordtype">float</span> top_db);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a896cc1ba97066045a1c8717a8eba6260">  312</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a896cc1ba97066045a1c8717a8eba6260">ailiaAudioGetFrameLen</a>(<span class="keywordtype">int</span>* frame_n, <span class="keywordtype">int</span> sample_n, <span class="keywordtype">int</span> fft_n, <span class="keywordtype">int</span> hop_n, <span class="keywordtype">int</span> center);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a1e7a2e616821d17344b030d0138489f0">  344</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a1e7a2e616821d17344b030d0138489f0">ailiaAudioGetSampleLen</a>(<span class="keywordtype">int</span>* sample_n, <span class="keywordtype">int</span> frame_n, <span class="keywordtype">int</span> freq_n, <span class="keywordtype">int</span> hop_n, <span class="keywordtype">int</span> center);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#ac31f356b0fcf7b3bfd51d941bbd6f6db">  368</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#ac31f356b0fcf7b3bfd51d941bbd6f6db">ailiaAudioGetWindow</a>(<span class="keywordtype">void</span>* dst, <span class="keywordtype">int</span> window_n, <span class="keywordtype">int</span> win_type);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a28aa41d5f5c9da797be14e7cf4d88bf0">  394</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a28aa41d5f5c9da797be14e7cf4d88bf0">ailiaAudioFFT</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> fft_n);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a4329019dfe4e51ee63ad4d4af58da560">  420</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a4329019dfe4e51ee63ad4d4af58da560">ailiaAudioIFFT</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> fft_n);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a646f552b11b7068fbe1d31d6e39e2d34">  464</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a646f552b11b7068fbe1d31d6e39e2d34">ailiaAudioGetSpectrogram</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> sample_n, <span class="keywordtype">int</span> fft_n, <span class="keywordtype">int</span> hop_n, <span class="keywordtype">int</span> win_n, <span class="keywordtype">int</span> win_type, <span class="keywordtype">int</span> max_frame_n, <span class="keywordtype">int</span> center, <span class="keywordtype">float</span> power, <span class="keywordtype">int</span> norm_type);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160; </div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a42568a990b0d7940496d2288319374ca">  504</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a42568a990b0d7940496d2288319374ca">ailiaAudioGetInverseSpectrogram</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> frame_n, <span class="keywordtype">int</span> freq_n, <span class="keywordtype">int</span> hop_n, <span class="keywordtype">int</span> win_n, <span class="keywordtype">int</span> win_type, <span class="keywordtype">int</span> max_sample_n, <span class="keywordtype">int</span> center, <span class="keywordtype">int</span> norm_type);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160; </div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
+<div class="line"><a name="l00534"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a412313da98ac09695d5d816b19cc8e19">  534</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a412313da98ac09695d5d816b19cc8e19">ailiaAudioGetFBMatrix</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">int</span> freq_n,  <span class="keywordtype">float</span> f_min, <span class="keywordtype">float</span> f_max, <span class="keywordtype">int</span> mel_n, <span class="keywordtype">int</span> sample_rate, <span class="keywordtype">int</span> mel_norm, <span class="keywordtype">int</span> mel_formula);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160; </div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
+<div class="line"><a name="l00589"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a80ed686f7d6331d5d2225e29fba1fafa">  589</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a80ed686f7d6331d5d2225e29fba1fafa">ailiaAudioGetMelSpectrogram</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> sample_n, <span class="keywordtype">int</span> sample_rate, <span class="keywordtype">int</span> fft_n, <span class="keywordtype">int</span> hop_n, <span class="keywordtype">int</span> win_n, <span class="keywordtype">int</span> win_type, <span class="keywordtype">int</span> max_frame_n, <span class="keywordtype">int</span> center, <span class="keywordtype">float</span> power, <span class="keywordtype">int</span> fft_norm_type, <span class="keywordtype">float</span> f_min, <span class="keywordtype">float</span> f_max, <span class="keywordtype">int</span> mel_n, <span class="keywordtype">int</span> mel_norm_type, <span class="keywordtype">int</span> mel_formula);</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160; </div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160; </div>
+<div class="line"><a name="l00629"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a0041f8377ea55199a3097db6054cf7ac">  629</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a0041f8377ea55199a3097db6054cf7ac">ailiaAudioMagPhase</a>(<span class="keywordtype">void</span>* dst_mag, <span class="keywordtype">void</span>* dst_phase, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> freq_n, <span class="keywordtype">int</span> frame_n, <span class="keywordtype">float</span> power, <span class="keywordtype">int</span> phase_form);</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160; </div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
+<div class="line"><a name="l00655"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a0fed8d398083e8d7d0dbc01b08540487">  655</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a0fed8d398083e8d7d0dbc01b08540487">ailiaAudioStandardize</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keyword">const</span> <span class="keywordtype">int</span> src_n);</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160; </div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160; </div>
+<div class="line"><a name="l00687"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a8fe4522e6f4bd13e7f64ca91fe3dcef6">  687</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a8fe4522e6f4bd13e7f64ca91fe3dcef6">ailiaAudioComplexNorm</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keyword">const</span> <span class="keywordtype">int</span> src_n, <span class="keywordtype">float</span> power);</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
+<div class="line"><a name="l00719"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a1864c5a15a656cb6a2f4fe7460616234">  719</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a1864c5a15a656cb6a2f4fe7460616234">ailiaAudioConvertToMel</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keyword">const</span> <span class="keywordtype">void</span>* fb_mtrx, <span class="keywordtype">int</span> freq_n, <span class="keywordtype">int</span> frame_n, <span class="keywordtype">int</span> mel_n);</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
+<div class="line"><a name="l00751"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a116c6969aafa189e135abc546ad8211a">  751</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a116c6969aafa189e135abc546ad8211a">ailiaAudioFixFrameLen</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> freq_n, <span class="keywordtype">int</span> dst_frame_n, <span class="keywordtype">int</span> src_frame_n, <span class="keywordtype">float</span> pad_data);</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00785"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a941132716de6f293eae2948852d094d1">  785</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a941132716de6f293eae2948852d094d1">ailiaAudioResample</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> dst_sample_rate, <span class="keywordtype">int</span> dst_n, <span class="keywordtype">int</span> src_sample_rate, <span class="keywordtype">int</span> src_n);</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160; </div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
+<div class="line"><a name="l00807"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#aebbb245c9380e018c9e20b5ef2354ce8">  807</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#aebbb245c9380e018c9e20b5ef2354ce8">ailiaAudioGetResampleLen</a>(<span class="keywordtype">int</span>* dst_sample_n, <span class="keywordtype">int</span> dst_sample_rate, <span class="keywordtype">int</span> src_sample_n, <span class="keywordtype">int</span> src_sample_rate);</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160; </div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160; </div>
+<div class="line"><a name="l00853"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#aacb76e7abc326dacb810994d69b834e1">  853</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#aacb76e7abc326dacb810994d69b834e1">ailiaAudioLinerFilter</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keyword">const</span> <span class="keywordtype">void</span>* n_coef, <span class="keyword">const</span> <span class="keywordtype">void</span>* d_coef, <span class="keywordtype">void</span>* zi, <span class="keywordtype">int</span> dst_n, <span class="keywordtype">int</span> src_n, <span class="keywordtype">int</span> n_coef_n, <span class="keywordtype">int</span> d_coef_n, <span class="keywordtype">int</span> zi_n);</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160; </div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160; </div>
+<div class="line"><a name="l00891"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#af4d228d84ebb242becac43e2e68f44be">  891</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#af4d228d84ebb242becac43e2e68f44be">ailiaAudioGetLinerFilterZiCoef</a>(<span class="keywordtype">void</span>* dst_zi, <span class="keyword">const</span> <span class="keywordtype">void</span>* n_coef, <span class="keyword">const</span> <span class="keywordtype">void</span>* d_coef, <span class="keywordtype">int</span> dst_n, <span class="keywordtype">int</span> n_coef_n, <span class="keywordtype">int</span> d_coef_n);</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160; </div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160; </div>
+<div class="line"><a name="l00931"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#a19efcd63ae64c2677f3e480feb8c79a3">  931</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#a19efcd63ae64c2677f3e480feb8c79a3">ailiaAudioFilterFilter</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keyword">const</span> <span class="keywordtype">void</span>* n_coef, <span class="keyword">const</span> <span class="keywordtype">void</span>* d_coef, <span class="keywordtype">int</span> dst_n, <span class="keywordtype">int</span> src_n, <span class="keywordtype">int</span> n_coef_n, <span class="keywordtype">int</span> d_coef_n, <span class="keywordtype">int</span> pad_type, <span class="keywordtype">int</span> pad_len);</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160; </div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160; </div>
+<div class="line"><a name="l00963"></a><span class="lineno"><a class="line" href="ailia__audio_8h.html#aabc209b6253b9851a74d7a2ad22a2049">  963</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__audio_8h.html#aabc209b6253b9851a74d7a2ad22a2049">ailiaAudioGetNonSilentPos</a>(<span class="keywordtype">int</span>* dst_start_pos, <span class="keywordtype">int</span>* dst_length, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">int</span> sample_n, <span class="keywordtype">int</span> win_n, <span class="keywordtype">int</span> hop_n, <span class="keywordtype">float</span> thr_db);</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160; </div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160; </div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;}</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !defined(INCLUDED_AILIA_AUDIO) */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aailia__audio_8h_html_ac31f356b0fcf7b3bfd51d941bbd6f6db"><div class="ttname"><a href="ailia__audio_8h.html#ac31f356b0fcf7b3bfd51d941bbd6f6db">ailiaAudioGetWindow</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetWindow(void *dst, int window_n, int win_type)</div><div class="ttdoc">窓関数の係数を取得します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a116c6969aafa189e135abc546ad8211a"><div class="ttname"><a href="ailia__audio_8h.html#a116c6969aafa189e135abc546ad8211a">ailiaAudioFixFrameLen</a></div><div class="ttdeci">int AILIA_API ailiaAudioFixFrameLen(void *dst, const void *src, int freq_n, int dst_frame_n, int src_frame_n, float pad_data)</div><div class="ttdoc">実数スペクトログラム/メルスペクトログラムの時間フレーム数を調整します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a4329019dfe4e51ee63ad4d4af58da560"><div class="ttname"><a href="ailia__audio_8h.html#a4329019dfe4e51ee63ad4d4af58da560">ailiaAudioIFFT</a></div><div class="ttdeci">int AILIA_API ailiaAudioIFFT(void *dst, const void *src, int fft_n)</div><div class="ttdoc">IFFTを実行します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_af4d228d84ebb242becac43e2e68f44be"><div class="ttname"><a href="ailia__audio_8h.html#af4d228d84ebb242becac43e2e68f44be">ailiaAudioGetLinerFilterZiCoef</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetLinerFilterZiCoef(void *dst_zi, const void *n_coef, const void *d_coef, int dst_n, int n_coef_n, int d_coef_n)</div><div class="ttdoc">フィルタ処理用の初期遅延係数を算出します</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a8fe4522e6f4bd13e7f64ca91fe3dcef6"><div class="ttname"><a href="ailia__audio_8h.html#a8fe4522e6f4bd13e7f64ca91fe3dcef6">ailiaAudioComplexNorm</a></div><div class="ttdeci">int AILIA_API ailiaAudioComplexNorm(void *dst, const void *src, const int src_n, float power)</div><div class="ttdoc">複素数のノルムを算出します</div></div>
+<div class="ttc" id="aailia__audio_8h_html_aebbb245c9380e018c9e20b5ef2354ce8"><div class="ttname"><a href="ailia__audio_8h.html#aebbb245c9380e018c9e20b5ef2354ce8">ailiaAudioGetResampleLen</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetResampleLen(int *dst_sample_n, int dst_sample_rate, int src_sample_n, int src_sample_rate)</div><div class="ttdoc">リサンプル後のサンプル数を計算します</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a2606766d4ef7611fe037d9de953854ef"><div class="ttname"><a href="ailia__audio_8h.html#a2606766d4ef7611fe037d9de953854ef">ailiaAudioConvertPowerToDB</a></div><div class="ttdeci">int AILIA_API ailiaAudioConvertPowerToDB(void *dst, const void *src, int src_n, float top_db)</div><div class="ttdoc">非負の入力値をデシベルスケールに変換します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_aacb76e7abc326dacb810994d69b834e1"><div class="ttname"><a href="ailia__audio_8h.html#aacb76e7abc326dacb810994d69b834e1">ailiaAudioLinerFilter</a></div><div class="ttdeci">int AILIA_API ailiaAudioLinerFilter(void *dst, const void *src, const void *n_coef, const void *d_coef, void *zi, int dst_n, int src_n, int n_coef_n, int d_coef_n, int zi_n)</div><div class="ttdoc">信号にフィルタ処理を適用します</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a0fed8d398083e8d7d0dbc01b08540487"><div class="ttname"><a href="ailia__audio_8h.html#a0fed8d398083e8d7d0dbc01b08540487">ailiaAudioStandardize</a></div><div class="ttdeci">int AILIA_API ailiaAudioStandardize(void *dst, const void *src, const int src_n)</div><div class="ttdoc">実数の信号に対して標準化を実行します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_ad786b198ffb1883968894253b9c66713"><div class="ttname"><a href="ailia__audio_8h.html#ad786b198ffb1883968894253b9c66713">ailiaAudioLog1p</a></div><div class="ttdeci">int AILIA_API ailiaAudioLog1p(void *dst, const void *src, int src_n)</div><div class="ttdoc">入力値を対数スケールに変換します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a1e7a2e616821d17344b030d0138489f0"><div class="ttname"><a href="ailia__audio_8h.html#a1e7a2e616821d17344b030d0138489f0">ailiaAudioGetSampleLen</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetSampleLen(int *sample_n, int frame_n, int freq_n, int hop_n, int center)</div><div class="ttdoc">ISTFTで生成されるサンプル数を取得します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a1864c5a15a656cb6a2f4fe7460616234"><div class="ttname"><a href="ailia__audio_8h.html#a1864c5a15a656cb6a2f4fe7460616234">ailiaAudioConvertToMel</a></div><div class="ttdeci">int AILIA_API ailiaAudioConvertToMel(void *dst, const void *src, const void *fb_mtrx, int freq_n, int frame_n, int mel_n)</div><div class="ttdoc">実数STFT結果をメル尺度に変換する</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a1c6a80cf85ef33500663112959784400"><div class="ttname"><a href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div><div class="ttdeci">#define AILIA_API</div><div class="ttdef"><b>Definition:</b> ailia_audio.h:22</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a19efcd63ae64c2677f3e480feb8c79a3"><div class="ttname"><a href="ailia__audio_8h.html#a19efcd63ae64c2677f3e480feb8c79a3">ailiaAudioFilterFilter</a></div><div class="ttdeci">int AILIA_API ailiaAudioFilterFilter(void *dst, const void *src, const void *n_coef, const void *d_coef, int dst_n, int src_n, int n_coef_n, int d_coef_n, int pad_type, int pad_len)</div><div class="ttdoc">信号にゼロ位相フィルタ処理を適用します</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a28aa41d5f5c9da797be14e7cf4d88bf0"><div class="ttname"><a href="ailia__audio_8h.html#a28aa41d5f5c9da797be14e7cf4d88bf0">ailiaAudioFFT</a></div><div class="ttdeci">int AILIA_API ailiaAudioFFT(void *dst, const void *src, int fft_n)</div><div class="ttdoc">FFTを実行します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a896cc1ba97066045a1c8717a8eba6260"><div class="ttname"><a href="ailia__audio_8h.html#a896cc1ba97066045a1c8717a8eba6260">ailiaAudioGetFrameLen</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetFrameLen(int *frame_n, int sample_n, int fft_n, int hop_n, int center)</div><div class="ttdoc">STFTで生成される時間フレーム長を取得します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a941132716de6f293eae2948852d094d1"><div class="ttname"><a href="ailia__audio_8h.html#a941132716de6f293eae2948852d094d1">ailiaAudioResample</a></div><div class="ttdeci">int AILIA_API ailiaAudioResample(void *dst, const void *src, int dst_sample_rate, int dst_n, int src_sample_rate, int src_n)</div><div class="ttdoc">信号をリサンプルします</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a80ed686f7d6331d5d2225e29fba1fafa"><div class="ttname"><a href="ailia__audio_8h.html#a80ed686f7d6331d5d2225e29fba1fafa">ailiaAudioGetMelSpectrogram</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetMelSpectrogram(void *dst, const void *src, int sample_n, int sample_rate, int fft_n, int hop_n, int win_n, int win_type, int max_frame_n, int center, float power, int fft_norm_type, float f_min, float f_max, int mel_n, int mel_norm_type, int mel_formula)</div><div class="ttdoc">音響信号からメルスペクトログラムを生成します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a0041f8377ea55199a3097db6054cf7ac"><div class="ttname"><a href="ailia__audio_8h.html#a0041f8377ea55199a3097db6054cf7ac">ailiaAudioMagPhase</a></div><div class="ttdeci">int AILIA_API ailiaAudioMagPhase(void *dst_mag, void *dst_phase, const void *src, int freq_n, int frame_n, float power, int phase_form)</div><div class="ttdoc">スペクトログラムから振幅と位相を計算します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a646f552b11b7068fbe1d31d6e39e2d34"><div class="ttname"><a href="ailia__audio_8h.html#a646f552b11b7068fbe1d31d6e39e2d34">ailiaAudioGetSpectrogram</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetSpectrogram(void *dst, const void *src, int sample_n, int fft_n, int hop_n, int win_n, int win_type, int max_frame_n, int center, float power, int norm_type)</div><div class="ttdoc">音響信号からスペクトログラムを生成します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a42568a990b0d7940496d2288319374ca"><div class="ttname"><a href="ailia__audio_8h.html#a42568a990b0d7940496d2288319374ca">ailiaAudioGetInverseSpectrogram</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetInverseSpectrogram(void *dst, const void *src, int frame_n, int freq_n, int hop_n, int win_n, int win_type, int max_sample_n, int center, int norm_type)</div><div class="ttdoc">複素スペクトログラムから音響信号を生成します。</div></div>
+<div class="ttc" id="aailia__audio_8h_html_aabc209b6253b9851a74d7a2ad22a2049"><div class="ttname"><a href="ailia__audio_8h.html#aabc209b6253b9851a74d7a2ad22a2049">ailiaAudioGetNonSilentPos</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetNonSilentPos(int *dst_start_pos, int *dst_length, const void *src, int sample_n, int win_n, int hop_n, float thr_db)</div><div class="ttdoc">信号の入力前後の無音域を除いた領域を検出します</div></div>
+<div class="ttc" id="aailia__audio_8h_html_a412313da98ac09695d5d816b19cc8e19"><div class="ttname"><a href="ailia__audio_8h.html#a412313da98ac09695d5d816b19cc8e19">ailiaAudioGetFBMatrix</a></div><div class="ttdeci">int AILIA_API ailiaAudioGetFBMatrix(void *dst, const int freq_n, float f_min, float f_max, int mel_n, int sample_rate, int mel_norm, int mel_formula)</div><div class="ttdoc">メルフィルタバンクの係数を計算します。</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

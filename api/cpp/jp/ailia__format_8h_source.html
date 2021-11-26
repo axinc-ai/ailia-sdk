@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: ailia_format.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_65956747a6f6d37dadfdcf67b1aa1faa.html">export</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ailia_format.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ailia__format_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if       !defined(INCLUDED_AILIA_FORMAT)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define            INCLUDED_AILIA_FORMAT</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/* 呼び出し規約 */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#if defined(_M_JS)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;emscripten.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define AILIA_API EMSCRIPTEN_KEEPALIVE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#elif defined(_WIN64) || defined(_M_X64) || defined(__amd64__) || defined(__x86_64__) || defined(__APPLE__) || defined(__ANDROID__) || defined(ANDROID) || defined(__linux__) || defined(NN_NINTENDO_SDK)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define AILIA_API</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">   25</a></span>&#160;<span class="preprocessor">#define AILIA_API __stdcall</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    /****************************************************************</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    * 入力画像フォーマット</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    **/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#aaafcb77569d287638dd6b61ee6c37b14">   43</a></span>&#160;<span class="preprocessor">    #define AILIA_IMAGE_FORMAT_RGBA        (0x00)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a20f7e868b72e5f162701124704198244">   51</a></span>&#160;<span class="preprocessor">    #define AILIA_IMAGE_FORMAT_BGRA        (0x01)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#af76b2864f80b3bea7dc256733c447dc0">   59</a></span>&#160;<span class="preprocessor">    #define AILIA_IMAGE_FORMAT_RGB         (0x02)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a9cb1562f733d80ac45ded9ba669b5b76">   67</a></span>&#160;<span class="preprocessor">    #define AILIA_IMAGE_FORMAT_BGR         (0x03)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a696e5141f54ce54f6a637d26491196a2">   76</a></span>&#160;<span class="preprocessor">    #define AILIA_IMAGE_FORMAT_RGBA_B2T    (0x10)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#ada84c9918ba1524b3702eed09b20e4af">   84</a></span>&#160;<span class="preprocessor">    #define AILIA_IMAGE_FORMAT_BGRA_B2T    (0x11)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">    /****************************************************************</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    * ネットワーク画像フォーマット</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    **/</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#af28faf7f00b86528a57195a427b2150c">   97</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_FORMAT_BGR               (0)</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a9fb39e8f77e2388efcb30183737c102c">  105</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_FORMAT_RGB               (1)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a26866772e2731cf6c909b871abbb90c5">  113</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_FORMAT_GRAY              (2)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a444faa7862e47536ef552658dd2f86a5">  121</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_FORMAT_GRAY_EQUALIZE     (3)</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a5591be3e755a7239ead9df3ba6510522">  130</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_CHANNEL_FIRST            (0)</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#ac99f10ed61349af203730772ff85da29">  138</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_CHANNEL_LAST             (1)</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a334b2523f9a42566dac18f463c5fd8e0">  147</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_INT8      (0)</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a298c10b57819e25ea732f22ce64d477b">  155</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_RANGE_SIGNED_INT8        (1)</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a84382595132dd0050ce040168814fcbe">  163</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_FP32      (2)</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#ab0af148959f8efb64bab5c0f6122141f">  171</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_RANGE_SIGNED_FP32        (3)</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#aed8c63ee5d97ebfbc2a305c0f7934ee1">  179</a></span>&#160;<span class="preprocessor">    #define AILIA_NETWORK_IMAGE_RANGE_IMAGENET           (4)</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="ailia__format_8h.html#a90f2c5d523a99bf351858b0a88247fe5">  221</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__format_8h.html#a90f2c5d523a99bf351858b0a88247fe5">ailiaFormatConvert</a>(<span class="keywordtype">void</span> *dst, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dst_width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dst_height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dst_format, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dst_channel, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dst_range, <span class="keyword">const</span> <span class="keywordtype">void</span> *src, <span class="keywordtype">int</span> src_stride, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> src_width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> src_height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> src_format);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !defined(INCLUDED_AILIA_FORMAT) */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aailia__format_8h_html_a90f2c5d523a99bf351858b0a88247fe5"><div class="ttname"><a href="ailia__format_8h.html#a90f2c5d523a99bf351858b0a88247fe5">ailiaFormatConvert</a></div><div class="ttdeci">int AILIA_API ailiaFormatConvert(void *dst, unsigned int dst_width, unsigned int dst_height, unsigned int dst_format, unsigned int dst_channel, unsigned int dst_range, const void *src, int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</div><div class="ttdoc">画像のフォーマットを変換します。</div></div>
+<div class="ttc" id="aailia__format_8h_html_a1c6a80cf85ef33500663112959784400"><div class="ttname"><a href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div><div class="ttdeci">#define AILIA_API</div><div class="ttdef"><b>Definition:</b> ailia_format.h:25</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

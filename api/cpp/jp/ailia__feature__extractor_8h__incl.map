@@ -1,0 +1,6 @@
+<map id="ailia_feature_extractor.h" name="ailia_feature_extractor.h">
+<area shape="rect" id="node1" title="AILIA 特徴抽出ライブラリ" alt="" coords="17,5,177,32"/>
+<area shape="rect" id="node2" href="$ailia_8h.html" title="推論ライブラリ" alt="" coords="19,80,75,107"/>
+<area shape="rect" id="node4" href="$ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="99,80,199,107"/>
+<area shape="rect" id="node3" href="$ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="5,155,88,181"/>
+</map>
