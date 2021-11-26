@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['ailia_5fuser_5fapi_5ffclose_465',['AILIA_USER_API_FCLOSE',['../ailia__call_8h.html#ae069e83dab71694bd3b0987de821cd69',1,'ailia_call.h']]],
+  ['ailia_5fuser_5fapi_5ffopen_466',['AILIA_USER_API_FOPEN',['../ailia__call_8h.html#ae8d827a76f9c8845c4aa961698d3e9eb',1,'ailia_call.h']]],
+  ['ailia_5fuser_5fapi_5ffread_467',['AILIA_USER_API_FREAD',['../ailia__call_8h.html#a99f80a4c0fe1b539990f17226e3cf71a',1,'ailia_call.h']]],
+  ['ailia_5fuser_5fapi_5ffseek_468',['AILIA_USER_API_FSEEK',['../ailia__call_8h.html#a0a93553f181fb40ddb7e15f044e90791',1,'ailia_call.h']]],
+  ['ailia_5fuser_5fapi_5ffsize_469',['AILIA_USER_API_FSIZE',['../ailia__call_8h.html#ab5549beba00237c542442d8490c5e3b2',1,'ailia_call.h']]],
+  ['ailia_5fuser_5fapi_5fftell_470',['AILIA_USER_API_FTELL',['../ailia__call_8h.html#aa3a2997f33a184c4a1ff5019ff2a5f44',1,'ailia_call.h']]],
+  ['ailiaclassifierclass_471',['AILIAClassifierClass',['../ailia__classifier_8h.html#a50508cf305ad9078ebbfb115be35e5b6',1,'ailia_classifier.h']]],
+  ['ailiadetectorobject_472',['AILIADetectorObject',['../ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d',1,'ailia_detector.h']]],
+  ['ailiaenvironment_473',['AILIAEnvironment',['../ailia_8h.html#a647b70fe4406c9cf8884b3c3b70bf275',1,'ailia.h']]],
+  ['ailiafilecallback_474',['ailiaFileCallback',['../ailia__call_8h.html#abadfe0399acf6635379e4eb256579694',1,'ailia_call.h']]],
+  ['ailiaposeestimatorkeypoint_475',['AILIAPoseEstimatorKeypoint',['../ailia__pose__estimator_8h.html#a34ec6f1fbacbfb9b8834f1adb1f15c15',1,'ailia_pose_estimator.h']]],
+  ['ailiaposeestimatorobjectface_476',['AILIAPoseEstimatorObjectFace',['../ailia__pose__estimator_8h.html#ad1466753d5a74dac8f477e520f241d80',1,'ailia_pose_estimator.h']]],
+  ['ailiaposeestimatorobjecthand_477',['AILIAPoseEstimatorObjectHand',['../ailia__pose__estimator_8h.html#ad3f9415e59574e01fe15206379dae058',1,'ailia_pose_estimator.h']]],
+  ['ailiaposeestimatorobjectpose_478',['AILIAPoseEstimatorObjectPose',['../ailia__pose__estimator_8h.html#ac1e382e4f8cf05a52f952d33a9ff87ce',1,'ailia_pose_estimator.h']]],
+  ['ailiaposeestimatorobjectuppose_479',['AILIAPoseEstimatorObjectUpPose',['../ailia__pose__estimator_8h.html#aa6e6c8cc357e28b41d5f546062928ea5',1,'ailia_pose_estimator.h']]],
+  ['ailiashape_480',['AILIAShape',['../ailia_8h.html#aa69b8aa922e48743b064d6c8b893962c',1,'ailia.h']]]
+];
