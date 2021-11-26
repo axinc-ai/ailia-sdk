@@ -10,7 +10,7 @@ SDK for optimized running of many popular neural networks on multiple platform
 
 ## ailia SDK API
 
-[C++ (JP)](/api/cpp/jp/)
+[C++ (JP)](https://axinc-ai.github.io/ailia-sdk/api/cpp/jp/)
 
 ## ailia SDK Tutorial
 
