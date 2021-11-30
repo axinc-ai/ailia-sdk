@@ -77,6 +77,43 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>wrapper class for ailia network model instance</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor of ailia network model instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream</strong> (<em>str</em><em>, </em><em>numpy.ndarray</em>) – network model file path (ex. “foobar.prototxt”)
+network model data
+for use onnx file, please specify None.</p></li>
+<li><p><strong>weight</strong> (<em>str</em><em>, </em><em>numpy.ndarray</em>) – network weight file path (ex. “foobar.caffemodel” “foobar.onnx” )
+network weight data</p></li>
+<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia excecution.
+To retrieve env_id value, use</p>
+<blockquote>
+<div><p>get_environment_count() / get_environment() pair</p>
+</div></blockquote>
+<dl class="simple">
+<dt>or</dt><dd><p>get_gpu_environment_id() .</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>num_thread</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: MULTITHREAD_AUTO</em><em>(</em><em>0</em><em>)</em>) – <p>number of threads.
+valid values:</p>
+<blockquote>
+<div><p>MULTITHREAD_AUTO=0 [means systems’s logical processor count],
+1 to 32.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>memory_mode</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – memory management mode of ailia excecution.
+To retrieve memory_mode value, use get_memory_mode() .</p></li>
+<li><p><strong>debug_log</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – enable trace logging and verbose log for ailia.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ailia.Net.find_blob_index_by_name">
 <span class="sig-name descname"><span class="pre">find_blob_index_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.find_blob_index_by_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>retrieve blob index by name.</p>
@@ -480,6 +517,55 @@ list_of_outputs = a.get_results()</p>
 <dd><p>Bases: <a class="reference internal" href="#ailia.Net" title="ailia.wrapper.Net"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.wrapper.Net</span></code></a></p>
 <p>wrapper class for ailia object detector (YOLO style) instance</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="ailia.Detector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor of ailia object detector instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream_path</strong> (<em>str</em><em>,</em>) – network model file path (ex. “foobar.prototxt”)
+for use onnx file, please specify None.</p></li>
+<li><p><strong>weight_path</strong> (<em>str</em><em>,</em>) – network weight file path (ex. “foobar.caffemodel”)</p></li>
+<li><p><strong>category_count</strong> (<em>int</em>) – use same value as model training time.</p></li>
+<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia excecution.
+To retrieve env_id value, use</p>
+<blockquote>
+<div><p>get_environment_count() / get_environment() pair</p>
+</div></blockquote>
+<dl class="simple">
+<dt>or</dt><dd><p>get_gpu_environment_id() .</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>num_thread</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: MULTITHREAD_AUTO</em><em>(</em><em>0</em><em>)</em>) – <p>number of threads.
+valid values:</p>
+<blockquote>
+<div><p>MULTITHREAD_AUTO=0 [means systems’s logical processor count],
+1 to 32.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>format</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_FORMAT_RGB</em><em>(</em><em>1</em><em>)</em>) – </p></li>
+<li><p><strong>channel</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_CHANNEL_FIRST</em><em>(</em><em>0</em><em>)</em>) – </p></li>
+<li><p><strong>range</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_RANGE_S_FP32</em><em>(</em><em>3</em><em>)</em>) – use network model’s expected input data format.</p></li>
+<li><p><strong>algorithm</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=DETECTOR_ALGORITHM_YOLOV1</em><em>(</em><em>0</em><em>)</em>) – <dl class="simple">
+<dt>algorithm selector, use</dt><dd><p>DETECTOR_ALGORITHM_YOLOV1(0)</p>
+</dd>
+<dt>or</dt><dd><p>DETECTOR_ALGORITHM_YOLOV2(1)</p>
+</dd>
+<dt>or</dt><dd><p>DETECTOR_ALGORITHM_YOLOV3(2) .</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>flags</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=DETECTOR_FLAGS_NORMAL</em><em>(</em><em>0</em><em>)</em>) – reserved for future use.</p></li>
+<li><p><strong>debug_log</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – enable trace logging and verbose log for ailia.</p></li>
+<li><p><strong>memory_mode</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – memory management mode of ailia excecution.
+To retrieve memory_mode value, use get_memory_mode() .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ailia.Detector.compute">
 <span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.compute" title="Permalink to this definition">¶</a></dt>
 <dd><p>run the ailia object detector with a input image.</p>
@@ -599,6 +685,44 @@ h : float, object rectangle’s height.</p>
 <dd><p>Bases: <a class="reference internal" href="#ailia.Net" title="ailia.wrapper.Net"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.wrapper.Net</span></code></a></p>
 <p>wrapper class for ailia image classifier instance</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="ailia.Classifier.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Classifier.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor of ailia image classifier instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream_path</strong> (<em>str</em><em>,</em>) – network model file path (ex. “foobar.prototxt”)
+for use onnx file, please specify None.</p></li>
+<li><p><strong>weight_path</strong> (<em>str</em><em>,</em>) – network weight file path (ex. “foobar.caffemodel”)</p></li>
+<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia excecution.
+To retrieve env_id value, use</p>
+<blockquote>
+<div><p>get_environment_count() / get_environment() pair</p>
+</div></blockquote>
+<dl class="simple">
+<dt>or</dt><dd><p>get_gpu_environment_id() .</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>num_thread</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: MULTITHREAD_AUTO</em><em>(</em><em>0</em><em>)</em>) – <p>number of threads.
+valid values:</p>
+<blockquote>
+<div><p>MULTITHREAD_AUTO=0 [means systems’s logical processor count],
+1 to 32.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>format</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_FORMAT_BGR</em><em>(</em><em>0</em><em>)</em>) – </p></li>
+<li><p><strong>channel</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_CHANNEL_FIRST</em><em>(</em><em>0</em><em>)</em>) – </p></li>
+<li><p><strong>range</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_RANGE_S_FP32</em><em>(</em><em>3</em><em>)</em>) – use network model’s expected input data format.</p></li>
+<li><p><strong>debug_log</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – enable trace logging and verbose log for ailia.</p></li>
+<li><p><strong>memory_mode</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – memory management mode of ailia excecution.
+To retrieve memory_mode value, use get_memory_mode() .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ailia.Classifier.compute">
 <span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_class_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Classifier.compute" title="Permalink to this definition">¶</a></dt>
 <dd><p>run the ailia image classifier with a input image.</p>
@@ -681,7 +805,56 @@ prob : float, class probability.</p>
 <p>wrapper class for ailia object detector (YOLO style) instance</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="id1">
-<span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor of ailia object detector instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream_path</strong> (<em>str</em><em>,</em>) – network model file path (ex. “foobar.prototxt”)
+for use onnx file, please specify None.</p></li>
+<li><p><strong>weight_path</strong> (<em>str</em><em>,</em>) – network weight file path (ex. “foobar.caffemodel”)</p></li>
+<li><p><strong>category_count</strong> (<em>int</em>) – use same value as model training time.</p></li>
+<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia excecution.
+To retrieve env_id value, use</p>
+<blockquote>
+<div><p>get_environment_count() / get_environment() pair</p>
+</div></blockquote>
+<dl class="simple">
+<dt>or</dt><dd><p>get_gpu_environment_id() .</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>num_thread</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: MULTITHREAD_AUTO</em><em>(</em><em>0</em><em>)</em>) – <p>number of threads.
+valid values:</p>
+<blockquote>
+<div><p>MULTITHREAD_AUTO=0 [means systems’s logical processor count],
+1 to 32.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>format</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_FORMAT_RGB</em><em>(</em><em>1</em><em>)</em>) – </p></li>
+<li><p><strong>channel</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_CHANNEL_FIRST</em><em>(</em><em>0</em><em>)</em>) – </p></li>
+<li><p><strong>range</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=NETWORK_IMAGE_RANGE_S_FP32</em><em>(</em><em>3</em><em>)</em>) – use network model’s expected input data format.</p></li>
+<li><p><strong>algorithm</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=DETECTOR_ALGORITHM_YOLOV1</em><em>(</em><em>0</em><em>)</em>) – <dl class="simple">
+<dt>algorithm selector, use</dt><dd><p>DETECTOR_ALGORITHM_YOLOV1(0)</p>
+</dd>
+<dt>or</dt><dd><p>DETECTOR_ALGORITHM_YOLOV2(1)</p>
+</dd>
+<dt>or</dt><dd><p>DETECTOR_ALGORITHM_YOLOV3(2) .</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>flags</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=DETECTOR_FLAGS_NORMAL</em><em>(</em><em>0</em><em>)</em>) – reserved for future use.</p></li>
+<li><p><strong>debug_log</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – enable trace logging and verbose log for ailia.</p></li>
+<li><p><strong>memory_mode</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – memory management mode of ailia excecution.
+To retrieve memory_mode value, use get_memory_mode() .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>run the ailia object detector with a input image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -696,8 +869,8 @@ an object whose probability is less than the threshold is undetected.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="id2">
-<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
 <dd><p>get a detected object detail specified by idx.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -719,8 +892,8 @@ h : float, object rectangle’s height.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="id3">
-<span class="sig-name descname"><span class="pre">get_object_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">get_object_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
 <dd><p>get detected object count.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -733,8 +906,8 @@ h : float, object rectangle’s height.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="id4">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
 <dd><p>run the ailia object detector with a input image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -767,8 +940,8 @@ h : float, object rectangle’s height.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="id5">
-<span class="sig-name descname"><span class="pre">set_anchors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">set_anchors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the anchor information for YOLOv2 or other models.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -778,8 +951,8 @@ h : float, object rectangle’s height.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="id6">
-<span class="sig-name descname"><span class="pre">set_input_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">set_input_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
 <dd><p>set model input image size (for YOLOv3)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -798,6 +971,42 @@ h : float, object rectangle’s height.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">PoseEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ailia.Net" title="ailia.wrapper.Net"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.wrapper.Net</span></code></a></p>
 <p>ailia pose estimator instance wrapper class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor of ailia pose stimator instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream_path</strong> (<em>str</em><em>,</em>) – network model file path (ex. “foobar.prototxt”)
+for use onnx file, please specify None.</p></li>
+<li><p><strong>weight_path</strong> (<em>str</em><em>,</em>) – network weight file path (ex. “foobar.caffemodel”)</p></li>
+<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia excecution.
+To retrieve env_id value, use</p>
+<blockquote>
+<div><p>get_environment_count() / get_environment() pair</p>
+</div></blockquote>
+<dl class="simple">
+<dt>or</dt><dd><p>get_gpu_environment_id() .</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>num_thread</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: MULTITHREAD_AUTO</em><em>(</em><em>0</em><em>)</em>) – <p>number of threads.
+valid values:</p>
+<blockquote>
+<div><p>MULTITHREAD_AUTO=0 [means systems’s logical processor count],
+1 to 32.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>algorithm</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=POSE_ALGORITHM_ACCULUS_POSE</em><em>(</em><em>0</em><em>)</em>) – algorithm selector, use ALGORITHM_*</p></li>
+<li><p><strong>debug_log</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – enable trace logging and verbose log for ailia.</p></li>
+<li><p><strong>memory_mode</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – memory management mode of ailia excecution.
+To retrieve memory_mode value, use get_memory_mode() .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia.PoseEstimator.compute">
 <span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.compute" title="Permalink to this definition">¶</a></dt>
