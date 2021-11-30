@@ -1,0 +1,30 @@
+ailia.audio package
+===================
+
+Functions
+-----------
+
+.. autofunction:: ailia.audio.complex_norm
+.. autofunction:: ailia.audio.compute_mel_spectrogram_with_fixed_length
+.. autofunction:: ailia.audio.convert_power_to_db
+.. autofunction:: ailia.audio.create_spectrogram
+.. autofunction:: ailia.audio.fft
+.. autofunction:: ailia.audio.filterfilter
+.. autofunction:: ailia.audio.fix_frame_len
+.. autofunction:: ailia.audio.get_fb_matrix
+.. autofunction:: ailia.audio.get_frame_len
+.. autofunction:: ailia.audio.get_linerfilter_zi_coef
+.. autofunction:: ailia.audio.get_resample_len
+.. autofunction:: ailia.audio.get_sample_len
+.. autofunction:: ailia.audio.get_window
+.. autofunction:: ailia.audio.ifft
+.. autofunction:: ailia.audio.inverse_spectrogram
+.. autofunction:: ailia.audio.linerfilter
+.. autofunction:: ailia.audio.log1p
+.. autofunction:: ailia.audio.magphase
+.. autofunction:: ailia.audio.mel_scale
+.. autofunction:: ailia.audio.mel_spectrogram
+.. autofunction:: ailia.audio.resample
+.. autofunction:: ailia.audio.spectrogram
+.. autofunction:: ailia.audio.standardize
+.. autofunction:: ailia.audio.trim

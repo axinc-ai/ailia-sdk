@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ailia.audio package &mdash; ailia Python API 1.2.9 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ailia Python API
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">ailia.audio package</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ailia Python API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>ailia.audio package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ailia-audio-package">
+<h1>ailia.audio package<a class="headerlink" href="#ailia-audio-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.complex_norm">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">complex_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.complex_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the norm of complex spectrogram</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spec</strong> (<em>numpy.ndarray</em><em>(</em><em>dtype=complex</em><em>)</em>) – input spectrogram.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – the norm of complex spectrogram</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.compute_mel_spectrogram_with_fixed_length">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">compute_mel_spectrogram_with_fixed_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2048</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mel_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_frame_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.compute_mel_spectrogram_with_fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a melspectrogram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>sample_rate</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 16000</em>) – sample rate of input audio signal.</p></li>
+<li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 2048</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
+requirements :</p>
+<blockquote>
+<div><p>fft_n == 2 ** m (m = 1,2,…)</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>hop_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n // 4</em>) – length of hop between STFT windows</p></li>
+<li><p><strong>win_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n // 4</em>) – window size.</p></li>
+<li><p><strong>mel_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 128</em>) – number of mel filter banks.</p></li>
+<li><p><strong>max_frame_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 128</em>) – number of time frames of mel spectrogram.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – created melspectrogram.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.convert_power_to_db">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">convert_power_to_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.convert_power_to_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>turn a spectrogram from the power scale to the decibel scale.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>signal</strong> (<em>numpy.ndarray</em>) – input signal in power scale.</p></li>
+<li><p><strong>top_db</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 80.0</em>) – threshold the output at top_db below the peak.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – output signal in decibel scale.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.create_spectrogram">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">create_spectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1024</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.create_spectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a spectrogram from a audio signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1024</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
+requirements :</p>
+<blockquote>
+<div><p>fft_n == 2 ** m (m = 1,2,…)</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>hop_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n // 4</em>) – length of hop between STFT windows.</p></li>
+<li><p><strong>win_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n</em>) – window size.</p></li>
+<li><p><strong>win_type</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <p>type of window function.
+requirements :</p>
+<blockquote>
+<div><p>”hann” or 1 : hann window
+“hamming” or 2 : hamming window</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>power</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 1.0</em>) – <p>exponent for the magnitude spectrogram, e.g., 1 for energy, 2 for power, etc.
+requirements :</p>
+<blockquote>
+<div><p>power &gt; 0.0</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.fft">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">fft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.fft" title="Permalink to this definition">¶</a></dt>
+<dd><p>run fast fourier transform (FFT)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>signal</strong> (<em>numpy.ndarray</em>) – input signal.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – created spectrum.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.filterfilter">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">filterfilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'odd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padlen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.filterfilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>filter forward and backward to a audio signal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – numerator coefficient.</p></li>
+<li><p><strong>d_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – denominator coefficient.
+If d_coef[0] is not 1, n_coef and d_coef are normalized by d_coef[0]</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>axis</strong> (<em>int</em>) – TBD</p></li>
+<li><p><strong>padtype</strong> (<em>str</em><em>, </em><em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: odd</em>) – <p>type of padding for the input signal extention.
+requirements :</p>
+<blockquote>
+<div><p>None or 0 : no padding
+“odd” or 1 : padding odd mode
+“even” or 2 : padding even mode
+“constant” or 3 : padding constant mode</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>padlen</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: 3 * max</em><em>(</em><em>len</em><em>(</em><em>n_coef</em><em>)</em><em>, </em><em>len</em><em>(</em><em>d_coef</em><em>)</em><em>)</em>) – number of padding samples at both ends of input signal before forward filtering.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – output filtered audio signal.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.fix_frame_len">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">fix_frame_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix_frame_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.fix_frame_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjust frame length of a spectrogram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spec</strong> (<em>numpy.ndarray</em>) – <p>input data.
+requirements :</p>
+<blockquote>
+<div><p>input.shape must be (ch_n, freq_n, frame_n) or (freq_n, frame_n)</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>fix_frame_n</strong> (<em>int</em>) – target number of time frames.</p></li>
+<li><p><strong>pad</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 0.0</em>) – constant value to fill the added frames.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.get_fb_matrix">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">get_fb_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mel_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">htk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.get_fb_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Filterbank matrix to combine FFT bins into Mel-frequency bins</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sample_rate</strong> (<em>int</em>) – sampling rate of the incoming signal</p></li>
+<li><p><strong>freq_n</strong> (<em>int</em>) – number of FFT bins.</p></li>
+<li><p><strong>f_min</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 0.0</em>) – minimum frequency.</p></li>
+<li><p><strong>f_max</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: sample_rate // 2</em>) – maximum frequency.</p></li>
+<li><p><strong>mel_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 128</em>) – number of mel bands.</p></li>
+<li><p><strong>norm</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – normalize created filterbank matrix.</p></li>
+<li><p><strong>htk</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – use HTK formula instead of Slaney’s formula.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – created filterbank matrix.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.get_frame_len">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">get_frame_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.get_frame_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the number of frames when a spectrogram is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sample_n</strong> (<em>int</em>) – length of audio signal.</p></li>
+<li><p><strong>fft_n</strong> (<em>int</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
+requirements :</p>
+<blockquote>
+<div><p>fft_n == 2 ** m (m = 1,2,…)</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>hop_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:</em><em> (</em><em>fft_n//4</em><em>)</em>) – length of hop between STFT window</p></li>
+<li><p><strong>center_mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <dl class="simple">
+<dt>whether to pad an audio signal on both sides.</dt><dd><p>0 : ignored.
+1 : audio signal is padded on both sides with its own reflection, mirrored around its first and last sample respectively.
+2 : audio signal is padded on both sides with zero. Then,it is padded to integer number of windowed segments.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>frame_n</strong> – frame number of created spectrogram.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.get_linerfilter_zi_coef">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">get_linerfilter_zi_coef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_coef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.get_linerfilter_zi_coef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create coefficents of initial condition for the liner filter delay.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – numerator coefficient.</p></li>
+<li><p><strong>d_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – denominator coefficient.
+If d_coef[0] is not 1, n_coef and d_coef are normalized by d_coef[0]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>zi</strong> – coefficents of initial condition for the liner filter delay.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.get_resample_len">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">get_resample_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">org_sr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_sr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.get_resample_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the number of samples after resample.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sample_n</strong> (<em>int</em>) – length of audio signal.</p></li>
+<li><p><strong>org_sr</strong> (<em>int</em>) – <p>sampling rate of input audio signal
+requirements :</p>
+<blockquote>
+<div><p>org_sr &gt; 0</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>target_sr</strong> (<em>int</em>) – <p>target sampling rate
+requirements :</p>
+<blockquote>
+<div><p>target_sr &gt; 0</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>resample_n</strong> – length of resampled audio signal.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.get_sample_len">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">get_sample_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.get_sample_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the number of samples when a signal is inversely transformed from a spectrogram</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frame_n</strong> (<em>int</em>) – frame number of spectrogram.</p></li>
+<li><p><strong>freq_n</strong> (<em>int</em>) – frequency of spectrgram.
+freq_n =  fft_n // 2 + 1</p></li>
+<li><p><strong>hop_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:</em><em> (</em><em>fft_n//4</em><em>)</em>) – length of hop between STFT window</p></li>
+<li><p><strong>center</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – True : input spectrogram is assumed to habe centered frames.
+False : input spectrogram is assumed to have left-aligned frames.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sample_n</strong> – length of signal.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.get_window">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">get_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">win_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.get_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a window of a given length and type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>win_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n</em>) – window size.</p></li>
+<li><p><strong>win_type</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <p>type of window function.
+requirements :</p>
+<blockquote>
+<div><dl class="simple">
+<dt>use hann window<span class="classifier">”hann” or 1</span></dt><dd><p>hamming window : “hamming” or 2</p>
+</dd>
+</dl>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – a window of given length and type.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.ifft">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">ifft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.ifft" title="Permalink to this definition">¶</a></dt>
+<dd><p>run inverse fast fourier transform (IFFT)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>signal</strong> (<em>numpy.ndarray</em><em>(</em><em>dtype=complex</em><em>)</em>) – input spectrum.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – created spectrum.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray(dytpe=complex)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.inverse_spectrogram">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">inverse_spectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.inverse_spectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse Transform from a spectrogram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spec</strong> (<em>numpy.ndarray</em><em>(</em><em>shape=</em><em>(</em><em>1 + fft_n/2</em><em>, </em><em>frame_n</em><em> ) or </em><em>(</em><em>ch_n</em><em>, </em><em>1 + fft_n/2</em><em>, </em><em>frame_n</em><em>) </em><em>,</em><em>dtype=complex</em><em>)</em>) – input spectrogram.</p></li>
+<li><p><strong>hop_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: win_n // 4</em>) – length of hop between STFT windows</p></li>
+<li><p><strong>win_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n</em>) – window size.</p></li>
+<li><p><strong>win_type</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <p>type of window function.
+requirements :</p>
+<blockquote>
+<div><p>”hann” or 1 : hann window
+“hamming” or 2 : hamming window</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>center</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – True : input spectrogram is assumed to habe centered frames.
+False : input spectrogram is assumed to have left-aligned frames.</p></li>
+<li><p><strong>norm_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 0</em>) – <p>types of output normalization.
+requirements :</p>
+<blockquote>
+<div><p>0 : ignored.
+1 : compatible with librosa and pytorch.
+2 : compatible with scipy.</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><strong>res</strong> – signal with inverse transformation of spectrogram
+res.shape :</p>
+<blockquote>
+<div><p>(sample_n) if input.ndim == 1
+(ch_n, sample_n) if input.ndim == 2</p>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray(dtype=float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.linerfilter">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">linerfilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.linerfilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>filter a audio signal, using a digital filter(ex.IIR or FIR)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – numerator coefficient.</p></li>
+<li><p><strong>d_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – denominator coefficient.
+If d_coef[0] is not 1, n_coef and d_coef are normalized by d_coef[0]</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>axis</strong> (<em>int</em>) – TBD</p></li>
+<li><p><strong>zi</strong> (<em>numpy.ndarray</em>) – initial conditions for the filter delays.
+if zi is None, initial condition uses 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>res</strong> (<em>numpy.ndarray</em>) – output filterd audio signal.</p></li>
+<li><p><strong>zf</strong> (<em>numpy.ndarray, optional</em>) – final conditions for the filter delays.
+If <cite>zi</cite> is None, this is not returned.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.log1p">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">log1p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.log1p" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate log1p ( y = log_e(1.0 + x) )</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>signal</strong> (<em>numpy.ndarray</em>) – input signal.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – output signal.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.magphase">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">magphase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.magphase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Separate a complex-valued spectrogram into its magnitude and phase components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spec</strong> (<em>numpy.ndarray</em>) – <p>input data.
+requirements :</p>
+<blockquote>
+<div><p>input.shape must be (ch_n, freq_n, frame_n) or (freq_n, frame_n)</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>power</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 1.0</em>) – <p>exponent for the magnitude spectrogram, e.g., 1 for energy, 2 for power, etc.
+requirements :</p>
+<blockquote>
+<div><p>power &gt; 0.0</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>complex_out</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – <dl class="simple">
+<dt>return phase as complex value.</dt><dd><p>True : compatible with librosa
+False : compatible with pytorch</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>res_mag</strong> (<em>numpy.ndarray</em>) – magnitude components of the input spectrogram.</p></li>
+<li><p><strong>res_phase</strong> (<em>numpy.ndarray</em>) – phase components of the input spectrogram.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.mel_scale">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">mel_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mel_fb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.mel_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert spectorogram to Mel spectrogram,using mel filter bank</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spec</strong> (<em>numpy.ndarray</em>) – input real spectrogram.
+spec.shape must be (ch_n, freq_n, frame_n) or (freq_n, frame_n)</p></li>
+<li><p><strong>mel_fb</strong> (<em>numpy.ndarray</em>) – Filterbank matrix to combine FFT bins into Mel-frequency bins
+mel_fb.shape must be (mel_n, freq_n)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – created mel spectrogram.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.mel_spectrogram">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">mel_spectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1024</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mel_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mel_norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">htk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.mel_spectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a melspectrogram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>sample_rate</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 16000</em>) – sample rate of input audio signal.</p></li>
+<li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1024</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
+requirements :</p>
+<blockquote>
+<div><p>fft_n == 2 ** m, where m is a natural number</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>hop_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n // 4</em>) – length of hop between STFT windows</p></li>
+<li><p><strong>win_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n</em>) – window size.</p></li>
+<li><p><strong>win_type</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <p>type of window function.
+requirements :</p>
+<blockquote>
+<div><p>”hann” or 1 : hann window
+“hamming” or 2 : hamming window</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>center_mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <dl class="simple">
+<dt>whether to pad an audio signal on both sides.</dt><dd><p>0 : ignored.
+1 : audio signal is padded on both sides with its own reflection, mirrored around its first and last sample respectively.
+2 : audio signal is padded on both sides with zero. Then,it is padded to integer number of windowed segments.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>power</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 1.0</em>) – <p>exponent for the magnitude spectrogram, e.g., 1 for energy, 2 for power, etc.
+requirements :</p>
+<blockquote>
+<div><p>power &gt; 0.0</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>fft_norm_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 0</em>) – <p>types of spectrogram normalization.
+requirements :</p>
+<blockquote>
+<div><p>0 : ignored.
+1 : compatible with librosa and pytorch.
+2 : compatible with scipy.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>f_min</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 0.0</em>) – minimum frequency.</p></li>
+<li><p><strong>f_max</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: sample_rate // 2</em>) – maximum frequency.</p></li>
+<li><p><strong>mel_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 128</em>) – number of mel filter banks.</p></li>
+<li><p><strong>mel_norm</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: True</em>) – normalize melspectrofram.</p></li>
+<li><p><strong>htk</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – <dl class="simple">
+<dt>convert frequency to mel scale using htk formula.</dt><dd><p>True : using htk formula. (compatible with pytorch. )
+False : using Slaney’s formula. (compatible with a default setting of librosa. )</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – created melspectrogram.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.resample">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">resample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">org_sr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_sr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.resample" title="Permalink to this definition">¶</a></dt>
+<dd><p>resample  a audio signal form original sampling rate to target sampring rate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>org_sr</strong> (<em>int</em>) – <p>sampling rate of input audio signal
+requirements :</p>
+<blockquote>
+<div><p>org_sr &gt; 0</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>target_sr</strong> (<em>int</em>) – <p>target sampling rate
+requirements :</p>
+<blockquote>
+<div><p>target_sr &gt; 0</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – created resample audio signal.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.spectrogram">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">spectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1024</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.spectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a spectrogram from a audio signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1024</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
+requirements :</p>
+<blockquote>
+<div><p>fft_n == 2 ** m, where m is a natural number</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>hop_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n // 4</em>) – length of hop between STFT windows</p></li>
+<li><p><strong>win_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: fft_n</em>) – window size.</p></li>
+<li><p><strong>win_type</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <p>type of window function.
+requirements :</p>
+<blockquote>
+<div><p>”hann” or 1 : hann window
+“hamming” or 2 : hamming window</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>center_mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1</em>) – <dl class="simple">
+<dt>whether to pad an audio signal on both sides.</dt><dd><p>0 : ignored.
+1 : audio signal is padded on both sides with its own reflection, mirrored around its first and last sample respectively.
+2 : audio signal is padded on both sides with zero. Then,it is padded to integer number of windowed segments.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>power</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 1.0</em>) – <p>exponent for the magnitude spectrogram, e.g., 1 for energy, 2 for power, etc.
+requirements :</p>
+<blockquote>
+<div><p>power &gt; 0.0</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>norm_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 0</em>) – <p>types of output normalization.
+requirements :</p>
+<blockquote>
+<div><p>0 : ignored.
+1 : compatible with librosa and pytorch.
+2 : compatible with scipy.</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><strong>res</strong> – created spectrogram.
+res.shape :</p>
+<blockquote>
+<div><p>(freq_n, frame_n) if input.ndim == 1
+(ch_n, freq_n, frame_n) if input.ndim == 2</p>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.standardize">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">standardize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.standardize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standardize input signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>signal</strong> (<em>numpy.ndarray</em>) – input signal.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>res</strong> – standardized signal.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.audio.trim">
+<span class="sig-prename descclassname"><span class="pre">ailia.audio.</span></span><span class="sig-name descname"><span class="pre">trim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thr_db=60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref=&lt;function</span> <span class="pre">amax&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_length=2048</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_length=512</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.audio.trim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truncate the silence before and after a audio signal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>thr_db</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 60</em>) – Threshold for determining silence</p></li>
+<li><p><strong>ref</strong> – TBD</p></li>
+<li><p><strong>frame_length</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=2048</em>) – length of analysis windows</p></li>
+<li><p><strong>hop_length</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=512</em>) – length of hop between analysis windows</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>res_trimmed</strong> (<em>numpy.ndarray</em>) – output trimmed audio signal.</p></li>
+<li><p><strong>res_pos</strong> (<em>numpy.ndarray shape=(2,)</em>) – non silent position [start,end]</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, AXELL CORPORATION, ax Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

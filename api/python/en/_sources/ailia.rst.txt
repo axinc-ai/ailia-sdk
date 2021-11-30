@@ -1,0 +1,86 @@
+ailia package
+=============
+
+Classes
+-----------
+
+.. autoclass:: ailia.Net
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.Detector
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.Classifier
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.Detector
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.PoseEstimator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Functions
+-----------
+
+.. autofunction:: ailia.set_temporary_cache_path
+
+.. autofunction:: ailia.get_environment_count
+
+.. autofunction:: ailia.get_environment
+
+.. autofunction:: ailia.get_environment_list
+
+.. autofunction:: ailia.get_version
+
+.. autofunction:: ailia.get_gpu_environment_id
+
+.. autofunction:: ailia.get_memory_mode
+
+Objects
+----------
+
+.. autoclass:: ailia.ClassifierClass
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.DetectorObject
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.Environment
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.PoseEstimatorKeypoint
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.PoseEstimatorObjectHand
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.PoseEstimatorObjectPose
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia.PoseEstimatorObjectUpPose
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

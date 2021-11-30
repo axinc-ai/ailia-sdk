@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ailia package &mdash; ailia Python API 1.2.9 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ailia Python API
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">ailia package</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#objects">Objects</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ailia Python API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>ailia package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ailia-package">
+<h1>ailia package<a class="headerlink" href="#ailia-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.Net">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">Net</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>wrapper class for ailia network model instance</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.find_blob_index_by_name">
+<span class="sig-name descname"><span class="pre">find_blob_index_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.find_blob_index_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>retrieve blob index by name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – blob name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>blob index.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_blob_count">
+<span class="sig-name descname"><span class="pre">get_blob_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_blob_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>get blob count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>blob count.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_blob_data">
+<span class="sig-name descname"><span class="pre">get_blob_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_blob_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the data of the blob specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> (<em>int</em><em> or </em><em>str</em>) – blob index (int) or blob name (str).
+valid values (int) : range(0, a.get_blob_count()) .</p></li>
+<li><p><strong>buffer</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – <p>output blob buffer. (for the performance freak)
+if used, ailia doesn’t create new output buffer every call.
+requirements :</p>
+<blockquote>
+<div><p>buffer.dtype is numpy.float32 .
+buffer.flags[‘C_CONTIGUOUS’] is True .
+buffer.shape is the same as a.get_blob_shape(idx) .</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output blob data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_blob_name">
+<span class="sig-name descname"><span class="pre">get_blob_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_blob_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the name of the blob specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – blob index.
+valid values : range(0, a.get_blob_count()) .</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>blob name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_blob_shape">
+<span class="sig-name descname"><span class="pre">get_blob_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_blob_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the shape of the blob specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em><em> or </em><em>str</em>) – blob index (int) or blob name (str).
+valid values (int) : range(0, a.get_blob_count()) .</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>blob shape.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_error_detail">
+<span class="sig-name descname"><span class="pre">get_error_detail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_error_detail" title="Permalink to this definition">¶</a></dt>
+<dd><p>get error detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error detail.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_input_blob_list">
+<span class="sig-name descname"><span class="pre">get_input_blob_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_input_blob_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>get input blob indices list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>input blob indices.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_input_shape">
+<span class="sig-name descname"><span class="pre">get_input_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_input_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>get input blob shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>input blob shape. (same as numpy’s shape)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_output_blob_list">
+<span class="sig-name descname"><span class="pre">get_output_blob_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_output_blob_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>get output blob indices list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>output blob indices.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_output_shape">
+<span class="sig-name descname"><span class="pre">get_output_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_output_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>get output blob shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>output blob shape. (same as numpy’s shape)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_raw_pointer">
+<span class="sig-name descname"><span class="pre">get_raw_pointer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_raw_pointer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_results">
+<span class="sig-name descname"><span class="pre">get_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the list of output blobs data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>output blob data.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(numpy.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_selected_environment">
+<span class="sig-name descname"><span class="pre">get_selected_environment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_selected_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>get current execution environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>id : int, used for create() function’s env_id argument.
+type : str, one of the following :</p>
+<blockquote>
+<div><p>’CPU’, ‘BLAS’, ‘GPU’</p>
+</div></blockquote>
+<p>name : str, detail description of execution environment.
+backend : str, one of the following :</p>
+<blockquote>
+<div><p>’NONE’, ‘AMP’, ‘CUDA’, ‘MPS’, ‘VULKAN’</p>
+</div></blockquote>
+<dl class="simple">
+<dt>props<span class="classifier">str, one of the following :</span></dt><dd><p>’NORMAL’, ‘LOWPOWER’</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>namedtuple(“Environment”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.get_summary">
+<span class="sig-name descname"><span class="pre">get_summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.get_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>get, as a string, a summary of all layers and blobs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>summary string.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.open_stream">
+<span class="sig-name descname"><span class="pre">open_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.open_stream" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.open_weight">
+<span class="sig-name descname"><span class="pre">open_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weight</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.open_weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>run ailia network model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>numpy.ndarray</em><em> or </em><em>dict</em><em>(</em><em>str</em><em>, </em><em>numpy.ndarray</em><em>) or </em><em>sequence</em><em>( </em><em>numpy.ndarray</em><em> )</em>) – <p>input blob data.
+requirements :</p>
+<blockquote>
+<div><p>input.shape is the same as a.get_input_shape() .</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>output</strong> (<em>numpy.ndarray</em><em> or </em><em>sequence</em><em>( </em><em>numpy.ndarray</em><em> )</em><em>, </em><em>optional</em>) – <p>output blob buffer. (for the performance freak)
+if used, ailia doesn’t create new output buffer every call.
+requirements :</p>
+<blockquote>
+<div><p>output.dtype is numpy.float32 .
+output.flags[‘C_CONTIGUOUS’] is True .
+output.shape is the same as a.get_output_shape() .</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output blob data.
+when input is a ndarray, return is single ndarray (return output[0])
+when input is dict|sequence, return is list( ndarray )</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray or list( numpy.ndarray )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run ailia network model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>numpy.ndarray</em><em> or </em><em>dict</em><em>(</em><em>str</em><em>, </em><em>numpy.ndarray</em><em>) or </em><em>sequence</em><em>( </em><em>numpy.ndarray</em><em> )</em>) – <p>input blob data.
+requirements :</p>
+<blockquote>
+<div><p>input.shape is the same as a.get_input_shape() .</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>output</strong> (<em>numpy.ndarray</em><em> or </em><em>sequence</em><em>( </em><em>numpy.ndarray</em><em> )</em><em>, </em><em>optional</em>) – <p>output blob buffer. (for the performance freak)
+if used, ailia doesn’t create new output buffer every call.
+requirements :</p>
+<blockquote>
+<div><p>output.dtype is numpy.float32 .
+output.flags[‘C_CONTIGUOUS’] is True .
+output.shape is the same as a.get_output_shape() .</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of output blob data.
+return is a list in any case.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list( numpy.ndarray )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.set_input_blob_data">
+<span class="sig-name descname"><span class="pre">set_input_blob_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.set_input_blob_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>set input blob data. (for multiple input network model)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>numpy.ndarray</em>) – <p>input data.
+requirements :</p>
+<blockquote>
+<div><p>input.shape is model’s acceptable shape .</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>idx</strong> (<em>int</em><em> or </em><em>str</em>) – blob index (int) or blob name (str).
+valid values (int) : range(0, a.get_blob_count())</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#ailia.Net.update" title="ailia.Net.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.set_input_blob_shape">
+<span class="sig-name descname"><span class="pre">set_input_blob_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.set_input_blob_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>set input blob shape. (for multiple input network model)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shape</strong> (<em>tuple of ints</em>) – new input blob shape.</p></li>
+<li><p><strong>idx</strong> (<em>int</em><em> or </em><em>str</em>) – blob index (int) or blob name (str).
+valid values (int) : range(0, a.get_blob_count())</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#ailia.Net.update" title="ailia.Net.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.set_input_shape">
+<span class="sig-name descname"><span class="pre">set_input_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.set_input_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>change input blob shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>shape</strong> (<em>tuple of ints</em>) – new input layer shape.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.set_profile_mode">
+<span class="sig-name descname"><span class="pre">set_profile_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.set_profile_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>change profile mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=PROFILE_AVERAGE</em><em>(</em><em>1</em><em>)</em>) – <dl class="simple">
+<dt>valid values:</dt><dd><p>PROFILE_DISABLE(0)
+PROFILE_AVERAGE(1)</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>run ailia network model with pre stored input data.</p>
+<p>using with a.set_input_blob_data() / a.get_results()
+ex.</p>
+<blockquote>
+<div><p># set input [A]
+idx = a.find_blob_index_by_name(net, “input_a”)
+a.set_input_blob_data(data_a, idx)
+# set other input [B]
+idx = a.find_blob_index_by_name(net, “input_b”)
+a.set_input_blob_data(data_b, idx)
+# run ailia network model
+a.update(t)
+# get result
+list_of_outputs = a.get_results()</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.Detector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">Detector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.Net" title="ailia.wrapper.Net"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.wrapper.Net</span></code></a></p>
+<p>wrapper class for ailia object detector (YOLO style) instance</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Detector.compute">
+<span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.compute" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia object detector with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – object recognition threshold.
+an object whose probability is less than the threshold is undetected.</p></li>
+<li><p><strong>iou</strong> (<em>float</em>) – intersection over union threshold, used for non-maximum suppression.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Detector.get_object">
+<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a detected object detail specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – object index.
+vaild values : range(0, a.get_object_count())</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>category : int, object category index.
+prob : float, object probability.
+x : float, object rectangle’s top-left x coordinate.
+y : float, object rectangle’s top-left y coordinate.
+w : float, object rectangle’s width.
+h : float, object rectangle’s height.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple(“DetectedObject”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Detector.get_object_count">
+<span class="sig-name descname"><span class="pre">get_object_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.get_object_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>get detected object count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Detector.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia object detector with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – object recognition threshold.
+an object whose probability is less than the threshold is undetected.</p></li>
+<li><p><strong>iou</strong> (<em>float</em>) – intersection over union threshold, used for non-maximum suppression.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl>
+<dt>numpy structured array(“DetectorObject”)</dt><dd><p>category : int, object category index.
+prob : float, object probability.
+box : numpy structured array (“DetecorRectangle”)</p>
+<blockquote>
+<div><p>x : float, object rectangle’s top-left x coordinate.
+y : float, object rectangle’s top-left y coordinate.
+w : float, object rectangle’s width.
+h : float, object rectangle’s height.</p>
+</div></blockquote>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array of numpy structured array(“DetectorObject”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Detector.set_anchors">
+<span class="sig-name descname"><span class="pre">set_anchors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.set_anchors" title="Permalink to this definition">¶</a></dt>
+<dd><p>sets the anchor information for YOLOv2 or other models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>numpy.ndarray</em>) – extra data. anchors or biasis, etc.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Detector.set_input_shape">
+<span class="sig-name descname"><span class="pre">set_input_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Detector.set_input_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>set model input image size (for YOLOv3)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_width</strong> (<em>int</em><em>, </em><em>input model image width</em>) – </p></li>
+<li><p><strong>input_height</strong> (<em>int</em><em>, </em><em>input model image height</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.Classifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">Classifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.Net" title="ailia.wrapper.Net"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.wrapper.Net</span></code></a></p>
+<p>wrapper class for ailia image classifier instance</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Classifier.compute">
+<span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_class_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Classifier.compute" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia image classifier with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p></li>
+<li><p><strong>max_class_count</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – maximum number of listed classes.
+finds N classes in decending order of probability.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Classifier.get_class">
+<span class="sig-name descname"><span class="pre">get_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Classifier.get_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a class information specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – class index.
+vaild values : range(0, a.get_class_count())</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>category : int, class category index.
+prob : float, class probability.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple(“ClassifierClass”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Classifier.get_class_count">
+<span class="sig-name descname"><span class="pre">get_class_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Classifier.get_class_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>get listed classes count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of classes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.Classifier.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_class_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Classifier.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia image classifier with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p></li>
+<li><p><strong>max_class_count</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=1</em>) – maximum number of listed classes.
+finds N classes in decending order of probability.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>numpy structured array(“ClassifierClass”)</dt><dd><p>category : int, class category index.
+prob : float, class probability.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array of numpy structured array(“ClassifierClass”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">Detector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.Net" title="ailia.wrapper.Net"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.wrapper.Net</span></code></a></p>
+<p>wrapper class for ailia object detector (YOLO style) instance</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia object detector with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – object recognition threshold.
+an object whose probability is less than the threshold is undetected.</p></li>
+<li><p><strong>iou</strong> (<em>float</em>) – intersection over union threshold, used for non-maximum suppression.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a detected object detail specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – object index.
+vaild values : range(0, a.get_object_count())</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>category : int, object category index.
+prob : float, object probability.
+x : float, object rectangle’s top-left x coordinate.
+y : float, object rectangle’s top-left y coordinate.
+w : float, object rectangle’s width.
+h : float, object rectangle’s height.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple(“DetectedObject”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">get_object_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>get detected object count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia object detector with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – object recognition threshold.
+an object whose probability is less than the threshold is undetected.</p></li>
+<li><p><strong>iou</strong> (<em>float</em>) – intersection over union threshold, used for non-maximum suppression.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl>
+<dt>numpy structured array(“DetectorObject”)</dt><dd><p>category : int, object category index.
+prob : float, object probability.
+box : numpy structured array (“DetecorRectangle”)</p>
+<blockquote>
+<div><p>x : float, object rectangle’s top-left x coordinate.
+y : float, object rectangle’s top-left y coordinate.
+w : float, object rectangle’s width.
+h : float, object rectangle’s height.</p>
+</div></blockquote>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array of numpy structured array(“DetectorObject”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">set_anchors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd><p>sets the anchor information for YOLOv2 or other models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>numpy.ndarray</em>) – extra data. anchors or biasis, etc.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">set_input_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd><p>set model input image size (for YOLOv3)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_width</strong> (<em>int</em><em>, </em><em>input model image width</em>) – </p></li>
+<li><p><strong>input_height</strong> (<em>int</em><em>, </em><em>input model image height</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.PoseEstimator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">PoseEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.Net" title="ailia.wrapper.Net"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.wrapper.Net</span></code></a></p>
+<p>ailia pose estimator instance wrapper class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.compute">
+<span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.compute" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia pose stimator with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.get_object_count">
+<span class="sig-name descname"><span class="pre">get_object_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.get_object_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>get detected object count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.get_object_hand">
+<span class="sig-name descname"><span class="pre">get_object_hand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.get_object_hand" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a detected object detail specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – object index.
+vaild values : range(0, a.get_object_count())</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><strong>r</strong> –</p>
+<dl class="simple">
+<dt>points<span class="classifier">list of namedtuple(“PoseEstimatorKeypoint”)</span></dt><dd><dl class="simple">
+<dt>namedtuple(“PoseEstimatorKeypoint”)</dt><dd><p>x : float, keypoint position
+y : float, keypoint position
+z_local : float, keypoint position
+score : float, keypoint probablity
+interpolated : int, 0 or 1</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>total_score : float, sum of object probability.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple(“PoseEstimatorObjectHand”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.get_object_pose">
+<span class="sig-name descname"><span class="pre">get_object_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.get_object_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a detected object detail specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – object index.
+vaild values : range(0, a.get_object_count())</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>points<span class="classifier">list of namedtuple(“PoseEstimatorKeypoint”)</span></dt><dd><dl class="simple">
+<dt>namedtuple(“PoseEstimatorKeypoint”)</dt><dd><p>x : float, keypoint position
+y : float, keypoint position
+z_local : float, keypoint position
+score : float, keypoint probablity
+interpolated : int, 0 or 1</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>total_score : float, sum of object probability.
+num_valid_points : int, number of valid key points
+id : int, person id
+angle_x : float, object angle
+angle_y : float, object angle
+angle_z : float, object angle</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple(“PoseEstimatorObjectPose”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.get_object_up_pose">
+<span class="sig-name descname"><span class="pre">get_object_up_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.get_object_up_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a detected object detail specified by idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – object index.
+vaild values : range(0, a.get_object_count())</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>points<span class="classifier">list of namedtuple(“PoseEstimatorKeypoint”)</span></dt><dd><dl class="simple">
+<dt>namedtuple(“PoseEstimatorKeypoint”)</dt><dd><p>x : float, keypoint position
+y : float, keypoint position
+z_local : float, keypoint position
+score : float, keypoint probablity
+interpolated : int, 0 or 1</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>total_score : float, sum of object probability.
+num_valid_points : int, number of valid key points
+id : int, person id
+angle_x : float, object angle
+angle_y : float, object angle
+angle_z : float, object angle</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple(“PoseEstimatorObjectUpPose”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_class_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run the ailia pose stimator with a input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>numpy.ndarray</em>) – input image data. expect a result of cv2.imread(img_path, cv2.IMREAD_UNCHANGED) .</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul>
+<li><p><em>algorithm==POSE_ALGORITHM_ACCULUS_POSE or algorithm==POSE_ALGORITHM_OPEN_POSE</em></p></li>
+<li><p><em>or algorithm==POSE_ALGORITHM_LW_HUMAN_POSE or algorithm==POSE_ALGORITHM_OPEN_POSE_SINGLE_SCALE</em></p></li>
+<li><p><em>array of numpy structured array(“PoseEstimatorObjectPose”)</em> –</p>
+<dl>
+<dt>numpy structured array(“PoseEstimatorObjectPose”)</dt><dd><dl class="simple">
+<dt>points<span class="classifier">array of numpy structured array(“PoseEstimatorKeypoint”)</span></dt><dd><dl class="simple">
+<dt>numpy strucuted array(“PoseEstimatorKeypoint”)</dt><dd><p>x : float, keypoint position
+y : float, keypoint position
+z_local : float, keypoint position
+score : float, keypoint probablity
+interpolated : int, 0 or 1</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>total_score : float, sum of object probability.
+num_valid_points : int, number of valid key points
+id : int, person id
+angle_x : float, object angle
+angle_y : float, object angle
+angle_z : float, object angle</p>
+</dd>
+</dl>
+</li>
+<li><p><em>algorithm==POSE_ALGORITHM_ACCULUS_UPPOSE or algorithm==POSE_ALGORITHM_ACCULUS_UPPOSE_FPGA</em></p></li>
+<li><p><em>array of numpy structured array(“PoseEstimatorObjectUpPose”)</em> –</p>
+<dl>
+<dt>numpy structured array(“PoseEstimatorObjectUpPose”)</dt><dd><dl class="simple">
+<dt>points<span class="classifier">array of numpy structured array(“PoseEstimatorKeypoint”)</span></dt><dd><dl class="simple">
+<dt>numpy strucuted array(“PoseEstimatorKeypoint”)</dt><dd><p>x : float, keypoint position
+y : float, keypoint position
+z_local : float, keypoint position
+score : float, keypoint probablity
+interpolated : int, 0 or 1</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>total_score : float, sum of object probability.
+num_valid_points : int, number of valid key points
+id : int, person id
+angle_x : float, object angle
+angle_y : float, object angle
+angle_z : float, object angle</p>
+</dd>
+</dl>
+</li>
+<li><p><em>algorithm==POSE_ALGORITHM_ACCULUS_HAND</em></p></li>
+<li><p><em>array of numpy structured array(“PoseEstimatorObjectHand”)</em> –</p>
+<dl>
+<dt>numpy structured array(“PoseEstimatorObjectHand”)</dt><dd><dl class="simple">
+<dt>points<span class="classifier">array of numpy structured array(“PoseEstimatorKeypoint”)</span></dt><dd><dl class="simple">
+<dt>numpy strucuted array(“PoseEstimatorKeypoint”)</dt><dd><p>x : float, keypoint position
+y : float, keypoint position
+z_local : float, keypoint position
+score : float, keypoint probablity
+interpolated : int, 0 or 1</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>total_score : float, sum of object probability.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia.PoseEstimator.set_threshold">
+<span class="sig-name descname"><span class="pre">set_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thre</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimator.set_threshold" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.set_temporary_cache_path">
+<span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">set_temporary_cache_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.set_temporary_cache_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>set system cache path.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.get_environment_count">
+<span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">get_environment_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.get_environment_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>get available environments count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>available execution environments count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_environmnet</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.get_environment">
+<span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">get_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.get_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>get environment detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idx</strong> (<em>int</em>) – env_id. 0 to (get_environment_count()-1).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>execution environment detail.
+id : int, used for create() function’s env_id argument.
+type : str, one of the following :</p>
+<blockquote>
+<div><p>’CPU’, ‘BLAS’, ‘GPU’</p>
+</div></blockquote>
+<p>name : str, detail description of execution environment.
+backend : str, one of the following :</p>
+<blockquote>
+<div><p>’NONE’, ‘AMP’, ‘CUDA’, ‘MPS’, ‘VULKAN’</p>
+</div></blockquote>
+<dl class="simple">
+<dt>props<span class="classifier">str, one of the following :</span></dt><dd><p>’NORMAL’, ‘LOWPOWER’, ‘FP16’</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple(“Environment”)</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#ailia.get_environment_count" title="ailia.get_environment_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_environment_count</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.get_environment_list">
+<span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">get_environment_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.get_environment_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>get environment detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl>
+<dt>namedtuple(“Environment”)</dt><dd><p>execution environment detail.
+id : int, used for create() function’s env_id argument.
+type : str, one of the following :</p>
+<blockquote>
+<div><p>’CPU’, ‘BLAS’, ‘GPU’</p>
+</div></blockquote>
+<p>name : str, detail description of execution environment.
+backend : str, one of the following :</p>
+<blockquote>
+<div><p>’NONE’, ‘AMP’, ‘CUDA’, ‘MPS’, ‘VULKAN’</p>
+</div></blockquote>
+<dl class="simple">
+<dt>props<span class="classifier">str, one of the following :</span></dt><dd><p>’NORMAL’, ‘LOWPOWER’, ‘FP16’</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of namedtuple(“Environment”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.get_version">
+<span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>get version string of ailia library.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>version string.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.get_gpu_environment_id">
+<span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">get_gpu_environment_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia.get_gpu_environment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility function to get GPU execution environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>first env_id of GPU execution environment.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if there were no GPU execution environment, this function
+returns ENVIRONMENT_AUTO(-1).</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ailia.get_memory_mode">
+<span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">get_memory_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reduce_constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_input_with_initializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduce_interstage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reuse_interstage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.get_memory_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>get memory management mode combined argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>memory management mode. ( for ailia.Net() )</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reduce_constant</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – free a constant intermediate blob.</p></li>
+<li><p><strong>ignore_input_with_initializer</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – consider all initializer as constant. (even if they overlap with input)</p></li>
+<li><p><strong>reduce_interstage</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – free an intermediate blob.</p></li>
+<li><p><strong>reuse_interstage</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – reuse an available intermediate blob.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="objects">
+<h2>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.ClassifierClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">ClassifierClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.ClassifierClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.ClassifierClass.category">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#ailia.ClassifierClass.category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.ClassifierClass.prob">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prob</span></span><a class="headerlink" href="#ailia.ClassifierClass.prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.DetectorObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">DetectorObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.DetectorObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.DetectorObject.category">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#ailia.DetectorObject.category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.DetectorObject.h">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">h</span></span><a class="headerlink" href="#ailia.DetectorObject.h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.DetectorObject.prob">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prob</span></span><a class="headerlink" href="#ailia.DetectorObject.prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.DetectorObject.w">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">w</span></span><a class="headerlink" href="#ailia.DetectorObject.w" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.DetectorObject.x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#ailia.DetectorObject.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.DetectorObject.y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#ailia.DetectorObject.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.Environment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">Environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.Environment.backend">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">backend</span></span><a class="headerlink" href="#ailia.Environment.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.Environment.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#ailia.Environment.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.Environment.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#ailia.Environment.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.Environment.props">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">props</span></span><a class="headerlink" href="#ailia.Environment.props" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.Environment.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#ailia.Environment.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorKeypoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">PoseEstimatorKeypoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_local</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolated</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimatorKeypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorKeypoint.interpolated">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interpolated</span></span><a class="headerlink" href="#ailia.PoseEstimatorKeypoint.interpolated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorKeypoint.score">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">score</span></span><a class="headerlink" href="#ailia.PoseEstimatorKeypoint.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorKeypoint.x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#ailia.PoseEstimatorKeypoint.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorKeypoint.y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#ailia.PoseEstimatorKeypoint.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorKeypoint.z_local">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">z_local</span></span><a class="headerlink" href="#ailia.PoseEstimatorKeypoint.z_local" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectHand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">PoseEstimatorObjectHand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_score</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimatorObjectHand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectHand.points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">points</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectHand.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectHand.total_score">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">total_score</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectHand.total_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">PoseEstimatorObjectPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_valid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose.angle_x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_x</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose.angle_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose.angle_y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_y</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose.angle_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose.angle_z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_z</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose.angle_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose.num_valid_points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_valid_points</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose.num_valid_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose.points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">points</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectPose.total_score">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">total_score</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectPose.total_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.</span></span><span class="sig-name descname"><span class="pre">PoseEstimatorObjectUpPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_valid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose.angle_x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_x</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose.angle_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose.angle_y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_y</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose.angle_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose.angle_z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_z</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose.angle_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose.num_valid_points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_valid_points</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose.num_valid_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose.points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">points</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ailia.PoseEstimatorObjectUpPose.total_score">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">total_score</span></span><a class="headerlink" href="#ailia.PoseEstimatorObjectUpPose.total_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, AXELL CORPORATION, ax Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
