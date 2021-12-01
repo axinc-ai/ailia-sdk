@@ -22,12 +22,6 @@ Classes
    :undoc-members:
    :show-inheritance:
 
-.. autoclass:: ailia.Detector
-   :special-members: __init__, __name__
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 .. autoclass:: ailia.PoseEstimator
    :special-members: __init__, __name__
    :members:
