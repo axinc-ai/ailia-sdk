@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: ailia_internal.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.9.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_65956747a6f6d37dadfdcf67b1aa1faa.html">export</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">ailia_internal.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ailia__graphics__interop_8h_source.html">ailia_graphics_interop.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ailia_internal.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="ailia__internal_8h__incl.png" border="0" usemap="#ailia__internal_8h" alt=""/></div>
+<map name="ailia__internal_8h" id="ailia__internal_8h">
+<area shape="rect" id="node2" href="ailia__graphics__interop_8h.html" title="ailia_graphics_interop.h" alt="" coords="5,80,183,107"/>
+</map>
+</div>
+</div>
+<p><a href="ailia__internal_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__AILIAEnvironmentV1.html">_AILIAEnvironmentV1</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ac18d32c15803b96c484acebb129b4d74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#ac18d32c15803b96c484acebb129b4d74">AILIA_STATUS_GPU_OLD_ERROR</a>&#160;&#160;&#160;(  -8) /* GPU(旧)上での処理中にエラー */</td></tr>
+<tr class="separator:ac18d32c15803b96c484acebb129b4d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1968b64536ae3242c52ca7d3ab575577"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a1968b64536ae3242c52ca7d3ab575577">AILIA_ENVIRONMENT_BACKEND_LITE</a>&#160;&#160;&#160;(7) /* 組み込み向けエクスポータ */</td></tr>
+<tr class="separator:a1968b64536ae3242c52ca7d3ab575577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71748f70edf2dab5daf60a172c33283"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#aa71748f70edf2dab5daf60a172c33283">AILIA_ENVIRONMENT_BACKEND_SCAI</a>&#160;&#160;&#160;(8) /* FPGA */</td></tr>
+<tr class="separator:aa71748f70edf2dab5daf60a172c33283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c80a7a49f33922d1136947966f562e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a1c80a7a49f33922d1136947966f562e4">AILIA_ENVIRONMENT_BACKEND_OPENVX</a>&#160;&#160;&#160;(9) /* OpenVX */</td></tr>
+<tr class="separator:a1c80a7a49f33922d1136947966f562e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29aa5cc7b0e166e0cb7ab2f41f3b9ccb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a29aa5cc7b0e166e0cb7ab2f41f3b9ccb">AILIA_ENVIRONMENT_TYPE_FPGA</a>&#160;&#160;&#160;(8) /* 仮：当面はデモ限定 */</td></tr>
+<tr class="separator:a29aa5cc7b0e166e0cb7ab2f41f3b9ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c693f1d6f0c76c36e76489fc7ba103"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a25c693f1d6f0c76c36e76489fc7ba103">AILIA_ENVIRONMENT_VERSION_V1</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:a25c693f1d6f0c76c36e76489fc7ba103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a6953f2a3ebf153b0dbbeae16be689a1f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIAEnvironmentV1.html">_AILIAEnvironmentV1</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a6953f2a3ebf153b0dbbeae16be689a1f">AILIAEnvironmentV1</a></td></tr>
+<tr class="separator:a6953f2a3ebf153b0dbbeae16be689a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ac08c1a7c22b16c0bb1468493a3d4ef76"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#ac08c1a7c22b16c0bb1468493a3d4ef76">ailiaOpenWeightFileEx</a> (struct AILIANetwork *net, const void *fopen_args, <a class="el" href="ailia__call_8h.html#a45c2cce98a8d7d0b6e955566a18636aa">ailiaFileCallback</a> callback, int version)</td></tr>
+<tr class="separator:ac08c1a7c22b16c0bb1468493a3d4ef76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59bf994a1e4c83d2dfbb05f4e82bf4a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#ab59bf994a1e4c83d2dfbb05f4e82bf4a">ailiaOpenStreamFileEx</a> (struct AILIANetwork *net, const void *fopen_args, <a class="el" href="ailia__call_8h.html#a45c2cce98a8d7d0b6e955566a18636aa">ailiaFileCallback</a> callback, int version)</td></tr>
+<tr class="separator:ab59bf994a1e4c83d2dfbb05f4e82bf4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f65ae92e5f609c725e20afebba1a10"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a47f65ae92e5f609c725e20afebba1a10">ailiaSetForceCpuExcecutionLayersFwdMatching</a> (struct AILIANetwork *net, const char *pattern)</td></tr>
+<tr class="memdesc:a47f65ae92e5f609c725e20afebba1a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">レイヤー名がpatternに先頭が一致するものを強制的にCPUで実行する ailiaCreateの直後に呼び出してください。(DNNレイヤーのCPUフォールバックが実装されたあとはこの制約はなくなる予定  <a href="#a47f65ae92e5f609c725e20afebba1a10">[詳解]</a><br /></td></tr>
+<tr class="separator:a47f65ae92e5f609c725e20afebba1a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ba7a5b4b0ecf6b009e8418f2e818d7"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#af0ba7a5b4b0ecf6b009e8418f2e818d7">ailiaRefInputBlobBuffer</a> (struct AILIANetwork *net, void **ptr, unsigned int *size, unsigned int index)</td></tr>
+<tr class="memdesc:af0ba7a5b4b0ecf6b009e8418f2e818d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力Blobの内部バッファポインタを直接取得する 高速化のために AiliaDetector 等が利用します。 size 引数に非 NULL を渡すと ptr の有効領域長が書き込まれます。 index 引数には入力インデックス (Blobインデックスではなく) を指定します  <a href="#af0ba7a5b4b0ecf6b009e8418f2e818d7">[詳解]</a><br /></td></tr>
+<tr class="separator:af0ba7a5b4b0ecf6b009e8418f2e818d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef56dd02bad81cac9066fa49580ab5a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#aaef56dd02bad81cac9066fa49580ab5a">ailiaRefOutputBlobBuffer</a> (struct AILIANetwork *net, const void **ptr, unsigned int *size, unsigned int index)</td></tr>
+<tr class="memdesc:aaef56dd02bad81cac9066fa49580ab5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力Blobの内部バッファポインタを直接取得する 高速化のために AiliaDetector 等が利用します。 size 引数に非 NULL を渡すと ptr の有効領域長が書き込まれます。 index 引数には出力インデックス (Blobインデックスではなく) を指定します  <a href="#aaef56dd02bad81cac9066fa49580ab5a">[詳解]</a><br /></td></tr>
+<tr class="separator:aaef56dd02bad81cac9066fa49580ab5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eec42e8d4f7e73232555c6573fefbf0"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a8eec42e8d4f7e73232555c6573fefbf0">ailiaSetExportedFileName</a> (struct AILIANetwork *net, const char *path)</td></tr>
+<tr class="memdesc:a8eec42e8d4f7e73232555c6573fefbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ailia lite のexport fileのベースネームを指定する。 指定されたベース名+.c 及び .hが出力される。 選択された計算環境がliteでない場合は、AILIA_STATUS_INVALID_STATEが返ってくる  <a href="#a8eec42e8d4f7e73232555c6573fefbf0">[詳解]</a><br /></td></tr>
+<tr class="separator:a8eec42e8d4f7e73232555c6573fefbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d24b9cc4ffc3c4371146fe9c01e35a8"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a8d24b9cc4ffc3c4371146fe9c01e35a8">ailiaSetEncryptionKey</a> (struct AILIANetwork *net, const char *key)</td></tr>
+<tr class="separator:a8d24b9cc4ffc3c4371146fe9c01e35a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a8d715ebaaed55915468e2f34fba85"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#aa0a8d715ebaaed55915468e2f34fba85">ailiaCreateWithGraphicsInterop</a> (AILIANetwork **net, const <a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *interop, int backend)</td></tr>
+<tr class="separator:aa0a8d715ebaaed55915468e2f34fba85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b145bd12827a79413f750da7716bd43"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a0b145bd12827a79413f750da7716bd43">ailiaMapInputBlobGraphicsInterop</a> (struct AILIANetwork *net, unsigned int idx)</td></tr>
+<tr class="separator:a0b145bd12827a79413f750da7716bd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc21464910a99f08521b2b8dfde950ba"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#adc21464910a99f08521b2b8dfde950ba">ailiaPredictWithGraphicsInterop</a> (struct AILIANetwork *net, <a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *dest, <a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *src)</td></tr>
+<tr class="separator:adc21464910a99f08521b2b8dfde950ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2947bb2b3a41d5d21887233e7f8112ac"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#a2947bb2b3a41d5d21887233e7f8112ac">ailiaDetectorComputeWithGraphicsInterop</a> (struct AILIADetector *detector, <a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *src, unsigned int src_width, unsigned int src_height, float threshold, float iou)</td></tr>
+<tr class="separator:a2947bb2b3a41d5d21887233e7f8112ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c7271916fa7582e255962c30c65e20"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__internal_8h.html#aa3c7271916fa7582e255962c30c65e20">ailiaEnableDebugLog</a> (struct AILIANetwork *net)</td></tr>
+<tr class="separator:aa3c7271916fa7582e255962c30c65e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a1968b64536ae3242c52ca7d3ab575577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1968b64536ae3242c52ca7d3ab575577">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_BACKEND_LITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_ENVIRONMENT_BACKEND_LITE&#160;&#160;&#160;(7) /* 組み込み向けエクスポータ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c80a7a49f33922d1136947966f562e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c80a7a49f33922d1136947966f562e4">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_BACKEND_OPENVX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_ENVIRONMENT_BACKEND_OPENVX&#160;&#160;&#160;(9) /* OpenVX */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa71748f70edf2dab5daf60a172c33283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71748f70edf2dab5daf60a172c33283">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_BACKEND_SCAI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_ENVIRONMENT_BACKEND_SCAI&#160;&#160;&#160;(8) /* FPGA */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29aa5cc7b0e166e0cb7ab2f41f3b9ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29aa5cc7b0e166e0cb7ab2f41f3b9ccb">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_TYPE_FPGA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_ENVIRONMENT_TYPE_FPGA&#160;&#160;&#160;(8) /* 仮：当面はデモ限定 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25c693f1d6f0c76c36e76489fc7ba103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c693f1d6f0c76c36e76489fc7ba103">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_VERSION_V1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_ENVIRONMENT_VERSION_V1&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac18d32c15803b96c484acebb129b4d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18d32c15803b96c484acebb129b4d74">&#9670;&nbsp;</a></span>AILIA_STATUS_GPU_OLD_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_STATUS_GPU_OLD_ERROR&#160;&#160;&#160;(  -8) /* GPU(旧)上での処理中にエラー */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="a6953f2a3ebf153b0dbbeae16be689a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6953f2a3ebf153b0dbbeae16be689a1f">&#9670;&nbsp;</a></span>AILIAEnvironmentV1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__AILIAEnvironmentV1.html">_AILIAEnvironmentV1</a> <a class="el" href="ailia__internal_8h.html#a6953f2a3ebf153b0dbbeae16be689a1f">AILIAEnvironmentV1</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa0a8d715ebaaed55915468e2f34fba85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a8d715ebaaed55915468e2f34fba85">&#9670;&nbsp;</a></span>ailiaCreateWithGraphicsInterop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateWithGraphicsInterop </td>
+          <td>(</td>
+          <td class="paramtype">AILIANetwork **&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *&#160;</td>
+          <td class="paramname"><em>interop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>backend</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>グラフィックスAPIのオブジェクトからネットワークオブジェクトを作成します。 引数: net - ネットワークオブジェクトポインタ interop - グラフィックスAPIのオブジェクト backend - 外部インターフェースと結び付けられるバックエンド (AILIA_ENVIRONMENT_BACKEND_*) 返値: 成功した場合はAILIA_STATUS_SUCCESS、そうでなければエラーコードを返す。 </p>
+
+</div>
+</div>
+<a id="a2947bb2b3a41d5d21887233e7f8112ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2947bb2b3a41d5d21887233e7f8112ac">&#9670;&nbsp;</a></span>ailiaDetectorComputeWithGraphicsInterop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorComputeWithGraphicsInterop </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIADetector *&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>iou</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>グラフィックスAPIのリソースを入出力に物体検出を行います。 引数: detector - 検出オブジェクトポインタ src - 画像データ(32bpp) src_stride - 1ラインのバイト数 src_width - 画像幅 src_height - 画像高さ src_format - AILIA_IMAGE_FORMAT_* threshold - 検出しきい値(0.1f等)(小さいほど検出されやすくなり、検出数増加) iou - 重複除外しきい値(0.45f等)(小さいほど重複を許容せず検出数減少) 返値: 成功した場合はAILIA_STATUS_SUCCESS、そうでなければエラーコードを返す。 </p>
+
+</div>
+</div>
+<a id="aa3c7271916fa7582e255962c30c65e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c7271916fa7582e255962c30c65e20">&#9670;&nbsp;</a></span>ailiaEnableDebugLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaEnableDebugLog </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>デバッグ用ログを有効にします。 引数: net - ネットワークオブジェクトポインタ 返値: 成功した場合はAILIA_STATUS_SUCCESS、そうでなければエラーコードを返す。 解説: デバッグ用トレースの有効化とエラーログの追加記録を有効にします。 これらのログはエラー発生時にailiaGetErrorDetailで取得できます。 </p>
+
+</div>
+</div>
+<a id="a0b145bd12827a79413f750da7716bd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b145bd12827a79413f750da7716bd43">&#9670;&nbsp;</a></span>ailiaMapInputBlobGraphicsInterop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaMapInputBlobGraphicsInterop </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>推論を行う際にグラフィックスAPIのリソースを使う入力Blobのインデックスを指定します。 引数: net - ネットワークオブジェクトポインタ idx - 入力Blobのインデックス 返値: 成功した場合はAILIA_STATUS_SUCCESS、そうでなければエラーコードを返す。 </p>
+
+</div>
+</div>
+<a id="ab59bf994a1e4c83d2dfbb05f4e82bf4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59bf994a1e4c83d2dfbb05f4e82bf4a">&#9670;&nbsp;</a></span>ailiaOpenStreamFileEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaOpenStreamFileEx </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>fopen_args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ailia__call_8h.html#a45c2cce98a8d7d0b6e955566a18636aa">ailiaFileCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac08c1a7c22b16c0bb1468493a3d4ef76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08c1a7c22b16c0bb1468493a3d4ef76">&#9670;&nbsp;</a></span>ailiaOpenWeightFileEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaOpenWeightFileEx </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>fopen_args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ailia__call_8h.html#a45c2cce98a8d7d0b6e955566a18636aa">ailiaFileCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc21464910a99f08521b2b8dfde950ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc21464910a99f08521b2b8dfde950ba">&#9670;&nbsp;</a></span>ailiaPredictWithGraphicsInterop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPredictWithGraphicsInterop </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAILIAGraphicsInteropDesc.html">AILIAGraphicsInteropDesc</a> *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>グラフィックスAPIのリソースを入出力に推論を行い推論結果を取得します。 引数: net - ネットワークオブジェクトポインタ dest - 推論結果の書き出し先バッファにX,Y,Z,Wの順でnumeric型で格納 サイズはネットファイルのoutputSizeとなる src - 推論データ X,Y,Z,Wの順でnumeric型で格納 サイズはネットファイルのinputSizeとなる 返値: 成功した場合はAILIA_STATUS_SUCCESS、そうでなければエラーコードを返す。 </p>
+
+</div>
+</div>
+<a id="af0ba7a5b4b0ecf6b009e8418f2e818d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ba7a5b4b0ecf6b009e8418f2e818d7">&#9670;&nbsp;</a></span>ailiaRefInputBlobBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaRefInputBlobBuffer </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>入力Blobの内部バッファポインタを直接取得する 高速化のために AiliaDetector 等が利用します。 size 引数に非 NULL を渡すと ptr の有効領域長が書き込まれます。 index 引数には入力インデックス (Blobインデックスではなく) を指定します </p>
+
+</div>
+</div>
+<a id="aaef56dd02bad81cac9066fa49580ab5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef56dd02bad81cac9066fa49580ab5a">&#9670;&nbsp;</a></span>ailiaRefOutputBlobBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaRefOutputBlobBuffer </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void **&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力Blobの内部バッファポインタを直接取得する 高速化のために AiliaDetector 等が利用します。 size 引数に非 NULL を渡すと ptr の有効領域長が書き込まれます。 index 引数には出力インデックス (Blobインデックスではなく) を指定します </p>
+
+</div>
+</div>
+<a id="a8d24b9cc4ffc3c4371146fe9c01e35a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d24b9cc4ffc3c4371146fe9c01e35a8">&#9670;&nbsp;</a></span>ailiaSetEncryptionKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaSetEncryptionKey </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ネットワークオブジェクトに暗号鍵を設定します。 引数: net - ネットワークオブジェクトポインタ key - 暗号鍵・nonce（16進数文字列） 返値: 成功した場合はAILIA_STATUS_SUCCESS、そうでなければエラーコードを返す。 解説: keyの前半64文字には暗号鍵(256bit)、後半64文字にはnonce(256bit)の16進数文字列を与えます。 </p>
+
+</div>
+</div>
+<a id="a8eec42e8d4f7e73232555c6573fefbf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eec42e8d4f7e73232555c6573fefbf0">&#9670;&nbsp;</a></span>ailiaSetExportedFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaSetExportedFileName </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ailia lite のexport fileのベースネームを指定する。 指定されたベース名+.c 及び .hが出力される。 選択された計算環境がliteでない場合は、AILIA_STATUS_INVALID_STATEが返ってくる </p>
+
+</div>
+</div>
+<a id="a47f65ae92e5f609c725e20afebba1a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f65ae92e5f609c725e20afebba1a10">&#9670;&nbsp;</a></span>ailiaSetForceCpuExcecutionLayersFwdMatching()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaSetForceCpuExcecutionLayersFwdMatching </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>レイヤー名がpatternに先頭が一致するものを強制的にCPUで実行する ailiaCreateの直後に呼び出してください。(DNNレイヤーのCPUフォールバックが実装されたあとはこの制約はなくなる予定 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

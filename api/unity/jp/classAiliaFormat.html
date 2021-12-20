@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: AiliaFormat クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.9.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="classAiliaFormat-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">AiliaFormat クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aedf6f0b86bde77011430171d260e48cb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#aedf6f0b86bde77011430171d260e48cb">ailiaFormatConvert</a> (IntPtr dst, UInt32 dst_width, UInt32 dst_height, UInt32 dst_format, UInt32 dst_channel, UInt32 dst_range, IntPtr src, Int32 src_stride, UInt32 src_width, UInt32 src_height, UInt32 src_format)</td></tr>
+<tr class="memdesc:aedf6f0b86bde77011430171d260e48cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像のフォーマットを変換します。  <a href="#aedf6f0b86bde77011430171d260e48cb">[詳解]</a><br /></td></tr>
+<tr class="separator:aedf6f0b86bde77011430171d260e48cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a22b59a9aa7425798a4fd52faa8b7c775"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a22b59a9aa7425798a4fd52faa8b7c775">AILIA_IMAGE_FORMAT_RGBA</a> = (0x00)</td></tr>
+<tr class="separator:a22b59a9aa7425798a4fd52faa8b7c775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8729ff5f82f3c2bdea60611a30f03c95"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a8729ff5f82f3c2bdea60611a30f03c95">AILIA_IMAGE_FORMAT_BGRA</a> = (0x01)</td></tr>
+<tr class="separator:a8729ff5f82f3c2bdea60611a30f03c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68fd19b5908aa30438b39e73286e37b6"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a68fd19b5908aa30438b39e73286e37b6">AILIA_IMAGE_FORMAT_RGBA_B2T</a> = (0x10)</td></tr>
+<tr class="separator:a68fd19b5908aa30438b39e73286e37b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772cda4f24a02364afefe6d36b307526"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a772cda4f24a02364afefe6d36b307526">AILIA_IMAGE_FORMAT_BGRA_B2T</a> = (0x11)</td></tr>
+<tr class="separator:a772cda4f24a02364afefe6d36b307526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061daf4a7786a194f7f52b07654df153"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a061daf4a7786a194f7f52b07654df153">AILIA_NETWORK_IMAGE_FORMAT_BGR</a> = (0)</td></tr>
+<tr class="separator:a061daf4a7786a194f7f52b07654df153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc83cf4a34ec62da8c48afbaf21b75a"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#afbc83cf4a34ec62da8c48afbaf21b75a">AILIA_NETWORK_IMAGE_FORMAT_RGB</a> = (1)</td></tr>
+<tr class="separator:afbc83cf4a34ec62da8c48afbaf21b75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d9ac3cdc09d6ec2c03114a67b95e04"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#ae0d9ac3cdc09d6ec2c03114a67b95e04">AILIA_NETWORK_IMAGE_FORMAT_GRAY</a> = (2)</td></tr>
+<tr class="separator:ae0d9ac3cdc09d6ec2c03114a67b95e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b301d12b7b687485b1563175b8bbd43"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a9b301d12b7b687485b1563175b8bbd43">AILIA_NETWORK_IMAGE_FORMAT_GRAY_EQUALIZE</a> = (3)</td></tr>
+<tr class="separator:a9b301d12b7b687485b1563175b8bbd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de2d74358d7d6b42d0d9c66c7b0a6b1"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a7de2d74358d7d6b42d0d9c66c7b0a6b1">AILIA_NETWORK_IMAGE_CHANNEL_FIRST</a> = (0)</td></tr>
+<tr class="separator:a7de2d74358d7d6b42d0d9c66c7b0a6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e4d006ae405261c161276e06376fe9"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a16e4d006ae405261c161276e06376fe9">AILIA_NETWORK_IMAGE_CHANNEL_LAST</a> = (1)</td></tr>
+<tr class="separator:a16e4d006ae405261c161276e06376fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679e6a1fe1db766240ecb56e1ee679f8"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a679e6a1fe1db766240ecb56e1ee679f8">AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_INT8</a> = (0)</td></tr>
+<tr class="separator:a679e6a1fe1db766240ecb56e1ee679f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a418f5e826753c0228108d01bf650b395"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a418f5e826753c0228108d01bf650b395">AILIA_NETWORK_IMAGE_RANGE_SIGNED_INT8</a> = (1)</td></tr>
+<tr class="separator:a418f5e826753c0228108d01bf650b395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67bc5a39bd3e957caf0f7cb32ead14e1"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a67bc5a39bd3e957caf0f7cb32ead14e1">AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_FP32</a> = (2)</td></tr>
+<tr class="separator:a67bc5a39bd3e957caf0f7cb32ead14e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4385dbe32bca0a24950e0ba4bc9e4e35"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a4385dbe32bca0a24950e0ba4bc9e4e35">AILIA_NETWORK_IMAGE_RANGE_SIGNED_FP32</a> = (3)</td></tr>
+<tr class="separator:a4385dbe32bca0a24950e0ba4bc9e4e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6094f274c2a94f06a81341acf08caac2"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#a6094f274c2a94f06a81341acf08caac2">AILIA_NETWORK_IMAGE_RANGE_IMAGENET</a> = (4)</td></tr>
+<tr class="separator:a6094f274c2a94f06a81341acf08caac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aedf6f0b86bde77011430171d260e48cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf6f0b86bde77011430171d260e48cb">&#9670;&nbsp;</a></span>ailiaFormatConvert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaFormat.ailiaFormatConvert </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>dst_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>dst_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>dst_format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>dst_channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>dst_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int32&#160;</td>
+          <td class="paramname"><em>src_stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像のフォーマットを変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>変換後画像の格納先(numeric型-stride * height * チャンネル数(解説参照)以上のサイズを確保すること) </td></tr>
+    <tr><td class="paramname">dst_width</td><td>変換後画像の横幅 </td></tr>
+    <tr><td class="paramname">dst_height</td><td>変換後画像の高さ </td></tr>
+    <tr><td class="paramname">dst_format</td><td>変換後画像の形式 (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">dst_channel</td><td>変換後画像のチャンネル順 (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">dst_range</td><td>変換後画像のレンジ (AILIA_NETWORK_IMAGE_RANGE_*) </td></tr>
+    <tr><td class="paramname">src</td><td>変換元画像の格納先(32bpp) </td></tr>
+    <tr><td class="paramname">src_stride</td><td>変換元画像のラインバイト数 </td></tr>
+    <tr><td class="paramname">src_width</td><td>変換元画像の横幅 </td></tr>
+    <tr><td class="paramname">src_height</td><td>変換元画像の高さ </td></tr>
+    <tr><td class="paramname">src_format</td><td>変換元画像の形式 (AILIA_IMAGE_FORMAT_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>画像フォーマットを変更します。dst_formatが <a class="el" href="classAiliaFormat.html#a061daf4a7786a194f7f52b07654df153">AILIA_NETWORK_IMAGE_FORMAT_BGR</a> もしくはAILIA_NETWORK_IMAGE_FORMAT_RGB の場合、チャンネル数は3, <a class="el" href="classAiliaFormat.html#ae0d9ac3cdc09d6ec2c03114a67b95e04">AILIA_NETWORK_IMAGE_FORMAT_GRAY</a> の場合チャンネル数は1となります。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a8729ff5f82f3c2bdea60611a30f03c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8729ff5f82f3c2bdea60611a30f03c95">&#9670;&nbsp;</a></span>AILIA_IMAGE_FORMAT_BGRA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_IMAGE_FORMAT_BGRA = (0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BGRA順 </p>
+
+</div>
+</div>
+<a id="a772cda4f24a02364afefe6d36b307526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772cda4f24a02364afefe6d36b307526">&#9670;&nbsp;</a></span>AILIA_IMAGE_FORMAT_BGRA_B2T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_IMAGE_FORMAT_BGRA_B2T = (0x11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BGRA順(Bottom to Top) </p>
+
+</div>
+</div>
+<a id="a22b59a9aa7425798a4fd52faa8b7c775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22b59a9aa7425798a4fd52faa8b7c775">&#9670;&nbsp;</a></span>AILIA_IMAGE_FORMAT_RGBA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_IMAGE_FORMAT_RGBA = (0x00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGBA順 </p>
+
+</div>
+</div>
+<a id="a68fd19b5908aa30438b39e73286e37b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68fd19b5908aa30438b39e73286e37b6">&#9670;&nbsp;</a></span>AILIA_IMAGE_FORMAT_RGBA_B2T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_IMAGE_FORMAT_RGBA_B2T = (0x10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGBA順(Bottom to Top) </p>
+
+</div>
+</div>
+<a id="a7de2d74358d7d6b42d0d9c66c7b0a6b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de2d74358d7d6b42d0d9c66c7b0a6b1">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_CHANNEL_FIRST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_CHANNEL_FIRST = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DCYX順 </p>
+
+</div>
+</div>
+<a id="a16e4d006ae405261c161276e06376fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e4d006ae405261c161276e06376fe9">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_CHANNEL_LAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_CHANNEL_LAST = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DYXC順 </p>
+
+</div>
+</div>
+<a id="a061daf4a7786a194f7f52b07654df153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061daf4a7786a194f7f52b07654df153">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_FORMAT_BGR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_FORMAT_BGR = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BGR順 </p>
+
+</div>
+</div>
+<a id="ae0d9ac3cdc09d6ec2c03114a67b95e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d9ac3cdc09d6ec2c03114a67b95e04">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_FORMAT_GRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_FORMAT_GRAY = (2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gray Scale (1ch) </p>
+
+</div>
+</div>
+<a id="a9b301d12b7b687485b1563175b8bbd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b301d12b7b687485b1563175b8bbd43">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_FORMAT_GRAY_EQUALIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_FORMAT_GRAY_EQUALIZE = (3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ヒストグラム平坦化 Gray Scale (1ch) </p>
+
+</div>
+</div>
+<a id="afbc83cf4a34ec62da8c48afbaf21b75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc83cf4a34ec62da8c48afbaf21b75a">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_FORMAT_RGB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_FORMAT_RGB = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGB順 </p>
+
+</div>
+</div>
+<a id="a6094f274c2a94f06a81341acf08caac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6094f274c2a94f06a81341acf08caac2">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_RANGE_IMAGENET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_RANGE_IMAGENET = (4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ImageNet mean&amp;std normalization </p>
+
+</div>
+</div>
+<a id="a4385dbe32bca0a24950e0ba4bc9e4e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4385dbe32bca0a24950e0ba4bc9e4e35">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_RANGE_SIGNED_FP32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_RANGE_SIGNED_FP32 = (3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>-1.0 - 1.0 </p>
+
+</div>
+</div>
+<a id="a418f5e826753c0228108d01bf650b395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a418f5e826753c0228108d01bf650b395">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_RANGE_SIGNED_INT8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_RANGE_SIGNED_INT8 = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>-128 - 127 </p>
+
+</div>
+</div>
+<a id="a67bc5a39bd3e957caf0f7cb32ead14e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67bc5a39bd3e957caf0f7cb32ead14e1">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_FP32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_FP32 = (2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>0.0 - 1.0 </p>
+
+</div>
+</div>
+<a id="a679e6a1fe1db766240ecb56e1ee679f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679e6a1fe1db766240ecb56e1ee679f8">&#9670;&nbsp;</a></span>AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_INT8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaFormat.AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_INT8 = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>0 - 255 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="AiliaFormat_8cs.html">AiliaFormat.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

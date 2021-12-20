@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ailia: ailia_convert.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -22,6 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.9.0</span>
    </div>
   </td>
  </tr>
@@ -29,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.20 -->
+<!-- 構築: Doxygen 1.8.14 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
@@ -95,15 +96,15 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a3d034bce6532f04b2587066325a9fed9"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__convert_8h.html#a3d034bce6532f04b2587066325a9fed9">ailiaCompressWeightFileA</a> (const char *output_path, const char *input_path, <a class="el" href="structAILIACompressParam.html">AILIACompressParam</a> param, unsigned int version)</td></tr>
-<tr class="memdesc:a3d034bce6532f04b2587066325a9fed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">重み系列を圧縮します  <a href="ailia__convert_8h.html#a3d034bce6532f04b2587066325a9fed9">[詳解]</a><br /></td></tr>
+<tr class="memitem:a3d034bce6532f04b2587066325a9fed9"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__convert_8h.html#a3d034bce6532f04b2587066325a9fed9">ailiaCompressWeightFileA</a> (const char *output_path, const char *input_path, <a class="el" href="structAILIACompressParam.html">AILIACompressParam</a> param, unsigned int version)</td></tr>
+<tr class="memdesc:a3d034bce6532f04b2587066325a9fed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">重み系列を圧縮します  <a href="#a3d034bce6532f04b2587066325a9fed9">[詳解]</a><br /></td></tr>
 <tr class="separator:a3d034bce6532f04b2587066325a9fed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85893261e28acffde1f6f3912f9f2302"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__convert_8h.html#a85893261e28acffde1f6f3912f9f2302">ailiaCompressWeightFileW</a> (const wchar_t *output_path, const wchar_t *input_path, <a class="el" href="structAILIACompressParam.html">AILIACompressParam</a> param, unsigned int version)</td></tr>
+<tr class="memitem:a85893261e28acffde1f6f3912f9f2302"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__convert_8h.html#a85893261e28acffde1f6f3912f9f2302">ailiaCompressWeightFileW</a> (const wchar_t *output_path, const wchar_t *input_path, <a class="el" href="structAILIACompressParam.html">AILIACompressParam</a> param, unsigned int version)</td></tr>
 <tr class="separator:a85893261e28acffde1f6f3912f9f2302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>AILIA 係数コンバータ </p>
-<dl class="section author"><dt>著者</dt><dd>AXELL Corporation </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ax Inc. </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2021/07/28 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a1c6a80cf85ef33500663112959784400"></a>
@@ -156,7 +157,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCompressWeightFileA </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCompressWeightFileA </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>output_path</em>, </td>
@@ -197,7 +198,8 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。  重み系列を圧縮します。圧縮した重みはAILIAのみで使用可能です。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>重み系列を圧縮します。圧縮した重みはAILIAのみで使用可能です。 </p>
 
 </div>
 </div>
@@ -208,7 +210,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCompressWeightFileW </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCompressWeightFileW </td>
           <td>(</td>
           <td class="paramtype">const wchar_t *&#160;</td>
           <td class="paramname"><em>output_path</em>, </td>
@@ -244,7 +246,9 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
 </small></address>
 </body>
 </html>

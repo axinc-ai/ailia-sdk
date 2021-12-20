@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_461',['x',['../struct__AILIAShape.html#ad23cb43045cd0efb91c5225d7ce08755',1,'_AILIAShape::x()'],['../struct__AILIADetectorObject.html#aa4a779af019bc74951379a98e2b419a1',1,'_AILIADetectorObject::x()'],['../struct__AILIAPoseEstimatorKeypoint.html#ab3cc13718c9b7ae32235ca0c1acbdb1f',1,'_AILIAPoseEstimatorKeypoint::x()']]]
+  ['w',['w',['../struct__AILIAShape.html#a483537608b10e949d054b96fe5545395',1,'_AILIAShape::w()'],['../struct__AILIADetectorObject.html#a5c8378867808419315f59617637dda08',1,'_AILIADetectorObject::w()']]],
+  ['width',['width',['../structAILIAVulkanResourceDesc.html#aa06dafbfaddb985c4e6d8fd6a134b06c',1,'AILIAVulkanResourceDesc']]]
 ];

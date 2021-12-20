@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ailia: ailia_pose_estimator.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -22,6 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.9.0</span>
    </div>
   </td>
  </tr>
@@ -29,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.20 -->
+<!-- 構築: Doxygen 1.8.14 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
@@ -82,12 +83,11 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 ailia_pose_estimator.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="ailia__pose__estimator_8h__incl.png" border="0" usemap="#aailia__pose__estimator_8h" alt=""/></div>
-<map name="ailia__pose__estimator_8h" id="aailia__pose__estimator_8h">
-<area shape="rect" title="AILIA 骨格検出・顔特徴点検出ライブラリ" alt="" coords="22,5,173,32"/>
-<area shape="rect" href="ailia_8h.html" title="推論ライブラリ" alt="" coords="19,80,75,107"/>
-<area shape="rect" href="ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="99,80,199,107"/>
-<area shape="rect" href="ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="5,155,88,181"/>
+<div class="center"><img src="ailia__pose__estimator_8h__incl.png" border="0" usemap="#ailia__pose__estimator_8h" alt=""/></div>
+<map name="ailia__pose__estimator_8h" id="ailia__pose__estimator_8h">
+<area shape="rect" id="node2" href="ailia_8h.html" title="推論ライブラリ " alt="" coords="20,80,83,107"/>
+<area shape="rect" id="node4" href="ailia__format_8h.html" title="AILIA フォーマット定義・変換 " alt="" coords="107,80,220,107"/>
+<area shape="rect" id="node3" href="ailia__call_8h.html" title="ユーザ定義コールバック " alt="" coords="5,155,97,181"/>
 </map>
 </div>
 </div>
@@ -224,37 +224,37 @@ ailia_pose_estimator.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a796320db4a16cc2e1121f8c38a0edea1"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a796320db4a16cc2e1121f8c38a0edea1">ailiaCreatePoseEstimator</a> (struct AILIAPoseEstimator **pose_estimator, struct AILIANetwork *net, unsigned int algorithm)</td></tr>
-<tr class="memdesc:a796320db4a16cc2e1121f8c38a0edea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを作成します。  <a href="ailia__pose__estimator_8h.html#a796320db4a16cc2e1121f8c38a0edea1">[詳解]</a><br /></td></tr>
+<tr class="memitem:a796320db4a16cc2e1121f8c38a0edea1"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a796320db4a16cc2e1121f8c38a0edea1">ailiaCreatePoseEstimator</a> (struct AILIAPoseEstimator **pose_estimator, struct AILIANetwork *net, unsigned int algorithm)</td></tr>
+<tr class="memdesc:a796320db4a16cc2e1121f8c38a0edea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを作成します。  <a href="#a796320db4a16cc2e1121f8c38a0edea1">[詳解]</a><br /></td></tr>
 <tr class="separator:a796320db4a16cc2e1121f8c38a0edea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad254b7c40d367e323f6865bba499d402"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#ad254b7c40d367e323f6865bba499d402">ailiaDestroyPoseEstimator</a> (struct AILIAPoseEstimator *pose_estimator)</td></tr>
-<tr class="memdesc:ad254b7c40d367e323f6865bba499d402"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを破棄します。  <a href="ailia__pose__estimator_8h.html#ad254b7c40d367e323f6865bba499d402">[詳解]</a><br /></td></tr>
+<tr class="memitem:ad254b7c40d367e323f6865bba499d402"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#ad254b7c40d367e323f6865bba499d402">ailiaDestroyPoseEstimator</a> (struct AILIAPoseEstimator *pose_estimator)</td></tr>
+<tr class="memdesc:ad254b7c40d367e323f6865bba499d402"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを破棄します。  <a href="#ad254b7c40d367e323f6865bba499d402">[詳解]</a><br /></td></tr>
 <tr class="separator:ad254b7c40d367e323f6865bba499d402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25a30fececb56f12cc5b0acc514d4a8b"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a25a30fececb56f12cc5b0acc514d4a8b">ailiaPoseEstimatorSetThreshold</a> (struct AILIAPoseEstimator *pose_estimator, float threshold)</td></tr>
-<tr class="memdesc:a25a30fececb56f12cc5b0acc514d4a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出閾値を設定します。  <a href="ailia__pose__estimator_8h.html#a25a30fececb56f12cc5b0acc514d4a8b">[詳解]</a><br /></td></tr>
+<tr class="memitem:a25a30fececb56f12cc5b0acc514d4a8b"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a25a30fececb56f12cc5b0acc514d4a8b">ailiaPoseEstimatorSetThreshold</a> (struct AILIAPoseEstimator *pose_estimator, float threshold)</td></tr>
+<tr class="memdesc:a25a30fececb56f12cc5b0acc514d4a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出閾値を設定します。  <a href="#a25a30fececb56f12cc5b0acc514d4a8b">[詳解]</a><br /></td></tr>
 <tr class="separator:a25a30fececb56f12cc5b0acc514d4a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808a27fe3c1b1d7528b542f3137febd1"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a808a27fe3c1b1d7528b542f3137febd1">ailiaPoseEstimatorCompute</a> (struct AILIAPoseEstimator *pose_estimator, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
-<tr class="memdesc:a808a27fe3c1b1d7528b542f3137febd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">骨格検出・顔特徴点検出を行います。  <a href="ailia__pose__estimator_8h.html#a808a27fe3c1b1d7528b542f3137febd1">[詳解]</a><br /></td></tr>
+<tr class="memitem:a808a27fe3c1b1d7528b542f3137febd1"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a808a27fe3c1b1d7528b542f3137febd1">ailiaPoseEstimatorCompute</a> (struct AILIAPoseEstimator *pose_estimator, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
+<tr class="memdesc:a808a27fe3c1b1d7528b542f3137febd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">骨格検出・顔特徴点検出を行います。  <a href="#a808a27fe3c1b1d7528b542f3137febd1">[詳解]</a><br /></td></tr>
 <tr class="separator:a808a27fe3c1b1d7528b542f3137febd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f21dd9a24cf5f23b098a5a23749552e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a2f21dd9a24cf5f23b098a5a23749552e">ailiaPoseEstimatorGetObjectCount</a> (struct AILIAPoseEstimator *pose_estimator, unsigned int *obj_count)</td></tr>
-<tr class="memdesc:a2f21dd9a24cf5f23b098a5a23749552e"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出結果の数を取得します。  <a href="ailia__pose__estimator_8h.html#a2f21dd9a24cf5f23b098a5a23749552e">[詳解]</a><br /></td></tr>
+<tr class="memitem:a2f21dd9a24cf5f23b098a5a23749552e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a2f21dd9a24cf5f23b098a5a23749552e">ailiaPoseEstimatorGetObjectCount</a> (struct AILIAPoseEstimator *pose_estimator, unsigned int *obj_count)</td></tr>
+<tr class="memdesc:a2f21dd9a24cf5f23b098a5a23749552e"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出結果の数を取得します。  <a href="#a2f21dd9a24cf5f23b098a5a23749552e">[詳解]</a><br /></td></tr>
 <tr class="separator:a2f21dd9a24cf5f23b098a5a23749552e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac270c220ac996b61632e873d21ca73e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#aac270c220ac996b61632e873d21ca73e">ailiaPoseEstimatorGetObjectPose</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#ac1e382e4f8cf05a52f952d33a9ff87ce">AILIAPoseEstimatorObjectPose</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
-<tr class="memdesc:aac270c220ac996b61632e873d21ca73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">骨格検出結果を取得します。  <a href="ailia__pose__estimator_8h.html#aac270c220ac996b61632e873d21ca73e">[詳解]</a><br /></td></tr>
+<tr class="memitem:aac270c220ac996b61632e873d21ca73e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#aac270c220ac996b61632e873d21ca73e">ailiaPoseEstimatorGetObjectPose</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#ac1e382e4f8cf05a52f952d33a9ff87ce">AILIAPoseEstimatorObjectPose</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
+<tr class="memdesc:aac270c220ac996b61632e873d21ca73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">骨格検出結果を取得します。  <a href="#aac270c220ac996b61632e873d21ca73e">[詳解]</a><br /></td></tr>
 <tr class="separator:aac270c220ac996b61632e873d21ca73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a811d9293d453ef7dc94cc9f5da8320dc"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a811d9293d453ef7dc94cc9f5da8320dc">ailiaPoseEstimatorGetObjectFace</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#ad1466753d5a74dac8f477e520f241d80">AILIAPoseEstimatorObjectFace</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
-<tr class="memdesc:a811d9293d453ef7dc94cc9f5da8320dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">顔特徴点検出結果を取得します。  <a href="ailia__pose__estimator_8h.html#a811d9293d453ef7dc94cc9f5da8320dc">[詳解]</a><br /></td></tr>
+<tr class="memitem:a811d9293d453ef7dc94cc9f5da8320dc"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a811d9293d453ef7dc94cc9f5da8320dc">ailiaPoseEstimatorGetObjectFace</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#ad1466753d5a74dac8f477e520f241d80">AILIAPoseEstimatorObjectFace</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
+<tr class="memdesc:a811d9293d453ef7dc94cc9f5da8320dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">顔特徴点検出結果を取得します。  <a href="#a811d9293d453ef7dc94cc9f5da8320dc">[詳解]</a><br /></td></tr>
 <tr class="separator:a811d9293d453ef7dc94cc9f5da8320dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78167abea244a53084cf805ea4660502"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a78167abea244a53084cf805ea4660502">ailiaPoseEstimatorGetObjectUpPose</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#aa6e6c8cc357e28b41d5f546062928ea5">AILIAPoseEstimatorObjectUpPose</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
-<tr class="memdesc:a78167abea244a53084cf805ea4660502"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpPose 認識結果を取得します。  <a href="ailia__pose__estimator_8h.html#a78167abea244a53084cf805ea4660502">[詳解]</a><br /></td></tr>
+<tr class="memitem:a78167abea244a53084cf805ea4660502"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#a78167abea244a53084cf805ea4660502">ailiaPoseEstimatorGetObjectUpPose</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#aa6e6c8cc357e28b41d5f546062928ea5">AILIAPoseEstimatorObjectUpPose</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
+<tr class="memdesc:a78167abea244a53084cf805ea4660502"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpPose 認識結果を取得します。  <a href="#a78167abea244a53084cf805ea4660502">[詳解]</a><br /></td></tr>
 <tr class="separator:a78167abea244a53084cf805ea4660502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac96fe25b0430d8757892b6c0098e6a4a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#ac96fe25b0430d8757892b6c0098e6a4a">ailiaPoseEstimatorGetObjectHand</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#ad3f9415e59574e01fe15206379dae058">AILIAPoseEstimatorObjectHand</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
-<tr class="memdesc:ac96fe25b0430d8757892b6c0098e6a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hand 認識結果を取得します。  <a href="ailia__pose__estimator_8h.html#ac96fe25b0430d8757892b6c0098e6a4a">[詳解]</a><br /></td></tr>
+<tr class="memitem:ac96fe25b0430d8757892b6c0098e6a4a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__pose__estimator_8h.html#ac96fe25b0430d8757892b6c0098e6a4a">ailiaPoseEstimatorGetObjectHand</a> (struct AILIAPoseEstimator *pose_estimator, <a class="el" href="ailia__pose__estimator_8h.html#ad3f9415e59574e01fe15206379dae058">AILIAPoseEstimatorObjectHand</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
+<tr class="memdesc:ac96fe25b0430d8757892b6c0098e6a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hand 認識結果を取得します。  <a href="#ac96fe25b0430d8757892b6c0098e6a4a">[詳解]</a><br /></td></tr>
 <tr class="separator:ac96fe25b0430d8757892b6c0098e6a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>AILIA 骨格検出・顔特徴点検出ライブラリ </p>
-<dl class="section author"><dt>著者</dt><dd>AXELL Corporation </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ax Inc. </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2021/07/28 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a0bd2cc013d93fee2b68833cab377e95d"></a>
@@ -1052,7 +1052,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreatePoseEstimator </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreatePoseEstimator </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator **&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1086,7 +1086,8 @@ ailia_pose_estimator.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。  caffemodelとprototxtを読み込んだAILIANetworkから検出オブジェクトを作成します。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>caffemodelとprototxtを読み込んだAILIANetworkから検出オブジェクトを作成します。 </p>
 
 </div>
 </div>
@@ -1097,7 +1098,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyPoseEstimator </td>
+          <td class="memname">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyPoseEstimator </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em></td><td>)</td>
@@ -1123,7 +1124,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorCompute </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorCompute </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1189,7 +1190,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectCount </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectCount </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1227,7 +1228,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectFace </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectFace </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1279,7 +1280,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectHand </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectHand </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1331,7 +1332,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectPose </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectPose </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1383,7 +1384,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectUpPose </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorGetObjectUpPose </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1435,7 +1436,7 @@ ailia_pose_estimator.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorSetThreshold </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaPoseEstimatorSetThreshold </td>
           <td>(</td>
           <td class="paramtype">struct AILIAPoseEstimator *&#160;</td>
           <td class="paramname"><em>pose_estimator</em>, </td>
@@ -1469,7 +1470,9 @@ ailia_pose_estimator.h の依存先関係図:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
 </small></address>
 </body>
 </html>

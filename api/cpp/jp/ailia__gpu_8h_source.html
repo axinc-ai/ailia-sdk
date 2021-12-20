@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: ailia_gpu.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.9.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_65956747a6f6d37dadfdcf67b1aa1faa.html">export</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ailia_gpu.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ailia__gpu_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*    DESCRIPTION:</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*      AILIA GPU Blasインターフェース</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*    AUTHOR:</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*      AXELL Corporation</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*    DATE:2021/07/28</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*******************************************************************/</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#if       !defined(INCLUDED_AILIA_GPU)</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define            INCLUDED_AILIA_GPU</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/* 呼び出し規約 */</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#if defined(_M_JS)</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;emscripten.h&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define AILIA_API EMSCRIPTEN_KEEPALIVE</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#elif defined(_WIN64) || defined(_M_X64) || defined(__amd64__) || defined(__x86_64__) || defined(__APPLE__) || defined(__ANDROID__) || defined(ANDROID) || defined(__linux__) || defined(NN_NINTENDO_SDK)</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define AILIA_API</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#else</span></div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">   21</a></span>&#160;<span class="preprocessor">#define AILIA_API __stdcall</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#if defined(__GNUC__) || defined(__clang__)</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define DEPRECATED __attribute__((deprecated))</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define DEPRECATED __declspec(deprecated)</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#else</span></div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="ailia__gpu_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">   29</a></span>&#160;<span class="preprocessor">#define DEPRECATED</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/****************************************************************</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    * 内部パラメーター最適化API</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    **/</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="ailia__gpu_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">DEPRECATED</a> <span class="keywordtype">int</span> <a class="code" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__gpu_8h.html#a59ed8e97db95496dd2034026d0743296">ailiaOptimizeGpuParameter</a>(<span class="keyword">struct</span> AILIANetwork *net);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="ailia__gpu_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">DEPRECATED</a> <span class="keywordtype">int</span> <a class="code" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__gpu_8h.html#a61a4b11d4c2fe8d47cdc15ee2a013482">ailiaLoadGpuParameterFileA</a>(<span class="keyword">struct</span> AILIANetwork *net, <span class="keyword">const</span> <span class="keywordtype">char</span>    *path);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="ailia__gpu_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">DEPRECATED</a> <span class="keywordtype">int</span> <a class="code" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__gpu_8h.html#aea69fec58486531d7323b1046bbe5401">ailiaLoadGpuParameterFileW</a>(<span class="keyword">struct</span> AILIANetwork *net, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *path);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="ailia__gpu_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">DEPRECATED</a> <span class="keywordtype">int</span> <a class="code" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__gpu_8h.html#ada539f4faa082a360f1028169053496d">ailiaSaveGpuParameterFileA</a>(<span class="keyword">struct</span> AILIANetwork *net, <span class="keyword">const</span> <span class="keywordtype">char</span>    *path);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="ailia__gpu_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">DEPRECATED</a> <span class="keywordtype">int</span> <a class="code" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__gpu_8h.html#acba5f2a07cdec99d9dcb29e5e987678c">ailiaSaveGpuParameterFileW</a>(<span class="keyword">struct</span> AILIANetwork *net, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *path);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#ifdef UNICODE</span></div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define ailiaLoadGpuParameterFile           ailiaLoadGpuParameterFileW</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define ailiaSaveGpuParameterFile           ailiaSaveGpuParameterFileW</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#else</span></div><div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="ailia__gpu_8h.html#aace4b6450852f78f80be7aebe0aff4ec">   87</a></span>&#160;<span class="preprocessor">#define ailiaLoadGpuParameterFile           ailiaLoadGpuParameterFileA</span></div><div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="ailia__gpu_8h.html#a22b827125220119a57693ca099ed3fcd">   88</a></span>&#160;<span class="preprocessor">#define ailiaSaveGpuParameterFile           ailiaSaveGpuParameterFileA</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !defined(INCLUDED_AILIA_GPU) */</span><span class="preprocessor"></span></div><div class="ttc" id="ailia__gpu_8h_html_a1c6a80cf85ef33500663112959784400"><div class="ttname"><a href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div><div class="ttdeci">#define AILIA_API</div><div class="ttdef"><b>Definition:</b> ailia_gpu.h:21</div></div>
+<div class="ttc" id="ailia__gpu_8h_html_a59ed8e97db95496dd2034026d0743296"><div class="ttname"><a href="ailia__gpu_8h.html#a59ed8e97db95496dd2034026d0743296">ailiaOptimizeGpuParameter</a></div><div class="ttdeci">DEPRECATED int AILIA_API ailiaOptimizeGpuParameter(struct AILIANetwork *net)</div></div>
+<div class="ttc" id="ailia__gpu_8h_html_a61a4b11d4c2fe8d47cdc15ee2a013482"><div class="ttname"><a href="ailia__gpu_8h.html#a61a4b11d4c2fe8d47cdc15ee2a013482">ailiaLoadGpuParameterFileA</a></div><div class="ttdeci">DEPRECATED int AILIA_API ailiaLoadGpuParameterFileA(struct AILIANetwork *net, const char *path)</div></div>
+<div class="ttc" id="ailia__gpu_8h_html_ada539f4faa082a360f1028169053496d"><div class="ttname"><a href="ailia__gpu_8h.html#ada539f4faa082a360f1028169053496d">ailiaSaveGpuParameterFileA</a></div><div class="ttdeci">DEPRECATED int AILIA_API ailiaSaveGpuParameterFileA(struct AILIANetwork *net, const char *path)</div></div>
+<div class="ttc" id="ailia__gpu_8h_html_acba5f2a07cdec99d9dcb29e5e987678c"><div class="ttname"><a href="ailia__gpu_8h.html#acba5f2a07cdec99d9dcb29e5e987678c">ailiaSaveGpuParameterFileW</a></div><div class="ttdeci">DEPRECATED int AILIA_API ailiaSaveGpuParameterFileW(struct AILIANetwork *net, const wchar_t *path)</div></div>
+<div class="ttc" id="ailia__gpu_8h_html_ac1e8a42306d8e67cb94ca31c3956ee78"><div class="ttname"><a href="ailia__gpu_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">DEPRECATED</a></div><div class="ttdeci">#define DEPRECATED</div><div class="ttdef"><b>Definition:</b> ailia_gpu.h:29</div></div>
+<div class="ttc" id="ailia__gpu_8h_html_aea69fec58486531d7323b1046bbe5401"><div class="ttname"><a href="ailia__gpu_8h.html#aea69fec58486531d7323b1046bbe5401">ailiaLoadGpuParameterFileW</a></div><div class="ttdeci">DEPRECATED int AILIA_API ailiaLoadGpuParameterFileW(struct AILIANetwork *net, const wchar_t *path)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

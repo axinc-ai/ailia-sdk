@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ailia: ファイルメンバ</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -22,6 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.9.0</span>
    </div>
   </td>
  </tr>
@@ -29,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.20 -->
+<!-- 構築: Doxygen 1.8.14 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
@@ -160,6 +161,9 @@ $(function() {
 <li>ailiaCreatePoseEstimator()
 : <a class="el" href="ailia__pose__estimator_8h.html#a796320db4a16cc2e1121f8c38a0edea1">ailia_pose_estimator.h</a>
 </li>
+<li>ailiaCreateWithGraphicsInterop()
+: <a class="el" href="ailia__internal_8h.html#aa0a8d715ebaaed55915468e2f34fba85">ailia_internal.h</a>
+</li>
 <li>ailiaDestroy()
 : <a class="el" href="ailia_8h.html#a71302da162d556efbe637cdeb47b25a0">ailia.h</a>
 </li>
@@ -178,6 +182,9 @@ $(function() {
 <li>ailiaDetectorCompute()
 : <a class="el" href="ailia__detector_8h.html#a7db22154f11fe44b7e27a95fadf34ef2">ailia_detector.h</a>
 </li>
+<li>ailiaDetectorComputeWithGraphicsInterop()
+: <a class="el" href="ailia__internal_8h.html#a2947bb2b3a41d5d21887233e7f8112ac">ailia_internal.h</a>
+</li>
 <li>ailiaDetectorGetObject()
 : <a class="el" href="ailia__detector_8h.html#ac831a97ef163e1d100ade8542cbc111e">ailia_detector.h</a>
 </li>
@@ -189,6 +196,9 @@ $(function() {
 </li>
 <li>ailiaDetectorSetInputShape()
 : <a class="el" href="ailia__detector_8h.html#a9bd9e4385de790b5fc031317bd81573e">ailia_detector.h</a>
+</li>
+<li>ailiaEnableDebugLog()
+: <a class="el" href="ailia__internal_8h.html#aa3c7271916fa7582e255962c30c65e20">ailia_internal.h</a>
 </li>
 <li>ailiaFeatureExtractorCompute()
 : <a class="el" href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">ailia_feature_extractor.h</a>
@@ -271,11 +281,23 @@ $(function() {
 <li>ailiaGetVersion()
 : <a class="el" href="ailia_8h.html#a66bed78bfc4762fe0cfe57d9a9b47ca3">ailia.h</a>
 </li>
+<li>ailiaLoadGpuParameterFileA()
+: <a class="el" href="ailia__gpu_8h.html#a61a4b11d4c2fe8d47cdc15ee2a013482">ailia_gpu.h</a>
+</li>
+<li>ailiaLoadGpuParameterFileW()
+: <a class="el" href="ailia__gpu_8h.html#aea69fec58486531d7323b1046bbe5401">ailia_gpu.h</a>
+</li>
+<li>ailiaMapInputBlobGraphicsInterop()
+: <a class="el" href="ailia__internal_8h.html#a0b145bd12827a79413f750da7716bd43">ailia_internal.h</a>
+</li>
 <li>ailiaOpenStreamEx()
 : <a class="el" href="ailia_8h.html#aaa936a86f531c2dd8bec2b51af383a27">ailia.h</a>
 </li>
 <li>ailiaOpenStreamFileA()
 : <a class="el" href="ailia_8h.html#a4c377f24beec2c4bc6d783b8e85a4860">ailia.h</a>
+</li>
+<li>ailiaOpenStreamFileEx()
+: <a class="el" href="ailia__internal_8h.html#ab59bf994a1e4c83d2dfbb05f4e82bf4a">ailia_internal.h</a>
 </li>
 <li>ailiaOpenStreamFileW()
 : <a class="el" href="ailia_8h.html#a7ea6f98ce66fc26959c74b3a1408967a">ailia.h</a>
@@ -289,11 +311,17 @@ $(function() {
 <li>ailiaOpenWeightFileA()
 : <a class="el" href="ailia_8h.html#a231d647cecbd1beb0d8d78a83b50ed1b">ailia.h</a>
 </li>
+<li>ailiaOpenWeightFileEx()
+: <a class="el" href="ailia__internal_8h.html#ac08c1a7c22b16c0bb1468493a3d4ef76">ailia_internal.h</a>
+</li>
 <li>ailiaOpenWeightFileW()
 : <a class="el" href="ailia_8h.html#a1f61374a5e927e05be54398ef06d9e4f">ailia.h</a>
 </li>
 <li>ailiaOpenWeightMem()
 : <a class="el" href="ailia_8h.html#a129ac8f509c3fcd3cf6343e0c613681e">ailia.h</a>
+</li>
+<li>ailiaOptimizeGpuParameter()
+: <a class="el" href="ailia__gpu_8h.html#a59ed8e97db95496dd2034026d0743296">ailia_gpu.h</a>
 </li>
 <li>ailiaPoseEstimatorCompute()
 : <a class="el" href="ailia__pose__estimator_8h.html#a808a27fe3c1b1d7528b542f3137febd1">ailia_pose_estimator.h</a>
@@ -318,6 +346,30 @@ $(function() {
 </li>
 <li>ailiaPredict()
 : <a class="el" href="ailia_8h.html#aa1a5d4d2263d82681f3f6250552f1b92">ailia.h</a>
+</li>
+<li>ailiaPredictWithGraphicsInterop()
+: <a class="el" href="ailia__internal_8h.html#adc21464910a99f08521b2b8dfde950ba">ailia_internal.h</a>
+</li>
+<li>ailiaRefInputBlobBuffer()
+: <a class="el" href="ailia__internal_8h.html#af0ba7a5b4b0ecf6b009e8418f2e818d7">ailia_internal.h</a>
+</li>
+<li>ailiaRefOutputBlobBuffer()
+: <a class="el" href="ailia__internal_8h.html#aaef56dd02bad81cac9066fa49580ab5a">ailia_internal.h</a>
+</li>
+<li>ailiaSaveGpuParameterFileA()
+: <a class="el" href="ailia__gpu_8h.html#ada539f4faa082a360f1028169053496d">ailia_gpu.h</a>
+</li>
+<li>ailiaSaveGpuParameterFileW()
+: <a class="el" href="ailia__gpu_8h.html#acba5f2a07cdec99d9dcb29e5e987678c">ailia_gpu.h</a>
+</li>
+<li>ailiaSetEncryptionKey()
+: <a class="el" href="ailia__internal_8h.html#a8d24b9cc4ffc3c4371146fe9c01e35a8">ailia_internal.h</a>
+</li>
+<li>ailiaSetExportedFileName()
+: <a class="el" href="ailia__internal_8h.html#a8eec42e8d4f7e73232555c6573fefbf0">ailia_internal.h</a>
+</li>
+<li>ailiaSetForceCpuExcecutionLayersFwdMatching()
+: <a class="el" href="ailia__internal_8h.html#a47f65ae92e5f609c725e20afebba1a10">ailia_internal.h</a>
 </li>
 <li>ailiaSetInputBlobData()
 : <a class="el" href="ailia_8h.html#aa84ced8c68d31e6287a4aa7bdffad551">ailia.h</a>
@@ -356,7 +408,9 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
 </small></address>
 </body>
 </html>

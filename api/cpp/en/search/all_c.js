@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['score_310',['score',['../struct__AILIAPoseEstimatorKeypoint.html#a108a96976913083b72995febbbc7d2df',1,'_AILIAPoseEstimatorKeypoint']]]
+  ['resource',['resource',['../structAILIADX11ResourceDesc.html#ad0d61c6b25876cb247a3ca16088240a9',1,'AILIADX11ResourceDesc']]]
 ];

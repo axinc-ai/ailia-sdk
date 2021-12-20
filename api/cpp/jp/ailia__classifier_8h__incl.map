@@ -1,6 +1,5 @@
 <map id="ailia_classifier.h" name="ailia_classifier.h">
-<area shape="rect" id="node1" title="物体識別ライブラリ" alt="" coords="40,5,155,32"/>
-<area shape="rect" id="node2" href="$ailia_8h.html" title="推論ライブラリ" alt="" coords="19,80,75,107"/>
-<area shape="rect" id="node4" href="$ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="99,80,199,107"/>
-<area shape="rect" id="node3" href="$ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node2" href="$ailia_8h.html" title="推論ライブラリ " alt="" coords="20,80,83,107"/>
+<area shape="rect" id="node4" href="$ailia__format_8h.html" title="AILIA フォーマット定義・変換 " alt="" coords="107,80,220,107"/>
+<area shape="rect" id="node3" href="$ailia__call_8h.html" title="ユーザ定義コールバック " alt="" coords="5,155,97,181"/>
 </map>

@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ailia: ailia_feature_extractor.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -22,6 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.9.0</span>
    </div>
   </td>
  </tr>
@@ -29,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.20 -->
+<!-- 構築: Doxygen 1.8.14 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
@@ -80,12 +81,11 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 ailia_feature_extractor.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="ailia__feature__extractor_8h__incl.png" border="0" usemap="#aailia__feature__extractor_8h" alt=""/></div>
-<map name="ailia__feature__extractor_8h" id="aailia__feature__extractor_8h">
-<area shape="rect" title="AILIA 特徴抽出ライブラリ" alt="" coords="17,5,177,32"/>
-<area shape="rect" href="ailia_8h.html" title="推論ライブラリ" alt="" coords="19,80,75,107"/>
-<area shape="rect" href="ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="99,80,199,107"/>
-<area shape="rect" href="ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="5,155,88,181"/>
+<div class="center"><img src="ailia__feature__extractor_8h__incl.png" border="0" usemap="#ailia__feature__extractor_8h" alt=""/></div>
+<map name="ailia__feature__extractor_8h" id="ailia__feature__extractor_8h">
+<area shape="rect" id="node2" href="ailia_8h.html" title="推論ライブラリ " alt="" coords="20,80,83,107"/>
+<area shape="rect" id="node4" href="ailia__format_8h.html" title="AILIA フォーマット定義・変換 " alt="" coords="107,80,220,107"/>
+<area shape="rect" id="node3" href="ailia__call_8h.html" title="ユーザ定義コールバック " alt="" coords="5,155,97,181"/>
 </map>
 </div>
 </div>
@@ -94,27 +94,27 @@ ailia_feature_extractor.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a53a4b803d6c4f63d8c111597ee3b3ad4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a53a4b803d6c4f63d8c111597ee3b3ad4">AILIA_FEATURE_EXTRACTOR_DISTANCE_L2NORM</a>&#160;&#160;&#160;(0)</td></tr>
-<tr class="memdesc:a53a4b803d6c4f63d8c111597ee3b3ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2ノルム  <a href="ailia__feature__extractor_8h.html#a53a4b803d6c4f63d8c111597ee3b3ad4">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a53a4b803d6c4f63d8c111597ee3b3ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2ノルム  <a href="#a53a4b803d6c4f63d8c111597ee3b3ad4">[詳解]</a><br /></td></tr>
 <tr class="separator:a53a4b803d6c4f63d8c111597ee3b3ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#ada8bfe73c4c5c086018fba5f02a0b9fd">ailiaCreateFeatureExtractor</a> (struct AILIAFeatureExtractor **fextractor, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range, const char *layer_name)</td></tr>
-<tr class="memdesc:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴抽出オブジェクトを作成します。  <a href="ailia__feature__extractor_8h.html#ada8bfe73c4c5c086018fba5f02a0b9fd">[詳解]</a><br /></td></tr>
+<tr class="memitem:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#ada8bfe73c4c5c086018fba5f02a0b9fd">ailiaCreateFeatureExtractor</a> (struct AILIAFeatureExtractor **fextractor, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range, const char *layer_name)</td></tr>
+<tr class="memdesc:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴抽出オブジェクトを作成します。  <a href="#ada8bfe73c4c5c086018fba5f02a0b9fd">[詳解]</a><br /></td></tr>
 <tr class="separator:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ae8296875bdeacfd20b90c5946c71a2"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a1ae8296875bdeacfd20b90c5946c71a2">ailiaDestroyFeatureExtractor</a> (struct AILIAFeatureExtractor *fextractor)</td></tr>
-<tr class="memdesc:a1ae8296875bdeacfd20b90c5946c71a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴抽出オブジェクトを破棄します。  <a href="ailia__feature__extractor_8h.html#a1ae8296875bdeacfd20b90c5946c71a2">[詳解]</a><br /></td></tr>
+<tr class="memitem:a1ae8296875bdeacfd20b90c5946c71a2"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a1ae8296875bdeacfd20b90c5946c71a2">ailiaDestroyFeatureExtractor</a> (struct AILIAFeatureExtractor *fextractor)</td></tr>
+<tr class="memdesc:a1ae8296875bdeacfd20b90c5946c71a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴抽出オブジェクトを破棄します。  <a href="#a1ae8296875bdeacfd20b90c5946c71a2">[詳解]</a><br /></td></tr>
 <tr class="separator:a1ae8296875bdeacfd20b90c5946c71a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c7445935c450b096bc1c43c34da1066"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">ailiaFeatureExtractorCompute</a> (struct AILIAFeatureExtractor *fextractor, void *dst, unsigned int dst_size, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
-<tr class="memdesc:a6c7445935c450b096bc1c43c34da1066"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴の抽出を行います。  <a href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">[詳解]</a><br /></td></tr>
+<tr class="memitem:a6c7445935c450b096bc1c43c34da1066"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">ailiaFeatureExtractorCompute</a> (struct AILIAFeatureExtractor *fextractor, void *dst, unsigned int dst_size, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
+<tr class="memdesc:a6c7445935c450b096bc1c43c34da1066"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴の抽出を行います。  <a href="#a6c7445935c450b096bc1c43c34da1066">[詳解]</a><br /></td></tr>
 <tr class="separator:a6c7445935c450b096bc1c43c34da1066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e">ailiaFeatureExtractorMatch</a> (struct AILIAFeatureExtractor *fextractor, float *distance, unsigned int distace_type, const void *feature1, unsigned int feature1_size, const void *feature2, unsigned int feature2_size)</td></tr>
-<tr class="memdesc:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴間の距離を計算します。  <a href="ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e">[詳解]</a><br /></td></tr>
+<tr class="memitem:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e">ailiaFeatureExtractorMatch</a> (struct AILIAFeatureExtractor *fextractor, float *distance, unsigned int distace_type, const void *feature1, unsigned int feature1_size, const void *feature2, unsigned int feature2_size)</td></tr>
+<tr class="memdesc:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴間の距離を計算します。  <a href="#a567f151b19b4dcf9e3a2eeaff4f4ca6e">[詳解]</a><br /></td></tr>
 <tr class="separator:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>AILIA 特徴抽出ライブラリ </p>
-<dl class="section author"><dt>著者</dt><dd>AXELL Corporation </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ax Inc. </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2021/07/28 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a53a4b803d6c4f63d8c111597ee3b3ad4"></a>
@@ -141,7 +141,7 @@ ailia_feature_extractor.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateFeatureExtractor </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateFeatureExtractor </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor **&#160;</td>
           <td class="paramname"><em>fextractor</em>, </td>
@@ -207,7 +207,7 @@ ailia_feature_extractor.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyFeatureExtractor </td>
+          <td class="memname">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyFeatureExtractor </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor *&#160;</td>
           <td class="paramname"><em>fextractor</em></td><td>)</td>
@@ -233,7 +233,7 @@ ailia_feature_extractor.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorCompute </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorCompute </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor *&#160;</td>
           <td class="paramname"><em>fextractor</em>, </td>
@@ -313,7 +313,7 @@ ailia_feature_extractor.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorMatch </td>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorMatch </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor *&#160;</td>
           <td class="paramname"><em>fextractor</em>, </td>
@@ -382,7 +382,9 @@ ailia_feature_extractor.h の依存先関係図:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
 </small></address>
 </body>
 </html>
