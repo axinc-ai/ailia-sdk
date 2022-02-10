@@ -36,11 +36,12 @@ This api document is in beta. We plan to change the URL of the document in the f
 - [Tutorial (EN)](https://medium.com/axinc-ai/ailia-sdk-tutorial-unity-54f2a8155b8f) [(JP)](https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-unity-257fa1e98777)
 - [Models](https://github.com/axinc-ai/ailia-models-unity)
 
-### Java
+### JNI
 
 - [API (EN)](https://axinc-ai.github.io/ailia-sdk/api/java/en/)
 - [Tutorial (EN)](https://medium.com/axinc-ai/ailia-sdk-tutorial-jni-92b797725e08) [(JP)](https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-jni-7a11c1da08dc)
-- [Android Studio Sample Project](https://github.com/axinc-ai/ailia-android-studio)
+- [Android Studio Sample Project (Java)](https://github.com/axinc-ai/ailia-android-studio)
+- [Android Studio Sample Project (Kotlin)](https://github.com/axinc-ai/ailia-android-studio-kotlin)
 
 ## Videos
 
