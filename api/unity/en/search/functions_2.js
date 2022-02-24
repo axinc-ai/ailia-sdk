@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['environment',['Environment',['../classAiliaModel.html#acaac25039fc3d3f04ae7030e7f723b0c',1,'AiliaModel']]],
-  ['environmentname',['EnvironmentName',['../classAiliaModel.html#a52ac08199ff932165a1db2bbbd293a15',1,'AiliaModel']]]
+  ['disablelayerfusion',['DisableLayerFusion',['../classAiliaModel.html#a97a3b6fc53f396980037950a82d8f5ef',1,'AiliaModel']]]
 ];
