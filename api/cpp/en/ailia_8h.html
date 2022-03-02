@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.9.0</span>
+   &#160;<span id="projectnumber">1.2.10.0</span>
    </div>
   </td>
  </tr>
@@ -134,7 +134,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ae6fc082527d7290c8c5d0a095ad091cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread creation failed.  <a href="#ae6fc082527d7290c8c5d0a095ad091cb">More...</a><br /></td></tr>
 <tr class="separator:ae6fc082527d7290c8c5d0a095ad091cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a>&#160;&#160;&#160;(  -7)</td></tr>
-<tr class="memdesc:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The internal status of the decoder is incorrect.  <a href="#ae9f1df6fdfeebe95a12f5517840fd91d">More...</a><br /></td></tr>
+<tr class="memdesc:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The internal status of the ailia is incorrect.  <a href="#ae9f1df6fdfeebe95a12f5517840fd91d">More...</a><br /></td></tr>
 <tr class="separator:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a7232c4fdb94cd20cacc730bb82661"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a28a7232c4fdb94cd20cacc730bb82661">AILIA_STATUS_UNSUPPORT_NET</a>&#160;&#160;&#160;(  -9)</td></tr>
 <tr class="memdesc:a28a7232c4fdb94cd20cacc730bb82661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsupported network.  <a href="#a28a7232c4fdb94cd20cacc730bb82661">More...</a><br /></td></tr>
@@ -376,9 +376,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a8ee92ef8331b34b93ff44d5f4dc89244"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a8ee92ef8331b34b93ff44d5f4dc89244">ailiaSetMemoryMode</a> (struct AILIANetwork *net, unsigned int mode)</td></tr>
 <tr class="memdesc:a8ee92ef8331b34b93ff44d5f4dc89244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the memory usage policy for inference.  <a href="#a8ee92ef8331b34b93ff44d5f4dc89244">More...</a><br /></td></tr>
 <tr class="separator:a8ee92ef8331b34b93ff44d5f4dc89244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297ff8e716e400b68b596bbd2b5b700e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a297ff8e716e400b68b596bbd2b5b700e">ailiaDisableLayerFusion</a> (struct AILIANetwork *net)</td></tr>
+<tr class="memdesc:a297ff8e716e400b68b596bbd2b5b700e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disalbe layer fusion optimaization for inference.  <a href="#a297ff8e716e400b68b596bbd2b5b700e">More...</a><br /></td></tr>
+<tr class="separator:a297ff8e716e400b68b596bbd2b5b700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acebb87eab1d8ae47365fed96e63f2aaa"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#acebb87eab1d8ae47365fed96e63f2aaa">ailiaSetProfileMode</a> (struct AILIANetwork *net, unsigned int mode)</td></tr>
 <tr class="memdesc:acebb87eab1d8ae47365fed96e63f2aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the profile mode.  <a href="#acebb87eab1d8ae47365fed96e63f2aaa">More...</a><br /></td></tr>
 <tr class="separator:acebb87eab1d8ae47365fed96e63f2aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87d371ca290804ab861ddb4e717b45cb"><td class="memItemLeft" align="right" valign="top">const char *<a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a87d371ca290804ab861ddb4e717b45cb">ailiaGetStatusString</a> (int status_code)</td></tr>
+<tr class="memdesc:a87d371ca290804ab861ddb4e717b45cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string describing given status code.  <a href="#a87d371ca290804ab861ddb4e717b45cb">More...</a><br /></td></tr>
+<tr class="separator:a87d371ca290804ab861ddb4e717b45cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cae066af9b5d8e1f1e80965e4ee94ca"><td class="memItemLeft" align="right" valign="top">const char *<a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca">ailiaGetErrorDetail</a> (struct AILIANetwork *net)</td></tr>
 <tr class="memdesc:a2cae066af9b5d8e1f1e80965e4ee94ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the details of errors.  <a href="#a2cae066af9b5d8e1f1e80965e4ee94ca">More...</a><br /></td></tr>
 <tr class="separator:a2cae066af9b5d8e1f1e80965e4ee94ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -763,6 +769,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A corrupt file was passed. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check model file are correct or not, and please pass correct model. </dd></dl>
 
 </div>
 </div>
@@ -779,6 +786,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The information was not available from the application. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The specified information was removed due to optimization. If you need the information, please disable optimization and call API. </dd></dl>
 
 </div>
 </div>
@@ -809,6 +817,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>File access failed. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check file is exist or not, and check access permission. </dd></dl>
 
 </div>
 </div>
@@ -825,6 +834,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Model Expired. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The model file are expired. Please re generate model with ailia_obfuscate_c. </dd></dl>
 
 </div>
 </div>
@@ -841,6 +851,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Error during processing on the GPU. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check the GPU driver are latest and VRAM are sufficient or not. </dd></dl>
 
 </div>
 </div>
@@ -857,6 +868,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A layer parameter not supported by the GPU was given. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The layer or parameter that not supported by the GPU was given. Please check model file are correct or not and contact support desk that described on document. </dd></dl>
 
 </div>
 </div>
@@ -873,6 +885,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Incorrect argument. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check argument of called API. </dd></dl>
 
 </div>
 </div>
@@ -889,6 +902,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Incorrect layer weight, parameter, or input or output shape. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The layer of model had incorrect parameter or so on. Please call <a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca" title="Returns the details of errors. ">ailiaGetErrorDetail()</a> and check detail message. And, please check model. </dd></dl>
 
 </div>
 </div>
@@ -905,6 +919,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The content of the parameter file is invalid. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check parameter file are correct or not. </dd></dl>
 
 </div>
 </div>
@@ -920,7 +935,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The internal status of the decoder is incorrect. </p>
+<p>The internal status of the ailia is incorrect. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check API document and API call steps. </dd></dl>
 
 </div>
 </div>
@@ -937,6 +953,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Incorrect struct version. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check struct version that passed with API and please pass correct struct version. </dd></dl>
 
 </div>
 </div>
@@ -953,6 +970,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>License is broken. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The license file that are required for trial version are broken. Please contact support desk that described on document. </dd></dl>
 
 </div>
 </div>
@@ -969,6 +987,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>License expired. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The license file that are required for trial version are expired. Please contact support desk that described on document. </dd></dl>
 
 </div>
 </div>
@@ -985,6 +1004,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>No valid license found. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The license file are required for trial version. Please contact support desk that described on document. </dd></dl>
 
 </div>
 </div>
@@ -1001,6 +1021,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Insufficient memory. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check usage of main memory and VRAM. And please call API after free memory. </dd></dl>
 
 </div>
 </div>
@@ -1017,6 +1038,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Dimension of shape is 5 or more. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The called API are supported up to 4 dimension. Please replace API that described on API document. </dd></dl>
 
 </div>
 </div>
@@ -1033,6 +1055,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The specified element was not found. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The specified element of passed name/index was not found. Please check the element are exisit on model or not. </dd></dl>
 
 </div>
 </div>
@@ -1049,6 +1072,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unknown error. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The misc error has been occured. Please call <a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca" title="Returns the details of errors. ">ailiaGetErrorDetail()</a> and check detail message. And, please contact support desk that described on document. </dd></dl>
 
 </div>
 </div>
@@ -1065,6 +1089,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Operation not allowed. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The called API are not allowed on this model (e.g. encrypted model are used.). Please check model file and change API call flow. </dd></dl>
 
 </div>
 </div>
@@ -1097,6 +1122,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Thread creation failed. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Please check usage of system resource (e.g. thread). And please call API after release system resources. </dd></dl>
 
 </div>
 </div>
@@ -1113,6 +1139,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unimplemented error. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The called API are not available on current environment. Please contact support desk that described on document. </dd></dl>
 
 </div>
 </div>
@@ -1129,6 +1156,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The shape is not yet determined. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The shape (e.g. output shape) are not determined. When called API that to get output shape, please set input shape and execute inference, then call API that to get output shape. </dd></dl>
 
 </div>
 </div>
@@ -1145,6 +1173,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unsupported network. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Non supported model file was passed to wrapper functions (e.g. Detector). Please check document whether presented models are supported or not. </dd></dl>
 
 </div>
 </div>
@@ -1289,6 +1318,34 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a297ff8e716e400b68b596bbd2b5b700e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a297ff8e716e400b68b596bbd2b5b700e">&#9670;&nbsp;</a></span>ailiaDisableLayerFusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDisableLayerFusion </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disalbe layer fusion optimaization for inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This api use to get blob that remove by layer fusion optimization. Must be specified immediately after <a class="el" href="ailia_8h.html#aafbaa89c853a043c6e2961f6a72e820e" title="Creates a network instance. ">ailiaCreate()</a> . It cannot be changed after calling ailiaOpen. Note: When disable layer fusion optimization, inference speed may be down. </p>
 
 </div>
 </div>
@@ -1476,7 +1533,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
-<p>If <a class="el" href="ailia_8h.html#aa1a5d4d2263d82681f3f6250552f1b92" title="Performs the inferences and provides the inference result. ">ailiaPredict()</a> is not run at all, the function returns <a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a> . </p>
+<p>If <a class="el" href="ailia_8h.html#aa1a5d4d2263d82681f3f6250552f1b92" title="Performs the inferences and provides the inference result. ">ailiaPredict()</a> or <a class="el" href="ailia_8h.html#aad4bf948c6e7a29a82c2b01243064f98" title="Makes inferences with the input data specified in advance. ">ailiaUpdate()</a> is not run at all, the function returns <a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a> . </p>
 
 </div>
 </div>
@@ -2236,6 +2293,28 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a87d371ca290804ab861ddb4e717b45cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d371ca290804ab861ddb4e717b45cb">&#9670;&nbsp;</a></span>ailiaGetStatusString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaGetStatusString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the string describing given status code. </p>
+<dl class="section return"><dt>Returns</dt><dd>String describing given status code. Retuned string is valid until the library of ailia (ailia.dll, libailia.so, etc) is unloaded.</dd></dl>
+<p>The return value does not have to be released. If an instance of AILIANetwork is exist, <a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca" title="Returns the details of errors. ">ailiaGetErrorDetail()</a> can be used to get the detail of the error. </p>
 
 </div>
 </div>

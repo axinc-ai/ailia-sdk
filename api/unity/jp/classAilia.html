@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.9.0</span>
+   &#160;<span id="projectnumber">1.2.10.0</span>
    </div>
   </td>
  </tr>
@@ -215,9 +215,15 @@ $(function() {
 <tr class="memitem:ab3d1f01d6d70d2ad7ad8041a80b7ffce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab3d1f01d6d70d2ad7ad8041a80b7ffce">ailiaSetMemoryMode</a> (IntPtr net, UInt32 mode)</td></tr>
 <tr class="memdesc:ab3d1f01d6d70d2ad7ad8041a80b7ffce"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時のメモリの使用方針を設定します  <a href="#ab3d1f01d6d70d2ad7ad8041a80b7ffce">[詳解]</a><br /></td></tr>
 <tr class="separator:ab3d1f01d6d70d2ad7ad8041a80b7ffce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8135767f8f0859a65ef15ef13a1d8ed3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a8135767f8f0859a65ef15ef13a1d8ed3">ailiaDisableLayerFusion</a> (IntPtr net)</td></tr>
+<tr class="memdesc:a8135767f8f0859a65ef15ef13a1d8ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時のレイヤー統合を無効化します  <a href="#a8135767f8f0859a65ef15ef13a1d8ed3">[詳解]</a><br /></td></tr>
+<tr class="separator:a8135767f8f0859a65ef15ef13a1d8ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9e006d86eef112a3dda2134883b4938"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab9e006d86eef112a3dda2134883b4938">ailiaSetProfileMode</a> (IntPtr net, UInt32 mode)</td></tr>
 <tr class="memdesc:ab9e006d86eef112a3dda2134883b4938"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロファイルモードをセットします  <a href="#ab9e006d86eef112a3dda2134883b4938">[詳解]</a><br /></td></tr>
 <tr class="separator:ab9e006d86eef112a3dda2134883b4938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b1c521516bbcaac90e9e6022688e29"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ad4b1c521516bbcaac90e9e6022688e29">ailiaGetStatusString</a> (Int32 status)</td></tr>
+<tr class="memdesc:ad4b1c521516bbcaac90e9e6022688e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータスコードを説明する文字列を返します  <a href="#ad4b1c521516bbcaac90e9e6022688e29">[詳解]</a><br /></td></tr>
+<tr class="separator:ad4b1c521516bbcaac90e9e6022688e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a7a2910bc515b24b13c33c1336d0c6a4a">ailiaGetErrorDetail</a> (IntPtr net)</td></tr>
 <tr class="memdesc:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を返します  <a href="#a7a2910bc515b24b13c33c1336d0c6a4a">[詳解]</a><br /></td></tr>
 <tr class="separator:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -534,6 +540,34 @@ $(function() {
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8135767f8f0859a65ef15ef13a1d8ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8135767f8f0859a65ef15ef13a1d8ed3">&#9670;&nbsp;</a></span>ailiaDisableLayerFusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int Ailia.ailiaDisableLayerFusion </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>推論時のレイヤー統合を無効化します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>レイヤー統合により取得できなくなるBlobを取得する必要がある場合などに用います。 <a class="el" href="classAilia.html#ada8bc6378c8942aef6a13ea6bc7277f1" title="ネットワークオブジェクトを作成します。 ">ailiaCreate()</a> の直後に指定する必要があります。ailiaOpenを呼び出した後は変更することができません。 なお、レイヤー統合を無効化すると推論速度が低下する場合があります。 </p>
 
 </div>
 </div>
@@ -1478,6 +1512,27 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
 
+</div>
+</div>
+<a id="ad4b1c521516bbcaac90e9e6022688e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b1c521516bbcaac90e9e6022688e29">&#9670;&nbsp;</a></span>ailiaGetStatusString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IntPtr Ailia.ailiaGetStatusString </td>
+          <td>(</td>
+          <td class="paramtype">Int32&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ステータスコードを説明する文字列を返します </p>
+<dl class="section return"><dt>戻り値</dt><dd>ステータスコードを説明する文字列</dd></dl>
+<p>返値は解放する必要はありません。 文字列の有効期間はailiaのライブラリをアンロードするまでです。 取得したポイントから以下のように文字列に変換して下さい。 </p><div class="fragment"><div class="line">Marshal.PtrToStringAnsi(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#ad4b1c521516bbcaac90e9e6022688e29">ailiaGetStatusString</a>(status))</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ae7912fdcd726c8033e6dc3f02f4a4dd0"></a>

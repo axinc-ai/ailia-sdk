@@ -12,5 +12,6 @@ var searchData=
   ['getoutputshape',['GetOutputShape',['../classAiliaModel.html#a613de484ee19e332b11fa1584252232d',1,'AiliaModel']]],
   ['getoutputshapend',['GetOutputShapeND',['../classAiliaModel.html#a9762712d84b16a15f8cdf5a0aea1359a',1,'AiliaModel']]],
   ['getselectedenvironment',['GetSelectedEnvironment',['../classAiliaModel.html#af07285e4e7cbe5d19eff9e072c9dd835',1,'AiliaModel']]],
+  ['getstatusstring',['GetStatusString',['../classAiliaModel.html#a780422bbc8b8910b9c399990faf4ebb4',1,'AiliaModel']]],
   ['getsummary',['GetSummary',['../classAiliaModel.html#a53902c1097a57ff3ba5f1726033085d5',1,'AiliaModel']]]
 ];

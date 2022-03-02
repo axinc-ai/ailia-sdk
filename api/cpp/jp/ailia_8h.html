@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.9.0</span>
+   &#160;<span id="projectnumber">1.2.10.0</span>
    </div>
   </td>
  </tr>
@@ -134,7 +134,7 @@ ailia.h の依存先関係図:</div>
 <tr class="memdesc:ae6fc082527d7290c8c5d0a095ad091cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドの作成に失敗した  <a href="#ae6fc082527d7290c8c5d0a095ad091cb">[詳解]</a><br /></td></tr>
 <tr class="separator:ae6fc082527d7290c8c5d0a095ad091cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a>&#160;&#160;&#160;(  -7)</td></tr>
-<tr class="memdesc:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">デコーダの内部状態が不正  <a href="#ae9f1df6fdfeebe95a12f5517840fd91d">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ailia の内部状態が不正  <a href="#ae9f1df6fdfeebe95a12f5517840fd91d">[詳解]</a><br /></td></tr>
 <tr class="separator:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a7232c4fdb94cd20cacc730bb82661"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a28a7232c4fdb94cd20cacc730bb82661">AILIA_STATUS_UNSUPPORT_NET</a>&#160;&#160;&#160;(  -9)</td></tr>
 <tr class="memdesc:a28a7232c4fdb94cd20cacc730bb82661"><td class="mdescLeft">&#160;</td><td class="mdescRight">非対応のネットワーク  <a href="#a28a7232c4fdb94cd20cacc730bb82661">[詳解]</a><br /></td></tr>
@@ -376,9 +376,15 @@ ailia.h の依存先関係図:</div>
 <tr class="memitem:a8ee92ef8331b34b93ff44d5f4dc89244"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a8ee92ef8331b34b93ff44d5f4dc89244">ailiaSetMemoryMode</a> (struct AILIANetwork *net, unsigned int mode)</td></tr>
 <tr class="memdesc:a8ee92ef8331b34b93ff44d5f4dc89244"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時のメモリの使用方針を設定します  <a href="#a8ee92ef8331b34b93ff44d5f4dc89244">[詳解]</a><br /></td></tr>
 <tr class="separator:a8ee92ef8331b34b93ff44d5f4dc89244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297ff8e716e400b68b596bbd2b5b700e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a297ff8e716e400b68b596bbd2b5b700e">ailiaDisableLayerFusion</a> (struct AILIANetwork *net)</td></tr>
+<tr class="memdesc:a297ff8e716e400b68b596bbd2b5b700e"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時のレイヤー統合を無効化します  <a href="#a297ff8e716e400b68b596bbd2b5b700e">[詳解]</a><br /></td></tr>
+<tr class="separator:a297ff8e716e400b68b596bbd2b5b700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acebb87eab1d8ae47365fed96e63f2aaa"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#acebb87eab1d8ae47365fed96e63f2aaa">ailiaSetProfileMode</a> (struct AILIANetwork *net, unsigned int mode)</td></tr>
 <tr class="memdesc:acebb87eab1d8ae47365fed96e63f2aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロファイルモードをセットします  <a href="#acebb87eab1d8ae47365fed96e63f2aaa">[詳解]</a><br /></td></tr>
 <tr class="separator:acebb87eab1d8ae47365fed96e63f2aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87d371ca290804ab861ddb4e717b45cb"><td class="memItemLeft" align="right" valign="top">const char *<a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a87d371ca290804ab861ddb4e717b45cb">ailiaGetStatusString</a> (int status_code)</td></tr>
+<tr class="memdesc:a87d371ca290804ab861ddb4e717b45cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータスコードに対応する文字列を返します。  <a href="#a87d371ca290804ab861ddb4e717b45cb">[詳解]</a><br /></td></tr>
+<tr class="separator:a87d371ca290804ab861ddb4e717b45cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cae066af9b5d8e1f1e80965e4ee94ca"><td class="memItemLeft" align="right" valign="top">const char *<a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca">ailiaGetErrorDetail</a> (struct AILIANetwork *net)</td></tr>
 <tr class="memdesc:a2cae066af9b5d8e1f1e80965e4ee94ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を返します  <a href="#a2cae066af9b5d8e1f1e80965e4ee94ca">[詳解]</a><br /></td></tr>
 <tr class="separator:a2cae066af9b5d8e1f1e80965e4ee94ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -763,6 +769,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>壊れたファイルが渡された </p>
+<dl class="section remark"><dt>注釈</dt><dd>モデルファイルが破損していないかを確認し、正常なモデルを渡してください。 </dd></dl>
 
 </div>
 </div>
@@ -779,6 +786,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>アプリケーションからは取得できない情報だった </p>
+<dl class="section remark"><dt>注釈</dt><dd>最適化などで指定した要素が削除されています。情報を取得する場合、最適化を無効にしてから呼び出してください。 </dd></dl>
 
 </div>
 </div>
@@ -809,6 +817,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>ファイルアクセスに失敗した </p>
+<dl class="section remark"><dt>注釈</dt><dd>指定したパスのファイルが存在するか、権限を確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -825,6 +834,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>モデルの有効期限切れ </p>
+<dl class="section remark"><dt>注釈</dt><dd>モデルファイルの有効期限が切れています。ailia_obfuscate_cを利用してモデルを再生成してください。 </dd></dl>
 
 </div>
 </div>
@@ -841,6 +851,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>GPU上での処理中にエラー </p>
+<dl class="section remark"><dt>注釈</dt><dd>最新のGPUドライバーを利用しているか、VRAMが不足していないかなどを確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -857,6 +868,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>GPUで未対応のレイヤーパラメータが与えられた </p>
+<dl class="section remark"><dt>注釈</dt><dd>GPUで実行できないレイヤーやパラメーターが与えられました。モデルファイルが正しいかどうかを確認した上で、ドキュメント記載のサポート窓口までお問い合わせください。 </dd></dl>
 
 </div>
 </div>
@@ -873,6 +885,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>引数が不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>API呼び出し時の引数を確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -889,6 +902,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>レイヤーの重みやパラメータ、入出力形状が不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>モデル中のレイヤーのパラメーターなどが不正でした。ailiaGetErrorDetail() で詳細なエラーメッセージを確認し、モデルファイルが正しいかを確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -905,6 +919,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>パラメータファイルの内容が不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>指定したパラメーターファイルが破損していないかどうかを確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -920,7 +935,8 @@ ailia.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>デコーダの内部状態が不正 </p>
+<p>ailia の内部状態が不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>APIドキュメントを確認し、呼び出し手順が正しいかどうかを確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -937,6 +953,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>構造体バージョンが不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>API呼び出し時に指定した構造体バージョンを確認し、正しい構造体バージョンを指定してください。 </dd></dl>
 
 </div>
 </div>
@@ -953,6 +970,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>ライセンスが壊れている </p>
+<dl class="section remark"><dt>注釈</dt><dd>トライアル版を利用する際に必要なライセンスファイルが破損しています。ライセンスファイルに関しましては、ドキュメント記載のサポート窓口までお問い合わせください。 </dd></dl>
 
 </div>
 </div>
@@ -969,6 +987,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>ライセンスの有効期限切れ </p>
+<dl class="section remark"><dt>注釈</dt><dd>トライアル版を利用するのに必要なライセンスファイルの有効期限が切れています。ライセンスファイルに関しましては、ドキュメント記載のサポート窓口までお問い合わせください。 </dd></dl>
 
 </div>
 </div>
@@ -985,6 +1004,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>有効なライセンスが見つからない </p>
+<dl class="section remark"><dt>注釈</dt><dd>トライアル版を利用する場合はライセンスファイルが必要です。ライセンスファイルに関しましては、ドキュメント記載のサポート窓口までお問い合わせください。 </dd></dl>
 
 </div>
 </div>
@@ -1001,6 +1021,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>メモリが不足している </p>
+<dl class="section remark"><dt>注釈</dt><dd>メインメモリやVRAMの空き容量を確保してからAPIを呼び出してください。 </dd></dl>
 
 </div>
 </div>
@@ -1017,6 +1038,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>形状が5次元以上であることを示す </p>
+<dl class="section remark"><dt>注釈</dt><dd>4次元までしか扱えない旧APIが呼び出されました。APIドキュメントを参照し、5次元以上が扱えるAPIを利用してください。 </dd></dl>
 
 </div>
 </div>
@@ -1033,6 +1055,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>指定した要素が見つからなかった </p>
+<dl class="section remark"><dt>注釈</dt><dd>指定した名前やindexの要素が見つかりませんでした。指定した要素がモデルに含まれているかを確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -1049,6 +1072,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>不明なエラー </p>
+<dl class="section remark"><dt>注釈</dt><dd>その他のエラーが発生しました。ailiaGetErrorDetail() で詳細なエラーメッセージを確認し、エラー内容をドキュメント記載のサポート窓口までお問い合わせください。 </dd></dl>
 
 </div>
 </div>
@@ -1065,6 +1089,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>許可されていない操作 </p>
+<dl class="section remark"><dt>注釈</dt><dd>暗号化モデルなどで許可されていないAPIが呼び出されました。モデルファイルを確認し、APIの呼び出しを変更してください。 </dd></dl>
 
 </div>
 </div>
@@ -1097,6 +1122,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>スレッドの作成に失敗した </p>
+<dl class="section remark"><dt>注釈</dt><dd>スレッド数などシステムリソースを確認し、リソースを開放してからAPIを呼び出してください。 </dd></dl>
 
 </div>
 </div>
@@ -1113,6 +1139,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>未実装 </p>
+<dl class="section remark"><dt>注釈</dt><dd>指定した環境では未実装な機能が呼び出されました。エラー内容をドキュメント記載のサポート窓口までお問い合わせください。 </dd></dl>
 
 </div>
 </div>
@@ -1129,6 +1156,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>形状が未確定 </p>
+<dl class="section remark"><dt>注釈</dt><dd>出力形状などが不定形です。出力形状取得時に発生した場合は入力形状を指定した上で推論を行い、その後形状取得APIを呼び出してください。 </dd></dl>
 
 </div>
 </div>
@@ -1145,6 +1173,7 @@ ailia.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>非対応のネットワーク </p>
+<dl class="section remark"><dt>注釈</dt><dd>Detectorなどのラッパー関数に非対応のモデルファイルが渡されました。ドキュメント記載のサポートモデルかどうかを確認してください。 </dd></dl>
 
 </div>
 </div>
@@ -1289,6 +1318,34 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a297ff8e716e400b68b596bbd2b5b700e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a297ff8e716e400b68b596bbd2b5b700e">&#9670;&nbsp;</a></span>ailiaDisableLayerFusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDisableLayerFusion </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>推論時のレイヤー統合を無効化します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>レイヤー統合により取得できなくなるBlobを取得する必要がある場合などに用います。 <a class="el" href="ailia_8h.html#aafbaa89c853a043c6e2961f6a72e820e" title="ネットワークオブジェクトを作成します。 ">ailiaCreate()</a> の直後に指定する必要があります。ailiaOpenを呼び出した後は変更することができません。 なお、レイヤー統合を無効化すると推論速度が低下する場合があります。 </p>
 
 </div>
 </div>
@@ -1476,7 +1533,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p><a class="el" href="ailia_8h.html#aa1a5d4d2263d82681f3f6250552f1b92" title="推論を行い推論結果を取得します。 ">ailiaPredict()</a> を一度も実行していない場合は <a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a> が返ります。 </p>
+<p><a class="el" href="ailia_8h.html#aa1a5d4d2263d82681f3f6250552f1b92" title="推論を行い推論結果を取得します。 ">ailiaPredict()</a> または <a class="el" href="ailia_8h.html#aad4bf948c6e7a29a82c2b01243064f98" title="事前に指定した入力データで推論を行います。 ">ailiaUpdate()</a> を一度も実行していない場合は <a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a> が返ります。 </p>
 
 </div>
 </div>
@@ -2235,6 +2292,28 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a87d371ca290804ab861ddb4e717b45cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d371ca290804ab861ddb4e717b45cb">&#9670;&nbsp;</a></span>ailiaGetStatusString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaGetStatusString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ステータスコードに対応する文字列を返します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>ステータスコードに対応する文字列。</dd></dl>
+<p>返値は解放する必要はありません。 返された文字列は ailia のライブラリ(ailia.dll, libailia.so 等)をアンロードするまで有効です。 AILIANetwork のインスタンスがある場合は <a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca" title="エラーの詳細を返します ">ailiaGetErrorDetail()</a> でエラーの詳細を取得できます。 </p>
 
 </div>
 </div>
