@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.11.0</span>
+   &#160;<span id="projectnumber">1.2.12.0</span>
    </div>
   </td>
  </tr>
@@ -99,16 +99,16 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#ada8bfe73c4c5c086018fba5f02a0b9fd">ailiaCreateFeatureExtractor</a> (struct AILIAFeatureExtractor **fextractor, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range, const char *layer_name)</td></tr>
+<tr class="memitem:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#ada8bfe73c4c5c086018fba5f02a0b9fd">ailiaCreateFeatureExtractor</a> (struct AILIAFeatureExtractor **fextractor, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range, const char *layer_name)</td></tr>
 <tr class="memdesc:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a feature extraction instance.  <a href="#ada8bfe73c4c5c086018fba5f02a0b9fd">More...</a><br /></td></tr>
 <tr class="separator:ada8bfe73c4c5c086018fba5f02a0b9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ae8296875bdeacfd20b90c5946c71a2"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a1ae8296875bdeacfd20b90c5946c71a2">ailiaDestroyFeatureExtractor</a> (struct AILIAFeatureExtractor *fextractor)</td></tr>
+<tr class="memitem:a1ae8296875bdeacfd20b90c5946c71a2"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a1ae8296875bdeacfd20b90c5946c71a2">ailiaDestroyFeatureExtractor</a> (struct AILIAFeatureExtractor *fextractor)</td></tr>
 <tr class="memdesc:a1ae8296875bdeacfd20b90c5946c71a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the feature extraction instance.  <a href="#a1ae8296875bdeacfd20b90c5946c71a2">More...</a><br /></td></tr>
 <tr class="separator:a1ae8296875bdeacfd20b90c5946c71a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c7445935c450b096bc1c43c34da1066"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">ailiaFeatureExtractorCompute</a> (struct AILIAFeatureExtractor *fextractor, void *dst, unsigned int dst_size, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
+<tr class="memitem:a6c7445935c450b096bc1c43c34da1066"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">ailiaFeatureExtractorCompute</a> (struct AILIAFeatureExtractor *fextractor, void *dst, unsigned int dst_size, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
 <tr class="memdesc:a6c7445935c450b096bc1c43c34da1066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs feature extraction.  <a href="#a6c7445935c450b096bc1c43c34da1066">More...</a><br /></td></tr>
 <tr class="separator:a6c7445935c450b096bc1c43c34da1066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e">ailiaFeatureExtractorMatch</a> (struct AILIAFeatureExtractor *fextractor, float *distance, unsigned int distace_type, const void *feature1, unsigned int feature1_size, const void *feature2, unsigned int feature2_size)</td></tr>
+<tr class="memitem:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e">ailiaFeatureExtractorMatch</a> (struct AILIAFeatureExtractor *fextractor, float *distance, unsigned int distace_type, const void *feature1, unsigned int feature1_size, const void *feature2, unsigned int feature2_size)</td></tr>
 <tr class="memdesc:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes distances in feature space.  <a href="#a567f151b19b4dcf9e3a2eeaff4f4ca6e">More...</a><br /></td></tr>
 <tr class="separator:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -141,7 +141,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateFeatureExtractor </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateFeatureExtractor </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor **&#160;</td>
           <td class="paramname"><em>fextractor</em>, </td>
@@ -207,7 +207,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyFeatureExtractor </td>
+          <td class="memname">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyFeatureExtractor </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor *&#160;</td>
           <td class="paramname"><em>fextractor</em></td><td>)</td>
@@ -233,7 +233,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorCompute </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorCompute </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor *&#160;</td>
           <td class="paramname"><em>fextractor</em>, </td>
@@ -313,7 +313,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorMatch </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFeatureExtractorMatch </td>
           <td>(</td>
           <td class="paramtype">struct AILIAFeatureExtractor *&#160;</td>
           <td class="paramname"><em>fextractor</em>, </td>

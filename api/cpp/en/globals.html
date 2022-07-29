@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.11.0</span>
+   &#160;<span id="projectnumber">1.2.12.0</span>
    </div>
   </td>
  </tr>
@@ -69,8 +69,6 @@ $(function() {
 : <a class="el" href="ailia_8h.html#a1c6a80cf85ef33500663112959784400">ailia.h</a>
 , <a class="el" href="ailia__audio_8h.html#a1c6a80cf85ef33500663112959784400">ailia_audio.h</a>
 , <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">ailia_format.h</a>
-, <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">ailia_gpu.h</a>
-, <a class="el" href="ailia__convert_8h.html#a1c6a80cf85ef33500663112959784400">ailia_convert.h</a>
 </li>
 <li>AILIA_AUDIO_FFT_NORMALIZE_LIBROSA_COMPAT
 : <a class="el" href="ailia__audio_8h.html#a074e61d0e5a97ba12ff9edcfed631654">ailia_audio.h</a>
@@ -132,9 +130,6 @@ $(function() {
 <li>AILIA_CLASSIFIER_CLASS_VERSION
 : <a class="el" href="ailia__classifier_8h.html#a372ab80c44564fb176eb9961a4136458">ailia_classifier.h</a>
 </li>
-<li>AILIA_COMPRESS_PARAM_VERSION
-: <a class="el" href="ailia__convert_8h.html#a16c5eb7e8ce75481aa10696dede10647">ailia_convert.h</a>
-</li>
 <li>AILIA_DETECTOR_ALGORITHM_SSD
 : <a class="el" href="ailia__detector_8h.html#a28bd73425edd89fbd20d8b3f0e244e47">ailia_detector.h</a>
 </li>
@@ -165,20 +160,11 @@ $(function() {
 <li>AILIA_ENVIRONMENT_BACKEND_CUDA
 : <a class="el" href="ailia_8h.html#a71bc398ec05c73771891f34ae2df5993">ailia.h</a>
 </li>
-<li>AILIA_ENVIRONMENT_BACKEND_LITE
-: <a class="el" href="ailia__internal_8h.html#a1968b64536ae3242c52ca7d3ab575577">ailia_internal.h</a>
-</li>
 <li>AILIA_ENVIRONMENT_BACKEND_MPS
 : <a class="el" href="ailia_8h.html#af158b193330e24f75015ffc41986dbbb">ailia.h</a>
 </li>
 <li>AILIA_ENVIRONMENT_BACKEND_NONE
 : <a class="el" href="ailia_8h.html#a85f07144471861c58f16a296ea3d2fc1">ailia.h</a>
-</li>
-<li>AILIA_ENVIRONMENT_BACKEND_OPENVX
-: <a class="el" href="ailia__internal_8h.html#a1c80a7a49f33922d1136947966f562e4">ailia_internal.h</a>
-</li>
-<li>AILIA_ENVIRONMENT_BACKEND_SCAI
-: <a class="el" href="ailia__internal_8h.html#aa71748f70edf2dab5daf60a172c33283">ailia_internal.h</a>
 </li>
 <li>AILIA_ENVIRONMENT_BACKEND_VULKAN
 : <a class="el" href="ailia_8h.html#aeeac2a26b6f53d2e035c2d21bd774671">ailia.h</a>
@@ -201,9 +187,6 @@ $(function() {
 <li>AILIA_ENVIRONMENT_TYPE_CPU
 : <a class="el" href="ailia_8h.html#a69a8f7df11d42ebd4adeda2c8e2405f6">ailia.h</a>
 </li>
-<li>AILIA_ENVIRONMENT_TYPE_FPGA
-: <a class="el" href="ailia__internal_8h.html#a29aa5cc7b0e166e0cb7ab2f41f3b9ccb">ailia_internal.h</a>
-</li>
 <li>AILIA_ENVIRONMENT_TYPE_GPU
 : <a class="el" href="ailia_8h.html#a50946dcecacde2ea9ee2781017cd4fa7">ailia.h</a>
 </li>
@@ -212,9 +195,6 @@ $(function() {
 </li>
 <li>AILIA_ENVIRONMENT_VERSION
 : <a class="el" href="ailia_8h.html#a2bb74ca8ed1cfdcd606f5586b1172899">ailia.h</a>
-</li>
-<li>AILIA_ENVIRONMENT_VERSION_V1
-: <a class="el" href="ailia__internal_8h.html#a25c693f1d6f0c76c36e76489fc7ba103">ailia_internal.h</a>
 </li>
 <li>AILIA_FEATURE_EXTRACTOR_DISTANCE_L2NORM
 : <a class="el" href="ailia__feature__extractor_8h.html#a53a4b803d6c4f63d8c111597ee3b3ad4">ailia_feature_extractor.h</a>
@@ -474,9 +454,6 @@ $(function() {
 <li>AILIA_STATUS_GPU_ERROR
 : <a class="el" href="ailia_8h.html#a107793c83eaf027926582da2fa75b32b">ailia.h</a>
 </li>
-<li>AILIA_STATUS_GPU_OLD_ERROR
-: <a class="el" href="ailia__internal_8h.html#ac18d32c15803b96c484acebb129b4d74">ailia_internal.h</a>
-</li>
 <li>AILIA_STATUS_GPU_UNSUPPORT_LAYER
 : <a class="el" href="ailia_8h.html#a846da7966e479ee2c7982e83f9ce24e5">ailia.h</a>
 </li>
@@ -541,22 +518,22 @@ $(function() {
 : <a class="el" href="ailia__call_8h.html#acd08d311527ecfab79f722e8dbccbc9e">ailia_call.h</a>
 </li>
 <li>AILIA_USER_API_FCLOSE
-: <a class="el" href="ailia__call_8h.html#ae069e83dab71694bd3b0987de821cd69">ailia_call.h</a>
+: <a class="el" href="ailia__call_8h.html#afc6945391aaa8651a622a7c5346fa951">ailia_call.h</a>
 </li>
 <li>AILIA_USER_API_FOPEN
-: <a class="el" href="ailia__call_8h.html#ae8d827a76f9c8845c4aa961698d3e9eb">ailia_call.h</a>
+: <a class="el" href="ailia__call_8h.html#a9897df5d419550bbc0210b92236b1239">ailia_call.h</a>
 </li>
 <li>AILIA_USER_API_FREAD
-: <a class="el" href="ailia__call_8h.html#a99f80a4c0fe1b539990f17226e3cf71a">ailia_call.h</a>
+: <a class="el" href="ailia__call_8h.html#a98e4d701316baac8ef7af89c48c5695a">ailia_call.h</a>
 </li>
 <li>AILIA_USER_API_FSEEK
-: <a class="el" href="ailia__call_8h.html#a0a93553f181fb40ddb7e15f044e90791">ailia_call.h</a>
+: <a class="el" href="ailia__call_8h.html#af590fab29ad90ea3d828431df84afd3b">ailia_call.h</a>
 </li>
 <li>AILIA_USER_API_FSIZE
-: <a class="el" href="ailia__call_8h.html#ab5549beba00237c542442d8490c5e3b2">ailia_call.h</a>
+: <a class="el" href="ailia__call_8h.html#a3294f79a691b62b2c07be284841f37fb">ailia_call.h</a>
 </li>
 <li>AILIA_USER_API_FTELL
-: <a class="el" href="ailia__call_8h.html#aa3a2997f33a184c4a1ff5019ff2a5f44">ailia_call.h</a>
+: <a class="el" href="ailia__call_8h.html#a22c0df05f9234a756bbcabafd8d0407f">ailia_call.h</a>
 </li>
 <li>AILIA_USER_API_SUCCESS
 : <a class="el" href="ailia__call_8h.html#ac703940a671086314a24cd417b4d7320">ailia_call.h</a>
@@ -628,7 +605,7 @@ $(function() {
 : <a class="el" href="ailia__audio_8h.html#a0fed8d398083e8d7d0dbc01b08540487">ailia_audio.h</a>
 </li>
 <li>AILIAClassifierClass
-: <a class="el" href="ailia__classifier_8h.html#a50508cf305ad9078ebbfb115be35e5b6">ailia_classifier.h</a>
+: <a class="el" href="ailia__classifier_8h.html#af36205570bf318e7c1f8dbec5775634a">ailia_classifier.h</a>
 </li>
 <li>ailiaClassifierCompute()
 : <a class="el" href="ailia__classifier_8h.html#adcc59463d04be6a18a8ddd0fdd9e6224">ailia_classifier.h</a>
@@ -638,15 +615,6 @@ $(function() {
 </li>
 <li>ailiaClassifierGetClassCount()
 : <a class="el" href="ailia__classifier_8h.html#a5633d3b768556a2bca944f21afc59dd0">ailia_classifier.h</a>
-</li>
-<li>ailiaCompressWeightFile
-: <a class="el" href="ailia__convert_8h.html#a5d4b7eb80b4becd68e8ced55b68a62e2">ailia_convert.h</a>
-</li>
-<li>ailiaCompressWeightFileA()
-: <a class="el" href="ailia__convert_8h.html#a3d034bce6532f04b2587066325a9fed9">ailia_convert.h</a>
-</li>
-<li>ailiaCompressWeightFileW()
-: <a class="el" href="ailia__convert_8h.html#a85893261e28acffde1f6f3912f9f2302">ailia_convert.h</a>
 </li>
 <li>ailiaCreate()
 : <a class="el" href="ailia_8h.html#aafbaa89c853a043c6e2961f6a72e820e">ailia.h</a>
@@ -662,9 +630,6 @@ $(function() {
 </li>
 <li>ailiaCreatePoseEstimator()
 : <a class="el" href="ailia__pose__estimator_8h.html#a796320db4a16cc2e1121f8c38a0edea1">ailia_pose_estimator.h</a>
-</li>
-<li>ailiaCreateWithGraphicsInterop()
-: <a class="el" href="ailia__internal_8h.html#aa0a8d715ebaaed55915468e2f34fba85">ailia_internal.h</a>
 </li>
 <li>ailiaDestroy()
 : <a class="el" href="ailia_8h.html#a71302da162d556efbe637cdeb47b25a0">ailia.h</a>
@@ -684,9 +649,6 @@ $(function() {
 <li>ailiaDetectorCompute()
 : <a class="el" href="ailia__detector_8h.html#a7db22154f11fe44b7e27a95fadf34ef2">ailia_detector.h</a>
 </li>
-<li>ailiaDetectorComputeWithGraphicsInterop()
-: <a class="el" href="ailia__internal_8h.html#a2947bb2b3a41d5d21887233e7f8112ac">ailia_internal.h</a>
-</li>
 <li>ailiaDetectorGetObject()
 : <a class="el" href="ailia__detector_8h.html#ac831a97ef163e1d100ade8542cbc111e">ailia_detector.h</a>
 </li>
@@ -694,7 +656,7 @@ $(function() {
 : <a class="el" href="ailia__detector_8h.html#a453116dfe6d50b57fb543fd599b7e6eb">ailia_detector.h</a>
 </li>
 <li>AILIADetectorObject
-: <a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">ailia_detector.h</a>
+: <a class="el" href="ailia__detector_8h.html#a5468734481b48363c9d5683fcb1e0ead">ailia_detector.h</a>
 </li>
 <li>ailiaDetectorSetAnchors()
 : <a class="el" href="ailia__detector_8h.html#a3b1cec9ad05d78a51af1017e1b02e948">ailia_detector.h</a>
@@ -705,14 +667,8 @@ $(function() {
 <li>ailiaDisableLayerFusion()
 : <a class="el" href="ailia_8h.html#a297ff8e716e400b68b596bbd2b5b700e">ailia.h</a>
 </li>
-<li>ailiaEnableDebugLog()
-: <a class="el" href="ailia__internal_8h.html#aa3c7271916fa7582e255962c30c65e20">ailia_internal.h</a>
-</li>
 <li>AILIAEnvironment
-: <a class="el" href="ailia_8h.html#a647b70fe4406c9cf8884b3c3b70bf275">ailia.h</a>
-</li>
-<li>AILIAEnvironmentV1
-: <a class="el" href="ailia__internal_8h.html#a6953f2a3ebf153b0dbbeae16be689a1f">ailia_internal.h</a>
+: <a class="el" href="ailia_8h.html#ada228f35f07405d8f73a9e24908adb01">ailia.h</a>
 </li>
 <li>ailiaFeatureExtractorCompute()
 : <a class="el" href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">ailia_feature_extractor.h</a>
@@ -801,18 +757,6 @@ $(function() {
 <li>ailiaGetVersion()
 : <a class="el" href="ailia_8h.html#a66bed78bfc4762fe0cfe57d9a9b47ca3">ailia.h</a>
 </li>
-<li>ailiaLoadGpuParameterFile
-: <a class="el" href="ailia__gpu_8h.html#aace4b6450852f78f80be7aebe0aff4ec">ailia_gpu.h</a>
-</li>
-<li>ailiaLoadGpuParameterFileA()
-: <a class="el" href="ailia__gpu_8h.html#a61a4b11d4c2fe8d47cdc15ee2a013482">ailia_gpu.h</a>
-</li>
-<li>ailiaLoadGpuParameterFileW()
-: <a class="el" href="ailia__gpu_8h.html#aea69fec58486531d7323b1046bbe5401">ailia_gpu.h</a>
-</li>
-<li>ailiaMapInputBlobGraphicsInterop()
-: <a class="el" href="ailia__internal_8h.html#a0b145bd12827a79413f750da7716bd43">ailia_internal.h</a>
-</li>
 <li>ailiaOpenStreamEx()
 : <a class="el" href="ailia_8h.html#aaa936a86f531c2dd8bec2b51af383a27">ailia.h</a>
 </li>
@@ -821,9 +765,6 @@ $(function() {
 </li>
 <li>ailiaOpenStreamFileA()
 : <a class="el" href="ailia_8h.html#a4c377f24beec2c4bc6d783b8e85a4860">ailia.h</a>
-</li>
-<li>ailiaOpenStreamFileEx()
-: <a class="el" href="ailia__internal_8h.html#ab59bf994a1e4c83d2dfbb05f4e82bf4a">ailia_internal.h</a>
 </li>
 <li>ailiaOpenStreamFileW()
 : <a class="el" href="ailia_8h.html#a7ea6f98ce66fc26959c74b3a1408967a">ailia.h</a>
@@ -840,17 +781,11 @@ $(function() {
 <li>ailiaOpenWeightFileA()
 : <a class="el" href="ailia_8h.html#a231d647cecbd1beb0d8d78a83b50ed1b">ailia.h</a>
 </li>
-<li>ailiaOpenWeightFileEx()
-: <a class="el" href="ailia__internal_8h.html#ac08c1a7c22b16c0bb1468493a3d4ef76">ailia_internal.h</a>
-</li>
 <li>ailiaOpenWeightFileW()
 : <a class="el" href="ailia_8h.html#a1f61374a5e927e05be54398ef06d9e4f">ailia.h</a>
 </li>
 <li>ailiaOpenWeightMem()
 : <a class="el" href="ailia_8h.html#a129ac8f509c3fcd3cf6343e0c613681e">ailia.h</a>
-</li>
-<li>ailiaOptimizeGpuParameter()
-: <a class="el" href="ailia__gpu_8h.html#a59ed8e97db95496dd2034026d0743296">ailia_gpu.h</a>
 </li>
 <li>ailiaPoseEstimatorCompute()
 : <a class="el" href="ailia__pose__estimator_8h.html#a808a27fe3c1b1d7528b542f3137febd1">ailia_pose_estimator.h</a>
@@ -871,52 +806,25 @@ $(function() {
 : <a class="el" href="ailia__pose__estimator_8h.html#a78167abea244a53084cf805ea4660502">ailia_pose_estimator.h</a>
 </li>
 <li>AILIAPoseEstimatorKeypoint
-: <a class="el" href="ailia__pose__estimator_8h.html#a34ec6f1fbacbfb9b8834f1adb1f15c15">ailia_pose_estimator.h</a>
+: <a class="el" href="ailia__pose__estimator_8h.html#a5cf7b52d516dd35c15a2800899266080">ailia_pose_estimator.h</a>
 </li>
 <li>AILIAPoseEstimatorObjectFace
-: <a class="el" href="ailia__pose__estimator_8h.html#ad1466753d5a74dac8f477e520f241d80">ailia_pose_estimator.h</a>
+: <a class="el" href="ailia__pose__estimator_8h.html#a9ca066f539fbdf3e5cc12578961571b2">ailia_pose_estimator.h</a>
 </li>
 <li>AILIAPoseEstimatorObjectHand
-: <a class="el" href="ailia__pose__estimator_8h.html#ad3f9415e59574e01fe15206379dae058">ailia_pose_estimator.h</a>
+: <a class="el" href="ailia__pose__estimator_8h.html#a094aa82d30a35499492f4f443bc949fe">ailia_pose_estimator.h</a>
 </li>
 <li>AILIAPoseEstimatorObjectPose
-: <a class="el" href="ailia__pose__estimator_8h.html#ac1e382e4f8cf05a52f952d33a9ff87ce">ailia_pose_estimator.h</a>
+: <a class="el" href="ailia__pose__estimator_8h.html#a68eefeea28cfd663bea7ba6104124f73">ailia_pose_estimator.h</a>
 </li>
 <li>AILIAPoseEstimatorObjectUpPose
-: <a class="el" href="ailia__pose__estimator_8h.html#aa6e6c8cc357e28b41d5f546062928ea5">ailia_pose_estimator.h</a>
+: <a class="el" href="ailia__pose__estimator_8h.html#a85d8687babf2227b2b71df39ecbb69ae">ailia_pose_estimator.h</a>
 </li>
 <li>ailiaPoseEstimatorSetThreshold()
 : <a class="el" href="ailia__pose__estimator_8h.html#a25a30fececb56f12cc5b0acc514d4a8b">ailia_pose_estimator.h</a>
 </li>
 <li>ailiaPredict()
 : <a class="el" href="ailia_8h.html#aa1a5d4d2263d82681f3f6250552f1b92">ailia.h</a>
-</li>
-<li>ailiaPredictWithGraphicsInterop()
-: <a class="el" href="ailia__internal_8h.html#adc21464910a99f08521b2b8dfde950ba">ailia_internal.h</a>
-</li>
-<li>ailiaRefInputBlobBuffer()
-: <a class="el" href="ailia__internal_8h.html#af0ba7a5b4b0ecf6b009e8418f2e818d7">ailia_internal.h</a>
-</li>
-<li>ailiaRefOutputBlobBuffer()
-: <a class="el" href="ailia__internal_8h.html#aaef56dd02bad81cac9066fa49580ab5a">ailia_internal.h</a>
-</li>
-<li>ailiaSaveGpuParameterFile
-: <a class="el" href="ailia__gpu_8h.html#a22b827125220119a57693ca099ed3fcd">ailia_gpu.h</a>
-</li>
-<li>ailiaSaveGpuParameterFileA()
-: <a class="el" href="ailia__gpu_8h.html#ada539f4faa082a360f1028169053496d">ailia_gpu.h</a>
-</li>
-<li>ailiaSaveGpuParameterFileW()
-: <a class="el" href="ailia__gpu_8h.html#acba5f2a07cdec99d9dcb29e5e987678c">ailia_gpu.h</a>
-</li>
-<li>ailiaSetEncryptionKey()
-: <a class="el" href="ailia__internal_8h.html#a8d24b9cc4ffc3c4371146fe9c01e35a8">ailia_internal.h</a>
-</li>
-<li>ailiaSetExportedFileName()
-: <a class="el" href="ailia__internal_8h.html#a8eec42e8d4f7e73232555c6573fefbf0">ailia_internal.h</a>
-</li>
-<li>ailiaSetForceCpuExcecutionLayersFwdMatching()
-: <a class="el" href="ailia__internal_8h.html#a47f65ae92e5f609c725e20afebba1a10">ailia_internal.h</a>
 </li>
 <li>ailiaSetInputBlobData()
 : <a class="el" href="ailia_8h.html#aa84ced8c68d31e6287a4aa7bdffad551">ailia.h</a>
@@ -949,7 +857,7 @@ $(function() {
 : <a class="el" href="ailia_8h.html#a867ffb90cce0a05bbdb50151c42554dd">ailia.h</a>
 </li>
 <li>AILIAShape
-: <a class="el" href="ailia_8h.html#aa69b8aa922e48743b064d6c8b893962c">ailia.h</a>
+: <a class="el" href="ailia_8h.html#ad438ac940ba242eb9186f6b0a14bf339">ailia.h</a>
 </li>
 <li>ailiaSummary()
 : <a class="el" href="ailia_8h.html#ac95beeeef341420cd3be0e0231f92948">ailia.h</a>

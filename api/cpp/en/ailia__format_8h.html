@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.11.0</span>
+   &#160;<span id="projectnumber">1.2.12.0</span>
    </div>
   </td>
  </tr>
@@ -131,7 +131,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a90f2c5d523a99bf351858b0a88247fe5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__format_8h.html#a90f2c5d523a99bf351858b0a88247fe5">ailiaFormatConvert</a> (void *dst, unsigned int dst_width, unsigned int dst_height, unsigned int dst_format, unsigned int dst_channel, unsigned int dst_range, const void *src, int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
+<tr class="memitem:a90f2c5d523a99bf351858b0a88247fe5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__format_8h.html#a90f2c5d523a99bf351858b0a88247fe5">ailiaFormatConvert</a> (void *dst, unsigned int dst_width, unsigned int dst_height, unsigned int dst_format, unsigned int dst_channel, unsigned int dst_range, const void *src, int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
 <tr class="memdesc:a90f2c5d523a99bf351858b0a88247fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts image formats.  <a href="#a90f2c5d523a99bf351858b0a88247fe5">More...</a><br /></td></tr>
 <tr class="separator:a90f2c5d523a99bf351858b0a88247fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -417,7 +417,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFormatConvert </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFormatConvert </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
@@ -493,7 +493,10 @@ Functions</h2></td></tr>
 <p>Converts image formats. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dst</td><td>The storage location of the image after conversion (numeric type; a size of sizeof(float) * dst_width * dst_height * num_of_channel(See Description) or more must be allocated.) </td></tr>
+    <tr><td class="paramname">dst</td><td>The storage location of the image after conversion (numeric type; a size of sizeof(float)<ul>
+<li>dst_width * dst_height * num_of_channel(See Description) or more must be allocated.) </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">dst_width</td><td>The width of the image after conversion </td></tr>
     <tr><td class="paramname">dst_height</td><td>The height of the image after conversion </td></tr>
     <tr><td class="paramname">dst_format</td><td>The format of the image after conversion (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>

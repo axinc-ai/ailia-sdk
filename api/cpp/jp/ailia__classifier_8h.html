@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.11.0</span>
+   &#160;<span id="projectnumber">1.2.12.0</span>
    </div>
   </td>
  </tr>
@@ -105,24 +105,24 @@ ailia_classifier.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 型定義</h2></td></tr>
-<tr class="memitem:a50508cf305ad9078ebbfb115be35e5b6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIAClassifierClass.html">_AILIAClassifierClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#a50508cf305ad9078ebbfb115be35e5b6">AILIAClassifierClass</a></td></tr>
-<tr class="separator:a50508cf305ad9078ebbfb115be35e5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36205570bf318e7c1f8dbec5775634a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIAClassifierClass.html">_AILIAClassifierClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#af36205570bf318e7c1f8dbec5775634a">AILIAClassifierClass</a></td></tr>
+<tr class="separator:af36205570bf318e7c1f8dbec5775634a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ab0df415b159244f754fa3456e295fa6d"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#ab0df415b159244f754fa3456e295fa6d">ailiaCreateClassifier</a> (struct AILIAClassifier **classifier, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range)</td></tr>
+<tr class="memitem:ab0df415b159244f754fa3456e295fa6d"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#ab0df415b159244f754fa3456e295fa6d">ailiaCreateClassifier</a> (struct AILIAClassifier **classifier, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range)</td></tr>
 <tr class="memdesc:ab0df415b159244f754fa3456e295fa6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別オブジェクトを作成します。  <a href="#ab0df415b159244f754fa3456e295fa6d">[詳解]</a><br /></td></tr>
 <tr class="separator:ab0df415b159244f754fa3456e295fa6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0058ce2ddad1b521797e7d806823240"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#af0058ce2ddad1b521797e7d806823240">ailiaDestroyClassifier</a> (struct AILIAClassifier *classifier)</td></tr>
+<tr class="memitem:af0058ce2ddad1b521797e7d806823240"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#af0058ce2ddad1b521797e7d806823240">ailiaDestroyClassifier</a> (struct AILIAClassifier *classifier)</td></tr>
 <tr class="memdesc:af0058ce2ddad1b521797e7d806823240"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別オブジェクトを破棄します。  <a href="#af0058ce2ddad1b521797e7d806823240">[詳解]</a><br /></td></tr>
 <tr class="separator:af0058ce2ddad1b521797e7d806823240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcc59463d04be6a18a8ddd0fdd9e6224"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#adcc59463d04be6a18a8ddd0fdd9e6224">ailiaClassifierCompute</a> (struct AILIAClassifier *classifier, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format, unsigned int max_class_count)</td></tr>
+<tr class="memitem:adcc59463d04be6a18a8ddd0fdd9e6224"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#adcc59463d04be6a18a8ddd0fdd9e6224">ailiaClassifierCompute</a> (struct AILIAClassifier *classifier, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format, unsigned int max_class_count)</td></tr>
 <tr class="memdesc:adcc59463d04be6a18a8ddd0fdd9e6224"><td class="mdescLeft">&#160;</td><td class="mdescRight">物体識別を行います。  <a href="#adcc59463d04be6a18a8ddd0fdd9e6224">[詳解]</a><br /></td></tr>
 <tr class="separator:adcc59463d04be6a18a8ddd0fdd9e6224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5633d3b768556a2bca944f21afc59dd0"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#a5633d3b768556a2bca944f21afc59dd0">ailiaClassifierGetClassCount</a> (struct AILIAClassifier *classifier, unsigned int *cls_count)</td></tr>
+<tr class="memitem:a5633d3b768556a2bca944f21afc59dd0"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#a5633d3b768556a2bca944f21afc59dd0">ailiaClassifierGetClassCount</a> (struct AILIAClassifier *classifier, unsigned int *cls_count)</td></tr>
 <tr class="memdesc:a5633d3b768556a2bca944f21afc59dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別結果の数を取得します。  <a href="#a5633d3b768556a2bca944f21afc59dd0">[詳解]</a><br /></td></tr>
 <tr class="separator:a5633d3b768556a2bca944f21afc59dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5be5f9ada0ce260505f87e052c26cdf3"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#a5be5f9ada0ce260505f87e052c26cdf3">ailiaClassifierGetClass</a> (struct AILIAClassifier *classifier, <a class="el" href="ailia__classifier_8h.html#a50508cf305ad9078ebbfb115be35e5b6">AILIAClassifierClass</a> *obj, unsigned int cls_idx, unsigned int version)</td></tr>
+<tr class="memitem:a5be5f9ada0ce260505f87e052c26cdf3"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__classifier_8h.html#a5be5f9ada0ce260505f87e052c26cdf3">ailiaClassifierGetClass</a> (struct AILIAClassifier *classifier, <a class="el" href="ailia__classifier_8h.html#af36205570bf318e7c1f8dbec5775634a">AILIAClassifierClass</a> *obj, unsigned int cls_idx, unsigned int version)</td></tr>
 <tr class="memdesc:a5be5f9ada0ce260505f87e052c26cdf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別結果を取得します。  <a href="#a5be5f9ada0ce260505f87e052c26cdf3">[詳解]</a><br /></td></tr>
 <tr class="separator:a5be5f9ada0ce260505f87e052c26cdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -146,14 +146,14 @@ ailia_classifier.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">型定義詳解</h2>
-<a id="a50508cf305ad9078ebbfb115be35e5b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50508cf305ad9078ebbfb115be35e5b6">&#9670;&nbsp;</a></span>AILIAClassifierClass</h2>
+<a id="af36205570bf318e7c1f8dbec5775634a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36205570bf318e7c1f8dbec5775634a">&#9670;&nbsp;</a></span>AILIAClassifierClass</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="struct__AILIAClassifierClass.html">_AILIAClassifierClass</a> <a class="el" href="ailia__classifier_8h.html#a50508cf305ad9078ebbfb115be35e5b6">AILIAClassifierClass</a></td>
+          <td class="memname">typedef struct <a class="el" href="struct__AILIAClassifierClass.html">_AILIAClassifierClass</a>  <a class="el" href="ailia__classifier_8h.html#af36205570bf318e7c1f8dbec5775634a">AILIAClassifierClass</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -168,7 +168,7 @@ ailia_classifier.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaClassifierCompute </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaClassifierCompute </td>
           <td>(</td>
           <td class="paramtype">struct AILIAClassifier *&#160;</td>
           <td class="paramname"><em>classifier</em>, </td>
@@ -241,7 +241,7 @@ ailia_classifier.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaClassifierGetClass </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaClassifierGetClass </td>
           <td>(</td>
           <td class="paramtype">struct AILIAClassifier *&#160;</td>
           <td class="paramname"><em>classifier</em>, </td>
@@ -249,7 +249,7 @@ ailia_classifier.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ailia__classifier_8h.html#a50508cf305ad9078ebbfb115be35e5b6">AILIAClassifierClass</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="ailia__classifier_8h.html#af36205570bf318e7c1f8dbec5775634a">AILIAClassifierClass</a> *&#160;</td>
           <td class="paramname"><em>obj</em>, </td>
         </tr>
         <tr>
@@ -294,7 +294,7 @@ ailia_classifier.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaClassifierGetClassCount </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaClassifierGetClassCount </td>
           <td>(</td>
           <td class="paramtype">struct AILIAClassifier *&#160;</td>
           <td class="paramname"><em>classifier</em>, </td>
@@ -332,7 +332,7 @@ ailia_classifier.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateClassifier </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateClassifier </td>
           <td>(</td>
           <td class="paramtype">struct AILIAClassifier **&#160;</td>
           <td class="paramname"><em>classifier</em>, </td>
@@ -391,7 +391,7 @@ ailia_classifier.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyClassifier </td>
+          <td class="memname">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyClassifier </td>
           <td>(</td>
           <td class="paramtype">struct AILIAClassifier *&#160;</td>
           <td class="paramname"><em>classifier</em></td><td>)</td>

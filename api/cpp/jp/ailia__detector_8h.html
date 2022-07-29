@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.11.0</span>
+   &#160;<span id="projectnumber">1.2.12.0</span>
    </div>
   </td>
  </tr>
@@ -119,30 +119,30 @@ ailia_detector.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 型定義</h2></td></tr>
-<tr class="memitem:a40537f16d4b949a2f8ab7057e091e71d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIADetectorObject.html">_AILIADetectorObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a></td></tr>
-<tr class="separator:a40537f16d4b949a2f8ab7057e091e71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5468734481b48363c9d5683fcb1e0ead"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIADetectorObject.html">_AILIADetectorObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a5468734481b48363c9d5683fcb1e0ead">AILIADetectorObject</a></td></tr>
+<tr class="separator:a5468734481b48363c9d5683fcb1e0ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:acb3b4ae959b7c15ceca7034b48b62539"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#acb3b4ae959b7c15ceca7034b48b62539">ailiaCreateDetector</a> (struct AILIADetector **detector, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range, unsigned int algorithm, unsigned int category_count, unsigned int flags)</td></tr>
+<tr class="memitem:acb3b4ae959b7c15ceca7034b48b62539"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#acb3b4ae959b7c15ceca7034b48b62539">ailiaCreateDetector</a> (struct AILIADetector **detector, struct AILIANetwork *net, unsigned int format, unsigned int channel, unsigned int range, unsigned int algorithm, unsigned int category_count, unsigned int flags)</td></tr>
 <tr class="memdesc:acb3b4ae959b7c15ceca7034b48b62539"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを作成します。  <a href="#acb3b4ae959b7c15ceca7034b48b62539">[詳解]</a><br /></td></tr>
 <tr class="separator:acb3b4ae959b7c15ceca7034b48b62539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f8a4b5b262231404fd5a38b4560abd1"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a9f8a4b5b262231404fd5a38b4560abd1">ailiaDestroyDetector</a> (struct AILIADetector *detector)</td></tr>
+<tr class="memitem:a9f8a4b5b262231404fd5a38b4560abd1"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a9f8a4b5b262231404fd5a38b4560abd1">ailiaDestroyDetector</a> (struct AILIADetector *detector)</td></tr>
 <tr class="memdesc:a9f8a4b5b262231404fd5a38b4560abd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出オブジェクトを破棄します。  <a href="#a9f8a4b5b262231404fd5a38b4560abd1">[詳解]</a><br /></td></tr>
 <tr class="separator:a9f8a4b5b262231404fd5a38b4560abd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7db22154f11fe44b7e27a95fadf34ef2"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a7db22154f11fe44b7e27a95fadf34ef2">ailiaDetectorCompute</a> (struct AILIADetector *detector, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format, float threshold, float iou)</td></tr>
+<tr class="memitem:a7db22154f11fe44b7e27a95fadf34ef2"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a7db22154f11fe44b7e27a95fadf34ef2">ailiaDetectorCompute</a> (struct AILIADetector *detector, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format, float threshold, float iou)</td></tr>
 <tr class="memdesc:a7db22154f11fe44b7e27a95fadf34ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">物体検出を行います。  <a href="#a7db22154f11fe44b7e27a95fadf34ef2">[詳解]</a><br /></td></tr>
 <tr class="separator:a7db22154f11fe44b7e27a95fadf34ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a453116dfe6d50b57fb543fd599b7e6eb"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a453116dfe6d50b57fb543fd599b7e6eb">ailiaDetectorGetObjectCount</a> (struct AILIADetector *detector, unsigned int *obj_count)</td></tr>
+<tr class="memitem:a453116dfe6d50b57fb543fd599b7e6eb"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a453116dfe6d50b57fb543fd599b7e6eb">ailiaDetectorGetObjectCount</a> (struct AILIADetector *detector, unsigned int *obj_count)</td></tr>
 <tr class="memdesc:a453116dfe6d50b57fb543fd599b7e6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出結果の数を取得します。  <a href="#a453116dfe6d50b57fb543fd599b7e6eb">[詳解]</a><br /></td></tr>
 <tr class="separator:a453116dfe6d50b57fb543fd599b7e6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac831a97ef163e1d100ade8542cbc111e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#ac831a97ef163e1d100ade8542cbc111e">ailiaDetectorGetObject</a> (struct AILIADetector *detector, <a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
+<tr class="memitem:ac831a97ef163e1d100ade8542cbc111e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#ac831a97ef163e1d100ade8542cbc111e">ailiaDetectorGetObject</a> (struct AILIADetector *detector, <a class="el" href="ailia__detector_8h.html#a5468734481b48363c9d5683fcb1e0ead">AILIADetectorObject</a> *obj, unsigned int obj_idx, unsigned int version)</td></tr>
 <tr class="memdesc:ac831a97ef163e1d100ade8542cbc111e"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出結果を取得します。  <a href="#ac831a97ef163e1d100ade8542cbc111e">[詳解]</a><br /></td></tr>
 <tr class="separator:ac831a97ef163e1d100ade8542cbc111e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1cec9ad05d78a51af1017e1b02e948"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a3b1cec9ad05d78a51af1017e1b02e948">ailiaDetectorSetAnchors</a> (struct AILIADetector *detector, float *anchors, unsigned int anchors_count)</td></tr>
+<tr class="memitem:a3b1cec9ad05d78a51af1017e1b02e948"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a3b1cec9ad05d78a51af1017e1b02e948">ailiaDetectorSetAnchors</a> (struct AILIADetector *detector, float *anchors, unsigned int anchors_count)</td></tr>
 <tr class="memdesc:a3b1cec9ad05d78a51af1017e1b02e948"><td class="mdescLeft">&#160;</td><td class="mdescRight">YoloV2などのためにアンカーズ (anchorsまたはbiases) の情報を設定します。  <a href="#a3b1cec9ad05d78a51af1017e1b02e948">[詳解]</a><br /></td></tr>
 <tr class="separator:a3b1cec9ad05d78a51af1017e1b02e948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bd9e4385de790b5fc031317bd81573e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a9bd9e4385de790b5fc031317bd81573e">ailiaDetectorSetInputShape</a> (struct AILIADetector *detector, unsigned int input_width, unsigned int input_height)</td></tr>
+<tr class="memitem:a9bd9e4385de790b5fc031317bd81573e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__detector_8h.html#a9bd9e4385de790b5fc031317bd81573e">ailiaDetectorSetInputShape</a> (struct AILIADetector *detector, unsigned int input_width, unsigned int input_height)</td></tr>
 <tr class="memdesc:a9bd9e4385de790b5fc031317bd81573e"><td class="mdescLeft">&#160;</td><td class="mdescRight">YoloV3またはYoloXでのモデルへの入力画像サイズを指定します。  <a href="#a9bd9e4385de790b5fc031317bd81573e">[詳解]</a><br /></td></tr>
 <tr class="separator:a9bd9e4385de790b5fc031317bd81573e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -264,14 +264,14 @@ ailia_detector.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">型定義詳解</h2>
-<a id="a40537f16d4b949a2f8ab7057e091e71d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40537f16d4b949a2f8ab7057e091e71d">&#9670;&nbsp;</a></span>AILIADetectorObject</h2>
+<a id="a5468734481b48363c9d5683fcb1e0ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5468734481b48363c9d5683fcb1e0ead">&#9670;&nbsp;</a></span>AILIADetectorObject</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="struct__AILIADetectorObject.html">_AILIADetectorObject</a> <a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a></td>
+          <td class="memname">typedef struct <a class="el" href="struct__AILIADetectorObject.html">_AILIADetectorObject</a>  <a class="el" href="ailia__detector_8h.html#a5468734481b48363c9d5683fcb1e0ead">AILIADetectorObject</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -286,7 +286,7 @@ ailia_detector.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateDetector </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCreateDetector </td>
           <td>(</td>
           <td class="paramtype">struct AILIADetector **&#160;</td>
           <td class="paramname"><em>detector</em>, </td>
@@ -366,7 +366,7 @@ ailia_detector.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyDetector </td>
+          <td class="memname">void <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDestroyDetector </td>
           <td>(</td>
           <td class="paramtype">struct AILIADetector *&#160;</td>
           <td class="paramname"><em>detector</em></td><td>)</td>
@@ -392,7 +392,7 @@ ailia_detector.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorCompute </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorCompute </td>
           <td>(</td>
           <td class="paramtype">struct AILIADetector *&#160;</td>
           <td class="paramname"><em>detector</em>, </td>
@@ -472,7 +472,7 @@ ailia_detector.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorGetObject </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorGetObject </td>
           <td>(</td>
           <td class="paramtype">struct AILIADetector *&#160;</td>
           <td class="paramname"><em>detector</em>, </td>
@@ -480,7 +480,7 @@ ailia_detector.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ailia__detector_8h.html#a40537f16d4b949a2f8ab7057e091e71d">AILIADetectorObject</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="ailia__detector_8h.html#a5468734481b48363c9d5683fcb1e0ead">AILIADetectorObject</a> *&#160;</td>
           <td class="paramname"><em>obj</em>, </td>
         </tr>
         <tr>
@@ -525,7 +525,7 @@ ailia_detector.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorGetObjectCount </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorGetObjectCount </td>
           <td>(</td>
           <td class="paramtype">struct AILIADetector *&#160;</td>
           <td class="paramname"><em>detector</em>, </td>
@@ -563,7 +563,7 @@ ailia_detector.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorSetAnchors </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorSetAnchors </td>
           <td>(</td>
           <td class="paramtype">struct AILIADetector *&#160;</td>
           <td class="paramname"><em>detector</em>, </td>
@@ -609,7 +609,7 @@ ailia_detector.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="ailia__gpu_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorSetInputShape </td>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaDetectorSetInputShape </td>
           <td>(</td>
           <td class="paramtype">struct AILIADetector *&#160;</td>
           <td class="paramname"><em>detector</em>, </td>
