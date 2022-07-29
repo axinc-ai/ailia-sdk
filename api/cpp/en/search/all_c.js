@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resource',['resource',['../structAILIADX11ResourceDesc.html#ad0d61c6b25876cb247a3ca16088240a9',1,'AILIADX11ResourceDesc']]]
+  ['w',['w',['../struct__AILIAShape.html#a483537608b10e949d054b96fe5545395',1,'_AILIAShape::w()'],['../struct__AILIADetectorObject.html#a5c8378867808419315f59617637dda08',1,'_AILIADetectorObject::w()']]]
 ];
