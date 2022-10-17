@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.12.0</span>
+   &#160;<span id="projectnumber">1.2.13.0</span>
    </div>
   </td>
  </tr>
@@ -96,94 +96,137 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab87642bc962744121d5aaafa941f8087"><td class="memItemLeft" align="right" valign="top">delegate Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab87642bc962744121d5aaafa941f8087">ailiaCallbackClose</a> (IntPtr fp)</td></tr>
 <tr class="separator:ab87642bc962744121d5aaafa941f8087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada8bc6378c8942aef6a13ea6bc7277f1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ada8bc6378c8942aef6a13ea6bc7277f1">ailiaCreate</a> (ref IntPtr net, int env_id, int num_thread)</td></tr>
+<tr class="memdesc:ada8bc6378c8942aef6a13ea6bc7277f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a network object.  <a href="#ada8bc6378c8942aef6a13ea6bc7277f1">More...</a><br /></td></tr>
 <tr class="separator:ada8bc6378c8942aef6a13ea6bc7277f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4afdc3c2e44afb6970f60f009e7265ef"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a4afdc3c2e44afb6970f60f009e7265ef">ailiaOpenStreamFile</a> (IntPtr net, string path)</td></tr>
+<tr class="memdesc:a4afdc3c2e44afb6970f60f009e7265ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize network object. (read from file)  <a href="#a4afdc3c2e44afb6970f60f009e7265ef">More...</a><br /></td></tr>
 <tr class="separator:a4afdc3c2e44afb6970f60f009e7265ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ee96ba5ba0850613391d659b0c21408"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a9ee96ba5ba0850613391d659b0c21408">ailiaOpenWeightFile</a> (IntPtr net, string path)</td></tr>
+<tr class="memdesc:a9ee96ba5ba0850613391d659b0c21408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load weight coefficients into network object.  <a href="#a9ee96ba5ba0850613391d659b0c21408">More...</a><br /></td></tr>
 <tr class="separator:a9ee96ba5ba0850613391d659b0c21408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1298a26c62d5220f4efa790d696797c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ac1298a26c62d5220f4efa790d696797c">ailiaOpenStreamEx</a> (IntPtr net, IntPtr fopen_args, <a class="el" href="structAilia_1_1ailiaFileCallback.html">ailiaFileCallback</a> callback, Int32 version)</td></tr>
+<tr class="memdesc:ac1298a26c62d5220f4efa790d696797c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize network object. (user-defined file access callback)  <a href="#ac1298a26c62d5220f4efa790d696797c">More...</a><br /></td></tr>
 <tr class="separator:ac1298a26c62d5220f4efa790d696797c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a915e35f22ba71318e2fad36033496989"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a915e35f22ba71318e2fad36033496989">ailiaOpenWeightEx</a> (IntPtr net, IntPtr fopen_args, <a class="el" href="structAilia_1_1ailiaFileCallback.html">ailiaFileCallback</a> callback, Int32 version)</td></tr>
+<tr class="memdesc:a915e35f22ba71318e2fad36033496989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load weight coefficients into network object. (user-defined file access callback)  <a href="#a915e35f22ba71318e2fad36033496989">More...</a><br /></td></tr>
 <tr class="separator:a915e35f22ba71318e2fad36033496989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62e13f17de1e7c4f9d5edd4695505259"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a62e13f17de1e7c4f9d5edd4695505259">ailiaOpenStreamMem</a> (IntPtr net, byte[] buf, UInt32 buf_size)</td></tr>
+<tr class="memdesc:a62e13f17de1e7c4f9d5edd4695505259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize network object. (read from memory)  <a href="#a62e13f17de1e7c4f9d5edd4695505259">More...</a><br /></td></tr>
 <tr class="separator:a62e13f17de1e7c4f9d5edd4695505259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04c9cfb2071db42caa5e5e7ede4d4c75"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a04c9cfb2071db42caa5e5e7ede4d4c75">ailiaOpenWeightMem</a> (IntPtr net, byte[] buf, UInt32 buf_size)</td></tr>
+<tr class="memdesc:a04c9cfb2071db42caa5e5e7ede4d4c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load weight coefficients into network object. (read from memory)  <a href="#a04c9cfb2071db42caa5e5e7ede4d4c75">More...</a><br /></td></tr>
 <tr class="separator:a04c9cfb2071db42caa5e5e7ede4d4c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc7ea836bda76d4dd7d6e814c50aee32"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#acc7ea836bda76d4dd7d6e814c50aee32">ailiaDestroy</a> (IntPtr net)</td></tr>
+<tr class="memdesc:acc7ea836bda76d4dd7d6e814c50aee32"><td class="mdescLeft">&#160;</td><td class="mdescRight">destroy network object *  <a href="#acc7ea836bda76d4dd7d6e814c50aee32">More...</a><br /></td></tr>
 <tr class="separator:acc7ea836bda76d4dd7d6e814c50aee32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39ecb007a9a24cf97d67fccbab2829b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ae39ecb007a9a24cf97d67fccbab2829b">ailiaSetInputShape</a> (IntPtr net, [In] <a class="el" href="classAilia_1_1AILIAShape.html">AILIAShape</a> shape, UInt32 version)</td></tr>
+<tr class="memdesc:ae39ecb007a9a24cf97d67fccbab2829b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the shape of input data during inference.  <a href="#ae39ecb007a9a24cf97d67fccbab2829b">More...</a><br /></td></tr>
 <tr class="separator:ae39ecb007a9a24cf97d67fccbab2829b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96aaa853d0c129b0d2407a0f49204d4d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a96aaa853d0c129b0d2407a0f49204d4d">ailiaSetInputShapeND</a> (IntPtr net, UInt32 [] shape, UInt32 dim)</td></tr>
+<tr class="memdesc:a96aaa853d0c129b0d2407a0f49204d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the shape of input data during inference.  <a href="#a96aaa853d0c129b0d2407a0f49204d4d">More...</a><br /></td></tr>
 <tr class="separator:a96aaa853d0c129b0d2407a0f49204d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0db6de63dacf478b13f8feb823cffcf"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#aa0db6de63dacf478b13f8feb823cffcf">ailiaGetInputShape</a> (IntPtr net, [In, Out] <a class="el" href="classAilia_1_1AILIAShape.html">AILIAShape</a> shape, UInt32 version)</td></tr>
+<tr class="memdesc:aa0db6de63dacf478b13f8feb823cffcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shape of the input data during inference.  <a href="#aa0db6de63dacf478b13f8feb823cffcf">More...</a><br /></td></tr>
 <tr class="separator:aa0db6de63dacf478b13f8feb823cffcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fd1195cee42efa0de1a298bc688d3ba"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a4fd1195cee42efa0de1a298bc688d3ba">ailiaGetInputDim</a> (IntPtr net, ref UInt32 dim)</td></tr>
+<tr class="memdesc:a4fd1195cee42efa0de1a298bc688d3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of the input data during inference.  <a href="#a4fd1195cee42efa0de1a298bc688d3ba">More...</a><br /></td></tr>
 <tr class="separator:a4fd1195cee42efa0de1a298bc688d3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fcd86cb6f4f4327e37c528577b585e3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a2fcd86cb6f4f4327e37c528577b585e3">ailiaGetInputShapeND</a> (IntPtr net, UInt32[] shape, UInt32 dim)</td></tr>
+<tr class="memdesc:a2fcd86cb6f4f4327e37c528577b585e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shape of the input data during inference.  <a href="#a2fcd86cb6f4f4327e37c528577b585e3">More...</a><br /></td></tr>
 <tr class="separator:a2fcd86cb6f4f4327e37c528577b585e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e4eedcd270d201054d653a3b67928fe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a1e4eedcd270d201054d653a3b67928fe">ailiaGetOutputShape</a> (IntPtr net, [In, Out] <a class="el" href="classAilia_1_1AILIAShape.html">AILIAShape</a> shape, UInt32 version)</td></tr>
+<tr class="memdesc:a1e4eedcd270d201054d653a3b67928fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shape of the output data during inference and training.  <a href="#a1e4eedcd270d201054d653a3b67928fe">More...</a><br /></td></tr>
 <tr class="separator:a1e4eedcd270d201054d653a3b67928fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a855569daa30c331a4c1039443fc0659a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a855569daa30c331a4c1039443fc0659a">ailiaGetOutputDim</a> (IntPtr net, ref UInt32 dim)</td></tr>
+<tr class="memdesc:a855569daa30c331a4c1039443fc0659a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of the output data during inference.  <a href="#a855569daa30c331a4c1039443fc0659a">More...</a><br /></td></tr>
 <tr class="separator:a855569daa30c331a4c1039443fc0659a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6be857cfb5774e35b16cc91b1eaec4f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ae6be857cfb5774e35b16cc91b1eaec4f">ailiaGetOutputShapeND</a> (IntPtr net, UInt32 [] shape, UInt32 dim)</td></tr>
+<tr class="memdesc:ae6be857cfb5774e35b16cc91b1eaec4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shape of the output data during inference.  <a href="#ae6be857cfb5774e35b16cc91b1eaec4f">More...</a><br /></td></tr>
 <tr class="separator:ae6be857cfb5774e35b16cc91b1eaec4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b71aab006f128a582729f852e014031"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a5b71aab006f128a582729f852e014031">ailiaPredict</a> (IntPtr net, IntPtr dest, UInt32 dest_size, IntPtr src, UInt32 src_size)</td></tr>
+<tr class="memdesc:a5b71aab006f128a582729f852e014031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Infer and get the result of inference.  <a href="#a5b71aab006f128a582729f852e014031">More...</a><br /></td></tr>
 <tr class="separator:a5b71aab006f128a582729f852e014031"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4dc6f3e188e96a07bdca88cf986628e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e">ailiaGetBlobCount</a> (IntPtr net, ref UInt32 blob_count)</td></tr>
+<tr class="memdesc:ab4dc6f3e188e96a07bdca88cf986628e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of internal data (Blob) at inference.  <a href="#ab4dc6f3e188e96a07bdca88cf986628e">More...</a><br /></td></tr>
 <tr class="separator:ab4dc6f3e188e96a07bdca88cf986628e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4def66c5918e5150af190ae93f521f34"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a4def66c5918e5150af190ae93f521f34">ailiaGetBlobShape</a> (IntPtr net, [In, Out] <a class="el" href="classAilia_1_1AILIAShape.html">AILIAShape</a> shape, UInt32 blob_idx, UInt32 version)</td></tr>
+<tr class="memdesc:a4def66c5918e5150af190ae93f521f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shape of the internal data (Blob) at the time of inference.  <a href="#a4def66c5918e5150af190ae93f521f34">More...</a><br /></td></tr>
 <tr class="separator:a4def66c5918e5150af190ae93f521f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4c1e9d5a5ae19a87c7c917be9e3a5af"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ad4c1e9d5a5ae19a87c7c917be9e3a5af">ailiaGetBlobDim</a> (IntPtr net, ref UInt32 dim, UInt32 blob_idx)</td></tr>
+<tr class="memdesc:ad4c1e9d5a5ae19a87c7c917be9e3a5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of the internal data (Blob) at the time of inference.  <a href="#ad4c1e9d5a5ae19a87c7c917be9e3a5af">More...</a><br /></td></tr>
 <tr class="separator:ad4c1e9d5a5ae19a87c7c917be9e3a5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43ebe76f1ffbe1aff287c4c6197db5ed"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a43ebe76f1ffbe1aff287c4c6197db5ed">ailiaGetBlobShapeND</a> (IntPtr net, UInt32[] shape, UInt32 dim, UInt32 blob_idx)</td></tr>
+<tr class="memdesc:a43ebe76f1ffbe1aff287c4c6197db5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shape of the internal data (Blob) at the time of inference.  <a href="#a43ebe76f1ffbe1aff287c4c6197db5ed">More...</a><br /></td></tr>
 <tr class="separator:a43ebe76f1ffbe1aff287c4c6197db5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a36b2cb645c4c28ec9a78dfc731e29a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a8a36b2cb645c4c28ec9a78dfc731e29a">ailiaGetBlobData</a> (IntPtr net, IntPtr dest, UInt32 dest_size, UInt32 blob_idx)</td></tr>
+<tr class="memdesc:a8a36b2cb645c4c28ec9a78dfc731e29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get internal data (Blob) at inference time.  <a href="#a8a36b2cb645c4c28ec9a78dfc731e29a">More...</a><br /></td></tr>
 <tr class="separator:a8a36b2cb645c4c28ec9a78dfc731e29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab39a2620adbf90d400205978125cb155"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab39a2620adbf90d400205978125cb155">ailiaFindBlobIndexByName</a> (IntPtr net, ref UInt32 blob_idx, string name)</td></tr>
+<tr class="memdesc:ab39a2620adbf90d400205978125cb155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and get the index of the internal data (Blob) at inference time by name.  <a href="#ab39a2620adbf90d400205978125cb155">More...</a><br /></td></tr>
 <tr class="separator:ab39a2620adbf90d400205978125cb155"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b65e02f4608e3f9c2ef06b1ec14bee5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a4b65e02f4608e3f9c2ef06b1ec14bee5">ailiaGetBlobNameLengthByIndex</a> (IntPtr net, UInt32 blob_idx, ref UInt32 buffer_size)</td></tr>
+<tr class="memdesc:a4b65e02f4608e3f9c2ef06b1ec14bee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the required buffer size for the name of the internal data (Blob).  <a href="#a4b65e02f4608e3f9c2ef06b1ec14bee5">More...</a><br /></td></tr>
 <tr class="separator:a4b65e02f4608e3f9c2ef06b1ec14bee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fb6bab0f8dca13f5d052fcf8aef2986"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a4fb6bab0f8dca13f5d052fcf8aef2986">ailiaFindBlobNameByIndex</a> (IntPtr net, IntPtr buffer, UInt32 buffer_size, UInt32 blob_idx)</td></tr>
 <tr class="separator:a4fb6bab0f8dca13f5d052fcf8aef2986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7912fdcd726c8033e6dc3f02f4a4dd0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ae7912fdcd726c8033e6dc3f02f4a4dd0">ailiaGetSummaryLength</a> (IntPtr net, ref UInt32 buffer_size)</td></tr>
+<tr class="memdesc:ae7912fdcd726c8033e6dc3f02f4a4dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the required buffer size for network Summary.  <a href="#ae7912fdcd726c8033e6dc3f02f4a4dd0">More...</a><br /></td></tr>
 <tr class="separator:ae7912fdcd726c8033e6dc3f02f4a4dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48a9804148ed6ad3e722f5a74334d258"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a48a9804148ed6ad3e722f5a74334d258">ailiaSummary</a> (IntPtr net, byte[] buffer, UInt32 buffer_size)</td></tr>
+<tr class="memdesc:a48a9804148ed6ad3e722f5a74334d258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the name and shape of each Blob.  <a href="#a48a9804148ed6ad3e722f5a74334d258">More...</a><br /></td></tr>
 <tr class="separator:a48a9804148ed6ad3e722f5a74334d258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4196cc9001bb34a1f70546b4e1e6ecb9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a4196cc9001bb34a1f70546b4e1e6ecb9">ailiaGetInputBlobCount</a> (IntPtr net, ref UInt32 input_blob_count)</td></tr>
+<tr class="memdesc:a4196cc9001bb34a1f70546b4e1e6ecb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of input data (Blob).  <a href="#a4196cc9001bb34a1f70546b4e1e6ecb9">More...</a><br /></td></tr>
 <tr class="separator:a4196cc9001bb34a1f70546b4e1e6ecb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8833b79e910a43d2890f1e6069471f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a7b8833b79e910a43d2890f1e6069471f">ailiaGetBlobIndexByInputIndex</a> (IntPtr net, ref UInt32 blob_idx, UInt32 input_blob_idx)</td></tr>
+<tr class="memdesc:a7b8833b79e910a43d2890f1e6069471f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the input data (Blob)  <a href="#a7b8833b79e910a43d2890f1e6069471f">More...</a><br /></td></tr>
 <tr class="separator:a7b8833b79e910a43d2890f1e6069471f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ac6b6d5d0ae5fc268fca5c5682519ab"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a9ac6b6d5d0ae5fc268fca5c5682519ab">ailiaSetInputBlobData</a> (IntPtr net, IntPtr src, UInt32 src_size, UInt32 blob_idx)</td></tr>
+<tr class="memdesc:a9ac6b6d5d0ae5fc268fca5c5682519ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give input data to the specified Blob.  <a href="#a9ac6b6d5d0ae5fc268fca5c5682519ab">More...</a><br /></td></tr>
 <tr class="separator:a9ac6b6d5d0ae5fc268fca5c5682519ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3056ce562aa3324089a1b00f9051d2d9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a3056ce562aa3324089a1b00f9051d2d9">ailiaSetInputBlobShape</a> (IntPtr net, [In] <a class="el" href="classAilia_1_1AILIAShape.html">AILIAShape</a> shape, UInt32 blob_idx, UInt32 version)</td></tr>
+<tr class="memdesc:a3056ce562aa3324089a1b00f9051d2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the shape of the specified Blob.  <a href="#a3056ce562aa3324089a1b00f9051d2d9">More...</a><br /></td></tr>
 <tr class="separator:a3056ce562aa3324089a1b00f9051d2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab101c9ccd29e2501e0404c7a994f821c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab101c9ccd29e2501e0404c7a994f821c">ailiaSetInputBlobShapeND</a> (IntPtr net, UInt32[] shape, UInt32 dim, UInt32 blob_idx)</td></tr>
+<tr class="memdesc:ab101c9ccd29e2501e0404c7a994f821c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the shape of the specified Blob.  <a href="#ab101c9ccd29e2501e0404c7a994f821c">More...</a><br /></td></tr>
 <tr class="separator:ab101c9ccd29e2501e0404c7a994f821c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2710ca310cc5ed811c24e884ada82fda"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a2710ca310cc5ed811c24e884ada82fda">ailiaUpdate</a> (IntPtr net)</td></tr>
+<tr class="memdesc:a2710ca310cc5ed811c24e884ada82fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform inference with pre-specified input data.  <a href="#a2710ca310cc5ed811c24e884ada82fda">More...</a><br /></td></tr>
 <tr class="separator:a2710ca310cc5ed811c24e884ada82fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a8382b0056dabac290e42f6dec38181"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a8a8382b0056dabac290e42f6dec38181">ailiaGetOutputBlobCount</a> (IntPtr net, ref UInt32 output_blob_count)</td></tr>
+<tr class="memdesc:a8a8382b0056dabac290e42f6dec38181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of output data (Blob).  <a href="#a8a8382b0056dabac290e42f6dec38181">More...</a><br /></td></tr>
 <tr class="separator:a8a8382b0056dabac290e42f6dec38181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e575f4a4eaee99dcc6477fb324705e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ac5e575f4a4eaee99dcc6477fb324705e">ailiaGetBlobIndexByOutputIndex</a> (IntPtr net, ref UInt32 blob_idx, UInt32 output_blob_idx)</td></tr>
+<tr class="memdesc:ac5e575f4a4eaee99dcc6477fb324705e"><td class="mdescLeft">&#160;</td><td class="mdescRight">get index of output data (Blob)  <a href="#ac5e575f4a4eaee99dcc6477fb324705e">More...</a><br /></td></tr>
 <tr class="separator:ac5e575f4a4eaee99dcc6477fb324705e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65a4c17bbef265e469e1eed881ad9893"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a65a4c17bbef265e469e1eed881ad9893">ailiaSetTemporaryCachePath</a> (string path)</td></tr>
+<tr class="memdesc:a65a4c17bbef265e469e1eed881ad9893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify temporary cache directory.  <a href="#a65a4c17bbef265e469e1eed881ad9893">More...</a><br /></td></tr>
 <tr class="separator:a65a4c17bbef265e469e1eed881ad9893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ac87726ddd28497c4e90c43546abf14"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a9ac87726ddd28497c4e90c43546abf14">ailiaGetEnvironmentCount</a> (ref Int32 env_count)</td></tr>
+<tr class="memdesc:a9ac87726ddd28497c4e90c43546abf14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of available computing environments (CPU, GPU)  <a href="#a9ac87726ddd28497c4e90c43546abf14">More...</a><br /></td></tr>
 <tr class="separator:a9ac87726ddd28497c4e90c43546abf14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc9b51845994408dd7210140355aa4b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a8fc9b51845994408dd7210140355aa4b">ailiaGetEnvironment</a> (ref IntPtr env, UInt32 env_idx, UInt32 version)</td></tr>
 <tr class="separator:a8fc9b51845994408dd7210140355aa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f1508c93bab70eadc10eb5739a8a87e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a6f1508c93bab70eadc10eb5739a8a87e">ailiaGetSelectedEnvironment</a> (IntPtr net, ref IntPtr env, UInt32 version)</td></tr>
+<tr class="memdesc:a6f1508c93bab70eadc10eb5739a8a87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the selected computing environment.  <a href="#a6f1508c93bab70eadc10eb5739a8a87e">More...</a><br /></td></tr>
 <tr class="separator:a6f1508c93bab70eadc10eb5739a8a87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3d1f01d6d70d2ad7ad8041a80b7ffce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab3d1f01d6d70d2ad7ad8041a80b7ffce">ailiaSetMemoryMode</a> (IntPtr net, UInt32 mode)</td></tr>
+<tr class="memdesc:ab3d1f01d6d70d2ad7ad8041a80b7ffce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the memory usage policy during inference.  <a href="#ab3d1f01d6d70d2ad7ad8041a80b7ffce">More...</a><br /></td></tr>
 <tr class="separator:ab3d1f01d6d70d2ad7ad8041a80b7ffce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8135767f8f0859a65ef15ef13a1d8ed3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a8135767f8f0859a65ef15ef13a1d8ed3">ailiaDisableLayerFusion</a> (IntPtr net)</td></tr>
+<tr class="memdesc:a8135767f8f0859a65ef15ef13a1d8ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables layer integration during inference.  <a href="#a8135767f8f0859a65ef15ef13a1d8ed3">More...</a><br /></td></tr>
 <tr class="separator:a8135767f8f0859a65ef15ef13a1d8ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9e006d86eef112a3dda2134883b4938"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab9e006d86eef112a3dda2134883b4938">ailiaSetProfileMode</a> (IntPtr net, UInt32 mode)</td></tr>
+<tr class="memdesc:ab9e006d86eef112a3dda2134883b4938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set profile mode.  <a href="#ab9e006d86eef112a3dda2134883b4938">More...</a><br /></td></tr>
 <tr class="separator:ab9e006d86eef112a3dda2134883b4938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4b1c521516bbcaac90e9e6022688e29"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ad4b1c521516bbcaac90e9e6022688e29">ailiaGetStatusString</a> (Int32 status)</td></tr>
+<tr class="memdesc:ad4b1c521516bbcaac90e9e6022688e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string describing the status code.  <a href="#ad4b1c521516bbcaac90e9e6022688e29">More...</a><br /></td></tr>
 <tr class="separator:ad4b1c521516bbcaac90e9e6022688e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a7a2910bc515b24b13c33c1336d0c6a4a">ailiaGetErrorDetail</a> (IntPtr net)</td></tr>
+<tr class="memdesc:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns error details.  <a href="#a7a2910bc515b24b13c33c1336d0c6a4a">More...</a><br /></td></tr>
 <tr class="separator:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61abe889ca7db6e30298c30f15229e69"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a61abe889ca7db6e30298c30f15229e69">ailiaGetVersion</a> ()</td></tr>
+<tr class="memdesc:a61abe889ca7db6e30298c30f15229e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the library version.  <a href="#a61abe889ca7db6e30298c30f15229e69">More...</a><br /></td></tr>
 <tr class="separator:a61abe889ca7db6e30298c30f15229e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -260,8 +303,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0d1083559068c3d24daf1a43db73877c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121b1058a9d80241c7c101c69647128b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a121b1058a9d80241c7c101c69647128b">AILIA_ENVIRONMENT_BACKEND_NONE</a> = (0)</td></tr>
 <tr class="separator:a121b1058a9d80241c7c101c69647128b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ef16c11508adebba638a9c91791bcd9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a0ef16c11508adebba638a9c91791bcd9">AILIA_ENVIRONMENT_BACKEND_AMP</a> = (1)</td></tr>
-<tr class="separator:a0ef16c11508adebba638a9c91791bcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98502accb387605c190b66f3269af593"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a98502accb387605c190b66f3269af593">AILIA_ENVIRONMENT_BACKEND_CUDA</a> = (2)</td></tr>
 <tr class="separator:a98502accb387605c190b66f3269af593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e18c318b22103e7df985e44fe1cd222"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a2e18c318b22103e7df985e44fe1cd222">AILIA_ENVIRONMENT_BACKEND_MPS</a> = (3)</td></tr>
@@ -458,6 +499,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a network object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Pointer to network object pointer </td></tr>
+    <tr><td class="paramname">env_id</td><td>ID of the environment to use for calculation (obtained with <a class="el" href="classAilia.html#a8fc9b51845994408dd7210140355aa4b">ailiaGetEnvironment()</a>) <a class="el" href="classAilia.html#aa948bb14f33f078d483b2acbdb615adc">AILIA_ENVIRONMENT_ID_AUTO</a> If set to AILIA_ENVIRONMENT_ID_AUTO, it is automatically selected </td></tr>
+    <tr><td class="paramname">num_thread</td><td>Number of threads, automatic if <a class="el" href="classAilia.html#a8cdc972520d0f079420c9b3044016b4d">AILIA_MULTITHREAD_AUTO</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise returns an error code. Create network object. If the inference execution environment is set to automatic, CPU mode is used, and if BLAS is available, BLAS is used. Note that num_thread may be ignored when BLAS is used. </dd></dl>
+
 </div>
 </div>
 <a id="acc7ea836bda76d4dd7d6e814c50aee32"></a>
@@ -476,6 +528,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>destroy network object * </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>network object pointer </td></tr>
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a8135767f8f0859a65ef15ef13a1d8ed3"></a>
@@ -493,6 +554,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Disables layer integration during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise returns an error code.</dd></dl>
+<p>This is used when it is necessary to retrieve a Blob that can no longer be retrieved due to layer integration, etc. * Must be specified immediately after <a class="el" href="classAilia.html#ada8bc6378c8942aef6a13ea6bc7277f1" title="Create a network object. ">ailiaCreate()</a>. Must be specified immediately after <a class="el" href="classAilia.html#ada8bc6378c8942aef6a13ea6bc7277f1" title="Create a network object. ">ailiaCreate()</a>; it cannot be changed after a call to ailiaOpen. Note that disabling layer integration may reduce inference speed. </p>
 
 </div>
 </div>
@@ -527,6 +598,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Find and get the index of the internal data (Blob) at inference time by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob (0~ <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+    <tr><td class="paramname">name</td><td>Blob name to search </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
 
 </div>
 </div>
@@ -596,6 +678,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the number of internal data (Blob) at inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">blob_count</td><td>Where to store the number of blobs </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="a8a36b2cb645c4c28ec9a78dfc731e29a"></a>
@@ -636,6 +728,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get internal data (Blob) at inference time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">dest</td><td>Buffer to which inference result is written out Stored in numeric type in the order of X,Y,Z,W </td></tr>
+    <tr><td class="paramname">dest_size</td><td>Number of bytes in the buffer to which inference results are written </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob (0 to <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code.</dd></dl>
+<p>If <a class="el" href="classAilia.html#a5b71aab006f128a582729f852e014031" title="Infer and get the result of inference. ">ailiaPredict()</a> has never been executed, then <a class="el" href="classAilia.html#a53842a1d89dd7433b5703b0474c3d157">AILIA_STATUS_INVALID_STATE</a> is returned. </p>
+
 </div>
 </div>
 <a id="ad4c1e9d5a5ae19a87c7c917be9e3a5af"></a>
@@ -669,6 +774,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the dimension of the internal data (Blob) at the time of inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">dim</td><td>Where blob's dimension is stored </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob (0~ <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> in case of success, error code in case of other errors. </dd></dl>
 
 </div>
 </div>
@@ -704,6 +820,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the index of the input data (Blob) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index in blob (0~ <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+    <tr><td class="paramname">input_blob_idx</td><td>Index in input blob (0~ <a class="el" href="classAilia.html#a4196cc9001bb34a1f70546b4e1e6ecb9" title="Get the number of input data (Blob). ">ailiaGetInputBlobCount()</a> -1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code *</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_blob_idx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac5e575f4a4eaee99dcc6477fb324705e"></a>
@@ -738,6 +871,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>get index of output data (Blob) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index in blob (0~ <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+    <tr><td class="paramname">output_blob_idx</td><td>Index in output blob (0~ <a class="el" href="classAilia.html#a8a8382b0056dabac290e42f6dec38181" title="Get the number of output data (Blob). ">ailiaGetOutputBlobCount()</a> -1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise returns an error code. </dd></dl>
+
 </div>
 </div>
 <a id="a4b65e02f4608e3f9c2ef06b1ec14bee5"></a>
@@ -771,6 +915,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Output the required buffer size for the name of the internal data (Blob). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob (0~ <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+    <tr><td class="paramname">buffer_size</td><td>Buffer size required to output Blob name (including terminating null character) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
 
 </div>
 </div>
@@ -812,6 +967,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the shape of the internal data (Blob) at the time of inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Shape information of input data </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob (0~ <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_SHAPE_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="a43ebe76f1ffbe1aff287c4c6197db5ed"></a>
@@ -851,6 +1018,18 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the shape of the internal data (Blob) at the time of inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Array to store the size of each dimension of the blob (stored in dim-1, dim-2, ... ,1, 0 in that order) </td></tr>
+    <tr><td class="paramname">dim</td><td>Dimension of shape </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of the blob (0 to <a class="el" href="classAilia.html#ab4dc6f3e188e96a07bdca88cf986628e" title="Get the number of internal data (Blob) at inference. ">ailiaGetBlobCount()</a> -1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> in case of success, error code in case of other errors. </dd></dl>
 
 </div>
 </div>
@@ -904,6 +1083,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the number of available computing environments (CPU, GPU) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">env_count</td><td>Where to store the number of environment information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of available environments </dd></dl>
+
 </div>
 </div>
 <a id="a7a2910bc515b24b13c33c1336d0c6a4a"></a>
@@ -922,6 +1110,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns error details. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error Details</dd></dl>
+<p>The return value does not need to be released. The string is valid until the next call to ailia's API. Convert from the point obtained to a string as follows </p><div class="fragment"><div class="line">Marshal.PtrToStringAnsi(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a7a2910bc515b24b13c33c1336d0c6a4a">ailiaGetErrorDetail</a>(net))</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a4196cc9001bb34a1f70546b4e1e6ecb9"></a>
@@ -950,6 +1147,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the number of input data (Blob). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">input_blob_count</td><td>Where to store the number of input blobs </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="a4fd1195cee42efa0de1a298bc688d3ba"></a>
@@ -977,6 +1184,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the dimension of the input data during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">dim</td><td>Where dimension of input data is stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> in case of success, error code in case of other errors. </dd></dl>
 
 </div>
 </div>
@@ -1012,6 +1229,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the shape of the input data during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Shape information of input data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function successful <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> , if more than 5 dimensions <a class="el" href="classAilia.html#a236afbada40ce4152a603dd9c36d2fc4">AILIA_STATUS_NDIMENSION_SHAPE</a> , if more than 5 dimensions If the geometry is partially undetermined <a class="el" href="classAilia.html#a4218b6f0b7f7406280dd1500d80c7049">AILIA_STATUS_UNSETTLED_SHAPE</a>, otherwise return the error code.</dd></dl>
+<p>Use <a class="el" href="classAilia.html#a4fd1195cee42efa0de1a298bc688d3ba" title="Get the dimension of the input data during inference. ">ailiaGetInputDim()</a> or <a class="el" href="classAilia.html#a2fcd86cb6f4f4327e37c528577b585e3" title="Get the shape of the input data during inference. ">ailiaGetInputShapeND()</a> if the shape has more than 5 dimensions. If a part of the shape is undefined, the value of the corresponding dimension is set to 0, and the values of the other dimensions are stored as valid values. </p>
+
 </div>
 </div>
 <a id="a2fcd86cb6f4f4327e37c528577b585e3"></a>
@@ -1046,6 +1274,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the shape of the input data during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Array to store the size of each dimension of the input data (stored in dim-1, dim-2, ... ,1, 0 in that order) </td></tr>
+    <tr><td class="paramname">dim</td><td>Dimension of shape </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, if part of the shape is not yet determined, <a class="el" href="classAilia.html#a4218b6f0b7f7406280dd1500d80c7049">AILIA_STATUS_UNSETTLED_SHAPE</a>, if not yet determined, Return error code in case of other errors.</dd></dl>
+<p>If a part of the shape is not yet determined, the value of the corresponding dimension is set to 0, and valid values are stored for the other dimensions. </p>
+
 </div>
 </div>
 <a id="a8a8382b0056dabac290e42f6dec38181"></a>
@@ -1074,6 +1314,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the number of output data (Blob). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">output_blob_count</td><td>Where to store the number of output blobs </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="a855569daa30c331a4c1039443fc0659a"></a>
@@ -1101,6 +1351,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the dimension of the output data during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">dim</td><td>Where dimension of output data is stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> in case of success, error code in case of other errors. </dd></dl>
 
 </div>
 </div>
@@ -1136,6 +1396,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the shape of the output data during inference and training. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Shape information of output data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>In case of success <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, in case of 5 or more dimensions <a class="el" href="classAilia.html#a236afbada40ce4152a603dd9c36d2fc4">AILIA_STATUS_NDIMENSION_SHAPE</a>. Return error code in case of other errors.</dd></dl>
+<p>Use <a class="el" href="classAilia.html#a855569daa30c331a4c1039443fc0659a" title="Get the dimension of the output data during inference. ">ailiaGetOutputDim()</a> and <a class="el" href="classAilia.html#ae6be857cfb5774e35b16cc91b1eaec4f" title="Get the shape of the output data during inference. ">ailiaGetOutputShapeND()</a> if the shape has more than 5 dimensions. </p>
+
 </div>
 </div>
 <a id="ae6be857cfb5774e35b16cc91b1eaec4f"></a>
@@ -1169,6 +1440,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the shape of the output data during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Array to store the size of each dimension of output data (stored in dim-1, dim-2, ... ,1, 0 in that order) </td></tr>
+    <tr><td class="paramname">dim</td><td>Dimension of shape </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> in case of success, error code in case of other errors. </dd></dl>
 
 </div>
 </div>
@@ -1204,6 +1486,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the selected computing environment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">env</td><td>Where computation environment information is stored (valid until AILIANetwork instance is destroyed) </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_ENVIRONMENT_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="ad4b1c521516bbcaac90e9e6022688e29"></a>
@@ -1222,6 +1515,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns a string describing the status code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>Status code </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String describing the status code</dd></dl>
+<p>The return value does not need to be released. The string is valid until the ailia library is unloaded. Convert from the point obtained to a string as follows </p><div class="fragment"><div class="line">Marshal.PtrToStringAnsi(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#ad4b1c521516bbcaac90e9e6022688e29">ailiaGetStatusString</a>(status))</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ae7912fdcd726c8033e6dc3f02f4a4dd0"></a>
@@ -1250,6 +1552,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Output the required buffer size for network Summary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">buffer_size</td><td>Where buffer size is stored (including terminating null character) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="a61abe889ca7db6e30298c30f15229e69"></a>
@@ -1266,6 +1578,10 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the library version. </p>
+<dl class="section return"><dt>Returns</dt><dd>Version number (can be converted to string with Marshal.PtrToStringAnsi)</dd></dl>
+<p>The return value does not need to be released. </p>
 
 </div>
 </div>
@@ -1307,6 +1623,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialize network object. (user-defined file access callback) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">fopen_args</td><td>Argument pointer notified to AILIA_USER_API_FOPEN </td></tr>
+    <tr><td class="paramname">callback</td><td>User-defined file access callback structure </td></tr>
+    <tr><td class="paramname">version</td><td>Version of the file access callback structure (<a class="el" href="classAilia.html#a98c3bdf540140fb4ac69391506380d1e">AILIA_FILE_CALLBACK_VERSION</a> ) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, returns the file access callback structure version (<a class="el" href="classAilia.html#a98c3bdf540140fb4ac69391506380d1e">AILIA_FILE_CALLBACK_VERSION</a> ), otherwise returns an error code.</dd></dl>
+<p>Read from file and initialize network object. </p>
+
 </div>
 </div>
 <a id="a4afdc3c2e44afb6970f60f009e7265ef"></a>
@@ -1334,6 +1663,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initialize network object. (read from file) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">path</td><td>Pathname of prototxt file (MBSC or UTF16) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if succeeded, otherwise return error code.</dd></dl>
+<p>Initialize the network object by reading from the file. </p>
 
 </div>
 </div>
@@ -1368,6 +1708,18 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initialize network object. (read from memory) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to data in prototxt file </td></tr>
+    <tr><td class="paramname">buf_size</td><td>Data size of prototxt file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code *</dd></dl>
+<p>Read from memory and initialize the network object. </p>
 
 </div>
 </div>
@@ -1409,6 +1761,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Load weight coefficients into network object. (user-defined file access callback) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">fopen_args</td><td>Argument pointer notified to AILIA_USER_API_FOPEN </td></tr>
+    <tr><td class="paramname">callback</td><td>User-defined file access callback structure </td></tr>
+    <tr><td class="paramname">version</td><td>Version of the file access callback structure (<a class="el" href="classAilia.html#a98c3bdf540140fb4ac69391506380d1e">AILIA_FILE_CALLBACK_VERSION</a> ) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the file access callback structure version (<a class="el" href="classAilia.html#a98c3bdf540140fb4ac69391506380d1e">AILIA_FILE_CALLBACK_VERSION</a> ) if successful, otherwise returns an error code.</dd></dl>
+<p>Load weights from a file into a network object. </p>
+
 </div>
 </div>
 <a id="a9ee96ba5ba0850613391d659b0c21408"></a>
@@ -1436,6 +1801,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Load weight coefficients into network object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">path</td><td>Pathname of protobuf/onnx file (MBSC or UTF16) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code.</dd></dl>
+<p>Load weights from the file into the read network object. </p>
 
 </div>
 </div>
@@ -1470,6 +1846,18 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Load weight coefficients into network object. (read from memory) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to data in protobuf/onnxf file </td></tr>
+    <tr><td class="paramname">buf_size</td><td>Data size of protobuf/onnxf file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code *</dd></dl>
+<p>Load weights from the file into the network object. </p>
 
 </div>
 </div>
@@ -1517,6 +1905,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Infer and get the result of inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">dest</td><td>Buffer to which inference result is written, stored in numeric type in the order of X,Y,Z,W Size is outputSize of net file </td></tr>
+    <tr><td class="paramname">dest_size</td><td>Number of bytes in the buffer to which inference results are written </td></tr>
+    <tr><td class="paramname">src</td><td>Inference data X,Y,Z,W stored in order by numeric type Size is inputSize of net file </td></tr>
+    <tr><td class="paramname">src_size</td><td>Number of bytes of inference data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function is successful, returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise returns an error code. </dd></dl>
+
 </div>
 </div>
 <a id="a9ac6b6d5d0ae5fc268fca5c5682519ab"></a>
@@ -1556,6 +1957,19 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Give input data to the specified Blob. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">src</td><td>Inference data X,Y,Z,W stored in order by numeric type Size is inputSize of net file </td></tr>
+    <tr><td class="paramname">src_size</td><td>Inference data size </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of input blob </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code.</dd></dl>
+<p>This is used to specify an input in a network with multiple inputs, etc. * blob_idx is the index of the input blob. If blob_idx is specified other than blob of input layer <a class="el" href="classAilia.html#a7b69774e620ee1b4f88dbbf76959793d">AILIA_STATUS_INVALID_ARGUMENT</a>} is returned. </p>
 
 </div>
 </div>
@@ -1597,6 +2011,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Change the shape of the specified Blob. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Shape information of input data </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob to be changed </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_SHAPE_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd>
+<dd>
+Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if succeeded, otherwise return error code.</dd></dl>
+<p>This is used to change the input shape in networks with multiple inputs, etc. If blob_idx is specified other than blob of input layer <a class="el" href="classAilia.html#a7b69774e620ee1b4f88dbbf76959793d">AILIA_STATUS_INVALID_ARGUMENT</a>} is returned. See the description of <a class="el" href="classAilia.html#ae39ecb007a9a24cf97d67fccbab2829b" title="Change the shape of input data during inference. ">ailiaSetInputShape()</a> for other notes. If the input shape has a rank of 5 or more dimensions, use <a class="el" href="classAilia.html#ab101c9ccd29e2501e0404c7a994f821c" title="Change the shape of the specified Blob. ">ailiaSetInputBlobShapeND()</a>. </p>
+
 </div>
 </div>
 <a id="ab101c9ccd29e2501e0404c7a994f821c"></a>
@@ -1637,6 +2066,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Change the shape of the specified Blob. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Array of sizes of each dimension of input data (dim-1, dim-2, ... ,1, 0) </td></tr>
+    <tr><td class="paramname">dim</td><td>dim Dimension of shape </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob to be changed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code.</dd></dl>
+<p>This is used to change the input shape in a network with multiple inputs, etc. If blob_idx is specified other than blob of input layer <a class="el" href="classAilia.html#a7b69774e620ee1b4f88dbbf76959793d">AILIA_STATUS_INVALID_ARGUMENT</a>} is returned. See the description of <a class="el" href="classAilia.html#a96aaa853d0c129b0d2407a0f49204d4d" title="Change the shape of input data during inference. ">ailiaSetInputShapeND()</a> for other notes. </p>
+
 </div>
 </div>
 <a id="ae39ecb007a9a24cf97d67fccbab2829b"></a>
@@ -1670,6 +2112,18 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Change the shape of input data during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Shape information of input data </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_SHAPE_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code *</dd></dl>
+<p>Change the input shape defined in prototxt. Must be the same as the rank described in prototxt. Note that an error code may be returned if the shape of the weight coefficients depends on the input shape. If the rank defined in prototxt is more than 5 dimensions, use <a class="el" href="classAilia.html#a96aaa853d0c129b0d2407a0f49204d4d" title="Change the shape of input data during inference. ">ailiaSetInputShapeND()</a>. </p>
 
 </div>
 </div>
@@ -1705,6 +2159,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Change the shape of input data during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">shape</td><td>Array of sizes of each dimension of input data (dim-1, dim-2, ... ,1, 0) </td></tr>
+    <tr><td class="paramname">dim</td><td>Dimension of shape </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code.</dd></dl>
+<p>Change the input shape defined in prototxt. Must be the same as the rank described in prototxt. Note that an error may be returned due to the shape of the weight coefficients being dependent on the input shape, etc. </p>
+
 </div>
 </div>
 <a id="ab3d1f01d6d70d2ad7ad8041a80b7ffce"></a>
@@ -1732,6 +2198,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the memory usage policy during inference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>network object pointer </td></tr>
+    <tr><td class="paramname">mode</td><td>Memory mode (multiple specifiable by logical OR) AILIA_MEMORY_XXX (default: <a class="el" href="classAilia.html#aced0a299705a6add176c49fa81314097">AILIA_MEMORY_REDUCE_CONSTANT</a> ) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise returns an error code.</dd></dl>
+<p>Change the memory usage policy. If you specify anything other than <a class="el" href="classAilia.html#aea38a5cf0652d2a55dc77e7ada0dac30">AILIA_MEMORY_NO_OPTIMIZATION</a> The amount of memory used during inference can be reduced because the intermediate buffer allocated during inference is released. It must be specified immediately after <a class="el" href="classAilia.html#ada8bc6378c8942aef6a13ea6bc7277f1" title="Create a network object. ">ailiaCreate()</a>; it cannot be changed after a call to ailiaOpen. Note that if you specify that intermediate buffers are to be released, calling <a class="el" href="classAilia.html#a8a36b2cb645c4c28ec9a78dfc731e29a" title="Get internal data (Blob) at inference time. ">ailiaGetBlobData()</a> for the corresponding Blob will return <a class="el" href="classAilia.html#a2b1d143aaa801c9e9aacf4d6870a34b2">AILIA_STATUS_DATA_HIDDEN</a> error will be returned. </p>
 
 </div>
 </div>
@@ -1761,6 +2238,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set profile mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>network object pointer </td></tr>
+    <tr><td class="paramname">mode</td><td>profile mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise returns an error code.</dd></dl>
+<p>Specifies the profile mode. Default is disabled. Call it after calling ailiaOpenStreamXXX. If profile mode is enabled, the profile result is added to the output of <a class="el" href="classAilia.html#a48a9804148ed6ad3e722f5a74334d258" title="Display the name and shape of each Blob. ">ailiaSummary()</a>. </p>
+
 </div>
 </div>
 <a id="a65a4c17bbef265e469e1eed881ad9893"></a>
@@ -1778,6 +2266,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Specify temporary cache directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cache_dir</td><td>temporary cache directory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a>, otherwise return error code.</dd></dl>
+<p>The specified cache directory is used by the system to generate and store machine code optimized for each inference execution environment. Only one call should be made at the start of ailia execution. For the second and subsequent calls, ignore them and return success. No particular problem occurs when called by multiple threads because of the internal exclusion control. Some functions, such as Vulkan's shader cache function, cannot be used until this API is called. Specify the file path obtained by Context.getCacheDir() for cache_dir. </p>
 
 </div>
 </div>
@@ -1813,6 +2311,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Display the name and shape of each Blob. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">buffer</td><td>Output destination of summary </td></tr>
+    <tr><td class="paramname">buffer_size</td><td>Size of output buffer (including terminating null characters). Set the value obtained with <a class="el" href="classAilia.html#ae7912fdcd726c8033e6dc3f02f4a4dd0" title="Output the required buffer size for network Summary. ">ailiaGetSummaryLength()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise returns error code. </dd></dl>
+
 </div>
 </div>
 <a id="a2710ca310cc5ed811c24e884ada82fda"></a>
@@ -1831,23 +2340,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Perform inference with pre-specified input data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise returns an error code.</dd></dl>
+<p>This is used when input is given using <a class="el" href="classAilia.html#a9ac6b6d5d0ae5fc268fca5c5682519ab" title="Give input data to the specified Blob. ">ailiaSetInputBlobData()</a>, etc. Get the inference result with <a class="el" href="classAilia.html#a8a36b2cb645c4c28ec9a78dfc731e29a" title="Get internal data (Blob) at inference time. ">ailiaGetBlobData()</a>. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0ef16c11508adebba638a9c91791bcd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ef16c11508adebba638a9c91791bcd9">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_BACKEND_AMP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int Ailia.AILIA_ENVIRONMENT_BACKEND_AMP = (1)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a98502accb387605c190b66f3269af593"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98502accb387605c190b66f3269af593">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_BACKEND_CUDA</h2>
 
@@ -1929,6 +2434,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Indicates that it works with FP16. </p>
 
 </div>
 </div>
@@ -1943,6 +2449,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Indicates the use of a power-saving GPU (e.g., built-in GPU) (for MPS). </p>
 
 </div>
 </div>
@@ -2055,6 +2562,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Intermediate buffers are not opened. </p>
 
 </div>
 </div>
@@ -2083,6 +2591,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Open intermediate buffers that are constants for weights, etc. </p>
 
 </div>
 </div>
@@ -2097,6 +2606,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The input designation initializer is made unchangeable, and intermediate buffers that are constants for weights, etc., are released. </p>
 
 </div>
 </div>
@@ -2111,6 +2621,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Open intermediate buffers during inference. </p>
 
 </div>
 </div>
@@ -2125,6 +2636,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Share intermediate buffers to infer. When used with <a class="el" href="classAilia.html#a59baedd6b0d4084c54ee2a6d5ead4ee7">AILIA_MEMORY_REDUCE_INTERSTAGE</a>, the shareable intermediate buffer is not released. </p>
 
 </div>
 </div>
@@ -2195,6 +2707,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Incorrect stream version or structure version </p>
 
 </div>
 </div>
@@ -2209,6 +2722,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>It was information that could not be retrieved from the application. </p>
 
 </div>
 </div>
@@ -2223,6 +2737,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Removed by optimization, etc. </p>
 
 </div>
 </div>
@@ -2237,6 +2752,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>File access failed. </p>
 
 </div>
 </div>
@@ -2251,6 +2767,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Model expiration </p>
 
 </div>
 </div>
@@ -2265,6 +2782,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Error during processing on GPU </p>
 
 </div>
 </div>
@@ -2279,6 +2797,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Given a layer parameter not yet supported by the GPU </p>
 
 </div>
 </div>
@@ -2293,6 +2812,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Invalid argument </p>
 
 </div>
 </div>
@@ -2307,6 +2827,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Incorrect layer weights, input shapes, etc. </p>
 
 </div>
 </div>
@@ -2321,6 +2842,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Invalid parameter file content </p>
 
 </div>
 </div>
@@ -2335,6 +2857,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Internal state of decoder is incorrect </p>
 
 </div>
 </div>
@@ -2363,6 +2886,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>License is broken. </p>
 
 </div>
 </div>
@@ -2377,6 +2901,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>License expiration </p>
 
 </div>
 </div>
@@ -2391,6 +2916,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Cannot find a valid license </p>
 
 </div>
 </div>
@@ -2405,6 +2931,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Insufficient memory </p>
 
 </div>
 </div>
@@ -2419,6 +2946,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Indicates that the shape is more than 5 dimensional </p>
 
 </div>
 </div>
@@ -2433,6 +2961,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The specified element could not be found. </p>
 
 </div>
 </div>
@@ -2447,6 +2976,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Unknown error </p>
 
 </div>
 </div>
@@ -2461,6 +2991,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Unauthorized operations </p>
 
 </div>
 </div>
@@ -2475,6 +3006,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Success </p>
 
 </div>
 </div>
@@ -2489,6 +3021,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Failed to create thread. </p>
 
 </div>
 </div>
@@ -2503,6 +3036,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>uninstalled </p>
 
 </div>
 </div>
@@ -2517,6 +3051,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Shape not yet determined </p>
 
 </div>
 </div>
@@ -2531,6 +3066,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Unsupported Networks </p>
 
 </div>
 </div>

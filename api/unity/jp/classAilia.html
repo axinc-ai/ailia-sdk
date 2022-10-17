@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.12.0</span>
+   &#160;<span id="projectnumber">1.2.13.0</span>
    </div>
   </td>
  </tr>
@@ -228,7 +228,7 @@ $(function() {
 <tr class="memdesc:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を返します  <a href="#a7a2910bc515b24b13c33c1336d0c6a4a">[詳解]</a><br /></td></tr>
 <tr class="separator:a7a2910bc515b24b13c33c1336d0c6a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61abe889ca7db6e30298c30f15229e69"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a61abe889ca7db6e30298c30f15229e69">ailiaGetVersion</a> ()</td></tr>
-<tr class="memdesc:a61abe889ca7db6e30298c30f15229e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリバージョンを取得します  <a href="#a61abe889ca7db6e30298c30f15229e69">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a61abe889ca7db6e30298c30f15229e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリバージョンを取得します。  <a href="#a61abe889ca7db6e30298c30f15229e69">[詳解]</a><br /></td></tr>
 <tr class="separator:a61abe889ca7db6e30298c30f15229e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -305,8 +305,6 @@ $(function() {
 <tr class="separator:a0d1083559068c3d24daf1a43db73877c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121b1058a9d80241c7c101c69647128b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a121b1058a9d80241c7c101c69647128b">AILIA_ENVIRONMENT_BACKEND_NONE</a> = (0)</td></tr>
 <tr class="separator:a121b1058a9d80241c7c101c69647128b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ef16c11508adebba638a9c91791bcd9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a0ef16c11508adebba638a9c91791bcd9">AILIA_ENVIRONMENT_BACKEND_AMP</a> = (1)</td></tr>
-<tr class="separator:a0ef16c11508adebba638a9c91791bcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98502accb387605c190b66f3269af593"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a98502accb387605c190b66f3269af593">AILIA_ENVIRONMENT_BACKEND_CUDA</a> = (2)</td></tr>
 <tr class="separator:a98502accb387605c190b66f3269af593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e18c318b22103e7df985e44fe1cd222"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a2e18c318b22103e7df985e44fe1cd222">AILIA_ENVIRONMENT_BACKEND_MPS</a> = (3)</td></tr>
@@ -664,7 +662,17 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>Find and get the name of the internal data (Blob) at the time of inference by index. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">buffer</td><td>Output destination buffer for Blob name </td></tr>
+    <tr><td class="paramname">buffer_size</td><td>Size of buffer (including terminating null character) </td></tr>
+    <tr><td class="paramname">blob_idx</td><td>Index of blob to search </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code. </dd></dl>
 
 </div>
 </div>
@@ -1085,7 +1093,16 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p>取得したポインタから以下のように構造体に変換して下さい。 </p><div class="fragment"><div class="line"><a class="code" href="namespaceSystem.html">System</a>.IntPtr env_ptr = <a class="code" href="namespaceSystem.html">System</a>.IntPtr.Zero;</div><div class="line"><a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a8fc9b51845994408dd7210140355aa4b">ailiaGetEnvironment</a>(ref env_ptr,(uint)environment, <a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a7367a524b4a801ec6e8032fbe3a6004f">AILIA_ENVIRONMENT_VERSION</a>);</div><div class="line"><a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>  env = (<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>)Marshal.PtrToStructure(env_ptr, typeof(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>));</div></div><!-- fragment --> 
+<p>取得したポインタから以下のように構造体に変換して下さい。 </p><div class="fragment"><div class="line"><a class="code" href="namespaceSystem.html">System</a>.IntPtr env_ptr = <a class="code" href="namespaceSystem.html">System</a>.IntPtr.Zero;</div><div class="line"><a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a8fc9b51845994408dd7210140355aa4b">ailiaGetEnvironment</a>(ref env_ptr,(uint)environment, <a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a7367a524b4a801ec6e8032fbe3a6004f">AILIA_ENVIRONMENT_VERSION</a>);</div><div class="line"><a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>  env = (<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>)Marshal.PtrToStructure(env_ptr, typeof(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>));</div></div><!-- fragment --><p>Get a list of computation environments </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">env</td><td>Where environment information is stored (valid until AILIANetwork instance is destroyed) </td></tr>
+    <tr><td class="paramname">env_idx</td><td>Index of environment information (0~ <a class="el" href="classAilia.html#a9ac87726ddd28497c4e90c43546abf14" title="利用可能な計算環境(CPU, GPU)の数を取得します ">ailiaGetEnvironmentCount()</a> -1) </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_ENVIRONMENT_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> if successful, otherwise return error code.</dd></dl>
+<p>Convert the obtained pointer to a structure as follows. </p><div class="fragment"><div class="line"><a class="code" href="namespaceSystem.html">System</a>.IntPtr env_ptr = <a class="code" href="namespaceSystem.html">System</a>.IntPtr.Zero;</div><div class="line"><a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a8fc9b51845994408dd7210140355aa4b">ailiaGetEnvironment</a>(ref env_ptr,(uint)environment, <a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a7367a524b4a801ec6e8032fbe3a6004f">AILIA_ENVIRONMENT_VERSION</a>);</div><div class="line"><a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a> env = (<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>)Marshal.PtrToStructure(env_ptr, typeof(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia_1_1AILIAEnvironment.html">AILIAEnvironment</a>));</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a9ac87726ddd28497c4e90c43546abf14"></a>
@@ -1132,6 +1149,12 @@ $(function() {
 </div><div class="memdoc">
 
 <p>エラーの詳細を返します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>戻り値</dt><dd>エラー詳細</dd></dl>
 <p>返値は解放する必要はありません。 文字列の有効期間は次にailiaのAPIを呼ぶまでです。 取得したポイントから以下のように文字列に変換して下さい。 </p><div class="fragment"><div class="line">Marshal.PtrToStringAnsi(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#a7a2910bc515b24b13c33c1336d0c6a4a">ailiaGetErrorDetail</a>(net))</div></div><!-- fragment --> 
 </div>
@@ -1531,6 +1554,12 @@ $(function() {
 </div><div class="memdoc">
 
 <p>ステータスコードを説明する文字列を返します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>ステータスコード </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>戻り値</dt><dd>ステータスコードを説明する文字列</dd></dl>
 <p>返値は解放する必要はありません。 文字列の有効期間はailiaのライブラリをアンロードするまでです。 取得したポイントから以下のように文字列に変換して下さい。 </p><div class="fragment"><div class="line">Marshal.PtrToStringAnsi(<a class="code" href="classAilia.html">Ailia</a>.<a class="code" href="classAilia.html#ad4b1c521516bbcaac90e9e6022688e29">ailiaGetStatusString</a>(status))</div></div><!-- fragment --> 
 </div>
@@ -1588,7 +1617,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>ライブラリバージョンを取得します </p>
+<p>ライブラリバージョンを取得します。 </p>
 <dl class="section return"><dt>戻り値</dt><dd>バージョン番号(Marshal.PtrToStringAnsiでstringに変換可能)</dd></dl>
 <p>返値は解放する必要はありません。 </p>
 
@@ -1677,7 +1706,7 @@ $(function() {
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
-    <tr><td class="paramname">path</td><td>ailiaファイルのパス名(MBSC or UTF16) </td></tr>
+    <tr><td class="paramname">path</td><td>　prototxtファイルのパス名(MBSC or UTF16) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1820,7 +1849,7 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p>ファイルから読み込みネットワークオブジェクトに重みを読み込みます </p>
+<p>ファイルから読み込みネットワークオブジェクトに重みを読み込みます。 </p>
 
 </div>
 </div>
@@ -2360,20 +2389,6 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="a0ef16c11508adebba638a9c91791bcd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ef16c11508adebba638a9c91791bcd9">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_BACKEND_AMP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int Ailia.AILIA_ENVIRONMENT_BACKEND_AMP = (1)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a98502accb387605c190b66f3269af593"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98502accb387605c190b66f3269af593">&#9670;&nbsp;</a></span>AILIA_ENVIRONMENT_BACKEND_CUDA</h2>
 
@@ -2583,7 +2598,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>中間バッファーの開放は行わない </p>
+<p>中間バッファーの開放は行わない。 </p>
 
 </div>
 </div>
@@ -2612,7 +2627,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>重みなどの定数となる中間バッファーを開放する </p>
+<p>重みなどの定数となる中間バッファーを開放する。 </p>
 
 </div>
 </div>
@@ -2627,7 +2642,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>入力指定のinitializerを変更不可にし、重みなどの定数となる中間バッファーを開放する </p>
+<p>入力指定のinitializerを変更不可にし、重みなどの定数となる中間バッファーを開放する。 </p>
 
 </div>
 </div>

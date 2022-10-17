@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.12.0</span>
+   &#160;<span id="projectnumber">1.2.13.0</span>
    </div>
   </td>
  </tr>
@@ -80,14 +80,19 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af7c3ef57a4730b2e667bb703b223a921"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaClassifier.html#af7c3ef57a4730b2e667bb703b223a921">ailiaCreateClassifier</a> (ref IntPtr classifier, IntPtr net, UInt32 format, UInt32 channel, UInt32 range)</td></tr>
+<tr class="memdesc:af7c3ef57a4730b2e667bb703b223a921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an identification object.  <a href="#af7c3ef57a4730b2e667bb703b223a921">More...</a><br /></td></tr>
 <tr class="separator:af7c3ef57a4730b2e667bb703b223a921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6c9bb13808caa6ebc6454f115f51607"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaClassifier.html#aa6c9bb13808caa6ebc6454f115f51607">ailiaDestroyClassifier</a> (IntPtr classifier)</td></tr>
+<tr class="memdesc:aa6c9bb13808caa6ebc6454f115f51607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the identification object.  <a href="#aa6c9bb13808caa6ebc6454f115f51607">More...</a><br /></td></tr>
 <tr class="separator:aa6c9bb13808caa6ebc6454f115f51607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad43b52db5b012f3af9b002564a8cc4b9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaClassifier.html#ad43b52db5b012f3af9b002564a8cc4b9">ailiaClassifierCompute</a> (IntPtr classifier, IntPtr src, UInt32 src_stride, UInt32 src_width, UInt32 src_height, UInt32 src_format, UInt32 max_class_count)</td></tr>
+<tr class="memdesc:ad43b52db5b012f3af9b002564a8cc4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object identification.  <a href="#ad43b52db5b012f3af9b002564a8cc4b9">More...</a><br /></td></tr>
 <tr class="separator:ad43b52db5b012f3af9b002564a8cc4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3cf1cc45d798993cf84502263b9eb4b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaClassifier.html#ac3cf1cc45d798993cf84502263b9eb4b">ailiaClassifierGetClassCount</a> (IntPtr classifier, ref UInt32 cls_count)</td></tr>
+<tr class="memdesc:ac3cf1cc45d798993cf84502263b9eb4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of recognition results.  <a href="#ac3cf1cc45d798993cf84502263b9eb4b">More...</a><br /></td></tr>
 <tr class="separator:ac3cf1cc45d798993cf84502263b9eb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5ec347c1a9ad140db794bc440755fb7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaClassifier.html#ae5ec347c1a9ad140db794bc440755fb7">ailiaClassifierGetClass</a> (IntPtr classifier, [In, Out] <a class="el" href="classAiliaClassifier_1_1AILIAClassifierClass.html">AILIAClassifierClass</a> obj, UInt32 cls_idx, UInt32 version)</td></tr>
+<tr class="memdesc:ae5ec347c1a9ad140db794bc440755fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve recognition results.  <a href="#ae5ec347c1a9ad140db794bc440755fb7">More...</a><br /></td></tr>
 <tr class="separator:ae5ec347c1a9ad140db794bc440755fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -152,6 +157,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Object identification. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifier</td><td>Distinguished object pointer </td></tr>
+    <tr><td class="paramname">src</td><td>video data </td></tr>
+    <tr><td class="paramname">src_stride</td><td>Bytes per line </td></tr>
+    <tr><td class="paramname">src_width</td><td>Image width </td></tr>
+    <tr><td class="paramname">src_height</td><td>Image height </td></tr>
+    <tr><td class="paramname">src_format</td><td>Image format(AILIA_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">max_class_count</td><td>Maximum number of recognition results </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, returns AILIA_STATUS_SUCCESS, otherwise returns an error code. </dd></dl>
+
 </div>
 </div>
 <a id="ae5ec347c1a9ad140db794bc440755fb7"></a>
@@ -192,6 +212,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieve recognition results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifier</td><td>Distinguished object pointer </td></tr>
+    <tr><td class="paramname">cls</td><td>Class Information </td></tr>
+    <tr><td class="paramname">cls_idx</td><td>class index </td></tr>
+    <tr><td class="paramname">version</td><td>ailia_classifier_class_version </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, returns AILIA_STATUS_SUCCESS, otherwise returns an error code.</dd></dl>
+<p>If ailiaPredict() has never been executed, then AILIA_STATUS_INVALID_STATE is returned. Recognition results are sorted in order of probability. </p>
+
 </div>
 </div>
 <a id="ac3cf1cc45d798993cf84502263b9eb4b"></a>
@@ -219,6 +252,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the number of recognition results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifier</td><td>Distinguished object pointer </td></tr>
+    <tr><td class="paramname">cls_count</td><td>Number of classes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, returns AILIA_STATUS_SUCCESS, otherwise returns an error code. </dd></dl>
 
 </div>
 </div>
@@ -266,6 +309,20 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create an identification object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifier</td><td>Pointer to identification object pointer </td></tr>
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">format</td><td>Image format of the network (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">channel</td><td>Image channel of the network (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">range</td><td>Image range of the network (AILIA_NETWORK_IMAGE_RANGE_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns AILIA_STATUS_SUCCESS if successful, otherwise returns error code.</dd></dl>
+<p>Create an identification object </p>
+
 </div>
 </div>
 <a id="aa6c9bb13808caa6ebc6454f115f51607"></a>
@@ -283,6 +340,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destroy the identification object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifier</td><td>Distinguished object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

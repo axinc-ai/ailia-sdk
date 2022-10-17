@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.12.0</span>
+   &#160;<span id="projectnumber">1.2.13.0</span>
    </div>
   </td>
  </tr>
@@ -74,6 +74,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aedf6f0b86bde77011430171d260e48cb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFormat.html#aedf6f0b86bde77011430171d260e48cb">ailiaFormatConvert</a> (IntPtr dst, UInt32 dst_width, UInt32 dst_height, UInt32 dst_format, UInt32 dst_channel, UInt32 dst_range, IntPtr src, Int32 src_stride, UInt32 src_width, UInt32 src_height, UInt32 src_format)</td></tr>
+<tr class="memdesc:aedf6f0b86bde77011430171d260e48cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert image format.  <a href="#aedf6f0b86bde77011430171d260e48cb">More...</a><br /></td></tr>
 <tr class="separator:aedf6f0b86bde77011430171d260e48cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -190,6 +191,26 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Convert image format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>Where to store the converted image (type-numeric-stride * height * must be larger than the number of channels (see explanation)) </td></tr>
+    <tr><td class="paramname">dst_width</td><td>Width of the converted image </td></tr>
+    <tr><td class="paramname">dst_height</td><td>Height of converted image </td></tr>
+    <tr><td class="paramname">dst_forma</td><td>Format of converted image (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">dst_channel</td><td>Channel order of the converted image (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">dst_range</td><td>Range of the converted image (AILIA_NETWORK_IMAGE_RANGE_*) </td></tr>
+    <tr><td class="paramname">src</td><td>Destination of converted source image (32bpp) </td></tr>
+    <tr><td class="paramname">src_stride</td><td>Number of line bytes in the source image </td></tr>
+    <tr><td class="paramname">src_width</td><td>Width of the source image </td></tr>
+    <tr><td class="paramname">src_height</td><td>Height of the source image </td></tr>
+    <tr><td class="paramname">src_format</td><td>Format of the source image (AILIA_IMAGE_FORMAT_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns AILIA_STATUS_SUCCESS if successful, otherwise returns an error code.</dd></dl>
+<p>Change the image format, if dst_format is <a class="el" href="classAiliaFormat.html#a061daf4a7786a194f7f52b07654df153">AILIA_NETWORK_IMAGE_FORMAT_BGR</a> or AILIA_NETWORK_IMAGE_FORMAT_RGB if dst_format is <a class="el" href="classAiliaFormat.html#a061daf4a7786a194f7f52b07654df153">AILIA_NETWORK_IMAGE_FORMAT_BGR</a> or AILIA_NETWORK_IMAGE_FORMAT_RGB, the number of channels is 3, if dst_format is <a class="el" href="classAiliaFormat.html#ae0d9ac3cdc09d6ec2c03114a67b95e04">AILIA_NETWORK_IMAGE_FORMAT_GRAY</a> the number of channels is 1. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -204,6 +225,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>BGRA order </p>
 
 </div>
 </div>
@@ -218,6 +240,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>BGRA order (Bottom to Top) </p>
 
 </div>
 </div>
@@ -232,6 +255,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>RGBA order </p>
 
 </div>
 </div>
@@ -246,6 +270,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>RGBA order (Bottom to Top) </p>
 
 </div>
 </div>
@@ -260,6 +285,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>DYXC order </p>
 
 </div>
 </div>
@@ -274,6 +300,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>DYXC order </p>
 
 </div>
 </div>
@@ -288,6 +315,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>BGR order </p>
 
 </div>
 </div>
@@ -302,6 +330,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Gray Scale (1ch) </p>
 
 </div>
 </div>
@@ -316,6 +345,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Histogram Flattening Gray Scale (1ch) </p>
 
 </div>
 </div>
@@ -330,6 +360,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>RGB oreder </p>
 
 </div>
 </div>
@@ -344,6 +375,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ImageNet mean&amp;std normalizatio </p>
 
 </div>
 </div>
@@ -358,6 +390,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>-1.0 - 1.0 </p>
 
 </div>
 </div>
@@ -372,6 +405,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>-128 - 127 </p>
 
 </div>
 </div>
@@ -386,6 +420,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0.0 - 1.0 </p>
 
 </div>
 </div>
@@ -400,6 +435,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0 - 255 </p>
 
 </div>
 </div>

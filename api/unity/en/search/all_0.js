@@ -11,7 +11,6 @@ var searchData=
   ['ailia_5fdetector_5falgorithm_5fyolox',['AILIA_DETECTOR_ALGORITHM_YOLOX',['../classAiliaDetector.html#a40362c535310b0c2e64b5f8afceb4049',1,'AiliaDetector']]],
   ['ailia_5fdetector_5fflag_5fnormal',['AILIA_DETECTOR_FLAG_NORMAL',['../classAiliaDetector.html#ac12d7f18fae3544ceaa82ad8a31029c9',1,'AiliaDetector']]],
   ['ailia_5fdetector_5fobject_5fversion',['AILIA_DETECTOR_OBJECT_VERSION',['../classAiliaDetector.html#a4786878faca1f58673e2d6a781d05212',1,'AiliaDetector']]],
-  ['ailia_5fenvironment_5fbackend_5famp',['AILIA_ENVIRONMENT_BACKEND_AMP',['../classAilia.html#a0ef16c11508adebba638a9c91791bcd9',1,'Ailia']]],
   ['ailia_5fenvironment_5fbackend_5fcuda',['AILIA_ENVIRONMENT_BACKEND_CUDA',['../classAilia.html#a98502accb387605c190b66f3269af593',1,'Ailia']]],
   ['ailia_5fenvironment_5fbackend_5fmps',['AILIA_ENVIRONMENT_BACKEND_MPS',['../classAilia.html#a2e18c318b22103e7df985e44fe1cd222',1,'Ailia']]],
   ['ailia_5fenvironment_5fbackend_5fnone',['AILIA_ENVIRONMENT_BACKEND_NONE',['../classAilia.html#a121b1058a9d80241c7c101c69647128b',1,'Ailia']]],

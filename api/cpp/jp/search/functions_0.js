@@ -48,6 +48,7 @@ var searchData=
   ['ailiaformatconvert',['ailiaFormatConvert',['../ailia__format_8h.html#a90f2c5d523a99bf351858b0a88247fe5',1,'ailia_format.h']]],
   ['ailiagetblobcount',['ailiaGetBlobCount',['../ailia_8h.html#ae0cf65cdeae91ccf2449040a22025dea',1,'ailia.h']]],
   ['ailiagetblobdata',['ailiaGetBlobData',['../ailia_8h.html#a357802ffe571e8aeffb78adb6d71a1cb',1,'ailia.h']]],
+  ['ailiagetblobdatatype',['ailiaGetBlobDataType',['../ailia_8h.html#a631e6353725592e491d9a22b2ca5e1d8',1,'ailia.h']]],
   ['ailiagetblobdim',['ailiaGetBlobDim',['../ailia_8h.html#a5b0e48af3db818def7bc48bb03e427b6',1,'ailia.h']]],
   ['ailiagetblobindexbyinputindex',['ailiaGetBlobIndexByInputIndex',['../ailia_8h.html#adca2642653249c2172abd4afd668080f',1,'ailia.h']]],
   ['ailiagetblobindexbyoutputindex',['ailiaGetBlobIndexByOutputIndex',['../ailia_8h.html#aee14bb4905c03773fa6cfc5e12c6d3e2',1,'ailia.h']]],
