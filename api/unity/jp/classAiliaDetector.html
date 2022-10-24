@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.12.0</span>
+   &#160;<span id="projectnumber">1.2.13.0</span>
    </div>
   </td>
  </tr>
@@ -197,7 +197,21 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>Create a detector object. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detector</td><td>Detector object pointer </td></tr>
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">format</td><td>Image format of the network (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">channel</td><td>Image channel of the network (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">range</td><td>Image range of the network (AILIA_NETWORK_IMAGE_RANGE_*) </td></tr>
+    <tr><td class="paramname">algorithm</td><td>Detection algorithm (AILIA_DETECTOR_ALGORITHM_*) </td></tr>
+    <tr><td class="paramname">caregory_count</td><td>Number of detection categories (20 for VOC, 80 for COCO, etc.) </td></tr>
+    <tr><td class="paramname">flags</td><td>Additional option flags (AILIA_DETECTOR_FLAG_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return AILIA_STATUS_SUCCESS if successful, otherwise return error code. </dd></dl>
 
 </div>
 </div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.12.0</span>
+   &#160;<span id="projectnumber">1.2.13.0</span>
    </div>
   </td>
  </tr>
@@ -74,12 +74,16 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7bee3d4b14e1ef04e849c46c6a4953c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFeatureExtractor.html#ab7bee3d4b14e1ef04e849c46c6a4953c">ailiaCreateFeatureExtractor</a> (ref IntPtr fextractor, IntPtr net, UInt32 format, UInt32 channel, UInt32 range, string layer_name)</td></tr>
+<tr class="memdesc:ab7bee3d4b14e1ef04e849c46c6a4953c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a feature extraction object.  <a href="#ab7bee3d4b14e1ef04e849c46c6a4953c">More...</a><br /></td></tr>
 <tr class="separator:ab7bee3d4b14e1ef04e849c46c6a4953c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05d79ab5dd65d1d76ab12691e5c09683"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFeatureExtractor.html#a05d79ab5dd65d1d76ab12691e5c09683">ailiaDestroyFeatureExtractor</a> (IntPtr fextractor)</td></tr>
+<tr class="memdesc:a05d79ab5dd65d1d76ab12691e5c09683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy feature extractor object.  <a href="#a05d79ab5dd65d1d76ab12691e5c09683">More...</a><br /></td></tr>
 <tr class="separator:a05d79ab5dd65d1d76ab12691e5c09683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab0927b65c17bb86376ee348f6ab1f19"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFeatureExtractor.html#aab0927b65c17bb86376ee348f6ab1f19">ailiaFeatureExtractorCompute</a> (IntPtr fextractor, IntPtr dst, UInt32 dst_size, IntPtr src, UInt32 src_stride, UInt32 src_width, UInt32 src_height, UInt32 src_format)</td></tr>
+<tr class="memdesc:aab0927b65c17bb86376ee348f6ab1f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract features.  <a href="#aab0927b65c17bb86376ee348f6ab1f19">More...</a><br /></td></tr>
 <tr class="separator:aab0927b65c17bb86376ee348f6ab1f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9525f66cfde7d227989912d23c0932ca"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaFeatureExtractor.html#a9525f66cfde7d227989912d23c0932ca">ailiaFeatureExtractorMatch</a> (IntPtr fextractor, ref float distance, UInt32 distace_type, IntPtr feature1, UInt32 feature1_size, IntPtr feature2, UInt32 feature2_size)</td></tr>
+<tr class="memdesc:a9525f66cfde7d227989912d23c0932ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the distance between features.  <a href="#a9525f66cfde7d227989912d23c0932ca">More...</a><br /></td></tr>
 <tr class="separator:a9525f66cfde7d227989912d23c0932ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -138,6 +142,20 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a feature extraction object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>Feature extraction object pointer </td></tr>
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">format</td><td>Image format of the network (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">channel</td><td>Image channel of the network (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">range</td><td>Image range of the network (AILIA_NETWORK_IMAGE_RANGE_*) </td></tr>
+    <tr><td class="paramname">layer_name</td><td>Name name of layer corresponding to feature (fc1 for VGG16, null for final layer) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns AILIA_STATUS_SUCCESS if successful, otherwise returns error code. </dd></dl>
+
 </div>
 </div>
 <a id="a05d79ab5dd65d1d76ab12691e5c09683"></a>
@@ -155,6 +173,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destroy feature extractor object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>Ffeature extractor object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -220,6 +246,22 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Extract features. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>Feature extraction object pointer </td></tr>
+    <tr><td class="paramname">dst</td><td>Pointer to feature storage (type numeric) </td></tr>
+    <tr><td class="paramname">dst_size</td><td>Size of dst (byte) </td></tr>
+    <tr><td class="paramname">src</td><td>image Data (32bpp) </td></tr>
+    <tr><td class="paramname">src_stride</td><td>Number of bytes per line </td></tr>
+    <tr><td class="paramname">src_width</td><td>Image width </td></tr>
+    <tr><td class="paramname">src_height</td><td>Image height </td></tr>
+    <tr><td class="paramname">src_format</td><td>Image format (AILIA_IMAGE_FORMAT_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns AILIA_STATUS_SUCCESS if successful, otherwise returns an error code. </dd></dl>
+
 </div>
 </div>
 <a id="a9525f66cfde7d227989912d23c0932ca"></a>
@@ -278,6 +320,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Calculate the distance between features. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>Feature extraction object pointer </td></tr>
+    <tr><td class="paramname">distance</td><td>Distance between features </td></tr>
+    <tr><td class="paramname">distance_type</td><td>Type of distance between features </td></tr>
+    <tr><td class="paramname">feature1</td><td>Pointer to feature storage (type numeric) </td></tr>
+    <tr><td class="paramname">feature1_size</td><td>Size of dst (in bytes) </td></tr>
+    <tr><td class="paramname">feature2</td><td>Pointer to store features (type numeric) </td></tr>
+    <tr><td class="paramname">feature2_size</td><td>Size of dst (byte) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return AILIA_STATUS_SUCCESS, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -292,6 +349,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>L2-norm </p>
 
 </div>
 </div>

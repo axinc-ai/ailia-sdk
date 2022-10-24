@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getblobdata',['GetBlobData',['../classAiliaModel.html#a1115ef6b9e9ee4732b7510d25774e88f',1,'AiliaModel']]],
+  ['getblobdata',['GetBlobData',['../classAiliaModel.html#a17b9ccc01b4fcc1e51182764467d46e7',1,'AiliaModel']]],
   ['getblobshape',['GetBlobShape',['../classAiliaModel.html#a8a39cca2a3dbe85cf25d29e2f6207625',1,'AiliaModel.GetBlobShape(string layer_name)'],['../classAiliaModel.html#a0853c5882b06cbf76a9b78dd23550ce4',1,'AiliaModel.GetBlobShape(int idx)']]],
   ['getenvironment',['GetEnvironment',['../classAiliaModel.html#a4887ae48bd7e69a9dde2a5af62ff1e67',1,'AiliaModel']]],
   ['getenvironmentcount',['GetEnvironmentCount',['../classAiliaModel.html#acbff3496cddc748bfe1801016845d75f',1,'AiliaModel']]],

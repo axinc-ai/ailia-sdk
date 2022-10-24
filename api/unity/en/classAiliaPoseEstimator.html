@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.12.0</span>
+   &#160;<span id="projectnumber">1.2.13.0</span>
    </div>
   </td>
  </tr>
@@ -88,22 +88,31 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af93997d57fe55441f2c7a95af8612cb7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#af93997d57fe55441f2c7a95af8612cb7">ailiaCreatePoseEstimator</a> (ref IntPtr pose_estimator, IntPtr net, UInt32 algorithm)</td></tr>
+<tr class="memdesc:af93997d57fe55441f2c7a95af8612cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a detection object.  <a href="#af93997d57fe55441f2c7a95af8612cb7">More...</a><br /></td></tr>
 <tr class="separator:af93997d57fe55441f2c7a95af8612cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8f535d2a7507654aae75509598c7b2f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#ac8f535d2a7507654aae75509598c7b2f">ailiaDestroyPoseEstimator</a> (IntPtr pose_estimator)</td></tr>
+<tr class="memdesc:ac8f535d2a7507654aae75509598c7b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the detection object.  <a href="#ac8f535d2a7507654aae75509598c7b2f">More...</a><br /></td></tr>
 <tr class="separator:ac8f535d2a7507654aae75509598c7b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eee78bcb2c88ccdff5b7a01da84f4b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#a4eee78bcb2c88ccdff5b7a01da84f4b5">ailiaPoseEstimatorSetThreshold</a> (IntPtr pose_estimator, float threshold)</td></tr>
+<tr class="memdesc:a4eee78bcb2c88ccdff5b7a01da84f4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the detection threshold.  <a href="#a4eee78bcb2c88ccdff5b7a01da84f4b5">More...</a><br /></td></tr>
 <tr class="separator:a4eee78bcb2c88ccdff5b7a01da84f4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88a2c8420334ec7ff81b9ecb5c1a42c6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#a88a2c8420334ec7ff81b9ecb5c1a42c6">ailiaPoseEstimatorCompute</a> (IntPtr pose_estimator, IntPtr src, UInt32 src_stride, UInt32 src_width, UInt32 src_height, UInt32 src_format)</td></tr>
+<tr class="memdesc:a88a2c8420334ec7ff81b9ecb5c1a42c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skeletal and facial feature point detection.  <a href="#a88a2c8420334ec7ff81b9ecb5c1a42c6">More...</a><br /></td></tr>
 <tr class="separator:a88a2c8420334ec7ff81b9ecb5c1a42c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3b2b8403f73309b25b3164ecd6b289b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#ac3b2b8403f73309b25b3164ecd6b289b">ailiaPoseEstimatorGetObjectCount</a> (IntPtr pose_estimator, ref UInt32 obj_count)</td></tr>
+<tr class="memdesc:ac3b2b8403f73309b25b3164ecd6b289b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of recognition results.  <a href="#ac3b2b8403f73309b25b3164ecd6b289b">More...</a><br /></td></tr>
 <tr class="separator:ac3b2b8403f73309b25b3164ecd6b289b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0900f058f9937bd98efd4139ed56dff2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#a0900f058f9937bd98efd4139ed56dff2">ailiaPoseEstimatorGetObjectPose</a> (IntPtr pose_estimator, [In, Out] <a class="el" href="classAiliaPoseEstimator_1_1AILIAPoseEstimatorObjectPose.html">AILIAPoseEstimatorObjectPose</a> obj, UInt32 obj_idx, UInt32 version)</td></tr>
+<tr class="memdesc:a0900f058f9937bd98efd4139ed56dff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the result of skeletal detection recognition.  <a href="#a0900f058f9937bd98efd4139ed56dff2">More...</a><br /></td></tr>
 <tr class="separator:a0900f058f9937bd98efd4139ed56dff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd007a2f6dbaa3e47f064d81d8cd8c6e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#afd007a2f6dbaa3e47f064d81d8cd8c6e">ailiaPoseEstimatorGetObjectFace</a> (IntPtr pose_estimator, [In, Out] <a class="el" href="classAiliaPoseEstimator_1_1AILIAPoseEstimatorObjectFace.html">AILIAPoseEstimatorObjectFace</a> obj, UInt32 obj_idx, UInt32 version)</td></tr>
+<tr class="memdesc:afd007a2f6dbaa3e47f064d81d8cd8c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the result of face feature point detection.  <a href="#afd007a2f6dbaa3e47f064d81d8cd8c6e">More...</a><br /></td></tr>
 <tr class="separator:afd007a2f6dbaa3e47f064d81d8cd8c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeba7563fe1ad7389cdbd7d7e4dac1b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#adeba7563fe1ad7389cdbd7d7e4dac1b5">ailiaPoseEstimatorGetObjectUpPose</a> (IntPtr pose_estimator, [In, Out] <a class="el" href="classAiliaPoseEstimator_1_1AILIAPoseEstimatorObjectUpPose.html">AILIAPoseEstimatorObjectUpPose</a> obj, UInt32 obj_idx, UInt32 version)</td></tr>
+<tr class="memdesc:adeba7563fe1ad7389cdbd7d7e4dac1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpPose Get the recognition result.  <a href="#adeba7563fe1ad7389cdbd7d7e4dac1b5">More...</a><br /></td></tr>
 <tr class="separator:adeba7563fe1ad7389cdbd7d7e4dac1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37bc60fba2af77c0bd77dda9b4b5d59f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaPoseEstimator.html#a37bc60fba2af77c0bd77dda9b4b5d59f">ailiaPoseEstimatorGetObjectHand</a> (IntPtr pose_estimator, [In, Out] <a class="el" href="classAiliaPoseEstimator_1_1AILIAPoseEstimatorObjectHand.html">AILIAPoseEstimatorObjectHand</a> obj, UInt32 obj_idx, UInt32 version)</td></tr>
+<tr class="memdesc:a37bc60fba2af77c0bd77dda9b4b5d59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hand Get the recognition result.  <a href="#a37bc60fba2af77c0bd77dda9b4b5d59f">More...</a><br /></td></tr>
 <tr class="separator:a37bc60fba2af77c0bd77dda9b4b5d59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -242,6 +251,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a detection object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">net</td><td>Network object pointer </td></tr>
+    <tr><td class="paramname">algorithm</td><td>Detection algorithm (AILIA_POSE_ESTIMATOR_ALGORITHM_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns AILIA_STATUS_SUCCESS if successful, otherwise returns an error code.</dd></dl>
+<p>Create a detection object from AILIANetwork with caffemodel and prototxt loaded. </p>
+
 </div>
 </div>
 <a id="ac8f535d2a7507654aae75509598c7b2f"></a>
@@ -259,6 +280,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destroy the detection object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -312,6 +341,20 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Skeletal and facial feature point detection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">src</td><td>Image data (32bpp) </td></tr>
+    <tr><td class="paramname">src_stride</td><td>Bytes per line </td></tr>
+    <tr><td class="paramname">src_width</td><td>Image width </td></tr>
+    <tr><td class="paramname">src_height</td><td>Image height </td></tr>
+    <tr><td class="paramname">src_format</td><td>Image format (AILIA_IMAGE_FORMAT_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns AILIA_STATUS_SUCCESS if successful, otherwise returns an error code. </dd></dl>
+
 </div>
 </div>
 <a id="ac3b2b8403f73309b25b3164ecd6b289b"></a>
@@ -339,6 +382,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the number of recognition results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">obj_count</td><td>Number of objects 1 or 0 for face feature points. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return AILIA_STATUS_SUCCESS, otherwise return error code. </dd></dl>
 
 </div>
 </div>
@@ -380,6 +433,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the result of face feature point detection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">obj</td><td>Object information </td></tr>
+    <tr><td class="paramname">obj_idx</td><td>Object index Must be 0. </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_POSE_ESTIMATOR_OBJECT_FACE_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return AILIA_STATUS_SUCCESS, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="a37bc60fba2af77c0bd77dda9b4b5d59f"></a>
@@ -419,6 +484,18 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Hand Get the recognition result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">obj</td><td>Object information </td></tr>
+    <tr><td class="paramname">obj_idx</td><td>Object index Must be 0. </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_POSE_ESTIMATOR_OBJECT_HAND_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return AILIA_STATUS_SUCCESS, otherwise return error code. </dd></dl>
 
 </div>
 </div>
@@ -460,6 +537,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the result of skeletal detection recognition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">obj</td><td>Object information </td></tr>
+    <tr><td class="paramname">obj_idx</td><td>Object index </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_POSE_ESTIMATOR_OBJECT_POSE_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return AILIA_STATUS_SUCCESS, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="adeba7563fe1ad7389cdbd7d7e4dac1b5"></a>
@@ -500,6 +589,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>UpPose Get the recognition result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">obj</td><td>Object information </td></tr>
+    <tr><td class="paramname">obj_idx</td><td>Object index </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_POSE_ESTIMATOR_OBJECT_UPPOSE_VERSION </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return AILIA_STATUS_SUCCESS, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <a id="a4eee78bcb2c88ccdff5b7a01da84f4b5"></a>
@@ -528,6 +629,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the detection threshold. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose_estimator</td><td>Detection object pointer </td></tr>
+    <tr><td class="paramname">threshold</td><td>Detection threshold value between 0.0 and 1.0, the smaller the value, the easier to detect. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If successful, return AILIA_STATUS_SUCCESS, otherwise return error code. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -542,6 +653,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Facial Feature Point Detection </p>
 
 </div>
 </div>
@@ -556,6 +668,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Hand posture detection </p>
 
 </div>
 </div>
@@ -570,6 +683,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posture detection </p>
 
 </div>
 </div>
@@ -584,6 +698,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Upper body posture detection </p>
 
 </div>
 </div>
@@ -598,6 +713,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Upper body posture detection </p>
 
 </div>
 </div>
@@ -612,6 +728,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posture detection </p>
 
 </div>
 </div>
@@ -626,6 +743,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posture detection </p>
 
 </div>
 </div>
@@ -640,6 +758,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Posture detection </p>
 
 </div>
 </div>
@@ -654,6 +773,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Quantity </p>
 
 </div>
 </div>
@@ -668,6 +788,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Quantity </p>
 
 </div>
 </div>
@@ -682,6 +803,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Structure-format version </p>
 
 </div>
 </div>
@@ -696,6 +818,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Structure-format version </p>
 
 </div>
 </div>
@@ -710,6 +833,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>structure format version </p>
 
 </div>
 </div>
@@ -724,6 +848,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Structure-format version </p>
 
 </div>
 </div>
@@ -780,6 +905,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Quantity </p>
 
 </div>
 </div>
@@ -1032,6 +1158,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Quantity </p>
 
 </div>
 </div>
