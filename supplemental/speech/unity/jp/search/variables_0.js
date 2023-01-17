@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['ailia_5fspeech_5fapi_5fcallback_5fversion_0',['AILIA_SPEECH_API_CALLBACK_VERSION',['../classAiliaSpeech.html#affd7d02d39e79f4f1d9fc8490cca2ab5',1,'AiliaSpeech']]],
+  ['ailia_5fspeech_5fmodel_5ftype_5fwhisper_5fmultilingual_5fbase_1',['AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_BASE',['../classAiliaSpeech.html#a9c40f0b468ef746184e94536741a1e5b',1,'AiliaSpeech']]],
+  ['ailia_5fspeech_5fmodel_5ftype_5fwhisper_5fmultilingual_5fmedium_2',['AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_MEDIUM',['../classAiliaSpeech.html#a7a00e6714e079dfb04903d581f7e37ed',1,'AiliaSpeech']]],
+  ['ailia_5fspeech_5fmodel_5ftype_5fwhisper_5fmultilingual_5fsmall_3',['AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL',['../classAiliaSpeech.html#a9d3d0348e642a9d94c469c50daa055b0',1,'AiliaSpeech']]],
+  ['ailia_5fspeech_5fmodel_5ftype_5fwhisper_5fmultilingual_5ftiny_4',['AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY',['../classAiliaSpeech.html#af8fe016099f774aadcf19aa0218b19a7',1,'AiliaSpeech']]],
+  ['ailia_5fspeech_5ftext_5fversion_5',['AILIA_SPEECH_TEXT_VERSION',['../classAiliaSpeech.html#ab13a389ff1107760eda89a5d761a5821',1,'AiliaSpeech']]],
+  ['ailiaaudiogetframelen_6',['ailiaAudioGetFrameLen',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#ade05719aee36d02e15fe5cea994223b5',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiaaudiogetmelspectrogram_7',['ailiaAudioGetMelSpectrogram',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a6edce0dd03543323c49263464394ace3',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiaaudiogetresamplelen_8',['ailiaAudioGetResampleLen',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#abe7fba90d9bdae398badc4e73eca8f97',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiaaudioresample_9',['ailiaAudioResample',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a75704d3619746602ec7009a91232b251',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiacreate_10',['ailiaCreate',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a66dea96c7d74549b64233da81244c2ef',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiadestroy_11',['ailiaDestroy',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a3f9a6b1e308637ca9ea56851a3b421bc',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiagetblobdata_12',['ailiaGetBlobData',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#ab0d75723e1047aee4fb7b1dd05ab5449',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiagetblobindexbyinputindex_13',['ailiaGetBlobIndexByInputIndex',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#affdba27d025ab3408f4fe8f94c156900',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiagetblobindexbyoutputindex_14',['ailiaGetBlobIndexByOutputIndex',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a31cca374748a91b0c98c7d8d6f4bf002',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiagetblobshape_15',['ailiaGetBlobShape',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#acfa7d5a2d819b01e6ed064134c6c569a',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiageterrordetail_16',['ailiaGetErrorDetail',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a495da101e91548d2c92a6adf1b4bffdc',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiaopenweightfilea_17',['ailiaOpenWeightFileA',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a3ccc7a3078e3522afc8e1fdb2e858640',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiaopenweightfilew_18',['ailiaOpenWeightFileW',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a599815c5db384e2e2c100a3bb86a5c4d',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiasetinputblobdata_19',['ailiaSetInputBlobData',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a91979fbc32c196503b497dcff62cbad1',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiasetinputblobshape_20',['ailiaSetInputBlobShape',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#ac6e7d8afd8b4766db95026644c578810',1,'AiliaSpeech::AILIASpeechApiCallback']]],
+  ['ailiaupdate_21',['ailiaUpdate',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a10da6e886e39dc518336f4c56c321191',1,'AiliaSpeech::AILIASpeechApiCallback']]]
+];

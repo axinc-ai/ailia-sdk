@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fget_5fframe_5flen_0',['AILIA_SPEECH_USER_API_AILIA_AUDIO_GET_FRAME_LEN',['../ailia__speech_8h.html#a47276ca3347014805eb85df692d53e72',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fget_5fmel_5fspectrogram_1',['AILIA_SPEECH_USER_API_AILIA_AUDIO_GET_MEL_SPECTROGRAM',['../ailia__speech_8h.html#a5a4dd5c887e486e5cca3513a8a99b00e',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fget_5fresample_5flen_2',['AILIA_SPEECH_USER_API_AILIA_AUDIO_GET_RESAMPLE_LEN',['../ailia__speech_8h.html#a5a478f4241d14180e633fabd782c2bbb',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fresample_3',['AILIA_SPEECH_USER_API_AILIA_AUDIO_RESAMPLE',['../ailia__speech_8h.html#aee874f973a9470132cb1590366203cac',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fcreate_4',['AILIA_SPEECH_USER_API_AILIA_CREATE',['../ailia__speech_8h.html#a2ba1cb838dea4b789d11698545dab0f4',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fdestroy_5',['AILIA_SPEECH_USER_API_AILIA_DESTROY',['../ailia__speech_8h.html#a8044a6ad34482462c527dd4206176498',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5fdata_6',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_DATA',['../ailia__speech_8h.html#a3147cea53315d0fad8452f4c8c49d618',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5findex_5fby_5finput_5findex_7',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_INDEX_BY_INPUT_INDEX',['../ailia__speech_8h.html#ab2b46a4b13b0ae19ec9d39dab941cd8d',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5findex_5fby_5foutput_5findex_8',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_INDEX_BY_OUTPUT_INDEX',['../ailia__speech_8h.html#aab77ecf58f7038b9f7c5645353a2ab41',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5fshape_9',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_SHAPE',['../ailia__speech_8h.html#a2d4c863a639092cdeba0bb6ae51f6c2c',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5ferror_5fdetail_10',['AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL',['../ailia__speech_8h.html#a7652264dea4f139670b6f29fca012ef4',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fopen_5fweight_5ffile_5fa_11',['AILIA_SPEECH_USER_API_AILIA_OPEN_WEIGHT_FILE_A',['../ailia__speech_8h.html#a16b64c06419a2963109b9bbfe147e755',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fopen_5fweight_5ffile_5fw_12',['AILIA_SPEECH_USER_API_AILIA_OPEN_WEIGHT_FILE_W',['../ailia__speech_8h.html#a83cad9f102577e22396bc9dd9c476db6',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fset_5finput_5fblob_5fdata_13',['AILIA_SPEECH_USER_API_AILIA_SET_INPUT_BLOB_DATA',['../ailia__speech_8h.html#a57d00d486a60ec42e1ad882787ebfb1d',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fset_5finput_5fblob_5fshape_14',['AILIA_SPEECH_USER_API_AILIA_SET_INPUT_BLOB_SHAPE',['../ailia__speech_8h.html#a9b77001d1a28e32c723434c658ba0d2e',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fupdate_15',['AILIA_SPEECH_USER_API_AILIA_UPDATE',['../ailia__speech_8h.html#af0fb98a0c0edc112981b3c90c25ca283',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5fintermediate_5fcallback_16',['AILIA_SPEECH_USER_API_INTERMEDIATE_CALLBACK',['../ailia__speech_8h.html#a9cb4df1d7fc343805681682e7a34e6bc',1,'ailia_speech.h']]],
+  ['ailiaspeechapicallback_17',['AILIASpeechApiCallback',['../ailia__speech_8h.html#a34a1fdb506aca1b1a5d879510890e5c0',1,'ailia_speech.h']]],
+  ['ailiaspeechtext_18',['AILIASpeechText',['../ailia__speech_8h.html#a7e8b03c09f769f4685384822abbd269d',1,'ailia_speech.h']]]
+];

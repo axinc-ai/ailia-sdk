@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['ailiaaudiogetframelen_0',['ailiaAudioGetFrameLen',['../struct__AILIASpeechApiCallback.html#ab7433e3ed1c2d40c3668eecd2ea47205',1,'_AILIASpeechApiCallback']]],
+  ['ailiaaudiogetmelspectrogram_1',['ailiaAudioGetMelSpectrogram',['../struct__AILIASpeechApiCallback.html#abc59c9138f352d884412f968163c7098',1,'_AILIASpeechApiCallback']]],
+  ['ailiaaudiogetresamplelen_2',['ailiaAudioGetResampleLen',['../struct__AILIASpeechApiCallback.html#a896826724e7c98e3b147715edaa3815a',1,'_AILIASpeechApiCallback']]],
+  ['ailiaaudioresample_3',['ailiaAudioResample',['../struct__AILIASpeechApiCallback.html#a00cf4d25b4925e4504f124355e6f032c',1,'_AILIASpeechApiCallback']]],
+  ['ailiacreate_4',['ailiaCreate',['../struct__AILIASpeechApiCallback.html#a8fdaf2c2113e59a14ac4f7e81b6201e2',1,'_AILIASpeechApiCallback']]],
+  ['ailiadestroy_5',['ailiaDestroy',['../struct__AILIASpeechApiCallback.html#acd77d518030696ded720c4af2bb730b1',1,'_AILIASpeechApiCallback']]],
+  ['ailiagetblobdata_6',['ailiaGetBlobData',['../struct__AILIASpeechApiCallback.html#a635dd3ba0a566d84a9c7d29b4f64b09a',1,'_AILIASpeechApiCallback']]],
+  ['ailiagetblobindexbyinputindex_7',['ailiaGetBlobIndexByInputIndex',['../struct__AILIASpeechApiCallback.html#a50196b8e3a1faeff285ed18dd2711780',1,'_AILIASpeechApiCallback']]],
+  ['ailiagetblobindexbyoutputindex_8',['ailiaGetBlobIndexByOutputIndex',['../struct__AILIASpeechApiCallback.html#ae26087076cd9ec60f3f5a868a4f34f73',1,'_AILIASpeechApiCallback']]],
+  ['ailiagetblobshape_9',['ailiaGetBlobShape',['../struct__AILIASpeechApiCallback.html#a1e1f69345c39c5b7081d4a22fdf67cb5',1,'_AILIASpeechApiCallback']]],
+  ['ailiageterrordetail_10',['ailiaGetErrorDetail',['../struct__AILIASpeechApiCallback.html#afd9acb320167ad9ff4212210a4dbceae',1,'_AILIASpeechApiCallback']]],
+  ['ailiaopenweightfilea_11',['ailiaOpenWeightFileA',['../struct__AILIASpeechApiCallback.html#a93d54c90ad3d6c6063bdc6ac621ea713',1,'_AILIASpeechApiCallback']]],
+  ['ailiaopenweightfilew_12',['ailiaOpenWeightFileW',['../struct__AILIASpeechApiCallback.html#ac9ab1bf1859a6674f918d989a9955140',1,'_AILIASpeechApiCallback']]],
+  ['ailiasetinputblobdata_13',['ailiaSetInputBlobData',['../struct__AILIASpeechApiCallback.html#aa1ab549c41e41c8f884ef444000ae64e',1,'_AILIASpeechApiCallback']]],
+  ['ailiasetinputblobshape_14',['ailiaSetInputBlobShape',['../struct__AILIASpeechApiCallback.html#a9ad3deccb2c1df80a66df8a789c5bbe2',1,'_AILIASpeechApiCallback']]],
+  ['ailiaupdate_15',['ailiaUpdate',['../struct__AILIASpeechApiCallback.html#a5bdda798d3ce547304c21fcde991e0b0',1,'_AILIASpeechApiCallback']]]
+];
