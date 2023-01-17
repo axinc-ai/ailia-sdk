@@ -43,7 +43,7 @@ The core library is a standard package of the ailia SDK. Make some basic inferen
 - [Android Studio Sample Project (Java)](https://github.com/axinc-ai/ailia-android-studio)
 - [Android Studio Sample Project (Kotlin)](https://github.com/axinc-ai/ailia-android-studio-kotlin)
 
-## Suppremental Library Documentation
+## Supplemental Library Documentation
 
 ### ailia Speech
 
@@ -51,11 +51,11 @@ ailia Speech is a library for speech recognition. It uses ailia SDK and ailia.au
 
 #### C++
 
-- [API (EN)](https://axinc-ai.github.io/ailia-sdk/suppremental/speech/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/suppremental/speech/cpp/jp/)
+- [API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/)
 
 ### Unity
 
-- [API (EN)](https://axinc-ai.github.io/ailia-sdk/suppremental/speech/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/suppremental/speech/unity/jp/)
+- [API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/jp/)
 
 ## Videos
 
