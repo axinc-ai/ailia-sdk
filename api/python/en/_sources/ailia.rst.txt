@@ -83,3 +83,51 @@ Objects
    :undoc-members:
    :show-inheritance:
 
+Exceptions
+-----------
+.. autoexception:: ailia.core.AiliaException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaInvalidArgumentException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaFileIoException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaInvalidVersionException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaBrokenDataException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaResourceInsufficientException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaInvalidStateException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaUnsupportNetException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaInvalidLayerException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaInvalidParamException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaNotFoundException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaGpuUnsupportLayerException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaGpuErrorException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaUnimplementedException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaPermissionDeniedException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaExpiredException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaUnsettledShapeException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaDataRemovedException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaDataHiddenException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaLicenseNotFoundException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaLicenseBrokenException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaLicenseExpiredException
+   :show-inheritance:
+.. autoexception:: ailia.core.AiliaShapeHasExDimException
+   :show-inheritance:

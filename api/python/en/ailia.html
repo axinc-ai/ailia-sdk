@@ -41,6 +41,7 @@
 <li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#objects">Objects</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
 </ul>
 </li>
 </ul>
@@ -1460,6 +1461,190 @@ returns ENVIRONMENT_AUTO(-1).</p>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
+</dd></dl>
+
+</section>
+<section id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaException</span></span><a class="headerlink" href="#ailia.core.AiliaException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Base class for exceptions of ailia</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaInvalidArgumentException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaInvalidArgumentException</span></span><a class="headerlink" href="#ailia.core.AiliaInvalidArgumentException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Incorrect argument</p>
+<p>Please check argument of called API.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaFileIoException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaFileIoException</span></span><a class="headerlink" href="#ailia.core.AiliaFileIoException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>File access failed.</p>
+<p>Please check file is exist or not, and check access permission.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaInvalidVersionException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaInvalidVersionException</span></span><a class="headerlink" href="#ailia.core.AiliaInvalidVersionException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Incorrect struct version</p>
+<p>Please check struct version that passed with API and please pass correct struct version.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaBrokenDataException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaBrokenDataException</span></span><a class="headerlink" href="#ailia.core.AiliaBrokenDataException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>A corrupt file was passed.</p>
+<p>Please check model file are correct or not, and please pass correct model.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaResourceInsufficientException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaResourceInsufficientException</span></span><a class="headerlink" href="#ailia.core.AiliaResourceInsufficientException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Insufficient system resource</p>
+<p>Please check usage of system resource (e.g. thread). And please call API after release system  resources.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaInvalidStateException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaInvalidStateException</span></span><a class="headerlink" href="#ailia.core.AiliaInvalidStateException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>The internal status of the ailia is incorrect.</p>
+<p>Please check API document and API call steps.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaUnsupportNetException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaUnsupportNetException</span></span><a class="headerlink" href="#ailia.core.AiliaUnsupportNetException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Unsupported network</p>
+<p>Non supported model file was passed to wrapper functions (e.g. Detector). Please check document whether presented models are supported or not.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaInvalidLayerException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaInvalidLayerException</span></span><a class="headerlink" href="#ailia.core.AiliaInvalidLayerException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Incorrect layer weight, parameter, or input or output shape</p>
+<p>The layer of model had incorrect parameter or so on. Please call ailiaGetErrorDetail() and check detail message. And, please check model.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaInvalidParamException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaInvalidParamException</span></span><a class="headerlink" href="#ailia.core.AiliaInvalidParamException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>The content of the parameter file is invalid.</p>
+<p>Please check parameter file are correct or not.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaNotFoundException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaNotFoundException</span></span><a class="headerlink" href="#ailia.core.AiliaNotFoundException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>The specified element was not found.</p>
+<p>The specified element of passed name/index was not found. Please check the element are exisit on model or not.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaGpuUnsupportLayerException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaGpuUnsupportLayerException</span></span><a class="headerlink" href="#ailia.core.AiliaGpuUnsupportLayerException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>A layer parameter not supported by the GPU was given.</p>
+<p>The layer or parameter that not supported by the GPU was given. Please check model file are correct or not and contact support desk that described on document.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaGpuErrorException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaGpuErrorException</span></span><a class="headerlink" href="#ailia.core.AiliaGpuErrorException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Error during processing on the GPU</p>
+<p>Please check the GPU driver are latest and VRAM are sufficient or not.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaUnimplementedException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaUnimplementedException</span></span><a class="headerlink" href="#ailia.core.AiliaUnimplementedException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Unimplemented error</p>
+<p>The called API are not available on current environment. Please contact support desk that described on document.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaPermissionDeniedException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaPermissionDeniedException</span></span><a class="headerlink" href="#ailia.core.AiliaPermissionDeniedException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Operation not allowed</p>
+<p>The called API are not allowed on this model (e.g. encrypted model are used.). Please check model file and change API call flow.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaExpiredException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaExpiredException</span></span><a class="headerlink" href="#ailia.core.AiliaExpiredException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Model Expired</p>
+<p>The model file are expired. Please re generate model with ailia_obfuscate_c.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaUnsettledShapeException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaUnsettledShapeException</span></span><a class="headerlink" href="#ailia.core.AiliaUnsettledShapeException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>The shape is not yet determined</p>
+<p>The shape (e.g. output shape) are not determined. When called API that to get output shape, please set input shape and execute inference, then call API that to get output shape.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaDataRemovedException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaDataRemovedException</span></span><a class="headerlink" href="#ailia.core.AiliaDataRemovedException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>The information was not available from the application</p>
+<p>The specified information was removed due to optimization. If you need the information, please disable optimization and call API.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaDataHiddenException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaDataHiddenException</span></span><a class="headerlink" href="#ailia.core.AiliaDataHiddenException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaDataRemovedException" title="ailia.core.AiliaDataRemovedException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaDataRemovedException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaLicenseNotFoundException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaLicenseNotFoundException</span></span><a class="headerlink" href="#ailia.core.AiliaLicenseNotFoundException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>No valid license found</p>
+<p>The license file are required for trial version. Please contact support desk that described on document.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaLicenseBrokenException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaLicenseBrokenException</span></span><a class="headerlink" href="#ailia.core.AiliaLicenseBrokenException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>License is broken</p>
+<p>The license file that are required for trial version are broken. Please contact support desk that described on document.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaLicenseExpiredException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaLicenseExpiredException</span></span><a class="headerlink" href="#ailia.core.AiliaLicenseExpiredException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>License expired</p>
+<p>The license file that are required for trial version are expired. Please contact support desk that described on document.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ailia.core.AiliaShapeHasExDimException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia.core.</span></span><span class="sig-name descname"><span class="pre">AiliaShapeHasExDimException</span></span><a class="headerlink" href="#ailia.core.AiliaShapeHasExDimException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia.core.AiliaException" title="ailia.core.AiliaException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ailia.core.AiliaException</span></code></a></p>
+<p>Dimension of shape is 5 or more.</p>
+<p>The called API are supported up to 4 dimension. Please replace API that described on API document.</p>
 </dd></dl>
 
 </section>
