@@ -94,7 +94,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>sample_rate</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 16000</em>) – sample rate of input audio signal.</p></li>
 <li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 2048</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
 requirements :</p>
@@ -144,7 +145,8 @@ requirements :</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1024</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
 requirements :</p>
 <blockquote>
@@ -204,7 +206,8 @@ requirements :</p>
 <li><p><strong>n_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – numerator coefficient.</p></li>
 <li><p><strong>d_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – denominator coefficient.
 If d_coef[0] is not 1, n_coef and d_coef are normalized by d_coef[0]</p></li>
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>axis</strong> (<em>int</em>) – TBD</p></li>
 <li><p><strong>padtype</strong> (<em>str</em><em>, </em><em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: odd</em>) – <p>type of padding for the input signal extention.
 requirements :</p>
@@ -486,7 +489,8 @@ res.shape :</p>
 <li><p><strong>n_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – numerator coefficient.</p></li>
 <li><p><strong>d_coef</strong> (<em>numpy.ndarray</em><em>(</em><em>ndim = 1</em><em>)</em>) – denominator coefficient.
 If d_coef[0] is not 1, n_coef and d_coef are normalized by d_coef[0]</p></li>
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>axis</strong> (<em>int</em>) – TBD</p></li>
 <li><p><strong>zi</strong> (<em>numpy.ndarray</em>) – initial conditions for the filter delays.
 if zi is None, initial condition uses 0.</p></li>
@@ -586,7 +590,8 @@ mel_fb.shape must be (mel_n, freq_n)</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>sample_rate</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 16000</em>) – sample rate of input audio signal.</p></li>
 <li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1024</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
 requirements :</p>
@@ -652,7 +657,8 @@ False : using Slaney’s formula. (compatible with a default setting of librosa.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>org_sr</strong> (<em>int</em>) – <p>sampling rate of input audio signal
 requirements :</p>
 <blockquote>
@@ -683,7 +689,8 @@ requirements :</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>fft_n</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 1024</em>) – <p>size of FFT, creates fft_n // 2 + 1 bins
 requirements :</p>
 <blockquote>
@@ -761,7 +768,8 @@ res.shape :</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.</p></li>
+<li><p><strong>wav</strong> (<em>numpy.ndarray</em>) – input audio signal.
+wav.shape must be (sample_n,) or (channel_n, sample_n).</p></li>
 <li><p><strong>thr_db</strong> (<em>float</em><em>, </em><em>optional</em><em>, </em><em>default: 60</em>) – Threshold for determining silence</p></li>
 <li><p><strong>ref</strong> – TBD</p></li>
 <li><p><strong>frame_length</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=2048</em>) – length of analysis windows</p></li>
