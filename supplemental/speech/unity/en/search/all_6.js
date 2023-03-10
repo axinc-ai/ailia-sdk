@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['open_0',['Open',['../classAiliaSpeechModel.html#a248225f96f4c450cea0462efca279013',1,'AiliaSpeechModel']]]
+  ['open',['Open',['../classAiliaSpeechModel.html#ac0da0da2391bcf0b19c179640333618d',1,'AiliaSpeechModel']]]
 ];
