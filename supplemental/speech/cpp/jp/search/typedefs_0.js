@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fget_5fframe_5flen',['AILIA_SPEECH_USER_API_AILIA_AUDIO_GET_FRAME_LEN',['../ailia__speech_8h.html#a48cdabd029694a2d1fbc92798dd682b7',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fget_5fmel_5fspectrogram',['AILIA_SPEECH_USER_API_AILIA_AUDIO_GET_MEL_SPECTROGRAM',['../ailia__speech_8h.html#a9bf94d82abfc8b3526bcba6fd86d6f45',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fget_5fresample_5flen',['AILIA_SPEECH_USER_API_AILIA_AUDIO_GET_RESAMPLE_LEN',['../ailia__speech_8h.html#a447737a5fa6043fc35f84186d84a58e9',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5faudio_5fresample',['AILIA_SPEECH_USER_API_AILIA_AUDIO_RESAMPLE',['../ailia__speech_8h.html#a13417b98c7e992d8e834f1d3ddcad04e',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fcreate',['AILIA_SPEECH_USER_API_AILIA_CREATE',['../ailia__speech_8h.html#a40e8669315825cd5ba9eba88fe2f28b7',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fdestroy',['AILIA_SPEECH_USER_API_AILIA_DESTROY',['../ailia__speech_8h.html#a866df7ce856274f2aba9f2e813c33629',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5fdata',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_DATA',['../ailia__speech_8h.html#aa2989fcfcb410751204d4c2194cedf43',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5findex_5fby_5finput_5findex',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_INDEX_BY_INPUT_INDEX',['../ailia__speech_8h.html#a67f95f76f8ea4d14883bfec9cbe406f3',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5findex_5fby_5foutput_5findex',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_INDEX_BY_OUTPUT_INDEX',['../ailia__speech_8h.html#ade571efe6b38b58fdbd6de16895f9c90',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5fblob_5fshape',['AILIA_SPEECH_USER_API_AILIA_GET_BLOB_SHAPE',['../ailia__speech_8h.html#a256c7e5913af53a59339f0ac58dd7de4',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fget_5ferror_5fdetail',['AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL',['../ailia__speech_8h.html#ae2b40962d32e6810624f9e3c0c01a3b8',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fopen_5fweight_5ffile_5fa',['AILIA_SPEECH_USER_API_AILIA_OPEN_WEIGHT_FILE_A',['../ailia__speech_8h.html#a8580daecafdde33a03d3623fb2aed1ba',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fopen_5fweight_5ffile_5fw',['AILIA_SPEECH_USER_API_AILIA_OPEN_WEIGHT_FILE_W',['../ailia__speech_8h.html#af7b8560073d0ee37818f4b88aec87c52',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fopen_5fweight_5fmem',['AILIA_SPEECH_USER_API_AILIA_OPEN_WEIGHT_MEM',['../ailia__speech_8h.html#afd7593edd806a03e1e6665ed40563275',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fset_5finput_5fblob_5fdata',['AILIA_SPEECH_USER_API_AILIA_SET_INPUT_BLOB_DATA',['../ailia__speech_8h.html#a0afd3a755fa75a5e050e0580220080b2',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fset_5finput_5fblob_5fshape',['AILIA_SPEECH_USER_API_AILIA_SET_INPUT_BLOB_SHAPE',['../ailia__speech_8h.html#ae2ab49e4460b620ad71b539c50dc4069',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fset_5fmemory_5fmode',['AILIA_SPEECH_USER_API_AILIA_SET_MEMORY_MODE',['../ailia__speech_8h.html#ab0dd78e56c1adae5a02d12b7e721662a',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5failia_5fupdate',['AILIA_SPEECH_USER_API_AILIA_UPDATE',['../ailia__speech_8h.html#aec6eedbc6da1ef14b1be9a13910cfa6a',1,'ailia_speech.h']]],
+  ['ailia_5fspeech_5fuser_5fapi_5fintermediate_5fcallback',['AILIA_SPEECH_USER_API_INTERMEDIATE_CALLBACK',['../ailia__speech_8h.html#a4fc3bc134686d1985b380ff2772b04c4',1,'ailia_speech.h']]],
+  ['ailiaspeechapicallback',['AILIASpeechApiCallback',['../ailia__speech_8h.html#a463906f0b4fd8b081590c4b58c93d3d8',1,'ailia_speech.h']]],
+  ['ailiaspeechtext',['AILIASpeechText',['../ailia__speech_8h.html#a7e8b03c09f769f4685384822abbd269d',1,'ailia_speech.h']]]
+];

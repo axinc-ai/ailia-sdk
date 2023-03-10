@@ -12,9 +12,9 @@ SDK for optimized running of many popular neural networks on multiple platform
 
 - [Download a free evaluation version of ailia SDK](https://axip-console.appspot.com/trial/terms/AILIA?lang=en)
 
-## Document
+## Core Library Documentation
 
-This api document is in beta. We plan to change the URL of the document in the future.
+The core library is a standard package of the ailia SDK. Make some basic inferences. This api document is in beta. We plan to change the URL of the document in the future.
 
 ### Python
 
@@ -42,6 +42,20 @@ This api document is in beta. We plan to change the URL of the document in the f
 - [Tutorial (EN)](https://medium.com/axinc-ai/ailia-sdk-tutorial-jni-92b797725e08) [(JP)](https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-jni-7a11c1da08dc)
 - [Android Studio Sample Project (Java)](https://github.com/axinc-ai/ailia-android-studio)
 - [Android Studio Sample Project (Kotlin)](https://github.com/axinc-ai/ailia-android-studio-kotlin)
+
+## Supplemental Library Documentation
+
+### ailia Speech
+
+ailia Speech is a library for speech recognition. It uses ailia SDK and ailia.audio for doing Speech2Text. This api document is in beta. We plan to change the URL of the document in the future.
+
+#### C++
+
+- [API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/)
+
+### Unity
+
+- [API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/jp/)
 
 ## Videos
 
