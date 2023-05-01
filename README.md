@@ -43,19 +43,21 @@ The core library is a standard package of the ailia SDK. Make some basic inferen
 - [Android Studio Sample Project (Java)](https://github.com/axinc-ai/ailia-android-studio)
 - [Android Studio Sample Project (Kotlin)](https://github.com/axinc-ai/ailia-android-studio-kotlin)
 
-## Supplemental Library Documentation
+## Supplemental and Specific Library Documentation
+
+### ailia Tokenizer
+
+ailia Tokenizer is a library for encode NLP text and decode NLP tokens. ailia Tokenizer supports tokenization without Python transformers. This api document is in beta. We plan to change the URL of the document in the future.
+
+- [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/jp/)
+- [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/jp/)
 
 ### ailia Speech
 
 ailia Speech is a library for speech recognition. It uses ailia SDK and ailia.audio for doing Speech2Text. This api document is in beta. We plan to change the URL of the document in the future.
 
-#### C++
-
-- [API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/)
-
-### Unity
-
-- [API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/jp/)
+- [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/)
+- [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/jp/)
 
 ## Videos
 
