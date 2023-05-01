@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ailia_speech: ailia_speech.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">0.9.4.0</span>
+   &#160;<span id="projectnumber">0.9.5.0</span>
    </div>
   </td>
  </tr>
@@ -30,18 +30,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.13 -->
+<!-- 構築: Doxygen 1.8.17 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -76,12 +79,11 @@ $(function() {
 <p>ailia Speech AI音声認識 ライブラリ  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;ailia.h&quot;</code><br />
+<code>#include &quot;ailia_tokenizer.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 ailia_speech.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="ailia__speech_8h__incl.png" border="0" usemap="#ailia__speech_8h" alt=""/></div>
-<map name="ailia__speech_8h" id="ailia__speech_8h">
-</map>
 </div>
 </div>
 <p><a href="ailia__speech_8h_source.html">[ソースコード]</a></p>
@@ -98,36 +100,39 @@ ailia_speech.h の依存先関係図:</div>
 <tr class="memitem:a1c6a80cf85ef33500663112959784400"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;&#160;&#160;__stdcall</td></tr>
 <tr class="separator:a1c6a80cf85ef33500663112959784400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab132a3fef343dc6a53c67ebc9e083ac8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ab132a3fef343dc6a53c67ebc9e083ac8">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY</a>&#160;&#160;&#160;(0)</td></tr>
-<tr class="memdesc:ab132a3fef343dc6a53c67ebc9e083ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Tiny model  <a href="#ab132a3fef343dc6a53c67ebc9e083ac8">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ab132a3fef343dc6a53c67ebc9e083ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Tiny model  <a href="ailia__speech_8h.html#ab132a3fef343dc6a53c67ebc9e083ac8">[詳解]</a><br /></td></tr>
 <tr class="separator:ab132a3fef343dc6a53c67ebc9e083ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fc75a2d1cc76e9b5b3b8c47fe5cef3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a9fc75a2d1cc76e9b5b3b8c47fe5cef3a">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_BASE</a>&#160;&#160;&#160;(1)</td></tr>
-<tr class="memdesc:a9fc75a2d1cc76e9b5b3b8c47fe5cef3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Base model  <a href="#a9fc75a2d1cc76e9b5b3b8c47fe5cef3a">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a9fc75a2d1cc76e9b5b3b8c47fe5cef3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Base model  <a href="ailia__speech_8h.html#a9fc75a2d1cc76e9b5b3b8c47fe5cef3a">[詳解]</a><br /></td></tr>
 <tr class="separator:a9fc75a2d1cc76e9b5b3b8c47fe5cef3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57d4a103b11eb5eee22d1c559c18e446"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a57d4a103b11eb5eee22d1c559c18e446">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL</a>&#160;&#160;&#160;(2)</td></tr>
-<tr class="memdesc:a57d4a103b11eb5eee22d1c559c18e446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Small model  <a href="#a57d4a103b11eb5eee22d1c559c18e446">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a57d4a103b11eb5eee22d1c559c18e446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Small model  <a href="ailia__speech_8h.html#a57d4a103b11eb5eee22d1c559c18e446">[詳解]</a><br /></td></tr>
 <tr class="separator:a57d4a103b11eb5eee22d1c559c18e446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac762d8a0a1a2dec1a6db9b7f5092e725"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ac762d8a0a1a2dec1a6db9b7f5092e725">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_MEDIUM</a>&#160;&#160;&#160;(3)</td></tr>
-<tr class="memdesc:ac762d8a0a1a2dec1a6db9b7f5092e725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Medium model  <a href="#ac762d8a0a1a2dec1a6db9b7f5092e725">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ac762d8a0a1a2dec1a6db9b7f5092e725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Medium model  <a href="ailia__speech_8h.html#ac762d8a0a1a2dec1a6db9b7f5092e725">[詳解]</a><br /></td></tr>
 <tr class="separator:ac762d8a0a1a2dec1a6db9b7f5092e725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a>&#160;&#160;&#160;(0)</td></tr>
-<tr class="memdesc:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声のテキスト化を行います  <a href="#a6f87fdadb3ef26a39a787c4891c1a27e">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声のテキスト化を行います  <a href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">[詳解]</a><br /></td></tr>
 <tr class="separator:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a985258b80a9a9444d6f8863d839462e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a985258b80a9a9444d6f8863d839462e2">AILIA_SPEECH_TASK_TRANSLATE</a>&#160;&#160;&#160;(1)</td></tr>
-<tr class="memdesc:a985258b80a9a9444d6f8863d839462e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声のテキスト化と翻訳を行います  <a href="#a985258b80a9a9444d6f8863d839462e2">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a985258b80a9a9444d6f8863d839462e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声のテキスト化と翻訳を行います  <a href="ailia__speech_8h.html#a985258b80a9a9444d6f8863d839462e2">[詳解]</a><br /></td></tr>
 <tr class="separator:a985258b80a9a9444d6f8863d839462e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a811a53f90bad34ceb1cd1cdf275c2687"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a811a53f90bad34ceb1cd1cdf275c2687">AILIA_SPEECH_FLAG_NONE</a>&#160;&#160;&#160;(0)</td></tr>
-<tr class="memdesc:a811a53f90bad34ceb1cd1cdf275c2687"><td class="mdescLeft">&#160;</td><td class="mdescRight">フラグを設定しません  <a href="#a811a53f90bad34ceb1cd1cdf275c2687">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a811a53f90bad34ceb1cd1cdf275c2687"><td class="mdescLeft">&#160;</td><td class="mdescRight">フラグを設定しません  <a href="ailia__speech_8h.html#a811a53f90bad34ceb1cd1cdf275c2687">[詳解]</a><br /></td></tr>
 <tr class="separator:a811a53f90bad34ceb1cd1cdf275c2687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5101766abc42f4966dcc67b6cb2acd10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a5101766abc42f4966dcc67b6cb2acd10">AILIA_SPEECH_FLAG_LIVE</a>&#160;&#160;&#160;(1)</td></tr>
-<tr class="memdesc:a5101766abc42f4966dcc67b6cb2acd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブ変換モードを有効にします  <a href="#a5101766abc42f4966dcc67b6cb2acd10">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a5101766abc42f4966dcc67b6cb2acd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブ変換モードを有効にします  <a href="ailia__speech_8h.html#a5101766abc42f4966dcc67b6cb2acd10">[詳解]</a><br /></td></tr>
 <tr class="separator:a5101766abc42f4966dcc67b6cb2acd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6c776f21de870c2467c01f0b6fd35a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a7c6c776f21de870c2467c01f0b6fd35a">AILIA_SPEECH_FLAG_FILTER_REPEATED_WORDS</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:a7c6c776f21de870c2467c01f0b6fd35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">単語の繰り返しを検知してフィルタします  <a href="ailia__speech_8h.html#a7c6c776f21de870c2467c01f0b6fd35a">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c6c776f21de870c2467c01f0b6fd35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7251d8075e17dd84c1de3097eefd58db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a></td></tr>
 <tr class="separator:a7251d8075e17dd84c1de3097eefd58db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a270b7093c3050b79117027ab17a87313"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a>&#160;&#160;&#160;(3)</td></tr>
-<tr class="memdesc:a270b7093c3050b79117027ab17a87313"><td class="mdescLeft">&#160;</td><td class="mdescRight">構造体バージョン  <a href="#a270b7093c3050b79117027ab17a87313">[詳解]</a><br /></td></tr>
+<tr class="memitem:a270b7093c3050b79117027ab17a87313"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a270b7093c3050b79117027ab17a87313"><td class="mdescLeft">&#160;</td><td class="mdescRight">構造体バージョン  <a href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">[詳解]</a><br /></td></tr>
 <tr class="separator:a270b7093c3050b79117027ab17a87313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0c10a4d128016e1aab69aa593774875"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ad0c10a4d128016e1aab69aa593774875">AILIA_SPEECH_TEXT_VERSION</a>&#160;&#160;&#160;(1)</td></tr>
-<tr class="memdesc:ad0c10a4d128016e1aab69aa593774875"><td class="mdescLeft">&#160;</td><td class="mdescRight">構造体バージョン  <a href="#ad0c10a4d128016e1aab69aa593774875">[詳解]</a><br /></td></tr>
+<tr class="memitem:ad0c10a4d128016e1aab69aa593774875"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ad0c10a4d128016e1aab69aa593774875">AILIA_SPEECH_TEXT_VERSION</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:ad0c10a4d128016e1aab69aa593774875"><td class="mdescLeft">&#160;</td><td class="mdescRight">構造体バージョン  <a href="ailia__speech_8h.html#ad0c10a4d128016e1aab69aa593774875">[詳解]</a><br /></td></tr>
 <tr class="separator:ad0c10a4d128016e1aab69aa593774875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13b5c9c17000fc3f40bfcaa8bb312c52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a13b5c9c17000fc3f40bfcaa8bb312c52">ailiaSpeechOpenModelFile</a>&#160;&#160;&#160;<a class="el" href="ailia__speech_8h.html#a56c22024e9f672509d2e00543ca14b95">ailiaSpeechOpenModelFileA</a></td></tr>
 <tr class="separator:a13b5c9c17000fc3f40bfcaa8bb312c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +147,26 @@ ailia_speech.h の依存先関係図:</div>
 <tr class="separator:a13417b98c7e992d8e834f1d3ddcad04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a447737a5fa6043fc35f84186d84a58e9"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a447737a5fa6043fc35f84186d84a58e9">AILIA_SPEECH_USER_API_AILIA_AUDIO_GET_RESAMPLE_LEN</a>) (int *, int, int, int)</td></tr>
 <tr class="separator:a447737a5fa6043fc35f84186d84a58e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac49245b3942fc2c0070674a7afc5d8e1"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ac49245b3942fc2c0070674a7afc5d8e1">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_CREATE</a>) (struct AILIATokenizer **, int, int)</td></tr>
+<tr class="separator:ac49245b3942fc2c0070674a7afc5d8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2feceb8649d4c75788258aa167e858"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a2c2feceb8649d4c75788258aa167e858">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_ENCODE</a>) (struct AILIATokenizer *, const char *)</td></tr>
+<tr class="separator:a2c2feceb8649d4c75788258aa167e858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2446ed686629b0e3726af8ac2f1f1731"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a2446ed686629b0e3726af8ac2f1f1731">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TOKEN_COUNT</a>) (struct AILIATokenizer *, unsigned int *)</td></tr>
+<tr class="separator:a2446ed686629b0e3726af8ac2f1f1731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea87f915ebc9d09576bbbd472d63b40c"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#aea87f915ebc9d09576bbbd472d63b40c">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TOKENS</a>) (struct AILIATokenizer *, int *, unsigned int)</td></tr>
+<tr class="separator:aea87f915ebc9d09576bbbd472d63b40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da7220d7f98505fb27aaf482e7ded86"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a5da7220d7f98505fb27aaf482e7ded86">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_DECODE</a>) (struct AILIATokenizer *, const int *, unsigned int)</td></tr>
+<tr class="separator:a5da7220d7f98505fb27aaf482e7ded86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518dff0b64b48744a4d7077442a22856"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a518dff0b64b48744a4d7077442a22856">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TEXT_LENGTH</a>) (struct AILIATokenizer *, unsigned int *)</td></tr>
+<tr class="separator:a518dff0b64b48744a4d7077442a22856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82b3f1b99c3ffa799a725cffd95a003"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ab82b3f1b99c3ffa799a725cffd95a003">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TEXT</a>) (struct AILIATokenizer *, char *, unsigned int)</td></tr>
+<tr class="separator:ab82b3f1b99c3ffa799a725cffd95a003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37da9808c0549bffa89ae724cea31a27"><td class="memItemLeft" align="right" valign="top">typedef void(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a37da9808c0549bffa89ae724cea31a27">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_DESTROY</a>) (struct AILIATokenizer *)</td></tr>
+<tr class="separator:a37da9808c0549bffa89ae724cea31a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2944684cb1ebe7f0ff023f7590342e3"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ac2944684cb1ebe7f0ff023f7590342e3">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_UTF8_TO_UTF32</a>) (unsigned int *, unsigned int *, const char *, unsigned int)</td></tr>
+<tr class="separator:ac2944684cb1ebe7f0ff023f7590342e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c438ca7355c7461a6ec6f3ac33da2e4"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a6c438ca7355c7461a6ec6f3ac33da2e4">AILIA_SPEECH_USER_API_AILIA_TOKENIZER_UTF32_TO_UTF8</a>) (char *, unsigned int *, unsigned int)</td></tr>
+<tr class="separator:a6c438ca7355c7461a6ec6f3ac33da2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40e8669315825cd5ba9eba88fe2f28b7"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a40e8669315825cd5ba9eba88fe2f28b7">AILIA_SPEECH_USER_API_AILIA_CREATE</a>) (struct AILIANetwork **, int, int)</td></tr>
 <tr class="separator:a40e8669315825cd5ba9eba88fe2f28b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8580daecafdde33a03d3623fb2aed1ba"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a8580daecafdde33a03d3623fb2aed1ba">AILIA_SPEECH_USER_API_AILIA_OPEN_WEIGHT_FILE_A</a>) (struct AILIANetwork *, const char *)</td></tr>
@@ -168,65 +193,74 @@ ailia_speech.h の依存先関係図:</div>
 <tr class="separator:ae2ab49e4460b620ad71b539c50dc4069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a256c7e5913af53a59339f0ac58dd7de4"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a256c7e5913af53a59339f0ac58dd7de4">AILIA_SPEECH_USER_API_AILIA_GET_BLOB_SHAPE</a>) (struct AILIANetwork *, AILIAShape *, unsigned int, unsigned int)</td></tr>
 <tr class="separator:a256c7e5913af53a59339f0ac58dd7de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b40962d32e6810624f9e3c0c01a3b8"><td class="memItemLeft" align="right" valign="top">typedef const char *(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ae2b40962d32e6810624f9e3c0c01a3b8">AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL</a>) (struct AILIANetwork *)</td></tr>
-<tr class="separator:ae2b40962d32e6810624f9e3c0c01a3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a463906f0b4fd8b081590c4b58c93d3d8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIASpeechApiCallback.html">_AILIASpeechApiCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a463906f0b4fd8b081590c4b58c93d3d8">AILIASpeechApiCallback</a></td></tr>
-<tr class="separator:a463906f0b4fd8b081590c4b58c93d3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a1fdb506aca1b1a5d879510890e5c0"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIASpeechApiCallback.html">_AILIASpeechApiCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a34a1fdb506aca1b1a5d879510890e5c0">AILIASpeechApiCallback</a></td></tr>
+<tr class="separator:a34a1fdb506aca1b1a5d879510890e5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc3bc134686d1985b380ff2772b04c4"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a4fc3bc134686d1985b380ff2772b04c4">AILIA_SPEECH_USER_API_INTERMEDIATE_CALLBACK</a>) (void *handle, const char *text)</td></tr>
-<tr class="memdesc:a4fc3bc134686d1985b380ff2772b04c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論の途中の状況を通知します。  <a href="#a4fc3bc134686d1985b380ff2772b04c4">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a4fc3bc134686d1985b380ff2772b04c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論の途中の状況を通知します。  <a href="ailia__speech_8h.html#a4fc3bc134686d1985b380ff2772b04c4">[詳解]</a><br /></td></tr>
 <tr class="separator:a4fc3bc134686d1985b380ff2772b04c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e8b03c09f769f4685384822abbd269d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIASpeechText.html">_AILIASpeechText</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a7e8b03c09f769f4685384822abbd269d">AILIASpeechText</a></td></tr>
 <tr class="separator:a7e8b03c09f769f4685384822abbd269d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:acffff23d4e9290777720557cdc30f9fc"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">ailiaSpeechCreate</a> (struct AILIASpeech **net, int env_id, int num_thread, int memory_mode, int task, int flags, <a class="el" href="ailia__speech_8h.html#a463906f0b4fd8b081590c4b58c93d3d8">AILIASpeechApiCallback</a> callback, int version)</td></tr>
-<tr class="memdesc:acffff23d4e9290777720557cdc30f9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークオブジェクトを作成します。  <a href="#acffff23d4e9290777720557cdc30f9fc">[詳解]</a><br /></td></tr>
+<tr class="memitem:a28b62e611cf0aba268bc03e422811246"><td class="memItemLeft" align="right" valign="top">const typedef char *<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a28b62e611cf0aba268bc03e422811246">AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL</a> (struct AILIANetwork *)</td></tr>
+<tr class="separator:a28b62e611cf0aba268bc03e422811246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acffff23d4e9290777720557cdc30f9fc"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">ailiaSpeechCreate</a> (struct AILIASpeech **net, int env_id, int num_thread, int memory_mode, int task, int flags, <a class="el" href="ailia__speech_8h.html#a34a1fdb506aca1b1a5d879510890e5c0">AILIASpeechApiCallback</a> callback, int version)</td></tr>
+<tr class="memdesc:acffff23d4e9290777720557cdc30f9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークオブジェクトを作成します。  <a href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">[詳解]</a><br /></td></tr>
 <tr class="separator:acffff23d4e9290777720557cdc30f9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56c22024e9f672509d2e00543ca14b95"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a56c22024e9f672509d2e00543ca14b95">ailiaSpeechOpenModelFileA</a> (struct AILIASpeech *net, const char *encoder_path, const char *decoder_path, int model_type)</td></tr>
-<tr class="memdesc:a56c22024e9f672509d2e00543ca14b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルを指定します。(MBSC)  <a href="#a56c22024e9f672509d2e00543ca14b95">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a56c22024e9f672509d2e00543ca14b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルを指定します。(MBSC)  <a href="ailia__speech_8h.html#a56c22024e9f672509d2e00543ca14b95">[詳解]</a><br /></td></tr>
 <tr class="separator:a56c22024e9f672509d2e00543ca14b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5464f6ddf36140566c164bcd4e62f76"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#aa5464f6ddf36140566c164bcd4e62f76">ailiaSpeechOpenModelFileW</a> (struct AILIASpeech *net, const wchar_t *encoder_path, const wchar_t *decoder_path, int model_type)</td></tr>
-<tr class="memdesc:aa5464f6ddf36140566c164bcd4e62f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルを指定します。(UTF16)  <a href="#aa5464f6ddf36140566c164bcd4e62f76">[詳解]</a><br /></td></tr>
+<tr class="memdesc:aa5464f6ddf36140566c164bcd4e62f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルを指定します。(UTF16)  <a href="ailia__speech_8h.html#aa5464f6ddf36140566c164bcd4e62f76">[詳解]</a><br /></td></tr>
 <tr class="separator:aa5464f6ddf36140566c164bcd4e62f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453c7c1308539e9bc89239bfd9d0e831"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a453c7c1308539e9bc89239bfd9d0e831">ailiaSpeechPushInputData</a> (struct AILIASpeech *net, const float *src, unsigned int channels, unsigned int samples, unsigned int sampling_rate)</td></tr>
-<tr class="memdesc:a453c7c1308539e9bc89239bfd9d0e831"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声をキューに投入します。  <a href="#a453c7c1308539e9bc89239bfd9d0e831">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a453c7c1308539e9bc89239bfd9d0e831"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声をキューに投入します。  <a href="ailia__speech_8h.html#a453c7c1308539e9bc89239bfd9d0e831">[詳解]</a><br /></td></tr>
 <tr class="separator:a453c7c1308539e9bc89239bfd9d0e831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42a27beee2a99af9d82b2d0e096147c"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ac42a27beee2a99af9d82b2d0e096147c">ailiaSpeechFinalizeInputData</a> (struct AILIASpeech *net)</td></tr>
+<tr class="memdesc:ac42a27beee2a99af9d82b2d0e096147c"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声のキューへの投入を終了します。  <a href="ailia__speech_8h.html#ac42a27beee2a99af9d82b2d0e096147c">[詳解]</a><br /></td></tr>
+<tr class="separator:ac42a27beee2a99af9d82b2d0e096147c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e0cb6e4b463dbf02fc5da05a061cedd"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a0e0cb6e4b463dbf02fc5da05a061cedd">ailiaSpeechBuffered</a> (struct AILIASpeech *net, unsigned int *buffered)</td></tr>
-<tr class="memdesc:a0e0cb6e4b463dbf02fc5da05a061cedd"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声認識を行うために十分なデータが存在するかどうかを判定します。  <a href="#a0e0cb6e4b463dbf02fc5da05a061cedd">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a0e0cb6e4b463dbf02fc5da05a061cedd"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声認識を行うために十分なデータが存在するかどうかを判定します。  <a href="ailia__speech_8h.html#a0e0cb6e4b463dbf02fc5da05a061cedd">[詳解]</a><br /></td></tr>
 <tr class="separator:a0e0cb6e4b463dbf02fc5da05a061cedd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa610ce4758daf48552da5f172fc0d972"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#aa610ce4758daf48552da5f172fc0d972">ailiaSpeechComplete</a> (struct AILIASpeech *net, unsigned int *complete)</td></tr>
-<tr class="memdesc:aa610ce4758daf48552da5f172fc0d972"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのデータの処理が完了したかどうかを判定します。  <a href="#aa610ce4758daf48552da5f172fc0d972">[詳解]</a><br /></td></tr>
+<tr class="memdesc:aa610ce4758daf48552da5f172fc0d972"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのデータの処理が完了したかどうかを判定します。  <a href="ailia__speech_8h.html#aa610ce4758daf48552da5f172fc0d972">[詳解]</a><br /></td></tr>
 <tr class="separator:aa610ce4758daf48552da5f172fc0d972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc09b4840b6664819067a6c765de7958"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#afc09b4840b6664819067a6c765de7958">ailiaSpeechSetPrompt</a> (struct AILIASpeech *net, const char *prompt)</td></tr>
+<tr class="memdesc:afc09b4840b6664819067a6c765de7958"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロンプトの設定を行います。  <a href="ailia__speech_8h.html#afc09b4840b6664819067a6c765de7958">[詳解]</a><br /></td></tr>
+<tr class="separator:afc09b4840b6664819067a6c765de7958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72dd0b016ca262c66485a2fccc22627f"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a72dd0b016ca262c66485a2fccc22627f">ailiaSpeechSetLanguage</a> (struct AILIASpeech *net, const char *language)</td></tr>
-<tr class="memdesc:a72dd0b016ca262c66485a2fccc22627f"><td class="mdescLeft">&#160;</td><td class="mdescRight">言語設定を行います。  <a href="#a72dd0b016ca262c66485a2fccc22627f">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a72dd0b016ca262c66485a2fccc22627f"><td class="mdescLeft">&#160;</td><td class="mdescRight">言語設定を行います。  <a href="ailia__speech_8h.html#a72dd0b016ca262c66485a2fccc22627f">[詳解]</a><br /></td></tr>
 <tr class="separator:a72dd0b016ca262c66485a2fccc22627f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b60c37522d436a050aa04e508917fc1"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a0b60c37522d436a050aa04e508917fc1">ailiaSpeechSetSlilentThreshold</a> (struct AILIASpeech *net, float silent_threshold, float speech_sec, float no_speech_sec)</td></tr>
-<tr class="memdesc:a0b60c37522d436a050aa04e508917fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">無音判定の閾値を設定します。  <a href="#a0b60c37522d436a050aa04e508917fc1">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a0b60c37522d436a050aa04e508917fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">無音判定の閾値を設定します。  <a href="ailia__speech_8h.html#a0b60c37522d436a050aa04e508917fc1">[詳解]</a><br /></td></tr>
 <tr class="separator:a0b60c37522d436a050aa04e508917fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c25986e571ce83f49b523e2b59607da"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a6c25986e571ce83f49b523e2b59607da">ailiaSpeechSetIntermediateCallback</a> (struct AILIASpeech *net, <a class="el" href="ailia__speech_8h.html#a4fc3bc134686d1985b380ff2772b04c4">AILIA_SPEECH_USER_API_INTERMEDIATE_CALLBACK</a> callback, void *handle)</td></tr>
-<tr class="memdesc:a6c25986e571ce83f49b523e2b59607da"><td class="mdescLeft">&#160;</td><td class="mdescRight">認識の途中結果を取得するコールバックを設定します。  <a href="#a6c25986e571ce83f49b523e2b59607da">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a6c25986e571ce83f49b523e2b59607da"><td class="mdescLeft">&#160;</td><td class="mdescRight">認識の途中結果を取得するコールバックを設定します。  <a href="ailia__speech_8h.html#a6c25986e571ce83f49b523e2b59607da">[詳解]</a><br /></td></tr>
 <tr class="separator:a6c25986e571ce83f49b523e2b59607da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb4f738437f4663bf6cc12bb088cecfc"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">ailiaSpeechTranscribe</a> (struct AILIASpeech *net)</td></tr>
-<tr class="memdesc:adb4f738437f4663bf6cc12bb088cecfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声認識を行います。  <a href="#adb4f738437f4663bf6cc12bb088cecfc">[詳解]</a><br /></td></tr>
+<tr class="memdesc:adb4f738437f4663bf6cc12bb088cecfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声認識を行います。  <a href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">[詳解]</a><br /></td></tr>
 <tr class="separator:adb4f738437f4663bf6cc12bb088cecfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a848b4bd906ed522b28e99b4be4696e74"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a848b4bd906ed522b28e99b4be4696e74">ailiaSpeechGetTextCount</a> (struct AILIASpeech *net, unsigned int *count)</td></tr>
-<tr class="memdesc:a848b4bd906ed522b28e99b4be4696e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">認識したテキストの数を取得します。  <a href="#a848b4bd906ed522b28e99b4be4696e74">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a848b4bd906ed522b28e99b4be4696e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">認識したテキストの数を取得します。  <a href="ailia__speech_8h.html#a848b4bd906ed522b28e99b4be4696e74">[詳解]</a><br /></td></tr>
 <tr class="separator:a848b4bd906ed522b28e99b4be4696e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a608a04f5e2018a5f608480e6da3a16a9"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a608a04f5e2018a5f608480e6da3a16a9">ailiaSpeechGetText</a> (struct AILIASpeech *net, <a class="el" href="ailia__speech_8h.html#a7e8b03c09f769f4685384822abbd269d">AILIASpeechText</a> *text, unsigned int version, unsigned int idx)</td></tr>
-<tr class="memdesc:a608a04f5e2018a5f608480e6da3a16a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">認識したテキストを取得します。  <a href="#a608a04f5e2018a5f608480e6da3a16a9">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a608a04f5e2018a5f608480e6da3a16a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">認識したテキストを取得します。  <a href="ailia__speech_8h.html#a608a04f5e2018a5f608480e6da3a16a9">[詳解]</a><br /></td></tr>
 <tr class="separator:a608a04f5e2018a5f608480e6da3a16a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a078f8233d17bce5e1c3e707b226db2b5"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a078f8233d17bce5e1c3e707b226db2b5">ailiaSpeechDestroy</a> (struct AILIASpeech *net)</td></tr>
-<tr class="memdesc:a078f8233d17bce5e1c3e707b226db2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークオブジェクトを破棄します。  <a href="#a078f8233d17bce5e1c3e707b226db2b5">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a078f8233d17bce5e1c3e707b226db2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークオブジェクトを破棄します。  <a href="ailia__speech_8h.html#a078f8233d17bce5e1c3e707b226db2b5">[詳解]</a><br /></td></tr>
 <tr class="separator:a078f8233d17bce5e1c3e707b226db2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2bd8f13230a6e1de56340ff188153aa"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#aa2bd8f13230a6e1de56340ff188153aa">ailiaSpeechResetTranscribeState</a> (struct AILIASpeech *net)</td></tr>
+<tr class="memdesc:aa2bd8f13230a6e1de56340ff188153aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークオブジェクトの内部状態を初期化します。  <a href="ailia__speech_8h.html#aa2bd8f13230a6e1de56340ff188153aa">[詳解]</a><br /></td></tr>
+<tr class="separator:aa2bd8f13230a6e1de56340ff188153aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acac47e30e94493f096a1ae810e7c54b2"><td class="memItemLeft" align="right" valign="top">const char *<a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#acac47e30e94493f096a1ae810e7c54b2">ailiaSpeechGetErrorDetail</a> (struct AILIASpeech *net)</td></tr>
-<tr class="memdesc:acac47e30e94493f096a1ae810e7c54b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を返します  <a href="#acac47e30e94493f096a1ae810e7c54b2">[詳解]</a><br /></td></tr>
+<tr class="memdesc:acac47e30e94493f096a1ae810e7c54b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を返します  <a href="ailia__speech_8h.html#acac47e30e94493f096a1ae810e7c54b2">[詳解]</a><br /></td></tr>
 <tr class="separator:acac47e30e94493f096a1ae810e7c54b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>ailia Speech AI音声認識 ライブラリ </p>
 <dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ax Inc. </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2023/03/04 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2023/03/22 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a1c6a80cf85ef33500663112959784400"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c6a80cf85ef33500663112959784400">&#9670;&nbsp;</a></span>AILIA_API</h2>
@@ -249,12 +283,28 @@ ailia_speech.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AILIA_SPEECH_API_CALLBACK_VERSION&#160;&#160;&#160;(3)</td>
+          <td class="memname">#define AILIA_SPEECH_API_CALLBACK_VERSION&#160;&#160;&#160;(4)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>構造体バージョン </p>
+
+</div>
+</div>
+<a id="a7c6c776f21de870c2467c01f0b6fd35a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6c776f21de870c2467c01f0b6fd35a">&#9670;&nbsp;</a></span>AILIA_SPEECH_FLAG_FILTER_REPEATED_WORDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_SPEECH_FLAG_FILTER_REPEATED_WORDS&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単語の繰り返しを検知してフィルタします </p>
 
 </div>
 </div>
@@ -393,7 +443,7 @@ ailia_speech.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AILIA_SPEECH_TEXT_VERSION&#160;&#160;&#160;(1)</td>
+          <td class="memname">#define AILIA_SPEECH_TEXT_VERSION&#160;&#160;&#160;(2)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -571,20 +621,6 @@ ailia_speech.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ae2b40962d32e6810624f9e3c0c01a3b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2b40962d32e6810624f9e3c0c01a3b8">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef const char*(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL) (struct AILIANetwork *)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8580daecafdde33a03d3623fb2aed1ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8580daecafdde33a03d3623fb2aed1ba">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_OPEN_WEIGHT_FILE_A</h2>
 
@@ -669,6 +705,146 @@ ailia_speech.h の依存先関係図:</div>
 
 </div>
 </div>
+<a id="ac49245b3942fc2c0070674a7afc5d8e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac49245b3942fc2c0070674a7afc5d8e1">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_CREATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_CREATE) (struct AILIATokenizer **, int, int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5da7220d7f98505fb27aaf482e7ded86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da7220d7f98505fb27aaf482e7ded86">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_DECODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_DECODE) (struct AILIATokenizer *, const int *, unsigned int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37da9808c0549bffa89ae724cea31a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37da9808c0549bffa89ae724cea31a27">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_DESTROY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_DESTROY) (struct AILIATokenizer *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c2feceb8649d4c75788258aa167e858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2feceb8649d4c75788258aa167e858">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_ENCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_ENCODE) (struct AILIATokenizer *, const char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab82b3f1b99c3ffa799a725cffd95a003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab82b3f1b99c3ffa799a725cffd95a003">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TEXT) (struct AILIATokenizer *, char *, unsigned int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a518dff0b64b48744a4d7077442a22856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a518dff0b64b48744a4d7077442a22856">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TEXT_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TEXT_LENGTH) (struct AILIATokenizer *, unsigned int *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2446ed686629b0e3726af8ac2f1f1731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2446ed686629b0e3726af8ac2f1f1731">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TOKEN_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TOKEN_COUNT) (struct AILIATokenizer *, unsigned int *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea87f915ebc9d09576bbbd472d63b40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea87f915ebc9d09576bbbd472d63b40c">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TOKENS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TOKENS) (struct AILIATokenizer *, int *, unsigned int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c438ca7355c7461a6ec6f3ac33da2e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c438ca7355c7461a6ec6f3ac33da2e4">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_UTF32_TO_UTF8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_UTF32_TO_UTF8) (char *, unsigned int *, unsigned int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2944684cb1ebe7f0ff023f7590342e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2944684cb1ebe7f0ff023f7590342e3">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_UTF8_TO_UTF32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_TOKENIZER_UTF8_TO_UTF32) (unsigned int *, unsigned int *, const char *, unsigned int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aec6eedbc6da1ef14b1be9a13910cfa6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec6eedbc6da1ef14b1be9a13910cfa6a">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_UPDATE</h2>
 
@@ -707,14 +883,14 @@ ailia_speech.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a463906f0b4fd8b081590c4b58c93d3d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a463906f0b4fd8b081590c4b58c93d3d8">&#9670;&nbsp;</a></span>AILIASpeechApiCallback</h2>
+<a id="a34a1fdb506aca1b1a5d879510890e5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a1fdb506aca1b1a5d879510890e5c0">&#9670;&nbsp;</a></span>AILIASpeechApiCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="struct__AILIASpeechApiCallback.html">_AILIASpeechApiCallback</a>  <a class="el" href="ailia__speech_8h.html#a463906f0b4fd8b081590c4b58c93d3d8">AILIASpeechApiCallback</a></td>
+          <td class="memname">typedef struct <a class="el" href="struct__AILIASpeechApiCallback.html">_AILIASpeechApiCallback</a> <a class="el" href="ailia__speech_8h.html#a34a1fdb506aca1b1a5d879510890e5c0">AILIASpeechApiCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -736,6 +912,24 @@ ailia_speech.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="a28b62e611cf0aba268bc03e422811246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b62e611cf0aba268bc03e422811246">&#9670;&nbsp;</a></span>AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const typedef char* <a class="el" href="ailia__speech_8h.html#a7251d8075e17dd84c1de3097eefd58db">AILIA_SPEECH_USER_API</a>* AILIA_SPEECH_USER_API_AILIA_GET_ERROR_DETAIL </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0e0cb6e4b463dbf02fc5da05a061cedd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e0cb6e4b463dbf02fc5da05a061cedd">&#9670;&nbsp;</a></span>ailiaSpeechBuffered()</h2>
 
@@ -857,7 +1051,7 @@ ailia_speech.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ailia__speech_8h.html#a463906f0b4fd8b081590c4b58c93d3d8">AILIASpeechApiCallback</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="ailia__speech_8h.html#a34a1fdb506aca1b1a5d879510890e5c0">AILIASpeechApiCallback</a>&#160;</td>
           <td class="paramname"><em>callback</em>, </td>
         </tr>
         <tr>
@@ -916,6 +1110,34 @@ ailia_speech.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac42a27beee2a99af9d82b2d0e096147c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42a27beee2a99af9d82b2d0e096147c">&#9670;&nbsp;</a></span>ailiaSpeechFinalizeInputData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaSpeechFinalizeInputData </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIASpeech *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>音声のキューへの投入を終了します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>音声ファイルの末尾であることを通知することで、30秒分のデータが存在しなくてもailiaSpeechBufferedが1を返すようになります。 ailiaSpeechFinalizeInputDataを実行後、ailiaSpeechPushInputDataの実行前に、ailiaSpeechResetTranscribeStateを呼び出す必要があります。 </p>
 
 </div>
 </div>
@@ -1203,6 +1425,34 @@ ailia_speech.h の依存先関係図:</div>
 
 </div>
 </div>
+<a id="aa2bd8f13230a6e1de56340ff188153aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2bd8f13230a6e1de56340ff188153aa">&#9670;&nbsp;</a></span>ailiaSpeechResetTranscribeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaSpeechResetTranscribeState </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIASpeech *&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ネットワークオブジェクトの内部状態を初期化します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIを呼び出すことで、前回のデコード結果などの内部状態を初期化します。 このAPIを呼び出した後、モデルを再び開く必要はありません。 ailiaSpeechOpenModelFile、ailiaSpeechSetIntermediateCallback、ailiaSpeechSetLanguage、ailiaSpeechSetSlilentThreshold、ailiaSpeechSetPromptのステートは保持されます。 </p>
+
+</div>
+</div>
 <a id="a6c25986e571ce83f49b523e2b59607da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c25986e571ce83f49b523e2b59607da">&#9670;&nbsp;</a></span>ailiaSpeechSetIntermediateCallback()</h2>
 
@@ -1285,6 +1535,44 @@ ailia_speech.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す</dd></dl>
 <p>languageに"auto"を指定すると自動選択を行います。 </p>
+
+</div>
+</div>
+<a id="afc09b4840b6664819067a6c765de7958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc09b4840b6664819067a6c765de7958">&#9670;&nbsp;</a></span>ailiaSpeechSetPrompt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaSpeechSetPrompt </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIASpeech *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>prompt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プロンプトの設定を行います。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">prompt</td><td>promptとなるテキスト(UTF8) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す </dd></dl>
 
 </div>
 </div>
@@ -1374,7 +1662,7 @@ ailia_speech.h の依存先関係図:</div>
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
+</a> 1.8.17
 </small></address>
 </body>
 </html>
