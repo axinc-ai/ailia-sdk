@@ -27,6 +27,5 @@ var searchData=
   ['ailiatokenizergettokens_147',['ailiaTokenizerGetTokens',['../struct__AILIASpeechApiCallback.html#ae135d4dc57667b90164ef601c3583d84',1,'_AILIASpeechApiCallback']]],
   ['ailiatokenizerutf32toutf8_148',['ailiaTokenizerUtf32ToUtf8',['../struct__AILIASpeechApiCallback.html#a2b336a6d98ae756359a78dbe6959a5bd',1,'_AILIASpeechApiCallback']]],
   ['ailiatokenizerutf8toutf32_149',['ailiaTokenizerUtf8ToUtf32',['../struct__AILIASpeechApiCallback.html#a96529aff4b7ebb388c369a906d94c40b',1,'_AILIASpeechApiCallback']]],
-  ['ailiaupdate_150',['ailiaUpdate',['../struct__AILIASpeechApiCallback.html#a5bdda798d3ce547304c21fcde991e0b0',1,'_AILIASpeechApiCallback']]],
-  ['avg_5flogprob_151',['avg_logprob',['../struct__AILIASpeechText.html#aaacd8ebd8bce363b7cfca62738ba9de5',1,'_AILIASpeechText']]]
+  ['ailiaupdate_150',['ailiaUpdate',['../struct__AILIASpeechApiCallback.html#a5bdda798d3ce547304c21fcde991e0b0',1,'_AILIASpeechApiCallback']]]
 ];

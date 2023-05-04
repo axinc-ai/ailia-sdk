@@ -28,11 +28,13 @@ var menudata={children:[
 {text:"Class Members",url:"functions.html",children:[
 {text:"All",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
+{text:"c",url:"functions.html#index_c"},
 {text:"l",url:"functions.html#index_l"},
 {text:"p",url:"functions.html#index_p"},
 {text:"t",url:"functions.html#index_t"}]},
 {text:"Variables",url:"functions_vars.html",children:[
 {text:"a",url:"functions_vars.html#index_a"},
+{text:"c",url:"functions_vars.html#index_c"},
 {text:"l",url:"functions_vars.html#index_l"},
 {text:"p",url:"functions_vars.html#index_p"},
 {text:"t",url:"functions_vars.html#index_t"}]}]}]},

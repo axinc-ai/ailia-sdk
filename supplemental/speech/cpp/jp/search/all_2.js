@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['index_2dc_2edox_95',['index-c.dox',['../index-c_8dox.html',1,'']]]
+  ['confidence_94',['confidence',['../struct__AILIASpeechText.html#a938e4d0e10666db86d42965fab9f94ea',1,'_AILIASpeechText']]]
 ];

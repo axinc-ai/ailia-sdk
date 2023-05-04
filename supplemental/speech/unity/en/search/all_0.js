@@ -117,6 +117,5 @@ var searchData=
   ['ailiatokenizerutf32toutf8_114',['ailiaTokenizerUtf32ToUtf8',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#abed087a934b613dcc3be8b8d7430da29',1,'AiliaSpeech.AILIASpeechApiCallback.ailiaTokenizerUtf32ToUtf8()'],['../classAiliaSpeech.html#a9ae830cfdd5bb2d4c80ef38c0060c3f6',1,'AiliaSpeech.ailiaTokenizerUtf32ToUtf8()']]],
   ['ailiatokenizerutf8toutf32_115',['ailiaTokenizerUtf8ToUtf32',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a3bbf84a349dc9e75e341c60621186848',1,'AiliaSpeech.AILIASpeechApiCallback.ailiaTokenizerUtf8ToUtf32()'],['../classAiliaSpeech.html#abcd34e2fb6652756d0d034ca9cb79a98',1,'AiliaSpeech.ailiaTokenizerUtf8ToUtf32()']]],
   ['ailiaupdate_116',['ailiaUpdate',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a10da6e886e39dc518336f4c56c321191',1,'AiliaSpeech::AILIASpeechApiCallback']]],
-  ['avg_5flogprob_117',['avg_logprob',['../classAiliaSpeech_1_1AILIASpeechText.html#ac0f7175a5f0125aec37e5300332cb74f',1,'AiliaSpeech::AILIASpeechText']]],
-  ['ailia_20speech_20unity_20plugin_20document_118',['ailia Speech Unity Plugin Document',['../index.html',1,'']]]
+  ['ailia_20speech_20unity_20plugin_20document_117',['ailia Speech Unity Plugin Document',['../index.html',1,'']]]
 ];

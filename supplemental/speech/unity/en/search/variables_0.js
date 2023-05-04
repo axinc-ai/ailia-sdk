@@ -38,6 +38,5 @@ var searchData=
   ['ailiatokenizergettokens_278',['ailiaTokenizerGetTokens',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a64dbe2438ce47eef72b97e1a789be710',1,'AiliaSpeech::AILIASpeechApiCallback']]],
   ['ailiatokenizerutf32toutf8_279',['ailiaTokenizerUtf32ToUtf8',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#abed087a934b613dcc3be8b8d7430da29',1,'AiliaSpeech::AILIASpeechApiCallback']]],
   ['ailiatokenizerutf8toutf32_280',['ailiaTokenizerUtf8ToUtf32',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a3bbf84a349dc9e75e341c60621186848',1,'AiliaSpeech::AILIASpeechApiCallback']]],
-  ['ailiaupdate_281',['ailiaUpdate',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a10da6e886e39dc518336f4c56c321191',1,'AiliaSpeech::AILIASpeechApiCallback']]],
-  ['avg_5flogprob_282',['avg_logprob',['../classAiliaSpeech_1_1AILIASpeechText.html#ac0f7175a5f0125aec37e5300332cb74f',1,'AiliaSpeech::AILIASpeechText']]]
+  ['ailiaupdate_281',['ailiaUpdate',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html#a10da6e886e39dc518336f4c56c321191',1,'AiliaSpeech::AILIASpeechApiCallback']]]
 ];

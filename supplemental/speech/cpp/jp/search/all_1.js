@@ -91,6 +91,5 @@ var searchData=
   ['ailiatokenizerutf32toutf8_90',['ailiaTokenizerUtf32ToUtf8',['../struct__AILIASpeechApiCallback.html#a2b336a6d98ae756359a78dbe6959a5bd',1,'_AILIASpeechApiCallback']]],
   ['ailiatokenizerutf8toutf32_91',['ailiaTokenizerUtf8ToUtf32',['../struct__AILIASpeechApiCallback.html#a96529aff4b7ebb388c369a906d94c40b',1,'_AILIASpeechApiCallback']]],
   ['ailiaupdate_92',['ailiaUpdate',['../struct__AILIASpeechApiCallback.html#a5bdda798d3ce547304c21fcde991e0b0',1,'_AILIASpeechApiCallback']]],
-  ['avg_5flogprob_93',['avg_logprob',['../struct__AILIASpeechText.html#aaacd8ebd8bce363b7cfca62738ba9de5',1,'_AILIASpeechText']]],
-  ['ailia_20speech_20sdk_20document_94',['ailia Speech SDK Document',['../index.html',1,'']]]
+  ['ailia_20speech_20sdk_20document_93',['ailia Speech SDK Document',['../index.html',1,'']]]
 ];
