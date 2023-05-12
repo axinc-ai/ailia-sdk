@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['language',['language',['../classAiliaSpeech_1_1AILIASpeechText.html#a9a5e887fbe56dca4d38525479ecf2366',1,'AiliaSpeech::AILIASpeechText']]],
-  ['library_5fname',['LIBRARY_NAME',['../classAiliaSpeech.html#abed14a1a0e2f5944f304b93e6469d7c0',1,'AiliaSpeech']]]
+  ['confidence_280',['confidence',['../classAiliaSpeech_1_1AILIASpeechText.html#a987789b157b5b597d3866e63c1e270af',1,'AiliaSpeech::AILIASpeechText']]]
 ];
