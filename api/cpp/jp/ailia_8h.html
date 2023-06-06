@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.14.0</span>
+   &#160;<span id="projectnumber">1.2.14.1</span>
    </div>
   </td>
  </tr>
@@ -388,6 +388,9 @@ ailia.h の依存先関係図:</div>
 <tr class="memitem:aee14bb4905c03773fa6cfc5e12c6d3e2"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#aee14bb4905c03773fa6cfc5e12c6d3e2">ailiaGetBlobIndexByOutputIndex</a> (struct AILIANetwork *net, unsigned int *blob_idx, unsigned int output_blob_idx)</td></tr>
 <tr class="memdesc:aee14bb4905c03773fa6cfc5e12c6d3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力データ(Blob)のインデックスを取得します  <a href="#aee14bb4905c03773fa6cfc5e12c6d3e2">[詳解]</a><br /></td></tr>
 <tr class="separator:aee14bb4905c03773fa6cfc5e12c6d3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865e48144eec824919f6e8f0347ec415"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a865e48144eec824919f6e8f0347ec415">ailiaFinalize</a> (void)</td></tr>
+<tr class="memdesc:a865e48144eec824919f6e8f0347ec415"><td class="mdescLeft">&#160;</td><td class="mdescRight">ailiaがグローバルに確保したGPUリソース等を解放します  <a href="#a865e48144eec824919f6e8f0347ec415">[詳解]</a><br /></td></tr>
+<tr class="separator:a865e48144eec824919f6e8f0347ec415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49d3d1e288501e4752f348fa9ee32e86"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a49d3d1e288501e4752f348fa9ee32e86">ailiaSetTemporaryCachePathA</a> (const char *cache_dir)</td></tr>
 <tr class="memdesc:a49d3d1e288501e4752f348fa9ee32e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時キャッシュディレクトリを指定します  <a href="#a49d3d1e288501e4752f348fa9ee32e86">[詳解]</a><br /></td></tr>
 <tr class="separator:a49d3d1e288501e4752f348fa9ee32e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -424,7 +427,7 @@ ailia.h の依存先関係図:</div>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>推論ライブラリ </p>
 <dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ax Inc. </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2022/10/22 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2023/05/26 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a1c6a80cf85ef33500663112959784400"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c6a80cf85ef33500663112959784400">&#9670;&nbsp;</a></span>AILIA_API</h2>
@@ -1557,6 +1560,28 @@ ailia.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
 <p>レイヤー統合により取得できなくなるBlobを取得する必要がある場合などに用います。 <a class="el" href="ailia_8h.html#aafbaa89c853a043c6e2961f6a72e820e" title="ネットワークオブジェクトを作成します。 ">ailiaCreate()</a> の直後に指定する必要があります。ailiaOpenを呼び出した後は変更することができません。 なお、レイヤー統合を無効化すると推論速度が低下する場合があります。 </p>
+
+</div>
+</div>
+<a id="a865e48144eec824919f6e8f0347ec415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865e48144eec824919f6e8f0347ec415">&#9670;&nbsp;</a></span>ailiaFinalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaFinalize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ailiaがグローバルに確保したGPUリソース等を解放します </p>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返します。</dd></dl>
+<p><a class="el" href="ailia_8h.html#aafbaa89c853a043c6e2961f6a72e820e" title="ネットワークオブジェクトを作成します。 ">ailiaCreate()</a> で作成したインスタンス全てを <a class="el" href="ailia_8h.html#a71302da162d556efbe637cdeb47b25a0" title="ネットワークオブジェクトを破棄します。 ">ailiaDestroy()</a> で解放した状態で呼び出す必要があります。 それ以外の状態で呼び出された場合 #ref AILIA_STATUS_INVALID_STATE を返します。 Windows 環境の場合、DllMain 等からこの API を呼び出すとデッドロックする可能性があります。 </p>
 
 </div>
 </div>

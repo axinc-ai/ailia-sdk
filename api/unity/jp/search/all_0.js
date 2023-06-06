@@ -169,6 +169,7 @@ var searchData=
   ['ailiafeatureextractormodel',['AiliaFeatureExtractorModel',['../classAiliaFeatureExtractorModel.html',1,'']]],
   ['ailiafeatureextractormodel_2ecs',['AiliaFeatureExtractorModel.cs',['../AiliaFeatureExtractorModel_8cs.html',1,'']]],
   ['ailiafilecallback',['ailiaFileCallback',['../structAilia_1_1ailiaFileCallback.html',1,'Ailia']]],
+  ['ailiafinalize',['ailiaFinalize',['../classAilia.html#a5bcf76670d6c830cbfe67ed1f841e69a',1,'Ailia']]],
   ['ailiafindblobindexbyname',['ailiaFindBlobIndexByName',['../classAilia.html#ab39a2620adbf90d400205978125cb155',1,'Ailia']]],
   ['ailiafindblobnamebyindex',['ailiaFindBlobNameByIndex',['../classAilia.html#a4fb6bab0f8dca13f5d052fcf8aef2986',1,'Ailia']]],
   ['ailiaformat',['AiliaFormat',['../classAiliaFormat.html',1,'']]],
