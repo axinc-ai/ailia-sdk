@@ -43,6 +43,7 @@ var searchData=
   ['ailiadisablelayerfusion',['ailiaDisableLayerFusion',['../ailia_8h.html#a297ff8e716e400b68b596bbd2b5b700e',1,'ailia.h']]],
   ['ailiafeatureextractorcompute',['ailiaFeatureExtractorCompute',['../ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066',1,'ailia_feature_extractor.h']]],
   ['ailiafeatureextractormatch',['ailiaFeatureExtractorMatch',['../ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e',1,'ailia_feature_extractor.h']]],
+  ['ailiafinalize',['ailiaFinalize',['../ailia_8h.html#a865e48144eec824919f6e8f0347ec415',1,'ailia.h']]],
   ['ailiafindblobindexbyname',['ailiaFindBlobIndexByName',['../ailia_8h.html#a9d2c9139987018fbc2f0cdda54345cb9',1,'ailia.h']]],
   ['ailiafindblobnamebyindex',['ailiaFindBlobNameByIndex',['../ailia_8h.html#ac6a57c4e31361e8a0cdb9bc94d344616',1,'ailia.h']]],
   ['ailiaformatconvert',['ailiaFormatConvert',['../ailia__format_8h.html#a90f2c5d523a99bf351858b0a88247fe5',1,'ailia_format.h']]],

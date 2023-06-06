@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ailia.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ailia.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import OutputModule from './ailia_s.js';
+
+function isNodeRuntime() {
+    // Note that here
+    //    typeof navigator === 'undefined'
+    // and
+    //    navigator === undefined
+    // are not the same. On Node runtime, the former will run whereas the latter will throw.
+    return Boolean(typeof navigator === 'undefined');
+}
+
+let os;
+if (isNodeRuntime()) {
+    os = await import('os');
+}
+export const Module = {};
+
+// AILIA class interface
+
+function stringToArrayBuffer(str) {
+    const bufView = new Uint8Array(str.length + 1);
+    const strLen = str.length;
+
+    for (let i = 0; i &lt; strLen; i++) {
+        bufView[i] = str.charCodeAt(i);
+    }
+
+    bufView[str.length] = 0;
+
+    return bufView;
+}
+
+function jsStringToWasm(str) {
+    const pathstr = stringToArrayBuffer(str);
+    const strBuff = Module._malloc(pathstr.length * pathstr.BYTES_PER_ELEMENT);
+    Module.HEAP8.set(pathstr, strBuff / 1);
+    return strBuff;
+}
+
+function nativeStringToJsString(ptr, maxChars = 30) {
+    let i = 0;
+    let res = '';
+
+    while (i &lt; maxChars) {
+        const c = Module.HEAP8[ptr + i];
+        if (c === 0) {
+            break;
+        }
+        res += String.fromCharCode(c);
+        i++;
+    }
+
+    return res;
+}
+
+function arraysEqual(a, b) {
+  if (a === b) {
+      return true;
+  }
+  if (!a || !b || a.length !== b.length) {
+      return false;
+  }
+
+  for (let i = 0; i &lt; a.length; ++i) {
+    if (a[i] !== b[i]) {
+        return false;
+    }
+  }
+  return true;
+}
+
+const SIZE_OF_U32 = 4;
+const SIZE_OF_F32 = 4;
+const SIZE_OF_POINTER = 4; // Need to change to 8 when (if) WASM become 64 bits.
+const SIZE_OF_AILIA_SHAPE = 5;
+const AILIA_SHAPE_VERSION = 1;
+
+class AiliaShape {
+    constructor(...dims) {
+        this.dims = dims.filter(dim => Boolean(dim));
+        this.dim = this.dims.length;
+
+        this.x = dims[0];
+        this.y = dims[1] || 1;
+        this.z = dims[2] || 1;
+        this.w = dims[3] || 1;
+    }
+}
+
+/** Class representing an Ailia instance. */
+export class Ailia {
+
+    /**
+     * Create an instance of Ailia.
+     */
+    constructor() {
+        if (Ailia.isInitialized === false) {
+            throw new Error('Ailia has not yet been initialized.');
+        }
+
+        this.Module = Module;
+        this.ailiaDoublePointer = new DoublePointer(Module);
+        const envid = -1; // auto
+        const multhread = isNodeRuntime() ? os.cpus().length : navigator.hardwareConcurrency;
+        const status = Module.ccall('ailiaCreate', 'number', ['number', 'number', 'number'], [this.ailiaDoublePointer.getDoublePointer(), envid, multhread]);
+        if (status !== 0) {
+            throw new Error(`Could not create the Ailia instance. Error status: ${status}`);
+        }
+        this.blobCountRef = Module._malloc(SIZE_OF_POINTER); // unsigned int
+        this.inputBuffers = null;
+        this.outputBuffers = null;
+    }
+
+    static isInitialized = false;
+
+    /**
+     * Initialization of the Ailia WASM module.
+     * This must be called exactly once, before creating any Ailia instance.
+     */
+    static async initialize() {
+        const ModuleLoaded = await OutputModule(Module);
+        await ModuleLoaded.ready;
+        Ailia.isInitialized = true;
+    }
+
+    /**
+     * Destructor of an Ailia instance.
+     * Needs to be called to deallocate all WASM memory, once finished to use the Ailia model.
+     */
+    destroy() {
+        if (this.shapeRef) {
+            Module._free(this.shapeRef);
+            Module._free(this.blobCountRef);
+            this._destroyInputBuffers();
+            this._destroyOutputBuffers();
+        }
+        Module.ccall('ailiaDestroy', null, ['number'], [this.ailiaDoublePointer.getPointer()]);
+        this.ailiaDoublePointer.dispose();
+    }
+
+    _getNumberStringArray(n) {
+        if (!this._numberStringArray) {
+            this._numberStringArray = {};
+        }
+
+        let numberArray = this._numberStringArray[n];
+
+        if (!numberArray) {
+            numberArray = [];
+            for (let i = 0; i &lt; n; i++) {
+                numberArray.push('number');
+            }
+            this._numberStringArray[n] = numberArray;
+        }
+
+        return numberArray;
+    }
+
+    call(nativeFunctionName, returnType, argumentsArray) {
+        const status = Module.ccall(
+            nativeFunctionName,
+            returnType,
+            this._getNumberStringArray(argumentsArray.length),
+            argumentsArray
+        );
+
+        if (status !== 0) {
+            const error = new Error(`${nativeFunctionName} error. Status: ${status}`);
+            error.ailiaStatus = status;
+            throw error;
+        }
+    }
+
+    /**
+     * Get the Ailia version.
+     * @return {string} A string identifying the current version.
+     */
+    static version() {
+        const ptr = Module.ccall('ailiaGetVersion', 'number', [], []);
+        return nativeStringToJsString(ptr);
+    }
+
+    static getExceptionMessage(arg) {
+        const ptr = Module.ccall('getExceptionMessage', 'number', ['number'], [arg]);
+        return nativeStringToJsString(ptr);
+    }
+
+    getErrorDetail(maxChars = 255) {
+        const ptr = Module.ccall('ailiaGetErrorDetail', 'number', ['number'], [this.ailiaDoublePointer.getPointer()]);
+        return nativeStringToJsString(ptr, maxChars);
+    }
+
+    _destroyBuffers(buffersObject) {
+        if (buffersObject === null) {
+            return;
+        }
+
+        if (Array.isArray(buffersObject?.byIndex)) {
+            for (const b of buffersObject.byIndex) { // b = {shape: Array&lt;Int>, size: Int, buffer: AiliaBuffer, ...}
+                if (b.buffer) {
+                    Ailia.free(b.buffer);
+                }
+            }
+        }
+        buffersObject = null;
+    }
+
+    _destroyOutputBuffers() {
+        this._destroyBuffers(this.outputBuffers);
+    }
+
+    _destroyInputBuffers() {
+        this._destroyBuffers(this.inputBuffers);
+    }
+
+    _buildInputBuffersStructure() {
+        this.inputBuffers = {byIndex: [], byName: {}};
+
+        let inputBlobs = this._getInputBlobList();
+
+        for (const [i, blobIndex] of inputBlobs.entries()) {
+            let name = this._getBlobNameByIndex(blobIndex);
+            this.inputBuffers.byIndex[i] = {
+                blobIndex,
+                shape: [],
+                size: 0,
+                buffer: null,
+                inputIndex: i,
+                name: this.inputBuffers.byIndex[i],
+                leavePreviousData: false
+            };
+            this.inputBuffers.byName[name] = this.inputBuffers.byIndex[i];
+        }
+    }
+
+    _buildOutputBuffersStructure() {
+        this.outputBuffers = {byIndex: [], byName: {}};
+
+        let outputBlobs = this._getOutputBlobList();
+
+        for (const [i, blobIndex] of outputBlobs.entries()) {
+            this.outputBuffers.byIndex[i] = {blobIndex, shape:[], size: 0, buffer: null, outputIndex: i};
+            let name = this._getBlobNameByIndex(blobIndex);
+            this.outputBuffers.byName[name] = this.outputBuffers.byIndex[i];
+            this.outputBuffers.byIndex[i].name = name;
+        }
+    }
+
+    // If shapes=[], the default inputs shapes of the model are used.
+    // If shapes != [], and if there are undefined elements in this array, the corresponding
+    // inputs use the default initializer or the preexisting buffers, and if there are
+    // some shapes of length 0 in this array, the corresponding inputs use the default inputs shapes of
+    // the mdoel.
+    _updateInputBuffers(shapes=[]) { // shapes: array&lt;int>, can be of length>4
+        if (shapes.length !== 0) {
+            if (shapes.length > this.inputBuffers.byIndex.length) {
+                throw new Error(`Error in _updateInputBuffers(): the shapes argument must contain at most as many elements as there are input buffers (${this.inputBuffers.byIndex.length})`);
+            } else if (shapes.length &lt; this.inputBuffers.byIndex.length) {
+                // complete with undefined elements,
+                // so that it will force to use previously any defined buffer or the model's initializer
+                shapes[this.inputBuffers.byIndex.length - 1] = undefined;
+            }
+        }
+
+        if (shapes.length === 0 &amp;&amp; this.inputBuffers.byIndex.length > 0) {
+            // use the input shapes defined in the model
+            for (const b of this.inputBuffers.byIndex) {
+                b.shape = this._getBlobShape(b.blobIndex); // ShapeND array, size can also be > 4
+                b.size = Ailia._sizeOfShape(b.shape);
+                if (b.size > b.buffer.Float32.length) {
+                    if (b.buffer) {
+                        Ailia.free(b.buffer);
+                    }
+                    b.buffer = Ailia.allocateNew(b.size * SIZE_OF_F32);
+                }
+                b.leavePreviousData = false;
+            }
+            return;
+        }
+
+        for (const [i, b] of this.inputBuffers.byIndex.entries()) {
+            if (typeof shapes[i] === 'undefined') {
+                // Use initializer of previous buffer,
+                // so don't touch the current buffer (or don't create it if it does not exist)
+                // and set the leavePreviousData flag to true.
+                b.leavePreviousData = true;
+            } else if (shapes[i].length === 0) {
+                // Use the input shape defined in the model
+                b.shape = this._getBlobShape(b.blobIndex); // ShapeND array, size can also be > 4
+                b.size = Ailia._sizeOfShape(b.shape);
+                if (b.size > b.buffer.Float32.length) {
+                    if (b.buffer) {
+                        Ailia.free(b.buffer);
+                    }
+                    b.buffer = Ailia.allocateNew(b.size * SIZE_OF_F32);
+                }
+                b.leavePreviousData = false;
+            } else if (!arraysEqual(shapes[i], b.shape)) {
+                b.shape = shapes[i]; // ShapeND array, size can also be > 4
+                // update the shape in the model
+                b.size = Ailia._sizeOfShape(b.shape);
+                this._setInputBlobShape(b.blobIndex, b.shape);
+                if (b.size > b.buffer.Float32.length) {
+                    if (b.buffer) {
+                        Ailia.free(b.buffer);
+                    }
+                    b.buffer = Ailia.allocateNew(b.size * SIZE_OF_F32);
+                }
+                b.leavePreviousData = false;
+            }
+        }
+    }
+
+    _updateOutputBuffers() {
+        // use the input shapes defined in the model
+        for (const b of this.outputBuffers.byIndex) {
+            b.shape = this._getBlobShape(b.blobIndex); // ShapeND array, size can also be > 4
+            b.size = Ailia._sizeOfShape(b.shape);
+            if (b.size > b.buffer.Float32.length) {
+                if (b.buffer) {
+                    Ailia.free(b.buffer);
+                }
+                b.buffer = Ailia.allocateNew(b.size * SIZE_OF_F32);
+            }
+            this._getBlobData(b.buffer, b.blobIndex);
+        }
+    }
+
+    /**
+     * Loads an ONNX model file for the Ailia instance.
+     * @param {File} Model file (often named with an extension ".onnx.prototxt")
+     * @return {boolean} True if no error, or False of any error occurred.
+     */
+    loadModel(modelFile) {
+        const dataModel = new Uint8Array(modelFile);
+        Module['FS_createDataFile']('/', 'modelfile', dataModel, true, true, true);
+        const modelFilenameBuffer = jsStringToWasm('/modelfile');
+        const status = Module.ccall('ailiaOpenStreamFileA', 'number', ['number', 'number'], [this.ailiaDoublePointer.getPointer(), modelFilenameBuffer]);
+
+        if (status !== 0) {
+            console.error(`ailiaOpenStreamFileA error: ${status} (${this.getErrorDetail()})`);
+        }
+
+        Module._free(modelFilenameBuffer);
+        Module['FS_unlink']('/modelfile');
+
+        this._destroyInputBuffers();
+        this._destroyOutputBuffers();
+
+        return status === 0;
+
+    }
+
+    /**
+     * Loads an ONNX weights file for the Ailia instance.
+     * @param {File} Weights file (often named with an extension ".onnx")
+     * @return {boolean} True if no error, or False of any error occurred.
+     */
+    loadWeights(weightsFile) {
+        const dataWeights = new Uint8Array(weightsFile);
+        Module['FS_createDataFile']('/', 'weightsfile', dataWeights, true, true, true);
+        const weightsFilenameBuffer = jsStringToWasm('/weightsfile');
+        const status = Module.ccall('ailiaOpenWeightFileA', 'number', ['number', 'number'], [this.ailiaDoublePointer.getPointer(), weightsFilenameBuffer]);
+
+        if (status !== 0) {
+            console.error(`ailiaOpenWeightFileA error: ${status} (${this.getErrorDetail()})`);
+        }
+
+        Module._free(weightsFilenameBuffer);
+        Module['FS_unlink']('/weightsfile');
+
+        this._destroyInputBuffers();
+        this._destroyOutputBuffers();
+
+        return status === 0;
+    }
+
+    /**
+     * Loads both an ONNX model file and the associated weights file, for the Ailia instance.
+     * @param {File} model The model file (often named with an extension ".onnx.prototxt")
+     * @param {File} weights The weights file (often named with an extention ".onnx")
+     */
+    loadModelAndWeights(model, weights) {
+
+        if (this.loadModel(model) === false) {
+            return false;
+        }
+
+        if (this.loadWeights(weights) === false) {
+            return false;
+        }
+
+        return true;
+    }
+
+    _getBlobNameByIndex(index) {
+        let status = Module.ccall('ailiaGetBlobNameLengthByIndex', 'number', ['number', 'number', 'number'], [this.ailiaDoublePointer.getPointer(), index, this.blobCountRef]);
+        if (status !== 0) {
+            console.error(`ailiaGetBlobNameLengthByIndex error: ${status} (${this.getErrorDetail()})`);
+        }
+        let blobNameLength = Module.HEAPU32[this.blobCountRef / 4];
+
+        let nameBuffer = Ailia.allocateNew(blobNameLength);
+        try {
+            status = Module.ccall('ailiaFindBlobNameByIndex', 'number', ['number', 'number', 'number'], [this.ailiaDoublePointer.getPointer(), nameBuffer.byteOffset, blobNameLength, index]);
+            if (status !== 0) {
+                console.error(`ailiaFindBlobNameByIndex error: ${status} (${this.getErrorDetail()})`);
+            }
+            let blobName = nativeStringToJsString(nameBuffer.byteOffset);
+        } finally {
+            Ailia.free(nameBuffer);
+        }
+
+        return blobName;
+    }
+
+    _getInputBlobCount() {
+        let status = Module.ccall('ailiaGetInputBlobCount', 'number', ['number', 'number'], [this.ailiaDoublePointer.getPointer(), this.blobCountRef]);
+        if (status !== 0) {
+            console.error(`ailiaGetInputBlobCount error: ${status} (${this.getErrorDetail()})`);
+        }
+        let inputBlobCount = Module.HEAPU32[this.blobCountRef / 4];
+        return inputBlobCount;
+    }
+
+    _getOutputBlobCount() {
+        let status = Module.ccall('ailiaGetOutputBlobCount', 'number', ['number', 'number'], [this.ailiaDoublePointer.getPointer(), this.blobCountRef]);
+        if (status !== 0) {
+            console.error(`ailiaGetOutputBlobCount error: ${status} (${this.getErrorDetail()})`);
+        }
+        let outputBlobCount = Module.HEAPU32[this.blobCountRef / 4];
+        return outputBlobCount;
+    }
+
+    _getInputShape() {
+        this.ensureShapeRefAllocation();
+
+        try {
+            this.call('ailiaGetInputShape', 'number', [this.ailiaDoublePointer.getPointer(), this.shapeRef, AILIA_SHAPE_VERSION]);
+        } catch (e) {
+            console.error(`Call to ailiaGetInputShape failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+
+        const x = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 0];
+        const y = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 1];
+        const z = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 2];
+        const w = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 3];
+        const dim = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 4];
+
+        return new AiliaShape(
+            x,
+            (dim > 1 ? y : 0),
+            (dim > 2 ? z : 0),
+            (dim > 3 ? w : 0),
+        );
+    }
+
+    _getOutputShape() {
+        this.ensureShapeRefAllocation();
+
+        try {
+            this.call('ailiaGetOutputShape', 'number', [this.ailiaDoublePointer.getPointer(), this.shapeRef, AILIA_SHAPE_VERSION]);
+        } catch (e) {
+            console.error(`Call to ailiaGetOutputShape failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+
+        const x = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 0];
+        const y = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 1];
+        const z = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 2];
+        const w = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 3];
+        const dim = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 4];
+
+        return new AiliaShape(
+            x,
+            (dim > 1 ? y : 0),
+            (dim > 2 ? z : 0),
+            (dim > 3 ? w : 0),
+        );
+    }
+
+    _getBlobIndexByInputIndex(inputIndex) {
+        try {
+            this.call('ailiaGetBlobIndexByInputIndex', 'number', [this.ailiaDoublePointer.getPointer(), this.blobCountRef, inputIndex]);
+        } catch(e) {
+            console.error(`Call to ailiaGetBlobIndexByInputIndex failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+        let blobIndex = Module.HEAPU32[this.blobCountRef / 4];
+        return blobIndex;
+    }
+
+    _getBlobIndexByOutputIndex(outputIndex) {
+        try {
+            this.call('ailiaGetBlobIndexByOutputIndex', 'number', [this.ailiaDoublePointer.getPointer(), this.blobCountRef, outputIndex]);
+        } catch(e) {
+            console.error(`Call to ailiaGetBlobIndexByOutputIndex failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+        let blobIndex = Module.HEAPU32[this.blobCountRef / 4];
+        return blobIndex;
+    }
+
+    _getInputBlobList() {
+        let list = [];
+        let inputsNb = this._getInputBlobCount();
+        for (let i = 0; i &lt; inputsNb; ++i) {
+            let blobIndex = this._getBlobIndexByInputIndex(i);
+            list.push(blobIndex);
+        }
+        return list;
+    }
+
+    _getOutputBlobList() {
+        let list = [];
+        let outputsNb = this._getOutputBlobCount();
+        for (let i = 0; i &lt; outputsNb; ++i) {
+            let blobIndex = this._getBlobIndexByOutputIndex(i);
+            list.push(blobIndex);
+        }
+        return list;
+    }
+
+    _getBlobDim(blobIndex) {
+        try {
+            this.call('ailiaGetBlobDim', 'number', [this.ailiaDoublePointer.getPointer(), this.blobCountRef, blobIndex]);
+        } catch(e) {
+            console.error(`Call to ailiaGetBlobDim failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+        let blobRank = Module.HEAPU32[this.blobCountRef / 4];
+        return blobRank;
+    }
+
+    static _sizeOfShape(shape) { //shape as an array, can be of length > 4
+        // returns 0 if the shape is empty, throws if the shape is invalid (if it contains null or negative integers)
+        if (shape.length === 0) {
+            return 0;
+        }
+        let size = 1;
+        for (const d of shape) {
+            if (d &lt;= 0) {
+                throw new Error("Invalid shape: all dimensions must be strictly positive integers");
+            }
+            size *= d;
+        }
+        return size;
+    }
+
+    _getBlobShape(blobIndex) {
+        let rank = this._getBlobDim(blobIndex);
+
+        let dimArray = Ailia.allocateNew(rank * SIZE_OF_U32);
+        try {
+
+            try {
+                // ShapeND is a n-dimensional shape (i.e. where n can have any natural value including > 4), with the lesser dimensions at the end
+                // (i.e. if there is an x dimension it would be the last item of the array, a y dimension the before-last, etc.)
+                this.call('ailiaGetBlobShapeND', 'number', [this.ailiaDoublePointer.getPointer(), dimArray.byteOffset, rank, blobIndex]);
+            } catch(e) {
+                console.error(`Call to ailiaGetBlobShapeND failed`);
+                console.error(this.getErrorDetail());
+                throw e;
+            }
+
+            let returnedNDShape = [];
+            for (let i = 0; i &lt; rank; i++) {
+                returnedNDShape.push(dimArray.Int32[i]);
+            }
+
+        } finally {
+            Ailia.free(dimArray);
+        }
+
+        return returnedNDShape;
+    }
+
+    _update() {
+        try {
+            this.call('ailiaUpdate', 'number', [this.ailiaDoublePointer.getPointer()]);
+        } catch(e) {
+            console.error(`Call to ailiaUpdate failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+    }
+
+    _setInputBlobData(input, blobIndex) { // input is an AiliaBuffer
+        try {
+            this.call('ailiaSetInputBlobData', 'number', [this.ailiaDoublePointer.getPointer(), input.byteOffset, input.byteLength, blobIndex]);
+        } catch(e) {
+            console.error(`Call to ailiaSetInputBlobData failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+    }
+
+    _getBlobData(output, blobIndex) { // output is an AiliaBuffer
+        try {
+            this.call('ailiaGetBlobData', 'number', [this.ailiaDoublePointer.getPointer(), output.byteOffset, output.byteLength, blobIndex]);
+        } catch(e) {
+            console.error(`Call to ailiaGetBlobData failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+    }
+
+    /**
+     * Function to call to perform inference.
+     * @callback preprocessCallback
+     * @callback postprocessCallback
+     * @param {Object[]|preprocessCallback} dataOrCallback The data to input, or a callback that will fill the input buffers.
+     * @param {number[]} dataOrCallback[] Array of numbers, representing one of the inputs of the inference.
+     * @param {postprocessCallback|null} postprocessingCallback The callback to perform postprocessing (null to use the default postprocessing with Float32)
+     * @param {Object[]} [shapes] Array of shapes of the input data. If absent or empty, the model will be queried for the default input shapes.
+     * @param {number[]} shapes[] Array of integers, representing the shape of a tensor.
+     * @return {Object[]} Array of objects, each representing one output of the inference
+     */
+    run(dataOrCallback, postprocessingCallback, shapes = []) {
+
+        let callback = null;
+        let data = null;
+        let needToWriteDataInBuffers = false;
+        let preparedBuffers = null;
+
+        if (typeof dataOrCallback === "function") {
+            callback = dataOrCallback;
+        } else if (Array.isArray(data)) {
+            data = dataOrCallback;
+        } else {
+            throw new Error("Error in run(): the dataOrCallback argument is not a function nor an array of arrays");
+        }
+
+        if (data !== null) { // in this case, there is no callback
+
+            if (data.length === 0) {
+                // even if shapes argument was not empty, make it empty
+                shapes = [];
+            } else {
+
+                if (data[0].constructor.name === "Tensor") {
+                    preparedBuffers = [];
+                    // ignore shapes argument, if shapes argument not empty, error
+                    if (shapes.length > 0) {
+                        throw new Error("Error in run(): when the data argument is made of Tensors, the shapes argument should be an empty array");
+                    }
+                    // attach the tensor buffers to this.inputBuffers
+                    for (const t of data) {
+                        // TODO
+                        //shapes.push(t.shape);
+                        //preparedBuffers.push(t.buffer);
+                        throw new Error("Error in run(): the use of tensors for the data argument is not yet implemented");
+                    }
+                } else { // data is arrays (presumably of numbers)
+                    // if we use data, and if data elements are not tensors, we need the shapes
+                    if (shapes.length !== data.length) {
+                        throw new Error("Error in run(): when using an array for the data argument, the shapes argument must have the same length");
+                    }
+                    // write the data in buffers
+                    // prepare a flag to do it later
+                    needToWriteDataInBuffers = true;
+                }
+
+            }
+
+        }
+
+        if (this.inputBuffers === null) { // if inputBuffers structure not yet built
+            this._buildInputBuffersStructure();
+        }
+
+        this._updateInputBuffers(shapes);
+
+        if (callback) {
+
+            callback(this.inputBuffers);
+
+        } else if (needToWriteDataInBuffers) { // skipped if data is made of Tensors (buffers already allocated)
+
+            for (const [i, d] of data.entries()) {
+                // A null or undefined data element is skipped:
+                // this is useful in conjunction with shapes[i]=undefined
+                // to use default initializers, or previous buffers without touching them.
+                if (typeof d === 'undefined' || d === null) {
+                    continue;
+                }
+
+                if (Array.isArray(d) === false) {
+                    throw new Error("Error in run(): the data argument is not an array of tensors or an array of arrays");
+                }
+                if (d.length !== this.inputBuffers.byIndex[i].size) {
+                    throw new Error(`Error in run(): the ${i}-th data element does not have the size deduced from the shapes argument`);
+                }
+                for (const [j, e] of d.entries()) {
+                    this.inputBuffers.byIndex[i].Float32[j] = e;
+                }
+            }
+        }
+
+        for (const [i, b] of this.inputBuffers.byIndex.entries()) {
+            if (b.leavePreviousData === false) {
+                this._setInputBlobData(b.buffer, b.blobIndex);
+            }
+        }
+
+        this._update();
+
+        // do something for output blob data
+
+        if (this.outputBuffers === null) { // if outputBuffers structure not yet built
+            this._buildOutputBuffersStructure();
+        }
+
+        this._updateOutputBuffers();
+
+        if (postprocessingCallback !== null &amp;&amp; typeof postprocessingCallback !== 'function') {
+            throw new Error('Error in run(): the postprocessingCallback argument must be either null or of type function');
+        }
+
+        let result;
+
+        if (postprocessingCallback === null) {
+            for (const [i, output] of this.outputBuffers.byIndex.entries()) {
+                let outputArray = new Array(output.size);
+                for (const [j, e] of output.buffer.Float32.entries()) {
+                    outputArray[j] = e;
+                }
+                result.push(outputArray);
+            }
+        } else {
+            result = postprocessingCallback(this.outputBuffers);
+        }
+
+        return result;
+    }
+
+
+    // -- Memory management methods
+
+    static free(ailiaBuffer) {
+        ailiaBuffer._markFreed();
+        if (ailiaBuffer._isFreeable) {
+            Module._free(ailiaBuffer.byteOffset);
+        }
+    }
+
+    static allocateNew(size) {
+        const ptr = Module._malloc(size);
+        return new AiliaBuffer(Module.HEAP8.buffer, ptr, size, true);
+    }
+
+    static fromAllocated(ptr, size) {
+        return new AiliaBuffer(Module.HEAP8.buffer, ptr, size, false);
+    }
+
+    // -- Ailia methods call wrappers --
+
+    ensureShapeRefAllocation(requiredSize = SIZE_OF_AILIA_SHAPE) {
+        requiredSize = Math.max(SIZE_OF_AILIA_SHAPE, requiredSize);
+
+        if (this.shapeRefSize &lt; requiredSize) {
+            Module._free(this.shapeRef);
+            delete this.shapeRef;
+        }
+
+        if (this.shapeRef === undefined) {
+            this.shapeRefSize = requiredSize;
+            this.shapeRef = Module._malloc(requiredSize * SIZE_OF_U32);
+        }
+    }
+
+    getOutputShape() {
+        this.ensureShapeRefAllocation();
+
+        try {
+            this.call('ailiaGetOutputShape', 'number', [this.ailiaDoublePointer.getPointer(), this.shapeRef, AILIA_SHAPE_VERSION]);
+        } catch (e) {
+            console.error(`Call to ailiaGetOutputShape failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+
+        const x = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 0];
+        const y = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 1];
+        const z = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 2];
+        const w = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 3];
+        const dim = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 4];
+
+        return new AiliaShape(
+            x,
+            (dim > 1 ? y : 0),
+            (dim > 2 ? z : 0),
+            (dim > 3 ? w : 0),
+        );
+    }
+
+    getInputShape() {
+        this.ensureShapeRefAllocation();
+
+        try {
+            this.call('ailiaGetInputShape', 'number', [this.ailiaDoublePointer.getPointer(), this.shapeRef, AILIA_SHAPE_VERSION]);
+        } catch (e) {
+            console.error(`Call to ailiaGetInputShape failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+
+        const x = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 0];
+        const y = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 1];
+        const z = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 2];
+        const w = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 3];
+        const dim = Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + 4];
+
+        return new AiliaShape(
+            x,
+            (dim > 1 ? y : 0),
+            (dim > 2 ? z : 0),
+            (dim > 3 ? w : 0),
+        );
+    }
+
+    setInputShape(...dims) {
+        if (dims[0]?.constructor?.name === 'AiliaShape') {
+            dims = dims[0].dims;
+        } else {
+            dims = dims.filter((d, i) => Boolean(d) &amp;&amp; i &lt; SIZE_OF_AILIA_SHAPE - 1);
+
+            while (dims.length &lt; 4) {
+                dims.push(1);
+            }
+        }
+
+        this.ensureShapeRefAllocation(dims.length);
+
+        for (let i = 0; i &lt; dims.length; ++i) {
+            Module.HEAPU32[this.shapeRef / SIZE_OF_U32 + i] = dims[dims.length - (i + 1)] || 1;
+        }
+
+        try {
+            this.call('ailiaSetInputShapeND', 'number', [this.ailiaDoublePointer.getPointer(), this.shapeRef, dims.length]);
+        } catch (e) {
+            console.error(`Call to ailiaSetInputShapeND failed`);
+            console.error(this.getErrorDetail());
+            throw e;
+        }
+    }
+
+    _setInputBlobShape(blobIndex, shape) { // shape must be an Array&lt;Int>
+        let rank = shape.length;
+        let dimArray = Ailia.allocateNew(rank * SIZE_OF_U32);
+        try {
+            for (const [i, d] of shape.entries()) {
+               dimArray.Int32[i] = d;
+            }
+            try {
+                this.call('ailiaSetInputBlobShapeND', 'number', [this.ailiaDoublePointer.getPointer(), dimArray.byteOffset, rank, blobIndex]);
+            } catch (e) {
+                console.error(`Call to ailiaSetInputBlobShapeND failed`);
+                console.error(this.getErrorDetail());
+                Ailia.free(dimArray);
+                throw e;
+            }
+        } finally {
+            Ailia.free(dimArray);
+        }
+    }
+
+}
+
+export class AiliaDetector {
+    constructor(ailiaObject, detectorType) {
+        this.ailia = ailiaObject;
+        this.detectorRef = Module._malloc(SIZE_OF_POINTER);
+
+        const AILIA_NETWORK_IMAGE_FORMAT_RGB = 1;
+        const AILIA_NETWORK_IMAGE_CHANNEL_FIRST = 0;
+        const AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_FP32 = 2;
+        const AILIA_DETECTOR_ALGORITHM_SSD = 8;
+        const AILIA_DETECTOR_FLAG_NORMAL = 0;
+        const AILIA_DETECTOR_OBJECT_VERSION = 1;
+        const AILIA_IMAGE_FORMAT_BGRA = 1;
+
+        this.detectorObjectVersion = AILIA_DETECTOR_OBJECT_VERSION; // ailia.h
+        this.imageFormat = AILIA_IMAGE_FORMAT_BGRA; // ailia/__init__.py
+
+        if (detectorType === 'mobilenetssd') {
+            this.categoriesCount = 80; // mobilenet_ssd.py
+            this.networkImageFormat = AILIA_NETWORK_IMAGE_FORMAT_RGB; // mobilenet_ssd.py
+            this.networkImageChannel = AILIA_NETWORK_IMAGE_CHANNEL_FIRST; // mobilenet_ssd.py
+            this.networkImageRange = AILIA_NETWORK_IMAGE_RANGE_UNSIGNED_FP32; // mobilenet_ssd.py
+            this.detectorAlgorithm = AILIA_DETECTOR_ALGORITHM_SSD; // mobilenet_ssd.py
+            this.detectorFlag = AILIA_DETECTOR_FLAG_NORMAL; // ailia/__init__.py
+            this.requiredInputWidth = 300; // mobilenet_ssd.py
+            this.requiredInputHeight = 300; // mobilenet_ssd.py
+            this.threshold = 0.4; // mobilenet_ssd.py
+            this.iou = 0.45; // mobilenet_ssd.py
+            this.categoriesList = [
+                'aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car', 'cat', 'chair', 'cow', 'diningtable',
+                'dog', 'horse', 'motorbike', 'person', 'pottedplant', 'sheep', 'sofa', 'train', 'tvmonitor'
+            ]; // mobilenet_ssd.py
+        } else {
+            console.error('Unsupported detector type:', detectorType);
+            throw new Error(`Unsupported detector type: ${detectorType}`);
+        }
+
+        this._call(
+            'ailiaCreateDetector',
+            'number',
+            [
+                this.detectorRef,
+                this.ailia.ailiaDoublePointer.getPointer(),
+                this.networkImageFormat,
+                this.networkImageChannel,
+                this.networkImageRange,
+                this.detectorAlgorithm,
+                this.categoriesCount,
+                this.detectorFlag
+            ]
+        );
+
+        // Pre-allocate all memory need.
+        this.objectCountRef = Module._malloc(SIZE_OF_POINTER); // unsigned int
+
+        const inputBufferSize = this.requiredInputWidth * this.requiredInputWidth * 4;
+        this.inputImageBuffer = Module._malloc(inputBufferSize);
+
+        this.objectRef = Module._malloc(4 * 6); // aggregate of 6 numbers
+    }
+
+    dispose() {
+        Module._free(this.objectCountRef);
+        Module._free(this.inputImageBuffer);
+        Module._free(this.objectRef);
+        Module._free(this.detectorRef);
+    }
+
+    _throwAiliaError(nativeFunctionName, message, status) {
+        throw new Error(`${nativeFunctionName} error. Message: '${message || '&lt;empty>'}', status: ${status}`);
+    }
+
+    _getNumberStringArray(n) {
+        return this.ailia._getNumberStringArray(n);
+    }
+
+    _call(nativeFunctionName, returnType, argumentsArray) {
+        this.ailia.call(nativeFunctionName, returnType, argumentsArray);
+    }
+
+    _loadImageDataFromJimp(inputPic) {
+        this.inputImageWidth = this.getRequiredInputWidth(inputPic.bitmap.width);
+        this.inputImageHeight = this.getRequiredInputHeight(inputPic.bitmap.height);
+
+        inputPic.resize(this.inputImageWidth, this.inputImageHeight);
+
+        // The image needs to have 4 channels (shape[2]=4) but it seems that's the default when loading with Jimp.
+        // Jimp loads in RGBA by default.
+
+        inputPic.scan(0, 0, this.inputImageWidth, this.inputImageHeight, (x, y, index) => {
+            const heapIdx = this.inputImageBuffer + 4 * y * inputPic.bitmap.width + 4 * x;
+            Module.HEAPU8[heapIdx + 0] = inputPic.bitmap.data[index + 0];
+            Module.HEAPU8[heapIdx + 1] = inputPic.bitmap.data[index + 1];
+            Module.HEAPU8[heapIdx + 2] = inputPic.bitmap.data[index + 2];
+            Module.HEAPU8[heapIdx + 3] = inputPic.bitmap.data[index + 3];
+        });
+
+        return this.inputImageBuffer;
+    }
+
+    _loadImageDataFromImageElement(inputPic) {
+        this.inputImageWidth = this.getRequiredInputWidth(inputPic.width);
+        this.inputImageHeight = this.getRequiredInputHeight(inputPic.height);
+
+        // Create an empty canvas element
+        const canvas = document.createElement('canvas');
+        canvas.width = this.inputImageWidth;
+        canvas.height = this.inputImageHeight;
+
+        // Copy the image contents to the canvas, while resizing it
+        const context = canvas.getContext('2d');
+        context.drawImage(inputPic, 0, 0, canvas.width, canvas.height);
+
+        // Extract the data array representing the decoded image
+        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i &lt; imageData.data.length; i += 4) {
+            // in RGBA by default.
+            Module.HEAPU8[this.inputImageBuffer + i + 0] = imageData.data[i + 0];
+            Module.HEAPU8[this.inputImageBuffer + i + 1] = imageData.data[i + 1];
+            Module.HEAPU8[this.inputImageBuffer + i + 2] = imageData.data[i + 2];
+            Module.HEAPU8[this.inputImageBuffer + i + 3] = imageData.data[i + 3];
+        }
+
+        return inputImageBuffer;
+    }
+
+    _loadImageDataFromCanvas(sourceCanvas) {
+        let targetCanvas;
+
+        // Resize if necessary
+        if (sourceCanvas.width !== this.requiredInputWidth || sourceCanvas.height !== this.requiredInputHeight) {
+            targetCanvas = document.createElement('canvas');
+            targetCanvas.width = this.requiredInputWidth;
+            targetCanvas.height = this.requiredInputHeight;
+            const targetContext = targetCanvas.getContext('2d');
+            targetContext.drawImage(sourceCanvas, 0, 0, sourceCanvas.width, sourceCanvas.height, 0, 0, targetCanvas.width, targetCanvas.height);
+        } else { // No need to resize
+            targetCanvas = sourceCanvas;
+        }
+
+        // Extract the pixel data representing the resized image.
+        const context = targetCanvas.getContext('2d');
+        const imageData = context.getImageData(0, 0, targetCanvas.width, targetCanvas.height);
+
+        for (let i = 0; i &lt; imageData.data.length; i += 4) {
+            // in RGBA by default.
+            Module.HEAPU8[this.inputImageBuffer + i + 0] = imageData.data[i + 0];
+            Module.HEAPU8[this.inputImageBuffer + i + 1] = imageData.data[i + 1];
+            Module.HEAPU8[this.inputImageBuffer + i + 2] = imageData.data[i + 2];
+            Module.HEAPU8[this.inputImageBuffer + i + 3] = imageData.data[i + 3];
+        }
+    }
+
+    _ailiaDetectorGetObjectCount() {
+        this._call('ailiaDetectorGetObjectCount', 'number', [Module.HEAP32[this.detectorRef / 4], this.objectCountRef]);
+        const objectCount = Module.HEAPU32[this.objectCountRef / 4];
+
+        if (objectCount &lt; 0) {
+            this._throwAiliaError('ailiaDetectorGetObjectCount', `Unexpected detected object count (${objectCount})`, null);
+        }
+
+        return objectCount;
+    }
+
+    _ailiaDetectorGetObjects(minProbability) {
+        const objectCount = this._ailiaDetectorGetObjectCount();
+
+        const resultObjects = [];
+
+        for (let objectIndex = 0; objectIndex &lt; objectCount; objectIndex++) {
+            this._call(
+                'ailiaDetectorGetObject',
+                'number',
+                [Module.HEAP32[this.detectorRef / 4], this.objectRef, objectIndex, this.detectorObjectVersion]
+            );
+
+            const probability = Module.HEAPF32[this.objectRef / 4 + 1];
+            if (probability &lt; minProbability) {
+                continue;
+            }
+
+            const categoryId = Module.HEAPU32[this.objectRef / 4];
+
+            const obj = {
+                categoryId,
+                categoryName: this.categoriesList[categoryId],
+                prob: probability,
+                x: Module.HEAPF32[this.objectRef / 4 + 2],
+                y: Module.HEAPF32[this.objectRef / 4 + 3],
+                w: Module.HEAPF32[this.objectRef / 4 + 4],
+                h: Module.HEAPF32[this.objectRef / 4 + 5]
+            };
+
+            resultObjects.push(obj);
+        }
+
+        return resultObjects;
+    }
+
+    _ailiaDetectorCompute() {
+        this._call(
+            'ailiaDetectorCompute',
+            'number',
+            [
+                Module.HEAP32[this.detectorRef / 4],
+                this.inputImageBuffer,
+                this.requiredInputWidth * 4, // Stride.
+                this.requiredInputWidth,
+                this.requiredInputHeight,
+                this.imageFormat,
+                this.threshold,
+                this.iou
+            ]
+        );
+    }
+
+    getErrorDetail() {
+        return this.ailia.getErrorDetail();
+    }
+
+    getRequiredInputWidth(currentWidth) {
+        if (this.requiredInputWidth === undefined) {
+            return currentWidth;
+        } else {
+            return this.requiredInputWidth;
+        }
+    }
+
+    getRequiredInputHeight(currentHeight) {
+        if (this.requiredInputHeight === undefined) {
+            return currentHeight;
+        } else {
+            return this.requiredInputHeight;
+        }
+    }
+
+    compute(inputPic, minProbability = 0) {
+        if (inputPic.constructor.name === 'Jimp') {
+            this._loadImageDataFromJimp(inputPic);
+        } else if (inputPic.constructor.name === 'HTMLImageElement') {
+            this._loadImageDataFromImageElement(inputPic);
+        } else if (inputPic.constructor.name === 'HTMLCanvasElement') {
+            this._loadImageDataFromCanvas(inputPic);
+        } else {
+            console.error('unsupported image object type:', inputPic);
+            return;
+        }
+
+        this._ailiaDetectorCompute();
+
+        return this._ailiaDetectorGetObjects(minProbability);
+    }
+}
+
+class AiliaBuffer extends DataView {
+    static _createGetterFromName(name, typeSize) {
+        name = `get${name}`;
+        const indexName = `${name}At`;
+
+        AiliaBuffer.prototype[name] = function (byteOffset, littleEndian = true) {
+            this._checkIsFreed();
+            return this._view[name](byteOffset, littleEndian);
+        }
+        AiliaBuffer.prototype[indexName] = function (index, littleEndian) {
+            return this[name](index * typeSize, littleEndian);
+        }
+    }
+
+    static _createSetterFromName(name, typeSize) {
+        name = `set${name}`;
+        const indexName = `${name}At`;
+
+        AiliaBuffer.prototype[name] = function (byteOffset, value, littleEndian = true) {
+            this._checkIsFreed();
+            return this._view[name](byteOffset, value, littleEndian);
+        }
+        AiliaBuffer.prototype[indexName] = function (index, value, littleEndian) {
+            return this[name](index * typeSize, value, littleEndian);
+        }
+    }
+
+    static _createArrayProperty(name, typeSize) {
+        Object.defineProperty(AiliaBuffer.prototype, name, {
+            get: function() {
+                this._checkIsFreed();
+
+                const backingPropertyName = `_${name}`;
+                let array = this[backingPropertyName];
+
+                if (!array) {
+                    array = new globalThis[`${name}Array`](this._view.buffer, this._view.byteOffset, this.byteLength / typeSize);
+                    this[backingPropertyName] = array;
+                }
+
+                return array;
+            },
+            enumerable: true
+        });
+    }
+
+    /*
+        This creates all proxy functions for the DataView class, such as getInt8, getUint8, getInt16, etc...
+    */
+    static _initialize() {
+        for (const type of ['Int', 'Uint']) {
+            for (const size of [
+                Int8Array.BYTES_PER_ELEMENT,
+                Int16Array.BYTES_PER_ELEMENT,
+                Int32Array.BYTES_PER_ELEMENT,
+            ]) {
+                const name = `${type}${size * 8}`;
+                AiliaBuffer._createGetterFromName(name, size);
+                AiliaBuffer._createSetterFromName(name, size);
+                AiliaBuffer._createArrayProperty(name, size);
+            }
+        }
+
+        for (const type of ['BigInt64', 'BigUint64']) {
+            AiliaBuffer._createGetterFromName(type, BigInt64Array.BYTES_PER_ELEMENT);
+            AiliaBuffer._createSetterFromName(type, BigInt64Array.BYTES_PER_ELEMENT);
+            AiliaBuffer._createArrayProperty(type, BigInt64Array.BYTES_PER_ELEMENT);
+        }
+
+        for (const type of ['Float']) {
+            for (const size of [
+                Float32Array.BYTES_PER_ELEMENT,
+                Float64Array.BYTES_PER_ELEMENT
+            ]) {
+                const name = `${type}${size * 8}`;
+                AiliaBuffer._createGetterFromName(name, size);
+                AiliaBuffer._createSetterFromName(name, size);
+                AiliaBuffer._createArrayProperty(name, size);
+            }
+        }
+
+        AiliaBuffer._createArrayProperty('Uint8Clamped', Uint8ClampedArray.BYTES_PER_ELEMENT);
+
+        Object.defineProperty(AiliaBuffer.prototype, 'buffer', {
+            get: function () { throw new Error('Not supported'); },
+            set: function () { throw new Error('Not supported'); },
+            enumerable: true
+        });
+
+        Object.defineProperty(AiliaBuffer.prototype, 'byteOffset', {
+            get: function () { this._checkIsFreed(); return this._view.byteOffset; },
+            enumerable: true
+        });
+
+        Object.defineProperty(AiliaBuffer.prototype, 'byteLength', {
+            get: function () { this._checkIsFreed(); return this._view.byteLength; },
+            enumerable: true
+        });
+    }
+
+    static emptyBuffer = new ArrayBuffer(0);
+
+    constructor(buffer, byteOffset, byteLength, isFreeable) {
+        super(AiliaBuffer.emptyBuffer, 0, 0);
+        this._isFreed = false;
+        this._isFreeable = isFreeable;
+        this._view = new DataView(buffer, byteOffset, byteLength);
+    }
+
+    _markFreed() {
+        this._isFreed = true;
+    }
+
+    _checkIsFreed() {
+        if (this._isFreed) {
+            throw new Error('Buffer is freed.');
+        }
+    }
+}
+
+AiliaBuffer._initialize();
+
+class DoublePointer {
+    constructor(module) {
+        this._module = module;
+        this._doublePointer = module._malloc(SIZE_OF_POINTER);
+    }
+
+    getDoublePointer() {
+        return this._doublePointer;
+    }
+
+    getPointer() {
+        const heap = this._module.HEAPU32;
+        return heap[this._doublePointer / heap.BYTES_PER_ELEMENT];
+    }
+
+    dispose() {
+        this._module._free(this._doublePointer);
+    }
+}
+
+//module.exports = {Ailia, AiliaDetector};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Ailia.html">Ailia</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-get_started.html">Get Started</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Mon May 29 2023 17:02:08 GMT+0900 (Japan Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

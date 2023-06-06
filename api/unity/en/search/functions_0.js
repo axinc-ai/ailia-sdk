@@ -27,6 +27,7 @@ var searchData=
   ['ailiadisablelayerfusion',['ailiaDisableLayerFusion',['../classAilia.html#a8135767f8f0859a65ef15ef13a1d8ed3',1,'Ailia']]],
   ['ailiafeatureextractorcompute',['ailiaFeatureExtractorCompute',['../classAiliaFeatureExtractor.html#aab0927b65c17bb86376ee348f6ab1f19',1,'AiliaFeatureExtractor']]],
   ['ailiafeatureextractormatch',['ailiaFeatureExtractorMatch',['../classAiliaFeatureExtractor.html#a9525f66cfde7d227989912d23c0932ca',1,'AiliaFeatureExtractor']]],
+  ['ailiafinalize',['ailiaFinalize',['../classAilia.html#a5bcf76670d6c830cbfe67ed1f841e69a',1,'Ailia']]],
   ['ailiafindblobindexbyname',['ailiaFindBlobIndexByName',['../classAilia.html#ab39a2620adbf90d400205978125cb155',1,'Ailia']]],
   ['ailiafindblobnamebyindex',['ailiaFindBlobNameByIndex',['../classAilia.html#a4fb6bab0f8dca13f5d052fcf8aef2986',1,'Ailia']]],
   ['ailiaformatconvert',['ailiaFormatConvert',['../classAiliaFormat.html#aedf6f0b86bde77011430171d260e48cb',1,'AiliaFormat']]],
