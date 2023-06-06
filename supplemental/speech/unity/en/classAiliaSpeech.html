@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">0.9.5.0</span>
+   &#160;<span id="projectnumber">0.9.6.0</span>
    </div>
   </td>
  </tr>
@@ -177,15 +177,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af46cd0fe6e7b5de24b14120f47cd82e1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#af46cd0fe6e7b5de24b14120f47cd82e1">ailiaSpeechPushInputData</a> (IntPtr net, float[] src, uint channels, uint samples, uint sampling_rate)</td></tr>
 <tr class="memdesc:af46cd0fe6e7b5de24b14120f47cd82e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push PCM data to queue.  <a href="classAiliaSpeech.html#af46cd0fe6e7b5de24b14120f47cd82e1">More...</a><br /></td></tr>
 <tr class="separator:af46cd0fe6e7b5de24b14120f47cd82e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0ade6b58d4f57b97cca112e3beefbb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a4e0ade6b58d4f57b97cca112e3beefbb">ailiaSpeechFinalizeInputData</a> (IntPtr net)</td></tr>
+<tr class="memdesc:a4e0ade6b58d4f57b97cca112e3beefbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize input PCM data to queue.  <a href="classAiliaSpeech.html#a4e0ade6b58d4f57b97cca112e3beefbb">More...</a><br /></td></tr>
+<tr class="separator:a4e0ade6b58d4f57b97cca112e3beefbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc9045e2716540a86815ff674a20b77"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a3dc9045e2716540a86815ff674a20b77">ailiaSpeechBuffered</a> (IntPtr net, ref uint buffered)</td></tr>
 <tr class="memdesc:a3dc9045e2716540a86815ff674a20b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is processing data exist.  <a href="classAiliaSpeech.html#a3dc9045e2716540a86815ff674a20b77">More...</a><br /></td></tr>
 <tr class="separator:a3dc9045e2716540a86815ff674a20b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a103723399f98a5367e40e3e7700c1740"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a103723399f98a5367e40e3e7700c1740">ailiaSpeechComplete</a> (IntPtr net, ref uint complete)</td></tr>
 <tr class="memdesc:a103723399f98a5367e40e3e7700c1740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is processed all data.  <a href="classAiliaSpeech.html#a103723399f98a5367e40e3e7700c1740">More...</a><br /></td></tr>
 <tr class="separator:a103723399f98a5367e40e3e7700c1740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a5aa534598ba91812db9f4efcf9d231"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a5a5aa534598ba91812db9f4efcf9d231">ailiaSpeechSetPrompt</a> (IntPtr net, string prompt)</td></tr>
-<tr class="memdesc:a5a5aa534598ba91812db9f4efcf9d231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set prompt.  <a href="classAiliaSpeech.html#a5a5aa534598ba91812db9f4efcf9d231">More...</a><br /></td></tr>
-<tr class="separator:a5a5aa534598ba91812db9f4efcf9d231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b30f0454792d2b4d9b6470150d9f1ee"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a9b30f0454792d2b4d9b6470150d9f1ee">ailiaSpeechSetPrompt</a> (IntPtr net, IntPtr prompt)</td></tr>
+<tr class="memdesc:a9b30f0454792d2b4d9b6470150d9f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set prompt.  <a href="classAiliaSpeech.html#a9b30f0454792d2b4d9b6470150d9f1ee">More...</a><br /></td></tr>
+<tr class="separator:a9b30f0454792d2b4d9b6470150d9f1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abeb1e47770f2c876228f5883e4ea430f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#abeb1e47770f2c876228f5883e4ea430f">ailiaSpeechSetLanguage</a> (IntPtr net, string language)</td></tr>
 <tr class="memdesc:abeb1e47770f2c876228f5883e4ea430f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the inferences and provides the inference result.  <a href="classAiliaSpeech.html#abeb1e47770f2c876228f5883e4ea430f">More...</a><br /></td></tr>
 <tr class="separator:abeb1e47770f2c876228f5883e4ea430f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3175,6 +3178,34 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4e0ade6b58d4f57b97cca112e3beefbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0ade6b58d4f57b97cca112e3beefbb">&#9670;&nbsp;</a></span>ailiaSpeechFinalizeInputData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaSpeechFinalizeInputData </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finalize input PCM data to queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>By signaling the end of the audio file, ailiaSpeechBuffered will return 1 even if 30 seconds worth of data does not exist. You must call ailiaSpeechResetTranscribeState after executing ailiaSpeechFinalizeInputData and before executing ailiaSpeechPushInputData. </p>
+
+</div>
+</div>
 <a id="aac21fef31ab8872a5a6945e7aeca18c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac21fef31ab8872a5a6945e7aeca18c3">&#9670;&nbsp;</a></span>ailiaSpeechGetErrorDetail()</h2>
 
@@ -3515,8 +3546,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a5aa534598ba91812db9f4efcf9d231"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a5aa534598ba91812db9f4efcf9d231">&#9670;&nbsp;</a></span>ailiaSpeechSetPrompt()</h2>
+<a id="a9b30f0454792d2b4d9b6470150d9f1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b30f0454792d2b4d9b6470150d9f1ee">&#9670;&nbsp;</a></span>ailiaSpeechSetPrompt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3530,7 +3561,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>prompt</em>&#160;</td>
         </tr>
         <tr>
