@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ailia_2ecs',['Ailia.cs',['../Ailia_8cs.html',1,'']]],
+  ['ailiaaudio_2ecs',['AiliaAudio.cs',['../AiliaAudio_8cs.html',1,'']]],
   ['ailiaclassifier_2ecs',['AiliaClassifier.cs',['../AiliaClassifier_8cs.html',1,'']]],
   ['ailiaclassifiermodel_2ecs',['AiliaClassifierModel.cs',['../AiliaClassifierModel_8cs.html',1,'']]],
   ['ailiadetector_2ecs',['AiliaDetector.cs',['../AiliaDetector_8cs.html',1,'']]],

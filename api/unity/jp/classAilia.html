@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.14.1</span>
+   &#160;<span id="projectnumber">1.2.15.0</span>
    </div>
   </td>
  </tr>
@@ -191,6 +191,9 @@ $(function() {
 <tr class="memitem:ab101c9ccd29e2501e0404c7a994f821c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#ab101c9ccd29e2501e0404c7a994f821c">ailiaSetInputBlobShapeND</a> (IntPtr net, UInt32[] shape, UInt32 dim, UInt32 blob_idx)</td></tr>
 <tr class="memdesc:ab101c9ccd29e2501e0404c7a994f821c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したBlobの形状を変更します。  <a href="#ab101c9ccd29e2501e0404c7a994f821c">[詳解]</a><br /></td></tr>
 <tr class="separator:ab101c9ccd29e2501e0404c7a994f821c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ca7955e173b80358ab85257613c3b4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#af5ca7955e173b80358ab85257613c3b4">ailiaCopyBlobData</a> (IntPtr dst_net, UInt32 dst_blob_idx, IntPtr src_net, UInt32 src_blob_idx)</td></tr>
+<tr class="memdesc:af5ca7955e173b80358ab85257613c3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したBlob間でデータをコピーします  <a href="#af5ca7955e173b80358ab85257613c3b4">[詳解]</a><br /></td></tr>
+<tr class="separator:af5ca7955e173b80358ab85257613c3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2710ca310cc5ed811c24e884ada82fda"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a2710ca310cc5ed811c24e884ada82fda">ailiaUpdate</a> (IntPtr net)</td></tr>
 <tr class="memdesc:a2710ca310cc5ed811c24e884ada82fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">事前に指定した入力データで推論を行います。  <a href="#a2710ca310cc5ed811c24e884ada82fda">[詳解]</a><br /></td></tr>
 <tr class="separator:a2710ca310cc5ed811c24e884ada82fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,6 +472,59 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5ca7955e173b80358ab85257613c3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ca7955e173b80358ab85257613c3b4">&#9670;&nbsp;</a></span>ailiaCopyBlobData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int Ailia.ailiaCopyBlobData </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>dst_net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>dst_blob_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>src_net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_blob_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したBlob間でデータをコピーします </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_net</td><td>コピー先のblobが含まれるネットワークオブジェクトポインター </td></tr>
+    <tr><td class="paramname">dst_blob_idx</td><td>コピー先のblobのインデックス </td></tr>
+    <tr><td class="paramname">src_net</td><td>コピー元のblobが含まれるネットワークオブジェクトポインター </td></tr>
+    <tr><td class="paramname">src_blob_idx</td><td>コピー元のblobのインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>指定したネットワークのBlobをコピーします。コピー元とコピー先のネットワークは別のものを指定することができます。 コピー先のBlobは入力Blobのインデックスを、コピー元のBlobは任意のBlobのインデックスを指定してください。 コピー先にその他のBlobを指定した場合 <a class="el" href="classAilia.html#a7b69774e620ee1b4f88dbbf76959793d">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 </p>
 
 </div>
 </div>

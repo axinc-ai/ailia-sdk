@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.14.1</span>
+   &#160;<span id="projectnumber">1.2.15.0</span>
    </div>
   </td>
  </tr>
@@ -379,6 +379,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a860d5e11e0280d323896c4a43314037d"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a860d5e11e0280d323896c4a43314037d">ailiaSetInputBlobShapeND</a> (struct AILIANetwork *net, const unsigned *shape, const unsigned dim, unsigned int blob_idx)</td></tr>
 <tr class="memdesc:a860d5e11e0280d323896c4a43314037d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the shape of the blob given by its index.  <a href="#a860d5e11e0280d323896c4a43314037d">More...</a><br /></td></tr>
 <tr class="separator:a860d5e11e0280d323896c4a43314037d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d868db075fec2e9ee431fe493ec0d39"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a7d868db075fec2e9ee431fe493ec0d39">ailiaCopyBlobData</a> (struct AILIANetwork *dst_net, unsigned int dst_blob_idx, struct AILIANetwork *src_net, unsigned int src_blob_idx)</td></tr>
+<tr class="memdesc:a7d868db075fec2e9ee431fe493ec0d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform copies between blobs that specified.  <a href="#a7d868db075fec2e9ee431fe493ec0d39">More...</a><br /></td></tr>
+<tr class="separator:a7d868db075fec2e9ee431fe493ec0d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4bf948c6e7a29a82c2b01243064f98"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#aad4bf948c6e7a29a82c2b01243064f98">ailiaUpdate</a> (struct AILIANetwork *net)</td></tr>
 <tr class="memdesc:aad4bf948c6e7a29a82c2b01243064f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes inferences with the input data specified in advance.  <a href="#aad4bf948c6e7a29a82c2b01243064f98">More...</a><br /></td></tr>
 <tr class="separator:aad4bf948c6e7a29a82c2b01243064f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1463,6 +1466,59 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a7d868db075fec2e9ee431fe493ec0d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d868db075fec2e9ee431fe493ec0d39">&#9670;&nbsp;</a></span>ailiaCopyBlobData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCopyBlobData </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>dst_net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>dst_blob_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>src_net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_blob_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform copies between blobs that specified. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_net</td><td>The network object pointer that contains destination blob </td></tr>
+    <tr><td class="paramname">dst_blob_idx</td><td>The index of destination blob </td></tr>
+    <tr><td class="paramname">src_net</td><td>The network object pointer that contains source blob </td></tr>
+    <tr><td class="paramname">src_blob_idx</td><td>The index of source blob </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>In case of success, <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , and otherwise the coresponding error code.</dd></dl>
+<p>Perform copy blobs between specified network. It accepts copy over different network. The src_blob_index must be specify blob index that inputs of src_net, and the dst_blob_index mut be specify blob index that outputs of dst_net. If specify index of other blob for dst_blob_idx , this function returns <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> . This API can be call after call ailiaOpenWeighXXX(). </p>
+
+</div>
+</div>
 <a id="aafbaa89c853a043c6e2961f6a72e820e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafbaa89c853a043c6e2961f6a72e820e">&#9670;&nbsp;</a></span>ailiaCreate()</h2>
 
@@ -1626,7 +1682,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). In addition, when call this API before call ailiaOpenWeightXXX, can only find inputs and outputs blobs. If you want find intermediate blobs, please call ailiaOpenWeightXXX before. </p>
 
 </div>
 </div>
@@ -1678,7 +1735,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). In addition, when call this API before call ailiaOpenWeightXXX, can only find inputs and outputs blobs. If you want find intermediate blobs, please call ailiaOpenWeightXXX before. </p>
 
 </div>
 </div>
@@ -1716,7 +1774,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). In addition, this api returuns number of sum of inputs and outputs when after call ailiaOpenStreamXXX. And, when call ailiaOpenWeightXXX, enumerate and optimzie intermediate blobs. So, this api may return more count after call ailiaOpenWeightXXX. </p>
 
 </div>
 </div>
@@ -1814,7 +1873,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -1859,7 +1919,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -1904,7 +1965,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). In addition, we guarantee that input_blob_idx and blob_idx which enumerate when call ailiaOpenStreamXXX are not changed when call ailiaOpneWeightXXX. </p>
 
 </div>
 </div>
@@ -1949,7 +2011,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). </p>
 
 </div>
 </div>
@@ -1994,7 +2057,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). In addition, when call this API before call ailiaOpenWeightXXX, can only find inputs and outputs blobs. If you want find intermediate blobs, please call ailiaOpenWeightXXX before. </p>
 
 </div>
 </div>
@@ -2047,7 +2111,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> . And if shape has 5 or more dimension, it returns <a class="el" href="ailia_8h.html#a2fff4a8949fa5ac5f03d81905952da2b">AILIA_STATUS_NDIMENSION_SHAPE</a> , or an error code otherwise.</dd></dl>
-<p>When dimension of shape is 5 or more, please use <a class="el" href="ailia_8h.html#a5b0e48af3db818def7bc48bb03e427b6" title="Gets the dimension of the internal data (blob) during inference. ">ailiaGetBlobDim()</a> and <a class="el" href="ailia_8h.html#a8d9fc52239e6a9e7f643b9c559ee7dbf" title="Gets the amount of internal data (blob) during inference. ">ailiaGetBlobShapeND()</a>. </p>
+<p>When dimension of shape is 5 or more, please use <a class="el" href="ailia_8h.html#a5b0e48af3db818def7bc48bb03e427b6" title="Gets the dimension of the internal data (blob) during inference. ">ailiaGetBlobDim()</a> and <a class="el" href="ailia_8h.html#a8d9fc52239e6a9e7f643b9c559ee7dbf" title="Gets the amount of internal data (blob) during inference. ">ailiaGetBlobShapeND()</a>. This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2099,7 +2163,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2237,7 +2302,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). In addition, this api returuns number of inputs when after call ailiaOpenStreamXXX. And, when call ailiaOpenWeightXXX, enumerate and optimzie initializer with input blobs. So, this api may return more count after call ailiaOpenWeightXXX. </p>
 
 </div>
 </div>
@@ -2275,7 +2341,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2321,7 +2388,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> . If shape has 5 or more dimension, it returns <a class="el" href="ailia_8h.html#a2fff4a8949fa5ac5f03d81905952da2b">AILIA_STATUS_NDIMENSION_SHAPE</a> . And if shape is not seattled, it returns <a class="el" href="ailia_8h.html#a6f05f3500c53cbbd59681631f46e6848">AILIA_STATUS_UNSETTLED_SHAPE</a> , or an error code otherwise.</dd></dl>
-<p>When dimension of shape is 5 or more, please use <a class="el" href="ailia_8h.html#ab03c3140409d5faa11981671cac5a547" title="Gets the dimension of the input data during inference. ">ailiaGetInputDim()</a> and <a class="el" href="ailia_8h.html#ae1c224a16d6b3021a593a77420a320b7" title="Gets the shape of the input data during inference. ">ailiaGetInputShapeND()</a>. When shape is not settled, this function stores 0 at unsettled dimension and otherwise stores valid value. </p>
+<p>When dimension of shape is 5 or more, please use <a class="el" href="ailia_8h.html#ab03c3140409d5faa11981671cac5a547" title="Gets the dimension of the input data during inference. ">ailiaGetInputDim()</a> and <a class="el" href="ailia_8h.html#ae1c224a16d6b3021a593a77420a320b7" title="Gets the shape of the input data during inference. ">ailiaGetInputShapeND()</a>. When shape is not settled, this function stores 0 at unsettled dimension and otherwise stores valid value. This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2367,7 +2434,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> . And if shape is not seattled, it returns <a class="el" href="ailia_8h.html#a6f05f3500c53cbbd59681631f46e6848">AILIA_STATUS_UNSETTLED_SHAPE</a> , or an error code otherwise.</dd></dl>
-<p>When shape is not settled, this function stores 0 at unsettled dimension and otherwise stores valid value. </p>
+<p>When shape is not settled, this function stores 0 at unsettled dimension and otherwise stores valid value. This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2405,7 +2472,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenStreamXXX(). </p>
 
 </div>
 </div>
@@ -2443,7 +2511,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2489,7 +2558,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> . And if shape has 5 or more dimension, it returns <a class="el" href="ailia_8h.html#a2fff4a8949fa5ac5f03d81905952da2b">AILIA_STATUS_NDIMENSION_SHAPE</a> , or an error code otherwise.</dd></dl>
-<p>When dimension of shape is 5 or more, please use <a class="el" href="ailia_8h.html#aa2dc3a17840b2da29b4c1fb3401bc0ef" title="Gets the dimension of the output data during inference. ">ailiaGetOutputDim()</a> () and <a class="el" href="ailia_8h.html#abd8aec2321b0804d3b03332780bf8ff4" title="Gets the shape of the output data during inference. ">ailiaGetOutputShapeND()</a> (). </p>
+<p>When dimension of shape is 5 or more, please use <a class="el" href="ailia_8h.html#aa2dc3a17840b2da29b4c1fb3401bc0ef" title="Gets the dimension of the output data during inference. ">ailiaGetOutputDim()</a> () and <a class="el" href="ailia_8h.html#abd8aec2321b0804d3b03332780bf8ff4" title="Gets the shape of the output data during inference. ">ailiaGetOutputShapeND()</a>. This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2534,7 +2603,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -2645,7 +2715,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -3058,7 +3129,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -3111,7 +3183,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
-<p>This function is used to specify the input on networks with multiple inputs. If something other than a blob in the input layer is specified for blob_idx, the function returns <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> . </p>
+<p>This function is used to specify the input on networks with multiple inputs. If something other than a blob in the input layer is specified for blob_idx, the function returns <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> . This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -3164,7 +3236,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>In case of success, <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , and otherwise the coresponding error code.</dd></dl>
-<p>This is useful to change the network input shape in a context where there are several input blobs. If blob_idx does not correspond to an input layer, <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> is returned. For other related remarks, see the documentation of <a class="el" href="ailia_8h.html#a7c4e0157453572bf3f6fcacd21ce82b0" title="Changes the shape of the input data during inference. ">ailiaSetInputShape()</a>. If dimension of shape has 5 or more, please use <a class="el" href="ailia_8h.html#a860d5e11e0280d323896c4a43314037d" title="Change the shape of the blob given by its index. ">ailiaSetInputBlobShapeND()</a>. </p>
+<p>This is useful to change the network input shape in a context where there are several input blobs. If blob_idx does not correspond to an input layer, <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> is returned. For other related remarks, see the documentation of <a class="el" href="ailia_8h.html#a7c4e0157453572bf3f6fcacd21ce82b0" title="Changes the shape of the input data during inference. ">ailiaSetInputShape()</a>. If dimension of shape has 5 or more, please use <a class="el" href="ailia_8h.html#a860d5e11e0280d323896c4a43314037d" title="Change the shape of the blob given by its index. ">ailiaSetInputBlobShapeND()</a>. This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -3217,7 +3289,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>In case of success, <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , and otherwise the coresponding error code.</dd></dl>
-<p>This is useful to change the network input shape in a context where there are several input blobs. If blob_idx does not correspond to an input layer, <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> is returned. For other related remarks, see the documentation of <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="Changes the shape of the input data during inference. ">ailiaSetInputShapeND()</a>. </p>
+<p>This is useful to change the network input shape in a context where there are several input blobs. If blob_idx does not correspond to an input layer, <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> is returned. For other related remarks, see the documentation of <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="Changes the shape of the input data during inference. ">ailiaSetInputShapeND()</a>. This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -3263,7 +3335,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
-<p>This function changes the input shape defined in prototxt. The shape must have the same rank as the one contained in prototxt. Note that an error may be returned if the weights are dependent on the input shapes, among other reasons. The dimension of shape that defined in prototxt is less than 4, the unused element must be set to 1. The dimension of shape that defined in prototxt has 5 or more, please use <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="Changes the shape of the input data during inference. ">ailiaSetInputShapeND()</a> (). </p>
+<p>This function changes the input shape defined in prototxt. The shape must have the same rank as the one contained in prototxt. Note that an error may be returned if the weights are dependent on the input shapes, among other reasons. The dimension of shape that defined in prototxt is less than 4, the unused element must be set to 1. The dimension of shape that defined in prototxt has 5 or more, please use <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="Changes the shape of the input data during inference. ">ailiaSetInputShapeND()</a>. This API can be call after call ailiaOpenWeighXXX() </p>
 
 </div>
 </div>
@@ -3309,7 +3381,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
-<p>This function changes the input shape defined in prototxt. The shape must have the same rank as the one contained in prototxt. Note that an error may be returned if the weights are dependent on the input shapes, among other reasons. </p>
+<p>This function changes the input shape defined in prototxt. The shape must have the same rank as the one contained in prototxt. Note that an error may be returned if the weights are dependent on the input shapes, among other reasons. This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -3478,7 +3550,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>
@@ -3506,7 +3579,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
-<p>This function is used when, for example, the input is provided with <a class="el" href="ailia_8h.html#aa84ced8c68d31e6287a4aa7bdffad551" title="Provides the specified blob with the input data. ">ailiaSetInputBlobData()</a> . Get the inference result with <a class="el" href="ailia_8h.html#a357802ffe571e8aeffb78adb6d71a1cb" title="Gets the internal data (blob) during inference. ">ailiaGetBlobData()</a> . </p>
+<p>This function is used when, for example, the input is provided with <a class="el" href="ailia_8h.html#aa84ced8c68d31e6287a4aa7bdffad551" title="Provides the specified blob with the input data. ">ailiaSetInputBlobData()</a> . Get the inference result with <a class="el" href="ailia_8h.html#a357802ffe571e8aeffb78adb6d71a1cb" title="Gets the internal data (blob) during inference. ">ailiaGetBlobData()</a> . This API can be call after call ailiaOpenWeighXXX(). </p>
 
 </div>
 </div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.14.1</span>
+   &#160;<span id="projectnumber">1.2.15.0</span>
    </div>
   </td>
  </tr>
@@ -379,6 +379,9 @@ ailia.h の依存先関係図:</div>
 <tr class="memitem:a860d5e11e0280d323896c4a43314037d"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a860d5e11e0280d323896c4a43314037d">ailiaSetInputBlobShapeND</a> (struct AILIANetwork *net, const unsigned *shape, const unsigned dim, unsigned int blob_idx)</td></tr>
 <tr class="memdesc:a860d5e11e0280d323896c4a43314037d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したBlobの形状を変更します。  <a href="#a860d5e11e0280d323896c4a43314037d">[詳解]</a><br /></td></tr>
 <tr class="separator:a860d5e11e0280d323896c4a43314037d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d868db075fec2e9ee431fe493ec0d39"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a7d868db075fec2e9ee431fe493ec0d39">ailiaCopyBlobData</a> (struct AILIANetwork *dst_net, unsigned int dst_blob_idx, struct AILIANetwork *src_net, unsigned int src_blob_idx)</td></tr>
+<tr class="memdesc:a7d868db075fec2e9ee431fe493ec0d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したBlob間でデータをコピーします  <a href="#a7d868db075fec2e9ee431fe493ec0d39">[詳解]</a><br /></td></tr>
+<tr class="separator:a7d868db075fec2e9ee431fe493ec0d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4bf948c6e7a29a82c2b01243064f98"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#aad4bf948c6e7a29a82c2b01243064f98">ailiaUpdate</a> (struct AILIANetwork *net)</td></tr>
 <tr class="memdesc:aad4bf948c6e7a29a82c2b01243064f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">事前に指定した入力データで推論を行います。  <a href="#aad4bf948c6e7a29a82c2b01243064f98">[詳解]</a><br /></td></tr>
 <tr class="separator:aad4bf948c6e7a29a82c2b01243064f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1463,6 +1466,59 @@ ailia.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="a7d868db075fec2e9ee431fe493ec0d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d868db075fec2e9ee431fe493ec0d39">&#9670;&nbsp;</a></span>ailiaCopyBlobData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaCopyBlobData </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>dst_net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>dst_blob_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct AILIANetwork *&#160;</td>
+          <td class="paramname"><em>src_net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_blob_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したBlob間でデータをコピーします </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_net</td><td>コピー先のblobが含まれるネットワークオブジェクトポインター </td></tr>
+    <tr><td class="paramname">dst_blob_idx</td><td>コピー先のblobのインデックス </td></tr>
+    <tr><td class="paramname">src_net</td><td>コピー元のblobが含まれるネットワークオブジェクトポインター </td></tr>
+    <tr><td class="paramname">src_blob_idx</td><td>コピー元のblobのインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>指定したネットワークのBlobをコピーします。コピー元とコピー先のネットワークは別のものを指定することができます。 コピー先のBlobは入力Blobのインデックスを、コピー元のBlobは任意のBlobのインデックスを指定してください。 コピー先にその他のBlobを指定した場合 <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
+
+</div>
+</div>
 <a id="aafbaa89c853a043c6e2961f6a72e820e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafbaa89c853a043c6e2961f6a72e820e">&#9670;&nbsp;</a></span>ailiaCreate()</h2>
 
@@ -1626,7 +1682,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが検索可能です。中間Blobを検索する場合ailiaOpneWeightXXXを呼び出す必要があります。 </p>
 
 </div>
 </div>
@@ -1678,7 +1735,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが検索可能です。中間Blobを検索する場合ailiaOpneWeightXXXを呼び出す必要があります。 </p>
 
 </div>
 </div>
@@ -1716,7 +1774,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが列挙され、ailiaOpneWeightXXX呼び出し時に中間Blobの列挙が行われます。 そのためailiaOpenStreamXXX呼び出し直後とailiaOpneWeightXXX呼び出し直後で返答する数が変わる場合があります。 </p>
 
 </div>
 </div>
@@ -1814,7 +1873,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -1859,7 +1919,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -1904,7 +1965,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 なお、ailiaOpenStreamXXX呼び出し時に列挙されたinput_blob_idx及びblob_idxは保持されるためailiaOpneWeightXXX呼び出し後も同じ値が返ることが保証されます。 </p>
 
 </div>
 </div>
@@ -1949,7 +2011,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -1994,7 +2057,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが検索可能です。中間Blobを検索する場合ailiaOpneWeightXXXを呼び出す必要があります。 </p>
 
 </div>
 </div>
@@ -2047,7 +2111,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、5次元以上の場合 <a class="el" href="ailia_8h.html#a2fff4a8949fa5ac5f03d81905952da2b">AILIA_STATUS_NDIMENSION_SHAPE</a> 、 それ以外のエラーの場合はエラーコードを返す。</dd></dl>
-<p>形状が5次元以上の場合は <a class="el" href="ailia_8h.html#a5b0e48af3db818def7bc48bb03e427b6" title="推論時の内部データ(Blob)の次元を取得します。 ">ailiaGetBlobDim()</a> 、 <a class="el" href="ailia_8h.html#a8d9fc52239e6a9e7f643b9c559ee7dbf" title="推論時の内部データ(Blob)の形状を取得します。 ">ailiaGetBlobShapeND()</a> を利用してください。 </p>
+<p>形状が5次元以上の場合は <a class="el" href="ailia_8h.html#a5b0e48af3db818def7bc48bb03e427b6" title="推論時の内部データ(Blob)の次元を取得します。 ">ailiaGetBlobDim()</a> 、 <a class="el" href="ailia_8h.html#a8d9fc52239e6a9e7f643b9c559ee7dbf" title="推論時の内部データ(Blob)の形状を取得します。 ">ailiaGetBlobShapeND()</a> を利用してください。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2099,7 +2163,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2237,7 +2302,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 なお、入力Blobの列挙はailiaOpenStreamXXX呼び出し時に行われますが変更可能な重み(input付きinitialzier)の列挙はailiaOpneWeightXXX呼び出し時に行われます。 そのためailiaOpenStreamXXX呼び出し直後とailiaOpneWeightXXX呼び出し直後で返答する数が変わる場合があります。 </p>
 
 </div>
 </div>
@@ -2275,7 +2341,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2321,7 +2388,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、5次元以上の場合 <a class="el" href="ailia_8h.html#a2fff4a8949fa5ac5f03d81905952da2b">AILIA_STATUS_NDIMENSION_SHAPE</a> 、 形状の一部が未確定の場合 <a class="el" href="ailia_8h.html#a6f05f3500c53cbbd59681631f46e6848">AILIA_STATUS_UNSETTLED_SHAPE</a> 、それ以外のエラーの場合はエラーコードを返す。</dd></dl>
-<p>形状が5次元以上の場合は <a class="el" href="ailia_8h.html#ab03c3140409d5faa11981671cac5a547" title="推論時の入力データの次元を取得します。 ">ailiaGetInputDim()</a> 、 <a class="el" href="ailia_8h.html#ae1c224a16d6b3021a593a77420a320b7" title="推論時の入力データの形状を取得します。 ">ailiaGetInputShapeND()</a> を利用してください。 形状の一部が未確定の場合、該当する次元の値は0となり、それ以外の次元の値は有効な値が格納されます。 </p>
+<p>形状が5次元以上の場合は <a class="el" href="ailia_8h.html#ab03c3140409d5faa11981671cac5a547" title="推論時の入力データの次元を取得します。 ">ailiaGetInputDim()</a> 、 <a class="el" href="ailia_8h.html#ae1c224a16d6b3021a593a77420a320b7" title="推論時の入力データの形状を取得します。 ">ailiaGetInputShapeND()</a> を利用してください。 形状の一部が未確定の場合、該当する次元の値は0となり、それ以外の次元の値は有効な値が格納されます。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2367,7 +2434,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、形状の一部が未確定の場合 <a class="el" href="ailia_8h.html#a6f05f3500c53cbbd59681631f46e6848">AILIA_STATUS_UNSETTLED_SHAPE</a> 、 それ以外のエラーの場合はエラーコードを返す。</dd></dl>
-<p>形状の一部が未確定の場合、該当する次元の値は0となり、それ以外の次元の値は有効な値が格納されます。 </p>
+<p>形状の一部が未確定の場合、該当する次元の値は0となり、それ以外の次元の値は有効な値が格納されます。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2405,7 +2472,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2443,7 +2511,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2488,7 +2557,7 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、5次元以上の場合 <a class="el" href="ailia_8h.html#a2fff4a8949fa5ac5f03d81905952da2b">AILIA_STATUS_NDIMENSION_SHAPE</a> 、 それ以外のエラーの場合エラーコードを返す。 形状が5次元以上の場合は <a class="el" href="ailia_8h.html#aa2dc3a17840b2da29b4c1fb3401bc0ef" title="推論時の出力データの次元を取得します。 ">ailiaGetOutputDim()</a> 、 <a class="el" href="ailia_8h.html#abd8aec2321b0804d3b03332780bf8ff4" title="推論時の出力データの形状を取得します。 ">ailiaGetOutputShapeND()</a> を利用してください。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、5次元以上の場合 <a class="el" href="ailia_8h.html#a2fff4a8949fa5ac5f03d81905952da2b">AILIA_STATUS_NDIMENSION_SHAPE</a> 、 それ以外のエラーの場合エラーコードを返す。 形状が5次元以上の場合は <a class="el" href="ailia_8h.html#aa2dc3a17840b2da29b4c1fb3401bc0ef" title="推論時の出力データの次元を取得します。 ">ailiaGetOutputDim()</a> 、 <a class="el" href="ailia_8h.html#abd8aec2321b0804d3b03332780bf8ff4" title="推論時の出力データの形状を取得します。 ">ailiaGetOutputShapeND()</a> を利用してください。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </dd></dl>
 
 </div>
 </div>
@@ -2533,7 +2602,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、それ以外のエラーの場合はエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -2644,7 +2714,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3057,7 +3128,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3110,7 +3182,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p>複数入力があるネットワークなどで入力を指定する場合に用います。 blob_idxで入力レイヤーのblob以外のものを指定した場合、 <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 </p>
+<p>複数入力があるネットワークなどで入力を指定する場合に用います。 blob_idxで入力レイヤーのblob以外のものを指定した場合、 <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3163,7 +3235,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p>複数入力があるネットワークなどで入力形状を変更する場合に用います。 blob_idxは入力レイヤーのblob以外のものを指定した場合 <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 その他の注意点は <a class="el" href="ailia_8h.html#a7c4e0157453572bf3f6fcacd21ce82b0" title="推論時の入力データの形状を変更します。 ">ailiaSetInputShape()</a> の解説を参照してください。 入力形状のランクが5次元以上の場合は <a class="el" href="ailia_8h.html#a860d5e11e0280d323896c4a43314037d" title="指定したBlobの形状を変更します。 ">ailiaSetInputBlobShapeND()</a> を利用してください。 </p>
+<p>複数入力があるネットワークなどで入力形状を変更する場合に用います。 blob_idxは入力レイヤーのblob以外のものを指定した場合 <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 その他の注意点は <a class="el" href="ailia_8h.html#a7c4e0157453572bf3f6fcacd21ce82b0" title="推論時の入力データの形状を変更します。 ">ailiaSetInputShape()</a> の解説を参照してください。 入力形状のランクが5次元以上の場合は <a class="el" href="ailia_8h.html#a860d5e11e0280d323896c4a43314037d" title="指定したBlobの形状を変更します。 ">ailiaSetInputBlobShapeND()</a> を利用してください。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3216,7 +3288,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p>複数入力があるネットワークなどで入力形状を変更する場合に用います。 blob_idxは入力レイヤーのblob以外のものを指定した場合 <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 その他の注意点は <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="推論時の入力データの形状を変更します。 ">ailiaSetInputShapeND()</a> の解説を参照してください。 </p>
+<p>複数入力があるネットワークなどで入力形状を変更する場合に用います。 blob_idxは入力レイヤーのblob以外のものを指定した場合 <a class="el" href="ailia_8h.html#a474c18528b8d0ff0a599f1325e25bf53">AILIA_STATUS_INVALID_ARGUMENT</a> が返ります。 その他の注意点は <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="推論時の入力データの形状を変更します。 ">ailiaSetInputShapeND()</a> の解説を参照してください。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3262,7 +3334,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p>prototxtで定義されている入力形状を変更します。 prototxtに記述されているランクと同じにする必要があります。 なお、重み係数の形状が入力形状に依存しているなどによりエラーが返る場合があります。 prototxtで定義されているランクが4次元未満の場合は未使用の要素に1を設定する必要があります。 prototxtで定義されているランクが5次元以上の場合は <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="推論時の入力データの形状を変更します。 ">ailiaSetInputShapeND()</a> を利用してください。 </p>
+<p>prototxtで定義されている入力形状を変更します。 prototxtに記述されているランクと同じにする必要があります。 なお、重み係数の形状が入力形状に依存しているなどによりエラーが返る場合があります。 prototxtで定義されているランクが4次元未満の場合は未使用の要素に1を設定する必要があります。 prototxtで定義されているランクが5次元以上の場合は <a class="el" href="ailia_8h.html#af839d9ea442ece00c51e23c469b9f7b0" title="推論時の入力データの形状を変更します。 ">ailiaSetInputShapeND()</a> を利用してください。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3308,7 +3380,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p>prototxtで定義されている入力形状を変更します。 prototxtに記述されているランクと同じにする必要があります。 なお、重み係数の形状が入力形状に依存しているなどによりエラーが返る場合があります。 </p>
+<p>prototxtで定義されている入力形状を変更します。 prototxtに記述されているランクと同じにする必要があります。 なお、重み係数の形状が入力形状に依存しているなどによりエラーが返る場合があります。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3477,7 +3549,8 @@ ailia.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
@@ -3505,7 +3578,7 @@ ailia.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia_8h.html#a51f3c703853dc8beecc29c63bb088fe1">AILIA_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
-<p><a class="el" href="ailia_8h.html#aa84ced8c68d31e6287a4aa7bdffad551" title="指定したBlobに入力データを与えます。 ">ailiaSetInputBlobData()</a> を用いて入力を与えた場合などに用います。 推論結果は <a class="el" href="ailia_8h.html#a357802ffe571e8aeffb78adb6d71a1cb" title="推論時の内部データ(Blob)を取得します。 ">ailiaGetBlobData()</a> で取得してください。 </p>
+<p><a class="el" href="ailia_8h.html#aa84ced8c68d31e6287a4aa7bdffad551" title="指定したBlobに入力データを与えます。 ">ailiaSetInputBlobData()</a> を用いて入力を与えた場合などに用います。 推論結果は <a class="el" href="ailia_8h.html#a357802ffe571e8aeffb78adb6d71a1cb" title="推論時の内部データ(Blob)を取得します。 ">ailiaGetBlobData()</a> で取得してください。 このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。 </p>
 
 </div>
 </div>
