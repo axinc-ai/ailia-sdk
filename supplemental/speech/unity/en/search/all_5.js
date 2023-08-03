@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['language_131',['language',['../classAiliaSpeech_1_1AILIASpeechText.html#a9a5e887fbe56dca4d38525479ecf2366',1,'AiliaSpeech::AILIASpeechText']]],
-  ['library_5fname_132',['LIBRARY_NAME',['../classAiliaSpeech.html#abed14a1a0e2f5944f304b93e6469d7c0',1,'AiliaSpeech']]]
+  ['how_20to_20import_20the_20unity_20package_20and_20run_20the_20sample_20program_144',['How to import the Unity package and run the sample program',['../setup.html',1,'']]]
 ];

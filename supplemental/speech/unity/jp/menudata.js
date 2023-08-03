@@ -22,6 +22,7 @@ for the JavaScript code in this file
 */
 var menudata={children:[
 {text:"総合概要",url:"index.html"},
+{text:"諸情報",url:"pages.html"},
 {text:"クラス",url:"annotated.html",children:[
 {text:"クラス一覧",url:"annotated.html"},
 {text:"クラス索引",url:"classes.html"},

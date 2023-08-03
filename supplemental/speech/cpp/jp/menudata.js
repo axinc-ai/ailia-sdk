@@ -22,6 +22,7 @@ for the JavaScript code in this file
 */
 var menudata={children:[
 {text:"総合概要",url:"index.html"},
+{text:"諸情報",url:"pages.html"},
 {text:"クラス",url:"annotated.html",children:[
 {text:"クラス一覧",url:"annotated.html"},
 {text:"クラス索引",url:"classes.html"},
@@ -44,5 +45,6 @@ var menudata={children:[
 {text:"全て",url:"globals.html",children:[
 {text:"a",url:"globals.html#index_a"}]},
 {text:"関数",url:"globals_func.html"},
-{text:"型定義",url:"globals_type.html"},
+{text:"型定義",url:"globals_type.html",children:[
+{text:"a",url:"globals_type.html#index_a"}]},
 {text:"マクロ定義",url:"globals_defs.html"}]}]}]}

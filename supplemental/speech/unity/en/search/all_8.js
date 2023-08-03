@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['resettranscribestate_135',['ResetTranscribeState',['../classAiliaSpeechModel.html#addf3a9a25f27e7ac69455cb8330ab30e',1,'AiliaSpeechModel']]]
+  ['open_153',['Open',['../classAiliaSpeechModel.html#ac0da0da2391bcf0b19c179640333618d',1,'AiliaSpeechModel']]],
+  ['opendictionary_154',['OpenDictionary',['../classAiliaSpeechModel.html#a074d3fb45c27c42e865c9e6f867f152d',1,'AiliaSpeechModel']]],
+  ['openvad_155',['OpenVad',['../classAiliaSpeechModel.html#a26d85a6d0070bd74f293234ea545659b',1,'AiliaSpeechModel']]]
 ];

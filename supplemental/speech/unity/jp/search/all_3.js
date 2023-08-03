@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['getcallback_121',['GetCallback',['../classAiliaSpeech.html#aa97a39b17b5e7aaecfe8097e87c8461a',1,'AiliaSpeech']]],
-  ['geterrordetail_122',['GetErrorDetail',['../classAiliaSpeechModel.html#a2180994d1ac369891db26a59c84601da',1,'AiliaSpeechModel']]],
-  ['getintermediatetext_123',['GetIntermediateText',['../classAiliaSpeechModel.html#a909d8ac403047c9e79f444e154ec5b9a',1,'AiliaSpeechModel']]],
-  ['getresults_124',['GetResults',['../classAiliaSpeechModel.html#a603a0273df7d46d2969beca5b7678752',1,'AiliaSpeechModel']]]
+  ['feature_2emd_138',['feature.md',['../feature_8md.html',1,'']]],
+  ['feature_139',['feature',['../md_md-common_feature.html',1,'']]]
 ];

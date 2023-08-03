@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_speech: APIの使用方法</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_speech
+   &#160;<span id="projectnumber">0.9.7.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">APIの使用方法 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+High Level API</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+High Level APIの概要</h2>
+<p>C::のHigh Level API では、AiliaSpeechのLow Level APIを抽象化したAiliaSpeechModelが使用可能です。AiliaSpeechModelは、マルチスレッドでテキスト化を行う設計となっています。Openでモデルファイルを読み込み、PCMの波形をTranscribeに供給、推論が終わったらGetResultsで推論結果を取得します。</p>
+<div class="fragment"><div class="line">void OnEnable(){</div>
+<div class="line">  // インスタンス作成</div>
+<div class="line">  AiliaSpeechModel ailia_speech = new AiliaSpeechModel();</div>
+<div class="line">  ailia_speech.Open(asset_path + &quot;/&quot; + encoder_path, asset_path + &quot;/&quot; + decoder_path, env_id, api_model_type, task, flag, language);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void Update(){</div>
+<div class="line">  // マイクから波形の取得</div>
+<div class="line">  float [] waveData = GetMicInput();</div>
+<div class="line"> </div>
+<div class="line">  // サブスレッドが推論中であればキューに積む</div>
+<div class="line">  if (ailia_speech.IsProcessing()){</div>
+<div class="line">    waveQueue.Add(waveData); // キューに積む</div>
+<div class="line">    return;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  // マルチスレッドの処理結果を取得</div>
+<div class="line">  List&lt;string&gt; results = ailia_speech.GetResults();</div>
+<div class="line">  for (uint idx = 0; idx &lt; results.Count; idx++){</div>
+<div class="line">      string text = results[(int)idx];</div>
+<div class="line">      string display_text = text + &quot;\n&quot;;</div>
+<div class="line">      content_text = content_text + display_text;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  // 推論が終わっていたら新規推論をリクエスト</div>
+<div class="line">  ailia_speech.Transcribe(waveQueue, frequency, channels, complete);</div>
+<div class="line">  waveQueue = new List&lt;float[]&gt;(); // キューを初期化</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void OnDisable(){</div>
+<div class="line">  // インスタンス解放</div>
+<div class="line">  ailia_speech.Close();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+ライブ変換</h2>
+<p>ライブ変換を有効にするには、Open APIの引数にAILIA_SPEECH_FLAG_LIVEを与えます。</p>
+<div class="fragment"><div class="line">flag = AiliaSpeech.AILIA_SPEECH_FLAG_LIVE;</div>
+</div><!-- fragment --><p>プレビューは、IntermediateCallbackに通知されます。</p>
+<div class="fragment"><div class="line">string text = GetIntermediateText();</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Low Level API</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Low Level APIの概要</h2>
+<p>C::のLow Level APIでは、AiliaSpeech名前空間にC APIをそのままマッピングしています。</p>
+<p>ailia Speechでは、ailiaSpeechCreateでインスタンスを作成、ailiaSpeechOpenModelFileでモデルを開き、ailiaSpeechPushInputDataでPCMを入力、ailiaSpeechBufferedで十分なPCMが入力されたか確認、ailiaSpeechTranscribeでテキスト化、ailiaSpeechGetTextで認識結果を取得可能です。</p>
+<p>ailiaSpeechPushInputDataは音声全体を入力する必要はなく、少しずつ音声を供給することが可能であり、マイクからのリアルタイム入力を受けることができます。</p>
+<div class="fragment"><div class="line">// インスタンス作成</div>
+<div class="line">IntPtr net = IntPtr.Zero;</div>
+<div class="line">AiliaSpeech.AILIASpeechApiCallback callback = AiliaSpeech.GetCallback();</div>
+<div class="line">int memory_mode = Ailia.AILIA_MEMORY_REDUCE_CONSTANT | Ailia.AILIA_MEMORY_REDUCE_CONSTANT_WITH_INPUT_INITIALIZER | Ailia.AILIA_MEMORY_REUSE_INTERSTAGE;</div>
+<div class="line">AiliaSpeech.ailiaSpeechCreate(ref net, env_id, Ailia.AILIA_MULTITHREAD_AUTO, memory_mode, AiliaSpeech.AILIA_SPEECH_TASK_TRANSCRIBE, AiliaSpeech.AILIA_SPEECH_FLAG_NONE, callback, AiliaSpeech.AILIA_SPEECH_API_CALLBACK_VERSION);</div>
+<div class="line">string base_path = Application.streamingAssetsPath+&quot;/&quot;;</div>
+<div class="line">AiliaSpeech.ailiaSpeechOpenModelFile(net, base_path + &quot;encoder_small.onnx&quot;, base_path + &quot;decoder_small_fix_kv_cache.onnx&quot;, AiliaSpeech.AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL);</div>
+<div class="line"> </div>
+<div class="line">// 言語設定</div>
+<div class="line">AiliaSpeech.ailiaSpeechSetLanguage(net, &quot;ja&quot;);</div>
+<div class="line"> </div>
+<div class="line">// PCMをまとめて供給</div>
+<div class="line">AiliaSpeech.ailiaSpeechPushInputData(net, samples_buf, threadChannels, (uint)samples_buf.Length / threadChannels, threadFrequency);</div>
+<div class="line"> </div>
+<div class="line">// テキスト化するための十分なPCMがあるか</div>
+<div class="line">while (true){</div>
+<div class="line">  // テキスト化するための十分なPCMが供給されたか</div>
+<div class="line">  uint buffered = 0;</div>
+<div class="line">  AiliaSpeech.ailiaSpeechBuffered(net, ref buffered);</div>
+<div class="line"> </div>
+<div class="line">  if (buffered == 1){</div>
+<div class="line">      // テキスト化の実行</div>
+<div class="line">      AiliaSpeech.ailiaSpeechTranscribe(net);</div>
+<div class="line"> </div>
+<div class="line">      // 取得できたテキストの数を取得</div>
+<div class="line">      uint count = 0;</div>
+<div class="line">      AiliaSpeech.ailiaSpeechGetTextCount(net, ref count);</div>
+<div class="line"> </div>
+<div class="line">      // テキストの取得</div>
+<div class="line">      for (uint idx = 0; idx &lt; count; idx++){</div>
+<div class="line">          AiliaSpeech.AILIASpeechText text = new AiliaSpeech.AILIASpeechText();</div>
+<div class="line">          AiliaSpeech.ailiaSpeechGetText(net, text, AiliaSpeech.AILIA_SPEECH_TEXT_VERSION, idx);</div>
+<div class="line">          float cur_time = text.time_stamp_begin;</div>
+<div class="line">          float next_time = text.time_stamp_end;</div>
+<div class="line">          Debug.Log(Marshal.PtrToStringAnsi(text.text));</div>
+<div class="line">      }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  // 全てのPCMの処理が終わったかどうか</div>
+<div class="line">  uint complete = 0;</div>
+<div class="line">  AiliaSpeech.ailiaSpeechComplete(net, ref complete);</div>
+<div class="line">  if (complete == 1){</div>
+<div class="line">    break;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">// インスタンス解放</div>
+<div class="line">AiliaSpeech.ailiaSpeechDestroy(net);</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+GPUの使用</h1>
+<p>GPUを使用するには、AiliaSpeech.Openのenv_id引数にGPUのenv_idを指定します。 AILIA_ENVIRONMENT_ID_AUTOを指定した場合は、CPUで推論が行われます。 GPUのenv_idを取得する方法は、AiliaSpeechSample.csのGetEnvId()を参照してください。 下記の例では、ailiaのAPIを使用して環境を列挙し、env_typeが1の場合にGPUのenv_idを取得しています。</p>
+<div class="fragment"><div class="line">private int GetEnvId(int env_type){</div>
+<div class="line">    int env_id = Ailia.AILIA_ENVIRONMENT_ID_AUTO;</div>
+<div class="line">    if (env_type == 1) { // GPU</div>
+<div class="line">        int count = 0;</div>
+<div class="line">        Ailia.ailiaGetEnvironmentCount(ref count);</div>
+<div class="line">        for (int i = 0; i &lt; count; i++){</div>
+<div class="line">            IntPtr env_ptr = IntPtr.Zero;</div>
+<div class="line">            Ailia.ailiaGetEnvironment(ref env_ptr, (uint)i, Ailia.AILIA_ENVIRONMENT_VERSION);</div>
+<div class="line">            Ailia.AILIAEnvironment env = (Ailia.AILIAEnvironment)Marshal.PtrToStructure(env_ptr, typeof(Ailia.AILIAEnvironment));</div>
+<div class="line"> </div>
+<div class="line">            if (env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_MPS || env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_CUDA || env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_VULKAN){</div>
+<div class="line">                env_id = env.id;</div>
+<div class="line">                env_name = Marshal.PtrToStringAnsi(env.name);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    } else {</div>
+<div class="line">        env_name = &quot;cpu&quot;;</div>
+<div class="line">    }</div>
+<div class="line">    return env_id;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+プラットフォームごとの注意点</h1>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Windows</h2>
+<p>Unity Pluginのサンプルでは、ファイルダイアログにStandaloneFileBrowserアセットを使用しています。StandaloneFileBrowserの制約で、Windows環境でil2cppでビルドするとエラーが発生するため、monoでビルドしてください。これはailia Speechの制約ではないため、ファイルダイアログを使用しない場合はil2cppを使用可能です。</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+iOS</h2>
+<p>iOSで動作させる場合は、CapabilityにIncreased Memory Limitを指定してください。Smallモデルで1.82GB程度のメモリが必要なためです。</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Android</h2>
+<p>AndroidではStreamingAssetsのファイルへの直接アクセスが行えないため、起動時にTemporaryCachePathにモデルファイルを転送します。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

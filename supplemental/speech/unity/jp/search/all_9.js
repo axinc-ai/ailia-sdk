@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setprompt_136',['SetPrompt',['../classAiliaSpeechModel.html#a41cca25e8ed02240d6fb46219ad8ecb5',1,'AiliaSpeechModel']]]
+  ['resettranscribestate_156',['ResetTranscribeState',['../classAiliaSpeechModel.html#addf3a9a25f27e7ac69455cb8330ab30e',1,'AiliaSpeechModel']]]
 ];

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_speech: APIの使用方法</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_speech
+   &#160;<span id="projectnumber">0.9.7.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">APIの使用方法 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+ailia SpeechのAPIの概要</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+基本的な使用方法</h2>
+<p>ailia Speechでは、ailiaSpeechCreateでインスタンスを作成、ailiaSpeechOpenModelFileでモデルを開き、ailiaSpeechPushInputDataでPCMを入力、ailiaSpeechBufferedで十分なPCMが入力されたか確認、ailiaSpeechTranscribeでテキスト化、ailiaSpeechGetTextで認識結果を取得可能です。</p>
+<p>ailiaSpeechPushInputDataは音声全体を入力する必要はなく、少しずつ音声を供給することが可能であり、マイクからのリアルタイム入力を受けることができます。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;ailia.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;ailia_audio.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ailia__speech_8h.html">ailia_speech.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;ailia_speech_util.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> main(<span class="keywordtype">void</span>){</div>
+<div class="line"> <span class="comment">// インスタンス作成</span></div>
+<div class="line"> <span class="keyword">struct </span>AILIASpeech* net;</div>
+<div class="line"> <a class="code" href="struct__AILIASpeechApiCallback.html">AILIASpeechApiCallback</a> callback = ailiaSpeechUtilGetCallback();</div>
+<div class="line"> <span class="keywordtype">int</span> memory_mode = AILIA_MEMORY_REDUCE_CONSTANT | AILIA_MEMORY_REDUCE_CONSTANT_WITH_INPUT_INITIALIZER | AILIA_MEMORY_REUSE_INTERSTAGE;</div>
+<div class="line"> <a class="code" href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">ailiaSpeechCreate</a>(&amp;net, AILIA_ENVIRONMENT_ID_AUTO, AILIA_MULTITHREAD_AUTO, memory_mode, <a class="code" href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a>, <a class="code" href="ailia__speech_8h.html#a811a53f90bad34ceb1cd1cdf275c2687">AILIA_SPEECH_FLAG_NONE</a>, callback, <a class="code" href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a>);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// モデルファイル読み込み</span></div>
+<div class="line"> <a class="code" href="ailia__speech_8h.html#a56c22024e9f672509d2e00543ca14b95">ailiaSpeechOpenModelFileA</a>(net, <span class="stringliteral">&quot;encoder_small.onnx&quot;</span>, <span class="stringliteral">&quot;decoder_small_fix_kv_cache.onnx&quot;</span>, <a class="code" href="ailia__speech_8h.html#a57d4a103b11eb5eee22d1c559c18e446">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL</a>);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// 言語設定</span></div>
+<div class="line"> <a class="code" href="ailia__speech_8h.html#a72dd0b016ca262c66485a2fccc22627f">ailiaSpeechSetLanguage</a>(net, <span class="stringliteral">&quot;ja&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// PCMをまとめて供給</span></div>
+<div class="line"> <a class="code" href="ailia__speech_8h.html#a453c7c1308539e9bc89239bfd9d0e831">ailiaSpeechPushInputData</a>(net, pPcm, nChannels, nSamples, sampleRate);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// テキスト化</span></div>
+<div class="line"> <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line">  <span class="comment">// テキスト化するための十分なPCMが供給されたか</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> buffered = 0;</div>
+<div class="line">  <a class="code" href="ailia__speech_8h.html#a0e0cb6e4b463dbf02fc5da05a061cedd">ailiaSpeechBuffered</a>(net, &amp;buffered);</div>
+<div class="line">  <span class="keywordflow">if</span> (buffered == 1){</div>
+<div class="line">   <span class="comment">// テキスト化の実行</span></div>
+<div class="line">   <a class="code" href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">ailiaSpeechTranscribe</a>(net);</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// 取得できたテキストの数を取得</span></div>
+<div class="line">   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count = 0;</div>
+<div class="line">   <a class="code" href="ailia__speech_8h.html#a848b4bd906ed522b28e99b4be4696e74">ailiaSpeechGetTextCount</a>(net, &amp;count);</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// テキストの取得</span></div>
+<div class="line">   <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> idx = 0; idx &lt; count; idx++){</div>
+<div class="line">    <a class="code" href="struct__AILIASpeechText.html">AILIASpeechText</a> text;</div>
+<div class="line">    <a class="code" href="ailia__speech_8h.html#a608a04f5e2018a5f608480e6da3a16a9">ailiaSpeechGetText</a>(net, &amp;text, <a class="code" href="ailia__speech_8h.html#ad0c10a4d128016e1aab69aa593774875">AILIA_SPEECH_TEXT_VERSION</a>, idx);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">float</span> cur_time = text.<a class="code" href="struct__AILIASpeechText.html#afa317ae0e97f34bf603bf174fa57638b">time_stamp_begin</a>;</div>
+<div class="line">    <span class="keywordtype">float</span> next_time = text.<a class="code" href="struct__AILIASpeechText.html#aa68dc0ba9cda57315271a26a574561c4">time_stamp_end</a>;</div>
+<div class="line">    printf(<span class="stringliteral">&quot;[%02d:%02d.%03d --&gt; %02d:%02d.%03d] &quot;</span>, (<span class="keywordtype">int</span>)cur_time/60%60,(<span class="keywordtype">int</span>)cur_time%60, (<span class="keywordtype">int</span>)(cur_time*1000)%1000, (<span class="keywordtype">int</span>)next_time/60%60,(<span class="keywordtype">int</span>)next_time%60, (<span class="keywordtype">int</span>)(next_time*1000)%1000);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, text.<a class="code" href="struct__AILIASpeechText.html#ae53e0da708907b4ccd40ba796fa97833">text</a>);</div>
+<div class="line">   }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// 全てのPCMの処理が終わったかどうか</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> complete = 0;</div>
+<div class="line">  <a class="code" href="ailia__speech_8h.html#aa610ce4758daf48552da5f172fc0d972">ailiaSpeechComplete</a>(net, &amp;complete);</div>
+<div class="line">  <span class="keywordflow">if</span> (complete == 1){</div>
+<div class="line">   <span class="keywordflow">break</span>;</div>
+<div class="line">  }</div>
+<div class="line"> }</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// インスタンス解放</span></div>
+<div class="line"> <a class="code" href="ailia__speech_8h.html#a078f8233d17bce5e1c3e707b226db2b5">ailiaSpeechDestroy</a>(net);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+ライブ変換</h2>
+<p>ライブ変換を有効にするには、ailiaSpeechCreateの引数にAILIA_SPEECH_FLAG_LIVEを与えます。</p>
+<div class="fragment"><div class="line"><a class="code" href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">ailiaSpeechCreate</a>(&amp;net, AILIA_ENVIRONMENT_ID_AUTO, AILIA_MULTITHREAD_AUTO, memory_mode, <a class="code" href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a>, <a class="code" href="ailia__speech_8h.html#a5101766abc42f4966dcc67b6cb2acd10">AILIA_SPEECH_FLAG_LIVE</a>, callback, <a class="code" href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a>);</div>
+</div><!-- fragment --><p>プレビューは、IntermediateCallbackに通知されます。</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> intermediate_callback(<span class="keywordtype">void</span> *handle, <span class="keyword">const</span> <span class="keywordtype">char</span> *text){</div>
+<div class="line"> printf(<span class="stringliteral">&quot;%s\n&quot;</span>, text);</div>
+<div class="line"> <span class="keywordflow">return</span> 0; <span class="comment">// 1で中断</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="ailia__speech_8h.html#a6c25986e571ce83f49b523e2b59607da">ailiaSpeechSetIntermediateCallback</a>(net, &amp;intermediate_callback, NULL);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+GPUの使用</h2>
+<p>GPUを使用するには、ailiaSpeechCreateのenv_id引数にGPUのenv_idを指定します。 デフォルトでは、AILIA_ENVIRONMENT_ID_AUTOが指定されており、CPUで推論が行われます。 GPUのenv_idを取得する方法は、ailia_speech_sample.cppを参照してください。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="aailia__speech_8h_html_a078f8233d17bce5e1c3e707b226db2b5"><div class="ttname"><a href="ailia__speech_8h.html#a078f8233d17bce5e1c3e707b226db2b5">ailiaSpeechDestroy</a></div><div class="ttdeci">void AILIA_API ailiaSpeechDestroy(struct AILIASpeech *net)</div><div class="ttdoc">ネットワークオブジェクトを破棄します。</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a453c7c1308539e9bc89239bfd9d0e831"><div class="ttname"><a href="ailia__speech_8h.html#a453c7c1308539e9bc89239bfd9d0e831">ailiaSpeechPushInputData</a></div><div class="ttdeci">int AILIA_API ailiaSpeechPushInputData(struct AILIASpeech *net, const float *src, unsigned int channels, unsigned int samples, unsigned int sampling_rate)</div><div class="ttdoc">音声をキューに投入します。</div></div>
+<div class="ttc" id="aailia__speech_8h_html_ad0c10a4d128016e1aab69aa593774875"><div class="ttname"><a href="ailia__speech_8h.html#ad0c10a4d128016e1aab69aa593774875">AILIA_SPEECH_TEXT_VERSION</a></div><div class="ttdeci">#define AILIA_SPEECH_TEXT_VERSION</div><div class="ttdoc">構造体バージョン</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:316</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html_ae53e0da708907b4ccd40ba796fa97833"><div class="ttname"><a href="struct__AILIASpeechText.html#ae53e0da708907b4ccd40ba796fa97833">_AILIASpeechText::text</a></div><div class="ttdeci">const char * text</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:319</div></div>
+<div class="ttc" id="aailia__speech_8h_html_aa610ce4758daf48552da5f172fc0d972"><div class="ttname"><a href="ailia__speech_8h.html#aa610ce4758daf48552da5f172fc0d972">ailiaSpeechComplete</a></div><div class="ttdeci">int AILIA_API ailiaSpeechComplete(struct AILIASpeech *net, unsigned int *complete)</div><div class="ttdoc">全てのデータの処理が完了したかどうかを判定します。</div></div>
+<div class="ttc" id="astruct__AILIASpeechApiCallback_html"><div class="ttname"><a href="struct__AILIASpeechApiCallback.html">_AILIASpeechApiCallback</a></div><div class="ttdef"><b>Definition:</b> ailia_speech.h:247</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a72dd0b016ca262c66485a2fccc22627f"><div class="ttname"><a href="ailia__speech_8h.html#a72dd0b016ca262c66485a2fccc22627f">ailiaSpeechSetLanguage</a></div><div class="ttdeci">int AILIA_API ailiaSpeechSetLanguage(struct AILIASpeech *net, const char *language)</div><div class="ttdoc">言語設定を行います。</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a56c22024e9f672509d2e00543ca14b95"><div class="ttname"><a href="ailia__speech_8h.html#a56c22024e9f672509d2e00543ca14b95">ailiaSpeechOpenModelFileA</a></div><div class="ttdeci">int AILIA_API ailiaSpeechOpenModelFileA(struct AILIASpeech *net, const char *encoder_path, const char *decoder_path, int model_type)</div><div class="ttdoc">モデルを指定します。(MBSC)</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html_afa317ae0e97f34bf603bf174fa57638b"><div class="ttname"><a href="struct__AILIASpeechText.html#afa317ae0e97f34bf603bf174fa57638b">_AILIASpeechText::time_stamp_begin</a></div><div class="ttdeci">float time_stamp_begin</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:320</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a270b7093c3050b79117027ab17a87313"><div class="ttname"><a href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a></div><div class="ttdeci">#define AILIA_SPEECH_API_CALLBACK_VERSION</div><div class="ttdoc">構造体バージョン</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:244</div></div>
+<div class="ttc" id="aailia__speech_8h_html_acffff23d4e9290777720557cdc30f9fc"><div class="ttname"><a href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">ailiaSpeechCreate</a></div><div class="ttdeci">int AILIA_API ailiaSpeechCreate(struct AILIASpeech **net, int env_id, int num_thread, int memory_mode, int task, int flags, AILIASpeechApiCallback callback, int version)</div><div class="ttdoc">ネットワークオブジェクトを作成します。</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a6c25986e571ce83f49b523e2b59607da"><div class="ttname"><a href="ailia__speech_8h.html#a6c25986e571ce83f49b523e2b59607da">ailiaSpeechSetIntermediateCallback</a></div><div class="ttdeci">int AILIA_API ailiaSpeechSetIntermediateCallback(struct AILIASpeech *net, AILIA_SPEECH_USER_API_INTERMEDIATE_CALLBACK callback, void *handle)</div><div class="ttdoc">認識の途中結果を取得するコールバックを設定します。</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a5101766abc42f4966dcc67b6cb2acd10"><div class="ttname"><a href="ailia__speech_8h.html#a5101766abc42f4966dcc67b6cb2acd10">AILIA_SPEECH_FLAG_LIVE</a></div><div class="ttdeci">#define AILIA_SPEECH_FLAG_LIVE</div><div class="ttdoc">ライブ変換モードを有効にします</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:154</div></div>
+<div class="ttc" id="aailia__speech_8h_html_adb4f738437f4663bf6cc12bb088cecfc"><div class="ttname"><a href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">ailiaSpeechTranscribe</a></div><div class="ttdeci">int AILIA_API ailiaSpeechTranscribe(struct AILIASpeech *net)</div><div class="ttdoc">音声認識を行います。</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a811a53f90bad34ceb1cd1cdf275c2687"><div class="ttname"><a href="ailia__speech_8h.html#a811a53f90bad34ceb1cd1cdf275c2687">AILIA_SPEECH_FLAG_NONE</a></div><div class="ttdeci">#define AILIA_SPEECH_FLAG_NONE</div><div class="ttdoc">フラグを設定しません</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:143</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a0e0cb6e4b463dbf02fc5da05a061cedd"><div class="ttname"><a href="ailia__speech_8h.html#a0e0cb6e4b463dbf02fc5da05a061cedd">ailiaSpeechBuffered</a></div><div class="ttdeci">int AILIA_API ailiaSpeechBuffered(struct AILIASpeech *net, unsigned int *buffered)</div><div class="ttdoc">音声認識を行うために十分なデータが存在するかどうかを判定します。</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html"><div class="ttname"><a href="struct__AILIASpeechText.html">_AILIASpeechText</a></div><div class="ttdef"><b>Definition:</b> ailia_speech.h:318</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a6f87fdadb3ef26a39a787c4891c1a27e"><div class="ttname"><a href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a></div><div class="ttdeci">#define AILIA_SPEECH_TASK_TRANSCRIBE</div><div class="ttdoc">音声のテキスト化を行います</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:91</div></div>
+<div class="ttc" id="aailia__speech_8h_html"><div class="ttname"><a href="ailia__speech_8h.html">ailia_speech.h</a></div><div class="ttdoc">ailia Speech AI音声認識 ライブラリ</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a848b4bd906ed522b28e99b4be4696e74"><div class="ttname"><a href="ailia__speech_8h.html#a848b4bd906ed522b28e99b4be4696e74">ailiaSpeechGetTextCount</a></div><div class="ttdeci">int AILIA_API ailiaSpeechGetTextCount(struct AILIASpeech *net, unsigned int *count)</div><div class="ttdoc">認識したテキストの数を取得します。</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a57d4a103b11eb5eee22d1c559c18e446"><div class="ttname"><a href="ailia__speech_8h.html#a57d4a103b11eb5eee22d1c559c18e446">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL</a></div><div class="ttdeci">#define AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL</div><div class="ttdoc">Whisper Small model</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:65</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a608a04f5e2018a5f608480e6da3a16a9"><div class="ttname"><a href="ailia__speech_8h.html#a608a04f5e2018a5f608480e6da3a16a9">ailiaSpeechGetText</a></div><div class="ttdeci">int AILIA_API ailiaSpeechGetText(struct AILIASpeech *net, AILIASpeechText *text, unsigned int version, unsigned int idx)</div><div class="ttdoc">認識したテキストを取得します。</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html_aa68dc0ba9cda57315271a26a574561c4"><div class="ttname"><a href="struct__AILIASpeechText.html#aa68dc0ba9cda57315271a26a574561c4">_AILIASpeechText::time_stamp_end</a></div><div class="ttdeci">float time_stamp_end</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:321</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

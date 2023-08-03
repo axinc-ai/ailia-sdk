@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['language_131',['language',['../classAiliaSpeech_1_1AILIASpeechText.html#a9a5e887fbe56dca4d38525479ecf2366',1,'AiliaSpeech::AILIASpeechText']]],
-  ['library_5fname_132',['LIBRARY_NAME',['../classAiliaSpeech.html#abed14a1a0e2f5944f304b93e6469d7c0',1,'AiliaSpeech']]]
+  ['index_2dcsharp_2edox_144',['index-csharp.dox',['../index-csharp_8dox.html',1,'']]],
+  ['intermediatecallback_145',['IntermediateCallback',['../classAiliaSpeechModel.html#aca573948adfc559890aedaa19678c87b',1,'AiliaSpeechModel']]],
+  ['iscompleted_146',['IsCompleted',['../classAiliaSpeechModel.html#acf619df8ad77ab6703667fa10de477b9',1,'AiliaSpeechModel']]],
+  ['iserror_147',['IsError',['../classAiliaSpeechModel.html#a50cc560d93fd19ac803b3e4bf091b862',1,'AiliaSpeechModel']]],
+  ['isprocessing_148',['IsProcessing',['../classAiliaSpeechModel.html#a85696a27a35c570016a70ddad2848a3f',1,'AiliaSpeechModel']]],
+  ['istranscribing_149',['IsTranscribing',['../classAiliaSpeechModel.html#ab780c9da63d4a3ddd88116aec131269e',1,'AiliaSpeechModel']]]
 ];
