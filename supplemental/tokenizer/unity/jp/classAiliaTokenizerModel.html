@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">0.9.1.0</span>
+   &#160;<span id="projectnumber">0.9.3.0</span>
    </div>
   </td>
  </tr>
@@ -356,7 +356,7 @@ AiliaTokenizerModel 連携図</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合はトークン列、失敗した場合は空配列を返す。 </dd></dl>
 <div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">byte</span>[] text = System.Text.Encoding.UTF8.GetBytes(utf8);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">byte</span>[] text = System.Text.Encoding.UTF8.GetBytes(utf8+<span class="stringliteral">&quot;\u0000&quot;</span>);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        GCHandle handle = GCHandle.Alloc(text, GCHandleType.Pinned);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        IntPtr input = handle.AddrOfPinnedObject();</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">int</span> status = <a class="code" href="classAiliaTokenizer.html">AiliaTokenizer</a>.<a class="code" href="classAiliaTokenizer.html#a52a22944e2e304108c9c09c6e3a70024">ailiaTokenizerEncode</a>(net, input);</div>
