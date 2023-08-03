@@ -25,6 +25,7 @@ var searchData=
   ['ailiaclassifiercompute',['ailiaClassifierCompute',['../ailia__classifier_8h.html#adcc59463d04be6a18a8ddd0fdd9e6224',1,'ailia_classifier.h']]],
   ['ailiaclassifiergetclass',['ailiaClassifierGetClass',['../ailia__classifier_8h.html#a5be5f9ada0ce260505f87e052c26cdf3',1,'ailia_classifier.h']]],
   ['ailiaclassifiergetclasscount',['ailiaClassifierGetClassCount',['../ailia__classifier_8h.html#a5633d3b768556a2bca944f21afc59dd0',1,'ailia_classifier.h']]],
+  ['ailiacopyblobdata',['ailiaCopyBlobData',['../ailia_8h.html#a7d868db075fec2e9ee431fe493ec0d39',1,'ailia.h']]],
   ['ailiacreate',['ailiaCreate',['../ailia_8h.html#aafbaa89c853a043c6e2961f6a72e820e',1,'ailia.h']]],
   ['ailiacreateclassifier',['ailiaCreateClassifier',['../ailia__classifier_8h.html#ab0df415b159244f754fa3456e295fa6d',1,'ailia_classifier.h']]],
   ['ailiacreatedetector',['ailiaCreateDetector',['../ailia__detector_8h.html#acb3b4ae959b7c15ceca7034b48b62539',1,'ailia_detector.h']]],

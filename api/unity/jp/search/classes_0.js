@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ailia',['Ailia',['../classAilia.html',1,'']]],
+  ['ailiaaudio',['AiliaAudio',['../classAiliaAudio.html',1,'']]],
   ['ailiaclassifier',['AiliaClassifier',['../classAiliaClassifier.html',1,'']]],
   ['ailiaclassifierclass',['AILIAClassifierClass',['../classAiliaClassifier_1_1AILIAClassifierClass.html',1,'AiliaClassifier']]],
   ['ailiaclassifiermodel',['AiliaClassifierModel',['../classAiliaClassifierModel.html',1,'']]],

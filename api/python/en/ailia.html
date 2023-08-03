@@ -117,6 +117,22 @@ To retrieve memory_mode value, use get_memory_mode() .</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ailia.Net.copy_blob_data">
+<span class="sig-name descname"><span class="pre">copy_blob_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_net</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.copy_blob_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>copy blobs inter Net object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dst_idx</strong> (<em>int</em><em> or </em><em>str</em>) – The destination blob index (int) or blob name (str).</p></li>
+<li><p><strong>src_idx</strong> (<em>int</em><em> or </em><em>str</em>) – The source blob index (int) or blob name (str).</p></li>
+<li><p><strong>src_net</strong> (<a class="reference internal" href="#ailia.Net" title="ailia.Net"><em>Net</em></a><em> or </em><em>None</em>) – If specifyed Net object, copy blob from src_net.
+Otherwise, copy from self.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ailia.Net.find_blob_index_by_name">
 <span class="sig-name descname"><span class="pre">find_blob_index_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia.Net.find_blob_index_by_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>retrieve blob index by name.</p>
@@ -366,7 +382,7 @@ requirements :</p>
 </div></blockquote>
 </p></li>
 <li><p><strong>output</strong> (<em>numpy.ndarray</em><em> or </em><em>sequence</em><em>( </em><em>numpy.ndarray</em><em> )</em><em>, </em><em>optional</em>) – <p>output blob buffer. (for the performance freak)
-if used, ailia doesn’t create new output buffer every call.
+if used, ailia doesn’t create new output buffer every call and get only top N (len(output)) blobs of model.
 requirements :</p>
 <blockquote>
 <div><p>output.dtype is numpy.float32 .
@@ -401,7 +417,7 @@ requirements :</p>
 </div></blockquote>
 </p></li>
 <li><p><strong>output</strong> (<em>numpy.ndarray</em><em> or </em><em>sequence</em><em>( </em><em>numpy.ndarray</em><em> )</em><em>, </em><em>optional</em>) – <p>output blob buffer. (for the performance freak)
-if used, ailia doesn’t create new output buffer every call.
+if used, ailia doesn’t create new output buffer every call and get only top N (len(output)) blobs of model.
 requirements :</p>
 <blockquote>
 <div><p>output.dtype is numpy.float32 .

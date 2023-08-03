@@ -10,5 +10,6 @@ var searchData=
   ['computeposefromimage',['ComputePoseFromImage',['../classAiliaPoseEstimatorModel.html#a45ccff2f5d82e088c5cb6f97129c7dd6',1,'AiliaPoseEstimatorModel']]],
   ['computeposefromimageb2t',['ComputePoseFromImageB2T',['../classAiliaPoseEstimatorModel.html#ac29c23568af80fd216e2c793753270b0',1,'AiliaPoseEstimatorModel']]],
   ['computeupposefromimage',['ComputeUpPoseFromImage',['../classAiliaPoseEstimatorModel.html#aec4d68482597bec18c0bde440914ff01',1,'AiliaPoseEstimatorModel']]],
-  ['computeupposefromimageb2t',['ComputeUpPoseFromImageB2T',['../classAiliaPoseEstimatorModel.html#a5032fdbe1b83349813c2f80882d36abd',1,'AiliaPoseEstimatorModel']]]
+  ['computeupposefromimageb2t',['ComputeUpPoseFromImageB2T',['../classAiliaPoseEstimatorModel.html#a5032fdbe1b83349813c2f80882d36abd',1,'AiliaPoseEstimatorModel']]],
+  ['copyblobdata',['CopyBlobData',['../classAiliaModel.html#af8cd32ee7489603727593dc7fc89b4b4',1,'AiliaModel']]]
 ];

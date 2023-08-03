@@ -1,0 +1,1655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: AiliaAudio クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.2.15.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="classAiliaAudio-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">AiliaAudio クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9212a80c366372b2c073c9d149bbcdf8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a9212a80c366372b2c073c9d149bbcdf8">ailiaAudioLog1p</a> (float[] dst, float[] src, int src_n)</td></tr>
+<tr class="separator:a9212a80c366372b2c073c9d149bbcdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb2c4ce2977dbd4178087e38648a70a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#afcb2c4ce2977dbd4178087e38648a70a">ailiaAudioConvertPowerToDB</a> (float[] dst, float[] src, int src_n, float top_db)</td></tr>
+<tr class="separator:afcb2c4ce2977dbd4178087e38648a70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2d76cc0ede5bace673fe0333a8ae63"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a3d2d76cc0ede5bace673fe0333a8ae63">ailiaAudioGetFrameLen</a> (ref Int32 frame_n, int sample_n, int fft_n, int hop_n, int center)</td></tr>
+<tr class="separator:a3d2d76cc0ede5bace673fe0333a8ae63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b0fc0bb958615da7d0c860e8a695f2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a77b0fc0bb958615da7d0c860e8a695f2">ailiaAudioGetSampleLen</a> (ref Int32 sample_n, int frame_n, int freq_n, int hop_n, int center)</td></tr>
+<tr class="separator:a77b0fc0bb958615da7d0c860e8a695f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a0b1ddc359c4e84744a9dfc5bd5b40"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#af4a0b1ddc359c4e84744a9dfc5bd5b40">ailiaAudioGetWindow</a> (float[] dst, int window_n, int win_type)</td></tr>
+<tr class="separator:af4a0b1ddc359c4e84744a9dfc5bd5b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc318ef8e5bddf8019dff0cc9726d4c0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#afc318ef8e5bddf8019dff0cc9726d4c0">ailiaAudioFFT</a> (float[] dst, float[] src, int fft_n)</td></tr>
+<tr class="separator:afc318ef8e5bddf8019dff0cc9726d4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81b4cc19909464eb809f90378eb6133"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ad81b4cc19909464eb809f90378eb6133">ailiaAudioIFFT</a> (float[] dst, float[] src, int fft_n)</td></tr>
+<tr class="separator:ad81b4cc19909464eb809f90378eb6133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875b8f606aaa524ad7163c018859c1c4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a875b8f606aaa524ad7163c018859c1c4">ailiaAudioGetSpectrogram</a> (float[] dst, float[] src, int sample_n, int fft_n, int hop_n, int win_n, int win_type, int max_frame_n, int center, float power, int norm_type)</td></tr>
+<tr class="separator:a875b8f606aaa524ad7163c018859c1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfc3b616a2a11c399e164045cc43a8a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a0dfc3b616a2a11c399e164045cc43a8a">ailiaAudioGetInverseSpectrogram</a> (float[] dst, float[] src, int frame_n, int freq_n, int hop_n, int win_n, int win_type, int max_sample_n, int center, int norm_type)</td></tr>
+<tr class="separator:a0dfc3b616a2a11c399e164045cc43a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a12ab4fdd38b75272d42d5a72f13462"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a5a12ab4fdd38b75272d42d5a72f13462">ailiaAudioGetFBMatrix</a> (float[] dst, int freq_n, float f_min, float f_max, int mel_n, int sample_rate, int mel_norm, int mel_formula)</td></tr>
+<tr class="separator:a5a12ab4fdd38b75272d42d5a72f13462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58083b06b753cd4763a5d344912aa96"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ab58083b06b753cd4763a5d344912aa96">ailiaAudioGetMelSpectrogram</a> (float[] dst, float[] src, int sample_n, int sample_rate, int fft_n, int hop_n, int win_n, int win_type, int max_frame_n, int center, float power, int fft_norm_type, float f_min, float f_max, int mel_n, int mel_norm_type, int mel_formula)</td></tr>
+<tr class="separator:ab58083b06b753cd4763a5d344912aa96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e7e75dd1c42ce1d8575a949001d72d7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a5e7e75dd1c42ce1d8575a949001d72d7">ailiaAudioMagPhase</a> (float[] dst_mag, float[] dst_phase, float[] src, int freq_n, int frame_n, float power, int phase_form)</td></tr>
+<tr class="separator:a5e7e75dd1c42ce1d8575a949001d72d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff306d016290da4659a8673fa87512c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#afff306d016290da4659a8673fa87512c">ailiaAudioStandardize</a> (float[] dst, float[] src, int src_n)</td></tr>
+<tr class="separator:afff306d016290da4659a8673fa87512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5fa12e34f3832880254d0891cf777c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#abb5fa12e34f3832880254d0891cf777c">ailiaAudioComplexNorm</a> (float[] dst, float[] src, int src_n, float power)</td></tr>
+<tr class="separator:abb5fa12e34f3832880254d0891cf777c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54e153b058351fcb0cf052f708a4eeb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ad54e153b058351fcb0cf052f708a4eeb">ailiaAudioConvertToMel</a> (float[] dst, float[] src, float[] fb_mtrx, int freq_n, int frame_n, int mel_n)</td></tr>
+<tr class="separator:ad54e153b058351fcb0cf052f708a4eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32148c9127730c4db075a2765579352f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a32148c9127730c4db075a2765579352f">ailiaAudioFixFrameLen</a> (float[] dst, float[] src, int freq_n, int dst_frame_n, int src_frame_n, float pad_data)</td></tr>
+<tr class="separator:a32148c9127730c4db075a2765579352f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac525c2be4201b7f152eca922f48a00c4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ac525c2be4201b7f152eca922f48a00c4">ailiaAudioResample</a> (float[] dst, float[] src, int dst_sample_rate, int dst_n, int src_sample_rate, int src_n)</td></tr>
+<tr class="separator:ac525c2be4201b7f152eca922f48a00c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad51476168465974729f4b680baab63"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a7ad51476168465974729f4b680baab63">ailiaAudioGetResampleLen</a> (ref Int32 dst_sample_n, int dst_sample_rate, int src_sample_n, int src_sample_rate)</td></tr>
+<tr class="separator:a7ad51476168465974729f4b680baab63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e8f01922ed178483c4ffcff6b00d6a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a15e8f01922ed178483c4ffcff6b00d6a">ailiaAudioLinerFilter</a> (float[] dst, float[] src, float[] n_coef, float[] d_coef, float[] zi, int dst_n, int src_n, int n_coef_n, int d_coef_n, int zi_n)</td></tr>
+<tr class="separator:a15e8f01922ed178483c4ffcff6b00d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7419c1d04e7594e5ca22befc8acef3fe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a7419c1d04e7594e5ca22befc8acef3fe">ailiaAudioGetLinerFilterZiCoef</a> (float[] dst_zi, float[] n_coef, float[] d_coef, int dst_n, int n_coef_n, int d_coef_n)</td></tr>
+<tr class="separator:a7419c1d04e7594e5ca22befc8acef3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448129bb9d0c19907415c04371e55248"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a448129bb9d0c19907415c04371e55248">ailiaAudioFilterFilter</a> (float[] dst, float[] src, float[] n_coef, float[] d_coef, int dst_n, int src_n, int n_coef_n, int d_coef_n, int pad_type, int pad_len)</td></tr>
+<tr class="separator:a448129bb9d0c19907415c04371e55248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c02633143e89dbdf749daddefc9e29c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a0c02633143e89dbdf749daddefc9e29c">ailiaAudioGetNonSilentPos</a> (ref Int32 dst_start_pos, ref Int32 dst_length, float[] src, int sample_n, int win_n, int hop_n, float thr_db)</td></tr>
+<tr class="separator:a0c02633143e89dbdf749daddefc9e29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a2fb622d17f106e93d2abad1d4287b46d"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a2fb622d17f106e93d2abad1d4287b46d">AILIA_AUDIO_WIN_TYPE_HANN</a> = (1)</td></tr>
+<tr class="separator:a2fb622d17f106e93d2abad1d4287b46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a17f00ac86e780a51dae22b21bb03d"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a17a17f00ac86e780a51dae22b21bb03d">AILIA_AUDIO_WIN_TYPE_HAMMING</a> = (2)</td></tr>
+<tr class="separator:a17a17f00ac86e780a51dae22b21bb03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bea20f3edbe83cb4fe40c1e11c161b7"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a5bea20f3edbe83cb4fe40c1e11c161b7">AILIA_AUDIO_STFT_CENTER_NONE</a> = (0)</td></tr>
+<tr class="separator:a5bea20f3edbe83cb4fe40c1e11c161b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c89fae9b30a09c8dc4abac4537d0da"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a96c89fae9b30a09c8dc4abac4537d0da">AILIA_AUDIO_STFT_CENTER_ENABLE</a> = (1)</td></tr>
+<tr class="separator:a96c89fae9b30a09c8dc4abac4537d0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e83676a6ef63a6eac8413d9b3aa8f0a"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a7e83676a6ef63a6eac8413d9b3aa8f0a">AILIA_AUDIO_STFT_CENTER_SCIPY_DEFAULT</a> = (2)</td></tr>
+<tr class="separator:a7e83676a6ef63a6eac8413d9b3aa8f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5f0e51665a48d12077830a6248fbe6"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a3e5f0e51665a48d12077830a6248fbe6">AILIA_AUDIO_FFT_NORMALIZE_NONE</a> = (0)</td></tr>
+<tr class="separator:a3e5f0e51665a48d12077830a6248fbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf66ddecc95082a00ba7def79a6a2ee3"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#acf66ddecc95082a00ba7def79a6a2ee3">AILIA_AUDIO_FFT_NORMALIZE_LIBROSA_COMPAT</a> = (1)</td></tr>
+<tr class="separator:acf66ddecc95082a00ba7def79a6a2ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ebc6b335bb68f9ee1536adf902767b"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ab9ebc6b335bb68f9ee1536adf902767b">AILIA_AUDIO_FFT_NORMALIZE_PYTORCH_COMPAT</a> = (1)</td></tr>
+<tr class="separator:ab9ebc6b335bb68f9ee1536adf902767b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e6aaf889851e2f06d4997cd9a03893"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a80e6aaf889851e2f06d4997cd9a03893">AILIA_AUDIO_FFT_NORMALIZE_SCIPY_COMPAT</a> = (2)</td></tr>
+<tr class="separator:a80e6aaf889851e2f06d4997cd9a03893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fbdd8599a4386c471d81693e67c298"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a44fbdd8599a4386c471d81693e67c298">AILIA_AUDIO_MEL_NORMALIZE_NONE</a> = (0)</td></tr>
+<tr class="separator:a44fbdd8599a4386c471d81693e67c298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdce3db6b177a3569e18456bb8528a6"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a9fdce3db6b177a3569e18456bb8528a6">AILIA_AUDIO_MEL_NORMALIZE_ENABLE</a> = (1)</td></tr>
+<tr class="separator:a9fdce3db6b177a3569e18456bb8528a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce496fb151537f6012d0625663a03ba"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a4ce496fb151537f6012d0625663a03ba">AILIA_AUDIO_MEL_SCALE_FORMULA_HTK</a> = (1)</td></tr>
+<tr class="separator:a4ce496fb151537f6012d0625663a03ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e94106b68890f2f5a1951154930b92"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a30e94106b68890f2f5a1951154930b92">AILIA_AUDIO_MEL_SCALE_FORMULA_SLANYE</a> = (0)</td></tr>
+<tr class="separator:a30e94106b68890f2f5a1951154930b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba7076b592b7eb8f1784df8cb278e21"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#afba7076b592b7eb8f1784df8cb278e21">AILIA_AUDIO_PHASE_FORM_COMPLEX</a> = (1)</td></tr>
+<tr class="separator:afba7076b592b7eb8f1784df8cb278e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd8ba08bab472b3e94fd7a1e143db95"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a5cd8ba08bab472b3e94fd7a1e143db95">AILIA_AUDIO_PHASE_FORM_REAL</a> = (0)</td></tr>
+<tr class="separator:a5cd8ba08bab472b3e94fd7a1e143db95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdaa2de429c2c23026236ab9aa3e51f"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a6bdaa2de429c2c23026236ab9aa3e51f">AILIA_AUDIO_FILTFILT_PAD_NONE</a> = (0)</td></tr>
+<tr class="separator:a6bdaa2de429c2c23026236ab9aa3e51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023a86999b3c6cf4ad14c2f5f7491f75"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a023a86999b3c6cf4ad14c2f5f7491f75">AILIA_AUDIO_FILTFILT_PAD_ODD</a> = (1)</td></tr>
+<tr class="separator:a023a86999b3c6cf4ad14c2f5f7491f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67663681add1933d1e8b66a4a738e03b"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a67663681add1933d1e8b66a4a738e03b">AILIA_AUDIO_FILTFILT_PAD_EVEN</a> = (2)</td></tr>
+<tr class="separator:a67663681add1933d1e8b66a4a738e03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85020c5adeabbc1a696a116cbb490f70"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a85020c5adeabbc1a696a116cbb490f70">AILIA_AUDIO_FILTFILT_PAD_CONSTANT</a> = (3)</td></tr>
+<tr class="separator:a85020c5adeabbc1a696a116cbb490f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7a02666ff58b0c3f64734aa0d72594"><td class="memItemLeft" align="right" valign="top">const String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a2c7a02666ff58b0c3f64734aa0d72594">LIBRARY_NAME</a> = &quot;ailia_audio&quot;</td></tr>
+<tr class="separator:a2c7a02666ff58b0c3f64734aa0d72594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="abb5fa12e34f3832880254d0891cf777c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5fa12e34f3832880254d0891cf777c">&#9670;&nbsp;</a></span>ailiaAudioComplexNorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioComplexNorm </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>power</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcb2c4ce2977dbd4178087e38648a70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb2c4ce2977dbd4178087e38648a70a">&#9670;&nbsp;</a></span>ailiaAudioConvertPowerToDB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioConvertPowerToDB </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>top_db</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad54e153b058351fcb0cf052f708a4eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54e153b058351fcb0cf052f708a4eeb">&#9670;&nbsp;</a></span>ailiaAudioConvertToMel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioConvertToMel </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>fb_mtrx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mel_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc318ef8e5bddf8019dff0cc9726d4c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc318ef8e5bddf8019dff0cc9726d4c0">&#9670;&nbsp;</a></span>ailiaAudioFFT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioFFT </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fft_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a448129bb9d0c19907415c04371e55248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a448129bb9d0c19907415c04371e55248">&#9670;&nbsp;</a></span>ailiaAudioFilterFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioFilterFilter </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>n_coef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>d_coef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dst_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_coef_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d_coef_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pad_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pad_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32148c9127730c4db075a2765579352f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32148c9127730c4db075a2765579352f">&#9670;&nbsp;</a></span>ailiaAudioFixFrameLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioFixFrameLen </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dst_frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pad_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a12ab4fdd38b75272d42d5a72f13462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a12ab4fdd38b75272d42d5a72f13462">&#9670;&nbsp;</a></span>ailiaAudioGetFBMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetFBMatrix </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mel_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sample_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mel_norm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mel_formula</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d2d76cc0ede5bace673fe0333a8ae63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2d76cc0ede5bace673fe0333a8ae63">&#9670;&nbsp;</a></span>ailiaAudioGetFrameLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetFrameLen </td>
+          <td>(</td>
+          <td class="paramtype">ref Int32&#160;</td>
+          <td class="paramname"><em>frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fft_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hop_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>center</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dfc3b616a2a11c399e164045cc43a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dfc3b616a2a11c399e164045cc43a8a">&#9670;&nbsp;</a></span>ailiaAudioGetInverseSpectrogram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetInverseSpectrogram </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hop_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>norm_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7419c1d04e7594e5ca22befc8acef3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7419c1d04e7594e5ca22befc8acef3fe">&#9670;&nbsp;</a></span>ailiaAudioGetLinerFilterZiCoef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetLinerFilterZiCoef </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst_zi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>n_coef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>d_coef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dst_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_coef_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d_coef_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab58083b06b753cd4763a5d344912aa96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58083b06b753cd4763a5d344912aa96">&#9670;&nbsp;</a></span>ailiaAudioGetMelSpectrogram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetMelSpectrogram </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sample_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fft_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hop_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>power</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fft_norm_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mel_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mel_norm_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mel_formula</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c02633143e89dbdf749daddefc9e29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c02633143e89dbdf749daddefc9e29c">&#9670;&nbsp;</a></span>ailiaAudioGetNonSilentPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetNonSilentPos </td>
+          <td>(</td>
+          <td class="paramtype">ref Int32&#160;</td>
+          <td class="paramname"><em>dst_start_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref Int32&#160;</td>
+          <td class="paramname"><em>dst_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hop_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>thr_db</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ad51476168465974729f4b680baab63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad51476168465974729f4b680baab63">&#9670;&nbsp;</a></span>ailiaAudioGetResampleLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetResampleLen </td>
+          <td>(</td>
+          <td class="paramtype">ref Int32&#160;</td>
+          <td class="paramname"><em>dst_sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dst_sample_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_sample_rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77b0fc0bb958615da7d0c860e8a695f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b0fc0bb958615da7d0c860e8a695f2">&#9670;&nbsp;</a></span>ailiaAudioGetSampleLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetSampleLen </td>
+          <td>(</td>
+          <td class="paramtype">ref Int32&#160;</td>
+          <td class="paramname"><em>sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hop_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>center</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a875b8f606aaa524ad7163c018859c1c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875b8f606aaa524ad7163c018859c1c4">&#9670;&nbsp;</a></span>ailiaAudioGetSpectrogram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetSpectrogram </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sample_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fft_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hop_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>power</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>norm_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4a0b1ddc359c4e84744a9dfc5bd5b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a0b1ddc359c4e84744a9dfc5bd5b40">&#9670;&nbsp;</a></span>ailiaAudioGetWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioGetWindow </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>window_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad81b4cc19909464eb809f90378eb6133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81b4cc19909464eb809f90378eb6133">&#9670;&nbsp;</a></span>ailiaAudioIFFT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioIFFT </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fft_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15e8f01922ed178483c4ffcff6b00d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e8f01922ed178483c4ffcff6b00d6a">&#9670;&nbsp;</a></span>ailiaAudioLinerFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioLinerFilter </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>n_coef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>d_coef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>zi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dst_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_coef_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d_coef_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zi_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9212a80c366372b2c073c9d149bbcdf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9212a80c366372b2c073c9d149bbcdf8">&#9670;&nbsp;</a></span>ailiaAudioLog1p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioLog1p </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e7e75dd1c42ce1d8575a949001d72d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e7e75dd1c42ce1d8575a949001d72d7">&#9670;&nbsp;</a></span>ailiaAudioMagPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioMagPhase </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst_mag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst_phase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frame_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>power</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>phase_form</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac525c2be4201b7f152eca922f48a00c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac525c2be4201b7f152eca922f48a00c4">&#9670;&nbsp;</a></span>ailiaAudioResample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioResample </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dst_sample_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dst_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_sample_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afff306d016290da4659a8673fa87512c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afff306d016290da4659a8673fa87512c">&#9670;&nbsp;</a></span>ailiaAudioStandardize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaAudio.ailiaAudioStandardize </td>
+          <td>(</td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="acf66ddecc95082a00ba7def79a6a2ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf66ddecc95082a00ba7def79a6a2ee3">&#9670;&nbsp;</a></span>AILIA_AUDIO_FFT_NORMALIZE_LIBROSA_COMPAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FFT_NORMALIZE_LIBROSA_COMPAT = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e5f0e51665a48d12077830a6248fbe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5f0e51665a48d12077830a6248fbe6">&#9670;&nbsp;</a></span>AILIA_AUDIO_FFT_NORMALIZE_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FFT_NORMALIZE_NONE = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9ebc6b335bb68f9ee1536adf902767b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ebc6b335bb68f9ee1536adf902767b">&#9670;&nbsp;</a></span>AILIA_AUDIO_FFT_NORMALIZE_PYTORCH_COMPAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FFT_NORMALIZE_PYTORCH_COMPAT = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80e6aaf889851e2f06d4997cd9a03893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e6aaf889851e2f06d4997cd9a03893">&#9670;&nbsp;</a></span>AILIA_AUDIO_FFT_NORMALIZE_SCIPY_COMPAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FFT_NORMALIZE_SCIPY_COMPAT = (2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85020c5adeabbc1a696a116cbb490f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85020c5adeabbc1a696a116cbb490f70">&#9670;&nbsp;</a></span>AILIA_AUDIO_FILTFILT_PAD_CONSTANT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FILTFILT_PAD_CONSTANT = (3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67663681add1933d1e8b66a4a738e03b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67663681add1933d1e8b66a4a738e03b">&#9670;&nbsp;</a></span>AILIA_AUDIO_FILTFILT_PAD_EVEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FILTFILT_PAD_EVEN = (2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bdaa2de429c2c23026236ab9aa3e51f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdaa2de429c2c23026236ab9aa3e51f">&#9670;&nbsp;</a></span>AILIA_AUDIO_FILTFILT_PAD_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FILTFILT_PAD_NONE = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a023a86999b3c6cf4ad14c2f5f7491f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023a86999b3c6cf4ad14c2f5f7491f75">&#9670;&nbsp;</a></span>AILIA_AUDIO_FILTFILT_PAD_ODD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_FILTFILT_PAD_ODD = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fdce3db6b177a3569e18456bb8528a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdce3db6b177a3569e18456bb8528a6">&#9670;&nbsp;</a></span>AILIA_AUDIO_MEL_NORMALIZE_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_MEL_NORMALIZE_ENABLE = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44fbdd8599a4386c471d81693e67c298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44fbdd8599a4386c471d81693e67c298">&#9670;&nbsp;</a></span>AILIA_AUDIO_MEL_NORMALIZE_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_MEL_NORMALIZE_NONE = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ce496fb151537f6012d0625663a03ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ce496fb151537f6012d0625663a03ba">&#9670;&nbsp;</a></span>AILIA_AUDIO_MEL_SCALE_FORMULA_HTK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_MEL_SCALE_FORMULA_HTK = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30e94106b68890f2f5a1951154930b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30e94106b68890f2f5a1951154930b92">&#9670;&nbsp;</a></span>AILIA_AUDIO_MEL_SCALE_FORMULA_SLANYE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_MEL_SCALE_FORMULA_SLANYE = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afba7076b592b7eb8f1784df8cb278e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba7076b592b7eb8f1784df8cb278e21">&#9670;&nbsp;</a></span>AILIA_AUDIO_PHASE_FORM_COMPLEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_PHASE_FORM_COMPLEX = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cd8ba08bab472b3e94fd7a1e143db95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd8ba08bab472b3e94fd7a1e143db95">&#9670;&nbsp;</a></span>AILIA_AUDIO_PHASE_FORM_REAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_PHASE_FORM_REAL = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96c89fae9b30a09c8dc4abac4537d0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c89fae9b30a09c8dc4abac4537d0da">&#9670;&nbsp;</a></span>AILIA_AUDIO_STFT_CENTER_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_STFT_CENTER_ENABLE = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bea20f3edbe83cb4fe40c1e11c161b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bea20f3edbe83cb4fe40c1e11c161b7">&#9670;&nbsp;</a></span>AILIA_AUDIO_STFT_CENTER_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_STFT_CENTER_NONE = (0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e83676a6ef63a6eac8413d9b3aa8f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e83676a6ef63a6eac8413d9b3aa8f0a">&#9670;&nbsp;</a></span>AILIA_AUDIO_STFT_CENTER_SCIPY_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_STFT_CENTER_SCIPY_DEFAULT = (2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17a17f00ac86e780a51dae22b21bb03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a17f00ac86e780a51dae22b21bb03d">&#9670;&nbsp;</a></span>AILIA_AUDIO_WIN_TYPE_HAMMING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_WIN_TYPE_HAMMING = (2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fb622d17f106e93d2abad1d4287b46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb622d17f106e93d2abad1d4287b46d">&#9670;&nbsp;</a></span>AILIA_AUDIO_WIN_TYPE_HANN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaAudio.AILIA_AUDIO_WIN_TYPE_HANN = (1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c7a02666ff58b0c3f64734aa0d72594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7a02666ff58b0c3f64734aa0d72594">&#9670;&nbsp;</a></span>LIBRARY_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const String AiliaAudio.LIBRARY_NAME = &quot;ailia_audio&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="AiliaAudio_8cs.html">AiliaAudio.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
