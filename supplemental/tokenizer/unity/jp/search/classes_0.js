@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ailiatokenizer_34',['AiliaTokenizer',['../classAiliaTokenizer.html',1,'']]],
-  ['ailiatokenizermodel_35',['AiliaTokenizerModel',['../classAiliaTokenizerModel.html',1,'']]]
+  ['ailiatokenizer_35',['AiliaTokenizer',['../classAiliaTokenizer.html',1,'']]],
+  ['ailiatokenizermodel_36',['AiliaTokenizerModel',['../classAiliaTokenizerModel.html',1,'']]]
 ];

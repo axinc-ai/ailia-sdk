@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">0.9.1.0</span>
+   &#160;<span id="projectnumber">0.9.3.0</span>
    </div>
   </td>
  </tr>
@@ -121,10 +121,6 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:af82754a689c246de2c36b93a31e8b1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69971f6aba1e0b09c69e3c67c81d91cd"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a69971f6aba1e0b09c69e3c67c81d91cd">AILIA_TOKENIZER_TYPE_CLIP</a> = (1)</td></tr>
 <tr class="separator:a69971f6aba1e0b09c69e3c67c81d91cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f0d4e1d8be04c02a5ff99e893271bcd"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a0f0d4e1d8be04c02a5ff99e893271bcd">AILIA_TOKENIZER_FLAG_NONE</a> = (0)</td></tr>
-<tr class="separator:a0f0d4e1d8be04c02a5ff99e893271bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa172949b37f444df9ff3f4699fd33ba0"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#aa172949b37f444df9ff3f4699fd33ba0">AILIA_TOKENIZER_FLAG_UTF8_SAFE</a> = (1)</td></tr>
-<tr class="separator:aa172949b37f444df9ff3f4699fd33ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5ee2ac74339187c4ffefef501a76525"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#af5ee2ac74339187c4ffefef501a76525">AILIA_TOKENIZER_TYPE_XLM_ROBERTA</a> = (2)</td></tr>
 <tr class="separator:af5ee2ac74339187c4ffefef501a76525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37db48fa5706b5536234ae55441120c"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#aa37db48fa5706b5536234ae55441120c">AILIA_TOKENIZER_TYPE_MARIAN</a> = (3)</td></tr>
@@ -133,6 +129,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aeaee8cd9c163edcc88226391aeba2c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e5b27d23b731bb564eee43c58cf4cdb"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a8e5b27d23b731bb564eee43c58cf4cdb">AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</a> = (5)</td></tr>
 <tr class="separator:a8e5b27d23b731bb564eee43c58cf4cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcab81a64f05c735fb5f96e271fa527"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a5bcab81a64f05c735fb5f96e271fa527">AILIA_TOKENIZER_TYPE_T5</a> = (6)</td></tr>
+<tr class="separator:a5bcab81a64f05c735fb5f96e271fa527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f0d4e1d8be04c02a5ff99e893271bcd"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a0f0d4e1d8be04c02a5ff99e893271bcd">AILIA_TOKENIZER_FLAG_NONE</a> = (0)</td></tr>
+<tr class="separator:a0f0d4e1d8be04c02a5ff99e893271bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa172949b37f444df9ff3f4699fd33ba0"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#aa172949b37f444df9ff3f4699fd33ba0">AILIA_TOKENIZER_FLAG_UTF8_SAFE</a> = (1)</td></tr>
+<tr class="separator:aa172949b37f444df9ff3f4699fd33ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae7946a6ceae86570644facb9d67e92de"></a>
@@ -796,6 +798,28 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_MARIAN = (3)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bcab81a64f05c735fb5f96e271fa527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bcab81a64f05c735fb5f96e271fa527">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_T5</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_T5 = (6)</td>
         </tr>
       </table>
   </td>
