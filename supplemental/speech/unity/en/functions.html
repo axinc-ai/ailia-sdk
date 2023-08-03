@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">0.9.6.0</span>
+   &#160;<span id="projectnumber">0.9.7.0</span>
    </div>
   </td>
  </tr>
@@ -68,6 +68,15 @@ $(function() {
 <li>AILIA_SPEECH_API_CALLBACK_VERSION
 : <a class="el" href="classAiliaSpeech.html#affd7d02d39e79f4f1d9fc8490cca2ab5">AiliaSpeech</a>
 </li>
+<li>AILIA_SPEECH_CONSTRAINT_CHARACTERS
+: <a class="el" href="classAiliaSpeech.html#ad7c7b3e61e78e444790e18e021b5e960">AiliaSpeech</a>
+</li>
+<li>AILIA_SPEECH_CONSTRAINT_WORDS
+: <a class="el" href="classAiliaSpeech.html#a8f38201efbe54001bad42ee03b58ff9a">AiliaSpeech</a>
+</li>
+<li>AILIA_SPEECH_DICTIONARY_TYPE_REPLACE
+: <a class="el" href="classAiliaSpeech.html#aa639d7070816380b3db3cb03d0caa34e">AiliaSpeech</a>
+</li>
 <li>AILIA_SPEECH_FLAG_LIVE
 : <a class="el" href="classAiliaSpeech.html#a647abee25398fe6d1f9f63c2593b9833">AiliaSpeech</a>
 </li>
@@ -94,6 +103,9 @@ $(function() {
 </li>
 <li>AILIA_SPEECH_TEXT_VERSION
 : <a class="el" href="classAiliaSpeech.html#ab13a389ff1107760eda89a5d761a5821">AiliaSpeech</a>
+</li>
+<li>AILIA_SPEECH_VAD_TYPE_SILERO
+: <a class="el" href="classAiliaSpeech.html#ab8f409f2fb5c5dc1b2559e91c4e2809b">AiliaSpeech</a>
 </li>
 <li>ailiaAudioGetFrameLen
 : <a class="el" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#ade05719aee36d02e15fe5cea994223b5">AiliaSpeech.AILIASpeechApiCallback</a>
@@ -132,6 +144,12 @@ $(function() {
 <li>ailiaCallbackAudioResampleBridge()
 : <a class="el" href="classAiliaSpeech.html#a52fdb7df8b2aa5e132af761b9c41bfee">AiliaSpeech</a>
 </li>
+<li>ailiaCallbackCopyBlobData()
+: <a class="el" href="classAiliaSpeech.html#ae1a5e998e5f03ff99a49e0a90b272694">AiliaSpeech</a>
+</li>
+<li>ailiaCallbackCopyBlobDataBridge()
+: <a class="el" href="classAiliaSpeech.html#a1bfe5384709ac574881679fba255ffbb">AiliaSpeech</a>
+</li>
 <li>ailiaCallbackCreate()
 : <a class="el" href="classAiliaSpeech.html#ae5c2cb62c9c022d4e5bd3c0d8ed4c0fb">AiliaSpeech</a>
 </li>
@@ -167,6 +185,12 @@ $(function() {
 </li>
 <li>ailiaCallbackGetBlobShapeBridge()
 : <a class="el" href="classAiliaSpeech.html#af1c7a43a3adabad2fbb058eced5e1a25">AiliaSpeech</a>
+</li>
+<li>ailiaCallbackGetEnvironment()
+: <a class="el" href="classAiliaSpeech.html#a97eb1ae4919ea567c454c3e3733a2282">AiliaSpeech</a>
+</li>
+<li>ailiaCallbackGetEnvironmentBridge()
+: <a class="el" href="classAiliaSpeech.html#acb0073bc56b1257751c1d6722feaac06">AiliaSpeech</a>
 </li>
 <li>ailiaCallbackGetErrorDetail()
 : <a class="el" href="classAiliaSpeech.html#aa34dc5c2f6ebaf4b86c13d89c11ef411">AiliaSpeech</a>
@@ -276,6 +300,9 @@ $(function() {
 <li>ailiaCallbackUpdateBridge()
 : <a class="el" href="classAiliaSpeech.html#a69ba97434832734ecf97d5aebf4eede0">AiliaSpeech</a>
 </li>
+<li>ailiaCopyBlobData
+: <a class="el" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#a6976db272d24867dd84e1397d35c984c">AiliaSpeech.AILIASpeechApiCallback</a>
+</li>
 <li>ailiaCreate()
 : <a class="el" href="classAiliaSpeech.html#a944a5f6fcce7da50a8acb9d9f12438cd">AiliaSpeech</a>
 , <a class="el" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#a66dea96c7d74549b64233da81244c2ef">AiliaSpeech.AILIASpeechApiCallback</a>
@@ -297,6 +324,10 @@ $(function() {
 <li>ailiaGetBlobShape()
 : <a class="el" href="classAiliaSpeech.html#a696343d629f9a2bce75341b0d7152272">AiliaSpeech</a>
 , <a class="el" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#acfa7d5a2d819b01e6ed064134c6c569a">AiliaSpeech.AILIASpeechApiCallback</a>
+</li>
+<li>ailiaGetEnvironment()
+: <a class="el" href="classAiliaSpeech.html#a25b341c3a4f9d76b359db6d59bd02786">AiliaSpeech</a>
+, <a class="el" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#a2caf83f987dbf5cd7bd3675994a1280a">AiliaSpeech.AILIASpeechApiCallback</a>
 </li>
 <li>ailiaGetErrorDetail
 : <a class="el" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#a495da101e91548d2c92a6adf1b4bffdc">AiliaSpeech.AILIASpeechApiCallback</a>
@@ -349,14 +380,23 @@ $(function() {
 <li>ailiaSpeechGetTextCount()
 : <a class="el" href="classAiliaSpeech.html#aa0cd71dfe80cbdb2966f65b0a1586947">AiliaSpeech</a>
 </li>
+<li>ailiaSpeechOpenDictionaryFile()
+: <a class="el" href="classAiliaSpeech.html#a6fa58e1923b7033644fb2073972166d5">AiliaSpeech</a>
+</li>
 <li>ailiaSpeechOpenModelFile()
 : <a class="el" href="classAiliaSpeech.html#af42b39d2e7f4639646034ef63289d6e6">AiliaSpeech</a>
+</li>
+<li>ailiaSpeechOpenVadFile()
+: <a class="el" href="classAiliaSpeech.html#a46fe6e99d47e952855ee28358ccb5f68">AiliaSpeech</a>
 </li>
 <li>ailiaSpeechPushInputData()
 : <a class="el" href="classAiliaSpeech.html#af46cd0fe6e7b5de24b14120f47cd82e1">AiliaSpeech</a>
 </li>
 <li>ailiaSpeechResetTranscribeState()
 : <a class="el" href="classAiliaSpeech.html#a3e9f3391b903c21d5b07a1450779a2bb">AiliaSpeech</a>
+</li>
+<li>ailiaSpeechSetConstraint()
+: <a class="el" href="classAiliaSpeech.html#a7aa2f86bc2a6fc46c88dc209c58f0f11">AiliaSpeech</a>
 </li>
 <li>ailiaSpeechSetIntermediateCallback()
 : <a class="el" href="classAiliaSpeech.html#a21cfc0b53831a444b9e0e84a15f62400">AiliaSpeech</a>
@@ -367,8 +407,8 @@ $(function() {
 <li>ailiaSpeechSetPrompt()
 : <a class="el" href="classAiliaSpeech.html#a9b30f0454792d2b4d9b6470150d9f1ee">AiliaSpeech</a>
 </li>
-<li>ailiaSpeechSetSlilentThreshold()
-: <a class="el" href="classAiliaSpeech.html#a24bce3dcdb221cdfa8a579103f67c72e">AiliaSpeech</a>
+<li>ailiaSpeechSetSilentThreshold()
+: <a class="el" href="classAiliaSpeech.html#abbcfcb47e5f3aed0a4b52beef3f4fb2c">AiliaSpeech</a>
 </li>
 <li>ailiaSpeechTranscribe()
 : <a class="el" href="classAiliaSpeech.html#a87e27ede43d5e671128d84aba0b5b458">AiliaSpeech</a>
@@ -481,6 +521,12 @@ $(function() {
 <li>Open()
 : <a class="el" href="classAiliaSpeechModel.html#ac0da0da2391bcf0b19c179640333618d">AiliaSpeechModel</a>
 </li>
+<li>OpenDictionary()
+: <a class="el" href="classAiliaSpeechModel.html#a074d3fb45c27c42e865c9e6f867f152d">AiliaSpeechModel</a>
+</li>
+<li>OpenVad()
+: <a class="el" href="classAiliaSpeechModel.html#a26d85a6d0070bd74f293234ea545659b">AiliaSpeechModel</a>
+</li>
 </ul>
 
 
@@ -499,6 +545,9 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>SetConstraint()
+: <a class="el" href="classAiliaSpeechModel.html#a4c3c34dc6cbb925995a4aa25842e4232">AiliaSpeechModel</a>
+</li>
 <li>SetPrompt()
 : <a class="el" href="classAiliaSpeechModel.html#a41cca25e8ed02240d6fb46219ad8ecb5">AiliaSpeechModel</a>
 </li>

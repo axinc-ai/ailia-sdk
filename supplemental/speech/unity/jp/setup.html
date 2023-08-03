@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_speech: Unity Packageのインポートとサンプルの実行</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_speech
+   &#160;<span id="projectnumber">0.9.7.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Unity Packageのインポートとサンプルの実行 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md20"></a>
+Unityのバージョン</h1>
+<p>Unity 2021.3.10f1以降が必要です。</p>
+<h1><a class="anchor" id="autotoc_md21"></a>
+Unity Pluginのインポート</h1>
+<p>unityフォルダのailia_speech.unity_packageをプロジェクトにインポートします。</p>
+<h1><a class="anchor" id="autotoc_md22"></a>
+Unity Pluginのフォルダ構成</h1>
+<p>ailia SpeechのUnity Packageは下記の構成を持ちます。</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">フォルダ </th><th class="markdownTableHeadNone">内容  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Ailia </td><td class="markdownTableBodyNone">推論のコアを行うailia SDKのインタフェースが含まれています。  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classAiliaSpeech.html">AiliaSpeech</a> </td><td class="markdownTableBodyNone">音声認識を行うailia Speechのインタフェースが含まれています。  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Plugins </td><td class="markdownTableBodyNone">ailia SDKとailia Speechのネイティブプラグインのバイナリが含まれています。  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Resources </td><td class="markdownTableBodyNone">デモアプリの画像ファイルなどが含まれています。  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">StandaloneFileBrowser </td><td class="markdownTableBodyNone">WindowsとmacOSでファイルダイアログを開くための拡張機能が含まれています。  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">StreamingAssets </td><td class="markdownTableBodyNone">AIモデルと辞書ファイルが含まれています。  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">TextMeshPro </td><td class="markdownTableBodyNone">テキストを描画するための拡張機能が含まれています。  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">AiliaSpeechSample.cs </td><td class="markdownTableBodyNone">メインとなるサンプルファイルです。  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">AiliaSpeechScene.unity </td><td class="markdownTableBodyNone">メインとなるサンプルシーンです。  </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md23"></a>
+ライセンスファイルの配置</h1>
+<p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
+<h2><a class="anchor" id="autotoc_md24"></a>
+Windows</h2>
+<p>ailia.dllと同じフォルダ（サンプルの場合はAssets/Plugins/x86_64）にailia.licを配置します。</p>
+<h2><a class="anchor" id="autotoc_md25"></a>
+macOS</h2>
+<p>~/Library/SHALO/にailia.licを配置します。</p>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Linux</h2>
+<p>~/.shalo/にailia.licを配置します。</p>
+<h1><a class="anchor" id="autotoc_md27"></a>
+サンプルの実行</h1>
+<p>AiliaSpeechScene.unityをUnityで開いて実行します。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

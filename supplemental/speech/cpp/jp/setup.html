@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_speech: セットアップ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_speech
+   &#160;<span id="projectnumber">0.9.7.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">セットアップ </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md8"></a>
+コンパイラのセットアップ</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Windows</h2>
+<p>VisualStudio 2019以降とcmakeが必要です。</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+macOS</h2>
+<p>Xcode 14.2以降とcmakeが必要です。</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Linux</h2>
+<p>clangとcmakeが必要です。</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+ライセンスファイルの配置</h1>
+<p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Windows</h2>
+<p>ailia.dllと同じフォルダ（サンプルの場合はcppフォルダ）にailia.licを配置します。</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+macOS</h2>
+<p>~/Library/SHALO/にailia.licを配置します。</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Linux</h2>
+<p>~/.shalo/にailia.licを配置します。</p>
+<h1><a class="anchor" id="autotoc_md16"></a>
+サンプルのビルド</h1>
+<p>cppフォルダに移動して、プラットフォーム別のビルドコマンドを実行します。</p>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Windows</h2>
+<div class="fragment"><div class="line">cl ailia_speech_sample.cpp wave_reader.cpp ailia.lib ailia_audio.lib ailia_tokenizer.lib ailia_speech.lib</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
+macOS</h2>
+<div class="fragment"><div class="line">clang++ -o ailia_speech_sample ailia_speech_sample.cpp wave_reader.cpp libailia.dylib libailia_audio.dylib libailia_speech.dylib libailia_tokenizer.dylib -Wl,-rpath,./ -std=c++17</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
+Linux</h2>
+<div class="fragment"><div class="line">export LD_LIBRARY_PATH=./</div>
+<div class="line">g++ -o ailia_speech_sample ailia_speech_sample.cpp wave_reader.cpp libailia.so libailia_audio.so libailia_tokenizer.so libailia_speech.so</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
+サンプルの実行</h1>
+<p>下記のコマンドでサンプルを実行します。</p>
+<div class="fragment"><div class="line">./ailia_speech_sample</div>
+</div><!-- fragment --><p>出力例です。</p>
+<div class="fragment"><div class="line">Usage ./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word/dictionary] [auto/cpu/blas/gpu]</div>
+<div class="line">Input path:./demo.wav</div>
+<div class="line">Model type:small</div>
+<div class="line">Language type:auto</div>
+<div class="line">Task:transcribe</div>
+<div class="line">Vad:vad_enable</div>
+<div class="line">Option:none</div>
+<div class="line">Env:auto</div>
+<div class="line">Environment ID:0 TYPE:0 NAME:CPU</div>
+<div class="line">Environment ID:1 TYPE:1 NAME:CPU-AppleAccelerate</div>
+<div class="line">Environment ID:2 TYPE:2 NAME:MPSDNN-Apple M2</div>
+<div class="line">Selected Environment:auto</div>
+<div class="line">Input wave sec 10.512000</div>
+<div class="line">[00:00.000 --&gt; 00:05.640] [0.9310]  He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat</div>
+<div class="line">[00:05.640 --&gt; 00:20.840] [0.7744]  mutton pieces to be ladled out in thick peppered flour fat and sauce.</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
+サンプルで指定可能なオプション</h1>
+<p>サンプルでは下記の引数を順に指定可能です。</p>
+<div class="fragment"><div class="line">./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word] [auto/cpu/blas/gpu]</div>
+</div><!-- fragment --><p>各引数の詳細は下記となります。</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">内容 </th><th class="markdownTableHeadNone">詳細  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">入力ファイル名 </td><td class="markdownTableBodyNone">入力する音声ファイルを指定します。wavファイルのみ指定可能です。  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">モデル </td><td class="markdownTableBodyNone">使用するモデルサイズを指定します。base、tiny、small、mediumの順で、後者ほど高精度になります。  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">言語 </td><td class="markdownTableBodyNone">使用する言語を指定します。autoだと自動判定、jaだと日本語になります。  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">モード </td><td class="markdownTableBodyNone">実行するモードを指定します。transcribeは文字起こし、translateは翻訳、liveはリアルタイム文字起こしになります。  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">VAD </td><td class="markdownTableBodyNone">VADを使用するかどうかを指定します。  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">オプション </td><td class="markdownTableBodyNone">オプションを指定します。silent_thresholdでは無音検知を有効にします。promptではコンテキストを与えます。constraint_charでは数値のみを認識します。constraint_wordでは指定した単語のみを認識します。  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">実行環境 </td><td class="markdownTableBodyNone">実行環境を指定します。autoではcpuかblasを自動選択します。gpuを指定すると、GPUを使用した推論を行います。  </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md22"></a>
+プラットフォーム別の注意点</h1>
+<h2><a class="anchor" id="autotoc_md23"></a>
+macOSにおけるダウンロード属性の解除</h2>
+<p>macOSにおいてブラウザからダウンロードしたバイナリには、ダウンロード属性が付与され、実行できない場合があります。 その場合、dylibを右クリックから実行して開くことで、ダウンロード属性を解除することが可能です。 また、コマンドラインから下記のコマンドを実行することでも、ダウンロード属性を解除することが可能です。</p>
+<div class="fragment"><div class="line">xattr -d com.apple.quarantine libailia_speech.dylib</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

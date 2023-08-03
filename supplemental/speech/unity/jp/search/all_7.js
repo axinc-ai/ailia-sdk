@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['person_5fid_134',['person_id',['../classAiliaSpeech_1_1AILIASpeechText.html#ac19ac1f5092ce904d7df6f43b379c7c2',1,'AiliaSpeech::AILIASpeechText']]]
+  ['open_152',['Open',['../classAiliaSpeechModel.html#ac0da0da2391bcf0b19c179640333618d',1,'AiliaSpeechModel']]],
+  ['opendictionary_153',['OpenDictionary',['../classAiliaSpeechModel.html#a074d3fb45c27c42e865c9e6f867f152d',1,'AiliaSpeechModel']]],
+  ['openvad_154',['OpenVad',['../classAiliaSpeechModel.html#a26d85a6d0070bd74f293234ea545659b',1,'AiliaSpeechModel']]]
 ];
