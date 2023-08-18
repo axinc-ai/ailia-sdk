@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Tutorial: Get Started</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Tutorial: Get Started</h1>
+
+    <section>
+
+<header>
+    
+
+    <h2>Get Started</h2>
+</header>
+
+<article>
+    <h1>Tutorial on how to use <code>ailia.js</code></h1>
+<h2>General presentation of the example</h2>
+<p>This tutorial will show you how to use <code>ailia.js</code> in an ES6 module.</p>
+<p>(Of course this can be adapted for old-style JavaScript)</p>
+<p>First, put the files <code>ailia.js</code>, <code>ailia_s.js</code>, <code>ailia_s.wasm</code>, and <code>ailia_s.worker.js</code> in the folder of your server.</p>
+<p>As a support we'll use the example file <code>example_mnist_standard_api.html</code>.</p>
+<p>This uses the model called MNIST, which is a convolutional neural network trained to recognize hand-drawn digits.</p>
+<p>To try it out, put the HTML file in the same folder as the other files above, as well as the image file <code>testmnist.jpg</code>, and open it in a browser.</p>
+<p>The typical usage of <code>ailia.js</code> can be decomposed in the following steps:</p>
+<ol>
+<li>import Ailia module</li>
+<li>initialize the module</li>
+<li>instantiate an ailia object</li>
+<li>load model and weights files</li>
+<li>define or import both a preprocessing and a postprocessing function, to process the input and the output of the neural network</li>
+<li>perform the inference on some input</li>
+<li>call the destructor on the ailia object</li>
+</ol>
+<p>Here is the full JavaScript content of <code>example_mnist_standard_api.html</code>. You don't need to understand everything at the first read, as a detailed explanation of the parts specific to <code>ailia.js</code> follows.</p>
+<pre class="prettyprint source lang-javascript"><code>import {Ailia} from './ailia.js';
+import {readFileAsync, distinguishModelFiles, readImageData} from './demoUtils.js';
+
+await Ailia.initialize();
+let ailia = new Ailia();
+
+modelfiles.addEventListener('change', async () => {
+    await loadModel();
+    myResult.innerText = '';
+});
+
+async function loadModel() {
+    if (modelFiles.files.length !== 2) {
+       return;
+    }
+
+    let {modelFile, weightsFile} = distinguishModelFiles(modelFiles.files);
+
+    if (modelFile === undefined) {
+        console.log('Error: could not find a model file with the extension .onnx.prototxt');
+        return;
+    }
+    if (weightsFile === undefined) {
+        console.log('Error: could not find a weights file with the extension .onnx');
+        return;
+    }
+
+    console.log(`model file: ${modelFile.name}`);
+    console.log(`weights file: ${weightsFile.name}`);
+
+    let [modelFileContents, weightsFileContents] = await Promise.all([
+        readFileAsync(modelFile),
+        readFileAsync(weightsFile)
+    ]);
+
+    let loadStatus = ailia.loadModelAndWeights(modelFileContents, weightsFileContents);
+    if (loadStatus) {
+        console.log('model files loaded');
+        document.querySelector('button.myButton').removeAttribute(&quot;hidden&quot;);
+    }
+}
+
+function buttonClicked() {
+    return new Promise((resolve) =>
+        document.querySelector('.myButton').addEventListener('click', () => resolve())
+    );
+}
+
+await buttonClicked();
+console.log('button clicked');
+
+let inputPicturePath = 'testmnist.jpg';
+let inputPicData = await readImageData(inputPicturePath);
+
+let preprocessFactory = function (inputPictureData) {
+    let preprocessingFunc = function (inputBuffers) {
+        for (let y = 0; y&lt;inputPictureData.height; ++y) {
+            const lineOffset = y * inputPictureData.width;
+            for (let x = 0; x&lt;inputPictureData.width; ++x) {
+                let red = inputPictureData.data[(lineOffset + x) * 4];
+                inputBuffers.byIndex[0].buffer.Float32[lineOffset + x] = red - 128;
+            }
+        }
+    };
+    return preprocessingFunc;
+};
+
+let postprocessCb = function (outputBuffers) {
+    let result = [];
+    for (const floatValue of outputBuffers.byIndex[0].buffer.Float32) {
+        result.push(floatValue);
+    }
+    return result;
+};
+
+
+try {
+
+    let result = ailia.run(preprocessFactory(inputPicData), postprocessCb, [[1, 1, inputPicData.width, inputPicData.height]]);
+
+    for (const [index, resultItem] of Object.entries(result)) {
+        console.log(`prediction score of ${index}: ${resultItem}`);
+    }
+
+} catch (e) {
+    console.log(e);
+} finally {
+    ailia.destroy();
+}
+</code></pre>
+<p>Now here is a detailed explanation of the important parts.</p>
+<h2>Importing <code>ailia.js</code></h2>
+<p>First, import <code>Ailia</code> from your script:</p>
+<pre class="prettyprint source lang-javascript"><code>
+import {Ailia} from './ailia.js';
+
+</code></pre>
+<p>(The other imports (from <code>demoUtils.js</code>) are not strictly required, those are just convenience helper functions to facilitate the loading of the model files from the browser, as well as the conversion of the input image into an array.)</p>
+<h2>Initializing <code>ailia.js</code></h2>
+<p>Then you need to initialize the <code>Ailia</code> module:</p>
+<pre class="prettyprint source lang-javascript"><code>await Ailia.initialize();
+</code></pre>
+<p>This initialization needs to be done only once for all, even if you plan to have several instances of <code>Ailia</code> or even if you want to reload successively different models in the same <code>Ailia</code> instances.</p>
+<h2>Instantiation of an <code>Ailia</code> object</h2>
+<p>Only then (now that you've initialized the <code>Ailia</code> module)  you can instantiate an <code>Ailia</code> object:</p>
+<pre class="prettyprint source lang-javascript"><code>let ailia = new Ailia();
+</code></pre>
+<h2>Load model and weights files</h2>
+<p>Then, you need to load some model files.</p>
+<p>There are many lines present just to provide some mechanism to load the model files from the browser, but the really important line is:</p>
+<pre class="prettyprint source lang-javascript"><code>let loadStatus = ailia.loadModelAndWeights(modelFileContents, weightsFileContents);
+
+</code></pre>
+<p><code>Ailia</code> needs two files, one <em>model file</em> which contains the model structure but not its weights, and one <em>weights file</em> which contains the whole model including the weights.</p>
+<p>Both files are necessary to run the model. However you can load them in two steps, first the model and then the weights one, or even load again a different weights file if you want to change the weights without reloading the model file.</p>
+<p>But in this simple example we use the command that loads them both in one single statement, <code>ailia.loadModelAndWeights(model, weights)</code>.</p>
+<h2>Define a preprocessing function</h2>
+<p>The raw convolutional neural network takes in input a multidimentional array of float numbers, which is almost certainly what you do not have as an input.</p>
+<p>Rather, you probably want to feed image files, or maybe videos, audio files, etc, to the CNN.</p>
+<p>Thus you need a way to convert those media files into the array that the CNN can understand.</p>
+<p>This is what the preprocessing function is for, and you need to define one (but you could also import a preexisting one).</p>
+<pre class="prettyprint source lang-javascript"><code>let preprocessFactory = function (inputPictureData) {
+    let preprocessingFunc = function (inputBuffers) {
+        for (let y = 0; y&lt;inputPictureData.height; ++y) {
+            const lineOffset = y * inputPictureData.width;
+            for (let x = 0; x&lt;inputPictureData.width; ++x) {
+                let red = inputPictureData.data[(lineOffset + x) * 4];
+                inputBuffers.byIndex[0].buffer.Float32[lineOffset + x] = red - 128;
+            }
+        }
+    };
+    return preprocessingFunc;
+};
+</code></pre>
+<p>In order to avoid you to have to create and manage the memory buffers used internally by <code>Ailia</code>, the preprocessing function is designed to be passed as a callback, that will take in parameter the object containing the buffers (<code>inputBuffers</code>) that <code>Ailia</code> created for you.</p>
+<p>Then in the body of the callback you just need to fill each of the input buffers (which is accessed like a JS array) with the data as floats.</p>
+<p>The argument <code>inputBuffers</code> gives you access to all of the input buffers.</p>
+<p>Each model can have several inputs (but sometimes only one; theoretically they can also have none, although this would be rare and of dubious usefulness), so to access the input buffers associated with these inputs the <code>inputBuffers</code> object provides two ways:</p>
+<ul>
+<li>
+<p><code>inputBuffers.byIndex</code> is an array of input buffers, numbered in the order that the model defines them. For example you access to the first one by <code>inputBuffers.byIndex[0]</code>.</p>
+</li>
+<li>
+<p><code>inputBuffers.byName</code> is an object whose properties are the input names and whose values are the corresponding buffers. For example you access to the input named <code>input_data</code> by <code>inputBuffers.byName['input_data']</code>.</p>
+</li>
+</ul>
+<p>Once you get an input buffer using one of the two methods described above, the buffer object gives you all the necessary to easily fill input data into it.</p>
+<p>In our example, <code>inputBuffers.byIndex[0].buffer.Float32</code> provides an interface to the input buffer that is in all aspects similar to a normal array, in which the values are stored in 32 bits floats (4 bytes of the raw buffer interpreted as a <code>float</code>).</p>
+<p>Please note that the preprocessing function completely determines the contents of the input buffers, so that if you need an easy way to make it depend on an input file, you should use a factory pattern. This is exactly what has been done in this example: the factory takes in parameter an image file, and returns a tailored preprocessing callback ready to be passed to the <code>Ailia</code> inference instruction (we'll get to that shortly).</p>
+<h2>Define a postprocessing function</h2>
+<p>Similarly to what we said about input of the raw CNN, its output is also what you almost certainly do not want, as it is a multidimensional array of float numbers.</p>
+<p>So you need to extract the actual useful result from these floats, and for that you need a <em>postprocessing function</em>, that you will define (but you could also import a preexisting one).</p>
+<pre class="prettyprint source lang-javascript"><code>let postprocessCb = function (outputBuffers) {
+    let result = [];
+    for (const floatValue of outputBuffers.byIndex[0].buffer.Float32) {
+        result.push(floatValue);
+    }
+    return result;
+};
+</code></pre>
+<p>Here the overall design is simpler than for the preprocessing, as you rarely need to use a factory pattern for the postprocessing function.</p>
+<p>Similarly to the preprocessing callback, <code>Ailia</code> provides to the postprocessing callback a <code>outputBuffers</code> object that gives you access to all the output buffers (possibly one).</p>
+<p>The only difference being that instead of writing into them you will mainly be reading from them, although the access to each output buffer is still done the same way as with a standard array.</p>
+<h2>Perform the inference on some input</h2>
+<p>Just pass to <code>ailia.run</code> the preprocessing callback (if necessary, pass some arguments to the preprocessing factory function, here the input image), the postprocessing callback, and the input shapes.</p>
+<p>As the CNN can possibly have several inputs, the input shapes argument is an array of input shapes, and each input shape is just an array of integers, which are the dimensions of the shape.</p>
+<p>In case of a shape that has less than 4 dimensions, complete with <code>1</code> values at the beginning of the shape.</p>
+<pre class="prettyprint source lang-javascript"><code>let result = ailia.run(preprocessFactory(inputPicData), postprocessCb, [[1, 1, inputPicData.width, inputPicData.height]]);
+</code></pre>
+<p>The result contains the values returned by the postprocessing callback, i.e. the output data that you can immediately start exploiting.</p>
+<h2>Call the destructor on the ailia object</h2>
+<p>Simply call the <code>destroy</code> method on the <code>ailia</code> object.</p>
+<p>This will take care of freeing all the allocated memory.</p>
+<pre class="prettyprint source lang-javascript"><code>ailia.destroy();
+</code></pre>
+<p>Notice that in the example this instruction is inside a <code>finally</code> block, so that, even if some error or some exception is raised after the <code>ailia</code> object is created (all that follows its creation is in a <code>try</code> block), there will be some cleaning done anyway.</p>
+</article>
+
+</section>
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Ailia.html">Ailia</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-get_started.html">Get Started</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Thu Aug 17 2023 18:07:04 GMT+0900 (Japan Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
