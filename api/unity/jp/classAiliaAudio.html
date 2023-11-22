@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.15.0</span>
+   &#160;<span id="projectnumber">1.2.16.0</span>
    </div>
   </td>
  </tr>
@@ -74,48 +74,70 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a9212a80c366372b2c073c9d149bbcdf8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a9212a80c366372b2c073c9d149bbcdf8">ailiaAudioLog1p</a> (float[] dst, float[] src, int src_n)</td></tr>
+<tr class="memdesc:a9212a80c366372b2c073c9d149bbcdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力値を対数スケールに変換します。  <a href="#a9212a80c366372b2c073c9d149bbcdf8">[詳解]</a><br /></td></tr>
 <tr class="separator:a9212a80c366372b2c073c9d149bbcdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcb2c4ce2977dbd4178087e38648a70a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#afcb2c4ce2977dbd4178087e38648a70a">ailiaAudioConvertPowerToDB</a> (float[] dst, float[] src, int src_n, float top_db)</td></tr>
+<tr class="memdesc:afcb2c4ce2977dbd4178087e38648a70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">非負の入力値をデシベルスケールに変換します。  <a href="#afcb2c4ce2977dbd4178087e38648a70a">[詳解]</a><br /></td></tr>
 <tr class="separator:afcb2c4ce2977dbd4178087e38648a70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d2d76cc0ede5bace673fe0333a8ae63"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a3d2d76cc0ede5bace673fe0333a8ae63">ailiaAudioGetFrameLen</a> (ref Int32 frame_n, int sample_n, int fft_n, int hop_n, int center)</td></tr>
+<tr class="memdesc:a3d2d76cc0ede5bace673fe0333a8ae63"><td class="mdescLeft">&#160;</td><td class="mdescRight">STFTで生成される時間フレーム長を取得します。  <a href="#a3d2d76cc0ede5bace673fe0333a8ae63">[詳解]</a><br /></td></tr>
 <tr class="separator:a3d2d76cc0ede5bace673fe0333a8ae63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77b0fc0bb958615da7d0c860e8a695f2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a77b0fc0bb958615da7d0c860e8a695f2">ailiaAudioGetSampleLen</a> (ref Int32 sample_n, int frame_n, int freq_n, int hop_n, int center)</td></tr>
+<tr class="memdesc:a77b0fc0bb958615da7d0c860e8a695f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISTFTで生成されるサンプル数を取得します。  <a href="#a77b0fc0bb958615da7d0c860e8a695f2">[詳解]</a><br /></td></tr>
 <tr class="separator:a77b0fc0bb958615da7d0c860e8a695f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a0b1ddc359c4e84744a9dfc5bd5b40"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#af4a0b1ddc359c4e84744a9dfc5bd5b40">ailiaAudioGetWindow</a> (float[] dst, int window_n, int win_type)</td></tr>
+<tr class="memdesc:af4a0b1ddc359c4e84744a9dfc5bd5b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">窓関数の係数を取得します。  <a href="#af4a0b1ddc359c4e84744a9dfc5bd5b40">[詳解]</a><br /></td></tr>
 <tr class="separator:af4a0b1ddc359c4e84744a9dfc5bd5b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc318ef8e5bddf8019dff0cc9726d4c0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#afc318ef8e5bddf8019dff0cc9726d4c0">ailiaAudioFFT</a> (float[] dst, float[] src, int fft_n)</td></tr>
+<tr class="memdesc:afc318ef8e5bddf8019dff0cc9726d4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFTを実行します。  <a href="#afc318ef8e5bddf8019dff0cc9726d4c0">[詳解]</a><br /></td></tr>
 <tr class="separator:afc318ef8e5bddf8019dff0cc9726d4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad81b4cc19909464eb809f90378eb6133"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ad81b4cc19909464eb809f90378eb6133">ailiaAudioIFFT</a> (float[] dst, float[] src, int fft_n)</td></tr>
+<tr class="memdesc:ad81b4cc19909464eb809f90378eb6133"><td class="mdescLeft">&#160;</td><td class="mdescRight">IFFTを実行します。  <a href="#ad81b4cc19909464eb809f90378eb6133">[詳解]</a><br /></td></tr>
 <tr class="separator:ad81b4cc19909464eb809f90378eb6133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875b8f606aaa524ad7163c018859c1c4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a875b8f606aaa524ad7163c018859c1c4">ailiaAudioGetSpectrogram</a> (float[] dst, float[] src, int sample_n, int fft_n, int hop_n, int win_n, int win_type, int max_frame_n, int center, float power, int norm_type)</td></tr>
+<tr class="memdesc:a875b8f606aaa524ad7163c018859c1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">音響信号からスペクトログラムを生成します。  <a href="#a875b8f606aaa524ad7163c018859c1c4">[詳解]</a><br /></td></tr>
 <tr class="separator:a875b8f606aaa524ad7163c018859c1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dfc3b616a2a11c399e164045cc43a8a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a0dfc3b616a2a11c399e164045cc43a8a">ailiaAudioGetInverseSpectrogram</a> (float[] dst, float[] src, int frame_n, int freq_n, int hop_n, int win_n, int win_type, int max_sample_n, int center, int norm_type)</td></tr>
+<tr class="memdesc:a0dfc3b616a2a11c399e164045cc43a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">複素スペクトログラムから音響信号を生成します。  <a href="#a0dfc3b616a2a11c399e164045cc43a8a">[詳解]</a><br /></td></tr>
 <tr class="separator:a0dfc3b616a2a11c399e164045cc43a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a12ab4fdd38b75272d42d5a72f13462"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a5a12ab4fdd38b75272d42d5a72f13462">ailiaAudioGetFBMatrix</a> (float[] dst, int freq_n, float f_min, float f_max, int mel_n, int sample_rate, int mel_norm, int mel_formula)</td></tr>
+<tr class="memdesc:a5a12ab4fdd38b75272d42d5a72f13462"><td class="mdescLeft">&#160;</td><td class="mdescRight">メルフィルタバンクの係数を計算します。  <a href="#a5a12ab4fdd38b75272d42d5a72f13462">[詳解]</a><br /></td></tr>
 <tr class="separator:a5a12ab4fdd38b75272d42d5a72f13462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab58083b06b753cd4763a5d344912aa96"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ab58083b06b753cd4763a5d344912aa96">ailiaAudioGetMelSpectrogram</a> (float[] dst, float[] src, int sample_n, int sample_rate, int fft_n, int hop_n, int win_n, int win_type, int max_frame_n, int center, float power, int fft_norm_type, float f_min, float f_max, int mel_n, int mel_norm_type, int mel_formula)</td></tr>
+<tr class="memdesc:ab58083b06b753cd4763a5d344912aa96"><td class="mdescLeft">&#160;</td><td class="mdescRight">音響信号からメルスペクトログラムを生成します。  <a href="#ab58083b06b753cd4763a5d344912aa96">[詳解]</a><br /></td></tr>
 <tr class="separator:ab58083b06b753cd4763a5d344912aa96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e7e75dd1c42ce1d8575a949001d72d7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a5e7e75dd1c42ce1d8575a949001d72d7">ailiaAudioMagPhase</a> (float[] dst_mag, float[] dst_phase, float[] src, int freq_n, int frame_n, float power, int phase_form)</td></tr>
+<tr class="memdesc:a5e7e75dd1c42ce1d8575a949001d72d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">スペクトログラムから振幅と位相を計算します。  <a href="#a5e7e75dd1c42ce1d8575a949001d72d7">[詳解]</a><br /></td></tr>
 <tr class="separator:a5e7e75dd1c42ce1d8575a949001d72d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff306d016290da4659a8673fa87512c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#afff306d016290da4659a8673fa87512c">ailiaAudioStandardize</a> (float[] dst, float[] src, int src_n)</td></tr>
+<tr class="memdesc:afff306d016290da4659a8673fa87512c"><td class="mdescLeft">&#160;</td><td class="mdescRight">実数の信号に対して標準化を実行します。  <a href="#afff306d016290da4659a8673fa87512c">[詳解]</a><br /></td></tr>
 <tr class="separator:afff306d016290da4659a8673fa87512c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb5fa12e34f3832880254d0891cf777c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#abb5fa12e34f3832880254d0891cf777c">ailiaAudioComplexNorm</a> (float[] dst, float[] src, int src_n, float power)</td></tr>
+<tr class="memdesc:abb5fa12e34f3832880254d0891cf777c"><td class="mdescLeft">&#160;</td><td class="mdescRight">複素数のノルムを算出します  <a href="#abb5fa12e34f3832880254d0891cf777c">[詳解]</a><br /></td></tr>
 <tr class="separator:abb5fa12e34f3832880254d0891cf777c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad54e153b058351fcb0cf052f708a4eeb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ad54e153b058351fcb0cf052f708a4eeb">ailiaAudioConvertToMel</a> (float[] dst, float[] src, float[] fb_mtrx, int freq_n, int frame_n, int mel_n)</td></tr>
+<tr class="memdesc:ad54e153b058351fcb0cf052f708a4eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">実数STFT結果をメル尺度に変換する  <a href="#ad54e153b058351fcb0cf052f708a4eeb">[詳解]</a><br /></td></tr>
 <tr class="separator:ad54e153b058351fcb0cf052f708a4eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32148c9127730c4db075a2765579352f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a32148c9127730c4db075a2765579352f">ailiaAudioFixFrameLen</a> (float[] dst, float[] src, int freq_n, int dst_frame_n, int src_frame_n, float pad_data)</td></tr>
+<tr class="memdesc:a32148c9127730c4db075a2765579352f"><td class="mdescLeft">&#160;</td><td class="mdescRight">実数スペクトログラム/メルスペクトログラムの時間フレーム数を調整します。  <a href="#a32148c9127730c4db075a2765579352f">[詳解]</a><br /></td></tr>
 <tr class="separator:a32148c9127730c4db075a2765579352f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac525c2be4201b7f152eca922f48a00c4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#ac525c2be4201b7f152eca922f48a00c4">ailiaAudioResample</a> (float[] dst, float[] src, int dst_sample_rate, int dst_n, int src_sample_rate, int src_n)</td></tr>
+<tr class="memdesc:ac525c2be4201b7f152eca922f48a00c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号をリサンプルします  <a href="#ac525c2be4201b7f152eca922f48a00c4">[詳解]</a><br /></td></tr>
 <tr class="separator:ac525c2be4201b7f152eca922f48a00c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ad51476168465974729f4b680baab63"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a7ad51476168465974729f4b680baab63">ailiaAudioGetResampleLen</a> (ref Int32 dst_sample_n, int dst_sample_rate, int src_sample_n, int src_sample_rate)</td></tr>
+<tr class="memdesc:a7ad51476168465974729f4b680baab63"><td class="mdescLeft">&#160;</td><td class="mdescRight">リサンプル後のサンプル数を計算します  <a href="#a7ad51476168465974729f4b680baab63">[詳解]</a><br /></td></tr>
 <tr class="separator:a7ad51476168465974729f4b680baab63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15e8f01922ed178483c4ffcff6b00d6a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a15e8f01922ed178483c4ffcff6b00d6a">ailiaAudioLinerFilter</a> (float[] dst, float[] src, float[] n_coef, float[] d_coef, float[] zi, int dst_n, int src_n, int n_coef_n, int d_coef_n, int zi_n)</td></tr>
+<tr class="memdesc:a15e8f01922ed178483c4ffcff6b00d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号にフィルタ処理を適用します  <a href="#a15e8f01922ed178483c4ffcff6b00d6a">[詳解]</a><br /></td></tr>
 <tr class="separator:a15e8f01922ed178483c4ffcff6b00d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7419c1d04e7594e5ca22befc8acef3fe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a7419c1d04e7594e5ca22befc8acef3fe">ailiaAudioGetLinerFilterZiCoef</a> (float[] dst_zi, float[] n_coef, float[] d_coef, int dst_n, int n_coef_n, int d_coef_n)</td></tr>
+<tr class="memdesc:a7419c1d04e7594e5ca22befc8acef3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィルタ処理用の初期遅延係数を算出します  <a href="#a7419c1d04e7594e5ca22befc8acef3fe">[詳解]</a><br /></td></tr>
 <tr class="separator:a7419c1d04e7594e5ca22befc8acef3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a448129bb9d0c19907415c04371e55248"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a448129bb9d0c19907415c04371e55248">ailiaAudioFilterFilter</a> (float[] dst, float[] src, float[] n_coef, float[] d_coef, int dst_n, int src_n, int n_coef_n, int d_coef_n, int pad_type, int pad_len)</td></tr>
+<tr class="memdesc:a448129bb9d0c19907415c04371e55248"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号にゼロ位相フィルタ処理を適用します  <a href="#a448129bb9d0c19907415c04371e55248">[詳解]</a><br /></td></tr>
 <tr class="separator:a448129bb9d0c19907415c04371e55248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c02633143e89dbdf749daddefc9e29c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaAudio.html#a0c02633143e89dbdf749daddefc9e29c">ailiaAudioGetNonSilentPos</a> (ref Int32 dst_start_pos, ref Int32 dst_length, float[] src, int sample_n, int win_n, int hop_n, float thr_db)</td></tr>
+<tr class="memdesc:a0c02633143e89dbdf749daddefc9e29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号の入力前後の無音域を除いた領域を検出します  <a href="#a0c02633143e89dbdf749daddefc9e29c">[詳解]</a><br /></td></tr>
 <tr class="separator:a0c02633143e89dbdf749daddefc9e29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -200,6 +222,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>複素数のノルムを算出します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、要素数 src_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、外側から src_n, 2(実部、虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src_n</td><td>入力データの要素数 </td></tr>
+    <tr><td class="paramname">power</td><td>累乗値( &gt; 0.0 )、1.0で複素数絶対値に相当 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>入力データのノルムを算出します src_cmp = src[0] + src[1] i において tmp_dst = pow(src[0],2.0) + pow(src[1],2.0) dst[0] = pow(tmp_dst,0.5*power); </p>
+
 </div>
 </div>
 <a id="afcb2c4ce2977dbd4178087e38648a70a"></a>
@@ -239,6 +274,19 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>非負の入力値をデシベルスケールに変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データポインタ、float 型、長さ src_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データポインタ、float 型、要素数 src_n </td></tr>
+    <tr><td class="paramname">src_n</td><td>計算対象の要素数 </td></tr>
+    <tr><td class="paramname">top_db</td><td>出力の最大値から出力下限の閾値までを定める値 (&gt;= 0.0)、負数の場合は処理は閾値を設定しない </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>librosa.power_to_dbと互換性があります。 </p>
 
 </div>
 </div>
@@ -292,6 +340,21 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>実数STFT結果をメル尺度に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、外側から mel_n, frame_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、外側から freq_n, frame_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">fb_mtrx</td><td>メルフィルタバンク、float 型、外側から mel_n, freq_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">freq_n</td><td>周波数のインデックス数 </td></tr>
+    <tr><td class="paramname">frame_n</td><td>入力データの時間フレームの数 </td></tr>
+    <tr><td class="paramname">mel_n</td><td>メル周波数のインデックス数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>入力された実数スペクトログラムをメル尺度に変換します fb_mtrxには <a class="el" href="classAiliaAudio.html#a5a12ab4fdd38b75272d42d5a72f13462" title="メルフィルタバンクの係数を計算します。 ">ailiaAudioGetFBMatrix()</a> で取得した係数を与える事が出来ます </p>
+
 </div>
 </div>
 <a id="afc318ef8e5bddf8019dff0cc9726d4c0"></a>
@@ -325,6 +388,18 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>FFTを実行します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、外側から fft_n, 2(実部、虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、要素数 fft_n </td></tr>
+    <tr><td class="paramname">fft_n</td><td>FFT点数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>FFT点数が2の累乗の場合、高速アルゴリズムで動作します。 出力データは実部と虚部の交互信号であり、長さは fft_n*2 です。 </p>
 
 </div>
 </div>
@@ -402,6 +477,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>信号にゼロ位相フィルタ処理を適用します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、要素数 dst_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、要素数 src_n </td></tr>
+    <tr><td class="paramname">n_coef</td><td>フィルタ分子係数のポインタ、float 型、要素数 n_coef_n </td></tr>
+    <tr><td class="paramname">d_coef</td><td>フィルタ分母係数のポインタ、float 型、要素数 d_coef_n </td></tr>
+    <tr><td class="paramname">dst_n</td><td>データ出力先の確保要素数（dst_n &gt;= src_n） </td></tr>
+    <tr><td class="paramname">src_n</td><td>入力データの要素数 </td></tr>
+    <tr><td class="paramname">n_coef_n</td><td>フィルタ分子係数の要素数 </td></tr>
+    <tr><td class="paramname">d_coef_n</td><td>フィルタ分母係数の要素数 </td></tr>
+    <tr><td class="paramname">pad_type</td><td>入力信号に対する両端パディング処理方法、 AILIA_AUDIO_FILTFILT_PAD_* のいずれか </td></tr>
+    <tr><td class="paramname">pad_len</td><td>入力信号に対する両端パディング数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>dstへの出力数はmin(dst_m,src_n)となります。 n_coef_nとd_coef_nは大きいほうを基準とし、不足分は0でパディングします。 </p>
+
 </div>
 </div>
 <a id="a32148c9127730c4db075a2765579352f"></a>
@@ -453,6 +547,21 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>実数スペクトログラム/メルスペクトログラムの時間フレーム数を調整します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、freq_n, dst_frame_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、freq_n, src_frame_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">freq_n</td><td>周波数のインデックス数 </td></tr>
+    <tr><td class="paramname">dst_frame_n</td><td>出力データの時間フレームの数 </td></tr>
+    <tr><td class="paramname">src_frame_n</td><td>入力データの時間フレームの数 </td></tr>
+    <tr><td class="paramname">pad_data</td><td>パディング（dst_frame_n &gt; src_frame_n の場合に使用） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>dst_frame_n &gt; src_frame_n : 不足する時間フレームのデータを pad_data のデータで埋める。 dst_frame_n &lt;= src_frame_n : 先頭から dst_frame_n のデータのみを切り出す。 </p>
 
 </div>
 </div>
@@ -518,6 +627,22 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>メルフィルタバンクの係数を計算します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、外側から mel_n, freq_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">freq_n</td><td>周波数のインデックス数 </td></tr>
+    <tr><td class="paramname">f_min</td><td>周波数の最小値 </td></tr>
+    <tr><td class="paramname">f_max</td><td>周波数の最大値 </td></tr>
+    <tr><td class="paramname">mel_n</td><td>メル周波数のインデックス数（ &lt; freq_n） </td></tr>
+    <tr><td class="paramname">sample_rate</td><td>サンプリング周波数 </td></tr>
+    <tr><td class="paramname">mel_norm</td><td>出力される係数の正規化の有無、AILIA_AUDIO_MEL_NORMALIZE_* のいずれか </td></tr>
+    <tr><td class="paramname">mel_formula</td><td>MEL尺度の形式、AILIA_AUDIO_MEL_SCALE_FORMULA_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
+
 </div>
 </div>
 <a id="a3d2d76cc0ede5bace673fe0333a8ae63"></a>
@@ -563,6 +688,20 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>STFTで生成される時間フレーム長を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_n</td><td>フレーム長出力先ポインタ </td></tr>
+    <tr><td class="paramname">sample_n</td><td>STFTを適用するサンプル数 </td></tr>
+    <tr><td class="paramname">fft_n</td><td>FFT点数 </td></tr>
+    <tr><td class="paramname">hop_n</td><td>窓のシフト数 </td></tr>
+    <tr><td class="paramname">center</td><td>AILIA_AUDIO_STFT_CENTER_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>STFT実行前のバッファサイズの決定に使用します。 <a class="el" href="classAiliaAudio.html#a5bea20f3edbe83cb4fe40c1e11c161b7">AILIA_AUDIO_STFT_CENTER_NONE</a> の場合 hop_n ずつ区切り、sample_n の前後に padding を行いません。 <a class="el" href="classAiliaAudio.html#a96c89fae9b30a09c8dc4abac4537d0da">AILIA_AUDIO_STFT_CENTER_ENABLE</a> の場合 sample_n の前後に fft_n/2 の padding(reflect) を行います。 <a class="el" href="classAiliaAudio.html#a7e83676a6ef63a6eac8413d9b3aa8f0a">AILIA_AUDIO_STFT_CENTER_SCIPY_DEFAULT</a> の場合、sample_n の前後に fft_n/2 の padding(zero) を行い、hop_nの倍数になるようにpadding(zero)を行います </p>
 
 </div>
 </div>
@@ -640,6 +779,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>複素スペクトログラムから音響信号を生成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、要素数 sample_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、外側から freq_n, frame_n, 2(複素数: 実部, 虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">frame_n</td><td>入力データの時間フレーム数 </td></tr>
+    <tr><td class="paramname">freq_n</td><td>周波数（fft_n/2+1） </td></tr>
+    <tr><td class="paramname">hop_n</td><td>フレームのシフト数 </td></tr>
+    <tr><td class="paramname">win_n</td><td>窓関数の長さ </td></tr>
+    <tr><td class="paramname">win_type</td><td>窓関数の種類、AILIA_AUDIO_WIN_TYPE_* のいずれか </td></tr>
+    <tr><td class="paramname">max_sample_n</td><td>出力データのサンプル数の最大値 </td></tr>
+    <tr><td class="paramname">center</td><td>入力データ生成時の前後へのパディングの有無、AILIA_AUDIO_STFT_CENTER_* のいずれか </td></tr>
+    <tr><td class="paramname">norm_type</td><td>入力データ生成時の正規化処理、AILIA_AUDIO_FFT_NORMALIZE_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>時間フレームごとにIFFTを行い、最後に正規化処理を実行します。 複素スペクトログラムのみに対応しています。 </p>
+
 </div>
 </div>
 <a id="a7419c1d04e7594e5ca22befc8acef3fe"></a>
@@ -691,6 +849,21 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>フィルタ処理用の初期遅延係数を算出します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_zi</td><td>出力する初期遅延状態のポインタ、float 型、要素数 dst_n (dst_n &gt;= max(n_coef_n,d_coef_n)-1) </td></tr>
+    <tr><td class="paramname">n_coef</td><td>フィルタ分子係数のポインタ、float 型、要素数 n_coef_n </td></tr>
+    <tr><td class="paramname">d_coef</td><td>フィルタ分母係数のポインタ、float 型、要素数 d_coef_n </td></tr>
+    <tr><td class="paramname">dst_n</td><td>出力先の確保要素数 (dst_n &gt;= max(n_coef_n,d_coef_n)-1) </td></tr>
+    <tr><td class="paramname">n_coef_n</td><td>フィルタ分子係数の要素数 </td></tr>
+    <tr><td class="paramname">d_coef_n</td><td>フィルタ分母係数の要素数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>一般に、得られた係数に入力信号の先頭を乗じたものを、初期遅延状態として <a class="el" href="classAiliaAudio.html#a15e8f01922ed178483c4ffcff6b00d6a" title="信号にフィルタ処理を適用します ">ailiaAudioLinerFilter()</a> に与えます。 dst_nはmax(n_coef_n,d_coef_n)-1が必要となります。 不足の場合は、確保分だけ出力します。 超える部分は、0で埋めます。 n_coef_nとd_coef_nは大きいほうを基準とし、不足分は0でパディングします。 </p>
 
 </div>
 </div>
@@ -810,6 +983,32 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>音響信号からメルスペクトログラムを生成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、外側から mel_n, frame_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、モノラル PCM データ </td></tr>
+    <tr><td class="paramname">sample_n</td><td>入力データのサンプル数 </td></tr>
+    <tr><td class="paramname">sample_rate</td><td>サンプリング周波数 </td></tr>
+    <tr><td class="paramname">fft_n</td><td>FFT点数 </td></tr>
+    <tr><td class="paramname">hop_n</td><td>フレームのシフト数 </td></tr>
+    <tr><td class="paramname">win_n</td><td>1フレームに含むサンプル数 </td></tr>
+    <tr><td class="paramname">win_type</td><td>窓関数の種類、AILIA_AUDIO_WIN_TYPE_* のいずれか </td></tr>
+    <tr><td class="paramname">max_frame_n</td><td>出力データの時間フレーム数の最大値 </td></tr>
+    <tr><td class="paramname">center</td><td>入力データの前後へのパディングの有無、AILIA_AUDIO_STFT_CENTER_* のいずれか </td></tr>
+    <tr><td class="paramname">power</td><td>スペクトログラムの乗数（ &gt; 0.0）1.0: 振幅スペクトログラム、2.0: パワースペクトログラム、その他: 任意の累乗値の出力に相当 </td></tr>
+    <tr><td class="paramname">fft_norm_type</td><td>FFT後の正規化処理、AILIA_AUDIO_FFT_NORMALIZE_* のいずれか </td></tr>
+    <tr><td class="paramname">f_min</td><td>周波数の最小値 </td></tr>
+    <tr><td class="paramname">f_max</td><td>周波数の最大値 </td></tr>
+    <tr><td class="paramname">mel_n</td><td>メル周波数のインデックス数（ &lt; freq_n） </td></tr>
+    <tr><td class="paramname">mel_norm_type</td><td>MELスペクトログラムの正規化の有無、AILIA_AUDIO_MEL_NORMALIZE_* のいずれか </td></tr>
+    <tr><td class="paramname">mel_formula</td><td>MEL尺度の形式、AILIA_AUDIO_MEL_SCALE_FORMULA_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>時間フレームごとにFFT(STFT)→正規化処理→累乗（振幅・パワーに変換→メルフィルタバンクの係数取得→メル尺度への変換 の順で処理を実行します。 出力データは実数の信号であり、長さはmel_n*時間フレーム長です。 </p>
+
 </div>
 </div>
 <a id="a0c02633143e89dbdf749daddefc9e29c"></a>
@@ -868,6 +1067,22 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>信号の入力前後の無音域を除いた領域を検出します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_start_pos</td><td>有音域の先頭サンプル位置出力先ポインタ、int 型 </td></tr>
+    <tr><td class="paramname">dst_length</td><td>有音域の長さ出力先ポインタ、int 型 </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、要素数 sample_n </td></tr>
+    <tr><td class="paramname">sample_n</td><td>入力データのサンプル数 </td></tr>
+    <tr><td class="paramname">win_n</td><td>1フレームに含むサンプル数 </td></tr>
+    <tr><td class="paramname">hop_n</td><td>フレームのシフト数 </td></tr>
+    <tr><td class="paramname">thr_db</td><td>有音を判断するdB (thr_db &gt; 0) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>全域が無音の場合、*dst_start_pos = -1,*dst_length = 0となります。 </p>
+
 </div>
 </div>
 <a id="a7ad51476168465974729f4b680baab63"></a>
@@ -907,6 +1122,18 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>リサンプル後のサンプル数を計算します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_sample_n</td><td>リサンプル後サンプル数出力先ポインタ </td></tr>
+    <tr><td class="paramname">dst_sample_rate</td><td>変換後のサンプリングレート </td></tr>
+    <tr><td class="paramname">src_sample_n</td><td>入力データのサンプル数 </td></tr>
+    <tr><td class="paramname">src_sample_rate</td><td>入力データのサンプリングレート </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
 
 </div>
 </div>
@@ -953,6 +1180,20 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ISTFTで生成されるサンプル数を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sample_n</td><td>サンプル数出力先ポインタ </td></tr>
+    <tr><td class="paramname">frame_n</td><td>STFTデータの時間フレーム長 </td></tr>
+    <tr><td class="paramname">fft_n</td><td>FFT点数 </td></tr>
+    <tr><td class="paramname">hop_n</td><td>窓のシフト数 </td></tr>
+    <tr><td class="paramname">center</td><td>AILIA_AUDIO_STFT_CENTER_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>ISTFT実行前のバッファサイズの決定に使用します。 <a class="el" href="classAiliaAudio.html#a5bea20f3edbe83cb4fe40c1e11c161b7">AILIA_AUDIO_STFT_CENTER_NONE</a> の場合 前後の切り捨てを行いません。 <a class="el" href="classAiliaAudio.html#a5bea20f3edbe83cb4fe40c1e11c161b7">AILIA_AUDIO_STFT_CENTER_NONE</a> 以外の場合 前後の切り捨てを行います。 </p>
 
 </div>
 </div>
@@ -1036,6 +1277,26 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>音響信号からスペクトログラムを生成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、外側から freq_n, frame_n, 2(複素数: 実部, 虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、要素数 sample_n </td></tr>
+    <tr><td class="paramname">sample_n</td><td>入力データのサンプル数 </td></tr>
+    <tr><td class="paramname">fft_n</td><td>FFT点数 </td></tr>
+    <tr><td class="paramname">hop_n</td><td>フレームのシフト数 </td></tr>
+    <tr><td class="paramname">win_n</td><td>窓関数の長さ </td></tr>
+    <tr><td class="paramname">win_type</td><td>窓関数の種類、AILIA_AUDIO_WIN_TYPE_* のいずれか </td></tr>
+    <tr><td class="paramname">max_frame_n</td><td>出力データの時間フレーム数の最大値 </td></tr>
+    <tr><td class="paramname">center</td><td>入力データの前後へのパディングの有無、AILIA_AUDIO_STFT_CENTER_* のいずれか </td></tr>
+    <tr><td class="paramname">power</td><td>スペクトログラムの乗数（&gt;= 0.0） 0.0: 複素スペクトログラム、1.0: 振幅スペクトログラム、2.0: パワースペクトログラム、その他: 任意の累乗値の出力に相当 </td></tr>
+    <tr><td class="paramname">norm_type</td><td>FFT後の正規化処理、AILIA_AUDIO_FFT_NORMALIZE_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>時間フレームごとにFFT→正規化処理→累乗（振幅・パワーに変換）の順で処理を実行します。 出力データは実部と虚部の交互信号であり、長さは(fft_n/2+1)*時間フレーム長*2です。 powerが0.0以外の場合は虚部の値を全て0.0として出力します。 </p>
+
 </div>
 </div>
 <a id="af4a0b1ddc359c4e84744a9dfc5bd5b40"></a>
@@ -1070,6 +1331,18 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>窓関数の係数を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、要素数 window_n </td></tr>
+    <tr><td class="paramname">window_n</td><td>窓の長さ（サンプル数） </td></tr>
+    <tr><td class="paramname">win_type</td><td>窓関数の種類、AILIA_AUDIO_WIN_TYPE_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>窓関数はhann窓とhamming窓のみ対応しています。 </p>
+
 </div>
 </div>
 <a id="ad81b4cc19909464eb809f90378eb6133"></a>
@@ -1103,6 +1376,18 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>IFFTを実行します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、外側から fft_n, 2(実部、虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、外側から fft_n, 2(実部、虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">fft_n</td><td>FFT点数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>FFT点数が2の累乗の場合、高速アルゴリズムで動作します。 出力データは実部と虚部の交互信号であり、長さは fft_n*2 です。 </p>
 
 </div>
 </div>
@@ -1180,6 +1465,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>信号にフィルタ処理を適用します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、要素数 dst_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、要素数 src_n </td></tr>
+    <tr><td class="paramname">n_coef</td><td>フィルタ分子係数のポインタ、float 型、要素数 n_coef_n </td></tr>
+    <tr><td class="paramname">d_coef</td><td>フィルタ分母係数のポインタ、float 型、要素数 d_coef_n </td></tr>
+    <tr><td class="paramname">zi</td><td>遅延状態のポインタ、float 型、要素数 zi_n (zi_n = max(n_coef_n,d_coef_n)-1)、nullptrを許容 </td></tr>
+    <tr><td class="paramname">dst_n</td><td>データ出力先の確保要素数（dst_n &gt;= src_n） </td></tr>
+    <tr><td class="paramname">src_n</td><td>入力データの要素数 </td></tr>
+    <tr><td class="paramname">n_coef_n</td><td>フィルタ分子係数の要素数 </td></tr>
+    <tr><td class="paramname">d_coef_n</td><td>フィルタ分母係数の要素数 </td></tr>
+    <tr><td class="paramname">zi_n</td><td>遅延状態の要素数 (zi_n &gt;= max(n_coef_n,d_coef_n)-1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>dstへの出力数はmin(dst_m,src_n)となります。 ziへは初期遅延状態を渡します。処理後には最終遅延状態に上書きされます。 zi_nはmax(n_coef_n,d_coef_n)-1が必要となります。不足の場合、不足分は0でパディングし、最終遅延状態は返しません。 ziにnullptrを与えた場合は、初期遅延状態を0とします。最終遅延状態も返しません。zi_nは無視されます。 n_coef_nとd_coef_nは大きいほうを基準とし、不足分は0でパディングします。 </p>
+
 </div>
 </div>
 <a id="a9212a80c366372b2c073c9d149bbcdf8"></a>
@@ -1213,6 +1517,18 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>入力値を対数スケールに変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データポインタ、float 型、長さ src_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データポインタ、float 型、長さ src_n </td></tr>
+    <tr><td class="paramname">src_n</td><td>計算対象の要素数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>dst = log_e(1.0 + src) を計算します。 </p>
 
 </div>
 </div>
@@ -1272,6 +1588,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>スペクトログラムから振幅と位相を計算します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst_mag</td><td>振幅の出力先ポインタ、外側から freq_n, frame_n 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">dst_phase</td><td>位相の出力先ポインタ、外側から freq_n, frame_n, 2(実部、虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、frame_n, freq_n, 2(実部、虚部) 順のメモリレイアウト </td></tr>
+    <tr><td class="paramname">freq_n</td><td>周波数のインデックス数 </td></tr>
+    <tr><td class="paramname">frame_n</td><td>時間フレームの数 </td></tr>
+    <tr><td class="paramname">power</td><td>振幅スペクトルの乗数 ( &gt; 0.0)、1.0: 振幅スペクトログラム、2.0: パワースペクトログラムに相当 </td></tr>
+    <tr><td class="paramname">phase_form</td><td>位相の出力形式、AILIA_AUDIO_PHASE_FORM_* のいずれか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>librosaのデフォルト値と互換の条件: phase_form = <a class="el" href="classAiliaAudio.html#afba7076b592b7eb8f1784df8cb278e21">AILIA_AUDIO_PHASE_FORM_COMPLEX</a> , power = 1.0 PyTorchのデフォルト値と互換の条件: phase_form = <a class="el" href="classAiliaAudio.html#a5cd8ba08bab472b3e94fd7a1e143db95">AILIA_AUDIO_PHASE_FORM_REAL</a> , power = 1.0 phase_formによってdst_phaseの出力が変わります。</p><ul>
+<li><a class="el" href="classAiliaAudio.html#afba7076b592b7eb8f1784df8cb278e21">AILIA_AUDIO_PHASE_FORM_COMPLEX</a> : 実部と虚部の交互信号、サイズは freq_n * frame_n * 2</li>
+<li><a class="el" href="classAiliaAudio.html#a5cd8ba08bab472b3e94fd7a1e143db95">AILIA_AUDIO_PHASE_FORM_REAL</a> : 実部のみの信号、サイズは freq_n * frame_n </li>
+</ul>
+
 </div>
 </div>
 <a id="ac525c2be4201b7f152eca922f48a00c4"></a>
@@ -1324,6 +1659,21 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>信号をリサンプルします </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、要素数 dst_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、要素数 src_n </td></tr>
+    <tr><td class="paramname">dst_sample_rate</td><td>変換後のサンプリングレート </td></tr>
+    <tr><td class="paramname">dst_n</td><td>データ出力先の確保要素数（dst_n &gt;= max_resample_n） </td></tr>
+    <tr><td class="paramname">src_sample_rate</td><td>入力データのサンプリングレート </td></tr>
+    <tr><td class="paramname">src_n</td><td>入力データの要素数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>最大出力数max_resample_nは <a class="el" href="classAiliaAudio.html#a7ad51476168465974729f4b680baab63" title="リサンプル後のサンプル数を計算します ">ailiaAudioGetResampleLen()</a> で取得できます。 dst_n &lt; max_resample_n : 先頭からdst_nに入る部分のみ出力 dst_n &gt;= max_resample_n : 出力要素数はmax_resample_n </p>
+
 </div>
 </div>
 <a id="afff306d016290da4659a8673fa87512c"></a>
@@ -1358,6 +1708,18 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>実数の信号に対して標準化を実行します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>出力データのポインタ、float 型、要素数 src_n </td></tr>
+    <tr><td class="paramname">src</td><td>入力データのポインタ、float 型、要素数 src_n </td></tr>
+    <tr><td class="paramname">src_n</td><td>入力データの要素数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>入力データの平均0、分散1になるよう標準化を行う。 dst = (src - mean(src)) / std(src) </p>
+
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
@@ -1372,6 +1734,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>FFT の出力を librosa 互換で正規化する </p>
 
 </div>
 </div>
@@ -1386,6 +1749,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>FFT の出力を正規化しない </p>
 
 </div>
 </div>
@@ -1400,6 +1764,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>FFT の出力を PyTorch 互換で正規化する </p>
 
 </div>
 </div>
@@ -1414,6 +1779,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>FFT の出力を SciPy 互換で正規化する </p>
 
 </div>
 </div>
@@ -1428,6 +1794,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ゼロ位相フィルタ処理の際、padding は端値 </p>
 
 </div>
 </div>
@@ -1442,6 +1809,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ゼロ位相フィルタ処理の際、padding はeven(reflect) </p>
 
 </div>
 </div>
@@ -1456,6 +1824,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ゼロ位相フィルタ処理の際、padding をしない </p>
 
 </div>
 </div>
@@ -1470,6 +1839,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ゼロ位相フィルタ処理の際、padding はodd </p>
 
 </div>
 </div>
@@ -1484,6 +1854,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>MEL スペクトログラムの出力を正規化する </p>
 
 </div>
 </div>
@@ -1498,6 +1869,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>MEL スペクトログラムの出力を正規化しない </p>
 
 </div>
 </div>
@@ -1512,6 +1884,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>MEL 尺度を HTK formula で求める (PyTorch 互換) </p>
 
 </div>
 </div>
@@ -1526,6 +1899,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>MEL 尺度を Slanye's formula で求める (librosa デフォルト互換) </p>
 
 </div>
 </div>
@@ -1540,6 +1914,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>位相を複素数形式で出力する (librosa デフォルト互換) </p>
 
 </div>
 </div>
@@ -1554,6 +1929,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>位相を実数形式で出力する (PyTorch デフォルト互換) </p>
 
 </div>
 </div>
@@ -1568,6 +1944,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>STFT の際、sample_n の前後に fft_n/2 の padding(reflect) を入れる </p>
 
 </div>
 </div>
@@ -1582,6 +1959,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>STFT の際、前後に padding を入れない </p>
 
 </div>
 </div>
@@ -1596,6 +1974,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>STFT の際、sample_n の前後に fft_n/2 の padding(zero) を入れ、さらにhop_n処理単位になるように後方padding(zero)で合わせる </p>
 
 </div>
 </div>
@@ -1610,6 +1989,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>窓関数に hamming 窓を使う </p>
 
 </div>
 </div>
@@ -1624,6 +2004,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+<p>窓関数に hann 窓を使う </p>
 
 </div>
 </div>

@@ -1,9 +1,9 @@
 var searchData=
 [
   ['selectenvironment',['SelectEnvironment',['../classAiliaModel.html#a608da869b0a415e61c734f8b8730dc7a',1,'AiliaModel']]],
-  ['setinputblobdata',['SetInputBlobData',['../classAiliaModel.html#aca99605fec6ab7dc061ff18012fc836a',1,'AiliaModel']]],
-  ['setinputblobshape',['SetInputBlobShape',['../classAiliaModel.html#a6418c8242717b1d3334a15398b6e51d7',1,'AiliaModel']]],
-  ['setinputblobshapend',['SetInputBlobShapeND',['../classAiliaModel.html#a83d52265e8e3c4a518002efbaf9cebdb',1,'AiliaModel']]],
+  ['setinputblobdata',['SetInputBlobData',['../classAiliaModel.html#a72539833447b96307ec0af111968ee94',1,'AiliaModel.SetInputBlobData(float[] input_data, uint idx)'],['../classAiliaModel.html#ab833be4f2336202f3403dc65d18fa49d',1,'AiliaModel.SetInputBlobData(float[] input_data, int idx)']]],
+  ['setinputblobshape',['SetInputBlobShape',['../classAiliaModel.html#ac337798a51d04c7f034289a613d2de69',1,'AiliaModel.SetInputBlobShape(Ailia.AILIAShape shape, uint idx)'],['../classAiliaModel.html#aba58923bc66a6d3b12efa89067ad9570',1,'AiliaModel.SetInputBlobShape(Ailia.AILIAShape shape, int idx)']]],
+  ['setinputblobshapend',['SetInputBlobShapeND',['../classAiliaModel.html#ac0cc8f013ad9f425021dda38228f1cdd',1,'AiliaModel.SetInputBlobShapeND(uint[] shape, uint dim, uint idx)'],['../classAiliaModel.html#a96595123d49bdeafe26cfd4ee1212010',1,'AiliaModel.SetInputBlobShapeND(uint[] shape, int dim, int idx)']]],
   ['setinputshape',['SetInputShape',['../classAiliaDetectorModel.html#a653deb198a61e3ff87c00d884b0fbb70',1,'AiliaDetectorModel.SetInputShape()'],['../classAiliaModel.html#a892a547188ea59c953ba4aa32cf1d4d3',1,'AiliaModel.SetInputShape()']]],
   ['setinputshapend',['SetInputShapeND',['../classAiliaModel.html#a302adda92b0eb76a4582a8bce751f04e',1,'AiliaModel']]],
   ['setmemorymode',['SetMemoryMode',['../classAiliaModel.html#ac4394b66505e94b075fa0daf239145f8',1,'AiliaModel']]],

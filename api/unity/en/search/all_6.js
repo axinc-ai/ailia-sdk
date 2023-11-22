@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['getblobdata',['GetBlobData',['../classAiliaModel.html#a17b9ccc01b4fcc1e51182764467d46e7',1,'AiliaModel']]],
-  ['getblobshape',['GetBlobShape',['../classAiliaModel.html#a8a39cca2a3dbe85cf25d29e2f6207625',1,'AiliaModel.GetBlobShape(string layer_name)'],['../classAiliaModel.html#a0853c5882b06cbf76a9b78dd23550ce4',1,'AiliaModel.GetBlobShape(int idx)']]],
+  ['getblobdata',['GetBlobData',['../classAiliaModel.html#ac4d29097487182a6a62094beb526dcb3',1,'AiliaModel.GetBlobData(float[] output_data, uint idx)'],['../classAiliaModel.html#afd3f265124f88d66460037b7516a0b71',1,'AiliaModel.GetBlobData(float[] output_data, int idx)']]],
+  ['getblobshape',['GetBlobShape',['../classAiliaModel.html#a8a39cca2a3dbe85cf25d29e2f6207625',1,'AiliaModel.GetBlobShape(string layer_name)'],['../classAiliaModel.html#a4006fbc9c309237ceecb51df8de41079',1,'AiliaModel.GetBlobShape(uint idx)'],['../classAiliaModel.html#a42c04dc84a2514e992cf6718f8fd6ff3',1,'AiliaModel.GetBlobShape(int idx)']]],
   ['getenvironment',['GetEnvironment',['../classAiliaModel.html#a4887ae48bd7e69a9dde2a5af62ff1e67',1,'AiliaModel']]],
   ['getenvironmentcount',['GetEnvironmentCount',['../classAiliaModel.html#acbff3496cddc748bfe1801016845d75f',1,'AiliaModel']]],
   ['geterrordetail',['GetErrorDetail',['../classAiliaModel.html#a15d7c81aa1d64675c6f7ef8e9903ea7d',1,'AiliaModel']]],
