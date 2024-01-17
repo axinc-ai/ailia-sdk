@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -66,9 +66,9 @@ $(function() {
 <div class="title">API Usage </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md10"></a>
 Overview of ailia Speech API</h1>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Basic usage</h2>
 <p>With ailia Speech, you can create an instance with <code>ailiaSpeechCreate</code>, then open a model with <code>ailiaSpeechOpenModelFile</code>, input a PCM with <code>ailiaSpeechPushInputData</code>, check that enough PCM has been fed with <code>ailiaSpeechBuffered</code>, transcribe into text with <code>ailiaSpeechTranscribe</code>, and then get the resulting text with <code>ailiaSpeechGetText</code>.</p>
 <p>With <code>ailiaSpeechPushInputData</code> it is not necessary to input the whole audio data at once, it is possible to feed it little by little, so that it can be used in real-time with the input from a microphone.</p>
@@ -129,7 +129,7 @@ Basic usage</h2>
 <div class="line"> <span class="comment">// Destroy the ailia Speech instance</span></div>
 <div class="line"> <a class="code" href="ailia__speech_8h.html#a078f8233d17bce5e1c3e707b226db2b5">ailiaSpeechDestroy</a>(net);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
 How to modify the example for live transcription</h2>
 <p>To enable live transcription, pass the flag AILIA_SPEECH_FLAG_LIVE to ailiaSpeechCreate.</p>
 <div class="fragment"><div class="line"><a class="code" href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">ailiaSpeechCreate</a>(&amp;net, AILIA_ENVIRONMENT_ID_AUTO, AILIA_MULTITHREAD_AUTO, memory_mode, <a class="code" href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a>, <a class="code" href="ailia__speech_8h.html#a5101766abc42f4966dcc67b6cb2acd10">AILIA_SPEECH_FLAG_LIVE</a>, callback, <a class="code" href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a>);</div>
@@ -140,34 +140,105 @@ How to modify the example for live transcription</h2>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="ailia__speech_8h.html#a6c25986e571ce83f49b523e2b59607da">ailiaSpeechSetIntermediateCallback</a>(net, &amp;intermediate_callback, NULL);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
+VAD</h2>
+<p>When using voice activity detection, call the ailiaSpeechOpenVAD API after the ailiaSpeechCreate API.</p>
+<div class="fragment"><div class="line"><a class="code" href="ailia__speech_8h.html#a056e1ee88e608beb3e850c3c7d9dbfe5">ailiaSpeechOpenVadFileA</a>(net, <span class="stringliteral">&quot;silero_vad.onnx&quot;</span>, <a class="code" href="ailia__speech_8h.html#a1fd6286875eca3753f92eebd63e00351">AILIA_SPEECH_VAD_TYPE_SILERO</a>);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
+Post-process</h2>
+<p>If you want to apply post-processing such as speech recognition error correction or translation to the speech recognition result, call the ailiaSpeechOpenPostProcessFile API after the ailiaSpeechCreate API, and call the ailiaSpeechPostProcess API after ailiaSpeechTranscribe.</p>
+<p>When using speech recognition error correction:</p>
+<div class="fragment"><div class="line"><a class="code" href="ailia__speech_8h.html#a8e08325626a89f6a75eb13affa5da94b">ailiaSpeechOpenPostProcessFileA</a>(net, <span class="stringliteral">&quot;t5_whisper_medical-encoder.obf.onnx&quot;</span>, <span class="stringliteral">&quot;t5_whisper_medical-decoder-with-lm-head.obf.onnx&quot;</span>, <span class="stringliteral">&quot;spiece.model&quot;</span>, NULL, <span class="stringliteral">&quot;Correction of medical terms: &quot;</span>, <a class="code" href="ailia__speech_8h.html#aa736cca7a8882df8ac10be1fa43b607d">AILIA_SPEECH_POST_PROCESS_TYPE_T5</a>);</div>
+</div><!-- fragment --><p>When using translation:</p>
+<div class="fragment"><div class="line"><a class="code" href="ailia__speech_8h.html#a8e08325626a89f6a75eb13affa5da94b">ailiaSpeechOpenPostProcessFileA</a>(net, <span class="stringliteral">&quot;seq2seq-lm-with-past.onnx&quot;</span>, NULL, <span class="stringliteral">&quot;source.spm&quot;</span>, <span class="stringliteral">&quot;target.spm&quot;</span>, NULL, <a class="code" href="ailia__speech_8h.html#aaf5a6d06f98a08b4de1e12f8ab9cdff0">AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a>);</div>
+</div><!-- fragment --><p>Common:</p>
+<div class="fragment"><div class="line"><a class="code" href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">ailiaSpeechTranscribe</a>(net);</div>
+<div class="line"><a class="code" href="ailia__speech_8h.html#a732a73c50fcef127a40067467a007af5">ailiaSpeechPostProcess</a>(net);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
 GPU usage</h2>
-<p>In order to use the GPU, pass the env_id corresponding to the GPU as the <code>env_id</code> argument of <code>ailiaSpeechCreate</code>. By default, the value AILIA_ENVIRONMENT_ID_AUTO is used, which indicates to perform the inference on the CPU. See <code>ailia_speech_sample.cpp</code> as an example of how to determine the GPU env_id to be passed as the <code>env_id</code> argument. </p>
+<p>In order to use the GPU, pass the env_id corresponding to the GPU as the <code>env_id</code> argument of <code>ailiaSpeechCreate</code>. By default, the value AILIA_ENVIRONMENT_ID_AUTO is used, which indicates to perform the inference on the CPU. See <code>ailia_speech_sample.cpp</code> as an example of how to determine the GPU env_id to be passed as the <code>env_id</code> argument.</p>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Flow of API call</h2>
+<p>The relationship diagram for each API is as follows.</p>
+<h3><a class="anchor" id="autotoc_md17"></a>
+Speech recognition</h3>
+<p> 
+<div class="mermaid">
+flowchart
+A(Microphone or File)-->B
+B[ailiaPushInpuData API]-->C
+C[ailiaBuffered API]-->D
+C-->B
+D[ailiaTranscribe API]-->E
+E[ailiaGetTextCount API]-->F
+F[ailiaGetText API]-->K
+K[ailiaCompplete API] --> B
+</div>
+</p>
+<h3><a class="anchor" id="autotoc_md18"></a>
+Speech recognition (with post-processing)</h3>
+<p> 
+<div class="mermaid">
+flowchart
+A(Microphone or File)-->B
+B[ailiaPushInpuData API]-->C
+C[ailiaBuffered API]-->D
+C-->B
+D[ailiaTranscribe API]-->E
+E[ailiaGetTextCount API]-->F
+F[ailiaGetText API]-->K
+F-->G
+G[ailiaPostProcess API]-->H
+H[ailiaGetTextCount API]-->I
+I[ailiaGetText API]-->K
+K[ailiaCompplete API] --> B
+</div>
+</p>
+<h3><a class="anchor" id="autotoc_md19"></a>
+Only post-processing.</h3>
+<p> 
+<div class="mermaid">
+flowchart
+F[ailiaSetText API]-->G
+G[ailiaPostProcess API]-->I
+I[ailiaGetText API]
+</div>
+</p>
+<p> 
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+ </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div class="ttc" id="aailia__speech_8h_html_a078f8233d17bce5e1c3e707b226db2b5"><div class="ttname"><a href="ailia__speech_8h.html#a078f8233d17bce5e1c3e707b226db2b5">ailiaSpeechDestroy</a></div><div class="ttdeci">void AILIA_API ailiaSpeechDestroy(struct AILIASpeech *net)</div><div class="ttdoc">It destroys the network instance.</div></div>
 <div class="ttc" id="aailia__speech_8h_html_a453c7c1308539e9bc89239bfd9d0e831"><div class="ttname"><a href="ailia__speech_8h.html#a453c7c1308539e9bc89239bfd9d0e831">ailiaSpeechPushInputData</a></div><div class="ttdeci">int AILIA_API ailiaSpeechPushInputData(struct AILIASpeech *net, const float *src, unsigned int channels, unsigned int samples, unsigned int sampling_rate)</div><div class="ttdoc">Push PCM data to queue.</div></div>
-<div class="ttc" id="aailia__speech_8h_html_ad0c10a4d128016e1aab69aa593774875"><div class="ttname"><a href="ailia__speech_8h.html#ad0c10a4d128016e1aab69aa593774875">AILIA_SPEECH_TEXT_VERSION</a></div><div class="ttdeci">#define AILIA_SPEECH_TEXT_VERSION</div><div class="ttdoc">Struct version.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:316</div></div>
-<div class="ttc" id="astruct__AILIASpeechText_html_ae53e0da708907b4ccd40ba796fa97833"><div class="ttname"><a href="struct__AILIASpeechText.html#ae53e0da708907b4ccd40ba796fa97833">_AILIASpeechText::text</a></div><div class="ttdeci">const char * text</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:319</div></div>
+<div class="ttc" id="aailia__speech_8h_html_ad0c10a4d128016e1aab69aa593774875"><div class="ttname"><a href="ailia__speech_8h.html#ad0c10a4d128016e1aab69aa593774875">AILIA_SPEECH_TEXT_VERSION</a></div><div class="ttdeci">#define AILIA_SPEECH_TEXT_VERSION</div><div class="ttdoc">Struct version.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:368</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html_ae53e0da708907b4ccd40ba796fa97833"><div class="ttname"><a href="struct__AILIASpeechText.html#ae53e0da708907b4ccd40ba796fa97833">_AILIASpeechText::text</a></div><div class="ttdeci">const char * text</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:371</div></div>
 <div class="ttc" id="aailia__speech_8h_html_aa610ce4758daf48552da5f172fc0d972"><div class="ttname"><a href="ailia__speech_8h.html#aa610ce4758daf48552da5f172fc0d972">ailiaSpeechComplete</a></div><div class="ttdeci">int AILIA_API ailiaSpeechComplete(struct AILIASpeech *net, unsigned int *complete)</div><div class="ttdoc">Determines whether all data has been processed.</div></div>
-<div class="ttc" id="astruct__AILIASpeechApiCallback_html"><div class="ttname"><a href="struct__AILIASpeechApiCallback.html">_AILIASpeechApiCallback</a></div><div class="ttdef"><b>Definition:</b> ailia_speech.h:247</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a732a73c50fcef127a40067467a007af5"><div class="ttname"><a href="ailia__speech_8h.html#a732a73c50fcef127a40067467a007af5">ailiaSpeechPostProcess</a></div><div class="ttdeci">int AILIA_API ailiaSpeechPostProcess(struct AILIASpeech *net)</div><div class="ttdoc">Execute post process.</div></div>
+<div class="ttc" id="astruct__AILIASpeechApiCallback_html"><div class="ttname"><a href="struct__AILIASpeechApiCallback.html">_AILIASpeechApiCallback</a></div><div class="ttdef"><b>Definition:</b> ailia_speech.h:297</div></div>
 <div class="ttc" id="aailia__speech_8h_html_a72dd0b016ca262c66485a2fccc22627f"><div class="ttname"><a href="ailia__speech_8h.html#a72dd0b016ca262c66485a2fccc22627f">ailiaSpeechSetLanguage</a></div><div class="ttdeci">int AILIA_API ailiaSpeechSetLanguage(struct AILIASpeech *net, const char *language)</div><div class="ttdoc">Set language.</div></div>
 <div class="ttc" id="aailia__speech_8h_html_a56c22024e9f672509d2e00543ca14b95"><div class="ttname"><a href="ailia__speech_8h.html#a56c22024e9f672509d2e00543ca14b95">ailiaSpeechOpenModelFileA</a></div><div class="ttdeci">int AILIA_API ailiaSpeechOpenModelFileA(struct AILIASpeech *net, const char *encoder_path, const char *decoder_path, int model_type)</div><div class="ttdoc">Set models into a network instance.</div></div>
-<div class="ttc" id="astruct__AILIASpeechText_html_afa317ae0e97f34bf603bf174fa57638b"><div class="ttname"><a href="struct__AILIASpeechText.html#afa317ae0e97f34bf603bf174fa57638b">_AILIASpeechText::time_stamp_begin</a></div><div class="ttdeci">float time_stamp_begin</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:320</div></div>
-<div class="ttc" id="aailia__speech_8h_html_a270b7093c3050b79117027ab17a87313"><div class="ttname"><a href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a></div><div class="ttdeci">#define AILIA_SPEECH_API_CALLBACK_VERSION</div><div class="ttdoc">Struct version.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:244</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html_afa317ae0e97f34bf603bf174fa57638b"><div class="ttname"><a href="struct__AILIASpeechText.html#afa317ae0e97f34bf603bf174fa57638b">_AILIASpeechText::time_stamp_begin</a></div><div class="ttdeci">float time_stamp_begin</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:372</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a270b7093c3050b79117027ab17a87313"><div class="ttname"><a href="ailia__speech_8h.html#a270b7093c3050b79117027ab17a87313">AILIA_SPEECH_API_CALLBACK_VERSION</a></div><div class="ttdeci">#define AILIA_SPEECH_API_CALLBACK_VERSION</div><div class="ttdoc">Struct version.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:294</div></div>
 <div class="ttc" id="aailia__speech_8h_html_acffff23d4e9290777720557cdc30f9fc"><div class="ttname"><a href="ailia__speech_8h.html#acffff23d4e9290777720557cdc30f9fc">ailiaSpeechCreate</a></div><div class="ttdeci">int AILIA_API ailiaSpeechCreate(struct AILIASpeech **net, int env_id, int num_thread, int memory_mode, int task, int flags, AILIASpeechApiCallback callback, int version)</div><div class="ttdoc">Creates a network instance.</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a1fd6286875eca3753f92eebd63e00351"><div class="ttname"><a href="ailia__speech_8h.html#a1fd6286875eca3753f92eebd63e00351">AILIA_SPEECH_VAD_TYPE_SILERO</a></div><div class="ttdeci">#define AILIA_SPEECH_VAD_TYPE_SILERO</div><div class="ttdoc">SileroVAD.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:191</div></div>
 <div class="ttc" id="aailia__speech_8h_html_a6c25986e571ce83f49b523e2b59607da"><div class="ttname"><a href="ailia__speech_8h.html#a6c25986e571ce83f49b523e2b59607da">ailiaSpeechSetIntermediateCallback</a></div><div class="ttdeci">int AILIA_API ailiaSpeechSetIntermediateCallback(struct AILIASpeech *net, AILIA_SPEECH_USER_API_INTERMEDIATE_CALLBACK callback, void *handle)</div><div class="ttdoc">Set a callback to get intermediate results of recognition.</div></div>
-<div class="ttc" id="aailia__speech_8h_html_a5101766abc42f4966dcc67b6cb2acd10"><div class="ttname"><a href="ailia__speech_8h.html#a5101766abc42f4966dcc67b6cb2acd10">AILIA_SPEECH_FLAG_LIVE</a></div><div class="ttdeci">#define AILIA_SPEECH_FLAG_LIVE</div><div class="ttdoc">Enable live transcribe mode.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:154</div></div>
+<div class="ttc" id="aailia__speech_8h_html_aa736cca7a8882df8ac10be1fa43b607d"><div class="ttname"><a href="ailia__speech_8h.html#aa736cca7a8882df8ac10be1fa43b607d">AILIA_SPEECH_POST_PROCESS_TYPE_T5</a></div><div class="ttdeci">#define AILIA_SPEECH_POST_PROCESS_TYPE_T5</div><div class="ttdoc">T5.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:221</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a5101766abc42f4966dcc67b6cb2acd10"><div class="ttname"><a href="ailia__speech_8h.html#a5101766abc42f4966dcc67b6cb2acd10">AILIA_SPEECH_FLAG_LIVE</a></div><div class="ttdeci">#define AILIA_SPEECH_FLAG_LIVE</div><div class="ttdoc">Enable live transcribe mode.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:176</div></div>
 <div class="ttc" id="aailia__speech_8h_html_adb4f738437f4663bf6cc12bb088cecfc"><div class="ttname"><a href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">ailiaSpeechTranscribe</a></div><div class="ttdeci">int AILIA_API ailiaSpeechTranscribe(struct AILIASpeech *net)</div><div class="ttdoc">Speech recognition.</div></div>
-<div class="ttc" id="aailia__speech_8h_html_a811a53f90bad34ceb1cd1cdf275c2687"><div class="ttname"><a href="ailia__speech_8h.html#a811a53f90bad34ceb1cd1cdf275c2687">AILIA_SPEECH_FLAG_NONE</a></div><div class="ttdeci">#define AILIA_SPEECH_FLAG_NONE</div><div class="ttdoc">Default flag.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:143</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a811a53f90bad34ceb1cd1cdf275c2687"><div class="ttname"><a href="ailia__speech_8h.html#a811a53f90bad34ceb1cd1cdf275c2687">AILIA_SPEECH_FLAG_NONE</a></div><div class="ttdeci">#define AILIA_SPEECH_FLAG_NONE</div><div class="ttdoc">Default flag.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:165</div></div>
 <div class="ttc" id="aailia__speech_8h_html_a0e0cb6e4b463dbf02fc5da05a061cedd"><div class="ttname"><a href="ailia__speech_8h.html#a0e0cb6e4b463dbf02fc5da05a061cedd">ailiaSpeechBuffered</a></div><div class="ttdeci">int AILIA_API ailiaSpeechBuffered(struct AILIASpeech *net, unsigned int *buffered)</div><div class="ttdoc">Determines if there is enough data to perform speech recognition.</div></div>
-<div class="ttc" id="astruct__AILIASpeechText_html"><div class="ttname"><a href="struct__AILIASpeechText.html">_AILIASpeechText</a></div><div class="ttdef"><b>Definition:</b> ailia_speech.h:318</div></div>
-<div class="ttc" id="aailia__speech_8h_html_a6f87fdadb3ef26a39a787c4891c1a27e"><div class="ttname"><a href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a></div><div class="ttdeci">#define AILIA_SPEECH_TASK_TRANSCRIBE</div><div class="ttdoc">Transcribe mode.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:91</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html"><div class="ttname"><a href="struct__AILIASpeechText.html">_AILIASpeechText</a></div><div class="ttdef"><b>Definition:</b> ailia_speech.h:370</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a6f87fdadb3ef26a39a787c4891c1a27e"><div class="ttname"><a href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a></div><div class="ttdeci">#define AILIA_SPEECH_TASK_TRANSCRIBE</div><div class="ttdoc">Transcribe mode.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:113</div></div>
 <div class="ttc" id="aailia__speech_8h_html"><div class="ttname"><a href="ailia__speech_8h.html">ailia_speech.h</a></div></div>
-<div class="ttc" id="aailia__speech_8h_html_a848b4bd906ed522b28e99b4be4696e74"><div class="ttname"><a href="ailia__speech_8h.html#a848b4bd906ed522b28e99b4be4696e74">ailiaSpeechGetTextCount</a></div><div class="ttdeci">int AILIA_API ailiaSpeechGetTextCount(struct AILIASpeech *net, unsigned int *count)</div><div class="ttdoc">Get text count.</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a848b4bd906ed522b28e99b4be4696e74"><div class="ttname"><a href="ailia__speech_8h.html#a848b4bd906ed522b28e99b4be4696e74">ailiaSpeechGetTextCount</a></div><div class="ttdeci">int AILIA_API ailiaSpeechGetTextCount(struct AILIASpeech *net, unsigned int *count)</div><div class="ttdoc">Get recognized text count.</div></div>
 <div class="ttc" id="aailia__speech_8h_html_a57d4a103b11eb5eee22d1c559c18e446"><div class="ttname"><a href="ailia__speech_8h.html#a57d4a103b11eb5eee22d1c559c18e446">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL</a></div><div class="ttdeci">#define AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL</div><div class="ttdoc">Whisper Small model.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:65</div></div>
-<div class="ttc" id="aailia__speech_8h_html_a608a04f5e2018a5f608480e6da3a16a9"><div class="ttname"><a href="ailia__speech_8h.html#a608a04f5e2018a5f608480e6da3a16a9">ailiaSpeechGetText</a></div><div class="ttdeci">int AILIA_API ailiaSpeechGetText(struct AILIASpeech *net, AILIASpeechText *text, unsigned int version, unsigned int idx)</div><div class="ttdoc">Get text length.</div></div>
-<div class="ttc" id="astruct__AILIASpeechText_html_aa68dc0ba9cda57315271a26a574561c4"><div class="ttname"><a href="struct__AILIASpeechText.html#aa68dc0ba9cda57315271a26a574561c4">_AILIASpeechText::time_stamp_end</a></div><div class="ttdeci">float time_stamp_end</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:321</div></div>
+<div class="ttc" id="aailia__speech_8h_html_aaf5a6d06f98a08b4de1e12f8ab9cdff0"><div class="ttname"><a href="ailia__speech_8h.html#aaf5a6d06f98a08b4de1e12f8ab9cdff0">AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a></div><div class="ttdeci">#define AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</div><div class="ttdoc">FuguMT EN JA.</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:232</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a056e1ee88e608beb3e850c3c7d9dbfe5"><div class="ttname"><a href="ailia__speech_8h.html#a056e1ee88e608beb3e850c3c7d9dbfe5">ailiaSpeechOpenVadFileA</a></div><div class="ttdeci">int AILIA_API ailiaSpeechOpenVadFileA(struct AILIASpeech *net, const char *vad_path, int vad_type)</div><div class="ttdoc">Set vad model for voice activity detection.</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a608a04f5e2018a5f608480e6da3a16a9"><div class="ttname"><a href="ailia__speech_8h.html#a608a04f5e2018a5f608480e6da3a16a9">ailiaSpeechGetText</a></div><div class="ttdeci">int AILIA_API ailiaSpeechGetText(struct AILIASpeech *net, AILIASpeechText *text, unsigned int version, unsigned int idx)</div><div class="ttdoc">Get recognized text.</div></div>
+<div class="ttc" id="aailia__speech_8h_html_a8e08325626a89f6a75eb13affa5da94b"><div class="ttname"><a href="ailia__speech_8h.html#a8e08325626a89f6a75eb13affa5da94b">ailiaSpeechOpenPostProcessFileA</a></div><div class="ttdeci">int AILIA_API ailiaSpeechOpenPostProcessFileA(struct AILIASpeech *net, const char *encoder_path, const char *decoder_path, const char *source_path, const char *target_path, const char *prefix, int post_process_type)</div><div class="ttdoc">Set AI model for post process (MBSC)</div></div>
+<div class="ttc" id="astruct__AILIASpeechText_html_aa68dc0ba9cda57315271a26a574561c4"><div class="ttname"><a href="struct__AILIASpeechText.html#aa68dc0ba9cda57315271a26a574561c4">_AILIASpeechText::time_stamp_end</a></div><div class="ttdeci">float time_stamp_end</div><div class="ttdef"><b>Definition:</b> ailia_speech.h:373</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

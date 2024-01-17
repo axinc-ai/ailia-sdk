@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -66,13 +66,13 @@ $(function() {
 <div class="title">How to import the Unity package and run the sample program </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md28"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md32"></a>
 Required Unity version</h1>
 <p>Unity must be version 2021.3.10f1 or later.</p>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<h1><a class="anchor" id="autotoc_md33"></a>
 How to import the Unity plugin</h1>
 <p>In your project, import <code>ailia_speech.unity_package</code> which is present in the <code>unity</code> folder.</p>
-<h1><a class="anchor" id="autotoc_md30"></a>
+<h1><a class="anchor" id="autotoc_md34"></a>
 Structure of the Unity plugin folder</h1>
 <p>The contents structure of the folder containing the Unity package for ailia Speech is stuctured the follwing way:</p>
 <table class="markdownTable">
@@ -83,31 +83,33 @@ Structure of the Unity plugin folder</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="classAiliaSpeech.html">AiliaSpeech</a> </td><td class="markdownTableBodyNone">Contains the interface for ailia Speech, the component which performs speech recognition  </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Plugins </td><td class="markdownTableBodyNone">Contains binaries for the ailia SDK and ailia Speech native plugins.  </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Resources </td><td class="markdownTableBodyNone">Contains e.g. the image files used by the demo app  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Standalone FileBrowser </td><td class="markdownTableBodyNone">Contains additional components required to display dialogs to open files on Windows and macOS  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">StreamingAssets </td><td class="markdownTableBodyNone">Contains AI model files and dictionary files  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">TextMeshPro </td><td class="markdownTableBodyNone">Contains additional components required to draw text  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">AiliaSpeechSample.cs </td><td class="markdownTableBodyNone">Main sample file  </td></tr>
+<td class="markdownTableBodyNone">TextMeshPro </td><td class="markdownTableBodyNone">Contains additional components required to draw text  </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">AiliaSpeechSample.cs </td><td class="markdownTableBodyNone">Main sample file  </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AiliaSpeechSample.unity </td><td class="markdownTableBodyNone">Main sample scene  </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md31"></a>
+<h1><a class="anchor" id="autotoc_md35"></a>
 Where to place the license file</h1>
 <p>In order to use the evaluation version, a license file is required. Place the license file in the folder as indicated below:</p>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 Windows</h2>
 <p>Place the license file <code>ailia.lic</code> in the same folder as <code>ailia.dll</code> (e.g. for the sample app it is in <code>Assets/Plugins/x86_64</code>)</p>
-<h2><a class="anchor" id="autotoc_md33"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 macOS</h2>
 <p>Place the license file <code>ailia.lic</code> in <code>~/Library/SHALO/</code></p>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Linux</h2>
 <p>Place the license file <code>ailia.lic</code> in <code>~/.shalo/</code></p>
-<h1><a class="anchor" id="autotoc_md35"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 How to run the sample app</h1>
 <p>Open the file <code>AiliaSpeechScene.unity</code> in Unity, then run it. </p>
 </div></div><!-- contents -->

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab5c3e5e816ab3542c4e157e2648f6ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd73127a21843690d0bf0c5fe186ea63"><td class="memItemLeft" align="right" valign="top">delegate int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#abd73127a21843690d0bf0c5fe186ea63">ailiaCallbackTokenizerCreate</a> (IntPtr a, int b, int c)</td></tr>
 <tr class="separator:abd73127a21843690d0bf0c5fe186ea63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326cfd740e09cfa78acf740048653875"><td class="memItemLeft" align="right" valign="top">delegate int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a326cfd740e09cfa78acf740048653875">ailiaCallbackTokenizerOpenModelFileA</a> (IntPtr a, IntPtr b)</td></tr>
+<tr class="separator:a326cfd740e09cfa78acf740048653875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab039fb87b0cedae0786970cc57560d8a"><td class="memItemLeft" align="right" valign="top">delegate int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#ab039fb87b0cedae0786970cc57560d8a">ailiaCallbackTokenizerOpenModelFileW</a> (IntPtr a, IntPtr b)</td></tr>
+<tr class="separator:ab039fb87b0cedae0786970cc57560d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfc906cd69fb37de3a04577dc142821b"><td class="memItemLeft" align="right" valign="top">delegate int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#abfc906cd69fb37de3a04577dc142821b">ailiaCallbackTokenizerEncode</a> (IntPtr a, IntPtr b)</td></tr>
 <tr class="separator:abfc906cd69fb37de3a04577dc142821b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c5a322aabaff20562bcc3216c518b62"><td class="memItemLeft" align="right" valign="top">delegate int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a0c5a322aabaff20562bcc3216c518b62">ailiaCallbackTokenizerGetTokenCount</a> (IntPtr a, IntPtr b)</td></tr>
@@ -164,6 +168,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a25b341c3a4f9d76b359db6d59bd02786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af318446e91be4d5829c99d5e805973dd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#af318446e91be4d5829c99d5e805973dd">ailiaTokenizerCreate</a> (IntPtr net, int type, int flags)</td></tr>
 <tr class="separator:af318446e91be4d5829c99d5e805973dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9665ad6f8cee714543da537c067b459c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a9665ad6f8cee714543da537c067b459c">ailiaTokenizerOpenModelFileA</a> (IntPtr net, IntPtr utf8)</td></tr>
+<tr class="separator:a9665ad6f8cee714543da537c067b459c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6aa4155c9f2bb61823ec5a71a851ec9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#ac6aa4155c9f2bb61823ec5a71a851ec9">ailiaTokenizerOpenModelFileW</a> (IntPtr net, IntPtr utf16)</td></tr>
+<tr class="separator:ac6aa4155c9f2bb61823ec5a71a851ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e212ef049ab4ea34909e9a049fa2e37"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a2e212ef049ab4ea34909e9a049fa2e37">ailiaTokenizerEncode</a> (IntPtr net, IntPtr utf8)</td></tr>
 <tr class="separator:a2e212ef049ab4ea34909e9a049fa2e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48b9118b1404e2c1dfce9a9b6f8fa6ea"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a48b9118b1404e2c1dfce9a9b6f8fa6ea">ailiaTokenizerGetTokenCount</a> (IntPtr net, IntPtr count)</td></tr>
@@ -190,6 +198,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6fa58e1923b7033644fb2073972166d5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a6fa58e1923b7033644fb2073972166d5">ailiaSpeechOpenDictionaryFile</a> (IntPtr net, string dictionary_path, int dictionary_type)</td></tr>
 <tr class="memdesc:a6fa58e1923b7033644fb2073972166d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set dictionary for error correction.  <a href="classAiliaSpeech.html#a6fa58e1923b7033644fb2073972166d5">More...</a><br /></td></tr>
 <tr class="separator:a6fa58e1923b7033644fb2073972166d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6444cc91503ed92845b67b8614144f51"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a6444cc91503ed92845b67b8614144f51">ailiaSpeechOpenPostProcessFile</a> (IntPtr net, string encoder_path, string decoder_path, string source_path, string target_path, IntPtr prefix, int post_process_type)</td></tr>
+<tr class="memdesc:a6444cc91503ed92845b67b8614144f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set AI model for post process.  <a href="classAiliaSpeech.html#a6444cc91503ed92845b67b8614144f51">More...</a><br /></td></tr>
+<tr class="separator:a6444cc91503ed92845b67b8614144f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46cd0fe6e7b5de24b14120f47cd82e1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#af46cd0fe6e7b5de24b14120f47cd82e1">ailiaSpeechPushInputData</a> (IntPtr net, float[] src, uint channels, uint samples, uint sampling_rate)</td></tr>
 <tr class="memdesc:af46cd0fe6e7b5de24b14120f47cd82e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push PCM data to queue.  <a href="classAiliaSpeech.html#af46cd0fe6e7b5de24b14120f47cd82e1">More...</a><br /></td></tr>
 <tr class="separator:af46cd0fe6e7b5de24b14120f47cd82e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,12 +228,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87e27ede43d5e671128d84aba0b5b458"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a87e27ede43d5e671128d84aba0b5b458">ailiaSpeechTranscribe</a> (IntPtr net)</td></tr>
 <tr class="memdesc:a87e27ede43d5e671128d84aba0b5b458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speech recognition.  <a href="classAiliaSpeech.html#a87e27ede43d5e671128d84aba0b5b458">More...</a><br /></td></tr>
 <tr class="separator:a87e27ede43d5e671128d84aba0b5b458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b37af8733e27a0d205afd57866b7a6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#ab1b37af8733e27a0d205afd57866b7a6">ailiaSpeechPostProcess</a> (IntPtr net)</td></tr>
+<tr class="memdesc:ab1b37af8733e27a0d205afd57866b7a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute post process.  <a href="classAiliaSpeech.html#ab1b37af8733e27a0d205afd57866b7a6">More...</a><br /></td></tr>
+<tr class="separator:ab1b37af8733e27a0d205afd57866b7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0cd71dfe80cbdb2966f65b0a1586947"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#aa0cd71dfe80cbdb2966f65b0a1586947">ailiaSpeechGetTextCount</a> (IntPtr net, ref uint count)</td></tr>
 <tr class="memdesc:aa0cd71dfe80cbdb2966f65b0a1586947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get text count.  <a href="classAiliaSpeech.html#aa0cd71dfe80cbdb2966f65b0a1586947">More...</a><br /></td></tr>
 <tr class="separator:aa0cd71dfe80cbdb2966f65b0a1586947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f6772c061b85f2344a4c879d50ee469"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a2f6772c061b85f2344a4c879d50ee469">ailiaSpeechGetText</a> (IntPtr net, [In, Out] <a class="el" href="classAiliaSpeech_1_1AILIASpeechText.html">AILIASpeechText</a> text, uint version, uint idx)</td></tr>
 <tr class="memdesc:a2f6772c061b85f2344a4c879d50ee469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get text length.  <a href="classAiliaSpeech.html#a2f6772c061b85f2344a4c879d50ee469">More...</a><br /></td></tr>
 <tr class="separator:a2f6772c061b85f2344a4c879d50ee469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfebc9bb8a0e746a0b486417b26e1df"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a0cfebc9bb8a0e746a0b486417b26e1df">ailiaSpeechSetText</a> (IntPtr net, [In] <a class="el" href="classAiliaSpeech_1_1AILIASpeechText.html">AILIASpeechText</a> text, uint version, uint idx)</td></tr>
+<tr class="memdesc:a0cfebc9bb8a0e746a0b486417b26e1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set postprocess text.  <a href="classAiliaSpeech.html#a0cfebc9bb8a0e746a0b486417b26e1df">More...</a><br /></td></tr>
+<tr class="separator:a0cfebc9bb8a0e746a0b486417b26e1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e90bf369a210ac56e0a12d408d93a36"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a0e90bf369a210ac56e0a12d408d93a36">ailiaSpeechDestroy</a> (IntPtr net)</td></tr>
 <tr class="memdesc:a0e90bf369a210ac56e0a12d408d93a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the network instance.  <a href="classAiliaSpeech.html#a0e90bf369a210ac56e0a12d408d93a36">More...</a><br /></td></tr>
 <tr class="separator:a0e90bf369a210ac56e0a12d408d93a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,6 +265,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a1e390b78a48321057677114374fd5bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7ff8d8d6526240bf5e444246858971a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#ae7ff8d8d6526240bf5e444246858971a">ailiaCallbackTokenizerCreateBridge</a> (IntPtr a, int b, int c)</td></tr>
 <tr class="separator:ae7ff8d8d6526240bf5e444246858971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31fe52365704c8d4ad93880fc96bad97"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a31fe52365704c8d4ad93880fc96bad97">ailiaCallbackTokenizerOpenModelFileABridge</a> (IntPtr a, IntPtr b)</td></tr>
+<tr class="separator:a31fe52365704c8d4ad93880fc96bad97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e96115d3ab57a562abab8d63fb4cd07"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a4e96115d3ab57a562abab8d63fb4cd07">ailiaCallbackTokenizerOpenModelFileWBridge</a> (IntPtr a, IntPtr b)</td></tr>
+<tr class="separator:a4e96115d3ab57a562abab8d63fb4cd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a472d9b87b5f70ea9abc71cdbbc05ac5d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a472d9b87b5f70ea9abc71cdbbc05ac5d">ailiaCallbackTokenizerEncodeBridge</a> (IntPtr a, IntPtr b)</td></tr>
 <tr class="separator:a472d9b87b5f70ea9abc71cdbbc05ac5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df5ea6b5388e48d8c97f5e8728877a8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a2df5ea6b5388e48d8c97f5e8728877a8">ailiaCallbackTokenizerGetTokenCountBridge</a> (IntPtr a, IntPtr b)</td></tr>
@@ -313,6 +334,10 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a9d3d0348e642a9d94c469c50daa055b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a00e6714e079dfb04903d581f7e37ed"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a7a00e6714e079dfb04903d581f7e37ed">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_MEDIUM</a> = (3)</td></tr>
 <tr class="separator:a7a00e6714e079dfb04903d581f7e37ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04063ce1f12522bdfaa65e2083783a50"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a04063ce1f12522bdfaa65e2083783a50">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE</a> = (4)</td></tr>
+<tr class="separator:a04063ce1f12522bdfaa65e2083783a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac523787cd81cded9a0921cf516bbb8cb"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#ac523787cd81cded9a0921cf516bbb8cb">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3</a> = (5)</td></tr>
+<tr class="separator:ac523787cd81cded9a0921cf516bbb8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1a1888df6666131aaa3150bcff393ab"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#aa1a1888df6666131aaa3150bcff393ab">AILIA_SPEECH_TASK_TRANSCRIBE</a> = (0)</td></tr>
 <tr class="separator:aa1a1888df6666131aaa3150bcff393ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1c25df603a58647c472ec17f4951ad0"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#ab1c25df603a58647c472ec17f4951ad0">AILIA_SPEECH_TASK_TRANSLATE</a> = (1)</td></tr>
@@ -329,7 +354,11 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:ab8f409f2fb5c5dc1b2559e91c4e2809b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa639d7070816380b3db3cb03d0caa34e"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#aa639d7070816380b3db3cb03d0caa34e">AILIA_SPEECH_DICTIONARY_TYPE_REPLACE</a> = (0)</td></tr>
 <tr class="separator:aa639d7070816380b3db3cb03d0caa34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affd7d02d39e79f4f1d9fc8490cca2ab5"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#affd7d02d39e79f4f1d9fc8490cca2ab5">AILIA_SPEECH_API_CALLBACK_VERSION</a> = (5)</td></tr>
+<tr class="memitem:a0d04997b05c292dc412f3caeb0cd58ca"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a0d04997b05c292dc412f3caeb0cd58ca">AILIA_SPEECH_POST_PROCESS_TYPE_T5</a> = (0)</td></tr>
+<tr class="separator:a0d04997b05c292dc412f3caeb0cd58ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1209b0cf1e0afcb18d270261e7da9972"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#a1209b0cf1e0afcb18d270261e7da9972">AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a> = (1)</td></tr>
+<tr class="separator:a1209b0cf1e0afcb18d270261e7da9972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd7d02d39e79f4f1d9fc8490cca2ab5"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#affd7d02d39e79f4f1d9fc8490cca2ab5">AILIA_SPEECH_API_CALLBACK_VERSION</a> = (6)</td></tr>
 <tr class="separator:affd7d02d39e79f4f1d9fc8490cca2ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab13a389ff1107760eda89a5d761a5821"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaSpeech.html#ab13a389ff1107760eda89a5d761a5821">AILIA_SPEECH_TEXT_VERSION</a> = (2)</td></tr>
 <tr class="separator:ab13a389ff1107760eda89a5d761a5821"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -642,9 +671,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                                                                                    {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">return</span> AiliaAudio.ailiaAudioGetFrameLen(ref a, b, c, d, e);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                                                                                                    {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">return</span> AiliaAudio.ailiaAudioGetFrameLen(ref a, b, c, d, e);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -889,9 +918,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                                                                                                                                                                    {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a2fcf0764780a14483d4a7bf38162934d">ailiaAudioGetMelSpectrogram</a>(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                                                                                                                                                                                    {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a2fcf0764780a14483d4a7bf38162934d">ailiaAudioGetMelSpectrogram</a>(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -980,9 +1009,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                                                                                             {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a21d7e4ea43201106763aec08778d728f">ailiaAudioGetResampleLen</a>(a, b, c, d);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                                                                             {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a21d7e4ea43201106763aec08778d728f">ailiaAudioGetResampleLen</a>(a, b, c, d);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1095,9 +1124,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                                                                                                        {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#ae2e5876ae04cc75785bbaf6dc24c9ff2">ailiaAudioResample</a>(a, b, c, d, e, f);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                                                                                                        {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#ae2e5876ae04cc75785bbaf6dc24c9ff2">ailiaAudioResample</a>(a, b, c, d, e, f);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1186,9 +1215,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                                                                                           {</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaCopyBlobData(a, b, c, d);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                                                                                           {</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaCopyBlobData(a, b, c, d);</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1265,9 +1294,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                                                         {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a944a5f6fcce7da50a8acb9d9f12438cd">ailiaCreate</a>(a, b, c);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a944a5f6fcce7da50a8acb9d9f12438cd">ailiaCreate</a>(a, b, c);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1312,9 +1341,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                                                             {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        Ailia.ailiaDestroy(a);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                                                             {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        Ailia.ailiaDestroy(a);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1403,9 +1432,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                                                                                          {</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetBlobData(a, b, c, d);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                                                                                          {</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetBlobData(a, b, c, d);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1482,9 +1511,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                                                                                               {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#afc15f5812dfa11c9548fd3a0cfdb2337">ailiaGetBlobIndexByInputIndex</a>(a, b, c);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                                                                                               {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#afc15f5812dfa11c9548fd3a0cfdb2337">ailiaGetBlobIndexByInputIndex</a>(a, b, c);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1561,9 +1590,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                                                                                                {</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a60bc47236939b85867212564526af361">ailiaGetBlobIndexByOutputIndex</a>(a, b, c);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                                                                                                {</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a60bc47236939b85867212564526af361">ailiaGetBlobIndexByOutputIndex</a>(a, b, c);</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1652,9 +1681,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                                                                                           {</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a696343d629f9a2bce75341b0d7152272">ailiaGetBlobShape</a>(a, b, c, d);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                                                                                           {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a696343d629f9a2bce75341b0d7152272">ailiaGetBlobShape</a>(a, b, c, d);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1731,9 +1760,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                                                                                   {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a25b341c3a4f9d76b359db6d59bd02786">ailiaGetEnvironment</a>(a, b, c);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                                                                                   {</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a25b341c3a4f9d76b359db6d59bd02786">ailiaGetEnvironment</a>(a, b, c);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1778,9 +1807,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetErrorDetail(a);</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetErrorDetail(a);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1845,9 +1874,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                                                                              {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a8f401d0db9bf9eb0d5988507f02cea07">ailiaOpenWeightFileA</a>(a, b);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a8f401d0db9bf9eb0d5988507f02cea07">ailiaOpenWeightFileA</a>(a, b);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1912,9 +1941,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                                                                              {</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a9bfbf55e748ab888678c064b9ef24530">ailiaOpenWeightFileW</a>(a, b);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a9bfbf55e748ab888678c064b9ef24530">ailiaOpenWeightFileW</a>(a, b);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1991,9 +2020,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                                                                                    {</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#aeb8ee566af35c916b9bafab278db2757">ailiaOpenWeightMem</a>(a, b, c);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                                                                                    {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#aeb8ee566af35c916b9bafab278db2757">ailiaOpenWeightMem</a>(a, b, c);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2082,9 +2111,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                                                                                               {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobData(a, b, c, d);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                                                                                               {</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobData(a, b, c, d);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2173,9 +2202,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                                                                                                           {</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobShape(a, b, c, d);</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                                                                                                           {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobShape(a, b, c, d);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2240,9 +2269,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                                                                          {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetMemoryMode(a, b);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                                                                          {</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetMemoryMode(a, b);</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2319,9 +2348,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                                                                  {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#af318446e91be4d5829c99d5e805973dd">ailiaTokenizerCreate</a>(a, b, c);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                                                                                  {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#af318446e91be4d5829c99d5e805973dd">ailiaTokenizerCreate</a>(a, b, c);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2398,9 +2427,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                                                                     {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">return</span> AiliaTokenizer.ailiaTokenizerDecode(a, b, c);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                                                                                     {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordflow">return</span> AiliaTokenizer.ailiaTokenizerDecode(a, b, c);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2445,9 +2474,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                                                                     {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        AiliaTokenizer.ailiaTokenizerDestroy(a);</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        AiliaTokenizer.ailiaTokenizerDestroy(a);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2512,9 +2541,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                                                             {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a2e212ef049ab4ea34909e9a049fa2e37">ailiaTokenizerEncode</a>(a, b);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                                                                             {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a2e212ef049ab4ea34909e9a049fa2e37">ailiaTokenizerEncode</a>(a, b);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2591,9 +2620,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                                                                                      {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">return</span> AiliaTokenizer.ailiaTokenizerGetText(a, b, c);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                                                                                      {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span> AiliaTokenizer.ailiaTokenizerGetText(a, b, c);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2658,9 +2687,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                                                                                    {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a00b2a5b841fad100bfc6a24a128f3108">ailiaTokenizerGetTextLength</a>(a, b);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                                                                                    {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a00b2a5b841fad100bfc6a24a128f3108">ailiaTokenizerGetTextLength</a>(a, b);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2725,9 +2754,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                                                                                    {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a48b9118b1404e2c1dfce9a9b6f8fa6ea">ailiaTokenizerGetTokenCount</a>(a, b);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                                                                                    {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a48b9118b1404e2c1dfce9a9b6f8fa6ea">ailiaTokenizerGetTokenCount</a>(a, b);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2804,9 +2833,143 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                                                                                        {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">return</span> AiliaTokenizer.ailiaTokenizerGetTokens(a, b, c);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                                                                                        {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">return</span> AiliaTokenizer.ailiaTokenizerGetTokens(a, b, c);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a326cfd740e09cfa78acf740048653875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326cfd740e09cfa78acf740048653875">&#9670;&nbsp;</a></span>ailiaCallbackTokenizerOpenModelFileA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate int AiliaSpeech.ailiaCallbackTokenizerOpenModelFileA </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31fe52365704c8d4ad93880fc96bad97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31fe52365704c8d4ad93880fc96bad97">&#9670;&nbsp;</a></span>ailiaCallbackTokenizerOpenModelFileABridge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaCallbackTokenizerOpenModelFileABridge </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                                                                                      {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a9665ad6f8cee714543da537c067b459c">ailiaTokenizerOpenModelFileA</a>(a, b);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab039fb87b0cedae0786970cc57560d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab039fb87b0cedae0786970cc57560d8a">&#9670;&nbsp;</a></span>ailiaCallbackTokenizerOpenModelFileW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate int AiliaSpeech.ailiaCallbackTokenizerOpenModelFileW </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e96115d3ab57a562abab8d63fb4cd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e96115d3ab57a562abab8d63fb4cd07">&#9670;&nbsp;</a></span>ailiaCallbackTokenizerOpenModelFileWBridge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaCallbackTokenizerOpenModelFileWBridge </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                                                                                      {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#ac6aa4155c9f2bb61823ec5a71a851ec9">ailiaTokenizerOpenModelFileW</a>(a, b);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2883,10 +3046,10 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                                                                                          {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a9ae830cfdd5bb2d4c80ef38c0060c3f6">ailiaTokenizerUtf32ToUtf8</a>(a, b, c);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                                                                                          {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#a9ae830cfdd5bb2d4c80ef38c0060c3f6">ailiaTokenizerUtf32ToUtf8</a>(a, b, c);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2975,9 +3138,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                                                                                    {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#abcd34e2fb6652756d0d034ca9cb79a98">ailiaTokenizerUtf8ToUtf32</a>(a, b, c, d);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                                                                                                    {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAiliaSpeech.html#abcd34e2fb6652756d0d034ca9cb79a98">ailiaTokenizerUtf8ToUtf32</a>(a, b, c, d);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3022,9 +3185,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                                                           {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaUpdate(a);</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                                                           {</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaUpdate(a);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3687,7 +3850,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
-    <tr><td class="paramname">dictionary_path</td><td>The path name to the dictionary file (MBSC) </td></tr>
+    <tr><td class="paramname">dictionary_path</td><td>The path name to the dictionary file </td></tr>
     <tr><td class="paramname">dictionary_type</td><td>AILIA_SPEECH_DICTIONARY_TYPE_* </td></tr>
   </table>
   </dd>
@@ -3738,13 +3901,86 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
-    <tr><td class="paramname">encoder_path</td><td>The path name to the onnx file (MBSC) </td></tr>
-    <tr><td class="paramname">decoder_path</td><td>The path name to the onnx file (MBSC) </td></tr>
+    <tr><td class="paramname">encoder_path</td><td>The path name to the onnx file </td></tr>
+    <tr><td class="paramname">decoder_path</td><td>The path name to the onnx file </td></tr>
     <tr><td class="paramname">model_type</td><td>AILIA_SPEECH_MODEL_TYPE_* </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a6444cc91503ed92845b67b8614144f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6444cc91503ed92845b67b8614144f51">&#9670;&nbsp;</a></span>ailiaSpeechOpenPostProcessFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaSpeechOpenPostProcessFile </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>encoder_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>decoder_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>source_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>target_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>post_process_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set AI model for post process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+    <tr><td class="paramname">encoder_path</td><td>The path name to the onnx file </td></tr>
+    <tr><td class="paramname">decoder_path</td><td>The path name to the onnx file </td></tr>
+    <tr><td class="paramname">source_path</td><td>The path name to the tokenizer model file </td></tr>
+    <tr><td class="paramname">target_path</td><td>The path name to the tokenizer model file </td></tr>
+    <tr><td class="paramname">prefix</td><td>The prefix of T5 (UTF8), NULL for FuguMT </td></tr>
+    <tr><td class="paramname">post_process_type</td><td>AILIA_SPEECH_POST_PROCESS_TYPE_* </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. @detail You need to provide a UTF8 string as the prefix. You can obtain a UTF8 string as follows. byte[] text = System.Text.Encoding.UTF8.GetBytes(utf8+"\u0000"); GCHandle handle = GCHandle.Alloc(text, GCHandleType.Pinned); IntPtr prefix = handle.AddrOfPinnedObject(); ailiaSpeechOpenPostProcessFile(...,prefix,...); handle.Free(); </dd></dl>
 
 </div>
 </div>
@@ -3784,12 +4020,40 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
-    <tr><td class="paramname">vad_path</td><td>The path name to the onnx file (MBSC) </td></tr>
+    <tr><td class="paramname">vad_path</td><td>The path name to the onnx file </td></tr>
     <tr><td class="paramname">vad_type</td><td>AILIA_SPEECH_VAD_TYPE_* </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ab1b37af8733e27a0d205afd57866b7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b37af8733e27a0d205afd57866b7a6">&#9670;&nbsp;</a></span>ailiaSpeechPostProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaSpeechPostProcess </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute post process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>Get the recognition result with ailiaSpeechGetText API. </p>
 
 </div>
 </div>
@@ -4098,6 +4362,59 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0cfebc9bb8a0e746a0b486417b26e1df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfebc9bb8a0e746a0b486417b26e1df">&#9670;&nbsp;</a></span>ailiaSpeechSetText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaSpeechSetText </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In] <a class="el" href="classAiliaSpeech_1_1AILIASpeechText.html">AILIASpeechText</a>&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set postprocess text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+    <tr><td class="paramname">text</td><td>Text </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_SPEECH_TEXT_VERSION </td></tr>
+    <tr><td class="paramname">idx</td><td>Text index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>Used when using only post-processing without using speech recognition. Since the string is copied to the internal buffer, it can be released after the call. If idx is larger than ailiaSpeechGetTextCount, the internal buffer will be automatically expanded. </p>
+
+</div>
+</div>
 <a id="a87e27ede43d5e671128d84aba0b5b458"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87e27ede43d5e671128d84aba0b5b458">&#9670;&nbsp;</a></span>ailiaSpeechTranscribe()</h2>
 
@@ -4243,6 +4560,62 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9665ad6f8cee714543da537c067b459c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9665ad6f8cee714543da537c067b459c">&#9670;&nbsp;</a></span>ailiaTokenizerOpenModelFileA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaTokenizerOpenModelFileA </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>utf8</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6aa4155c9f2bb61823ec5a71a851ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6aa4155c9f2bb61823ec5a71a851ec9">&#9670;&nbsp;</a></span>ailiaTokenizerOpenModelFileW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int AiliaSpeech.ailiaTokenizerOpenModelFileW </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>utf16</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9ae830cfdd5bb2d4c80ef38c0060c3f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ae830cfdd5bb2d4c80ef38c0060c3f6">&#9670;&nbsp;</a></span>ailiaTokenizerUtf32ToUtf8()</h2>
 
@@ -4339,45 +4712,47 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html">AILIASpeechApiCallback</a> callback=<span class="keyword">new</span> <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html">AILIASpeechApiCallback</a>();</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="comment">// C# pass through API Mapping</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        callback.<a class="code" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#ade05719aee36d02e15fe5cea994223b5">ailiaAudioGetFrameLen</a>=<a class="code" href="classAiliaSpeech.html#abee7afcd702fcf6670aada01aeaf86df">ailiaCallbackAudioGetFrameLenBridge</a>;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        callback.ailiaAudioGetMelSpectrogram=<a class="code" href="classAiliaSpeech.html#a9feaff217cd970007c2fa5879a01bcbc">ailiaCallbackAudioGetMelSpectrogramBridge</a>;</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        callback.ailiaAudioResample=<a class="code" href="classAiliaSpeech.html#a52fdb7df8b2aa5e132af761b9c41bfee">ailiaCallbackAudioResampleBridge</a>;</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        callback.ailiaAudioGetResampleLen=<a class="code" href="classAiliaSpeech.html#a1e390b78a48321057677114374fd5bee">ailiaCallbackAudioGetResampleLenBridge</a>;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        callback.ailiaTokenizerCreate = <a class="code" href="classAiliaSpeech.html#ae7ff8d8d6526240bf5e444246858971a">ailiaCallbackTokenizerCreateBridge</a>;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        callback.ailiaTokenizerEncode = <a class="code" href="classAiliaSpeech.html#a472d9b87b5f70ea9abc71cdbbc05ac5d">ailiaCallbackTokenizerEncodeBridge</a>;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        callback.ailiaTokenizerGetTokenCount = <a class="code" href="classAiliaSpeech.html#a2df5ea6b5388e48d8c97f5e8728877a8">ailiaCallbackTokenizerGetTokenCountBridge</a>;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        callback.ailiaTokenizerGetTokens = <a class="code" href="classAiliaSpeech.html#a678da1956aa4611c7e801ea63f3b1397">ailiaCallbackTokenizerGetTokensBridge</a>;</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        callback.ailiaTokenizerDecode = <a class="code" href="classAiliaSpeech.html#a3e0054031f86e4c34ba0c677064628cd">ailiaCallbackTokenizerDecodeBridge</a>;</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        callback.ailiaTokenizerGetTextLength = <a class="code" href="classAiliaSpeech.html#a5f853810269668aef4fed4ea4ec8ffa9">ailiaCallbackTokenizerGetTextLengthBridge</a>;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        callback.ailiaTokenizerGetText = <a class="code" href="classAiliaSpeech.html#a4a524614c0a2c490bea0b2508049f436">ailiaCallbackTokenizerGetTextBridge</a>;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        callback.ailiaTokenizerDestroy = <a class="code" href="classAiliaSpeech.html#ab952c6a223bf2cb89102f8914e7194f6">ailiaCallbackTokenizerDestroyBridge</a>;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        callback.ailiaTokenizerUtf8ToUtf32 = <a class="code" href="classAiliaSpeech.html#a4e584128db098966db7e3306129e54fd">ailiaCallbackTokenizerUtf8ToUtf32Bridge</a>;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        callback.ailiaTokenizerUtf32ToUtf8 = <a class="code" href="classAiliaSpeech.html#a8b58bdace65da68d64823154905f28f5">ailiaCallbackTokenizerUtf32ToUtf8Bridge</a>;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        callback.ailiaCreate=<a class="code" href="classAiliaSpeech.html#adc38d39626702f69cd7e6f967485fdb4">ailiaCallbackCreateBridge</a>;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        callback.ailiaOpenWeightFileA=<a class="code" href="classAiliaSpeech.html#a6200a748bc49dcb424ff1997e8a633e7">ailiaCallbackOpenWeightFileABridge</a>;</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        callback.ailiaOpenWeightFileW=<a class="code" href="classAiliaSpeech.html#ae76bd911220ccca6d5aaf0cbeebc8a86">ailiaCallbackOpenWeightFileWBridge</a>;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        callback.ailiaOpenWeightMem=<a class="code" href="classAiliaSpeech.html#a765db9f61b0457470672525fe785c6ab">ailiaCallbackOpenWeightMemBridge</a>;</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        callback.ailiaSetMemoryMode=<a class="code" href="classAiliaSpeech.html#a1e3b377c223912eda024ce4b451ced4d">ailiaCallbackSetMemoryModeBridge</a>;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        callback.ailiaDestroy=<a class="code" href="classAiliaSpeech.html#a638ef50e0adaa30dc071eff3c9c81eb1">ailiaCallbackDestroyBridge</a>;</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        callback.ailiaUpdate=<a class="code" href="classAiliaSpeech.html#a69ba97434832734ecf97d5aebf4eede0">ailiaCallbackUpdateBridge</a>;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        callback.ailiaGetBlobIndexByInputIndex=<a class="code" href="classAiliaSpeech.html#a7acd3109180404ffad5e4d859363807c">ailiaCallbackGetBlobIndexByInputIndexBridge</a>;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        callback.ailiaGetBlobIndexByOutputIndex=<a class="code" href="classAiliaSpeech.html#aec7a425da57e15aa1f1cf114719196da">ailiaCallbackGetBlobIndexByOutputIndexBridge</a>;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        callback.ailiaGetBlobData=<a class="code" href="classAiliaSpeech.html#a925708b1d13c353c82ebbbe7fb6dd9af">ailiaCallbackGetBlobDataBridge</a>;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        callback.ailiaSetInputBlobData=<a class="code" href="classAiliaSpeech.html#ac6defc333d8fc2196810017d3b1783e8">ailiaCallbackSetInputBlobDataBridge</a>;</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        callback.ailiaSetInputBlobShape=<a class="code" href="classAiliaSpeech.html#a5430ac73efd0493586e2e0727c6d16bd">ailiaCallbackSetInputBlobShapeBridge</a>;</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        callback.ailiaGetBlobShape=<a class="code" href="classAiliaSpeech.html#af1c7a43a3adabad2fbb058eced5e1a25">ailiaCallbackGetBlobShapeBridge</a>;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        callback.ailiaGetErrorDetail=<a class="code" href="classAiliaSpeech.html#a88c10d81077ec01b87e74dffff40a6ff">ailiaCallbackGetErrorDetailBridge</a>;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        callback.ailiaCopyBlobData=<a class="code" href="classAiliaSpeech.html#a1bfe5384709ac574881679fba255ffbb">ailiaCallbackCopyBlobDataBridge</a>;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        callback.ailiaGetEnvironment=<a class="code" href="classAiliaSpeech.html#acb0073bc56b1257751c1d6722feaac06">ailiaCallbackGetEnvironmentBridge</a>;</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        </div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keywordflow">return</span> callback;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html">AILIASpeechApiCallback</a> callback=<span class="keyword">new</span> <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html">AILIASpeechApiCallback</a>();</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160; </div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="comment">// C# pass through API Mapping</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        callback.<a class="code" href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#ade05719aee36d02e15fe5cea994223b5">ailiaAudioGetFrameLen</a>=<a class="code" href="classAiliaSpeech.html#abee7afcd702fcf6670aada01aeaf86df">ailiaCallbackAudioGetFrameLenBridge</a>;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        callback.ailiaAudioGetMelSpectrogram=<a class="code" href="classAiliaSpeech.html#a9feaff217cd970007c2fa5879a01bcbc">ailiaCallbackAudioGetMelSpectrogramBridge</a>;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        callback.ailiaAudioResample=<a class="code" href="classAiliaSpeech.html#a52fdb7df8b2aa5e132af761b9c41bfee">ailiaCallbackAudioResampleBridge</a>;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        callback.ailiaAudioGetResampleLen=<a class="code" href="classAiliaSpeech.html#a1e390b78a48321057677114374fd5bee">ailiaCallbackAudioGetResampleLenBridge</a>;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160; </div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        callback.ailiaTokenizerCreate = <a class="code" href="classAiliaSpeech.html#ae7ff8d8d6526240bf5e444246858971a">ailiaCallbackTokenizerCreateBridge</a>;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        callback.ailiaTokenizerOpenModelFileA = <a class="code" href="classAiliaSpeech.html#a31fe52365704c8d4ad93880fc96bad97">ailiaCallbackTokenizerOpenModelFileABridge</a>;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        callback.ailiaTokenizerOpenModelFileW = <a class="code" href="classAiliaSpeech.html#a4e96115d3ab57a562abab8d63fb4cd07">ailiaCallbackTokenizerOpenModelFileWBridge</a>;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        callback.ailiaTokenizerEncode = <a class="code" href="classAiliaSpeech.html#a472d9b87b5f70ea9abc71cdbbc05ac5d">ailiaCallbackTokenizerEncodeBridge</a>;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        callback.ailiaTokenizerGetTokenCount = <a class="code" href="classAiliaSpeech.html#a2df5ea6b5388e48d8c97f5e8728877a8">ailiaCallbackTokenizerGetTokenCountBridge</a>;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        callback.ailiaTokenizerGetTokens = <a class="code" href="classAiliaSpeech.html#a678da1956aa4611c7e801ea63f3b1397">ailiaCallbackTokenizerGetTokensBridge</a>;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        callback.ailiaTokenizerDecode = <a class="code" href="classAiliaSpeech.html#a3e0054031f86e4c34ba0c677064628cd">ailiaCallbackTokenizerDecodeBridge</a>;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        callback.ailiaTokenizerGetTextLength = <a class="code" href="classAiliaSpeech.html#a5f853810269668aef4fed4ea4ec8ffa9">ailiaCallbackTokenizerGetTextLengthBridge</a>;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        callback.ailiaTokenizerGetText = <a class="code" href="classAiliaSpeech.html#a4a524614c0a2c490bea0b2508049f436">ailiaCallbackTokenizerGetTextBridge</a>;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        callback.ailiaTokenizerDestroy = <a class="code" href="classAiliaSpeech.html#ab952c6a223bf2cb89102f8914e7194f6">ailiaCallbackTokenizerDestroyBridge</a>;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        callback.ailiaTokenizerUtf8ToUtf32 = <a class="code" href="classAiliaSpeech.html#a4e584128db098966db7e3306129e54fd">ailiaCallbackTokenizerUtf8ToUtf32Bridge</a>;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        callback.ailiaTokenizerUtf32ToUtf8 = <a class="code" href="classAiliaSpeech.html#a8b58bdace65da68d64823154905f28f5">ailiaCallbackTokenizerUtf32ToUtf8Bridge</a>;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160; </div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        callback.ailiaCreate=<a class="code" href="classAiliaSpeech.html#adc38d39626702f69cd7e6f967485fdb4">ailiaCallbackCreateBridge</a>;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        callback.ailiaOpenWeightFileA=<a class="code" href="classAiliaSpeech.html#a6200a748bc49dcb424ff1997e8a633e7">ailiaCallbackOpenWeightFileABridge</a>;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        callback.ailiaOpenWeightFileW=<a class="code" href="classAiliaSpeech.html#ae76bd911220ccca6d5aaf0cbeebc8a86">ailiaCallbackOpenWeightFileWBridge</a>;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        callback.ailiaOpenWeightMem=<a class="code" href="classAiliaSpeech.html#a765db9f61b0457470672525fe785c6ab">ailiaCallbackOpenWeightMemBridge</a>;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        callback.ailiaSetMemoryMode=<a class="code" href="classAiliaSpeech.html#a1e3b377c223912eda024ce4b451ced4d">ailiaCallbackSetMemoryModeBridge</a>;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        callback.ailiaDestroy=<a class="code" href="classAiliaSpeech.html#a638ef50e0adaa30dc071eff3c9c81eb1">ailiaCallbackDestroyBridge</a>;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        callback.ailiaUpdate=<a class="code" href="classAiliaSpeech.html#a69ba97434832734ecf97d5aebf4eede0">ailiaCallbackUpdateBridge</a>;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        callback.ailiaGetBlobIndexByInputIndex=<a class="code" href="classAiliaSpeech.html#a7acd3109180404ffad5e4d859363807c">ailiaCallbackGetBlobIndexByInputIndexBridge</a>;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        callback.ailiaGetBlobIndexByOutputIndex=<a class="code" href="classAiliaSpeech.html#aec7a425da57e15aa1f1cf114719196da">ailiaCallbackGetBlobIndexByOutputIndexBridge</a>;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        callback.ailiaGetBlobData=<a class="code" href="classAiliaSpeech.html#a925708b1d13c353c82ebbbe7fb6dd9af">ailiaCallbackGetBlobDataBridge</a>;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        callback.ailiaSetInputBlobData=<a class="code" href="classAiliaSpeech.html#ac6defc333d8fc2196810017d3b1783e8">ailiaCallbackSetInputBlobDataBridge</a>;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        callback.ailiaSetInputBlobShape=<a class="code" href="classAiliaSpeech.html#a5430ac73efd0493586e2e0727c6d16bd">ailiaCallbackSetInputBlobShapeBridge</a>;</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        callback.ailiaGetBlobShape=<a class="code" href="classAiliaSpeech.html#af1c7a43a3adabad2fbb058eced5e1a25">ailiaCallbackGetBlobShapeBridge</a>;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        callback.ailiaGetErrorDetail=<a class="code" href="classAiliaSpeech.html#a88c10d81077ec01b87e74dffff40a6ff">ailiaCallbackGetErrorDetailBridge</a>;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        callback.ailiaCopyBlobData=<a class="code" href="classAiliaSpeech.html#a1bfe5384709ac574881679fba255ffbb">ailiaCallbackCopyBlobDataBridge</a>;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        callback.ailiaGetEnvironment=<a class="code" href="classAiliaSpeech.html#acb0073bc56b1257751c1d6722feaac06">ailiaCallbackGetEnvironmentBridge</a>;</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        <span class="keywordflow">return</span> callback;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4392,7 +4767,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int AiliaSpeech.AILIA_SPEECH_API_CALLBACK_VERSION = (5)</td>
+          <td class="memname">const int AiliaSpeech.AILIA_SPEECH_API_CALLBACK_VERSION = (6)</td>
         </tr>
       </table>
   </td>
@@ -4536,6 +4911,50 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a04063ce1f12522bdfaa65e2083783a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04063ce1f12522bdfaa65e2083783a50">&#9670;&nbsp;</a></span>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaSpeech.AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE = (4)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac523787cd81cded9a0921cf516bbb8cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac523787cd81cded9a0921cf516bbb8cb">&#9670;&nbsp;</a></span>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaSpeech.AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3 = (5)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7a00e6714e079dfb04903d581f7e37ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a00e6714e079dfb04903d581f7e37ed">&#9670;&nbsp;</a></span>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_MEDIUM</h2>
 
@@ -4591,6 +5010,50 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const Int32 AiliaSpeech.AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY = (0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1209b0cf1e0afcb18d270261e7da9972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1209b0cf1e0afcb18d270261e7da9972">&#9670;&nbsp;</a></span>AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA = (1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d04997b05c292dc412f3caeb0cd58ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d04997b05c292dc412f3caeb0cd58ca">&#9670;&nbsp;</a></span>AILIA_SPEECH_POST_PROCESS_TYPE_T5</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_T5 = (0)</td>
         </tr>
       </table>
   </td>
@@ -4716,55 +5179,59 @@ Static Public Attributes</h2></td></tr>
 <li><a class="el" href="AiliaSpeech_8cs.html">AiliaSpeech.cs</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassAiliaSpeech_html_a472d9b87b5f70ea9abc71cdbbc05ac5d"><div class="ttname"><a href="classAiliaSpeech.html#a472d9b87b5f70ea9abc71cdbbc05ac5d">AiliaSpeech.ailiaCallbackTokenizerEncodeBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerEncodeBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:293</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a4e584128db098966db7e3306129e54fd"><div class="ttname"><a href="classAiliaSpeech.html#a4e584128db098966db7e3306129e54fd">AiliaSpeech.ailiaCallbackTokenizerUtf8ToUtf32Bridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerUtf8ToUtf32Bridge(IntPtr a, IntPtr b, IntPtr c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:328</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a69ba97434832734ecf97d5aebf4eede0"><div class="ttname"><a href="classAiliaSpeech.html#a69ba97434832734ecf97d5aebf4eede0">AiliaSpeech.ailiaCallbackUpdateBridge</a></div><div class="ttdeci">static int ailiaCallbackUpdateBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:369</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a638ef50e0adaa30dc071eff3c9c81eb1"><div class="ttname"><a href="classAiliaSpeech.html#a638ef50e0adaa30dc071eff3c9c81eb1">AiliaSpeech.ailiaCallbackDestroyBridge</a></div><div class="ttdeci">static void ailiaCallbackDestroyBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:364</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a3e0054031f86e4c34ba0c677064628cd"><div class="ttname"><a href="classAiliaSpeech.html#a3e0054031f86e4c34ba0c677064628cd">AiliaSpeech.ailiaCallbackTokenizerDecodeBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerDecodeBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:308</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a472d9b87b5f70ea9abc71cdbbc05ac5d"><div class="ttname"><a href="classAiliaSpeech.html#a472d9b87b5f70ea9abc71cdbbc05ac5d">AiliaSpeech.ailiaCallbackTokenizerEncodeBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerEncodeBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:357</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a4e584128db098966db7e3306129e54fd"><div class="ttname"><a href="classAiliaSpeech.html#a4e584128db098966db7e3306129e54fd">AiliaSpeech.ailiaCallbackTokenizerUtf8ToUtf32Bridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerUtf8ToUtf32Bridge(IntPtr a, IntPtr b, IntPtr c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:392</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a69ba97434832734ecf97d5aebf4eede0"><div class="ttname"><a href="classAiliaSpeech.html#a69ba97434832734ecf97d5aebf4eede0">AiliaSpeech.ailiaCallbackUpdateBridge</a></div><div class="ttdeci">static int ailiaCallbackUpdateBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:433</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a638ef50e0adaa30dc071eff3c9c81eb1"><div class="ttname"><a href="classAiliaSpeech.html#a638ef50e0adaa30dc071eff3c9c81eb1">AiliaSpeech.ailiaCallbackDestroyBridge</a></div><div class="ttdeci">static void ailiaCallbackDestroyBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:428</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a3e0054031f86e4c34ba0c677064628cd"><div class="ttname"><a href="classAiliaSpeech.html#a3e0054031f86e4c34ba0c677064628cd">AiliaSpeech.ailiaCallbackTokenizerDecodeBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerDecodeBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:372</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a2fcf0764780a14483d4a7bf38162934d"><div class="ttname"><a href="classAiliaSpeech.html#a2fcf0764780a14483d4a7bf38162934d">AiliaSpeech.ailiaAudioGetMelSpectrogram</a></div><div class="ttdeci">static int ailiaAudioGetMelSpectrogram(IntPtr dst, IntPtr src, int sample_n, int sample_rate, int fft_n, int hop_n, int win_n, int win_type, int max_frame_n, int center, float power, int fft_norm_type, float f_min, float f_max, int mel_n, int mel_norm_type, int mel_formula)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_ab952c6a223bf2cb89102f8914e7194f6"><div class="ttname"><a href="classAiliaSpeech.html#ab952c6a223bf2cb89102f8914e7194f6">AiliaSpeech.ailiaCallbackTokenizerDestroyBridge</a></div><div class="ttdeci">static void ailiaCallbackTokenizerDestroyBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:323</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a1e390b78a48321057677114374fd5bee"><div class="ttname"><a href="classAiliaSpeech.html#a1e390b78a48321057677114374fd5bee">AiliaSpeech.ailiaCallbackAudioGetResampleLenBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetResampleLenBridge(IntPtr a, int b, int c, int d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:283</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a1e3b377c223912eda024ce4b451ced4d"><div class="ttname"><a href="classAiliaSpeech.html#a1e3b377c223912eda024ce4b451ced4d">AiliaSpeech.ailiaCallbackSetMemoryModeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetMemoryModeBridge(IntPtr a, uint b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:359</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a765db9f61b0457470672525fe785c6ab"><div class="ttname"><a href="classAiliaSpeech.html#a765db9f61b0457470672525fe785c6ab">AiliaSpeech.ailiaCallbackOpenWeightMemBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightMemBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:354</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a678da1956aa4611c7e801ea63f3b1397"><div class="ttname"><a href="classAiliaSpeech.html#a678da1956aa4611c7e801ea63f3b1397">AiliaSpeech.ailiaCallbackTokenizerGetTokensBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTokensBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:303</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_acb0073bc56b1257751c1d6722feaac06"><div class="ttname"><a href="classAiliaSpeech.html#acb0073bc56b1257751c1d6722feaac06">AiliaSpeech.ailiaCallbackGetEnvironmentBridge</a></div><div class="ttdeci">static int ailiaCallbackGetEnvironmentBridge(IntPtr a, uint b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:414</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_ab952c6a223bf2cb89102f8914e7194f6"><div class="ttname"><a href="classAiliaSpeech.html#ab952c6a223bf2cb89102f8914e7194f6">AiliaSpeech.ailiaCallbackTokenizerDestroyBridge</a></div><div class="ttdeci">static void ailiaCallbackTokenizerDestroyBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:387</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a1e390b78a48321057677114374fd5bee"><div class="ttname"><a href="classAiliaSpeech.html#a1e390b78a48321057677114374fd5bee">AiliaSpeech.ailiaCallbackAudioGetResampleLenBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetResampleLenBridge(IntPtr a, int b, int c, int d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:337</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a1e3b377c223912eda024ce4b451ced4d"><div class="ttname"><a href="classAiliaSpeech.html#a1e3b377c223912eda024ce4b451ced4d">AiliaSpeech.ailiaCallbackSetMemoryModeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetMemoryModeBridge(IntPtr a, uint b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:423</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a765db9f61b0457470672525fe785c6ab"><div class="ttname"><a href="classAiliaSpeech.html#a765db9f61b0457470672525fe785c6ab">AiliaSpeech.ailiaCallbackOpenWeightMemBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightMemBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:418</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a678da1956aa4611c7e801ea63f3b1397"><div class="ttname"><a href="classAiliaSpeech.html#a678da1956aa4611c7e801ea63f3b1397">AiliaSpeech.ailiaCallbackTokenizerGetTokensBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTokensBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:367</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_acb0073bc56b1257751c1d6722feaac06"><div class="ttname"><a href="classAiliaSpeech.html#acb0073bc56b1257751c1d6722feaac06">AiliaSpeech.ailiaCallbackGetEnvironmentBridge</a></div><div class="ttdeci">static int ailiaCallbackGetEnvironmentBridge(IntPtr a, uint b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:478</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a2e212ef049ab4ea34909e9a049fa2e37"><div class="ttname"><a href="classAiliaSpeech.html#a2e212ef049ab4ea34909e9a049fa2e37">AiliaSpeech.ailiaTokenizerEncode</a></div><div class="ttdeci">static int ailiaTokenizerEncode(IntPtr net, IntPtr utf8)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_aec7a425da57e15aa1f1cf114719196da"><div class="ttname"><a href="classAiliaSpeech.html#aec7a425da57e15aa1f1cf114719196da">AiliaSpeech.ailiaCallbackGetBlobIndexByOutputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByOutputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:379</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a88c10d81077ec01b87e74dffff40a6ff"><div class="ttname"><a href="classAiliaSpeech.html#a88c10d81077ec01b87e74dffff40a6ff">AiliaSpeech.ailiaCallbackGetErrorDetailBridge</a></div><div class="ttdeci">static IntPtr ailiaCallbackGetErrorDetailBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:404</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a5f853810269668aef4fed4ea4ec8ffa9"><div class="ttname"><a href="classAiliaSpeech.html#a5f853810269668aef4fed4ea4ec8ffa9">AiliaSpeech.ailiaCallbackTokenizerGetTextLengthBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTextLengthBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:313</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a52fdb7df8b2aa5e132af761b9c41bfee"><div class="ttname"><a href="classAiliaSpeech.html#a52fdb7df8b2aa5e132af761b9c41bfee">AiliaSpeech.ailiaCallbackAudioResampleBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioResampleBridge(IntPtr a, IntPtr b, int c, int d, int e, int f)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:278</div></div>
-<div class="ttc" id="astructAiliaSpeech_1_1AILIASpeechApiCallback_html"><div class="ttname"><a href="structAiliaSpeech_1_1AILIASpeechApiCallback.html">AiliaSpeech.AILIASpeechApiCallback</a></div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:432</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_ae7ff8d8d6526240bf5e444246858971a"><div class="ttname"><a href="classAiliaSpeech.html#ae7ff8d8d6526240bf5e444246858971a">AiliaSpeech.ailiaCallbackTokenizerCreateBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerCreateBridge(IntPtr a, int b, int c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:288</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_ac6defc333d8fc2196810017d3b1783e8"><div class="ttname"><a href="classAiliaSpeech.html#ac6defc333d8fc2196810017d3b1783e8">AiliaSpeech.ailiaCallbackSetInputBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:389</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a8b58bdace65da68d64823154905f28f5"><div class="ttname"><a href="classAiliaSpeech.html#a8b58bdace65da68d64823154905f28f5">AiliaSpeech.ailiaCallbackTokenizerUtf32ToUtf8Bridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerUtf32ToUtf8Bridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:333</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_aec7a425da57e15aa1f1cf114719196da"><div class="ttname"><a href="classAiliaSpeech.html#aec7a425da57e15aa1f1cf114719196da">AiliaSpeech.ailiaCallbackGetBlobIndexByOutputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByOutputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:443</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a88c10d81077ec01b87e74dffff40a6ff"><div class="ttname"><a href="classAiliaSpeech.html#a88c10d81077ec01b87e74dffff40a6ff">AiliaSpeech.ailiaCallbackGetErrorDetailBridge</a></div><div class="ttdeci">static IntPtr ailiaCallbackGetErrorDetailBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:468</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a5f853810269668aef4fed4ea4ec8ffa9"><div class="ttname"><a href="classAiliaSpeech.html#a5f853810269668aef4fed4ea4ec8ffa9">AiliaSpeech.ailiaCallbackTokenizerGetTextLengthBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTextLengthBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:377</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a52fdb7df8b2aa5e132af761b9c41bfee"><div class="ttname"><a href="classAiliaSpeech.html#a52fdb7df8b2aa5e132af761b9c41bfee">AiliaSpeech.ailiaCallbackAudioResampleBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioResampleBridge(IntPtr a, IntPtr b, int c, int d, int e, int f)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:332</div></div>
+<div class="ttc" id="astructAiliaSpeech_1_1AILIASpeechApiCallback_html"><div class="ttname"><a href="structAiliaSpeech_1_1AILIASpeechApiCallback.html">AiliaSpeech.AILIASpeechApiCallback</a></div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:495</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_ae7ff8d8d6526240bf5e444246858971a"><div class="ttname"><a href="classAiliaSpeech.html#ae7ff8d8d6526240bf5e444246858971a">AiliaSpeech.ailiaCallbackTokenizerCreateBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerCreateBridge(IntPtr a, int b, int c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:342</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_ac6defc333d8fc2196810017d3b1783e8"><div class="ttname"><a href="classAiliaSpeech.html#ac6defc333d8fc2196810017d3b1783e8">AiliaSpeech.ailiaCallbackSetInputBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:453</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a8b58bdace65da68d64823154905f28f5"><div class="ttname"><a href="classAiliaSpeech.html#a8b58bdace65da68d64823154905f28f5">AiliaSpeech.ailiaCallbackTokenizerUtf32ToUtf8Bridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerUtf32ToUtf8Bridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:397</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a9ae830cfdd5bb2d4c80ef38c0060c3f6"><div class="ttname"><a href="classAiliaSpeech.html#a9ae830cfdd5bb2d4c80ef38c0060c3f6">AiliaSpeech.ailiaTokenizerUtf32ToUtf8</a></div><div class="ttdeci">static int ailiaTokenizerUtf32ToUtf8(IntPtr a, IntPtr b, uint c)</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a944a5f6fcce7da50a8acb9d9f12438cd"><div class="ttname"><a href="classAiliaSpeech.html#a944a5f6fcce7da50a8acb9d9f12438cd">AiliaSpeech.ailiaCreate</a></div><div class="ttdeci">static int ailiaCreate(IntPtr net, int env_id, int num_thread)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_af1c7a43a3adabad2fbb058eced5e1a25"><div class="ttname"><a href="classAiliaSpeech.html#af1c7a43a3adabad2fbb058eced5e1a25">AiliaSpeech.ailiaCallbackGetBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobShapeBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:399</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_af1c7a43a3adabad2fbb058eced5e1a25"><div class="ttname"><a href="classAiliaSpeech.html#af1c7a43a3adabad2fbb058eced5e1a25">AiliaSpeech.ailiaCallbackGetBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobShapeBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:463</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_ae2e5876ae04cc75785bbaf6dc24c9ff2"><div class="ttname"><a href="classAiliaSpeech.html#ae2e5876ae04cc75785bbaf6dc24c9ff2">AiliaSpeech.ailiaAudioResample</a></div><div class="ttdeci">static int ailiaAudioResample(IntPtr a, IntPtr b, int c, int d, int e, int f)</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a8f401d0db9bf9eb0d5988507f02cea07"><div class="ttname"><a href="classAiliaSpeech.html#a8f401d0db9bf9eb0d5988507f02cea07">AiliaSpeech.ailiaOpenWeightFileA</a></div><div class="ttdeci">static int ailiaOpenWeightFileA(IntPtr net, IntPtr path)</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_afc15f5812dfa11c9548fd3a0cfdb2337"><div class="ttname"><a href="classAiliaSpeech.html#afc15f5812dfa11c9548fd3a0cfdb2337">AiliaSpeech.ailiaGetBlobIndexByInputIndex</a></div><div class="ttdeci">static int ailiaGetBlobIndexByInputIndex(IntPtr net, IntPtr blob_idx, UInt32 input_blob_idx)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a5430ac73efd0493586e2e0727c6d16bd"><div class="ttname"><a href="classAiliaSpeech.html#a5430ac73efd0493586e2e0727c6d16bd">AiliaSpeech.ailiaCallbackSetInputBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobShapeBridge(IntPtr a, Ailia.AILIAShape b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:394</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a9feaff217cd970007c2fa5879a01bcbc"><div class="ttname"><a href="classAiliaSpeech.html#a9feaff217cd970007c2fa5879a01bcbc">AiliaSpeech.ailiaCallbackAudioGetMelSpectrogramBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetMelSpectrogramBridge(IntPtr a, IntPtr b, int c, int d, int e, int f, int g, int h, int i, int j, float k, int l, float m, float n, int o, int p, int q)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:273</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a31fe52365704c8d4ad93880fc96bad97"><div class="ttname"><a href="classAiliaSpeech.html#a31fe52365704c8d4ad93880fc96bad97">AiliaSpeech.ailiaCallbackTokenizerOpenModelFileABridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerOpenModelFileABridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:347</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a5430ac73efd0493586e2e0727c6d16bd"><div class="ttname"><a href="classAiliaSpeech.html#a5430ac73efd0493586e2e0727c6d16bd">AiliaSpeech.ailiaCallbackSetInputBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobShapeBridge(IntPtr a, Ailia.AILIAShape b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:458</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a9feaff217cd970007c2fa5879a01bcbc"><div class="ttname"><a href="classAiliaSpeech.html#a9feaff217cd970007c2fa5879a01bcbc">AiliaSpeech.ailiaCallbackAudioGetMelSpectrogramBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetMelSpectrogramBridge(IntPtr a, IntPtr b, int c, int d, int e, int f, int g, int h, int i, int j, float k, int l, float m, float n, int o, int p, int q)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:327</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a48b9118b1404e2c1dfce9a9b6f8fa6ea"><div class="ttname"><a href="classAiliaSpeech.html#a48b9118b1404e2c1dfce9a9b6f8fa6ea">AiliaSpeech.ailiaTokenizerGetTokenCount</a></div><div class="ttdeci">static int ailiaTokenizerGetTokenCount(IntPtr net, IntPtr count)</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_ac6aa4155c9f2bb61823ec5a71a851ec9"><div class="ttname"><a href="classAiliaSpeech.html#ac6aa4155c9f2bb61823ec5a71a851ec9">AiliaSpeech.ailiaTokenizerOpenModelFileW</a></div><div class="ttdeci">static int ailiaTokenizerOpenModelFileW(IntPtr net, IntPtr utf16)</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_abcd34e2fb6652756d0d034ca9cb79a98"><div class="ttname"><a href="classAiliaSpeech.html#abcd34e2fb6652756d0d034ca9cb79a98">AiliaSpeech.ailiaTokenizerUtf8ToUtf32</a></div><div class="ttdeci">static int ailiaTokenizerUtf8ToUtf32(IntPtr a, IntPtr b, IntPtr c, uint d)</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_af318446e91be4d5829c99d5e805973dd"><div class="ttname"><a href="classAiliaSpeech.html#af318446e91be4d5829c99d5e805973dd">AiliaSpeech.ailiaTokenizerCreate</a></div><div class="ttdeci">static int ailiaTokenizerCreate(IntPtr net, int type, int flags)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_ae76bd911220ccca6d5aaf0cbeebc8a86"><div class="ttname"><a href="classAiliaSpeech.html#ae76bd911220ccca6d5aaf0cbeebc8a86">AiliaSpeech.ailiaCallbackOpenWeightFileWBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileWBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:349</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_abee7afcd702fcf6670aada01aeaf86df"><div class="ttname"><a href="classAiliaSpeech.html#abee7afcd702fcf6670aada01aeaf86df">AiliaSpeech.ailiaCallbackAudioGetFrameLenBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetFrameLenBridge(ref Int32 a, int b, int c, int d, int e)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:268</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_ae76bd911220ccca6d5aaf0cbeebc8a86"><div class="ttname"><a href="classAiliaSpeech.html#ae76bd911220ccca6d5aaf0cbeebc8a86">AiliaSpeech.ailiaCallbackOpenWeightFileWBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileWBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:413</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_abee7afcd702fcf6670aada01aeaf86df"><div class="ttname"><a href="classAiliaSpeech.html#abee7afcd702fcf6670aada01aeaf86df">AiliaSpeech.ailiaCallbackAudioGetFrameLenBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetFrameLenBridge(ref Int32 a, int b, int c, int d, int e)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:322</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a00b2a5b841fad100bfc6a24a128f3108"><div class="ttname"><a href="classAiliaSpeech.html#a00b2a5b841fad100bfc6a24a128f3108">AiliaSpeech.ailiaTokenizerGetTextLength</a></div><div class="ttdeci">static int ailiaTokenizerGetTextLength(IntPtr net, IntPtr len)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a4a524614c0a2c490bea0b2508049f436"><div class="ttname"><a href="classAiliaSpeech.html#a4a524614c0a2c490bea0b2508049f436">AiliaSpeech.ailiaCallbackTokenizerGetTextBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTextBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:318</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a4a524614c0a2c490bea0b2508049f436"><div class="ttname"><a href="classAiliaSpeech.html#a4a524614c0a2c490bea0b2508049f436">AiliaSpeech.ailiaCallbackTokenizerGetTextBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTextBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:382</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_aeb8ee566af35c916b9bafab278db2757"><div class="ttname"><a href="classAiliaSpeech.html#aeb8ee566af35c916b9bafab278db2757">AiliaSpeech.ailiaOpenWeightMem</a></div><div class="ttdeci">static int ailiaOpenWeightMem(IntPtr net, IntPtr buf, uint buf_size)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a1bfe5384709ac574881679fba255ffbb"><div class="ttname"><a href="classAiliaSpeech.html#a1bfe5384709ac574881679fba255ffbb">AiliaSpeech.ailiaCallbackCopyBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackCopyBlobDataBridge(IntPtr a, uint b, IntPtr c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:409</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a9665ad6f8cee714543da537c067b459c"><div class="ttname"><a href="classAiliaSpeech.html#a9665ad6f8cee714543da537c067b459c">AiliaSpeech.ailiaTokenizerOpenModelFileA</a></div><div class="ttdeci">static int ailiaTokenizerOpenModelFileA(IntPtr net, IntPtr utf8)</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a1bfe5384709ac574881679fba255ffbb"><div class="ttname"><a href="classAiliaSpeech.html#a1bfe5384709ac574881679fba255ffbb">AiliaSpeech.ailiaCallbackCopyBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackCopyBlobDataBridge(IntPtr a, uint b, IntPtr c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:473</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html"><div class="ttname"><a href="classAiliaSpeech.html">AiliaSpeech</a></div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:10</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a25b341c3a4f9d76b359db6d59bd02786"><div class="ttname"><a href="classAiliaSpeech.html#a25b341c3a4f9d76b359db6d59bd02786">AiliaSpeech.ailiaGetEnvironment</a></div><div class="ttdeci">static int ailiaGetEnvironment(IntPtr net, UInt32 env_idx, UInt32 version)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a7acd3109180404ffad5e4d859363807c"><div class="ttname"><a href="classAiliaSpeech.html#a7acd3109180404ffad5e4d859363807c">AiliaSpeech.ailiaCallbackGetBlobIndexByInputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByInputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:374</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a7acd3109180404ffad5e4d859363807c"><div class="ttname"><a href="classAiliaSpeech.html#a7acd3109180404ffad5e4d859363807c">AiliaSpeech.ailiaCallbackGetBlobIndexByInputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByInputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:438</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a60bc47236939b85867212564526af361"><div class="ttname"><a href="classAiliaSpeech.html#a60bc47236939b85867212564526af361">AiliaSpeech.ailiaGetBlobIndexByOutputIndex</a></div><div class="ttdeci">static int ailiaGetBlobIndexByOutputIndex(IntPtr net, IntPtr blob_idx, UInt32 output_blob_idx)</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a2df5ea6b5388e48d8c97f5e8728877a8"><div class="ttname"><a href="classAiliaSpeech.html#a2df5ea6b5388e48d8c97f5e8728877a8">AiliaSpeech.ailiaCallbackTokenizerGetTokenCountBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTokenCountBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:298</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a925708b1d13c353c82ebbbe7fb6dd9af"><div class="ttname"><a href="classAiliaSpeech.html#a925708b1d13c353c82ebbbe7fb6dd9af">AiliaSpeech.ailiaCallbackGetBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:384</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_a6200a748bc49dcb424ff1997e8a633e7"><div class="ttname"><a href="classAiliaSpeech.html#a6200a748bc49dcb424ff1997e8a633e7">AiliaSpeech.ailiaCallbackOpenWeightFileABridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileABridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:344</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a2df5ea6b5388e48d8c97f5e8728877a8"><div class="ttname"><a href="classAiliaSpeech.html#a2df5ea6b5388e48d8c97f5e8728877a8">AiliaSpeech.ailiaCallbackTokenizerGetTokenCountBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerGetTokenCountBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:362</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a925708b1d13c353c82ebbbe7fb6dd9af"><div class="ttname"><a href="classAiliaSpeech.html#a925708b1d13c353c82ebbbe7fb6dd9af">AiliaSpeech.ailiaCallbackGetBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:448</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a6200a748bc49dcb424ff1997e8a633e7"><div class="ttname"><a href="classAiliaSpeech.html#a6200a748bc49dcb424ff1997e8a633e7">AiliaSpeech.ailiaCallbackOpenWeightFileABridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileABridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:408</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a696343d629f9a2bce75341b0d7152272"><div class="ttname"><a href="classAiliaSpeech.html#a696343d629f9a2bce75341b0d7152272">AiliaSpeech.ailiaGetBlobShape</a></div><div class="ttdeci">static int ailiaGetBlobShape(IntPtr net, IntPtr shape, UInt32 blob_idx, UInt32 version)</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a4e96115d3ab57a562abab8d63fb4cd07"><div class="ttname"><a href="classAiliaSpeech.html#a4e96115d3ab57a562abab8d63fb4cd07">AiliaSpeech.ailiaCallbackTokenizerOpenModelFileWBridge</a></div><div class="ttdeci">static int ailiaCallbackTokenizerOpenModelFileWBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:352</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a21d7e4ea43201106763aec08778d728f"><div class="ttname"><a href="classAiliaSpeech.html#a21d7e4ea43201106763aec08778d728f">AiliaSpeech.ailiaAudioGetResampleLen</a></div><div class="ttdeci">static int ailiaAudioGetResampleLen(IntPtr a, int b, int c, int d)</div></div>
-<div class="ttc" id="astructAiliaSpeech_1_1AILIASpeechApiCallback_html_ade05719aee36d02e15fe5cea994223b5"><div class="ttname"><a href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#ade05719aee36d02e15fe5cea994223b5">AiliaSpeech.AILIASpeechApiCallback.ailiaAudioGetFrameLen</a></div><div class="ttdeci">ailiaCallbackAudioGetFrameLen ailiaAudioGetFrameLen</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:434</div></div>
-<div class="ttc" id="aclassAiliaSpeech_html_adc38d39626702f69cd7e6f967485fdb4"><div class="ttname"><a href="classAiliaSpeech.html#adc38d39626702f69cd7e6f967485fdb4">AiliaSpeech.ailiaCallbackCreateBridge</a></div><div class="ttdeci">static int ailiaCallbackCreateBridge(IntPtr a, int b, int c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:339</div></div>
+<div class="ttc" id="astructAiliaSpeech_1_1AILIASpeechApiCallback_html_ade05719aee36d02e15fe5cea994223b5"><div class="ttname"><a href="structAiliaSpeech_1_1AILIASpeechApiCallback.html#ade05719aee36d02e15fe5cea994223b5">AiliaSpeech.AILIASpeechApiCallback.ailiaAudioGetFrameLen</a></div><div class="ttdeci">ailiaCallbackAudioGetFrameLen ailiaAudioGetFrameLen</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:497</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_adc38d39626702f69cd7e6f967485fdb4"><div class="ttname"><a href="classAiliaSpeech.html#adc38d39626702f69cd7e6f967485fdb4">AiliaSpeech.ailiaCallbackCreateBridge</a></div><div class="ttdeci">static int ailiaCallbackCreateBridge(IntPtr a, int b, int c)</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:403</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a9bfbf55e748ab888678c064b9ef24530"><div class="ttname"><a href="classAiliaSpeech.html#a9bfbf55e748ab888678c064b9ef24530">AiliaSpeech.ailiaOpenWeightFileW</a></div><div class="ttdeci">static int ailiaOpenWeightFileW(IntPtr net, IntPtr path)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
