@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -110,9 +110,20 @@ High Level APIの概要</h2>
 <div class="fragment"><div class="line">flag = AiliaSpeech.AILIA_SPEECH_FLAG_LIVE;</div>
 </div><!-- fragment --><p>プレビューは、IntermediateCallbackに通知されます。</p>
 <div class="fragment"><div class="line">string text = GetIntermediateText();</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+VAD</h2>
+<p>無音検知を使用する場合、Open APIの後にOpenVAD APIを呼び出します。</p>
+<div class="fragment"><div class="line">ailia_speech.OpenVad(asset_path + <span class="stringliteral">&quot;/&quot;</span> + <span class="stringliteral">&quot;silero_vad.onnx&quot;</span>, <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="classAiliaSpeech.html#ab8f409f2fb5c5dc1b2559e91c4e2809b">AILIA_SPEECH_VAD_TYPE_SILERO</a>);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+ポストプロセス</h2>
+<p>音声認識結果に対して、音声認識誤り訂正や、翻訳などの後処理を適用する場合、Open APIの後にOpenPostProcess APIを呼び出します。</p>
+<p>音声認識誤り訂正を使用する場合</p>
+<div class="fragment"><div class="line">ailia_speech.OpenPostProcess(asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;t5_whisper_medical-encoder.obf.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;t5_whisper_medical-decoder-with-lm-head.obf.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;spiece.model&quot;</span>, <span class="keyword">null</span>, <span class="stringliteral">&quot;医療用語の訂正: &quot;</span>, <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="classAiliaSpeech.html#a0d04997b05c292dc412f3caeb0cd58ca">AILIA_SPEECH_POST_PROCESS_TYPE_T5</a>);</div>
+</div><!-- fragment --><p>翻訳を使用する場合</p>
+<div class="fragment"><div class="line">ailia_speech.OpenPostProcess(asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;seq2seq-lm-with-past.onnx&quot;</span>, <span class="keyword">null</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;source.spm&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;target.spm&quot;</span>, <span class="keyword">null</span>, <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="classAiliaSpeech.html#a1209b0cf1e0afcb18d270261e7da9972">AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a>);</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
 Low Level API</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Low Level APIの概要</h2>
 <p>C::のLow Level APIでは、AiliaSpeech名前空間にC APIをそのままマッピングしています。</p>
 <p>ailia Speechでは、ailiaSpeechCreateでインスタンスを作成、ailiaSpeechOpenModelFileでモデルを開き、ailiaSpeechPushInputDataでPCMを入力、ailiaSpeechBufferedで十分なPCMが入力されたか確認、ailiaSpeechTranscribeでテキスト化、ailiaSpeechGetTextで認識結果を取得可能です。</p>
@@ -165,7 +176,7 @@ Low Level APIの概要</h2>
 <div class="line"> </div>
 <div class="line">// インスタンス解放</div>
 <div class="line">AiliaSpeech.ailiaSpeechDestroy(net);</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
 GPUの使用</h1>
 <p>GPUを使用するには、AiliaSpeech.Openのenv_id引数にGPUのenv_idを指定します。 AILIA_ENVIRONMENT_ID_AUTOを指定した場合は、CPUで推論が行われます。 GPUのenv_idを取得する方法は、AiliaSpeechSample.csのGetEnvId()を参照してください。 下記の例では、ailiaのAPIを使用して環境を列挙し、env_typeが1の場合にGPUのenv_idを取得しています。</p>
 <div class="fragment"><div class="line">private int GetEnvId(int env_type){</div>
@@ -188,19 +199,23 @@ GPUの使用</h1>
 <div class="line">    }</div>
 <div class="line">    return env_id;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 プラットフォームごとの注意点</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Windows</h2>
 <p>Unity Pluginのサンプルでは、ファイルダイアログにStandaloneFileBrowserアセットを使用しています。StandaloneFileBrowserの制約で、Windows環境でil2cppでビルドするとエラーが発生するため、monoでビルドしてください。これはailia Speechの制約ではないため、ファイルダイアログを使用しない場合はil2cppを使用可能です。</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 iOS</h2>
 <p>iOSで動作させる場合は、CapabilityにIncreased Memory Limitを指定してください。Smallモデルで1.82GB程度のメモリが必要なためです。</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Android</h2>
 <p>AndroidではStreamingAssetsのファイルへの直接アクセスが行えないため、起動時にTemporaryCachePathにモデルファイルを転送します。 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="aclassAiliaSpeech_html_ab8f409f2fb5c5dc1b2559e91c4e2809b"><div class="ttname"><a href="classAiliaSpeech.html#ab8f409f2fb5c5dc1b2559e91c4e2809b">AiliaSpeech.AILIA_SPEECH_VAD_TYPE_SILERO</a></div><div class="ttdeci">const Int32 AILIA_SPEECH_VAD_TYPE_SILERO</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:185</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a0d04997b05c292dc412f3caeb0cd58ca"><div class="ttname"><a href="classAiliaSpeech.html#a0d04997b05c292dc412f3caeb0cd58ca">AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_T5</a></div><div class="ttdeci">const Int32 AILIA_SPEECH_POST_PROCESS_TYPE_T5</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:215</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_a1209b0cf1e0afcb18d270261e7da9972"><div class="ttname"><a href="classAiliaSpeech.html#a1209b0cf1e0afcb18d270261e7da9972">AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a></div><div class="ttdeci">const Int32 AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:226</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html"><div class="ttname"><a href="classAiliaSpeech.html">AiliaSpeech</a></div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:10</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">
