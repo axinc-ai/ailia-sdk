@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['open_34',['Open',['../classAiliaTokenizerModel.html#a00f680c09de179cd0ee4242f3efe4005',1,'AiliaTokenizerModel']]]
+  ['library_5fname_39',['LIBRARY_NAME',['../classAiliaTokenizer.html#acc83b2cc79cc639cd295361a6c568f63',1,'AiliaTokenizer']]]
 ];
