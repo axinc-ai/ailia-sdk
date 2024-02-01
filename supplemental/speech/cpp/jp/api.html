@@ -166,13 +166,13 @@ APIの呼び出しフロー</h2>
 <div class="mermaid">
 flowchart
 A(Microphone or File)-->B
-B[ailiaPushInpuData API]-->C
-C[ailiaBuffered API]-->D
+B[ailiaSpeechPushInputData API]-->C
+C[ailiaSpeechBuffered API]-->D
 C-->B
-D[ailiaTranscribe API]-->E
-E[ailiaGetTextCount API]-->F
-F[ailiaGetText API]-->K
-K[ailiaCompplete API] --> B
+D[ailiaSpeechTranscribe API]-->E
+E[ailiaSpeechGetTextCount API]-->F
+F[ailiaSpeechGetText API]-->K
+K[ailiaSpeechComplete API] --> B
 </div>
 </p>
 <h3><a class="anchor" id="autotoc_md8"></a>
@@ -181,17 +181,17 @@ K[ailiaCompplete API] --> B
 <div class="mermaid">
 flowchart
 A(Microphone or File)-->B
-B[ailiaPushInpuData API]-->C
-C[ailiaBuffered API]-->D
+B[ailiaSpeechPushInputData API]-->C
+C[ailiaSpeechBuffered API]-->D
 C-->B
-D[ailiaTranscribe API]-->E
-E[ailiaGetTextCount API]-->F
-F[ailiaGetText API]-->K
+D[ailiaSpeechTranscribe API]-->E
+E[ailiaSpeechGetTextCount API]-->F
+F[ailiaSpeechGetText API]-->K
 F-->G
-G[ailiaPostProcess API]-->H
-H[ailiaGetTextCount API]-->I
-I[ailiaGetText API]-->K
-K[ailiaCompplete API] --> B
+G[ailiaSpeechPostProcess API]-->H
+H[ailiaSpeechGetTextCount API]-->I
+I[ailiaSpeechGetText API]-->K
+K[ailiaSpeechComplete API] --> B
 </div>
 </p>
 <h3><a class="anchor" id="autotoc_md9"></a>
@@ -199,9 +199,9 @@ K[ailiaCompplete API] --> B
 <p> 
 <div class="mermaid">
 flowchart
-F[ailiaSetText API]-->G
-G[ailiaPostProcess API]-->I
-I[ailiaGetText API]
+F[ailiaSpeechSetText API]-->G
+G[ailiaSpeechPostProcess API]-->I
+I[ailiaSpeechGetText API]
 </div>
 </p>
 <p> 
