@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['library_5fname_33',['LIBRARY_NAME',['../classAiliaTokenizer.html#acc83b2cc79cc639cd295361a6c568f63',1,'AiliaTokenizer']]]
+  ['how_20to_20import_20the_20unity_20package_20and_20run_20the_20sample_20program_38',['How to import the Unity package and run the sample program',['../setup.html',1,'']]]
 ];

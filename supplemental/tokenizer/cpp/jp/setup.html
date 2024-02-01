@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_tokenizer: セットアップ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_tokenizer
+   &#160;<span id="projectnumber">1.0.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">セットアップ </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
+コンパイラのセットアップ</h1>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Windows</h2>
+<p>VisualStudio 2019以降が必要です。</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+macOS</h2>
+<p>Xcode 14.2以降が必要です。</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Linux</h2>
+<p>clangが必要です。</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+サンプルのビルド</h1>
+<p>cppフォルダに移動して、プラットフォーム別のビルドコマンドを実行します。</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Windows</h2>
+<div class="fragment"><div class="line">cl ailia_tokenizer_sample.cpp ailia_tokenizer.lib</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
+macOS</h2>
+<div class="fragment"><div class="line">clang++ -o ailia_tokenizer_sample ailia_tokenizer_sample.cpp libailia_tokenizer.dylib -Wl,-rpath,./ -std=c++17</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
+Linux</h2>
+<div class="fragment"><div class="line">export LD_LIBRARY_PATH=./</div>
+<div class="line">g++ -o ailia_tokenizer_sample ailia_tokenizer_sample.cpp libailia_tokenizer.so</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
+サンプルの実行</h1>
+<p>下記のコマンドでサンプルを実行します。</p>
+<div class="fragment"><div class="line">./ailia_tokenizer_sample</div>
+</div><!-- fragment --><p>出力例です。</p>
+<div class="fragment"><div class="line">Tokenizer type 0</div>
+<div class="line">Input Text : ハードウェア ソフトウェア</div>
+<div class="line">Tokens : 15927 44165 20745 28571 12817 220 42668 17320 7588 20745 28571 12817 </div>
+<div class="line">Output Text : ハードウェア ソフトウェア</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
+サンプルで指定可能なオプション</h1>
+<p>サンプルでは下記の引数を順に指定可能です。</p>
+<div class="fragment"><div class="line">./ailia_tokenizer_sample [tokenizer_type]</div>
+</div><!-- fragment --><p>各引数の詳細は下記となります。</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">内容 </th><th class="markdownTableHeadNone">詳細  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">トークナイザタイプ </td><td class="markdownTableBodyNone">トークナイザのタイプを数値で指定します。AILIA_TOKENIZER_TYPE_WHISPERとAILIA_TOKENIZER_TYPE_CLIP以外を使用する場合、別途、モデルファイルをhuggingfaceなどからダウンロードする必要があります。  </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md14"></a>
+プラットフォーム別の注意点</h1>
+<h2><a class="anchor" id="autotoc_md15"></a>
+macOSにおけるダウンロード属性の解除</h2>
+<p>macOSにおいてブラウザからダウンロードしたバイナリには、ダウンロード属性が付与され、実行できない場合があります。 その場合、dylibを右クリックから実行して開くことで、ダウンロード属性を解除することが可能です。 また、コマンドラインから下記のコマンドを実行することでも、ダウンロード属性を解除することが可能です。</p>
+<div class="fragment"><div class="line">xattr -d com.apple.quarantine libailia_tokenizer.dylib</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
