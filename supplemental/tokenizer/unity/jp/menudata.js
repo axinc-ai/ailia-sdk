@@ -28,7 +28,13 @@ var menudata={children:[
 {text:"クラス索引",url:"classes.html"},
 {text:"クラス階層",url:"inherits.html"},
 {text:"クラスメンバ",url:"functions.html",children:[
-{text:"全て",url:"functions.html"},
+{text:"全て",url:"functions.html",children:[
+{text:"a",url:"functions.html#index_a"},
+{text:"c",url:"functions.html#index_c"},
+{text:"d",url:"functions.html#index_d"},
+{text:"e",url:"functions.html#index_e"},
+{text:"l",url:"functions.html#index_l"},
+{text:"o",url:"functions.html#index_o"}]},
 {text:"関数",url:"functions_func.html"},
 {text:"変数",url:"functions_vars.html"}]}]},
 {text:"ファイル",url:"files.html",children:[

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -115,6 +115,18 @@ AILIA_TOKENIZER_TYPE_T5</h3>
 <div class="fragment"><div class="line">from transformers import AutoTokenizer</div>
 <div class="line">tokenizer = AutoTokenizer.from_pretrained(&#39;sonoisa/t5-base-japanese-title-generation&#39;)</div>
 <div class="line">inputs = tokenizer(sents, padding=True, truncation=True, return_tensors=&#39;np&#39;)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md52"></a>
+AILIA_TOKENIZER_TYPE_ROBERTA</h3>
+<p>Pythonの下記の処理に対応します。末尾にEOSシンボルを挿入します。別途、ailiaTokenizerOpenVocabFileにvocab.jsonを、ailiaTokenizerOpenMergeFileにmerges.txtを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import RobertaTokenizer</div>
+<div class="line"> </div>
+<div class="line">tokenize = RobertaTokenizer.from_pretrained(&#39;roberta-base&#39;)</div>
+<div class="line">result = tokenize(</div>
+<div class="line">    sents,</div>
+<div class="line">    padding=True,</div>
+<div class="line">    truncation=True,</div>
+<div class="line">    return_tensors=&quot;pt&quot;,</div>
+<div class="line">)</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
