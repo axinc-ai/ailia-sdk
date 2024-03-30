@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.16.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -254,6 +254,8 @@ Macros</h2></td></tr>
 <tr class="separator:af98f1edb00166cfa6be1ef3aa9045293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5d2fd88df22e996c1ab8fd15ee9f42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#ada5d2fd88df22e996c1ab8fd15ee9f42">AILIA_MEMORY_REUSE_INTERSTAGE</a>&#160;&#160;&#160;(8)</td></tr>
 <tr class="separator:ada5d2fd88df22e996c1ab8fd15ee9f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c354f5f3004e9f1d934c09c6553066"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a96c354f5f3004e9f1d934c09c6553066">AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPED</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="separator:a96c354f5f3004e9f1d934c09c6553066"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf16414b38b97c773182b7a37d82cc99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#acf16414b38b97c773182b7a37d82cc99">AILIA_MEMORY_OPTIMAIZE_DEFAULT</a>&#160;&#160;&#160;(<a class="el" href="ailia_8h.html#a5632969753240659b75ec87aaaa503b4">AILIA_MEMORY_REDUCE_CONSTANT</a>)</td></tr>
 <tr class="separator:acf16414b38b97c773182b7a37d82cc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade133d9f1579289279552c3d24cc470b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#ade133d9f1579289279552c3d24cc470b">AILIA_PROFILE_DISABLE</a>&#160;&#160;&#160;(0x00)</td></tr>
@@ -867,6 +869,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Releases the intermediate buffer that is a constant such as weight </p>
+
+</div>
+</div>
+<a id="a96c354f5f3004e9f1d934c09c6553066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c354f5f3004e9f1d934c09c6553066">&#9670;&nbsp;</a></span>AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPED&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Infer with memory mapped file for weight due to reduce ram usage.</p>
+<p>When need to convert weight, it will allocate temporary buffer and after infer, release buffer. It will apply when load from file, and environment that mmap available. It will create temporary file due to speedup mmap, so you should be call ailiaSetTemporaryCachePath. If do not call ailiaSetTemporaryCachePath and specify this, it will return error <code>AILIA_STATUS_INVALID_STATE</code> when call ailiaOpenWeightXXX. AILIA_MEMORY_REDUCE_INTERSTAGE and AILIA_MEMORY_REUSE_INTERSTAGE can be used together. </p>
 
 </div>
 </div>

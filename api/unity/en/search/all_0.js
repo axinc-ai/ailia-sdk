@@ -52,6 +52,7 @@ var searchData=
   ['ailia_5fmemory_5fno_5foptimization',['AILIA_MEMORY_NO_OPTIMIZATION',['../classAilia.html#aea38a5cf0652d2a55dc77e7ada0dac30',1,'Ailia']]],
   ['ailia_5fmemory_5foptimaize_5fdefault',['AILIA_MEMORY_OPTIMAIZE_DEFAULT',['../classAilia.html#a01cf3d55e74f654e9dc877d207d46b71',1,'Ailia']]],
   ['ailia_5fmemory_5freduce_5fconstant',['AILIA_MEMORY_REDUCE_CONSTANT',['../classAilia.html#aced0a299705a6add176c49fa81314097',1,'Ailia']]],
+  ['ailia_5fmemory_5freduce_5fconstant_5fwith_5ffile_5fmapped',['AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPED',['../classAilia.html#acfafb8603f079e161313f9819d355b19',1,'Ailia']]],
   ['ailia_5fmemory_5freduce_5fconstant_5fwith_5finput_5finitializer',['AILIA_MEMORY_REDUCE_CONSTANT_WITH_INPUT_INITIALIZER',['../classAilia.html#a51b3796b5a1473091fa92291a18830fe',1,'Ailia']]],
   ['ailia_5fmemory_5freduce_5finterstage',['AILIA_MEMORY_REDUCE_INTERSTAGE',['../classAilia.html#a59baedd6b0d4084c54ee2a6d5ead4ee7',1,'Ailia']]],
   ['ailia_5fmemory_5freuse_5finterstage',['AILIA_MEMORY_REUSE_INTERSTAGE',['../classAilia.html#a3a070ea02237affd51b6bf34d51f60af',1,'Ailia']]],
