@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.2.16.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -331,6 +331,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a59baedd6b0d4084c54ee2a6d5ead4ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a070ea02237affd51b6bf34d51f60af"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a3a070ea02237affd51b6bf34d51f60af">AILIA_MEMORY_REUSE_INTERSTAGE</a> = (8)</td></tr>
 <tr class="separator:a3a070ea02237affd51b6bf34d51f60af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfafb8603f079e161313f9819d355b19"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#acfafb8603f079e161313f9819d355b19">AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPED</a> = (16)</td></tr>
+<tr class="separator:acfafb8603f079e161313f9819d355b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cf3d55e74f654e9dc877d207d46b71"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#a01cf3d55e74f654e9dc877d207d46b71">AILIA_MEMORY_OPTIMAIZE_DEFAULT</a> = (<a class="el" href="classAilia.html#aced0a299705a6add176c49fa81314097">AILIA_MEMORY_REDUCE_CONSTANT</a>)</td></tr>
 <tr class="separator:a01cf3d55e74f654e9dc877d207d46b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3defc2c83003201978bc059d5a905df"><td class="memItemLeft" align="right" valign="top">const UInt32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAilia.html#af3defc2c83003201978bc059d5a905df">AILIA_PROFILE_DISABLE</a> = (0x00)</td></tr>
@@ -2672,6 +2674,22 @@ Return <a class="el" href="classAilia.html#a08ca79b7d1d1719749a2d24682d05c01">AI
       </table>
 </div><div class="memdoc">
 <p>Open intermediate buffers that are constants for weights, etc. </p>
+
+</div>
+</div>
+<a id="acfafb8603f079e161313f9819d355b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfafb8603f079e161313f9819d355b19">&#9670;&nbsp;</a></span>AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 Ailia.AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPED = (16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Infer with memory mapped file for weight due to reduce ram usage.</p>
+<p>When need to convert weight, it will allocate temporary buffer and after infer, release buffer. It will apply when load from file, and environment that mmap available. It will create temporary file due to speedup mmap, so you should be call ailiaSetTemporaryCachePath. If do not call ailiaSetTemporaryCachePath and specify this, it will return error <code>AILIA_STATUS_INVALID_STATE</code> when call ailiaOpenWeightXXX. AILIA_MEMORY_REDUCE_INTERSTAGE and AILIA_MEMORY_REUSE_INTERSTAGE can be used together. </p>
 
 </div>
 </div>
