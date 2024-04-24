@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.1.0.0</span>
+   &#160;<span id="projectnumber">1.2.0.0</span>
    </div>
   </td>
  </tr>
@@ -74,7 +74,7 @@ Presentation of the High Level API</h2>
 <div class="fragment"><div class="line">void OnEnable(){</div>
 <div class="line">  // Create the instance</div>
 <div class="line">  AiliaSpeechModel ailia_speech = new AiliaSpeechModel();</div>
-<div class="line">  ailia_speech.Open(asset_path + &quot;/&quot; + encoder_path, asset_path + &quot;/&quot; + decoder_path, env_id, api_model_type, task, flag, language);</div>
+<div class="line">  ailia_speech.Open(asset_path + &quot;/&quot; + encoder_path, asset_path + &quot;/&quot; + decoder_path, env_id, memory_mode, api_model_type, task, flag, language);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">void Update(){</div>
@@ -120,7 +120,10 @@ Post-process</h2>
 <p>If using speech recognition error correction:</p>
 <div class="fragment"><div class="line">ailia_speech.OpenPostProcess(asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;t5_whisper_medical-encoder.obf.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;t5_whisper_medical-decoder-with-lm-head.obf.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;spiece.model&quot;</span>, <span class="keyword">null</span>, <span class="stringliteral">&quot;Correction of medical terminology: &quot;</span>, <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="classAiliaSpeech.html#a0d04997b05c292dc412f3caeb0cd58ca">AILIA_SPEECH_POST_PROCESS_TYPE_T5</a>);</div>
 </div><!-- fragment --><p>If using translation:</p>
-<div class="fragment"><div class="line">ailia_speech.OpenPostProcess(asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;seq2seq-lm-with-past.onnx&quot;</span>, <span class="keyword">null</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;source.spm&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;target.spm&quot;</span>, <span class="keyword">null</span>, <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="classAiliaSpeech.html#a1209b0cf1e0afcb18d270261e7da9972">AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a>);</div>
+<p>English to Japanese:</p>
+<div class="fragment"><div class="line">ailia_speech.OpenPostProcess(asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_en_ja_seq2seq-lm-with-past.onnx&quot;</span>, <span class="keyword">null</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_en_ja_source.spm&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_en_ja_target.spm&quot;</span>, <span class="keyword">null</span>, <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="classAiliaSpeech.html#a1209b0cf1e0afcb18d270261e7da9972">AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a>);</div>
+</div><!-- fragment --><p>Japanese to English:</p>
+<div class="fragment"><div class="line">ailia_speech.OpenPostProcess(asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_encoder_model.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_decoder_model.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_source.spm&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_target.spm&quot;</span>, <span class="keyword">null</span>, <a class="code" href="classAiliaSpeech.html">AiliaSpeech</a>.<a class="code" href="classAiliaSpeech.html#affba1228c74019911981a8cb5ad64f01">AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_JA_EN</a>);</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md17"></a>
 Low Level API</h1>
 <h2><a class="anchor" id="autotoc_md18"></a>
@@ -214,6 +217,7 @@ Android</h2>
 <div class="ttc" id="aclassAiliaSpeech_html_ab8f409f2fb5c5dc1b2559e91c4e2809b"><div class="ttname"><a href="classAiliaSpeech.html#ab8f409f2fb5c5dc1b2559e91c4e2809b">AiliaSpeech.AILIA_SPEECH_VAD_TYPE_SILERO</a></div><div class="ttdeci">const Int32 AILIA_SPEECH_VAD_TYPE_SILERO</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:185</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a0d04997b05c292dc412f3caeb0cd58ca"><div class="ttname"><a href="classAiliaSpeech.html#a0d04997b05c292dc412f3caeb0cd58ca">AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_T5</a></div><div class="ttdeci">const Int32 AILIA_SPEECH_POST_PROCESS_TYPE_T5</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:215</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html_a1209b0cf1e0afcb18d270261e7da9972"><div class="ttname"><a href="classAiliaSpeech.html#a1209b0cf1e0afcb18d270261e7da9972">AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</a></div><div class="ttdeci">const Int32 AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:226</div></div>
+<div class="ttc" id="aclassAiliaSpeech_html_affba1228c74019911981a8cb5ad64f01"><div class="ttname"><a href="classAiliaSpeech.html#affba1228c74019911981a8cb5ad64f01">AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_JA_EN</a></div><div class="ttdeci">const Int32 AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_JA_EN</div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:237</div></div>
 <div class="ttc" id="aclassAiliaSpeech_html"><div class="ttname"><a href="classAiliaSpeech.html">AiliaSpeech</a></div><div class="ttdef"><b>Definition:</b> AiliaSpeech.cs:10</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
