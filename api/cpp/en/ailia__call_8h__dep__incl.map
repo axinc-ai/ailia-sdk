@@ -1,7 +1,8 @@
 <map id="ailia_call.h" name="ailia_call.h">
-<area shape="rect" id="node2" href="$ailia_8h.html" title="inference library " alt="" coords="275,80,337,107"/>
-<area shape="rect" id="node3" href="$ailia__classifier_8h.html" title="object classification library " alt="" coords="5,155,132,181"/>
-<area shape="rect" id="node4" href="$ailia__detector_8h.html" title="AILIA object detection library. " alt="" coords="157,155,279,181"/>
-<area shape="rect" id="node5" href="$ailia__feature__extractor_8h.html" title="AILIA feature extraction library. " alt="" coords="303,155,485,181"/>
-<area shape="rect" id="node6" href="$ailia__pose__estimator_8h.html" title="AILIA library for human pose estimation and human face landmarks extraction. " alt="" coords="509,155,679,181"/>
+<area shape="rect" id="node1" title="user&#45;defined callback" alt="" coords="239,5,321,32"/>
+<area shape="rect" id="node2" href="$ailia_8h.html" title="inference library" alt="" coords="252,80,308,107"/>
+<area shape="rect" id="node3" href="$ailia__classifier_8h.html" title="object classification library" alt="" coords="5,155,120,181"/>
+<area shape="rect" id="node4" href="$ailia__detector_8h.html" title="AILIA object detection library." alt="" coords="145,155,255,181"/>
+<area shape="rect" id="node5" href="$ailia__feature__extractor_8h.html" title="AILIA feature extraction library." alt="" coords="279,155,441,181"/>
+<area shape="rect" id="node6" href="$ailia__pose__estimator_8h.html" title="AILIA library for human pose estimation and human face landmarks extraction." alt="" coords="465,155,617,181"/>
 </map>
