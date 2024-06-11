@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: ailia.AiliaClassifierModel クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.4.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceailia.html">ailia</a></li><li class="navelem"><a class="el" href="classailia_1_1AiliaClassifierModel.html">AiliaClassifierModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="classailia_1_1AiliaClassifierModel-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ailia.AiliaClassifierModel クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+ailia.AiliaClassifierModel の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="classailia_1_1AiliaClassifierModel__inherit__graph.png" border="0" usemap="#aailia_8AiliaClassifierModel_inherit__map" alt="Inheritance graph"/></div>
+<map name="aailia_8AiliaClassifierModel_inherit__map" id="aailia_8AiliaClassifierModel_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,155,169,181"/>
+<area shape="rect" href="classailia_1_1AiliaModel.html" title=" " alt="" coords="46,80,129,107"/>
+<area shape="rect" title=" " alt="" coords="42,5,133,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ailia.AiliaClassifierModel 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="classailia_1_1AiliaClassifierModel__coll__graph.png" border="0" usemap="#aailia_8AiliaClassifierModel_coll__map" alt="Collaboration graph"/></div>
+<map name="aailia_8AiliaClassifierModel_coll__map" id="aailia_8AiliaClassifierModel_coll__map">
+<area shape="rect" title=" " alt="" coords="5,155,169,181"/>
+<area shape="rect" href="classailia_1_1AiliaModel.html" title=" " alt="" coords="46,80,129,107"/>
+<area shape="rect" title=" " alt="" coords="42,5,133,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab31fa97e9cfe3ba7be84cfb3c34d1da8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#ab31fa97e9cfe3ba7be84cfb3c34d1da8">Settings</a> (uint set_format, uint set_channel, uint set_range)</td></tr>
+<tr class="memdesc:ab31fa97e9cfe3ba7be84cfb3c34d1da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデル設定を行います。  <a href="classailia_1_1AiliaClassifierModel.html#ab31fa97e9cfe3ba7be84cfb3c34d1da8">[詳解]</a><br /></td></tr>
+<tr class="separator:ab31fa97e9cfe3ba7be84cfb3c34d1da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af2ac34ec28ab2a624e2fa91764bbfc"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#a4af2ac34ec28ab2a624e2fa91764bbfc">OpenFile</a> (string prototxt, string model_path)</td></tr>
+<tr class="memdesc:a4af2ac34ec28ab2a624e2fa91764bbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルファイルからネットワークオブジェクトを作成します。  <a href="classailia_1_1AiliaClassifierModel.html#a4af2ac34ec28ab2a624e2fa91764bbfc">[詳解]</a><br /></td></tr>
+<tr class="separator:a4af2ac34ec28ab2a624e2fa91764bbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62cf9d560d2f5276111d77d09b33796"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#ac62cf9d560d2f5276111d77d09b33796">OpenEx</a> (<a class="el" href="structailia_1_1Ailia_1_1ailiaFileCallback.html">Ailia.ailiaFileCallback</a> callback, IntPtr arg1, IntPtr arg2)</td></tr>
+<tr class="memdesc:ac62cf9d560d2f5276111d77d09b33796"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルコールバックからネットワークオブジェクトを作成します。  <a href="classailia_1_1AiliaClassifierModel.html#ac62cf9d560d2f5276111d77d09b33796">[詳解]</a><br /></td></tr>
+<tr class="separator:ac62cf9d560d2f5276111d77d09b33796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1669dcc741e9c238da064ff4a3e67030"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#a1669dcc741e9c238da064ff4a3e67030">OpenMem</a> (byte[] prototxt_buf, byte[] model_buf)</td></tr>
+<tr class="memdesc:a1669dcc741e9c238da064ff4a3e67030"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリからネットワークオブジェクトを作成します。  <a href="classailia_1_1AiliaClassifierModel.html#a1669dcc741e9c238da064ff4a3e67030">[詳解]</a><br /></td></tr>
+<tr class="separator:a1669dcc741e9c238da064ff4a3e67030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff58ea312eb39af8135586bd8846cc8"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classailia_1_1AiliaClassifier_1_1AILIAClassifierClass.html">AiliaClassifier.AILIAClassifierClass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#a1ff58ea312eb39af8135586bd8846cc8">ComputeFromImage</a> (Color32[] image, int image_width, int image_height, uint max_class_count)</td></tr>
+<tr class="memdesc:a1ff58ea312eb39af8135586bd8846cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像から物体識別を行います。  <a href="classailia_1_1AiliaClassifierModel.html#a1ff58ea312eb39af8135586bd8846cc8">[詳解]</a><br /></td></tr>
+<tr class="separator:a1ff58ea312eb39af8135586bd8846cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedcd0917e716bc79caad33f734366aaf"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classailia_1_1AiliaClassifier_1_1AILIAClassifierClass.html">AiliaClassifier.AILIAClassifierClass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#aedcd0917e716bc79caad33f734366aaf">ComputeFromImageB2T</a> (Color32[] image, int image_width, int image_height, uint max_class_count)</td></tr>
+<tr class="memdesc:aedcd0917e716bc79caad33f734366aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">上下反転画像から物体識別を行います。  <a href="classailia_1_1AiliaClassifierModel.html#aedcd0917e716bc79caad33f734366aaf">[詳解]</a><br /></td></tr>
+<tr class="separator:aedcd0917e716bc79caad33f734366aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb646aa160b99c6f24e587b9d448de5"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#a8cb646aa160b99c6f24e587b9d448de5">Close</a> ()</td></tr>
+<tr class="memdesc:a8cb646aa160b99c6f24e587b9d448de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別オブジェクトを破棄します。  <a href="classailia_1_1AiliaClassifierModel.html#a8cb646aa160b99c6f24e587b9d448de5">[詳解]</a><br /></td></tr>
+<tr class="separator:a8cb646aa160b99c6f24e587b9d448de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386f3d615bda9b1ef1de0423d711cd03"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#a386f3d615bda9b1ef1de0423d711cd03">Dispose</a> ()</td></tr>
+<tr class="memdesc:a386f3d615bda9b1ef1de0423d711cd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースを解放します。  <a href="classailia_1_1AiliaClassifierModel.html#a386f3d615bda9b1ef1de0423d711cd03">[詳解]</a><br /></td></tr>
+<tr class="separator:a386f3d615bda9b1ef1de0423d711cd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classailia_1_1AiliaModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classailia_1_1AiliaModel')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classailia_1_1AiliaModel.html">ailia.AiliaModel</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a0e8d7d6030d983cd4bea1e2df8a809ae inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a0e8d7d6030d983cd4bea1e2df8a809ae">Environment</a> (int type)</td></tr>
+<tr class="memdesc:a0e8d7d6030d983cd4bea1e2df8a809ae inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した種類の計算環境を選択します。  <a href="classailia_1_1AiliaModel.html#a0e8d7d6030d983cd4bea1e2df8a809ae">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e8d7d6030d983cd4bea1e2df8a809ae inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003a25552b940e647ad1a4989c617f35 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a003a25552b940e647ad1a4989c617f35">EnvironmentName</a> ()</td></tr>
+<tr class="memdesc:a003a25552b940e647ad1a4989c617f35 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">選択された環境名を表示します。  <a href="classailia_1_1AiliaModel.html#a003a25552b940e647ad1a4989c617f35">[詳解]</a><br /></td></tr>
+<tr class="separator:a003a25552b940e647ad1a4989c617f35 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f23d1d4c3c64d9bc970676bd50bf8eb inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a7f23d1d4c3c64d9bc970676bd50bf8eb">GetEnvironmentCount</a> ()</td></tr>
+<tr class="memdesc:a7f23d1d4c3c64d9bc970676bd50bf8eb inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">利用可能な計算環境(CPU, GPU)の数を取得します。  <a href="classailia_1_1AiliaModel.html#a7f23d1d4c3c64d9bc970676bd50bf8eb">[詳解]</a><br /></td></tr>
+<tr class="separator:a7f23d1d4c3c64d9bc970676bd50bf8eb inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3717c0109bca44bff9027df74745b315 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classailia_1_1Ailia_1_1AILIAEnvironment.html">Ailia.AILIAEnvironment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a3717c0109bca44bff9027df74745b315">GetEnvironment</a> (int idx)</td></tr>
+<tr class="memdesc:a3717c0109bca44bff9027df74745b315 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したインデックスの計算環境を取得します。  <a href="classailia_1_1AiliaModel.html#a3717c0109bca44bff9027df74745b315">[詳解]</a><br /></td></tr>
+<tr class="separator:a3717c0109bca44bff9027df74745b315 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408b16cbdedaeb5ff8fbcd02932393e8 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a408b16cbdedaeb5ff8fbcd02932393e8">SelectEnvironment</a> (int idx)</td></tr>
+<tr class="memdesc:a408b16cbdedaeb5ff8fbcd02932393e8 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">計算環境を選択します。  <a href="classailia_1_1AiliaModel.html#a408b16cbdedaeb5ff8fbcd02932393e8">[詳解]</a><br /></td></tr>
+<tr class="separator:a408b16cbdedaeb5ff8fbcd02932393e8 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d5abe0b15c766f7fb92b558c21802c inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classailia_1_1Ailia_1_1AILIAEnvironment.html">Ailia.AILIAEnvironment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#af6d5abe0b15c766f7fb92b558c21802c">GetSelectedEnvironment</a> ()</td></tr>
+<tr class="memdesc:af6d5abe0b15c766f7fb92b558c21802c inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">選択された計算環境を取得します。  <a href="classailia_1_1AiliaModel.html#af6d5abe0b15c766f7fb92b558c21802c">[詳解]</a><br /></td></tr>
+<tr class="separator:af6d5abe0b15c766f7fb92b558c21802c inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ad9768aaffeeda13e00fe913120121 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#ab9ad9768aaffeeda13e00fe913120121">SetMemoryMode</a> (uint set_memory_mode)</td></tr>
+<tr class="memdesc:ab9ad9768aaffeeda13e00fe913120121 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリモードを設定します  <a href="classailia_1_1AiliaModel.html#ab9ad9768aaffeeda13e00fe913120121">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9ad9768aaffeeda13e00fe913120121 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc20d526f3ff8050b896bcd5f57a2fa8 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#abc20d526f3ff8050b896bcd5f57a2fa8">DisableLayerFusion</a> ()</td></tr>
+<tr class="memdesc:abc20d526f3ff8050b896bcd5f57a2fa8 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">レイヤー統合による高速化を無効化します。  <a href="classailia_1_1AiliaModel.html#abc20d526f3ff8050b896bcd5f57a2fa8">[詳解]</a><br /></td></tr>
+<tr class="separator:abc20d526f3ff8050b896bcd5f57a2fa8 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8161d4b0896ee74b7fa561c3fd81839 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#ab8161d4b0896ee74b7fa561c3fd81839">Predict</a> (float[] output_data, float[] input_data)</td></tr>
+<tr class="memdesc:ab8161d4b0896ee74b7fa561c3fd81839 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論を行い推論結果を取得します。  <a href="classailia_1_1AiliaModel.html#ab8161d4b0896ee74b7fa561c3fd81839">[詳解]</a><br /></td></tr>
+<tr class="separator:ab8161d4b0896ee74b7fa561c3fd81839 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dbcac0d62324a2bc59704697556659d inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a3dbcac0d62324a2bc59704697556659d">GetInputShape</a> ()</td></tr>
+<tr class="memdesc:a3dbcac0d62324a2bc59704697556659d inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の入力データの形状を取得します。  <a href="classailia_1_1AiliaModel.html#a3dbcac0d62324a2bc59704697556659d">[詳解]</a><br /></td></tr>
+<tr class="separator:a3dbcac0d62324a2bc59704697556659d inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f108cfb6dc3a7d98a4a1edcdb40717 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#aa0f108cfb6dc3a7d98a4a1edcdb40717">GetInputShapeND</a> ()</td></tr>
+<tr class="memdesc:aa0f108cfb6dc3a7d98a4a1edcdb40717 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の入力データの形状を取得します。  <a href="classailia_1_1AiliaModel.html#aa0f108cfb6dc3a7d98a4a1edcdb40717">[詳解]</a><br /></td></tr>
+<tr class="separator:aa0f108cfb6dc3a7d98a4a1edcdb40717 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a204e9bb2214deb17ad261addae09140a inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a204e9bb2214deb17ad261addae09140a">SetInputShape</a> (<a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a> shape)</td></tr>
+<tr class="memdesc:a204e9bb2214deb17ad261addae09140a inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の入力データの形状を設定します。  <a href="classailia_1_1AiliaModel.html#a204e9bb2214deb17ad261addae09140a">[詳解]</a><br /></td></tr>
+<tr class="separator:a204e9bb2214deb17ad261addae09140a inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb60656121857dcc2173e65f07c1f1d2 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#abb60656121857dcc2173e65f07c1f1d2">SetInputShapeND</a> (uint[] shape, int dim)</td></tr>
+<tr class="memdesc:abb60656121857dcc2173e65f07c1f1d2 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の入力データの形状を変更します。  <a href="classailia_1_1AiliaModel.html#abb60656121857dcc2173e65f07c1f1d2">[詳解]</a><br /></td></tr>
+<tr class="separator:abb60656121857dcc2173e65f07c1f1d2 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976541f08077a8b8ca7becb468e64fbd inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a976541f08077a8b8ca7becb468e64fbd">GetOutputShape</a> ()</td></tr>
+<tr class="memdesc:a976541f08077a8b8ca7becb468e64fbd inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の出力データの形状を取得します。  <a href="classailia_1_1AiliaModel.html#a976541f08077a8b8ca7becb468e64fbd">[詳解]</a><br /></td></tr>
+<tr class="separator:a976541f08077a8b8ca7becb468e64fbd inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1850430af9870a0c43fb00a08713c4ef inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a1850430af9870a0c43fb00a08713c4ef">GetOutputShapeND</a> ()</td></tr>
+<tr class="memdesc:a1850430af9870a0c43fb00a08713c4ef inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の出力データの形状を取得します。  <a href="classailia_1_1AiliaModel.html#a1850430af9870a0c43fb00a08713c4ef">[詳解]</a><br /></td></tr>
+<tr class="separator:a1850430af9870a0c43fb00a08713c4ef inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30c34642b06253c7d5072b447e1b5e6 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#ad30c34642b06253c7d5072b447e1b5e6">GetBlobShape</a> (string layer_name)</td></tr>
+<tr class="memdesc:ad30c34642b06253c7d5072b447e1b5e6 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の内部データ(Blob)の形状（レイヤー形式）を取得します。（Obsolete）  <a href="classailia_1_1AiliaModel.html#ad30c34642b06253c7d5072b447e1b5e6">[詳解]</a><br /></td></tr>
+<tr class="separator:ad30c34642b06253c7d5072b447e1b5e6 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1921cc01406db1f54d639affe46f3edb inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a1921cc01406db1f54d639affe46f3edb">FindBlobIndexByName</a> (string name)</td></tr>
+<tr class="memdesc:a1921cc01406db1f54d639affe46f3edb inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の内部データ(Blob)のインデックスを名前で探し取得します。  <a href="classailia_1_1AiliaModel.html#a1921cc01406db1f54d639affe46f3edb">[詳解]</a><br /></td></tr>
+<tr class="separator:a1921cc01406db1f54d639affe46f3edb inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4aeb7287b8647b71de9e551ee36d485 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#ad4aeb7287b8647b71de9e551ee36d485">GetBlobShape</a> (uint idx)</td></tr>
+<tr class="memdesc:ad4aeb7287b8647b71de9e551ee36d485 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の内部データ(Blob)の形状（レイヤー形式）を取得します。  <a href="classailia_1_1AiliaModel.html#ad4aeb7287b8647b71de9e551ee36d485">[詳解]</a><br /></td></tr>
+<tr class="separator:ad4aeb7287b8647b71de9e551ee36d485 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ef1abad06689a477557a66f0e2b92e inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a63ef1abad06689a477557a66f0e2b92e">GetBlobShape</a> (int idx)</td></tr>
+<tr class="separator:a63ef1abad06689a477557a66f0e2b92e inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484adca62958e651a044583496ce3703 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a484adca62958e651a044583496ce3703">GetBlobData</a> (float[] output_data, uint idx)</td></tr>
+<tr class="memdesc:a484adca62958e651a044583496ce3703 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">推論時の内部データ(Blob)を取得します。  <a href="classailia_1_1AiliaModel.html#a484adca62958e651a044583496ce3703">[詳解]</a><br /></td></tr>
+<tr class="separator:a484adca62958e651a044583496ce3703 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b8404872a4d85c8e073e64db6afbf2f inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a9b8404872a4d85c8e073e64db6afbf2f">GetBlobData</a> (float[] output_data, int idx)</td></tr>
+<tr class="separator:a9b8404872a4d85c8e073e64db6afbf2f inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462a204337ce4c6bd85fd97da0e07d65 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a462a204337ce4c6bd85fd97da0e07d65">SetInputBlobData</a> (float[] input_data, uint idx)</td></tr>
+<tr class="memdesc:a462a204337ce4c6bd85fd97da0e07d65 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したBlobに入力データを設定します。  <a href="classailia_1_1AiliaModel.html#a462a204337ce4c6bd85fd97da0e07d65">[詳解]</a><br /></td></tr>
+<tr class="separator:a462a204337ce4c6bd85fd97da0e07d65 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70431141f35b62d24c8594f0ffb9d029 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a70431141f35b62d24c8594f0ffb9d029">SetInputBlobData</a> (float[] input_data, int idx)</td></tr>
+<tr class="separator:a70431141f35b62d24c8594f0ffb9d029 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd126ee1e6abeb9baa6af89d718d4177 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#afd126ee1e6abeb9baa6af89d718d4177">SetInputBlobShape</a> (<a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a> shape, uint idx)</td></tr>
+<tr class="memdesc:afd126ee1e6abeb9baa6af89d718d4177 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した入力データ(Blob)の形式を設定します。(4次元以下)  <a href="classailia_1_1AiliaModel.html#afd126ee1e6abeb9baa6af89d718d4177">[詳解]</a><br /></td></tr>
+<tr class="separator:afd126ee1e6abeb9baa6af89d718d4177 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d53c480b60c3130ec96170bb79f0c2 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a09d53c480b60c3130ec96170bb79f0c2">SetInputBlobShape</a> (<a class="el" href="classailia_1_1Ailia_1_1AILIAShape.html">Ailia.AILIAShape</a> shape, int idx)</td></tr>
+<tr class="separator:a09d53c480b60c3130ec96170bb79f0c2 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac1ed73ad736cee02b08e1faa1417b4 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a7ac1ed73ad736cee02b08e1faa1417b4">SetInputBlobShapeND</a> (uint[] shape, uint dim, uint idx)</td></tr>
+<tr class="memdesc:a7ac1ed73ad736cee02b08e1faa1417b4 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力データ(Blob)の形式を設定します。(5次元以上)  <a href="classailia_1_1AiliaModel.html#a7ac1ed73ad736cee02b08e1faa1417b4">[詳解]</a><br /></td></tr>
+<tr class="separator:a7ac1ed73ad736cee02b08e1faa1417b4 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe3a18d025a7df7b6ab74b3f517c283 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a3fe3a18d025a7df7b6ab74b3f517c283">SetInputBlobShapeND</a> (uint[] shape, int dim, int idx)</td></tr>
+<tr class="separator:a3fe3a18d025a7df7b6ab74b3f517c283 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacb01c83f6f4d0b8f69d64eecf70095 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#acacb01c83f6f4d0b8f69d64eecf70095">GetInputBlobList</a> ()</td></tr>
+<tr class="memdesc:acacb01c83f6f4d0b8f69d64eecf70095 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力データ(Blob)のインデックスのリストを取得します。  <a href="classailia_1_1AiliaModel.html#acacb01c83f6f4d0b8f69d64eecf70095">[詳解]</a><br /></td></tr>
+<tr class="separator:acacb01c83f6f4d0b8f69d64eecf70095 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b396561f943927f444a372c647de55 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a97b396561f943927f444a372c647de55">GetOutputBlobList</a> ()</td></tr>
+<tr class="memdesc:a97b396561f943927f444a372c647de55 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力データ(Blob)のインデックスのリストを取得します。  <a href="classailia_1_1AiliaModel.html#a97b396561f943927f444a372c647de55">[詳解]</a><br /></td></tr>
+<tr class="separator:a97b396561f943927f444a372c647de55 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863c82dbea41193af549e06c6696ebac inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a863c82dbea41193af549e06c6696ebac">CopyBlobData</a> (uint dst_blob_idx, uint src_blob_idx, <a class="el" href="classailia_1_1AiliaModel.html">AiliaModel</a> src_model=null)</td></tr>
+<tr class="memdesc:a863c82dbea41193af549e06c6696ebac inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したBlob間でデータをコピーします  <a href="classailia_1_1AiliaModel.html#a863c82dbea41193af549e06c6696ebac">[詳解]</a><br /></td></tr>
+<tr class="separator:a863c82dbea41193af549e06c6696ebac inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9b1cd650ee77b04cba43ed6ae86c97 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a7e9b1cd650ee77b04cba43ed6ae86c97">Update</a> ()</td></tr>
+<tr class="memdesc:a7e9b1cd650ee77b04cba43ed6ae86c97 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">事前に入力したデータで推論を行います。  <a href="classailia_1_1AiliaModel.html#a7e9b1cd650ee77b04cba43ed6ae86c97">[詳解]</a><br /></td></tr>
+<tr class="separator:a7e9b1cd650ee77b04cba43ed6ae86c97 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf806db29d4bdfd0d8a4f7e3c5c7a822 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#aaf806db29d4bdfd0d8a4f7e3c5c7a822">GetStatusString</a> (int status)</td></tr>
+<tr class="memdesc:aaf806db29d4bdfd0d8a4f7e3c5c7a822 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータスコードに対応する文字列を返します。  <a href="classailia_1_1AiliaModel.html#aaf806db29d4bdfd0d8a4f7e3c5c7a822">[詳解]</a><br /></td></tr>
+<tr class="separator:aaf806db29d4bdfd0d8a4f7e3c5c7a822 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec929d50044ae7c3d7881fddffaa2e15 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#aec929d50044ae7c3d7881fddffaa2e15">GetErrorDetail</a> ()</td></tr>
+<tr class="memdesc:aec929d50044ae7c3d7881fddffaa2e15 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を返します。  <a href="classailia_1_1AiliaModel.html#aec929d50044ae7c3d7881fddffaa2e15">[詳解]</a><br /></td></tr>
+<tr class="separator:aec929d50044ae7c3d7881fddffaa2e15 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba4af10eca313a38680548324cc44a9 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#afba4af10eca313a38680548324cc44a9">SetProfileMode</a> (uint profile_mode)</td></tr>
+<tr class="memdesc:afba4af10eca313a38680548324cc44a9 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロファイルモードを有効にします。  <a href="classailia_1_1AiliaModel.html#afba4af10eca313a38680548324cc44a9">[詳解]</a><br /></td></tr>
+<tr class="separator:afba4af10eca313a38680548324cc44a9 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70cbd792cc314f497206173fe4c09e06 inherit pub_methods_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a70cbd792cc314f497206173fe4c09e06">GetSummary</a> ()</td></tr>
+<tr class="memdesc:a70cbd792cc314f497206173fe4c09e06 inherit pub_methods_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワーク情報およびプロファイル結果を取得します。  <a href="classailia_1_1AiliaModel.html#a70cbd792cc314f497206173fe4c09e06">[詳解]</a><br /></td></tr>
+<tr class="separator:a70cbd792cc314f497206173fe4c09e06 inherit pub_methods_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad40acf5a42640b32efa5cc2b2dd92165"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaClassifierModel.html#ad40acf5a42640b32efa5cc2b2dd92165">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:ad40acf5a42640b32efa5cc2b2dd92165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_classailia_1_1AiliaModel"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classailia_1_1AiliaModel')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classailia_1_1AiliaModel.html">ailia.AiliaModel</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a830ceb95c7d50499724ab3a0eacfd4f2 inherit pro_attribs_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#a830ceb95c7d50499724ab3a0eacfd4f2">ailia</a> = IntPtr.Zero</td></tr>
+<tr class="separator:a830ceb95c7d50499724ab3a0eacfd4f2 inherit pro_attribs_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8fa978d679ea8a7dfc27fda7db77b5 inherit pro_attribs_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#ade8fa978d679ea8a7dfc27fda7db77b5">logging</a> = true</td></tr>
+<tr class="separator:ade8fa978d679ea8a7dfc27fda7db77b5 inherit pro_attribs_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_classailia_1_1AiliaModel"><td colspan="2" onclick="javascript:toggleInherit('properties_classailia_1_1AiliaModel')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classailia_1_1AiliaModel.html">ailia.AiliaModel</a> に属する継承プロパティ</td></tr>
+<tr class="memitem:ad3eb6ccead4bfb02b206d09f02e18e01 inherit properties_classailia_1_1AiliaModel"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaModel.html#ad3eb6ccead4bfb02b206d09f02e18e01">Status</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:ad3eb6ccead4bfb02b206d09f02e18e01 inherit properties_classailia_1_1AiliaModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータスコード @detail ライブラリのステータスコードを取得します。  <a href="classailia_1_1AiliaModel.html#ad3eb6ccead4bfb02b206d09f02e18e01">[詳解]</a><br /></td></tr>
+<tr class="separator:ad3eb6ccead4bfb02b206d09f02e18e01 inherit properties_classailia_1_1AiliaModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8cb646aa160b99c6f24e587b9d448de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb646aa160b99c6f24e587b9d448de5">&#9670;&nbsp;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void ailia.AiliaClassifierModel.Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>識別オブジェクトを破棄します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>なし。</dd></dl>
+<p><br  />
+ 識別オブジェクトを破棄します。 </p>
+
+<p><a class="el" href="classailia_1_1AiliaModel.html#a76e47f48958ac06b6574fe372910da46">ailia.AiliaModel</a>を再実装しています。</p>
+<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">if</span>(ailia_classifier!=IntPtr.Zero){</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            AiliaClassifier.ailiaDestroyClassifier(ailia_classifier);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            ailia_classifier=IntPtr.Zero;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        base.Close();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1ff58ea312eb39af8135586bd8846cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff58ea312eb39af8135586bd8846cc8">&#9670;&nbsp;</a></span>ComputeFromImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classailia_1_1AiliaClassifier_1_1AILIAClassifierClass.html">AiliaClassifier.AILIAClassifierClass</a>&gt; ailia.AiliaClassifierModel.ComputeFromImage </td>
+          <td>(</td>
+          <td class="paramtype">Color32[]&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>image_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>image_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>max_class_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>画像から物体識別を行います。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>検出対象画像 </td></tr>
+    <tr><td class="paramname">image_width</td><td>画像幅 </td></tr>
+    <tr><td class="paramname">image_height</td><td>画像高さ </td></tr>
+    <tr><td class="paramname">max_class_count</td><td>認識結果の最大個数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>識別結果のオブジェクトのリスト。</dd></dl>
+<p>画像から物体識別を行いリストを返します。 </p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                                                                                                                              {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">return</span> ComputeFromImageWithFormat(image,image_width,image_height,max_class_count,AiliaFormat.AILIA_IMAGE_FORMAT_RGBA);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aedcd0917e716bc79caad33f734366aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedcd0917e716bc79caad33f734366aaf">&#9670;&nbsp;</a></span>ComputeFromImageB2T()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classailia_1_1AiliaClassifier_1_1AILIAClassifierClass.html">AiliaClassifier.AILIAClassifierClass</a>&gt; ailia.AiliaClassifierModel.ComputeFromImageB2T </td>
+          <td>(</td>
+          <td class="paramtype">Color32[]&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>image_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>image_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>max_class_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>上下反転画像から物体識別を行います。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>検出対象画像 </td></tr>
+    <tr><td class="paramname">image_width</td><td>画像幅 </td></tr>
+    <tr><td class="paramname">image_height</td><td>画像高さ </td></tr>
+    <tr><td class="paramname">max_class_count</td><td>認識結果の最大個数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>識別結果のオブジェクトのリスト。</dd></dl>
+<p>画像から物体識別を行いリストを返します。 </p>
+<div class="fragment"><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                                                                                                                                                 {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">return</span> ComputeFromImageWithFormat(image,image_width,image_height,max_class_count,AiliaFormat.AILIA_IMAGE_FORMAT_RGBA_B2T);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a386f3d615bda9b1ef1de0423d711cd03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386f3d615bda9b1ef1de0423d711cd03">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void ailia.AiliaClassifierModel.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リソースを解放します。 </p>
+
+<p><a class="el" href="classailia_1_1AiliaModel.html#ad720098fc4e80dc0e55d388b82cdfe48">ailia.AiliaModel</a>を再実装しています。</p>
+<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="classailia_1_1AiliaClassifierModel.html#a386f3d615bda9b1ef1de0423d711cd03">Dispose</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
+<div class="ttc" id="aclassailia_1_1AiliaClassifierModel_html_a386f3d615bda9b1ef1de0423d711cd03"><div class="ttname"><a href="classailia_1_1AiliaClassifierModel.html#a386f3d615bda9b1ef1de0423d711cd03">ailia.AiliaClassifierModel.Dispose</a></div><div class="ttdeci">override void Dispose()</div><div class="ttdoc">リソースを解放します。</div><div class="ttdef"><b>Definition:</b> AiliaClassifierModel.cs:340</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad40acf5a42640b32efa5cc2b2dd92165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40acf5a42640b32efa5cc2b2dd92165">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void ailia.AiliaClassifierModel.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disposing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classailia_1_1AiliaModel.html#aa46808888167b8e925eae3071e4b9440">ailia.AiliaModel</a>を再実装しています。</p>
+<div class="fragment"><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">if</span> (disposing){</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="comment">// release managed resource</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="classailia_1_1AiliaClassifierModel.html#a8cb646aa160b99c6f24e587b9d448de5">Close</a>(); <span class="comment">// release unmanaged resource</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        base.Dispose(disposing);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
+<div class="ttc" id="aclassailia_1_1AiliaClassifierModel_html_a8cb646aa160b99c6f24e587b9d448de5"><div class="ttname"><a href="classailia_1_1AiliaClassifierModel.html#a8cb646aa160b99c6f24e587b9d448de5">ailia.AiliaClassifierModel.Close</a></div><div class="ttdeci">override void Close()</div><div class="ttdoc">識別オブジェクトを破棄します。</div><div class="ttdef"><b>Definition:</b> AiliaClassifierModel.cs:325</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac62cf9d560d2f5276111d77d09b33796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62cf9d560d2f5276111d77d09b33796">&#9670;&nbsp;</a></span>OpenEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool ailia.AiliaClassifierModel.OpenEx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structailia_1_1Ailia_1_1ailiaFileCallback.html">Ailia.ailiaFileCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>arg2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルコールバックからネットワークオブジェクトを作成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>ユーザ定義ファイルアクセスコールバック関数構造体 </td></tr>
+    <tr><td class="paramname">alg1</td><td>AILIA_USER_API_FOPEN に通知される引数ポインタ </td></tr>
+    <tr><td class="paramname">alg2</td><td>AILIA_USER_API_FOPEN に通知される引数ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合はtrue、失敗した場合はfalseを返す。</dd></dl>
+<p>　ファイルコールバックからネットワークオブジェクトを作成します。 </p>
+
+<p><a class="el" href="classailia_1_1AiliaModel.html#a352291f1d09ffe23c99a67444d34beef">ailia.AiliaModel</a>を再実装しています。</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                                                                         {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classailia_1_1AiliaClassifierModel.html#a8cb646aa160b99c6f24e587b9d448de5">Close</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">bool</span> status=base.OpenEx(callback,arg1,arg2);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span>(status==<span class="keyword">false</span>){</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classailia_1_1AiliaModel.html#ade8fa978d679ea8a7dfc27fda7db77b5">logging</a>){</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaModelOpenEx failed&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> OpenClassifier();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="ttc" id="aclassailia_1_1AiliaModel_html_ade8fa978d679ea8a7dfc27fda7db77b5"><div class="ttname"><a href="classailia_1_1AiliaModel.html#ade8fa978d679ea8a7dfc27fda7db77b5">ailia.AiliaModel.logging</a></div><div class="ttdeci">bool logging</div><div class="ttdef"><b>Definition:</b> AiliaModel.cs:33</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4af2ac34ec28ab2a624e2fa91764bbfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af2ac34ec28ab2a624e2fa91764bbfc">&#9670;&nbsp;</a></span>OpenFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool ailia.AiliaClassifierModel.OpenFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>prototxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>model_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モデルファイルからネットワークオブジェクトを作成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prototxt</td><td>prototxtファイルのパス名(MBSC or UTF16) </td></tr>
+    <tr><td class="paramname">model_path</td><td>protobuf/onnxファイルのパス名(MBSC or UTF16) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合はtrue、失敗した場合はfalseを返す。</dd></dl>
+<p><br  />
+ モデルファイルからネットワークオブジェクトを作成します。</p>
+<ul>
+<li></li>
+</ul>
+
+<p><a class="el" href="classailia_1_1AiliaModel.html#abbbb188a93efc6b32d51dd4b3964efcf">ailia.AiliaModel</a>を再実装しています。</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classailia_1_1AiliaClassifierModel.html#a8cb646aa160b99c6f24e587b9d448de5">Close</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">bool</span> status=base.OpenFile(prototxt,model_path);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span>(status==<span class="keyword">false</span>){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classailia_1_1AiliaModel.html#ade8fa978d679ea8a7dfc27fda7db77b5">logging</a>){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaModelOpenFile failed&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> OpenClassifier();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1669dcc741e9c238da064ff4a3e67030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1669dcc741e9c238da064ff4a3e67030">&#9670;&nbsp;</a></span>OpenMem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool ailia.AiliaClassifierModel.OpenMem </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>prototxt_buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>model_buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メモリからネットワークオブジェクトを作成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prototxt</td><td>prototxtファイルのデータへのポインタ </td></tr>
+    <tr><td class="paramname">model_path</td><td>protobuf/onnxファイルのデータへのポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合はtrue、失敗した場合はfalseを返す。</dd></dl>
+<p><br  />
+ メモリからネットワークオブジェクトを作成します。 </p>
+
+<p><a class="el" href="classailia_1_1AiliaModel.html#a6a9b924b5e5bac25e8fb7f978630b97d">ailia.AiliaModel</a>を再実装しています。</p>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="classailia_1_1AiliaClassifierModel.html#a8cb646aa160b99c6f24e587b9d448de5">Close</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">bool</span> status=base.OpenMem(prototxt_buf,model_buf);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span>(status==<span class="keyword">false</span>){</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classailia_1_1AiliaModel.html#ade8fa978d679ea8a7dfc27fda7db77b5">logging</a>){</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaModelOpenMem failed&quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> OpenClassifier();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab31fa97e9cfe3ba7be84cfb3c34d1da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31fa97e9cfe3ba7be84cfb3c34d1da8">&#9670;&nbsp;</a></span>Settings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ailia.AiliaClassifierModel.Settings </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>set_format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>set_channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>set_range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モデル設定を行います。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set_format</td><td>ネットワークの画像フォーマット （AILIA_NETWORK_IMAGE_FORMAT_*） </td></tr>
+    <tr><td class="paramname">set_channel</td><td>ネットワークの画像チャンネル (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">set_range</td><td>ネットワークの画像レンジ （AILIA_NETWORK_IMAGE_RANGE_*） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合 true を返す。</dd></dl>
+<p>必要な画像の前処理の設定を行います。 </p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        format=set_format;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        channel=set_channel;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        range=set_range;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="AiliaClassifierModel_8cs.html">AiliaClassifierModel.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
