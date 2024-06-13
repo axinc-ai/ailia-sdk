@@ -85,10 +85,10 @@ ailia AI VoiceのAPIの概要</h1>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]){</div>
 <div class="line">    <a class="code" href="struct__AILIAVoiceApiCallback.html">AILIAVoiceApiCallback</a> callback = ailiaVoiceUtilGetCallback();</div>
 <div class="line"> </div>
-<div class="line">    printf(<span class="stringliteral">&quot;Usage : ailia_voice_sample [tacotron2/gpt-sovits] [input_text] [en/ja]\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Usage : ailia_voice_sample [tacotron2/gpt-sovits] [input_text]\n&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> * input_text = u8<span class="stringliteral">&quot;こんにちは。今日は新しいAIエンジンであるアイリアSDKを紹介します。&quot;</span>;</div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> * lang = <span class="stringliteral">&quot;ja&quot;</span>;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> * input_text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> * lang = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> * model = <span class="stringliteral">&quot;tacotron2&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (argc &gt;= 2){</div>
@@ -101,12 +101,13 @@ ailia AI VoiceのAPIの概要</h1>
 <div class="line">    <span class="keywordflow">if</span> (argc &gt;= 3){</div>
 <div class="line">        input_text = argv[2];</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">if</span> (argc &gt;= 4){</div>
-<div class="line">        lang = argv[3];</div>
-<div class="line">        <span class="keywordflow">if</span> (!(strcmp(lang, <span class="stringliteral">&quot;en&quot;</span>) == 0 || strcmp(lang, <span class="stringliteral">&quot;ja&quot;</span>)==0)){</div>
-<div class="line">            printf(<span class="stringliteral">&quot;lang must be en or ja\n&quot;</span>);</div>
-<div class="line">            <span class="keywordflow">return</span> -1;</div>
-<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (strcmp(model, <span class="stringliteral">&quot;tacotron2&quot;</span>) == 0 ){</div>
+<div class="line">        input_text = u8<span class="stringliteral">&quot;Hello world.&quot;</span>;</div>
+<div class="line">        lang = <span class="stringliteral">&quot;en&quot;</span>;</div>
+<div class="line">    }<span class="keywordflow">else</span>{</div>
+<div class="line">        input_text = u8<span class="stringliteral">&quot;こんにちは。今日は新しいAIエンジンであるアイリアSDKを紹介します。&quot;</span>;</div>
+<div class="line">        lang = <span class="stringliteral">&quot;ja&quot;</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    printf(<span class="stringliteral">&quot;Model : %s\n&quot;</span>, model);</div>
@@ -128,11 +129,7 @@ ailia AI VoiceのAPIの概要</h1>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">if</span> (strcmp(model, <span class="stringliteral">&quot;tacotron2&quot;</span>) == 0){</div>
-<div class="line">        <span class="keywordflow">if</span> (strcmp(lang, <span class="stringliteral">&quot;ja&quot;</span>) == 0){</div>
-<div class="line">            status = <a class="code" href="ailia__voice_8h.html#ac7875fc17c0e6d575cf39122d082fa7d">ailiaVoiceOpenModelFileA</a>(net, <span class="stringliteral">&quot;../onnx/tsukuyomi/encoder.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/tsukuyomi/decoder_iter.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/tsukuyomi/postnet.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/tsukuyomi/waveglow.onnx&quot;</span>, NULL, <a class="code" href="ailia__voice_8h.html#a85d9bc92f2626c22f4d4df164d259fc2">AILIA_VOICE_MODEL_TYPE_TACOTRON2</a>, <a class="code" href="ailia__voice_8h.html#afdc53effb97f51637b01ecaa426f1cf8">AILIA_VOICE_CLEANER_TYPE_BASIC</a>);</div>
-<div class="line">        }<span class="keywordflow">else</span>{</div>
-<div class="line">            status = <a class="code" href="ailia__voice_8h.html#ac7875fc17c0e6d575cf39122d082fa7d">ailiaVoiceOpenModelFileA</a>(net, <span class="stringliteral">&quot;../onnx/nvidia/encoder.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/nvidia/decoder_iter.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/nvidia/postnet.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/nvidia/waveglow.onnx&quot;</span>, NULL, <a class="code" href="ailia__voice_8h.html#a85d9bc92f2626c22f4d4df164d259fc2">AILIA_VOICE_MODEL_TYPE_TACOTRON2</a>, <a class="code" href="ailia__voice_8h.html#afdc53effb97f51637b01ecaa426f1cf8">AILIA_VOICE_CLEANER_TYPE_BASIC</a>);</div>
-<div class="line">        }</div>
+<div class="line">        status = <a class="code" href="ailia__voice_8h.html#ac7875fc17c0e6d575cf39122d082fa7d">ailiaVoiceOpenModelFileA</a>(net, <span class="stringliteral">&quot;../onnx/nvidia/encoder.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/nvidia/decoder_iter.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/nvidia/postnet.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/nvidia/waveglow.onnx&quot;</span>, NULL, <a class="code" href="ailia__voice_8h.html#a85d9bc92f2626c22f4d4df164d259fc2">AILIA_VOICE_MODEL_TYPE_TACOTRON2</a>, <a class="code" href="ailia__voice_8h.html#afdc53effb97f51637b01ecaa426f1cf8">AILIA_VOICE_CLEANER_TYPE_BASIC</a>);</div>
 <div class="line">    }<span class="keywordflow">else</span>{</div>
 <div class="line">        status = <a class="code" href="ailia__voice_8h.html#ac7875fc17c0e6d575cf39122d082fa7d">ailiaVoiceOpenModelFileA</a>(net, <span class="stringliteral">&quot;../onnx/gpt-sovits/t2s_encoder.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/gpt-sovits/t2s_fsdec.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/gpt-sovits/t2s_sdec.opt.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/gpt-sovits/vits.onnx&quot;</span>, <span class="stringliteral">&quot;../onnx/gpt-sovits/cnhubert.onnx&quot;</span>, <a class="code" href="ailia__voice_8h.html#ac43b2f7f50542dab4bd8966620f046b6">AILIA_VOICE_MODEL_TYPE_GPT_SOVITS</a>, <a class="code" href="ailia__voice_8h.html#afdc53effb97f51637b01ecaa426f1cf8">AILIA_VOICE_CLEANER_TYPE_BASIC</a>);</div>
 <div class="line">    }</div>
@@ -147,7 +144,8 @@ ailia AI VoiceのAPIの概要</h1>
 <div class="line">        <span class="comment">//const char *ref_audio = &quot;../onnx/gpt-sovits/reference_audio_man.wav&quot;;</span></div>
 <div class="line">        std::vector&lt;float&gt; wave = read_wave_file(ref_audio, &amp;sampleRate, &amp;nChannels, &amp;nSamples);</div>
 <div class="line"> </div>
-<div class="line">        status = <a class="code" href="ailia__voice_8h.html#aba51f3a1ba50ceb7bae45c7a6825598c">ailiaVoiceGraphemeToPhoneme</a>(net, <span class="stringliteral">&quot;水をマレーシアから買わなくてはならない。&quot;</span>, <a class="code" href="ailia__voice_8h.html#a305cbb787542c7459c9690727dbba80a">AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION</a>);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span> *ref_text = <span class="stringliteral">&quot;水をマレーシアから買わなくてはならない。&quot;</span>;</div>
+<div class="line">        status = <a class="code" href="ailia__voice_8h.html#aba51f3a1ba50ceb7bae45c7a6825598c">ailiaVoiceGraphemeToPhoneme</a>(net, ref_text, <a class="code" href="ailia__voice_8h.html#a305cbb787542c7459c9690727dbba80a">AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION</a>);</div>
 <div class="line">        <span class="keywordflow">if</span> (status != AILIA_STATUS_SUCCESS){</div>
 <div class="line">            printf(<span class="stringliteral">&quot;ailiaVoiceGraphemeToPhoneme error %d\n&quot;</span>, status);</div>
 <div class="line">            <span class="keywordflow">return</span> -1;</div>

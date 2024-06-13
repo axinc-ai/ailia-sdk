@@ -78,9 +78,6 @@ $(function() {
 <div class="line">    status = voice.OpenDictionary(path+&quot;open_jtalk_dic_utf_8-1.11&quot;, AiliaVoice.AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK);</div>
 <div class="line"> </div>
 <div class="line">    switch(model){</div>
-<div class="line">    case MODEL_TACOTRON2_JAPANESE:</div>
-<div class="line">        status = voice.OpenModel(path+&quot;onnx/tsukuyomi/encoder.onnx&quot;, path+&quot;onnx/tsukuyomi/decoder_iter.onnx&quot;, path+&quot;onnx/tsukuyomi/postnet.onnx&quot;, path+&quot;onnx/tsukuyomi/waveglow.onnx&quot;, null, AiliaVoice.AILIA_VOICE_MODEL_TYPE_TACOTRON2, AiliaVoice.AILIA_VOICE_CLEANER_TYPE_BASIC);</div>
-<div class="line">        break;</div>
 <div class="line">    case MODEL_TACOTRON2_ENGLISH:</div>
 <div class="line">        status = voice.OpenModel(path+&quot;onnx/nvidia/encoder.onnx&quot;, path+&quot;onnx/nvidia/decoder_iter.onnx&quot;, path+&quot;onnx/nvidia/postnet.onnx&quot;, path+&quot;onnx/nvidia/waveglow.onnx&quot;, null, AiliaVoice.AILIA_VOICE_MODEL_TYPE_TACOTRON2, AiliaVoice.AILIA_VOICE_CLEANER_TYPE_BASIC);</div>
 <div class="line">        break;</div>
@@ -91,9 +88,6 @@ $(function() {
 <div class="line"> }</div>
 <div class="line"> </div>
 <div class="line"> void Infer(string text){</div>
-<div class="line">    if (model == MODEL_TACOTRON2_JAPANESE){</div>
-<div class="line">        text = voice.G2P(text, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_ACCENT | AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION | AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_REMOVE_SPACE);</div>
-<div class="line">    }</div>
 <div class="line">    if (model == MODEL_GPT_SOVITS_JAPANESE){</div>
 <div class="line">        text = voice.G2P(text, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
 <div class="line">        string ref_text = voice.G2P(&quot;水をマレーシアから買わなくてはならない。&quot;, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
