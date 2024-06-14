@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ailia_tokenizer: AiliaTokenizer クラス</title>
+<title>ailia_tokenizer: ailiaTokenizer.AiliaTokenizer クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.1.0.0</span>
+   &#160;<span id="projectnumber">1.1.2.0</span>
    </div>
   </td>
  </tr>
@@ -60,96 +60,100 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceailiaTokenizer.html">ailiaTokenizer</a></li><li class="navelem"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html">AiliaTokenizer</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-static-attribs">静的公開変数類</a> &#124;
-<a href="classAiliaTokenizer-members.html">全メンバ一覧</a>  </div>
+<a href="classailiaTokenizer_1_1AiliaTokenizer-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
-<div class="title">AiliaTokenizer クラス</div>  </div>
+<div class="title">ailiaTokenizer.AiliaTokenizer クラス</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ae7946a6ceae86570644facb9d67e92de"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#ae7946a6ceae86570644facb9d67e92de">ailiaTokenizerCreate</a> (ref IntPtr net, int type, int flags)</td></tr>
-<tr class="memdesc:ae7946a6ceae86570644facb9d67e92de"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークナイズオブジェクトを作成します。  <a href="classAiliaTokenizer.html#ae7946a6ceae86570644facb9d67e92de">[詳解]</a><br /></td></tr>
-<tr class="separator:ae7946a6ceae86570644facb9d67e92de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94a9d4a3d51956ce3ee6304d47ac526a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a94a9d4a3d51956ce3ee6304d47ac526a">ailiaTokenizerOpenModelFile</a> (IntPtr net, string ath)</td></tr>
-<tr class="memdesc:a94a9d4a3d51956ce3ee6304d47ac526a"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルファイルを読み込みます。  <a href="classAiliaTokenizer.html#a94a9d4a3d51956ce3ee6304d47ac526a">[詳解]</a><br /></td></tr>
-<tr class="separator:a94a9d4a3d51956ce3ee6304d47ac526a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ad5ff30c6fde97d03bb4e011afa66b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a2ad5ff30c6fde97d03bb4e011afa66b5">ailiaTokenizerOpenDictionaryFile</a> (IntPtr net, string path)</td></tr>
-<tr class="memdesc:a2ad5ff30c6fde97d03bb4e011afa66b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">辞書ファイルを読み込みます。  <a href="classAiliaTokenizer.html#a2ad5ff30c6fde97d03bb4e011afa66b5">[詳解]</a><br /></td></tr>
-<tr class="separator:a2ad5ff30c6fde97d03bb4e011afa66b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a597911fa5a38fc28d3f7a3a0db453689"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a597911fa5a38fc28d3f7a3a0db453689">ailiaTokenizerOpenVocabFile</a> (IntPtr net, string path)</td></tr>
-<tr class="memdesc:a597911fa5a38fc28d3f7a3a0db453689"><td class="mdescLeft">&#160;</td><td class="mdescRight">単語ファイルを読み込みます。  <a href="classAiliaTokenizer.html#a597911fa5a38fc28d3f7a3a0db453689">[詳解]</a><br /></td></tr>
-<tr class="separator:a597911fa5a38fc28d3f7a3a0db453689"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ebe58c1c02552c523598b4236d06ce9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a0ebe58c1c02552c523598b4236d06ce9">ailiaTokenizerOpenMergeFile</a> (IntPtr net, string path)</td></tr>
-<tr class="memdesc:a0ebe58c1c02552c523598b4236d06ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">マージファイルを読み込みます。  <a href="classAiliaTokenizer.html#a0ebe58c1c02552c523598b4236d06ce9">[詳解]</a><br /></td></tr>
-<tr class="separator:a0ebe58c1c02552c523598b4236d06ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a22944e2e304108c9c09c6e3a70024"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a52a22944e2e304108c9c09c6e3a70024">ailiaTokenizerEncode</a> (IntPtr net, IntPtr utf8)</td></tr>
-<tr class="memdesc:a52a22944e2e304108c9c09c6e3a70024"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンコードを行います。  <a href="classAiliaTokenizer.html#a52a22944e2e304108c9c09c6e3a70024">[詳解]</a><br /></td></tr>
-<tr class="separator:a52a22944e2e304108c9c09c6e3a70024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36f40ed3f188b649178e5bdea3d6701e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a36f40ed3f188b649178e5bdea3d6701e">ailiaTokenizerGetTokenCount</a> (IntPtr net, ref uint count)</td></tr>
-<tr class="memdesc:a36f40ed3f188b649178e5bdea3d6701e"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークンの数を取得します。  <a href="classAiliaTokenizer.html#a36f40ed3f188b649178e5bdea3d6701e">[詳解]</a><br /></td></tr>
-<tr class="separator:a36f40ed3f188b649178e5bdea3d6701e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa694fc6a404ae18aa9d2f9f7dec02d59"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#aa694fc6a404ae18aa9d2f9f7dec02d59">ailiaTokenizerGetTokens</a> (IntPtr net, IntPtr tokens, uint count)</td></tr>
-<tr class="memdesc:aa694fc6a404ae18aa9d2f9f7dec02d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークンを取得します。  <a href="classAiliaTokenizer.html#aa694fc6a404ae18aa9d2f9f7dec02d59">[詳解]</a><br /></td></tr>
-<tr class="separator:aa694fc6a404ae18aa9d2f9f7dec02d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac09e656ac29a8f74f5476e8a797f3bb8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#ac09e656ac29a8f74f5476e8a797f3bb8">ailiaTokenizerDecode</a> (IntPtr net, IntPtr tokens, uint token_count)</td></tr>
-<tr class="memdesc:ac09e656ac29a8f74f5476e8a797f3bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">デコードを行います。  <a href="classAiliaTokenizer.html#ac09e656ac29a8f74f5476e8a797f3bb8">[詳解]</a><br /></td></tr>
-<tr class="separator:ac09e656ac29a8f74f5476e8a797f3bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad37de6bb5e23f26436004f5a0eec9772"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#ad37de6bb5e23f26436004f5a0eec9772">ailiaTokenizerGetTextLength</a> (IntPtr net, ref uint len)</td></tr>
-<tr class="memdesc:ad37de6bb5e23f26436004f5a0eec9772"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストの長さを取得します。(NULL文字含む)  <a href="classAiliaTokenizer.html#ad37de6bb5e23f26436004f5a0eec9772">[詳解]</a><br /></td></tr>
-<tr class="separator:ad37de6bb5e23f26436004f5a0eec9772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a797b9d7dfc1a78ea62c89ed3bdf49c13"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a797b9d7dfc1a78ea62c89ed3bdf49c13">ailiaTokenizerGetText</a> (IntPtr net, IntPtr text, uint len)</td></tr>
-<tr class="memdesc:a797b9d7dfc1a78ea62c89ed3bdf49c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストを取得します。  <a href="classAiliaTokenizer.html#a797b9d7dfc1a78ea62c89ed3bdf49c13">[詳解]</a><br /></td></tr>
-<tr class="separator:a797b9d7dfc1a78ea62c89ed3bdf49c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3ee37515fb367567c89c46956d0ee19"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#ad3ee37515fb367567c89c46956d0ee19">ailiaTokenizerDestroy</a> (IntPtr net)</td></tr>
-<tr class="memdesc:ad3ee37515fb367567c89c46956d0ee19"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークナイズオブジェクトを破棄します。  <a href="classAiliaTokenizer.html#ad3ee37515fb367567c89c46956d0ee19">[詳解]</a><br /></td></tr>
-<tr class="separator:ad3ee37515fb367567c89c46956d0ee19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb214b03325816b34ea78a6004776b55"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#abb214b03325816b34ea78a6004776b55">ailiaTokenizerUtf8ToUtf32</a> (ref uint utf32, ref uint processed_byte, IntPtr utf8, uint utf8_len)</td></tr>
-<tr class="memdesc:abb214b03325816b34ea78a6004776b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF8の文字をUTF32の文字に変換します。  <a href="classAiliaTokenizer.html#abb214b03325816b34ea78a6004776b55">[詳解]</a><br /></td></tr>
-<tr class="separator:abb214b03325816b34ea78a6004776b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bc9d8006210118368a160e8e30678d8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a5bc9d8006210118368a160e8e30678d8">ailiaTokenizerUtf32ToUtf8</a> (IntPtr utf8, ref uint processed_byte, uint utf32)</td></tr>
-<tr class="memdesc:a5bc9d8006210118368a160e8e30678d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF32の文字をUTF8の文字に変換します。  <a href="classAiliaTokenizer.html#a5bc9d8006210118368a160e8e30678d8">[詳解]</a><br /></td></tr>
-<tr class="separator:a5bc9d8006210118368a160e8e30678d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44acfcf41764e7e927b27cb97848554f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a44acfcf41764e7e927b27cb97848554f">ailiaTokenizerCreate</a> (ref IntPtr net, int type, int flags)</td></tr>
+<tr class="memdesc:a44acfcf41764e7e927b27cb97848554f"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークナイズオブジェクトを作成します。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a44acfcf41764e7e927b27cb97848554f">[詳解]</a><br /></td></tr>
+<tr class="separator:a44acfcf41764e7e927b27cb97848554f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bcf5121446015ff585c413b4d87cfb8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a6bcf5121446015ff585c413b4d87cfb8">ailiaTokenizerOpenModelFile</a> (IntPtr net, string ath)</td></tr>
+<tr class="memdesc:a6bcf5121446015ff585c413b4d87cfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルファイルを読み込みます。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a6bcf5121446015ff585c413b4d87cfb8">[詳解]</a><br /></td></tr>
+<tr class="separator:a6bcf5121446015ff585c413b4d87cfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11acd386b3efd460cc3d225a8a2ec11"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#aa11acd386b3efd460cc3d225a8a2ec11">ailiaTokenizerOpenDictionaryFile</a> (IntPtr net, string path)</td></tr>
+<tr class="memdesc:aa11acd386b3efd460cc3d225a8a2ec11"><td class="mdescLeft">&#160;</td><td class="mdescRight">辞書ファイルを読み込みます。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#aa11acd386b3efd460cc3d225a8a2ec11">[詳解]</a><br /></td></tr>
+<tr class="separator:aa11acd386b3efd460cc3d225a8a2ec11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c59ce983aef95d524ac733e734e48a3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a2c59ce983aef95d524ac733e734e48a3">ailiaTokenizerOpenVocabFile</a> (IntPtr net, string path)</td></tr>
+<tr class="memdesc:a2c59ce983aef95d524ac733e734e48a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">単語ファイルを読み込みます。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a2c59ce983aef95d524ac733e734e48a3">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c59ce983aef95d524ac733e734e48a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01de5876d7fde4ff1f5fae637dfddeb8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a01de5876d7fde4ff1f5fae637dfddeb8">ailiaTokenizerOpenMergeFile</a> (IntPtr net, string path)</td></tr>
+<tr class="memdesc:a01de5876d7fde4ff1f5fae637dfddeb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">マージファイルを読み込みます。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a01de5876d7fde4ff1f5fae637dfddeb8">[詳解]</a><br /></td></tr>
+<tr class="separator:a01de5876d7fde4ff1f5fae637dfddeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94bb0f86774bd0c198cc1b134bd8972e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a94bb0f86774bd0c198cc1b134bd8972e">ailiaTokenizerEncode</a> (IntPtr net, IntPtr utf8)</td></tr>
+<tr class="memdesc:a94bb0f86774bd0c198cc1b134bd8972e"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンコードを行います。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a94bb0f86774bd0c198cc1b134bd8972e">[詳解]</a><br /></td></tr>
+<tr class="separator:a94bb0f86774bd0c198cc1b134bd8972e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb25d88e6c7e2bc170b295fa02135ef"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#afdb25d88e6c7e2bc170b295fa02135ef">ailiaTokenizerGetTokenCount</a> (IntPtr net, ref uint count)</td></tr>
+<tr class="memdesc:afdb25d88e6c7e2bc170b295fa02135ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークンの数を取得します。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#afdb25d88e6c7e2bc170b295fa02135ef">[詳解]</a><br /></td></tr>
+<tr class="separator:afdb25d88e6c7e2bc170b295fa02135ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e3ef996c9ca7f949051ada55b01590"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#aa3e3ef996c9ca7f949051ada55b01590">ailiaTokenizerGetTokens</a> (IntPtr net, IntPtr tokens, uint count)</td></tr>
+<tr class="memdesc:aa3e3ef996c9ca7f949051ada55b01590"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークンを取得します。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#aa3e3ef996c9ca7f949051ada55b01590">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3e3ef996c9ca7f949051ada55b01590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911768f5b87f31aadbf185cb32ebdc8e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a911768f5b87f31aadbf185cb32ebdc8e">ailiaTokenizerDecode</a> (IntPtr net, IntPtr tokens, uint token_count)</td></tr>
+<tr class="memdesc:a911768f5b87f31aadbf185cb32ebdc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デコードを行います。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a911768f5b87f31aadbf185cb32ebdc8e">[詳解]</a><br /></td></tr>
+<tr class="separator:a911768f5b87f31aadbf185cb32ebdc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc2557a169c678e634f9037544e74e1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a4fc2557a169c678e634f9037544e74e1">ailiaTokenizerGetTextLength</a> (IntPtr net, ref uint len)</td></tr>
+<tr class="memdesc:a4fc2557a169c678e634f9037544e74e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストの長さを取得します。(NULL文字含む)  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a4fc2557a169c678e634f9037544e74e1">[詳解]</a><br /></td></tr>
+<tr class="separator:a4fc2557a169c678e634f9037544e74e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9226a48a9918df3d1657a90629c858be"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a9226a48a9918df3d1657a90629c858be">ailiaTokenizerGetText</a> (IntPtr net, IntPtr text, uint len)</td></tr>
+<tr class="memdesc:a9226a48a9918df3d1657a90629c858be"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストを取得します。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a9226a48a9918df3d1657a90629c858be">[詳解]</a><br /></td></tr>
+<tr class="separator:a9226a48a9918df3d1657a90629c858be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5843f4666529f4ac4dc1159fec82e96e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a5843f4666529f4ac4dc1159fec82e96e">ailiaTokenizerDestroy</a> (IntPtr net)</td></tr>
+<tr class="memdesc:a5843f4666529f4ac4dc1159fec82e96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">トークナイズオブジェクトを破棄します。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a5843f4666529f4ac4dc1159fec82e96e">[詳解]</a><br /></td></tr>
+<tr class="separator:a5843f4666529f4ac4dc1159fec82e96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49f308bff497910b43e5aeb4a6857d1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#ad49f308bff497910b43e5aeb4a6857d1">ailiaTokenizerUtf8ToUtf32</a> (ref uint utf32, ref uint processed_byte, IntPtr utf8, uint utf8_len)</td></tr>
+<tr class="memdesc:ad49f308bff497910b43e5aeb4a6857d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF8の文字をUTF32の文字に変換します。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#ad49f308bff497910b43e5aeb4a6857d1">[詳解]</a><br /></td></tr>
+<tr class="separator:ad49f308bff497910b43e5aeb4a6857d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e66d36e41737c10bdf47a2f5cb02e7a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a5e66d36e41737c10bdf47a2f5cb02e7a">ailiaTokenizerUtf32ToUtf8</a> (IntPtr utf8, ref uint processed_byte, uint utf32)</td></tr>
+<tr class="memdesc:a5e66d36e41737c10bdf47a2f5cb02e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF32の文字をUTF8の文字に変換します。  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a5e66d36e41737c10bdf47a2f5cb02e7a">[詳解]</a><br /></td></tr>
+<tr class="separator:a5e66d36e41737c10bdf47a2f5cb02e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:acc83b2cc79cc639cd295361a6c568f63"><td class="memItemLeft" align="right" valign="top">const String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#acc83b2cc79cc639cd295361a6c568f63">LIBRARY_NAME</a> =&quot;ailia_tokenizer&quot;</td></tr>
-<tr class="separator:acc83b2cc79cc639cd295361a6c568f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af82754a689c246de2c36b93a31e8b1d9"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#af82754a689c246de2c36b93a31e8b1d9">AILIA_TOKENIZER_TYPE_WHISPER</a> = (0)</td></tr>
-<tr class="separator:af82754a689c246de2c36b93a31e8b1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69971f6aba1e0b09c69e3c67c81d91cd"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a69971f6aba1e0b09c69e3c67c81d91cd">AILIA_TOKENIZER_TYPE_CLIP</a> = (1)</td></tr>
-<tr class="separator:a69971f6aba1e0b09c69e3c67c81d91cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5ee2ac74339187c4ffefef501a76525"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#af5ee2ac74339187c4ffefef501a76525">AILIA_TOKENIZER_TYPE_XLM_ROBERTA</a> = (2)</td></tr>
-<tr class="separator:af5ee2ac74339187c4ffefef501a76525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa37db48fa5706b5536234ae55441120c"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#aa37db48fa5706b5536234ae55441120c">AILIA_TOKENIZER_TYPE_MARIAN</a> = (3)</td></tr>
-<tr class="separator:aa37db48fa5706b5536234ae55441120c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaee8cd9c163edcc88226391aeba2c3d"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#aeaee8cd9c163edcc88226391aeba2c3d">AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE</a> = (4)</td></tr>
-<tr class="separator:aeaee8cd9c163edcc88226391aeba2c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e5b27d23b731bb564eee43c58cf4cdb"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a8e5b27d23b731bb564eee43c58cf4cdb">AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</a> = (5)</td></tr>
-<tr class="separator:a8e5b27d23b731bb564eee43c58cf4cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bcab81a64f05c735fb5f96e271fa527"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a5bcab81a64f05c735fb5f96e271fa527">AILIA_TOKENIZER_TYPE_T5</a> = (6)</td></tr>
-<tr class="separator:a5bcab81a64f05c735fb5f96e271fa527"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad52209f5bb21ef65505da70feea4debd"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#ad52209f5bb21ef65505da70feea4debd">AILIA_TOKENIZER_TYPE_ROBERTA</a> = (7)</td></tr>
-<tr class="separator:ad52209f5bb21ef65505da70feea4debd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f0d4e1d8be04c02a5ff99e893271bcd"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#a0f0d4e1d8be04c02a5ff99e893271bcd">AILIA_TOKENIZER_FLAG_NONE</a> = (0)</td></tr>
-<tr class="separator:a0f0d4e1d8be04c02a5ff99e893271bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa172949b37f444df9ff3f4699fd33ba0"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiliaTokenizer.html#aa172949b37f444df9ff3f4699fd33ba0">AILIA_TOKENIZER_FLAG_UTF8_SAFE</a> = (1)</td></tr>
-<tr class="separator:aa172949b37f444df9ff3f4699fd33ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf41ad340a233f8c24a672c7ac12b75"><td class="memItemLeft" align="right" valign="top">const String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a5bf41ad340a233f8c24a672c7ac12b75">LIBRARY_NAME</a> =&quot;ailia_tokenizer&quot;</td></tr>
+<tr class="separator:a5bf41ad340a233f8c24a672c7ac12b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9580900221c65fe0b73c6e564029fc"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#afa9580900221c65fe0b73c6e564029fc">AILIA_TOKENIZER_TYPE_WHISPER</a> = (0)</td></tr>
+<tr class="separator:afa9580900221c65fe0b73c6e564029fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52dc3406d8fbfcd62fcb3b129c440117"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a52dc3406d8fbfcd62fcb3b129c440117">AILIA_TOKENIZER_TYPE_CLIP</a> = (1)</td></tr>
+<tr class="separator:a52dc3406d8fbfcd62fcb3b129c440117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab39e13f2c4d9ebfd40672e776ab264"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a0ab39e13f2c4d9ebfd40672e776ab264">AILIA_TOKENIZER_TYPE_XLM_ROBERTA</a> = (2)</td></tr>
+<tr class="separator:a0ab39e13f2c4d9ebfd40672e776ab264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6cec96b2a51e8e9f524b7285b5917a"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a2f6cec96b2a51e8e9f524b7285b5917a">AILIA_TOKENIZER_TYPE_MARIAN</a> = (3)</td></tr>
+<tr class="separator:a2f6cec96b2a51e8e9f524b7285b5917a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00bec665833bcf21a1314e255853bc7"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#aa00bec665833bcf21a1314e255853bc7">AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE</a> = (4)</td></tr>
+<tr class="separator:aa00bec665833bcf21a1314e255853bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1f4fe579ff11970bb45a6d2c4c8157"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#afd1f4fe579ff11970bb45a6d2c4c8157">AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</a> = (5)</td></tr>
+<tr class="separator:afd1f4fe579ff11970bb45a6d2c4c8157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580916c650923310554decd7b9d92c9a"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a580916c650923310554decd7b9d92c9a">AILIA_TOKENIZER_TYPE_T5</a> = (6)</td></tr>
+<tr class="separator:a580916c650923310554decd7b9d92c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d08fb8e10a3c9a3d2c89caf6988bd1"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a00d08fb8e10a3c9a3d2c89caf6988bd1">AILIA_TOKENIZER_TYPE_ROBERTA</a> = (7)</td></tr>
+<tr class="separator:a00d08fb8e10a3c9a3d2c89caf6988bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9bc9caf5d8bf603b38d04fe4729270"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a4d9bc9caf5d8bf603b38d04fe4729270">AILIA_TOKENIZER_FLAG_NONE</a> = (0)</td></tr>
+<tr class="separator:a4d9bc9caf5d8bf603b38d04fe4729270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669a27e11383ab58d2cd06731138f1b2"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a669a27e11383ab58d2cd06731138f1b2">AILIA_TOKENIZER_FLAG_UTF8_SAFE</a> = (1)</td></tr>
+<tr class="separator:a669a27e11383ab58d2cd06731138f1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
-<a id="ae7946a6ceae86570644facb9d67e92de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7946a6ceae86570644facb9d67e92de">&#9670;&nbsp;</a></span>ailiaTokenizerCreate()</h2>
+<a id="a44acfcf41764e7e927b27cb97848554f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44acfcf41764e7e927b27cb97848554f">&#9670;&nbsp;</a></span>ailiaTokenizerCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerCreate </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerCreate </td>
           <td>(</td>
           <td class="paramtype">ref IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -188,14 +192,14 @@ $(function() {
 
 </div>
 </div>
-<a id="ac09e656ac29a8f74f5476e8a797f3bb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac09e656ac29a8f74f5476e8a797f3bb8">&#9670;&nbsp;</a></span>ailiaTokenizerDecode()</h2>
+<a id="a911768f5b87f31aadbf185cb32ebdc8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911768f5b87f31aadbf185cb32ebdc8e">&#9670;&nbsp;</a></span>ailiaTokenizerDecode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerDecode </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerDecode </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -234,14 +238,14 @@ $(function() {
 
 </div>
 </div>
-<a id="ad3ee37515fb367567c89c46956d0ee19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3ee37515fb367567c89c46956d0ee19">&#9670;&nbsp;</a></span>ailiaTokenizerDestroy()</h2>
+<a id="a5843f4666529f4ac4dc1159fec82e96e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5843f4666529f4ac4dc1159fec82e96e">&#9670;&nbsp;</a></span>ailiaTokenizerDestroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static void AiliaTokenizer.ailiaTokenizerDestroy </td>
+          <td class="memname">static void ailiaTokenizer.AiliaTokenizer.ailiaTokenizerDestroy </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em></td><td>)</td>
@@ -260,14 +264,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a52a22944e2e304108c9c09c6e3a70024"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52a22944e2e304108c9c09c6e3a70024">&#9670;&nbsp;</a></span>ailiaTokenizerEncode()</h2>
+<a id="a94bb0f86774bd0c198cc1b134bd8972e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94bb0f86774bd0c198cc1b134bd8972e">&#9670;&nbsp;</a></span>ailiaTokenizerEncode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerEncode </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerEncode </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -299,14 +303,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a797b9d7dfc1a78ea62c89ed3bdf49c13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a797b9d7dfc1a78ea62c89ed3bdf49c13">&#9670;&nbsp;</a></span>ailiaTokenizerGetText()</h2>
+<a id="a9226a48a9918df3d1657a90629c858be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9226a48a9918df3d1657a90629c858be">&#9670;&nbsp;</a></span>ailiaTokenizerGetText()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerGetText </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerGetText </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -341,18 +345,18 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
-<p><a class="el" href="classAiliaTokenizer.html#ac09e656ac29a8f74f5476e8a797f3bb8" title="デコードを行います。">ailiaTokenizerDecode()</a> を一度も実行していない場合は AILIA_STATUS_INVALID_STATE が返ります。 </p>
+<p><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a911768f5b87f31aadbf185cb32ebdc8e" title="デコードを行います。">ailiaTokenizerDecode()</a> を一度も実行していない場合は AILIA_STATUS_INVALID_STATE が返ります。 </p>
 
 </div>
 </div>
-<a id="ad37de6bb5e23f26436004f5a0eec9772"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad37de6bb5e23f26436004f5a0eec9772">&#9670;&nbsp;</a></span>ailiaTokenizerGetTextLength()</h2>
+<a id="a4fc2557a169c678e634f9037544e74e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc2557a169c678e634f9037544e74e1">&#9670;&nbsp;</a></span>ailiaTokenizerGetTextLength()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerGetTextLength </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerGetTextLength </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -383,14 +387,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a36f40ed3f188b649178e5bdea3d6701e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36f40ed3f188b649178e5bdea3d6701e">&#9670;&nbsp;</a></span>ailiaTokenizerGetTokenCount()</h2>
+<a id="afdb25d88e6c7e2bc170b295fa02135ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb25d88e6c7e2bc170b295fa02135ef">&#9670;&nbsp;</a></span>ailiaTokenizerGetTokenCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerGetTokenCount </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerGetTokenCount </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -421,14 +425,14 @@ $(function() {
 
 </div>
 </div>
-<a id="aa694fc6a404ae18aa9d2f9f7dec02d59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa694fc6a404ae18aa9d2f9f7dec02d59">&#9670;&nbsp;</a></span>ailiaTokenizerGetTokens()</h2>
+<a id="aa3e3ef996c9ca7f949051ada55b01590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e3ef996c9ca7f949051ada55b01590">&#9670;&nbsp;</a></span>ailiaTokenizerGetTokens()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerGetTokens </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerGetTokens </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -466,14 +470,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a2ad5ff30c6fde97d03bb4e011afa66b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ad5ff30c6fde97d03bb4e011afa66b5">&#9670;&nbsp;</a></span>ailiaTokenizerOpenDictionaryFile()</h2>
+<a id="aa11acd386b3efd460cc3d225a8a2ec11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11acd386b3efd460cc3d225a8a2ec11">&#9670;&nbsp;</a></span>ailiaTokenizerOpenDictionaryFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerOpenDictionaryFile </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerOpenDictionaryFile </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -505,14 +509,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a0ebe58c1c02552c523598b4236d06ce9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ebe58c1c02552c523598b4236d06ce9">&#9670;&nbsp;</a></span>ailiaTokenizerOpenMergeFile()</h2>
+<a id="a01de5876d7fde4ff1f5fae637dfddeb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01de5876d7fde4ff1f5fae637dfddeb8">&#9670;&nbsp;</a></span>ailiaTokenizerOpenMergeFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerOpenMergeFile </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerOpenMergeFile </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -544,14 +548,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a94a9d4a3d51956ce3ee6304d47ac526a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94a9d4a3d51956ce3ee6304d47ac526a">&#9670;&nbsp;</a></span>ailiaTokenizerOpenModelFile()</h2>
+<a id="a6bcf5121446015ff585c413b4d87cfb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bcf5121446015ff585c413b4d87cfb8">&#9670;&nbsp;</a></span>ailiaTokenizerOpenModelFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerOpenModelFile </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerOpenModelFile </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -583,14 +587,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a597911fa5a38fc28d3f7a3a0db453689"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a597911fa5a38fc28d3f7a3a0db453689">&#9670;&nbsp;</a></span>ailiaTokenizerOpenVocabFile()</h2>
+<a id="a2c59ce983aef95d524ac733e734e48a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c59ce983aef95d524ac733e734e48a3">&#9670;&nbsp;</a></span>ailiaTokenizerOpenVocabFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerOpenVocabFile </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerOpenVocabFile </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>net</em>, </td>
@@ -622,14 +626,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a5bc9d8006210118368a160e8e30678d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bc9d8006210118368a160e8e30678d8">&#9670;&nbsp;</a></span>ailiaTokenizerUtf32ToUtf8()</h2>
+<a id="a5e66d36e41737c10bdf47a2f5cb02e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e66d36e41737c10bdf47a2f5cb02e7a">&#9670;&nbsp;</a></span>ailiaTokenizerUtf32ToUtf8()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerUtf32ToUtf8 </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerUtf32ToUtf8 </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
           <td class="paramname"><em>utf8</em>, </td>
@@ -667,14 +671,14 @@ $(function() {
 
 </div>
 </div>
-<a id="abb214b03325816b34ea78a6004776b55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb214b03325816b34ea78a6004776b55">&#9670;&nbsp;</a></span>ailiaTokenizerUtf8ToUtf32()</h2>
+<a id="ad49f308bff497910b43e5aeb4a6857d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad49f308bff497910b43e5aeb4a6857d1">&#9670;&nbsp;</a></span>ailiaTokenizerUtf8ToUtf32()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int AiliaTokenizer.ailiaTokenizerUtf8ToUtf32 </td>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerUtf8ToUtf32 </td>
           <td>(</td>
           <td class="paramtype">ref uint&#160;</td>
           <td class="paramname"><em>utf32</em>, </td>
@@ -720,8 +724,8 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="a0f0d4e1d8be04c02a5ff99e893271bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f0d4e1d8be04c02a5ff99e893271bcd">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_FLAG_NONE</h2>
+<a id="a4d9bc9caf5d8bf603b38d04fe4729270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9bc9caf5d8bf603b38d04fe4729270">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_FLAG_NONE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -730,7 +734,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_FLAG_NONE = (0)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_FLAG_NONE = (0)</td>
         </tr>
       </table>
   </td>
@@ -742,8 +746,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aa172949b37f444df9ff3f4699fd33ba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa172949b37f444df9ff3f4699fd33ba0">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_FLAG_UTF8_SAFE</h2>
+<a id="a669a27e11383ab58d2cd06731138f1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669a27e11383ab58d2cd06731138f1b2">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_FLAG_UTF8_SAFE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -752,7 +756,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_FLAG_UTF8_SAFE = (1)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_FLAG_UTF8_SAFE = (1)</td>
         </tr>
       </table>
   </td>
@@ -764,8 +768,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a8e5b27d23b731bb564eee43c58cf4cdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e5b27d23b731bb564eee43c58cf4cdb">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</h2>
+<a id="afd1f4fe579ff11970bb45a6d2c4c8157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1f4fe579ff11970bb45a6d2c4c8157">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -774,7 +778,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER = (5)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER = (5)</td>
         </tr>
       </table>
   </td>
@@ -786,8 +790,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aeaee8cd9c163edcc88226391aeba2c3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeaee8cd9c163edcc88226391aeba2c3d">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE</h2>
+<a id="aa00bec665833bcf21a1314e255853bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00bec665833bcf21a1314e255853bc7">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -796,7 +800,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE = (4)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE = (4)</td>
         </tr>
       </table>
   </td>
@@ -808,8 +812,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a69971f6aba1e0b09c69e3c67c81d91cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69971f6aba1e0b09c69e3c67c81d91cd">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_CLIP</h2>
+<a id="a52dc3406d8fbfcd62fcb3b129c440117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52dc3406d8fbfcd62fcb3b129c440117">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_CLIP</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -818,7 +822,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_CLIP = (1)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_CLIP = (1)</td>
         </tr>
       </table>
   </td>
@@ -830,8 +834,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aa37db48fa5706b5536234ae55441120c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa37db48fa5706b5536234ae55441120c">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_MARIAN</h2>
+<a id="a2f6cec96b2a51e8e9f524b7285b5917a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6cec96b2a51e8e9f524b7285b5917a">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_MARIAN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -840,7 +844,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_MARIAN = (3)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_MARIAN = (3)</td>
         </tr>
       </table>
   </td>
@@ -852,8 +856,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ad52209f5bb21ef65505da70feea4debd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad52209f5bb21ef65505da70feea4debd">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_ROBERTA</h2>
+<a id="a00d08fb8e10a3c9a3d2c89caf6988bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d08fb8e10a3c9a3d2c89caf6988bd1">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_ROBERTA</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -862,7 +866,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_ROBERTA = (7)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_ROBERTA = (7)</td>
         </tr>
       </table>
   </td>
@@ -874,8 +878,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a5bcab81a64f05c735fb5f96e271fa527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bcab81a64f05c735fb5f96e271fa527">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_T5</h2>
+<a id="a580916c650923310554decd7b9d92c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580916c650923310554decd7b9d92c9a">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_T5</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -884,7 +888,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_T5 = (6)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_T5 = (6)</td>
         </tr>
       </table>
   </td>
@@ -896,8 +900,8 @@ $(function() {
 
 </div>
 </div>
-<a id="af82754a689c246de2c36b93a31e8b1d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af82754a689c246de2c36b93a31e8b1d9">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_WHISPER</h2>
+<a id="afa9580900221c65fe0b73c6e564029fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9580900221c65fe0b73c6e564029fc">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_WHISPER</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -906,7 +910,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_WHISPER = (0)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_WHISPER = (0)</td>
         </tr>
       </table>
   </td>
@@ -918,8 +922,8 @@ $(function() {
 
 </div>
 </div>
-<a id="af5ee2ac74339187c4ffefef501a76525"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ee2ac74339187c4ffefef501a76525">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_XLM_ROBERTA</h2>
+<a id="a0ab39e13f2c4d9ebfd40672e776ab264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab39e13f2c4d9ebfd40672e776ab264">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_XLM_ROBERTA</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -928,7 +932,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const Int32 AiliaTokenizer.AILIA_TOKENIZER_TYPE_XLM_ROBERTA = (2)</td>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_XLM_ROBERTA = (2)</td>
         </tr>
       </table>
   </td>
@@ -940,8 +944,8 @@ $(function() {
 
 </div>
 </div>
-<a id="acc83b2cc79cc639cd295361a6c568f63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc83b2cc79cc639cd295361a6c568f63">&#9670;&nbsp;</a></span>LIBRARY_NAME</h2>
+<a id="a5bf41ad340a233f8c24a672c7ac12b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf41ad340a233f8c24a672c7ac12b75">&#9670;&nbsp;</a></span>LIBRARY_NAME</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -950,7 +954,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const String AiliaTokenizer.LIBRARY_NAME =&quot;ailia_tokenizer&quot;</td>
+          <td class="memname">const String ailiaTokenizer.AiliaTokenizer.LIBRARY_NAME =&quot;ailia_tokenizer&quot;</td>
         </tr>
       </table>
   </td>
