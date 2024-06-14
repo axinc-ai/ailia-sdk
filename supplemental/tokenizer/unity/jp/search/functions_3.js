@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['encode_74',['Encode',['../classAiliaTokenizerModel.html#ad99450d10a3ef18d27b86f5b68f8a4ec',1,'AiliaTokenizerModel']]]
+  ['encode_75',['Encode',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#aec19e175037d12a350e525374359b6ad',1,'ailiaTokenizer::AiliaTokenizerModel']]]
 ];
