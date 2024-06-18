@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_voice: APIの使用方法</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_voice
+   &#160;<span id="projectnumber">1.0.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">APIの使用方法 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+基本的な使用方法</h1>
+<p>C::を使用して音声合成をする例です。AiliaVoiceModelを作成し、OpenModelでAIモデルを読み込み、G2Pで音素に変換、Inferenceを呼び出すことでAudioClipを取得可能です。GPT-SoVITSの場合は、Inferenceの前にSetReferenceでリファレンスとなるAudioClipを与えます。</p>
+<div class="fragment"><div class="line">void Initialize(){</div>
+<div class="line">    bool status = voice.Create(Ailia.AILIA_ENVIRONMENT_ID_AUTO, AiliaVoice.AILIA_VOICE_FLAG_NONE);</div>
+<div class="line"> </div>
+<div class="line">    string asset_path=Application.streamingAssetsPath;</div>
+<div class="line"> </div>
+<div class="line">    string path = asset_path+&quot;/AiliaVoice/&quot;;</div>
+<div class="line">    status = voice.OpenDictionary(path+&quot;open_jtalk_dic_utf_8-1.11&quot;, AiliaVoice.AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK);</div>
+<div class="line"> </div>
+<div class="line">    switch(model){</div>
+<div class="line">    case MODEL_TACOTRON2_ENGLISH:</div>
+<div class="line">        status = voice.OpenModel(path+&quot;onnx/nvidia/encoder.onnx&quot;, path+&quot;onnx/nvidia/decoder_iter.onnx&quot;, path+&quot;onnx/nvidia/postnet.onnx&quot;, path+&quot;onnx/nvidia/waveglow.onnx&quot;, null, AiliaVoice.AILIA_VOICE_MODEL_TYPE_TACOTRON2, AiliaVoice.AILIA_VOICE_CLEANER_TYPE_BASIC);</div>
+<div class="line">        break;</div>
+<div class="line">    case MODEL_GPT_SOVITS_JAPANESE:</div>
+<div class="line">        status = voice.OpenModel(path+&quot;onnx/gpt-sovits/t2s_encoder.onnx&quot;, path+&quot;onnx/gpt-sovits/t2s_fsdec.onnx&quot;, path+&quot;onnx/gpt-sovits/t2s_sdec.opt.onnx&quot;, path+&quot;onnx/gpt-sovits/vits.onnx&quot;, path+&quot;onnx/gpt-sovits/cnhubert.onnx&quot;, AiliaVoice.AILIA_VOICE_MODEL_TYPE_GPT_SOVITS, AiliaVoice.AILIA_VOICE_CLEANER_TYPE_BASIC);</div>
+<div class="line">        break;</div>
+<div class="line">    }</div>
+<div class="line"> }</div>
+<div class="line"> </div>
+<div class="line"> void Infer(string text){</div>
+<div class="line">    if (model == MODEL_GPT_SOVITS_JAPANESE){</div>
+<div class="line">        text = voice.G2P(text, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
+<div class="line">        string ref_text = voice.G2P(&quot;水をマレーシアから買わなくてはならない。&quot;, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
+<div class="line">        voice.SetReference(ref_clip, ref_text);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    bool status = voice.Inference(text);</div>
+<div class="line">    </div>
+<div class="line">    audioSource.clip = voice.GetAudioClip();</div>
+<div class="line">    audioSource.Play();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void Uninitialize(){</div>
+<div class="line">    voice.Close();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1"></a>
+GPUの使用</h1>
+<p>GPUを使用するには、AiliaVoice.Openのenv_id引数にGPUのenv_idを指定します。 AILIA_ENVIRONMENT_ID_AUTOを指定した場合は、CPUで推論が行われます。 GPUのenv_idを取得する方法は、AiliaSpeechSample.csのGetEnvId()を参照してください。 下記の例では、ailiaのAPIを使用して環境を列挙し、env_typeが1の場合にGPUのenv_idを取得しています。</p>
+<div class="fragment"><div class="line">private int GetEnvId(int env_type){</div>
+<div class="line">    int env_id = Ailia.AILIA_ENVIRONMENT_ID_AUTO;</div>
+<div class="line">    if (env_type == 1) { // GPU</div>
+<div class="line">        int count = 0;</div>
+<div class="line">        Ailia.ailiaGetEnvironmentCount(ref count);</div>
+<div class="line">        for (int i = 0; i &lt; count; i++){</div>
+<div class="line">            IntPtr env_ptr = IntPtr.Zero;</div>
+<div class="line">            Ailia.ailiaGetEnvironment(ref env_ptr, (uint)i, Ailia.AILIA_ENVIRONMENT_VERSION);</div>
+<div class="line">            Ailia.AILIAEnvironment env = (Ailia.AILIAEnvironment)Marshal.PtrToStructure(env_ptr, typeof(Ailia.AILIAEnvironment));</div>
+<div class="line"> </div>
+<div class="line">            if (env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_MPS || env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_CUDA || env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_VULKAN){</div>
+<div class="line">                env_id = env.id;</div>
+<div class="line">                env_name = Marshal.PtrToStringAnsi(env.name);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    } else {</div>
+<div class="line">        env_name = &quot;cpu&quot;;</div>
+<div class="line">    }</div>
+<div class="line">    return env_id;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+プラットフォームごとの注意点</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+iOS</h2>
+<p>iOSで動作させる場合は、CapabilityにIncreased Memory Limitを指定してください。</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Android</h2>
+<p>AndroidではStreamingAssetsのファイルへの直接アクセスが行えないため、起動時にTemporaryCachePathにモデルファイルを転送します。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

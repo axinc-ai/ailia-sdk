@@ -14,7 +14,7 @@ SDK for optimized running of many popular neural networks on multiple platform
 
 ## Core Library Documentation
 
-The core library is a standard package of the ailia SDK. Make some basic inferences. This api document is in beta. We plan to change the URL of the document in the future.
+The core library is a standard package of the ailia SDK. Make some basic inferences.
 
 ### Python
 
@@ -47,17 +47,24 @@ The core library is a standard package of the ailia SDK. Make some basic inferen
 
 ### ailia Tokenizer
 
-ailia Tokenizer is a library for encode NLP text and decode NLP tokens. ailia Tokenizer supports tokenization without Python transformers. This api document is in beta. We plan to change the URL of the document in the future.
+ailia Tokenizer is a library for encode NLP text and decode NLP tokens. ailia Tokenizer supports tokenization without Python transformers.
 
 - [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/jp/)
 - [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/jp/)
 
 ### ailia Speech
 
-ailia Speech is a library for speech recognition. It uses ailia SDK and ailia.audio for doing Speech2Text. This api document is in beta. We plan to change the URL of the document in the future.
+ailia Speech is a library for speech recognition. It uses ailia SDK and ailia.audio for doing Speech2Text.
 
 - [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/)
 - [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/jp/)
+
+### ailia Voice
+
+ailia AI Voice is a library generating speech from text. Using ailia AI Voice, you can easily integrate AI powered text-to-speech into your applications.
+
+- [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/cpp/jp/)
+- [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/unity/jp/)
 
 ## Videos
 
