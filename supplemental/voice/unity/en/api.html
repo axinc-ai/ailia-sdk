@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -89,8 +89,8 @@ Basic Usage</h1>
 <div class="line"> </div>
 <div class="line"> void Infer(string text){</div>
 <div class="line">    if (model == MODEL_GPT_SOVITS_JAPANESE){</div>
-<div class="line">        text = voice.G2P(text, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
-<div class="line">        string ref_text = voice.G2P(&quot;水をマレーシアから買わなくてはならない。&quot;, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
+<div class="line">        text = voice.G2P(text, AiliaVoice.AILIA_VOICE_G2P_TYPE_GPT_SOVITS_JA);</div>
+<div class="line">        string ref_text = voice.G2P(&quot;水をマレーシアから買わなくてはならない。&quot;, AiliaVoice.AILIA_VOICE_G2P_TYPE_GPT_SOVITS_JA);</div>
 <div class="line">        voice.SetReference(ref_clip, ref_text);</div>
 <div class="line">    }</div>
 <div class="line"> </div>

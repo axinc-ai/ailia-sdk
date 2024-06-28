@@ -9,7 +9,7 @@ var searchData=
   ['ailiavoicegetfeatures_93',['ailiaVoiceGetFeatures',['../ailia__voice_8h.html#a94b599cdaa8af2ed98a8352bbedaa21d',1,'ailia_voice.h']]],
   ['ailiavoicegetwave_94',['ailiaVoiceGetWave',['../ailia__voice_8h.html#a4c66d0f4b691cb5055dec12bbb6f9f59',1,'ailia_voice.h']]],
   ['ailiavoicegetwaveinfo_95',['ailiaVoiceGetWaveInfo',['../ailia__voice_8h.html#a5cb48189e1a778dd9f20f2346a9d9d40',1,'ailia_voice.h']]],
-  ['ailiavoicegraphemetophoneme_96',['ailiaVoiceGraphemeToPhoneme',['../ailia__voice_8h.html#aba51f3a1ba50ceb7bae45c7a6825598c',1,'ailia_voice.h']]],
+  ['ailiavoicegraphemetophoneme_96',['ailiaVoiceGraphemeToPhoneme',['../ailia__voice_8h.html#a03c8e8a9d2a51be435f5a1ef92079e12',1,'ailia_voice.h']]],
   ['ailiavoiceinference_97',['ailiaVoiceInference',['../ailia__voice_8h.html#a3f013aceead50fef4ab3ecb69703001e',1,'ailia_voice.h']]],
   ['ailiavoiceopendictionaryfilea_98',['ailiaVoiceOpenDictionaryFileA',['../ailia__voice_8h.html#a9dfa5dcce326c5101e95ffe17b2bd22a',1,'ailia_voice.h']]],
   ['ailiavoiceopendictionaryfilew_99',['ailiaVoiceOpenDictionaryFileW',['../ailia__voice_8h.html#ae5970e17a0ea90bf8058d891e5bcc81b',1,'ailia_voice.h']]],
