@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -116,9 +116,9 @@ ailiaVoice.AiliaVoiceModel 連携図</div>
 <tr class="memitem:a9a0d63fc3db42351757206fd0d10bfa7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoiceModel.html#a9a0d63fc3db42351757206fd0d10bfa7">Dispose</a> ()</td></tr>
 <tr class="memdesc:a9a0d63fc3db42351757206fd0d10bfa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースを解放します。  <a href="classailiaVoice_1_1AiliaVoiceModel.html#a9a0d63fc3db42351757206fd0d10bfa7">[詳解]</a><br /></td></tr>
 <tr class="separator:a9a0d63fc3db42351757206fd0d10bfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a951af98f353d8abc5aa1cf28cd151ae3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoiceModel.html#a951af98f353d8abc5aa1cf28cd151ae3">G2P</a> (string utf8, int options)</td></tr>
-<tr class="memdesc:a951af98f353d8abc5aa1cf28cd151ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">音素を取得します。  <a href="classailiaVoice_1_1AiliaVoiceModel.html#a951af98f353d8abc5aa1cf28cd151ae3">[詳解]</a><br /></td></tr>
-<tr class="separator:a951af98f353d8abc5aa1cf28cd151ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4e97b9bfb1639d3b973642ac68d334"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoiceModel.html#afc4e97b9bfb1639d3b973642ac68d334">G2P</a> (string utf8, int g2p_type)</td></tr>
+<tr class="memdesc:afc4e97b9bfb1639d3b973642ac68d334"><td class="mdescLeft">&#160;</td><td class="mdescRight">音素を取得します。  <a href="classailiaVoice_1_1AiliaVoiceModel.html#afc4e97b9bfb1639d3b973642ac68d334">[詳解]</a><br /></td></tr>
+<tr class="separator:afc4e97b9bfb1639d3b973642ac68d334"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14fbcd3e736f540d99fb55adfc8a2056"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoiceModel.html#a14fbcd3e736f540d99fb55adfc8a2056">SetReference</a> (AudioClip ref_audio, string ref_text)</td></tr>
 <tr class="memdesc:a14fbcd3e736f540d99fb55adfc8a2056"><td class="mdescLeft">&#160;</td><td class="mdescRight">リファレンス音声を設定します。  <a href="classailiaVoice_1_1AiliaVoiceModel.html#a14fbcd3e736f540d99fb55adfc8a2056">[詳解]</a><br /></td></tr>
 <tr class="separator:a14fbcd3e736f540d99fb55adfc8a2056"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,8 +295,8 @@ ailiaVoice.AiliaVoiceModel 連携図</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a951af98f353d8abc5aa1cf28cd151ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a951af98f353d8abc5aa1cf28cd151ae3">&#9670;&nbsp;</a></span>G2P()</h2>
+<a id="afc4e97b9bfb1639d3b973642ac68d334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4e97b9bfb1639d3b973642ac68d334">&#9670;&nbsp;</a></span>G2P()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,7 +314,7 @@ ailiaVoice.AiliaVoiceModel 連携図</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>options</em>&#160;</td>
+          <td class="paramname"><em>g2p_type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -333,17 +333,17 @@ ailiaVoice.AiliaVoiceModel 連携図</div>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">utf8</td><td>入力文字列 </td></tr>
-    <tr><td class="paramname">options</td><td>ポストプロセスオプション </td></tr>
+    <tr><td class="paramname">g2p_type</td><td>G2Pタイプ </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合はstring、失敗した場合は空文字を返す。 </dd></dl>
-<div class="fragment"><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                                               {</div>
+<div class="fragment"><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                                                {</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordtype">byte</span>[] text = System.Text.Encoding.UTF8.GetBytes(utf8+<span class="stringliteral">&quot;\u0000&quot;</span>);</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">//Debug.Log(text[text.Length - 1]);</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        GCHandle handle = GCHandle.Alloc(text, GCHandleType.Pinned);</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        IntPtr input = handle.AddrOfPinnedObject();</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordtype">int</span> status = AiliaVoice.ailiaVoiceGraphemeToPhoneme(net, input, options);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordtype">int</span> status = AiliaVoice.ailiaVoiceGraphemeToPhoneme(net, input, g2p_type);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        handle.Free();</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">if</span> (debug_log){</div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -151,9 +151,9 @@ $(function() {
 <tr class="memitem:a7f2f25248bf1cc97f31d0cf34484de77"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a7f2f25248bf1cc97f31d0cf34484de77">ailiaVoiceOpenModelFile</a> (IntPtr net, string encoder, string decoder1, string decoder2, string wave, string ssl, int model_type, int cleaner_type)</td></tr>
 <tr class="memdesc:a7f2f25248bf1cc97f31d0cf34484de77"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルを指定します。  <a href="classailiaVoice_1_1AiliaVoice.html#a7f2f25248bf1cc97f31d0cf34484de77">[詳解]</a><br /></td></tr>
 <tr class="separator:a7f2f25248bf1cc97f31d0cf34484de77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fea155879b3f2dde1a97c4be27f1a17"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a1fea155879b3f2dde1a97c4be27f1a17">ailiaVoiceGraphemeToPhoneme</a> (IntPtr net, IntPtr utf8, int post_process)</td></tr>
-<tr class="memdesc:a1fea155879b3f2dde1a97c4be27f1a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">G2Pを行います。  <a href="classailiaVoice_1_1AiliaVoice.html#a1fea155879b3f2dde1a97c4be27f1a17">[詳解]</a><br /></td></tr>
-<tr class="separator:a1fea155879b3f2dde1a97c4be27f1a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbbbab4235f3e54cf3f3640392dc91e8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#adbbbab4235f3e54cf3f3640392dc91e8">ailiaVoiceGraphemeToPhoneme</a> (IntPtr net, IntPtr utf8, int g2p_type)</td></tr>
+<tr class="memdesc:adbbbab4235f3e54cf3f3640392dc91e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">G2Pを行います。  <a href="classailiaVoice_1_1AiliaVoice.html#adbbbab4235f3e54cf3f3640392dc91e8">[詳解]</a><br /></td></tr>
+<tr class="separator:adbbbab4235f3e54cf3f3640392dc91e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dfbfdeb2889e1ec30506a53e741c56"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#ac0dfbfdeb2889e1ec30506a53e741c56">ailiaVoiceExtractFullContext</a> (IntPtr net, IntPtr utf8)</td></tr>
 <tr class="memdesc:ac0dfbfdeb2889e1ec30506a53e741c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">ExtractFullContextを行います。  <a href="classailiaVoice_1_1AiliaVoice.html#ac0dfbfdeb2889e1ec30506a53e741c56">[詳解]</a><br /></td></tr>
 <tr class="separator:ac0dfbfdeb2889e1ec30506a53e741c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +229,8 @@ $(function() {
 <tr class="separator:a67f07825ba9899ec4d48c877f3c3928f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dcf4321b82263769f27d141ad4ae182"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a5dcf4321b82263769f27d141ad4ae182">AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK</a> = (0)</td></tr>
 <tr class="separator:a5dcf4321b82263769f27d141ad4ae182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77556385bed055b4d81ed879970c776"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#af77556385bed055b4d81ed879970c776">AILIA_VOICE_DICTIONARY_TYPE_G2P_EN</a> = (1)</td></tr>
+<tr class="separator:af77556385bed055b4d81ed879970c776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a237a91a5f82f87c6ffa4db3673147e26"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a237a91a5f82f87c6ffa4db3673147e26">AILIA_VOICE_MODEL_TYPE_TACOTRON2</a> = (0)</td></tr>
 <tr class="separator:a237a91a5f82f87c6ffa4db3673147e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bab1bdf57454dd9333d6c128757e0a5"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a3bab1bdf57454dd9333d6c128757e0a5">AILIA_VOICE_MODEL_TYPE_GPT_SOVITS</a> = (1)</td></tr>
@@ -239,14 +241,12 @@ $(function() {
 <tr class="separator:a80c48b20607e64ddb07c8d71fd2bf657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ea3f6ec371cfd28551051dd1ac01eba"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a3ea3f6ec371cfd28551051dd1ac01eba">AILIA_VOICE_FLAG_NONE</a> = (0)</td></tr>
 <tr class="separator:a3ea3f6ec371cfd28551051dd1ac01eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a768851051d7537264a9351dd8c70b3cf"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a768851051d7537264a9351dd8c70b3cf">AILIA_VOICE_TEXT_POST_PROCESS_NONE</a> = (0)</td></tr>
-<tr class="separator:a768851051d7537264a9351dd8c70b3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e6b01ccdcaa1953ca954ae9497092be"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a1e6b01ccdcaa1953ca954ae9497092be">AILIA_VOICE_TEXT_POST_PROCESS_REMOVE_SPACE</a> = (1)</td></tr>
-<tr class="separator:a1e6b01ccdcaa1953ca954ae9497092be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af338f6f081ce0e26c90177d513d6ee7c"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#af338f6f081ce0e26c90177d513d6ee7c">AILIA_VOICE_G2P_TYPE_GPT_SOVITS_EN</a> = (1)</td></tr>
+<tr class="separator:af338f6f081ce0e26c90177d513d6ee7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2b0967f009eb4fd5d8528a19af4b58"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#aab2b0967f009eb4fd5d8528a19af4b58">AILIA_VOICE_G2P_TYPE_GPT_SOVITS_JA</a> = (2)</td></tr>
+<tr class="separator:aab2b0967f009eb4fd5d8528a19af4b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b143539514ad3f39ba5e7f833005d3b"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a6b143539514ad3f39ba5e7f833005d3b">AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION</a> = (2)</td></tr>
 <tr class="separator:a6b143539514ad3f39ba5e7f833005d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5980b74004b646a92030dc22addd056f"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a5980b74004b646a92030dc22addd056f">AILIA_VOICE_TEXT_POST_PROCESS_APPEND_ACCENT</a> = (4)</td></tr>
-<tr class="separator:a5980b74004b646a92030dc22addd056f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06991372ed7b79755bf3f533bc22ec03"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a06991372ed7b79755bf3f533bc22ec03">AILIA_VOICE_API_CALLBACK_VERSION</a> = (1)</td></tr>
 <tr class="separator:a06991372ed7b79755bf3f533bc22ec03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -428,9 +428,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                                                                             {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#aeb986ffe75069a4326f0f56f0eb80de5">ailiaAudioGetResampleLen</a>(a, b, c, d);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                                                                             {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#aeb986ffe75069a4326f0f56f0eb80de5">ailiaAudioGetResampleLen</a>(a, b, c, d);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -543,9 +543,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                                                                                                        {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#ae92a93738babbead3eaa790cbb2c485d">ailiaAudioResample</a>(a, b, c, d, e, f);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                                                                                        {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#ae92a93738babbead3eaa790cbb2c485d">ailiaAudioResample</a>(a, b, c, d, e, f);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -622,9 +622,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                                                                         {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a49b114e65ab2d45de09bf8a891bc48bc">ailiaCreate</a>(a, b, c);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a49b114e65ab2d45de09bf8a891bc48bc">ailiaCreate</a>(a, b, c);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -669,9 +669,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                                                             {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        Ailia.ailiaDestroy(a);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                                                             {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        Ailia.ailiaDestroy(a);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -760,9 +760,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                                                                                          {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetBlobData(a, b, c, d);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                                                                                          {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetBlobData(a, b, c, d);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -839,9 +839,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                                                                               {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a95577909088d8f81de134e703f4f9fe1">ailiaGetBlobIndexByInputIndex</a>(a, b, c);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                                                                               {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a95577909088d8f81de134e703f4f9fe1">ailiaGetBlobIndexByInputIndex</a>(a, b, c);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -918,9 +918,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                                                                                                {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a152902f8bc45185abf99329ada95a665">ailiaGetBlobIndexByOutputIndex</a>(a, b, c);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                                                                                                {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a152902f8bc45185abf99329ada95a665">ailiaGetBlobIndexByOutputIndex</a>(a, b, c);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1009,9 +1009,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                                                                                           {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a5491d1108b5e980de23d11bf95b9d9fb">ailiaGetBlobShape</a>(a, b, c, d);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                                                           {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a5491d1108b5e980de23d11bf95b9d9fb">ailiaGetBlobShape</a>(a, b, c, d);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1056,9 +1056,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetErrorDetail(a);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaGetErrorDetail(a);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1123,9 +1123,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                                                                                {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a6871c91110db22e94972cc173ebc70f0">ailiaGetInputBlobCount</a>(a, b);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                                                                                {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a6871c91110db22e94972cc173ebc70f0">ailiaGetInputBlobCount</a>(a, b);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1190,9 +1190,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                                                                                 {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a2a24b7b440016c9a46ff85741ea11ae8">ailiaGetOutputBlobCount</a>(a, b);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                                                                                 {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a2a24b7b440016c9a46ff85741ea11ae8">ailiaGetOutputBlobCount</a>(a, b);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1257,9 +1257,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                                                              {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a115edc13c1e5779e61ef54b5796ebbfe">ailiaOpenWeightFileA</a>(a, b);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a115edc13c1e5779e61ef54b5796ebbfe">ailiaOpenWeightFileA</a>(a, b);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1324,9 +1324,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                                              {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa8ddc230696cfb9c8591fe54f3366ed2">ailiaOpenWeightFileW</a>(a, b);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa8ddc230696cfb9c8591fe54f3366ed2">ailiaOpenWeightFileW</a>(a, b);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1403,9 +1403,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                                                                    {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a6d5eef62c289d1cea97ddc42fc6020a7">ailiaOpenWeightMem</a>(a, b, c);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                                                                    {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classailiaVoice_1_1AiliaVoice.html#a6d5eef62c289d1cea97ddc42fc6020a7">ailiaOpenWeightMem</a>(a, b, c);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1494,9 +1494,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                                                                               {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobData(a, b, c, d);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                                                                                               {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobData(a, b, c, d);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1585,9 +1585,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                                                                                                           {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobShape(a, b, c, d);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                                                                                           {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetInputBlobShape(a, b, c, d);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1652,9 +1652,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                                                                          {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetMemoryMode(a, b);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                                                          {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaSetMemoryMode(a, b);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1699,9 +1699,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                                                           {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaUpdate(a);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                                                           {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> Ailia.ailiaUpdate(a);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2240,7 +2240,7 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
-<p><a class="el" href="classailiaVoice_1_1AiliaVoice.html#a1fea155879b3f2dde1a97c4be27f1a17" title="G2Pを行います。">ailiaVoiceGraphemeToPhoneme()</a> もしくは <a class="el" href="classailiaVoice_1_1AiliaVoice.html#ac0dfbfdeb2889e1ec30506a53e741c56" title="ExtractFullContextを行います。">ailiaVoiceExtractFullContext()</a> を一度も実行していない場合は AILIA_STATUS_INVALID_STATE が返ります。 </p>
+<p><a class="el" href="classailiaVoice_1_1AiliaVoice.html#adbbbab4235f3e54cf3f3640392dc91e8" title="G2Pを行います。">ailiaVoiceGraphemeToPhoneme()</a> もしくは <a class="el" href="classailiaVoice_1_1AiliaVoice.html#ac0dfbfdeb2889e1ec30506a53e741c56" title="ExtractFullContextを行います。">ailiaVoiceExtractFullContext()</a> を一度も実行していない場合は AILIA_STATUS_INVALID_STATE が返ります。 </p>
 
 </div>
 </div>
@@ -2342,8 +2342,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a1fea155879b3f2dde1a97c4be27f1a17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fea155879b3f2dde1a97c4be27f1a17">&#9670;&nbsp;</a></span>ailiaVoiceGraphemeToPhoneme()</h2>
+<a id="adbbbab4235f3e54cf3f3640392dc91e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbbab4235f3e54cf3f3640392dc91e8">&#9670;&nbsp;</a></span>ailiaVoiceGraphemeToPhoneme()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2364,7 +2364,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>post_process</em>&#160;</td>
+          <td class="paramname"><em>g2p_type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2379,7 +2379,7 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">net</td><td>ボイスオブジェクトポインタ </td></tr>
     <tr><td class="paramname">text</td><td>テキスト(UTF8) </td></tr>
-    <tr><td class="paramname">text_post_process</td><td>AILIA_VOICE_TEXT_POST_PROCESS_* </td></tr>
+    <tr><td class="paramname">g2p_type</td><td>AILIA_VOICE_G2P_TYPE_* </td></tr>
   </table>
   </dd>
 </dl>
@@ -2423,7 +2423,7 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
-<p>認識した結果はailiaVoiceGetFeatures APIで取得します。 </p>
+<p>音声合成した結果はailiaVoiceGetWave APIで取得します。 </p>
 
 </div>
 </div>
@@ -2640,30 +2640,30 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                                                                {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        AiliaVoice.AILIAVoiceApiCallback callback=<span class="keyword">new</span> AiliaVoice.AILIAVoiceApiCallback();</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        callback.ailiaAudioResample=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#adbdd5eab2791168e8220fe4a017f0706">ailiaCallbackAudioResampleBridge</a>;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        callback.ailiaAudioGetResampleLen=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a2f0df953db7a17d721af36d58a7449fa">ailiaCallbackAudioGetResampleLenBridge</a>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        callback.ailiaCreate=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa064e55ddb90fa2c2e4e6cc3453a379b">ailiaCallbackCreateBridge</a>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        callback.ailiaOpenWeightFileA=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a9d10a4b741135854b0b43990f9292d47">ailiaCallbackOpenWeightFileABridge</a>;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        callback.ailiaOpenWeightFileW=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ad78f25f1936ccce2f27ba0026ccbd5b3">ailiaCallbackOpenWeightFileWBridge</a>;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        callback.ailiaOpenWeightMem=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a1487ae32f3607311c5e7d0c6a492d894">ailiaCallbackOpenWeightMemBridge</a>;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        callback.ailiaSetMemoryMode=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aef80b2ef60b9850280958e37270cb57e">ailiaCallbackSetMemoryModeBridge</a>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        callback.ailiaDestroy=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a80a3d0633af22d961811d9cdd56d506f">ailiaCallbackDestroyBridge</a>;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        callback.ailiaUpdate=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ac651aec4912dbef4a158266a3565bb91">ailiaCallbackUpdateBridge</a>;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        callback.ailiaGetBlobIndexByInputIndex=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a97316535da6b17595de0f505638ed180">ailiaCallbackGetBlobIndexByInputIndexBridge</a>;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        callback.ailiaGetBlobIndexByOutputIndex=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ada3c61f13e1d4aeef520c48fce5ea8ec">ailiaCallbackGetBlobIndexByOutputIndexBridge</a>;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        callback.ailiaGetBlobData=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a0fee998af3c087e35896143a130168b3">ailiaCallbackGetBlobDataBridge</a>;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        callback.ailiaSetInputBlobData=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a530f886ecb00f2c12401854cec7da6f6">ailiaCallbackSetInputBlobDataBridge</a>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        callback.ailiaSetInputBlobShape=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a1a714c7be9218e1b10989a640541d20d">ailiaCallbackSetInputBlobShapeBridge</a>;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        callback.ailiaGetBlobShape=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ad74b455fd8e9da2ac85bf39dff679b63">ailiaCallbackGetBlobShapeBridge</a>;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        callback.ailiaGetInputBlobCount=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa22dea4c84c450542a5bcea5c5514b34">ailiaCallbackGetInputBlobCountBridge</a>;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        callback.ailiaGetOutputBlobCount=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa98773f8993118a8221ea095492ef096">ailiaCallbackGetOutputBlobCountBridge</a>;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        callback.ailiaGetErrorDetail=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a4db332ff241e5cf148657afdad0bff22">ailiaCallbackGetErrorDetailBridge</a>;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">return</span> callback;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                                                {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        AiliaVoice.AILIAVoiceApiCallback callback=<span class="keyword">new</span> AiliaVoice.AILIAVoiceApiCallback();</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        callback.ailiaAudioResample=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#adbdd5eab2791168e8220fe4a017f0706">ailiaCallbackAudioResampleBridge</a>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        callback.ailiaAudioGetResampleLen=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a2f0df953db7a17d721af36d58a7449fa">ailiaCallbackAudioGetResampleLenBridge</a>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        callback.ailiaCreate=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa064e55ddb90fa2c2e4e6cc3453a379b">ailiaCallbackCreateBridge</a>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        callback.ailiaOpenWeightFileA=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a9d10a4b741135854b0b43990f9292d47">ailiaCallbackOpenWeightFileABridge</a>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        callback.ailiaOpenWeightFileW=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ad78f25f1936ccce2f27ba0026ccbd5b3">ailiaCallbackOpenWeightFileWBridge</a>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        callback.ailiaOpenWeightMem=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a1487ae32f3607311c5e7d0c6a492d894">ailiaCallbackOpenWeightMemBridge</a>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        callback.ailiaSetMemoryMode=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aef80b2ef60b9850280958e37270cb57e">ailiaCallbackSetMemoryModeBridge</a>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        callback.ailiaDestroy=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a80a3d0633af22d961811d9cdd56d506f">ailiaCallbackDestroyBridge</a>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        callback.ailiaUpdate=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ac651aec4912dbef4a158266a3565bb91">ailiaCallbackUpdateBridge</a>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        callback.ailiaGetBlobIndexByInputIndex=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a97316535da6b17595de0f505638ed180">ailiaCallbackGetBlobIndexByInputIndexBridge</a>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        callback.ailiaGetBlobIndexByOutputIndex=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ada3c61f13e1d4aeef520c48fce5ea8ec">ailiaCallbackGetBlobIndexByOutputIndexBridge</a>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        callback.ailiaGetBlobData=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a0fee998af3c087e35896143a130168b3">ailiaCallbackGetBlobDataBridge</a>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        callback.ailiaSetInputBlobData=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a530f886ecb00f2c12401854cec7da6f6">ailiaCallbackSetInputBlobDataBridge</a>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        callback.ailiaSetInputBlobShape=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a1a714c7be9218e1b10989a640541d20d">ailiaCallbackSetInputBlobShapeBridge</a>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        callback.ailiaGetBlobShape=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#ad74b455fd8e9da2ac85bf39dff679b63">ailiaCallbackGetBlobShapeBridge</a>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        callback.ailiaGetInputBlobCount=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa22dea4c84c450542a5bcea5c5514b34">ailiaCallbackGetInputBlobCountBridge</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        callback.ailiaGetOutputBlobCount=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#aa98773f8993118a8221ea095492ef096">ailiaCallbackGetOutputBlobCountBridge</a>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        callback.ailiaGetErrorDetail=<a class="code" href="classailiaVoice_1_1AiliaVoice.html#a4db332ff241e5cf148657afdad0bff22">ailiaCallbackGetErrorDetailBridge</a>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordflow">return</span> callback;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2734,6 +2734,28 @@ $(function() {
 
 </div>
 </div>
+<a id="af77556385bed055b4d81ed879970c776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77556385bed055b4d81ed879970c776">&#9670;&nbsp;</a></span>AILIA_VOICE_DICTIONARY_TYPE_G2P_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_DICTIONARY_TYPE_G2P_EN = (1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5dcf4321b82263769f27d141ad4ae182"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5dcf4321b82263769f27d141ad4ae182">&#9670;&nbsp;</a></span>AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK</h2>
 
@@ -2767,6 +2789,50 @@ $(function() {
       <table class="memname">
         <tr>
           <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_FLAG_NONE = (0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af338f6f081ce0e26c90177d513d6ee7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af338f6f081ce0e26c90177d513d6ee7c">&#9670;&nbsp;</a></span>AILIA_VOICE_G2P_TYPE_GPT_SOVITS_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_G2P_TYPE_GPT_SOVITS_EN = (1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab2b0967f009eb4fd5d8528a19af4b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2b0967f009eb4fd5d8528a19af4b58">&#9670;&nbsp;</a></span>AILIA_VOICE_G2P_TYPE_GPT_SOVITS_JA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_G2P_TYPE_GPT_SOVITS_JA = (2)</td>
         </tr>
       </table>
   </td>
@@ -2822,28 +2888,6 @@ $(function() {
 
 </div>
 </div>
-<a id="a5980b74004b646a92030dc22addd056f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5980b74004b646a92030dc22addd056f">&#9670;&nbsp;</a></span>AILIA_VOICE_TEXT_POST_PROCESS_APPEND_ACCENT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_ACCENT = (4)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6b143539514ad3f39ba5e7f833005d3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b143539514ad3f39ba5e7f833005d3b">&#9670;&nbsp;</a></span>AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION</h2>
 
@@ -2855,50 +2899,6 @@ $(function() {
       <table class="memname">
         <tr>
           <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION = (2)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a768851051d7537264a9351dd8c70b3cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a768851051d7537264a9351dd8c70b3cf">&#9670;&nbsp;</a></span>AILIA_VOICE_TEXT_POST_PROCESS_NONE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_NONE = (0)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1e6b01ccdcaa1953ca954ae9497092be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e6b01ccdcaa1953ca954ae9497092be">&#9670;&nbsp;</a></span>AILIA_VOICE_TEXT_POST_PROCESS_REMOVE_SPACE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const Int32 ailiaVoice.AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_REMOVE_SPACE = (1)</td>
         </tr>
       </table>
   </td>
@@ -2937,33 +2937,33 @@ $(function() {
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a2a24b7b440016c9a46ff85741ea11ae8"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a2a24b7b440016c9a46ff85741ea11ae8">ailiaVoice.AiliaVoice.ailiaGetOutputBlobCount</a></div><div class="ttdeci">static int ailiaGetOutputBlobCount(IntPtr net, IntPtr shape)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ada3c61f13e1d4aeef520c48fce5ea8ec"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ada3c61f13e1d4aeef520c48fce5ea8ec">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobIndexByOutputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByOutputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:257</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ada3c61f13e1d4aeef520c48fce5ea8ec"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ada3c61f13e1d4aeef520c48fce5ea8ec">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobIndexByOutputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByOutputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:253</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a6d5eef62c289d1cea97ddc42fc6020a7"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a6d5eef62c289d1cea97ddc42fc6020a7">ailiaVoice.AiliaVoice.ailiaOpenWeightMem</a></div><div class="ttdeci">static int ailiaOpenWeightMem(IntPtr net, IntPtr buf, uint buf_size)</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a6871c91110db22e94972cc173ebc70f0"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a6871c91110db22e94972cc173ebc70f0">ailiaVoice.AiliaVoice.ailiaGetInputBlobCount</a></div><div class="ttdeci">static int ailiaGetInputBlobCount(IntPtr net, IntPtr shape)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aa22dea4c84c450542a5bcea5c5514b34"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aa22dea4c84c450542a5bcea5c5514b34">ailiaVoice.AiliaVoice.ailiaCallbackGetInputBlobCountBridge</a></div><div class="ttdeci">static int ailiaCallbackGetInputBlobCountBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:282</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a4db332ff241e5cf148657afdad0bff22"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a4db332ff241e5cf148657afdad0bff22">ailiaVoice.AiliaVoice.ailiaCallbackGetErrorDetailBridge</a></div><div class="ttdeci">static IntPtr ailiaCallbackGetErrorDetailBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:292</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ad78f25f1936ccce2f27ba0026ccbd5b3"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ad78f25f1936ccce2f27ba0026ccbd5b3">ailiaVoice.AiliaVoice.ailiaCallbackOpenWeightFileWBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileWBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:227</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aa22dea4c84c450542a5bcea5c5514b34"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aa22dea4c84c450542a5bcea5c5514b34">ailiaVoice.AiliaVoice.ailiaCallbackGetInputBlobCountBridge</a></div><div class="ttdeci">static int ailiaCallbackGetInputBlobCountBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:278</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a4db332ff241e5cf148657afdad0bff22"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a4db332ff241e5cf148657afdad0bff22">ailiaVoice.AiliaVoice.ailiaCallbackGetErrorDetailBridge</a></div><div class="ttdeci">static IntPtr ailiaCallbackGetErrorDetailBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:288</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ad78f25f1936ccce2f27ba0026ccbd5b3"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ad78f25f1936ccce2f27ba0026ccbd5b3">ailiaVoice.AiliaVoice.ailiaCallbackOpenWeightFileWBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileWBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:223</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a5491d1108b5e980de23d11bf95b9d9fb"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a5491d1108b5e980de23d11bf95b9d9fb">ailiaVoice.AiliaVoice.ailiaGetBlobShape</a></div><div class="ttdeci">static int ailiaGetBlobShape(IntPtr net, IntPtr shape, UInt32 blob_idx, UInt32 version)</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ae92a93738babbead3eaa790cbb2c485d"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ae92a93738babbead3eaa790cbb2c485d">ailiaVoice.AiliaVoice.ailiaAudioResample</a></div><div class="ttdeci">static int ailiaAudioResample(IntPtr a, IntPtr b, int c, int d, int e, int f)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a1a714c7be9218e1b10989a640541d20d"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a1a714c7be9218e1b10989a640541d20d">ailiaVoice.AiliaVoice.ailiaCallbackSetInputBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobShapeBridge(IntPtr a, Ailia.AILIAShape b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:272</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a1a714c7be9218e1b10989a640541d20d"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a1a714c7be9218e1b10989a640541d20d">ailiaVoice.AiliaVoice.ailiaCallbackSetInputBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobShapeBridge(IntPtr a, Ailia.AILIAShape b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:268</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aa8ddc230696cfb9c8591fe54f3366ed2"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aa8ddc230696cfb9c8591fe54f3366ed2">ailiaVoice.AiliaVoice.ailiaOpenWeightFileW</a></div><div class="ttdeci">static int ailiaOpenWeightFileW(IntPtr net, IntPtr path)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aa98773f8993118a8221ea095492ef096"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aa98773f8993118a8221ea095492ef096">ailiaVoice.AiliaVoice.ailiaCallbackGetOutputBlobCountBridge</a></div><div class="ttdeci">static int ailiaCallbackGetOutputBlobCountBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:287</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ac651aec4912dbef4a158266a3565bb91"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ac651aec4912dbef4a158266a3565bb91">ailiaVoice.AiliaVoice.ailiaCallbackUpdateBridge</a></div><div class="ttdeci">static int ailiaCallbackUpdateBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:247</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a9d10a4b741135854b0b43990f9292d47"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a9d10a4b741135854b0b43990f9292d47">ailiaVoice.AiliaVoice.ailiaCallbackOpenWeightFileABridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileABridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:222</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a97316535da6b17595de0f505638ed180"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a97316535da6b17595de0f505638ed180">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobIndexByInputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByInputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:252</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a0fee998af3c087e35896143a130168b3"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a0fee998af3c087e35896143a130168b3">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:262</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aa064e55ddb90fa2c2e4e6cc3453a379b"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aa064e55ddb90fa2c2e4e6cc3453a379b">ailiaVoice.AiliaVoice.ailiaCallbackCreateBridge</a></div><div class="ttdeci">static int ailiaCallbackCreateBridge(IntPtr a, int b, int c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:217</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_adbdd5eab2791168e8220fe4a017f0706"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#adbdd5eab2791168e8220fe4a017f0706">ailiaVoice.AiliaVoice.ailiaCallbackAudioResampleBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioResampleBridge(IntPtr a, IntPtr b, int c, int d, int e, int f)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:207</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aa98773f8993118a8221ea095492ef096"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aa98773f8993118a8221ea095492ef096">ailiaVoice.AiliaVoice.ailiaCallbackGetOutputBlobCountBridge</a></div><div class="ttdeci">static int ailiaCallbackGetOutputBlobCountBridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:283</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ac651aec4912dbef4a158266a3565bb91"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ac651aec4912dbef4a158266a3565bb91">ailiaVoice.AiliaVoice.ailiaCallbackUpdateBridge</a></div><div class="ttdeci">static int ailiaCallbackUpdateBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:243</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a9d10a4b741135854b0b43990f9292d47"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a9d10a4b741135854b0b43990f9292d47">ailiaVoice.AiliaVoice.ailiaCallbackOpenWeightFileABridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightFileABridge(IntPtr a, IntPtr b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:218</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a97316535da6b17595de0f505638ed180"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a97316535da6b17595de0f505638ed180">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobIndexByInputIndexBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobIndexByInputIndexBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:248</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a0fee998af3c087e35896143a130168b3"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a0fee998af3c087e35896143a130168b3">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:258</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aa064e55ddb90fa2c2e4e6cc3453a379b"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aa064e55ddb90fa2c2e4e6cc3453a379b">ailiaVoice.AiliaVoice.ailiaCallbackCreateBridge</a></div><div class="ttdeci">static int ailiaCallbackCreateBridge(IntPtr a, int b, int c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:213</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_adbdd5eab2791168e8220fe4a017f0706"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#adbdd5eab2791168e8220fe4a017f0706">ailiaVoice.AiliaVoice.ailiaCallbackAudioResampleBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioResampleBridge(IntPtr a, IntPtr b, int c, int d, int e, int f)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:203</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aeb986ffe75069a4326f0f56f0eb80de5"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aeb986ffe75069a4326f0f56f0eb80de5">ailiaVoice.AiliaVoice.ailiaAudioGetResampleLen</a></div><div class="ttdeci">static int ailiaAudioGetResampleLen(IntPtr a, int b, int c, int d)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ad74b455fd8e9da2ac85bf39dff679b63"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ad74b455fd8e9da2ac85bf39dff679b63">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobShapeBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:277</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a1487ae32f3607311c5e7d0c6a492d894"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a1487ae32f3607311c5e7d0c6a492d894">ailiaVoice.AiliaVoice.ailiaCallbackOpenWeightMemBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightMemBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:232</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a80a3d0633af22d961811d9cdd56d506f"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a80a3d0633af22d961811d9cdd56d506f">ailiaVoice.AiliaVoice.ailiaCallbackDestroyBridge</a></div><div class="ttdeci">static void ailiaCallbackDestroyBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:242</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_ad74b455fd8e9da2ac85bf39dff679b63"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#ad74b455fd8e9da2ac85bf39dff679b63">ailiaVoice.AiliaVoice.ailiaCallbackGetBlobShapeBridge</a></div><div class="ttdeci">static int ailiaCallbackGetBlobShapeBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:273</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a1487ae32f3607311c5e7d0c6a492d894"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a1487ae32f3607311c5e7d0c6a492d894">ailiaVoice.AiliaVoice.ailiaCallbackOpenWeightMemBridge</a></div><div class="ttdeci">static int ailiaCallbackOpenWeightMemBridge(IntPtr a, IntPtr b, uint c)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:228</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a80a3d0633af22d961811d9cdd56d506f"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a80a3d0633af22d961811d9cdd56d506f">ailiaVoice.AiliaVoice.ailiaCallbackDestroyBridge</a></div><div class="ttdeci">static void ailiaCallbackDestroyBridge(IntPtr a)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:238</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a152902f8bc45185abf99329ada95a665"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a152902f8bc45185abf99329ada95a665">ailiaVoice.AiliaVoice.ailiaGetBlobIndexByOutputIndex</a></div><div class="ttdeci">static int ailiaGetBlobIndexByOutputIndex(IntPtr net, IntPtr blob_idx, UInt32 output_blob_idx)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a530f886ecb00f2c12401854cec7da6f6"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a530f886ecb00f2c12401854cec7da6f6">ailiaVoice.AiliaVoice.ailiaCallbackSetInputBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:267</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a530f886ecb00f2c12401854cec7da6f6"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a530f886ecb00f2c12401854cec7da6f6">ailiaVoice.AiliaVoice.ailiaCallbackSetInputBlobDataBridge</a></div><div class="ttdeci">static int ailiaCallbackSetInputBlobDataBridge(IntPtr a, IntPtr b, uint c, uint d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:263</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a49b114e65ab2d45de09bf8a891bc48bc"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a49b114e65ab2d45de09bf8a891bc48bc">ailiaVoice.AiliaVoice.ailiaCreate</a></div><div class="ttdeci">static int ailiaCreate(IntPtr net, int env_id, int num_thread)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a2f0df953db7a17d721af36d58a7449fa"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a2f0df953db7a17d721af36d58a7449fa">ailiaVoice.AiliaVoice.ailiaCallbackAudioGetResampleLenBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetResampleLenBridge(IntPtr a, int b, int c, int d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:212</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a2f0df953db7a17d721af36d58a7449fa"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a2f0df953db7a17d721af36d58a7449fa">ailiaVoice.AiliaVoice.ailiaCallbackAudioGetResampleLenBridge</a></div><div class="ttdeci">static int ailiaCallbackAudioGetResampleLenBridge(IntPtr a, int b, int c, int d)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:208</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a95577909088d8f81de134e703f4f9fe1"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a95577909088d8f81de134e703f4f9fe1">ailiaVoice.AiliaVoice.ailiaGetBlobIndexByInputIndex</a></div><div class="ttdeci">static int ailiaGetBlobIndexByInputIndex(IntPtr net, IntPtr blob_idx, UInt32 input_blob_idx)</div></div>
-<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aef80b2ef60b9850280958e37270cb57e"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aef80b2ef60b9850280958e37270cb57e">ailiaVoice.AiliaVoice.ailiaCallbackSetMemoryModeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetMemoryModeBridge(IntPtr a, uint b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:237</div></div>
+<div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_aef80b2ef60b9850280958e37270cb57e"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#aef80b2ef60b9850280958e37270cb57e">ailiaVoice.AiliaVoice.ailiaCallbackSetMemoryModeBridge</a></div><div class="ttdeci">static int ailiaCallbackSetMemoryModeBridge(IntPtr a, uint b)</div><div class="ttdef"><b>Definition:</b> AiliaVoice.cs:233</div></div>
 <div class="ttc" id="aclassailiaVoice_1_1AiliaVoice_html_a115edc13c1e5779e61ef54b5796ebbfe"><div class="ttname"><a href="classailiaVoice_1_1AiliaVoice.html#a115edc13c1e5779e61ef54b5796ebbfe">ailiaVoice.AiliaVoice.ailiaOpenWeightFileA</a></div><div class="ttdeci">static int ailiaOpenWeightFileA(IntPtr net, IntPtr path)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

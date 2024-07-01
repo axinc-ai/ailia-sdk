@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
 基本的な使用方法</h1>
-<p>C::を使用して音声合成をする例です。AiliaVoiceModelを作成し、OpenModelでAIモデルを読み込み、G2Pで音素に変換、Inferenceを呼び出すことでAudioClipを取得可能です。GPT-SoVITSの場合は、Inferenceの前にSetReferenceでリファレンスとなるAudioClipを与えます。</p>
+<p>C#を使用して音声合成をする例です。AiliaVoiceModelを作成し、OpenModelでAIモデルを読み込み、G2Pで音素に変換、Inferenceを呼び出すことでAudioClipを取得可能です。GPT-SoVITSの場合は、Inferenceの前にSetReferenceでリファレンスとなるAudioClipを与えます。</p>
 <div class="fragment"><div class="line">void Initialize(){</div>
 <div class="line">    bool status = voice.Create(Ailia.AILIA_ENVIRONMENT_ID_AUTO, AiliaVoice.AILIA_VOICE_FLAG_NONE);</div>
 <div class="line"> </div>
@@ -89,8 +89,8 @@ $(function() {
 <div class="line"> </div>
 <div class="line"> void Infer(string text){</div>
 <div class="line">    if (model == MODEL_GPT_SOVITS_JAPANESE){</div>
-<div class="line">        text = voice.G2P(text, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
-<div class="line">        string ref_text = voice.G2P(&quot;水をマレーシアから買わなくてはならない。&quot;, AiliaVoice.AILIA_VOICE_TEXT_POST_PROCESS_APPEND_PUNCTUATION);</div>
+<div class="line">        text = voice.G2P(text, AiliaVoice.AILIA_VOICE_G2P_TYPE_GPT_SOVITS_JA);</div>
+<div class="line">        string ref_text = voice.G2P(&quot;水をマレーシアから買わなくてはならない。&quot;, AiliaVoice.AILIA_VOICE_G2P_TYPE_GPT_SOVITS_JA);</div>
 <div class="line">        voice.SetReference(ref_clip, ref_text);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
