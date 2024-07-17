@@ -51,6 +51,7 @@ ailia Tokenizer is a library for encode NLP text and decode NLP tokens. ailia To
 
 - [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/jp/)
 - [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/jp/)
+- [Python API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tokenizer/python/en/)
 
 ### ailia Speech
 

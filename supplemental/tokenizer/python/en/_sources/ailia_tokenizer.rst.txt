@@ -1,0 +1,70 @@
+ailia_tokenizer package
+==========================
+
+Classes
+-----------
+
+.. autoclass:: ailia_tokenizer.BaseTokenizer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.WhisperTokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.CLIPTokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.XLMRobertaTokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.MarianTokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.BertJapaneseWordPieceTokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.BertJapaneseCharacterTokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.T5Tokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.RobertaTokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.BertUncasedTokanizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.BertCasedTokanizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
