@@ -57,13 +57,13 @@ Classes
    :undoc-members:
    :show-inheritance:
 
-.. autoclass:: ailia_tokenizer.BertUncasedTokanizer
+.. autoclass:: ailia_tokenizer.BertUncasedTokenizer
    :special-members: __init__, __name__
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. autoclass:: ailia_tokenizer.BertCasedTokanizer
+.. autoclass:: ailia_tokenizer.BertCasedTokenizer
    :special-members: __init__, __name__
    :members:
    :undoc-members:
