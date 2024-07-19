@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['close_298',['Close',['../classAiliaSpeechModel.html#aa3d477ba27a65d1b1e5ec26714581285',1,'AiliaSpeechModel']]]
+  ['close_306',['Close',['../classailiaSpeech_1_1AiliaSpeechModel.html#a18aab7785df4a378c7acb8ca7fa105a0',1,'ailiaSpeech.AiliaSpeechModel.Close()'],['../classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a2ff933f631562e61e6a1f813f6959f38',1,'ailiaSpeech.AiliaSpeechTranslateModel.Close()']]]
 ];

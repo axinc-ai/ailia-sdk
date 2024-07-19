@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['ailiaspeech_181',['AiliaSpeech',['../classAiliaSpeech.html',1,'']]],
-  ['ailiaspeechapicallback_182',['AILIASpeechApiCallback',['../structAiliaSpeech_1_1AILIASpeechApiCallback.html',1,'AiliaSpeech']]],
-  ['ailiaspeechmodel_183',['AiliaSpeechModel',['../classAiliaSpeechModel.html',1,'']]],
-  ['ailiaspeechtext_184',['AILIASpeechText',['../classAiliaSpeech_1_1AILIASpeechText.html',1,'AiliaSpeech']]]
+  ['ailiaspeech_186',['AiliaSpeech',['../classailiaSpeech_1_1AiliaSpeech.html',1,'ailiaSpeech']]],
+  ['ailiaspeechapicallback_187',['AILIASpeechApiCallback',['../structailiaSpeech_1_1AiliaSpeech_1_1AILIASpeechApiCallback.html',1,'ailiaSpeech::AiliaSpeech']]],
+  ['ailiaspeechmodel_188',['AiliaSpeechModel',['../classailiaSpeech_1_1AiliaSpeechModel.html',1,'ailiaSpeech']]],
+  ['ailiaspeechtext_189',['AILIASpeechText',['../classailiaSpeech_1_1AiliaSpeech_1_1AILIASpeechText.html',1,'ailiaSpeech::AiliaSpeech']]],
+  ['ailiaspeechtranslatemodel_190',['AiliaSpeechTranslateModel',['../classailiaSpeech_1_1AiliaSpeechTranslateModel.html',1,'ailiaSpeech']]]
 ];

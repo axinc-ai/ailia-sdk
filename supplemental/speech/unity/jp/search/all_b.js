@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['text_176',['text',['../classAiliaSpeech_1_1AILIASpeechText.html#af67c04c90e6c98496524e0d770b44877',1,'AiliaSpeech::AILIASpeechText']]],
-  ['time_5fstamp_5fbegin_177',['time_stamp_begin',['../classAiliaSpeech_1_1AILIASpeechText.html#ab26c170472c93861b95bce085c19efcd',1,'AiliaSpeech::AILIASpeechText']]],
-  ['time_5fstamp_5fend_178',['time_stamp_end',['../classAiliaSpeech_1_1AILIASpeechText.html#a4714ff2204ac3cd8d0edc44046a18eb9',1,'AiliaSpeech::AILIASpeechText']]],
-  ['transcribe_179',['Transcribe',['../classAiliaSpeechModel.html#a0ebdc122a2d3dca2abe6cfd1134cc88d',1,'AiliaSpeechModel']]]
+  ['text_180',['text',['../classailiaSpeech_1_1AiliaSpeech_1_1AILIASpeechText.html#a590c58bc726dd35e4ab6c96bfe7753cd',1,'ailiaSpeech::AiliaSpeech::AILIASpeechText']]],
+  ['time_5fstamp_5fbegin_181',['time_stamp_begin',['../classailiaSpeech_1_1AiliaSpeech_1_1AILIASpeechText.html#a9383f0f3d5774180b4c9724fa41029eb',1,'ailiaSpeech::AiliaSpeech::AILIASpeechText']]],
+  ['time_5fstamp_5fend_182',['time_stamp_end',['../classailiaSpeech_1_1AiliaSpeech_1_1AILIASpeechText.html#a010a48c1f8d276c89779cef9041ca61c',1,'ailiaSpeech::AiliaSpeech::AILIASpeechText']]],
+  ['transcribe_183',['Transcribe',['../classailiaSpeech_1_1AiliaSpeechModel.html#ad347c1bc5581de11c99c7dacd8ba5e10',1,'ailiaSpeech::AiliaSpeechModel']]],
+  ['translate_184',['Translate',['../classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a5cd3d89c448933fbd2d566157eab4efd',1,'ailiaSpeech::AiliaSpeechTranslateModel']]]
 ];
