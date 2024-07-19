@@ -114,6 +114,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a7a0029efcdb19f1ff9858ccedeeeeab5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#a7a0029efcdb19f1ff9858ccedeeeeab5">AILIA_TOKENIZER_TYPE_ROBERTA</a>&#160;&#160;&#160;(7)</td></tr>
 <tr class="memdesc:a7a0029efcdb19f1ff9858ccedeeeeab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenizer for RoBERTa.  <a href="ailia__tokenizer_8h.html#a7a0029efcdb19f1ff9858ccedeeeeab5">More...</a><br /></td></tr>
 <tr class="separator:a7a0029efcdb19f1ff9858ccedeeeeab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d52b4877ef9d3b4426f7f5938acfa33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#a5d52b4877ef9d3b4426f7f5938acfa33">AILIA_TOKENIZER_TYPE_BERT_UNCASED</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="memdesc:a5d52b4877ef9d3b4426f7f5938acfa33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenizer for BERT UNCASED.  <a href="ailia__tokenizer_8h.html#a5d52b4877ef9d3b4426f7f5938acfa33">More...</a><br /></td></tr>
+<tr class="separator:a5d52b4877ef9d3b4426f7f5938acfa33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808382849ccd175a71119193480fffed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#a808382849ccd175a71119193480fffed">AILIA_TOKENIZER_TYPE_BERT_CASED</a>&#160;&#160;&#160;(9)</td></tr>
+<tr class="memdesc:a808382849ccd175a71119193480fffed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenizer for BERT CASED.  <a href="ailia__tokenizer_8h.html#a808382849ccd175a71119193480fffed">More...</a><br /></td></tr>
+<tr class="separator:a808382849ccd175a71119193480fffed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28433a1ad8439f695ea99f23b4bc2d47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#a28433a1ad8439f695ea99f23b4bc2d47">AILIA_TOKENIZER_FLAG_NONE</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="memdesc:a28433a1ad8439f695ea99f23b4bc2d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default flag.  <a href="ailia__tokenizer_8h.html#a28433a1ad8439f695ea99f23b4bc2d47">More...</a><br /></td></tr>
 <tr class="separator:a28433a1ad8439f695ea99f23b4bc2d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +235,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a808382849ccd175a71119193480fffed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808382849ccd175a71119193480fffed">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_BERT_CASED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TOKENIZER_TYPE_BERT_CASED&#160;&#160;&#160;(9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tokenizer for BERT CASED. </p>
+
+</div>
+</div>
 <a id="abee1405209be94af42197c9f5a120945"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abee1405209be94af42197c9f5a120945">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</h2>
 
@@ -260,6 +282,22 @@ Functions</h2></td></tr>
 
 <p>Tokenizer for Japanese BERT. </p>
 <p>The input text is internally normalized in Unicode format using NFKC format. </p>
+
+</div>
+</div>
+<a id="a5d52b4877ef9d3b4426f7f5938acfa33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d52b4877ef9d3b4426f7f5938acfa33">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_BERT_UNCASED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TOKENIZER_TYPE_BERT_UNCASED&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tokenizer for BERT UNCASED. </p>
 
 </div>
 </div>
@@ -505,7 +543,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
-<p>Get the decoded result with ailiaTokenizerGetText API. </p>
+<p>Get the decoded result with ailiaTokenizerGetText API. Similarly to skip_special_tokens=True, special tokens will not be output. </p>
 
 </div>
 </div>
