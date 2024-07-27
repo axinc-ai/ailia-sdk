@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -71,10 +71,14 @@ Features of ailia Tokenizer</h1>
 <p>In this page, we present the features that are provided by both the C and the C# APIs.</p>
 <h2><a class="anchor" id="autotoc_md39"></a>
 Compatibility of Tokenizer</h2>
-<p>ailiaTokenizerEncode matches the following call in transformers. No padding or truncation is performed.</p>
-<div class="fragment"><div class="line">input_ids　= tokenizer(sents)</div>
-</div><!-- fragment --><p>ailiaTokenizerDecode matches the following call in transformers. Special tokens are not output.</p>
+<p>ailiaTokenizerEncode matches the following call from transformers. SpecialToken will be encoded as text. No padding or truncation occurs.</p>
+<div class="fragment"><div class="line">input_ids = tokenizer(sents, split_special_tokens=True)</div>
+</div><!-- fragment --><p>ailiaTokenizerEncodeWithSpecialTokens matches the following call from transformers. SpecialToken will be encoded as SpecialToken. No padding or truncation occurs.</p>
+<div class="fragment"><div class="line">input_ids = tokenizer(sents)</div>
+</div><!-- fragment --><p>ailiaTokenizerDecode matches the following call from transformers. SpecialToken will not be output.</p>
 <div class="fragment"><div class="line">tokenizer.decode(input_ids, skip_special_tokens=True)</div>
+</div><!-- fragment --><p>ailiaTokenizerDecodeWithSpecialTokens matches the following call from transformers. SpecialToken will be output.</p>
+<div class="fragment"><div class="line">tokenizer.decode(input_ids)</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
 Tokenizer Types</h2>
 <h3><a class="anchor" id="autotoc_md41"></a>

@@ -35,6 +35,7 @@ var menudata={children:[
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
 {text:"e",url:"functions.html#index_e"},
+{text:"g",url:"functions.html#index_g"},
 {text:"l",url:"functions.html#index_l"},
 {text:"o",url:"functions.html#index_o"}]},
 {text:"関数",url:"functions_func.html"},

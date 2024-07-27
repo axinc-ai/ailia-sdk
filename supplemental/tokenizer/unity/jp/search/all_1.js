@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['close_35',['Close',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a7ad1eface0cd8b0ea67a6114fd5bc4d8',1,'ailiaTokenizer::AiliaTokenizerModel']]],
-  ['create_36',['Create',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a0dcb9af4ae904caca17b31dd0c0b1fa1',1,'ailiaTokenizer::AiliaTokenizerModel']]]
+  ['close_39',['Close',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a7ad1eface0cd8b0ea67a6114fd5bc4d8',1,'ailiaTokenizer::AiliaTokenizerModel']]],
+  ['create_40',['Create',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a0dcb9af4ae904caca17b31dd0c0b1fa1',1,'ailiaTokenizer::AiliaTokenizerModel']]]
 ];

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -95,6 +95,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a94bb0f86774bd0c198cc1b134bd8972e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a94bb0f86774bd0c198cc1b134bd8972e">ailiaTokenizerEncode</a> (IntPtr net, IntPtr utf8)</td></tr>
 <tr class="memdesc:a94bb0f86774bd0c198cc1b134bd8972e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform encode.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a94bb0f86774bd0c198cc1b134bd8972e">More...</a><br /></td></tr>
 <tr class="separator:a94bb0f86774bd0c198cc1b134bd8972e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53bcee6fb91b900ac4f5055ed31e22fa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a53bcee6fb91b900ac4f5055ed31e22fa">ailiaTokenizerEncodeWithSpecialTokens</a> (IntPtr net, IntPtr utf8)</td></tr>
+<tr class="memdesc:a53bcee6fb91b900ac4f5055ed31e22fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform encode with special tokens.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a53bcee6fb91b900ac4f5055ed31e22fa">More...</a><br /></td></tr>
+<tr class="separator:a53bcee6fb91b900ac4f5055ed31e22fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdb25d88e6c7e2bc170b295fa02135ef"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#afdb25d88e6c7e2bc170b295fa02135ef">ailiaTokenizerGetTokenCount</a> (IntPtr net, ref uint count)</td></tr>
 <tr class="memdesc:afdb25d88e6c7e2bc170b295fa02135ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of tokens.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#afdb25d88e6c7e2bc170b295fa02135ef">More...</a><br /></td></tr>
 <tr class="separator:afdb25d88e6c7e2bc170b295fa02135ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,12 +107,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a911768f5b87f31aadbf185cb32ebdc8e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a911768f5b87f31aadbf185cb32ebdc8e">ailiaTokenizerDecode</a> (IntPtr net, IntPtr tokens, uint token_count)</td></tr>
 <tr class="memdesc:a911768f5b87f31aadbf185cb32ebdc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform encode.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a911768f5b87f31aadbf185cb32ebdc8e">More...</a><br /></td></tr>
 <tr class="separator:a911768f5b87f31aadbf185cb32ebdc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c778f368c2058ff12e44996af4a21f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a70c778f368c2058ff12e44996af4a21f">ailiaTokenizerDecodeWithSpecialTokens</a> (IntPtr net, IntPtr tokens, uint token_count)</td></tr>
+<tr class="memdesc:a70c778f368c2058ff12e44996af4a21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform decode with special tokens.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a70c778f368c2058ff12e44996af4a21f">More...</a><br /></td></tr>
+<tr class="separator:a70c778f368c2058ff12e44996af4a21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc2557a169c678e634f9037544e74e1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a4fc2557a169c678e634f9037544e74e1">ailiaTokenizerGetTextLength</a> (IntPtr net, ref uint len)</td></tr>
 <tr class="memdesc:a4fc2557a169c678e634f9037544e74e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of text. (Include null)  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a4fc2557a169c678e634f9037544e74e1">More...</a><br /></td></tr>
 <tr class="separator:a4fc2557a169c678e634f9037544e74e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9226a48a9918df3d1657a90629c858be"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a9226a48a9918df3d1657a90629c858be">ailiaTokenizerGetText</a> (IntPtr net, IntPtr text, uint len)</td></tr>
 <tr class="memdesc:a9226a48a9918df3d1657a90629c858be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the decoded text.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a9226a48a9918df3d1657a90629c858be">More...</a><br /></td></tr>
 <tr class="separator:a9226a48a9918df3d1657a90629c858be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac517c7089e126135608f1016a19ceb00"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#ac517c7089e126135608f1016a19ceb00">ailiaTokenizerGetVocabSize</a> (IntPtr net, ref uint size)</td></tr>
+<tr class="memdesc:ac517c7089e126135608f1016a19ceb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of vocab. (Include null)  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#ac517c7089e126135608f1016a19ceb00">More...</a><br /></td></tr>
+<tr class="separator:ac517c7089e126135608f1016a19ceb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f3948942f1c0931207937a679223bf"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#ad0f3948942f1c0931207937a679223bf">ailiaTokenizerGetVocab</a> (IntPtr net, int token, ref IntPtr vocab)</td></tr>
+<tr class="memdesc:ad0f3948942f1c0931207937a679223bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform encode.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#ad0f3948942f1c0931207937a679223bf">More...</a><br /></td></tr>
+<tr class="separator:ad0f3948942f1c0931207937a679223bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5843f4666529f4ac4dc1159fec82e96e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a5843f4666529f4ac4dc1159fec82e96e">ailiaTokenizerDestroy</a> (IntPtr net)</td></tr>
 <tr class="memdesc:a5843f4666529f4ac4dc1159fec82e96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the tokenizer instance.  <a href="classailiaTokenizer_1_1AiliaTokenizer.html#a5843f4666529f4ac4dc1159fec82e96e">More...</a><br /></td></tr>
 <tr class="separator:a5843f4666529f4ac4dc1159fec82e96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,6 +254,52 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a70c778f368c2058ff12e44996af4a21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c778f368c2058ff12e44996af4a21f">&#9670;&nbsp;</a></span>ailiaTokenizerDecodeWithSpecialTokens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerDecodeWithSpecialTokens </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>tokens</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>token_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform decode with special tokens. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A tokenizer instance pointer </td></tr>
+    <tr><td class="paramname">tokens</td><td>Tokens for decode </td></tr>
+    <tr><td class="paramname">token_count</td><td>The number of tokens </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>Get the decoded result with ailiaTokenizerGetText API. Similarly to skip_special_tokens=False, special tokens will be output. </p>
+
+</div>
+</div>
 <a id="a5843f4666529f4ac4dc1159fec82e96e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5843f4666529f4ac4dc1159fec82e96e">&#9670;&nbsp;</a></span>ailiaTokenizerDestroy()</h2>
 
@@ -304,6 +362,45 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
 <p>Get the encoded result with ailiaTokenizerGetTokens API. </p>
+
+</div>
+</div>
+<a id="a53bcee6fb91b900ac4f5055ed31e22fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53bcee6fb91b900ac4f5055ed31e22fa">&#9670;&nbsp;</a></span>ailiaTokenizerEncodeWithSpecialTokens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerEncodeWithSpecialTokens </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>utf8</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform encode with special tokens. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A tokenizer instance pointer </td></tr>
+    <tr><td class="paramname">text</td><td>Text for encode (UTF8) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>Get the encoded result with ailiaTokenizerGetTokens API. Similarly to split_special_tokens=False, special tokens will be output. </p>
 
 </div>
 </div>
@@ -472,6 +569,90 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
 <p>If <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a94bb0f86774bd0c198cc1b134bd8972e" title="Perform encode.">ailiaTokenizerEncode()</a> is not run at all, the function returns AILIA_STATUS_INVALID_STATE . </p>
+
+</div>
+</div>
+<a id="ad0f3948942f1c0931207937a679223bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f3948942f1c0931207937a679223bf">&#9670;&nbsp;</a></span>ailiaTokenizerGetVocab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerGetVocab </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref IntPtr&#160;</td>
+          <td class="paramname"><em>vocab</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform encode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A tokenizer instance pointer </td></tr>
+    <tr><td class="paramname">token</td><td>Token </td></tr>
+    <tr><td class="paramname">text</td><td>Text of vocab (UTF8) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>There is no need to release the vocab. The validity period of the vocab will last until the next time the <a class="el" href="namespaceailiaTokenizer.html">ailiaTokenizer</a> API is called. </p>
+
+</div>
+</div>
+<a id="ac517c7089e126135608f1016a19ceb00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac517c7089e126135608f1016a19ceb00">&#9670;&nbsp;</a></span>ailiaTokenizerGetVocabSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailiaTokenizer.AiliaTokenizer.ailiaTokenizerGetVocabSize </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref uint&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the size of vocab. (Include null) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A tokenizer instance pointer </td></tr>
+    <tr><td class="paramname">size</td><td>The size of vocab </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. </dd></dl>
 
 </div>
 </div>
