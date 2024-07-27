@@ -4,7 +4,7 @@ ailia_tokenizer package
 Classes
 -----------
 
-.. autoclass:: ailia_tokenizer.BaseTokenizer
+.. autoclass:: ailia_tokenizer.PreTrainedTokenizer
    :members:
    :undoc-members:
    :show-inheritance:
