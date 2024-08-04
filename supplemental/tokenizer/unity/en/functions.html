@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -71,8 +71,8 @@ $(function() {
 <li>AILIA_TOKENIZER_FLAG_UTF8_SAFE
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a669a27e11383ab58d2cd06731138f1b2">ailiaTokenizer.AiliaTokenizer</a>
 </li>
-<li>AILIA_TOKENIZER_TYPE_BERT_CASED
-: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a7d0638f08859f36d0434e8e43b3df846">ailiaTokenizer.AiliaTokenizer</a>
+<li>AILIA_TOKENIZER_TYPE_BERT
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a2923b0ae2fe833bad79197d39bb0a7f7">ailiaTokenizer.AiliaTokenizer</a>
 </li>
 <li>AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#afd1f4fe579ff11970bb45a6d2c4c8157">ailiaTokenizer.AiliaTokenizer</a>
@@ -80,11 +80,14 @@ $(function() {
 <li>AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#aa00bec665833bcf21a1314e255853bc7">ailiaTokenizer.AiliaTokenizer</a>
 </li>
-<li>AILIA_TOKENIZER_TYPE_BERT_UNCASED
-: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a3f682c7130e063089ab58fb23d944f9d">ailiaTokenizer.AiliaTokenizer</a>
-</li>
 <li>AILIA_TOKENIZER_TYPE_CLIP
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a52dc3406d8fbfcd62fcb3b129c440117">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>AILIA_TOKENIZER_TYPE_GPT2
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#abbdcf826ea2b5aeaf76340d4e90bcb61">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>AILIA_TOKENIZER_TYPE_LLAMA
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a4aabb46d8825d8ed402a6f55a53b49b8">ailiaTokenizer.AiliaTokenizer</a>
 </li>
 <li>AILIA_TOKENIZER_TYPE_MARIAN
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a2f6cec96b2a51e8e9f524b7285b5917a">ailiaTokenizer.AiliaTokenizer</a>
@@ -107,11 +110,23 @@ $(function() {
 <li>ailiaTokenizerDecode()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a911768f5b87f31aadbf185cb32ebdc8e">ailiaTokenizer.AiliaTokenizer</a>
 </li>
+<li>ailiaTokenizerDecodeWithSpecialTokens()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a70c778f368c2058ff12e44996af4a21f">ailiaTokenizer.AiliaTokenizer</a>
+</li>
 <li>ailiaTokenizerDestroy()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a5843f4666529f4ac4dc1159fec82e96e">ailiaTokenizer.AiliaTokenizer</a>
 </li>
 <li>ailiaTokenizerEncode()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a94bb0f86774bd0c198cc1b134bd8972e">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>ailiaTokenizerEncodeWithSpecialTokens()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a53bcee6fb91b900ac4f5055ed31e22fa">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>ailiaTokenizerGetCharEnds()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a6926ffa8f066e0c4a6c08cd1693868b4">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>ailiaTokenizerGetCharStarts()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a68f9a33ce302b5ad112014b41e0f4827">ailiaTokenizer.AiliaTokenizer</a>
 </li>
 <li>ailiaTokenizerGetText()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a9226a48a9918df3d1657a90629c858be">ailiaTokenizer.AiliaTokenizer</a>
@@ -125,6 +140,18 @@ $(function() {
 <li>ailiaTokenizerGetTokens()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#aa3e3ef996c9ca7f949051ada55b01590">ailiaTokenizer.AiliaTokenizer</a>
 </li>
+<li>ailiaTokenizerGetVocab()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#ad0f3948942f1c0931207937a679223bf">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>ailiaTokenizerGetVocabSize()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#ac517c7089e126135608f1016a19ceb00">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>ailiaTokenizerGetWordIDs()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a883d1cb7da559f6d43d65e016d84aef1">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>ailiaTokenizerOpenAddedTokensFile()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#af18e1008fb20872f03c0caf9223994b3">ailiaTokenizer.AiliaTokenizer</a>
+</li>
 <li>ailiaTokenizerOpenDictionaryFile()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#aa11acd386b3efd460cc3d225a8a2ec11">ailiaTokenizer.AiliaTokenizer</a>
 </li>
@@ -133,6 +160,9 @@ $(function() {
 </li>
 <li>ailiaTokenizerOpenModelFile()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a6bcf5121446015ff585c413b4d87cfb8">ailiaTokenizer.AiliaTokenizer</a>
+</li>
+<li>ailiaTokenizerOpenTokenizerConfigFile()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a49fdbab1e47c43dbc631c6c1c514cae2">ailiaTokenizer.AiliaTokenizer</a>
 </li>
 <li>ailiaTokenizerOpenVocabFile()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a2c59ce983aef95d524ac733e734e48a3">ailiaTokenizer.AiliaTokenizer</a>
@@ -160,6 +190,9 @@ $(function() {
 <li>Decode()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizerModel.html#a3dbaabfbfb5e63cce87bf1a442f111d2">ailiaTokenizer.AiliaTokenizerModel</a>
 </li>
+<li>DecodeWithSpecialTokens()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizerModel.html#af0eee7e4c6c840341bffa19eaa81b6b6">ailiaTokenizer.AiliaTokenizerModel</a>
+</li>
 <li>Dispose()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizerModel.html#a0b2b1c751573f20c3ec33875164fbdc8">ailiaTokenizer.AiliaTokenizerModel</a>
 </li>
@@ -169,6 +202,19 @@ $(function() {
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>Encode()
 : <a class="el" href="classailiaTokenizer_1_1AiliaTokenizerModel.html#aec19e175037d12a350e525374359b6ad">ailiaTokenizer.AiliaTokenizerModel</a>
+</li>
+<li>EncodeWithSpecialTokens()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizerModel.html#ae0090fd19075b902fe337a770493dfa5">ailiaTokenizer.AiliaTokenizerModel</a>
+</li>
+</ul>
+
+
+<h3><a id="index_g"></a>- g -</h3><ul>
+<li>GetVocab()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizerModel.html#a59d5e8c7e2225f0ea8efcb757bddde9a">ailiaTokenizer.AiliaTokenizerModel</a>
+</li>
+<li>GetVocabSize()
+: <a class="el" href="classailiaTokenizer_1_1AiliaTokenizerModel.html#a27390d0d187af8e65500546c0b721b19">ailiaTokenizer.AiliaTokenizerModel</a>
 </li>
 </ul>
 

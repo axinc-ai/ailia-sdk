@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -71,10 +71,14 @@ ailia Tokenizerの機能</h1>
 <p>本ページでは、CとC#で共通に使用できる機能を解説します。</p>
 <h2><a class="anchor" id="autotoc_md44"></a>
 Tokenizerの互換性</h2>
-<p>ailiaTokenizerEncodeは、transformersの下記の呼び出しと一致します。パディングやトランケートは行われません。</p>
+<p>ailiaTokenizerEncodeは、transformersの下記の呼び出しと一致します。SpecialTokenはテキストとして符号化されます。パディングやトランケートは行われません。</p>
+<div class="fragment"><div class="line">input_ids = tokenizer(sents, split_special_tokens=True)</div>
+</div><!-- fragment --><p>ailiaTokenizerEncodeWithSpecialTokensは、transformersの下記の呼び出しと一致します。SpecialTokenはSpecialTokenとして符号化されます。パディングやトランケートは行われません。</p>
 <div class="fragment"><div class="line">input_ids = tokenizer(sents)</div>
 </div><!-- fragment --><p>ailiaTokenizerDecodeは、transformersの下記の呼び出しと一致します。SpecialTokenは出力されません。</p>
 <div class="fragment"><div class="line">tokenizer.decode(input_ids, skip_special_tokens=True)</div>
+</div><!-- fragment --><p>ailiaTokenizerDecodeWithSpecialTokensは、transformersの下記の呼び出しと一致します。SpecialTokenが出力されます。</p>
+<div class="fragment"><div class="line">tokenizer.decode(input_ids)</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md45"></a>
 Tokenizerの種類</h2>
 <h3><a class="anchor" id="autotoc_md46"></a>
@@ -112,7 +116,7 @@ AILIA_TOKENIZER_TYPE_MARIAN</h3>
 <div class="line">inputs = tokenizer(sents)</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md50"></a>
 AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE</h3>
-<p>Pythonの下記の処理に対応します。UKFC変換はailia Tokenizerで行われます。別途、ipadicとvocab_wordpiece.txtを与える必要があります。</p>
+<p>Pythonの下記の処理に対応します。UKFC変換はailia Tokenizerで行われます。別途、ipadicとtokenizer_wordpiece/vocab.txtを与える必要があります。</p>
 <div class="fragment"><div class="line">from transformers import BertJapaneseTokenizer</div>
 <div class="line">tokenizer = BertJapaneseTokenizer.from_pretrained(&#39;cl-tohoku/bert-base-japanese-whole-word-masking&#39;)</div>
 <div class="line">inputs = tokenizer(sents)</div>
@@ -121,7 +125,7 @@ AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE</h3>
 <div class="line">indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md51"></a>
 AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</h3>
-<p>Pythonの下記の処理に対応します。UKFC変換はailia Tokenizerで行われます。別途、ailiaTokenizerOpenDictionaryFileにipadic、ailiaTokenizerOpenVocabFileにvocab_character.txtを与える必要があります。</p>
+<p>Pythonの下記の処理に対応します。UKFC変換はailia Tokenizerで行われます。別途、ailiaTokenizerOpenDictionaryFileにipadic、ailiaTokenizerOpenVocabFileにtokenizer_character/vocab.txtを与える必要があります。</p>
 <div class="fragment"><div class="line">from transformers import BertJapaneseTokenizer</div>
 <div class="line">tokenizer = BertJapaneseTokenizer.from_pretrained(&#39;cl-tohoku/bert-base-japanese-char-whole-word-maskin&#39;)</div>
 <div class="line">inputs = tokenizer(sents)</div>
@@ -141,23 +145,29 @@ AILIA_TOKENIZER_TYPE_ROBERTA</h3>
 <div class="line">tokenize = RobertaTokenizer.from_pretrained(&#39;roberta-base&#39;)</div>
 <div class="line">inputs = tokenizer(sents)</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md54"></a>
-AILIA_TOKENIZER_TYPE_BERT_UNCASED</h3>
-<p>Pythonの下記の処理に対応します。別途、vocab.txtを与える必要があります。</p>
+AILIA_TOKENIZER_TYPE_BERT</h3>
+<p>Pythonの下記の処理に対応します。別途、vocab.txtとtokenizer_config.jsonを与える必要があります。</p>
 <div class="fragment"><div class="line">from transformers import BertTokenizer</div>
 <div class="line">tokenizer = BertTokenizer.from_pretrained(&#39;google-bert/bert-base-uncased&#39;)</div>
 <div class="line">inputs = tokenizer(sents)</div>
-</div><!-- fragment --><p>convert_tokens_to_idsと一致させたい場合は、先頭と終端の[CLS]と[SEP]のシンボルを削除する必要があります。</p>
-<div class="fragment"><div class="line">tokenized_text = tokenizer.tokenize(text)</div>
-<div class="line">indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md55"></a>
-AILIA_TOKENIZER_TYPE_BERT_CASED</h3>
-<p>Pythonの下記の処理に対応します。別途、vocab.txtを与える必要があります。</p>
-<div class="fragment"><div class="line">from transformers import BertTokenizer</div>
+</div><!-- fragment --><div class="fragment"><div class="line">from transformers import BertTokenizer</div>
 <div class="line">tokenizer = BertTokenizer.from_pretrained(&#39;google-bert/bert-base-cased&#39;)</div>
 <div class="line">inputs = tokenizer(sents)</div>
 </div><!-- fragment --><p>convert_tokens_to_idsと一致させたい場合は、先頭と終端の[CLS]と[SEP]のシンボルを削除する必要があります。</p>
 <div class="fragment"><div class="line">tokenized_text = tokenizer.tokenize(text)</div>
 <div class="line">indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md55"></a>
+AILIA_TOKENIZER_TYPE_GPT2</h3>
+<p>Pythonの下記の処理に対応します。別途、vocab.jsonとmerges.txtを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import GPT2Tokenizer</div>
+<div class="line">tokenizer = GPT2Tokenizer.from_pretrained(&quot;gpt2&quot;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md56"></a>
+AILIA_TOKENIZER_TYPE_LLAMA</h3>
+<p>Pythonの下記の処理に対応します。別途、ailiaTokenizerOpenModelFileにtokenizer.modelを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import LlamaTokenizer</div>
+<div class="line">tokenizer = LlamaTokenizer.from_pretrained(&quot;liuhaotian/llava-v1.5-7b&quot;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

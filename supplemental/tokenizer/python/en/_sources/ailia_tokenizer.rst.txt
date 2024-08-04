@@ -4,7 +4,12 @@ ailia_tokenizer package
 Classes
 -----------
 
-.. autoclass:: ailia_tokenizer.BaseTokenizer
+.. autoclass:: ailia_tokenizer.AiliaTokenizerResult
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.PreTrainedTokenizer
    :members:
    :undoc-members:
    :show-inheritance:
@@ -57,13 +62,19 @@ Classes
    :undoc-members:
    :show-inheritance:
 
-.. autoclass:: ailia_tokenizer.BertUncasedTokenizer
+.. autoclass:: ailia_tokenizer.BertTokenizer
    :special-members: __init__, __name__
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. autoclass:: ailia_tokenizer.BertCasedTokenizer
+.. autoclass:: ailia_tokenizer.GPT2Tokenizer
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_tokenizer.LlamaTokenizer
    :special-members: __init__, __name__
    :members:
    :undoc-members:

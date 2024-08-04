@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['library_5fname_44',['LIBRARY_NAME',['../classailiaTokenizer_1_1AiliaTokenizer.html#a5bf41ad340a233f8c24a672c7ac12b75',1,'ailiaTokenizer::AiliaTokenizer']]]
+  ['index_2dcsharp_2edox_57',['index-csharp.dox',['../index-csharp_8dox.html',1,'']]]
 ];

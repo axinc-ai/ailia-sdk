@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['how_20to_20import_20the_20unity_20package_20and_20run_20the_20sample_20program_42',['How to import the Unity package and run the sample program',['../setup.html',1,'']]]
+  ['getvocab_54',['GetVocab',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a59d5e8c7e2225f0ea8efcb757bddde9a',1,'ailiaTokenizer::AiliaTokenizerModel']]],
+  ['getvocabsize_55',['GetVocabSize',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a27390d0d187af8e65500546c0b721b19',1,'ailiaTokenizer::AiliaTokenizerModel']]]
 ];

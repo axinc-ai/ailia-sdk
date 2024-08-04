@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setup_46',['setup',['../md_md-csharp_setup.html',1,'']]],
-  ['setup_2emd_47',['setup.md',['../setup_8md.html',1,'']]]
+  ['open_59',['Open',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a9c022f8b5828abaf3d0b890ce69e9442',1,'ailiaTokenizer::AiliaTokenizerModel']]]
 ];

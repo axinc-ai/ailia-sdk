@@ -44,10 +44,26 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">ailia_tokenizer package</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a><ul>
-<li><a class="reference internal" href="#ailia_tokenizer.BaseTokenizer"><code class="docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a><ul>
-<li><a class="reference internal" href="#ailia_tokenizer.BaseTokenizer.convert_tokens_to_ids"><code class="docutils literal notranslate"><span class="pre">BaseTokenizer.convert_tokens_to_ids()</span></code></a></li>
-<li><a class="reference internal" href="#ailia_tokenizer.BaseTokenizer.decode"><code class="docutils literal notranslate"><span class="pre">BaseTokenizer.decode()</span></code></a></li>
-<li><a class="reference internal" href="#ailia_tokenizer.BaseTokenizer.encode"><code class="docutils literal notranslate"><span class="pre">BaseTokenizer.encode()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult</span></code></a><ul>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult.char_to_token"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult.char_to_token()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult.items"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult.items()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult.keys"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult.keys()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult.sequence_ids"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult.sequence_ids()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult.token_to_word"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult.token_to_word()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult.word_ids"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult.word_ids()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult.word_to_chars"><code class="docutils literal notranslate"><span class="pre">AiliaTokenizerResult.word_to_chars()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a><ul>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.add_special_tokens"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.add_special_tokens()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.batch_decode"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.batch_decode()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.batch_encode_plus"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.batch_encode_plus()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.convert_ids_to_tokens"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.convert_ids_to_tokens()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.convert_tokens_to_ids"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.convert_tokens_to_ids()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.decode"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.decode()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.encode"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.encode()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.encode_plus"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.encode_plus()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer.tokenize"><code class="docutils literal notranslate"><span class="pre">PreTrainedTokenizer.tokenize()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ailia_tokenizer.WhisperTokenizer"><code class="docutils literal notranslate"><span class="pre">WhisperTokenizer</span></code></a><ul>
@@ -82,12 +98,16 @@
 <li><a class="reference internal" href="#ailia_tokenizer.RobertaTokenizer.from_pretrained"><code class="docutils literal notranslate"><span class="pre">RobertaTokenizer.from_pretrained()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ailia_tokenizer.BertUncasedTokenizer"><code class="docutils literal notranslate"><span class="pre">BertUncasedTokenizer</span></code></a><ul>
-<li><a class="reference internal" href="#ailia_tokenizer.BertUncasedTokenizer.from_pretrained"><code class="docutils literal notranslate"><span class="pre">BertUncasedTokenizer.from_pretrained()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.BertTokenizer"><code class="docutils literal notranslate"><span class="pre">BertTokenizer</span></code></a><ul>
+<li><a class="reference internal" href="#ailia_tokenizer.BertTokenizer.from_pretrained"><code class="docutils literal notranslate"><span class="pre">BertTokenizer.from_pretrained()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ailia_tokenizer.BertCasedTokenizer"><code class="docutils literal notranslate"><span class="pre">BertCasedTokenizer</span></code></a><ul>
-<li><a class="reference internal" href="#ailia_tokenizer.BertCasedTokenizer.from_pretrained"><code class="docutils literal notranslate"><span class="pre">BertCasedTokenizer.from_pretrained()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_tokenizer.GPT2Tokenizer"><code class="docutils literal notranslate"><span class="pre">GPT2Tokenizer</span></code></a><ul>
+<li><a class="reference internal" href="#ailia_tokenizer.GPT2Tokenizer.from_pretrained"><code class="docutils literal notranslate"><span class="pre">GPT2Tokenizer.from_pretrained()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ailia_tokenizer.LlamaTokenizer"><code class="docutils literal notranslate"><span class="pre">LlamaTokenizer</span></code></a><ul>
+<li><a class="reference internal" href="#ailia_tokenizer.LlamaTokenizer.from_pretrained"><code class="docutils literal notranslate"><span class="pre">LlamaTokenizer.from_pretrained()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -124,22 +144,93 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="ailia_tokenizer.BaseTokenizer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">BaseTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.BaseTokenizer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">AiliaTokenizerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attention_mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_starts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_ends</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ailia_tokenizer.BaseTokenizer.convert_tokens_to_ids">
-<span class="sig-name descname"><span class="pre">convert_tokens_to_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BaseTokenizer.convert_tokens_to_ids" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.char_to_token">
+<span class="sig-name descname"><span class="pre">char_to_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_or_char_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.char_to_token" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ailia_tokenizer.BaseTokenizer.decode">
-<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BaseTokenizer.decode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.items" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ailia_tokenizer.BaseTokenizer.encode">
-<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BaseTokenizer.encode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.sequence_ids">
+<span class="sig-name descname"><span class="pre">sequence_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.sequence_ids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.token_to_word">
+<span class="sig-name descname"><span class="pre">token_to_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_or_token_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.token_to_word" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.word_ids">
+<span class="sig-name descname"><span class="pre">word_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.word_ids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.word_to_chars">
+<span class="sig-name descname"><span class="pre">word_to_chars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_or_word_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.word_to_chars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">PreTrainedTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.add_special_tokens">
+<span class="sig-name descname"><span class="pre">add_special_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">special_tokens_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.add_special_tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.batch_decode">
+<span class="sig-name descname"><span class="pre">batch_decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.batch_decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.batch_encode_plus">
+<span class="sig-name descname"><span class="pre">batch_encode_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_token_type_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.batch_encode_plus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.convert_ids_to_tokens">
+<span class="sig-name descname"><span class="pre">convert_ids_to_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.convert_ids_to_tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.convert_tokens_to_ids">
+<span class="sig-name descname"><span class="pre">convert_tokens_to_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.convert_tokens_to_ids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.decode">
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.encode">
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_token_type_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.encode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.encode_plus">
+<span class="sig-name descname"><span class="pre">encode_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_token_type_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.encode_plus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.tokenize">
+<span class="sig-name descname"><span class="pre">tokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.tokenize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -147,10 +238,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.WhisperTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">WhisperTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.WhisperTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.WhisperTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.WhisperTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.WhisperTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -158,10 +249,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.CLIPTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">CLIPTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.CLIPTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.CLIPTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.CLIPTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.CLIPTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -169,10 +260,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.XLMRobertaTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">XLMRobertaTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.XLMRobertaTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.XLMRobertaTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.XLMRobertaTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.XLMRobertaTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -180,10 +271,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.MarianTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">MarianTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.MarianTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.MarianTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.MarianTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.MarianTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -191,10 +282,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.BertJapaneseWordPieceTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">BertJapaneseWordPieceTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseWordPieceTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.BertJapaneseWordPieceTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vocab_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseWordPieceTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseWordPieceTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -202,10 +293,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.BertJapaneseCharacterTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">BertJapaneseCharacterTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseCharacterTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.BertJapaneseCharacterTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vocab_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseCharacterTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseCharacterTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -213,10 +304,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.T5Tokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">T5Tokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.T5Tokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.T5Tokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.T5Tokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.T5Tokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -224,32 +315,43 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ailia_tokenizer.RobertaTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">RobertaTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.RobertaTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.RobertaTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">marges_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.RobertaTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.RobertaTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="ailia_tokenizer.BertUncasedTokenizer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">BertUncasedTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.BertUncasedTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dt class="sig sig-object py" id="ailia_tokenizer.BertTokenizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">BertTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.BertTokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ailia_tokenizer.BertUncasedTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertUncasedTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_tokenizer.BertTokenizer.from_pretrained">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="ailia_tokenizer.BertCasedTokenizer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">BertCasedTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.BertCasedTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.BaseTokenizer" title="ailia_tokenizer.BaseTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTokenizer</span></code></a></p>
+<dt class="sig sig-object py" id="ailia_tokenizer.GPT2Tokenizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">GPT2Tokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.GPT2Tokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ailia_tokenizer.BertCasedTokenizer.from_pretrained">
-<span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertCasedTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_tokenizer.GPT2Tokenizer.from_pretrained">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.GPT2Tokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia_tokenizer.LlamaTokenizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">LlamaTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.LlamaTokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia_tokenizer.PreTrainedTokenizer" title="ailia_tokenizer.PreTrainedTokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreTrainedTokenizer</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_tokenizer.LlamaTokenizer.from_pretrained">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.LlamaTokenizer.from_pretrained" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

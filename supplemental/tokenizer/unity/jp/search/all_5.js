@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['index_2dcsharp_2edox_42',['index-csharp.dox',['../index-csharp_8dox.html',1,'']]]
+  ['getvocab_54',['GetVocab',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a59d5e8c7e2225f0ea8efcb757bddde9a',1,'ailiaTokenizer::AiliaTokenizerModel']]],
+  ['getvocabsize_55',['GetVocabSize',['../classailiaTokenizer_1_1AiliaTokenizerModel.html#a27390d0d187af8e65500546c0b721b19',1,'ailiaTokenizer::AiliaTokenizerModel']]]
 ];
