@@ -59,6 +59,7 @@ ailia Speech is a library for speech recognition. It uses ailia SDK and ailia.au
 
 - [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/)
 - [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/unity/jp/)
+- [Python API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/speech/python/en/)
 
 ### ailia Voice
 
@@ -66,6 +67,7 @@ ailia AI Voice is a library generating speech from text. Using ailia AI Voice, y
 
 - [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/cpp/jp/)
 - [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/unity/jp/)
+- [Python API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/voice/python/en/)
 
 ## Videos
 
