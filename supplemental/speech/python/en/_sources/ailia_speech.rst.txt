@@ -1,0 +1,16 @@
+ailia_speech package
+==========================
+
+Classes
+-----------
+
+.. autoclass:: ailia_speech.AiliaSpeechModel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_speech.Whisper
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:

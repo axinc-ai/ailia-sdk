@@ -1,0 +1,16 @@
+ailia_voice package
+==========================
+
+Classes
+-----------
+
+.. autoclass:: ailia_voice.AiliaVoiceModel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: ailia_voice.GPTSoVITS
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
