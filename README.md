@@ -71,7 +71,7 @@ ailia AI Voice is a library generating speech from text. Using ailia AI Voice, y
 
 ### ailia LLM
 
-Ailia LLM is a library for running local LLMs. It can load GGUF and easily implement chat functionality.
+ailia LLM is a library for running local LLMs. It can load GGUF and easily implement chat functionality.
 
 - [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/cpp/jp/)
 - [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/unity/jp/)
