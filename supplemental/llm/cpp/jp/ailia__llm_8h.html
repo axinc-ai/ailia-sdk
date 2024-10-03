@@ -1,0 +1,800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_llm: ailia_llm.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_llm
+   &#160;<span id="projectnumber">1.0.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_e048eec7d1e763bfddf1d1355dfb8d1e.html">library</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">ailia_llm.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>LLM推論ライブラリ  
+<a href="#details">[詳解]</a></p>
+
+<p><a href="ailia__llm_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__AILIALLMChatMessage.html">_AILIALLMChatMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a3c69aad585c8ee619c34450cb5f35ea9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a></td></tr>
+<tr class="separator:a3c69aad585c8ee619c34450cb5f35ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cbafcad4ce0dd29db5174e4348a67e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:a72cbafcad4ce0dd29db5174e4348a67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">成功  <a href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">[詳解]</a><br /></td></tr>
+<tr class="separator:a72cbafcad4ce0dd29db5174e4348a67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7527f72f155616f9439e8d97c2d85f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#afa7527f72f155616f9439e8d97c2d85f">AILIA_LLM_STATUS_INVALID_ARGUMENT</a>&#160;&#160;&#160;(-1)</td></tr>
+<tr class="memdesc:afa7527f72f155616f9439e8d97c2d85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が不正  <a href="ailia__llm_8h.html#afa7527f72f155616f9439e8d97c2d85f">[詳解]</a><br /></td></tr>
+<tr class="separator:afa7527f72f155616f9439e8d97c2d85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bec4fd22a56466cf43e29151a496184"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a5bec4fd22a56466cf43e29151a496184">AILIA_LLM_STATUS_ERROR_FILE_API</a>&#160;&#160;&#160;(-2)</td></tr>
+<tr class="memdesc:a5bec4fd22a56466cf43e29151a496184"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルアクセスに失敗した  <a href="ailia__llm_8h.html#a5bec4fd22a56466cf43e29151a496184">[詳解]</a><br /></td></tr>
+<tr class="separator:a5bec4fd22a56466cf43e29151a496184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade16537d212864034036fe426ea9f189"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#ade16537d212864034036fe426ea9f189">AILIA_LLM_STATUS_INVALID_VERSION</a>&#160;&#160;&#160;(-3)</td></tr>
+<tr class="memdesc:ade16537d212864034036fe426ea9f189"><td class="mdescLeft">&#160;</td><td class="mdescRight">構造体バージョンが不正  <a href="ailia__llm_8h.html#ade16537d212864034036fe426ea9f189">[詳解]</a><br /></td></tr>
+<tr class="separator:ade16537d212864034036fe426ea9f189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73f68f5ab4056515be9e1d5c406611e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#af73f68f5ab4056515be9e1d5c406611e">AILIA_LLM_STATUS_BROKEN</a>&#160;&#160;&#160;(-4)</td></tr>
+<tr class="memdesc:af73f68f5ab4056515be9e1d5c406611e"><td class="mdescLeft">&#160;</td><td class="mdescRight">壊れたファイルが渡された  <a href="ailia__llm_8h.html#af73f68f5ab4056515be9e1d5c406611e">[詳解]</a><br /></td></tr>
+<tr class="separator:af73f68f5ab4056515be9e1d5c406611e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219ee6b798162e9f41edcef6b1d4a7c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a219ee6b798162e9f41edcef6b1d4a7c4">AILIA_LLM_STATUS_MEMORY_INSUFFICIENT</a>&#160;&#160;&#160;(-5)</td></tr>
+<tr class="memdesc:a219ee6b798162e9f41edcef6b1d4a7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリが不足している  <a href="ailia__llm_8h.html#a219ee6b798162e9f41edcef6b1d4a7c4">[詳解]</a><br /></td></tr>
+<tr class="separator:a219ee6b798162e9f41edcef6b1d4a7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3576c92b56926e2be3d7535e3a48ee3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#ad3576c92b56926e2be3d7535e3a48ee3">AILIA_LLM_STATUS_THREAD_ERROR</a>&#160;&#160;&#160;(-6)</td></tr>
+<tr class="memdesc:ad3576c92b56926e2be3d7535e3a48ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドの作成に失敗した  <a href="ailia__llm_8h.html#ad3576c92b56926e2be3d7535e3a48ee3">[詳解]</a><br /></td></tr>
+<tr class="separator:ad3576c92b56926e2be3d7535e3a48ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486d229c92e4b5c0fe4fc0bf673c5034"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a486d229c92e4b5c0fe4fc0bf673c5034">AILIA_LLM_STATUS_INVALID_STATE</a>&#160;&#160;&#160;(-7)</td></tr>
+<tr class="memdesc:a486d229c92e4b5c0fe4fc0bf673c5034"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部状態が不正  <a href="ailia__llm_8h.html#a486d229c92e4b5c0fe4fc0bf673c5034">[詳解]</a><br /></td></tr>
+<tr class="separator:a486d229c92e4b5c0fe4fc0bf673c5034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79bd7f952f014ed738d1753dffade081"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a79bd7f952f014ed738d1753dffade081">AILIA_LLM_STATUS_CONTEXT_FULL</a>&#160;&#160;&#160;(-8)</td></tr>
+<tr class="memdesc:a79bd7f952f014ed738d1753dffade081"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテキスト長を超えました  <a href="ailia__llm_8h.html#a79bd7f952f014ed738d1753dffade081">[詳解]</a><br /></td></tr>
+<tr class="separator:a79bd7f952f014ed738d1753dffade081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57dfcb2f409a6dbd07bb8423f2addfa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#ab57dfcb2f409a6dbd07bb8423f2addfa">AILIA_LLM_STATUS_UNIMPLEMENTED</a>&#160;&#160;&#160;(-15)</td></tr>
+<tr class="memdesc:ab57dfcb2f409a6dbd07bb8423f2addfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">未実装  <a href="ailia__llm_8h.html#ab57dfcb2f409a6dbd07bb8423f2addfa">[詳解]</a><br /></td></tr>
+<tr class="separator:ab57dfcb2f409a6dbd07bb8423f2addfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af163e0259421bae206477575f5c90338"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#af163e0259421bae206477575f5c90338">AILIA_LLM_STATUS_OTHER_ERROR</a>&#160;&#160;&#160;(-128)</td></tr>
+<tr class="memdesc:af163e0259421bae206477575f5c90338"><td class="mdescLeft">&#160;</td><td class="mdescRight">不明なエラー  <a href="ailia__llm_8h.html#af163e0259421bae206477575f5c90338">[詳解]</a><br /></td></tr>
+<tr class="separator:af163e0259421bae206477575f5c90338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a54ac4162a7bbc022ceb36634d2c7e632"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIALLMChatMessage.html">_AILIALLMChatMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a54ac4162a7bbc022ceb36634d2c7e632">AILIALLMChatMessage</a></td></tr>
+<tr class="separator:a54ac4162a7bbc022ceb36634d2c7e632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ae8bb41111905ea567116efdf438b412e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#ae8bb41111905ea567116efdf438b412e">ailiaLLMGetBackendCount</a> (unsigned int *env_count)</td></tr>
+<tr class="memdesc:ae8bb41111905ea567116efdf438b412e"><td class="mdescLeft">&#160;</td><td class="mdescRight">利用可能な計算環境(CPU, GPU)の数を取得します  <a href="ailia__llm_8h.html#ae8bb41111905ea567116efdf438b412e">[詳解]</a><br /></td></tr>
+<tr class="separator:ae8bb41111905ea567116efdf438b412e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ce058b55e21e9fdd95bbb671f750c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a80ce058b55e21e9fdd95bbb671f750c6">ailiaLLMGetBackendName</a> (const char **env, unsigned int env_idx)</td></tr>
+<tr class="memdesc:a80ce058b55e21e9fdd95bbb671f750c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">計算環境の一覧を取得します  <a href="ailia__llm_8h.html#a80ce058b55e21e9fdd95bbb671f750c6">[詳解]</a><br /></td></tr>
+<tr class="separator:a80ce058b55e21e9fdd95bbb671f750c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bfb56e72727f93dea6bb4ae17a5475"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a65bfb56e72727f93dea6bb4ae17a5475">ailiaLLMCreate</a> (struct AILIALLM **llm, unsigned int n_ctx)</td></tr>
+<tr class="memdesc:a65bfb56e72727f93dea6bb4ae17a5475"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLMオブジェクトを作成します。  <a href="ailia__llm_8h.html#a65bfb56e72727f93dea6bb4ae17a5475">[詳解]</a><br /></td></tr>
+<tr class="separator:a65bfb56e72727f93dea6bb4ae17a5475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c48de030f428b82c006e718ee46d0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a26c48de030f428b82c006e718ee46d0a">ailiaLLMOpenModelFileA</a> (struct AILIALLM *llm, const char *path)</td></tr>
+<tr class="memdesc:a26c48de030f428b82c006e718ee46d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルファイルを読み込みます。  <a href="ailia__llm_8h.html#a26c48de030f428b82c006e718ee46d0a">[詳解]</a><br /></td></tr>
+<tr class="separator:a26c48de030f428b82c006e718ee46d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70cf16c65c353e7f37b5826799d05f1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a70cf16c65c353e7f37b5826799d05f1c">ailiaLLMOpenModelFileW</a> (struct AILIALLM *llm, const wchar_t *path)</td></tr>
+<tr class="separator:a70cf16c65c353e7f37b5826799d05f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15a0c90e5070fadd7dc2196c80e7641"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#ad15a0c90e5070fadd7dc2196c80e7641">ailiaLLMGetContextSize</a> (struct AILIALLM *llm, unsigned int *context_size)</td></tr>
+<tr class="memdesc:ad15a0c90e5070fadd7dc2196c80e7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテキストの長さを取得します。  <a href="ailia__llm_8h.html#ad15a0c90e5070fadd7dc2196c80e7641">[詳解]</a><br /></td></tr>
+<tr class="separator:ad15a0c90e5070fadd7dc2196c80e7641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b39179b9fc2b13f30f9b5ff257aaaab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab">ailiaLLMSetPrompt</a> (struct AILIALLM *llm, const <a class="el" href="ailia__llm_8h.html#a54ac4162a7bbc022ceb36634d2c7e632">AILIALLMChatMessage</a> *message, unsigned int message_cnt)</td></tr>
+<tr class="memdesc:a0b39179b9fc2b13f30f9b5ff257aaaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロンプトを設定します。  <a href="ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab">[詳解]</a><br /></td></tr>
+<tr class="separator:a0b39179b9fc2b13f30f9b5ff257aaaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd8bd3eb42561a666a6855759d49a87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a5dd8bd3eb42561a666a6855759d49a87">ailiaLLMGenerate</a> (struct AILIALLM *llm, unsigned int *done)</td></tr>
+<tr class="memdesc:a5dd8bd3eb42561a666a6855759d49a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成を行います。  <a href="ailia__llm_8h.html#a5dd8bd3eb42561a666a6855759d49a87">[詳解]</a><br /></td></tr>
+<tr class="separator:a5dd8bd3eb42561a666a6855759d49a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55660390df9d7937c0d264f1e32e4322"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a55660390df9d7937c0d264f1e32e4322">ailiaLLMGetDeltaTextSize</a> (struct AILIALLM *llm, unsigned int *buf_size)</td></tr>
+<tr class="memdesc:a55660390df9d7937c0d264f1e32e4322"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストの長さを取得します。(NULL文字含む)  <a href="ailia__llm_8h.html#a55660390df9d7937c0d264f1e32e4322">[詳解]</a><br /></td></tr>
+<tr class="separator:a55660390df9d7937c0d264f1e32e4322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2ed9a36373bc85611086e328f95493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a2c2ed9a36373bc85611086e328f95493">ailiaLLMGetDeltaText</a> (struct AILIALLM *llm, char *text, unsigned int buf_size)</td></tr>
+<tr class="memdesc:a2c2ed9a36373bc85611086e328f95493"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストを取得します。  <a href="ailia__llm_8h.html#a2c2ed9a36373bc85611086e328f95493">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c2ed9a36373bc85611086e328f95493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa365516599d78f9dc6b633defe1c5a97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">ailiaLLMDestroy</a> (struct AILIALLM *llm)</td></tr>
+<tr class="memdesc:aa365516599d78f9dc6b633defe1c5a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLMオブジェクトを破棄します。  <a href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">[詳解]</a><br /></td></tr>
+<tr class="separator:aa365516599d78f9dc6b633defe1c5a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>LLM推論ライブラリ </p>
+<dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ax Inc. </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2024/09/27 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a3c69aad585c8ee619c34450cb5f35ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c69aad585c8ee619c34450cb5f35ea9">&#9670;&nbsp;</a></span>AILIA_LLM_API</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_API</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af73f68f5ab4056515be9e1d5c406611e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73f68f5ab4056515be9e1d5c406611e">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_BROKEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_BROKEN&#160;&#160;&#160;(-4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>壊れたファイルが渡された </p>
+<dl class="section remark"><dt>注釈</dt><dd>モデルファイルが破損していないかを確認し、正常なモデルを渡してください。 </dd></dl>
+
+</div>
+</div>
+<a id="a79bd7f952f014ed738d1753dffade081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79bd7f952f014ed738d1753dffade081">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_CONTEXT_FULL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_CONTEXT_FULL&#160;&#160;&#160;(-8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンテキスト長を超えました </p>
+<dl class="section remark"><dt>注釈</dt><dd>SetPromptに与えるコンテキスト長を削減してください。 </dd></dl>
+
+</div>
+</div>
+<a id="a5bec4fd22a56466cf43e29151a496184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bec4fd22a56466cf43e29151a496184">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_ERROR_FILE_API</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_ERROR_FILE_API&#160;&#160;&#160;(-2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルアクセスに失敗した </p>
+<dl class="section remark"><dt>注釈</dt><dd>指定したパスのファイルが存在するか、権限を確認してください。 </dd></dl>
+
+</div>
+</div>
+<a id="afa7527f72f155616f9439e8d97c2d85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa7527f72f155616f9439e8d97c2d85f">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_INVALID_ARGUMENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_INVALID_ARGUMENT&#160;&#160;&#160;(-1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>引数が不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>API呼び出し時の引数を確認してください。 </dd></dl>
+
+</div>
+</div>
+<a id="a486d229c92e4b5c0fe4fc0bf673c5034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486d229c92e4b5c0fe4fc0bf673c5034">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_INVALID_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_INVALID_STATE&#160;&#160;&#160;(-7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内部状態が不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>APIドキュメントを確認し、呼び出し手順が正しいかどうかを確認してください。 </dd></dl>
+
+</div>
+</div>
+<a id="ade16537d212864034036fe426ea9f189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade16537d212864034036fe426ea9f189">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_INVALID_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_INVALID_VERSION&#160;&#160;&#160;(-3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>構造体バージョンが不正 </p>
+<dl class="section remark"><dt>注釈</dt><dd>API呼び出し時に指定した構造体バージョンを確認し、正しい構造体バージョンを指定してください。 </dd></dl>
+
+</div>
+</div>
+<a id="a219ee6b798162e9f41edcef6b1d4a7c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219ee6b798162e9f41edcef6b1d4a7c4">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_MEMORY_INSUFFICIENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_MEMORY_INSUFFICIENT&#160;&#160;&#160;(-5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>メモリが不足している </p>
+<dl class="section remark"><dt>注釈</dt><dd>メインメモリやVRAMの空き容量を確保してからAPIを呼び出してください。 </dd></dl>
+
+</div>
+</div>
+<a id="af163e0259421bae206477575f5c90338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af163e0259421bae206477575f5c90338">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_OTHER_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_OTHER_ERROR&#160;&#160;&#160;(-128)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>不明なエラー </p>
+<dl class="section remark"><dt>注釈</dt><dd>その他のエラーが発生しました。 </dd></dl>
+
+</div>
+</div>
+<a id="a72cbafcad4ce0dd29db5174e4348a67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72cbafcad4ce0dd29db5174e4348a67e">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_SUCCESS&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>成功 </p>
+
+</div>
+</div>
+<a id="ad3576c92b56926e2be3d7535e3a48ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3576c92b56926e2be3d7535e3a48ee3">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_THREAD_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_THREAD_ERROR&#160;&#160;&#160;(-6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スレッドの作成に失敗した </p>
+<dl class="section remark"><dt>注釈</dt><dd>スレッド数などシステムリソースを確認し、リソースを開放してからAPIを呼び出してください。 </dd></dl>
+
+</div>
+</div>
+<a id="ab57dfcb2f409a6dbd07bb8423f2addfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57dfcb2f409a6dbd07bb8423f2addfa">&#9670;&nbsp;</a></span>AILIA_LLM_STATUS_UNIMPLEMENTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_LLM_STATUS_UNIMPLEMENTED&#160;&#160;&#160;(-15)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>未実装 </p>
+<dl class="section remark"><dt>注釈</dt><dd>指定した環境では未実装な機能が呼び出されました。エラー内容をドキュメント記載のサポート窓口までお問い合わせください。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="a54ac4162a7bbc022ceb36634d2c7e632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54ac4162a7bbc022ceb36634d2c7e632">&#9670;&nbsp;</a></span>AILIALLMChatMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__AILIALLMChatMessage.html">_AILIALLMChatMessage</a> <a class="el" href="ailia__llm_8h.html#a54ac4162a7bbc022ceb36634d2c7e632">AILIALLMChatMessage</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a65bfb56e72727f93dea6bb4ae17a5475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65bfb56e72727f93dea6bb4ae17a5475">&#9670;&nbsp;</a></span>ailiaLLMCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMCreate </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM **&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LLMオブジェクトを作成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタへのポインタ </td></tr>
+    <tr><td class="paramname">n_ctx</td><td>コンテキスト長（0でモデルのデフォルト） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>LLMオブジェクトを作成します。 </p>
+
+</div>
+</div>
+<a id="aa365516599d78f9dc6b633defe1c5a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa365516599d78f9dc6b633defe1c5a97">&#9670;&nbsp;</a></span>ailiaLLMDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> void ailiaLLMDestroy </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LLMオブジェクトを破棄します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5dd8bd3eb42561a666a6855759d49a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd8bd3eb42561a666a6855759d49a87">&#9670;&nbsp;</a></span>ailiaLLMGenerate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGenerate </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>done</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成を行います。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">done</td><td>生成が完了したか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>デコードした結果はailiaLLMGetDeltaText APIで取得します。 ailiaLLMGenerateを呼び出すたびに1トークンずつデコードします。 doneは0か1を取ります。doneが1の場合、生成完了となります。 </p>
+
+</div>
+</div>
+<a id="ae8bb41111905ea567116efdf438b412e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bb41111905ea567116efdf438b412e">&#9670;&nbsp;</a></span>ailiaLLMGetBackendCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetBackendCount </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>env_count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>利用可能な計算環境(CPU, GPU)の数を取得します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">env_count</td><td>計算環境情報の数の格納先 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a80ce058b55e21e9fdd95bbb671f750c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ce058b55e21e9fdd95bbb671f750c6">&#9670;&nbsp;</a></span>ailiaLLMGetBackendName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetBackendName </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>env_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>計算環境の一覧を取得します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">env</td><td>計算環境情報の格納先(AILIANetworkインスタンスを破棄するまで有効) </td></tr>
+    <tr><td class="paramname">env_idx</td><td>計算環境情報のインデックス(0～ <a class="el" href="ailia__llm_8h.html#ae8bb41111905ea567116efdf438b412e" title="利用可能な計算環境(CPU, GPU)の数を取得します">ailiaLLMGetBackendCount()</a> -1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="ad15a0c90e5070fadd7dc2196c80e7641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad15a0c90e5070fadd7dc2196c80e7641">&#9670;&nbsp;</a></span>ailiaLLMGetContextSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetContextSize </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>context_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンテキストの長さを取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">len</td><td>コンテキストの長さ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a2c2ed9a36373bc85611086e328f95493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2ed9a36373bc85611086e328f95493">&#9670;&nbsp;</a></span>ailiaLLMGetDeltaText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetDeltaText </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>buf_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テキストを取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">text</td><td>テキスト(UTF8) </td></tr>
+    <tr><td class="paramname">len</td><td>バッファサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p><a class="el" href="ailia__llm_8h.html#a5dd8bd3eb42561a666a6855759d49a87" title="生成を行います。">ailiaLLMGenerate()</a> を一度も実行していない場合は <a class="el" href="ailia__llm_8h.html#a486d229c92e4b5c0fe4fc0bf673c5034">AILIA_LLM_STATUS_INVALID_STATE</a> が返ります。 </p>
+
+</div>
+</div>
+<a id="a55660390df9d7937c0d264f1e32e4322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55660390df9d7937c0d264f1e32e4322">&#9670;&nbsp;</a></span>ailiaLLMGetDeltaTextSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetDeltaTextSize </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>buf_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テキストの長さを取得します。(NULL文字含む) </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">len</td><td>テキストの長さ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a26c48de030f428b82c006e718ee46d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c48de030f428b82c006e718ee46d0a">&#9670;&nbsp;</a></span>ailiaLLMOpenModelFileA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMOpenModelFileA </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>モデルファイルを読み込みます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタへのポインタ </td></tr>
+    <tr><td class="paramname">path</td><td>GGUFファイルのパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>GGUFのモデルファイルを読み込みます。 </p>
+
+</div>
+</div>
+<a id="a70cf16c65c353e7f37b5826799d05f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70cf16c65c353e7f37b5826799d05f1c">&#9670;&nbsp;</a></span>ailiaLLMOpenModelFileW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMOpenModelFileW </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b39179b9fc2b13f30f9b5ff257aaaab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b39179b9fc2b13f30f9b5ff257aaaab">&#9670;&nbsp;</a></span>ailiaLLMSetPrompt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMSetPrompt </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="ailia__llm_8h.html#a54ac4162a7bbc022ceb36634d2c7e632">AILIALLMChatMessage</a> *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>message_cnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プロンプトを設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタへのポインタ </td></tr>
+    <tr><td class="paramname">message</td><td>メッセージの配列 </td></tr>
+    <tr><td class="paramname">message_cnt</td><td>メッセージの数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>LLMに問い合わせるプロンプトを設定します。 ChatHistoryもmessageに含めてください。 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
