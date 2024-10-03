@@ -93,8 +93,8 @@ High Level API</h1>
 <div class="line">bool done = false;</div>
 <div class="line">string text = &quot;&quot;;</div>
 <div class="line">while (true){</div>
-<div class="line">    llm.Generate(ref done);</div>
-<div class="line">    if (done == true){</div>
+<div class="line">    bool status = llm.Generate(ref done);</div>
+<div class="line">    if (done == true || status == false){</div>
 <div class="line">        break;</div>
 <div class="line">    }</div>
 <div class="line">    string deltaText = llm.GetDeltaText();</div>
