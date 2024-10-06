@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.3.1.0</span>
+   &#160;<span id="projectnumber">1.4.0.0</span>
    </div>
   </td>
  </tr>
@@ -216,6 +216,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac8a07ad4529b12c8daebb96f3b1f63e6"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#ac8a07ad4529b12c8daebb96f3b1f63e6">ailiaTokenizerGetVocab</a> (struct AILIATokenizer *net, int token, const char **vocab)</td></tr>
 <tr class="memdesc:ac8a07ad4529b12c8daebb96f3b1f63e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform encode.  <a href="ailia__tokenizer_8h.html#ac8a07ad4529b12c8daebb96f3b1f63e6">More...</a><br /></td></tr>
 <tr class="separator:ac8a07ad4529b12c8daebb96f3b1f63e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590fbc4c1922b01df5caf5142114e550"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#a590fbc4c1922b01df5caf5142114e550">ailiaTokenizerAddSpecialTokens</a> (struct AILIATokenizer *net, const char **tokens, unsigned int count)</td></tr>
+<tr class="memdesc:a590fbc4c1922b01df5caf5142114e550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add SpecialToken.  <a href="ailia__tokenizer_8h.html#a590fbc4c1922b01df5caf5142114e550">More...</a><br /></td></tr>
+<tr class="separator:a590fbc4c1922b01df5caf5142114e550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5d9eca2579b5c9fb0e07d0feaba6931"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#af5d9eca2579b5c9fb0e07d0feaba6931">ailiaTokenizerDestroy</a> (struct AILIATokenizer *net)</td></tr>
 <tr class="memdesc:af5d9eca2579b5c9fb0e07d0feaba6931"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the tokenizer instance.  <a href="ailia__tokenizer_8h.html#af5d9eca2579b5c9fb0e07d0feaba6931">More...</a><br /></td></tr>
 <tr class="separator:af5d9eca2579b5c9fb0e07d0feaba6931"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -537,6 +540,52 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a590fbc4c1922b01df5caf5142114e550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a590fbc4c1922b01df5caf5142114e550">&#9670;&nbsp;</a></span>ailiaTokenizerAddSpecialTokens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaTokenizerAddSpecialTokens </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIATokenizer *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>tokens</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add SpecialToken. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A tokenizer instance pointer </td></tr>
+    <tr><td class="paramname">tokens</td><td>Token(UTF8) </td></tr>
+    <tr><td class="paramname">count</td><td>The number of tokens </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>This is valid only for AILIA_TOKENIZER_TYPE_ROBERTA and AILIA_TOKENIZER_TYPE_ROBERTA. </p>
+
+</div>
+</div>
 <a id="abd3997cf8ec05036938ae8d662b7e3a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd3997cf8ec05036938ae8d662b7e3a4">&#9670;&nbsp;</a></span>ailiaTokenizerCreate()</h2>
 
