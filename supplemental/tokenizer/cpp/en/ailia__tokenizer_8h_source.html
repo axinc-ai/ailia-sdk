@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.3.1.0</span>
+   &#160;<span id="projectnumber">1.4.0.0</span>
    </div>
   </td>
  </tr>
@@ -186,36 +186,39 @@ $(function() {
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;<a class="code" href="ailia__tokenizer_8h.html#ac8a07ad4529b12c8daebb96f3b1f63e6">ailiaTokenizerGetVocab</a>(<span class="keyword">struct</span> AILIATokenizer* net, <span class="keywordtype">int</span> token, <span class="keyword">const</span> <span class="keywordtype">char</span> **vocab);</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tokenizer_8h.html#af5d9eca2579b5c9fb0e07d0feaba6931">ailiaTokenizerDestroy</a>(<span class="keyword">struct</span> AILIATokenizer* net);</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;<span class="comment">/****************************************************************</span></div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="comment"> * Utility API</span></div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;<span class="comment"> **/</span></div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160; </div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tokenizer_8h.html#a45be2d7d0b1ca7eef35e569be2c22382">ailiaTokenizerUtf8ToUtf32</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* utf32, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* processed_byte, <span class="keyword">const</span> <span class="keywordtype">char</span>* utf8, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> utf8_len);</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tokenizer_8h.html#ad0ffe96a574eafb23c3837bf42e3b648">ailiaTokenizerUtf32ToUtf8</a>(<span class="keywordtype">char</span>* utf8, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* processed_byte, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> utf32);</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160; </div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="preprocessor">#ifdef UNICODE</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenModelFile ailiaTokenizerOpenModelFileW</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenDictionaryFile ailiaTokenizerOpenDictionaryFileW</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenVocabFile ailiaTokenizerOpenVocabFileW</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenMergeFile ailiaTokenizerOpenMergeFileW</span></div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenAddedTokensFile ailiaTokenizerOpenAddedTokensFileW</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenConfigFile ailiaTokenizerOpenConfigFileW</span></div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00728"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#aebff6a89d5d915f601101566bf21f817">  728</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenModelFile ailiaTokenizerOpenModelFileA</span></div>
-<div class="line"><a name="l00729"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#a5513e154274952240089882b12b4af4c">  729</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenDictionaryFile ailiaTokenizerOpenDictionaryFileA</span></div>
-<div class="line"><a name="l00730"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#a20331e6ec45368cc485f09bf931cb4ba">  730</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenVocabFile ailiaTokenizerOpenVocabFileA</span></div>
-<div class="line"><a name="l00731"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#aa068ec7364a3c0608ea58099d5306a69">  731</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenMergeFile ailiaTokenizerOpenMergeFileA</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#a3ea75c68d0bd605bc166d92adb7dc228">  732</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenAddedTokensFile ailiaTokenizerOpenAddedTokensFileA</span></div>
-<div class="line"><a name="l00733"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#ab172311286a8d3777316c13b1af5a6e4">  733</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenTokenizerConfigFile ailiaTokenizerOpenTokenizerConfigFileA</span></div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160; </div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;}</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !defined(INCLUDED_AILIA_TOKENIZER) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;<a class="code" href="ailia__tokenizer_8h.html#a590fbc4c1922b01df5caf5142114e550">ailiaTokenizerAddSpecialTokens</a>(<span class="keyword">struct</span> AILIATokenizer* net, <span class="keyword">const</span> <span class="keywordtype">char</span> **tokens, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tokenizer_8h.html#af5d9eca2579b5c9fb0e07d0feaba6931">ailiaTokenizerDestroy</a>(<span class="keyword">struct</span> AILIATokenizer* net);</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160; </div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="comment">/****************************************************************</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="comment"> * Utility API</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="comment"> **/</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160; </div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tokenizer_8h.html#a45be2d7d0b1ca7eef35e569be2c22382">ailiaTokenizerUtf8ToUtf32</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* utf32, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* processed_byte, <span class="keyword">const</span> <span class="keywordtype">char</span>* utf8, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> utf8_len);</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160; </div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tokenizer_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tokenizer_8h.html#ad0ffe96a574eafb23c3837bf42e3b648">ailiaTokenizerUtf32ToUtf8</a>(<span class="keywordtype">char</span>* utf8, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* processed_byte, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> utf32);</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160; </div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="preprocessor">#ifdef UNICODE</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenModelFile ailiaTokenizerOpenModelFileW</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenDictionaryFile ailiaTokenizerOpenDictionaryFileW</span></div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenVocabFile ailiaTokenizerOpenVocabFileW</span></div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenMergeFile ailiaTokenizerOpenMergeFileW</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenAddedTokensFile ailiaTokenizerOpenAddedTokensFileW</span></div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenConfigFile ailiaTokenizerOpenConfigFileW</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00752"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#aebff6a89d5d915f601101566bf21f817">  752</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenModelFile ailiaTokenizerOpenModelFileA</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#a5513e154274952240089882b12b4af4c">  753</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenDictionaryFile ailiaTokenizerOpenDictionaryFileA</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#a20331e6ec45368cc485f09bf931cb4ba">  754</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenVocabFile ailiaTokenizerOpenVocabFileA</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#aa068ec7364a3c0608ea58099d5306a69">  755</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenMergeFile ailiaTokenizerOpenMergeFileA</span></div>
+<div class="line"><a name="l00756"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#a3ea75c68d0bd605bc166d92adb7dc228">  756</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenAddedTokensFile ailiaTokenizerOpenAddedTokensFileA</span></div>
+<div class="line"><a name="l00757"></a><span class="lineno"><a class="line" href="ailia__tokenizer_8h.html#ab172311286a8d3777316c13b1af5a6e4">  757</a></span>&#160;<span class="preprocessor">#define ailiaTokenizerOpenTokenizerConfigFile ailiaTokenizerOpenTokenizerConfigFileA</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;}</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !defined(INCLUDED_AILIA_TOKENIZER) */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aailia__tokenizer_8h_html_ad9dd270331fb873e9d58277f5a8ceb85"><div class="ttname"><a href="ailia__tokenizer_8h.html#ad9dd270331fb873e9d58277f5a8ceb85">ailiaTokenizerGetTextLength</a></div><div class="ttdeci">int AILIA_API ailiaTokenizerGetTextLength(struct AILIATokenizer *net, unsigned int *len)</div><div class="ttdoc">Gets the size of text. (Include null)</div></div>
 <div class="ttc" id="aailia__tokenizer_8h_html_a1b8b7d52cabd73d165b54b9944525d43"><div class="ttname"><a href="ailia__tokenizer_8h.html#a1b8b7d52cabd73d165b54b9944525d43">ailiaTokenizerOpenAddedTokensFileA</a></div><div class="ttdeci">int AILIA_API ailiaTokenizerOpenAddedTokensFileA(struct AILIATokenizer *net, const char *path)</div><div class="ttdoc">Open added tokens file.</div></div>
@@ -247,6 +250,7 @@ $(function() {
 <div class="ttc" id="aailia__tokenizer_8h_html_a82a84277d656205a6144f1fdc7ec2f7e"><div class="ttname"><a href="ailia__tokenizer_8h.html#a82a84277d656205a6144f1fdc7ec2f7e">ailiaTokenizerOpenMergeFileW</a></div><div class="ttdeci">int AILIA_API ailiaTokenizerOpenMergeFileW(struct AILIATokenizer *net, const wchar_t *path)</div></div>
 <div class="ttc" id="aailia__tokenizer_8h_html_a9b473d52eb7a5c8441bfc9b080a2f221"><div class="ttname"><a href="ailia__tokenizer_8h.html#a9b473d52eb7a5c8441bfc9b080a2f221">ailiaTokenizerGetCharEnds</a></div><div class="ttdeci">int AILIA_API ailiaTokenizerGetCharEnds(struct AILIATokenizer *net, int *char_ends, unsigned int count)</div><div class="ttdoc">Gets the Char end positions.</div></div>
 <div class="ttc" id="aailia__tokenizer_8h_html_aafbe5c29e5fd890c030198012e977633"><div class="ttname"><a href="ailia__tokenizer_8h.html#aafbe5c29e5fd890c030198012e977633">ailiaTokenizerDecodeWithSpecialTokens</a></div><div class="ttdeci">int AILIA_API ailiaTokenizerDecodeWithSpecialTokens(struct AILIATokenizer *net, const int *tokens, unsigned int token_count)</div><div class="ttdoc">Perform decode with special tokens.</div></div>
+<div class="ttc" id="aailia__tokenizer_8h_html_a590fbc4c1922b01df5caf5142114e550"><div class="ttname"><a href="ailia__tokenizer_8h.html#a590fbc4c1922b01df5caf5142114e550">ailiaTokenizerAddSpecialTokens</a></div><div class="ttdeci">int AILIA_API ailiaTokenizerAddSpecialTokens(struct AILIATokenizer *net, const char **tokens, unsigned int count)</div><div class="ttdoc">Add SpecialToken.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
