@@ -75,7 +75,7 @@ ailia LLM is a library for running local LLMs. It can load GGUF and easily imple
 
 - [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/cpp/jp/)
 - [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/unity/jp/)
-
+- [Python API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/python/en/)
 
 ## Videos
 

@@ -83,12 +83,12 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:abec536df06a10c3301a23066076c53f7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#abec536df06a10c3301a23066076c53f7">ailiaLLMCreate</a> (ref IntPtr net, uint n_ctx)</td></tr>
-<tr class="memdesc:abec536df06a10c3301a23066076c53f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLMオブジェクトを作成します。  <a href="classailiaLLM_1_1AiliaLLM.html#abec536df06a10c3301a23066076c53f7">[詳解]</a><br /></td></tr>
-<tr class="separator:abec536df06a10c3301a23066076c53f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaffd716381d634f746711d3d4bc90b4a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#aaffd716381d634f746711d3d4bc90b4a">ailiaLLMOpenModelFile</a> (IntPtr net, string path)</td></tr>
-<tr class="memdesc:aaffd716381d634f746711d3d4bc90b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルファイルを読み込みます。  <a href="classailiaLLM_1_1AiliaLLM.html#aaffd716381d634f746711d3d4bc90b4a">[詳解]</a><br /></td></tr>
-<tr class="separator:aaffd716381d634f746711d3d4bc90b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67898a552ddd160daeccb3d95c7b7618"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a67898a552ddd160daeccb3d95c7b7618">ailiaLLMCreate</a> (ref IntPtr net)</td></tr>
+<tr class="memdesc:a67898a552ddd160daeccb3d95c7b7618"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLMオブジェクトを作成します。  <a href="classailiaLLM_1_1AiliaLLM.html#a67898a552ddd160daeccb3d95c7b7618">[詳解]</a><br /></td></tr>
+<tr class="separator:a67898a552ddd160daeccb3d95c7b7618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc2a9a93c33b169f84117ecadd11d02"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#aacc2a9a93c33b169f84117ecadd11d02">ailiaLLMOpenModelFile</a> (IntPtr net, string path, uint n_ctx)</td></tr>
+<tr class="memdesc:aacc2a9a93c33b169f84117ecadd11d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルファイルを読み込みます。  <a href="classailiaLLM_1_1AiliaLLM.html#aacc2a9a93c33b169f84117ecadd11d02">[詳解]</a><br /></td></tr>
+<tr class="separator:aacc2a9a93c33b169f84117ecadd11d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb3481936c60dbd263191b730f4e771f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#acb3481936c60dbd263191b730f4e771f">ailiaLLMSetPrompt</a> (IntPtr net, IntPtr messages, uint messages_len)</td></tr>
 <tr class="memdesc:acb3481936c60dbd263191b730f4e771f"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロンプトを設定します。  <a href="classailiaLLM_1_1AiliaLLM.html#acb3481936c60dbd263191b730f4e771f">[詳解]</a><br /></td></tr>
 <tr class="separator:acb3481936c60dbd263191b730f4e771f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +133,8 @@ $(function() {
 <tr class="separator:a2d58100a7aa2dbd2a15f8a38cf5999fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
-<a id="abec536df06a10c3301a23066076c53f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abec536df06a10c3301a23066076c53f7">&#9670;&nbsp;</a></span>ailiaLLMCreate()</h2>
+<a id="a67898a552ddd160daeccb3d95c7b7618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67898a552ddd160daeccb3d95c7b7618">&#9670;&nbsp;</a></span>ailiaLLMCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,18 +143,8 @@ $(function() {
           <td class="memname">static int ailiaLLM.AiliaLLM.ailiaLLMCreate </td>
           <td>(</td>
           <td class="paramtype">ref IntPtr&#160;</td>
-          <td class="paramname"><em>net</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>net</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>n_ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -163,7 +153,6 @@ $(function() {
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタへのポインタ </td></tr>
-    <tr><td class="paramname">n_ctx</td><td>コンテキスト長（0でモデルのデフォルト） </td></tr>
   </table>
   </dd>
 </dl>
@@ -321,8 +310,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aaffd716381d634f746711d3d4bc90b4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaffd716381d634f746711d3d4bc90b4a">&#9670;&nbsp;</a></span>ailiaLLMOpenModelFile()</h2>
+<a id="aacc2a9a93c33b169f84117ecadd11d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc2a9a93c33b169f84117ecadd11d02">&#9670;&nbsp;</a></span>ailiaLLMOpenModelFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +326,13 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>n_ctx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -352,6 +347,7 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタへのポインタ </td></tr>
     <tr><td class="paramname">path</td><td>GGUFファイルのパス </td></tr>
+    <tr><td class="paramname">n_ctx</td><td>コンテキスト長（0でモデルのデフォルト） </td></tr>
   </table>
   </dd>
 </dl>
