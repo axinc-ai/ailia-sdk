@@ -1,0 +1,11 @@
+ailia_llm package
+==========================
+
+Classes
+-----------
+
+.. autoclass:: ailia_llm.AiliaLLM
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:

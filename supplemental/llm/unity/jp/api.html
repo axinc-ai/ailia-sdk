@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_llm: APIの使用方法</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_llm
+   &#160;<span id="projectnumber">1.0.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">APIの使用方法 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+High Level API</h1>
+<p>ailia LLMの使用例です。</p>
+<div class="fragment"><div class="line">AiliaLLMModel llm = new AiliaLLMModel();</div>
+<div class="line">private List&lt;AiliaLLMChatMessage&gt; messages = new List&lt;AiliaLLMChatMessage&gt;();</div>
+<div class="line"> </div>
+<div class="line">string asset_path = Application.streamingAssetsPath;</div>
+<div class="line">string model_path = &quot;gemma-2-2b-it-Q4_K_M.gguf&quot;;</div>
+<div class="line"> </div>
+<div class="line">llm.Create();</div>
+<div class="line">llm.Open(asset_path + &quot;/&quot; + model_path);</div>
+<div class="line"> </div>
+<div class="line">AiliaLLMChatMessage message = new AiliaLLMChatMessage();</div>
+<div class="line">message.role = &quot;system&quot;;</div>
+<div class="line">message.content = &quot;語尾に「だわん」をつけてください。&quot;;</div>
+<div class="line">messages.Add(message);</div>
+<div class="line"> </div>
+<div class="line">AiliaLLMChatMessage message2 = new AiliaLLMChatMessage();</div>
+<div class="line">message2.role = &quot;user&quot;;</div>
+<div class="line">message2.content = &quot;こんにちは。&quot;;</div>
+<div class="line">messages.Add(message2);</div>
+<div class="line">inputFiled.text = &quot;&quot;;</div>
+<div class="line"> </div>
+<div class="line">llm.SetPrompt(messages);</div>
+<div class="line">bool done = false;</div>
+<div class="line">string text = &quot;&quot;;</div>
+<div class="line">while (true){</div>
+<div class="line">    bool status = llm.Generate(ref done);</div>
+<div class="line">    if (done == true || status == false){</div>
+<div class="line">        break;</div>
+<div class="line">    }</div>
+<div class="line">    string deltaText = llm.GetDeltaText();</div>
+<div class="line">    text = text + deltaText;</div>
+<div class="line">}</div>
+<div class="line">Debug.Log(text);</div>
+<div class="line"> </div>
+<div class="line">message = new AiliaLLMChatMessage();</div>
+<div class="line">message.role = &quot;assistant&quot;;</div>
+<div class="line">message.content = text;</div>
+<div class="line">messages.Add(message);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_llm: APIの使用方法</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_llm
+   &#160;<span id="projectnumber">1.0.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">APIの使用方法 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+ailia LLMのAPIの概要</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+基本的な使用方法</h2>
+<p>ailia LLMの使用例です。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ailia__llm_8h.html">ailia_llm.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]){</div>
+<div class="line">    <span class="keyword">struct </span>AILIALLM* llm;</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n_ctx = 512;</div>
+<div class="line">    <a class="code" href="ailia__llm_8h.html#a9ddba82a4cda99e783cb59ff4e30ca2b">ailiaLLMCreate</a>(&amp;llm);</div>
+<div class="line">    <a class="code" href="ailia__llm_8h.html#a884a746fb28b8f71fdd846ae50150c3d">ailiaLLMOpenModelFileA</a>(llm, <span class="stringliteral">&quot;../models/gemma-2-2b-it-Q4_K_M.gguf&quot;</span>, n_ctx);</div>
+<div class="line"> </div>
+<div class="line">    std::vector&lt;AILIALLMChatMessage&gt; messages;</div>
+<div class="line">    <a class="code" href="struct__AILIALLMChatMessage.html">AILIALLMChatMessage</a> message;</div>
+<div class="line"> </div>
+<div class="line">    message.<a class="code" href="struct__AILIALLMChatMessage.html#a657ea086dd1a07ed3ef23b0602b157ff">role</a> = <span class="stringliteral">&quot;system&quot;</span>;</div>
+<div class="line">    message.<a class="code" href="struct__AILIALLMChatMessage.html#a0ffec73b21e26a677fbb8ae8576f79c9">content</a> = <span class="stringliteral">&quot;語尾に「くま」をつけて回答してください。&quot;</span>;</div>
+<div class="line">    messages.push_back(message);</div>
+<div class="line"> </div>
+<div class="line">    message.<a class="code" href="struct__AILIALLMChatMessage.html#a657ea086dd1a07ed3ef23b0602b157ff">role</a> = <span class="stringliteral">&quot;user&quot;</span>;</div>
+<div class="line">    message.<a class="code" href="struct__AILIALLMChatMessage.html#a0ffec73b21e26a677fbb8ae8576f79c9">content</a> = <span class="stringliteral">&quot;こんにちは。&quot;</span>;</div>
+<div class="line">    messages.push_back(message);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab">ailiaLLMSetPrompt</a>(llm, &amp;messages[0], messages.size());</div>
+<div class="line"> </div>
+<div class="line">    std::string text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> done = 0;</div>
+<div class="line">        <span class="keywordtype">int</span> status = <a class="code" href="ailia__llm_8h.html#a5dd8bd3eb42561a666a6855759d49a87">ailiaLLMGenerate</a>(llm, &amp;done);</div>
+<div class="line">        <span class="keywordflow">if</span> (done == 1 || status != <a class="code" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a>){</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = 0;</div>
+<div class="line">        <a class="code" href="ailia__llm_8h.html#a55660390df9d7937c0d264f1e32e4322">ailiaLLMGetDeltaTextSize</a>(llm, &amp;size);</div>
+<div class="line">        std::vector&lt;char&gt; delta(size);</div>
+<div class="line">        <a class="code" href="ailia__llm_8h.html#a2c2ed9a36373bc85611086e328f95493">ailiaLLMGetDeltaText</a>(llm, &amp;delta[0], delta.size());</div>
+<div class="line">        text = text + std::string(&amp;delta[0]);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">ailiaLLMDestroy</a>(llm);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="aailia__llm_8h_html_aa365516599d78f9dc6b633defe1c5a97"><div class="ttname"><a href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">ailiaLLMDestroy</a></div><div class="ttdeci">AILIA_LLM_API void ailiaLLMDestroy(struct AILIALLM *llm)</div><div class="ttdoc">LLMオブジェクトを破棄します。</div></div>
+<div class="ttc" id="aailia__llm_8h_html_a884a746fb28b8f71fdd846ae50150c3d"><div class="ttname"><a href="ailia__llm_8h.html#a884a746fb28b8f71fdd846ae50150c3d">ailiaLLMOpenModelFileA</a></div><div class="ttdeci">AILIA_LLM_API int ailiaLLMOpenModelFileA(struct AILIALLM *llm, const char *path, unsigned int n_ctx)</div><div class="ttdoc">モデルファイルを読み込みます。</div></div>
+<div class="ttc" id="aailia__llm_8h_html_a5dd8bd3eb42561a666a6855759d49a87"><div class="ttname"><a href="ailia__llm_8h.html#a5dd8bd3eb42561a666a6855759d49a87">ailiaLLMGenerate</a></div><div class="ttdeci">AILIA_LLM_API int ailiaLLMGenerate(struct AILIALLM *llm, unsigned int *done)</div><div class="ttdoc">生成を行います。</div></div>
+<div class="ttc" id="aailia__llm_8h_html_a0b39179b9fc2b13f30f9b5ff257aaaab"><div class="ttname"><a href="ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab">ailiaLLMSetPrompt</a></div><div class="ttdeci">AILIA_LLM_API int ailiaLLMSetPrompt(struct AILIALLM *llm, const AILIALLMChatMessage *message, unsigned int message_cnt)</div><div class="ttdoc">プロンプトを設定します。</div></div>
+<div class="ttc" id="astruct__AILIALLMChatMessage_html_a657ea086dd1a07ed3ef23b0602b157ff"><div class="ttname"><a href="struct__AILIALLMChatMessage.html#a657ea086dd1a07ed3ef23b0602b157ff">_AILIALLMChatMessage::role</a></div><div class="ttdeci">const char * role</div><div class="ttdoc">Represent the role. (system, user, assistant)</div><div class="ttdef"><b>Definition:</b> ailia_llm.h:181</div></div>
+<div class="ttc" id="astruct__AILIALLMChatMessage_html"><div class="ttname"><a href="struct__AILIALLMChatMessage.html">_AILIALLMChatMessage</a></div><div class="ttdef"><b>Definition:</b> ailia_llm.h:175</div></div>
+<div class="ttc" id="aailia__llm_8h_html_a72cbafcad4ce0dd29db5174e4348a67e"><div class="ttname"><a href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a></div><div class="ttdeci">#define AILIA_LLM_STATUS_SUCCESS</div><div class="ttdoc">成功</div><div class="ttdef"><b>Definition:</b> ailia_llm.h:47</div></div>
+<div class="ttc" id="aailia__llm_8h_html_a2c2ed9a36373bc85611086e328f95493"><div class="ttname"><a href="ailia__llm_8h.html#a2c2ed9a36373bc85611086e328f95493">ailiaLLMGetDeltaText</a></div><div class="ttdeci">AILIA_LLM_API int ailiaLLMGetDeltaText(struct AILIALLM *llm, char *text, unsigned int buf_size)</div><div class="ttdoc">テキストを取得します。</div></div>
+<div class="ttc" id="aailia__llm_8h_html_a9ddba82a4cda99e783cb59ff4e30ca2b"><div class="ttname"><a href="ailia__llm_8h.html#a9ddba82a4cda99e783cb59ff4e30ca2b">ailiaLLMCreate</a></div><div class="ttdeci">AILIA_LLM_API int ailiaLLMCreate(struct AILIALLM **llm)</div><div class="ttdoc">LLMオブジェクトを作成します。</div></div>
+<div class="ttc" id="aailia__llm_8h_html"><div class="ttname"><a href="ailia__llm_8h.html">ailia_llm.h</a></div><div class="ttdoc">LLM推論ライブラリ</div></div>
+<div class="ttc" id="aailia__llm_8h_html_a55660390df9d7937c0d264f1e32e4322"><div class="ttname"><a href="ailia__llm_8h.html#a55660390df9d7937c0d264f1e32e4322">ailiaLLMGetDeltaTextSize</a></div><div class="ttdeci">AILIA_LLM_API int ailiaLLMGetDeltaTextSize(struct AILIALLM *llm, unsigned int *buf_size)</div><div class="ttdoc">テキストの長さを取得します。(NULL文字含む)</div></div>
+<div class="ttc" id="astruct__AILIALLMChatMessage_html_a0ffec73b21e26a677fbb8ae8576f79c9"><div class="ttname"><a href="struct__AILIALLMChatMessage.html#a0ffec73b21e26a677fbb8ae8576f79c9">_AILIALLMChatMessage::content</a></div><div class="ttdeci">const char * content</div><div class="ttdoc">Represent the content of the message.</div><div class="ttdef"><b>Definition:</b> ailia_llm.h:185</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
