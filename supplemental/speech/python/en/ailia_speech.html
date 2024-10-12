@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,16 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ailia_speech package &mdash; ailia Speech Python API 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=def9ab29"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=def9ab29"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -48,7 +46,9 @@
 <li><a class="reference internal" href="#ailia_speech.Whisper"><code class="docutils literal notranslate"><span class="pre">Whisper</span></code></a><ul>
 <li><a class="reference internal" href="#ailia_speech.Whisper.__init__"><code class="docutils literal notranslate"><span class="pre">Whisper.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#ailia_speech.Whisper.initialize_model"><code class="docutils literal notranslate"><span class="pre">Whisper.initialize_model()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_speech.Whisper.set_silent_threshold"><code class="docutils literal notranslate"><span class="pre">Whisper.set_silent_threshold()</span></code></a></li>
 <li><a class="reference internal" href="#ailia_speech.Whisper.transcribe"><code class="docutils literal notranslate"><span class="pre">Whisper.transcribe()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_speech.Whisper.transcribe_step"><code class="docutils literal notranslate"><span class="pre">Whisper.transcribe_step()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -105,8 +105,18 @@
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ailia_speech.Whisper.set_silent_threshold">
+<span class="sig-name descname"><span class="pre">set_silent_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">silent_threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speech_sec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_speech_sec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_speech.Whisper.set_silent_threshold" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ailia_speech.Whisper.transcribe">
 <span class="sig-name descname"><span class="pre">transcribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_waveform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_speech.Whisper.transcribe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_speech.Whisper.transcribe_step">
+<span class="sig-name descname"><span class="pre">transcribe_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_waveform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complete</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_speech.Whisper.transcribe_step" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
