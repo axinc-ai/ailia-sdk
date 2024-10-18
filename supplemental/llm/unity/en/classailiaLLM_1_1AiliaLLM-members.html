@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_llm
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -84,14 +84,15 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a3d815c32d8319a43399d93ccd88b308b">AILIA_LLM_STATUS_SUCCESS</a></td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a31013f1cf477c08fadb08466bf696e48">AILIA_LLM_STATUS_THREAD_ERROR</a></td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a06511cd041a06428846d612cd48fd706">AILIA_LLM_STATUS_UNIMPLEMENTED</a></td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a67898a552ddd160daeccb3d95c7b7618">ailiaLLMCreate</a>(ref IntPtr net)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#aad4919515423ba41169a6ed5489d2b59">ailiaLLMDestroy</a>(IntPtr net)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a1f65eabaf4f755972b2e5f7406828305">ailiaLLMGenerate</a>(IntPtr net, ref uint done)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a9459698a902930a5e6c91ac35fcd3933">ailiaLLMGetDeltaText</a>(IntPtr net, IntPtr text, uint len)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a0bbc07d003f13cccc620f7129bd72c6d">ailiaLLMGetDeltaTextSize</a>(IntPtr net, ref uint len)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#aacc2a9a93c33b169f84117ecadd11d02">ailiaLLMOpenModelFile</a>(IntPtr net, string path, uint n_ctx)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#acb3481936c60dbd263191b730f4e771f">ailiaLLMSetPrompt</a>(IntPtr net, IntPtr messages, uint messages_len)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#ae708df039094f588060032bdddc5f09f">LIBRARY_NAME</a></td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a4a2d3fad272e1c3acb910453eb2830ba">ailiaLLMCreate</a>(ref IntPtr llm)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a7432fef0b41ea6ff5cc889efece1f0f7">ailiaLLMDestroy</a>(IntPtr llm)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a4d642cee294951efad19710e448acfad">ailiaLLMGenerate</a>(IntPtr llm, ref uint done)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a0759861b06b27ef0dbb80dbf92a2a4b4">ailiaLLMGetDeltaText</a>(IntPtr llm, IntPtr text, uint len)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#af4144f69070b768379d89de403c80ef4">ailiaLLMGetDeltaTextSize</a>(IntPtr llm, ref uint len)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#ade874f9fee362701d8d19458ff25366d">ailiaLLMGetTokenCount</a>(IntPtr llm, ref uint cnt, IntPtr text)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a95e5f66e1c4556c8506bff1197bd05d2">ailiaLLMOpenModelFile</a>(IntPtr llm, string path, uint n_ctx)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a1dd8f7bcc0377f9a50fa22e19927faaa">ailiaLLMSetPrompt</a>(IntPtr llm, IntPtr messages, uint messages_len)</td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#ae708df039094f588060032bdddc5f09f">LIBRARY_NAME</a></td><td class="entry"><a class="el" href="classailiaLLM_1_1AiliaLLM.html">ailiaLLM.AiliaLLM</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

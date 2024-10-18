@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['ailiallmcreate_58',['ailiaLLMCreate',['../classailiaLLM_1_1AiliaLLM.html#a67898a552ddd160daeccb3d95c7b7618',1,'ailiaLLM::AiliaLLM']]],
-  ['ailiallmdestroy_59',['ailiaLLMDestroy',['../classailiaLLM_1_1AiliaLLM.html#aad4919515423ba41169a6ed5489d2b59',1,'ailiaLLM::AiliaLLM']]],
-  ['ailiallmgenerate_60',['ailiaLLMGenerate',['../classailiaLLM_1_1AiliaLLM.html#a1f65eabaf4f755972b2e5f7406828305',1,'ailiaLLM::AiliaLLM']]],
-  ['ailiallmgetdeltatext_61',['ailiaLLMGetDeltaText',['../classailiaLLM_1_1AiliaLLM.html#a9459698a902930a5e6c91ac35fcd3933',1,'ailiaLLM::AiliaLLM']]],
-  ['ailiallmgetdeltatextsize_62',['ailiaLLMGetDeltaTextSize',['../classailiaLLM_1_1AiliaLLM.html#a0bbc07d003f13cccc620f7129bd72c6d',1,'ailiaLLM::AiliaLLM']]],
-  ['ailiallmopenmodelfile_63',['ailiaLLMOpenModelFile',['../classailiaLLM_1_1AiliaLLM.html#aacc2a9a93c33b169f84117ecadd11d02',1,'ailiaLLM::AiliaLLM']]],
-  ['ailiallmsetprompt_64',['ailiaLLMSetPrompt',['../classailiaLLM_1_1AiliaLLM.html#acb3481936c60dbd263191b730f4e771f',1,'ailiaLLM::AiliaLLM']]]
+  ['ailiallmcreate_59',['ailiaLLMCreate',['../classailiaLLM_1_1AiliaLLM.html#a4a2d3fad272e1c3acb910453eb2830ba',1,'ailiaLLM::AiliaLLM']]],
+  ['ailiallmdestroy_60',['ailiaLLMDestroy',['../classailiaLLM_1_1AiliaLLM.html#a7432fef0b41ea6ff5cc889efece1f0f7',1,'ailiaLLM::AiliaLLM']]],
+  ['ailiallmgenerate_61',['ailiaLLMGenerate',['../classailiaLLM_1_1AiliaLLM.html#a4d642cee294951efad19710e448acfad',1,'ailiaLLM::AiliaLLM']]],
+  ['ailiallmgetdeltatext_62',['ailiaLLMGetDeltaText',['../classailiaLLM_1_1AiliaLLM.html#a0759861b06b27ef0dbb80dbf92a2a4b4',1,'ailiaLLM::AiliaLLM']]],
+  ['ailiallmgetdeltatextsize_63',['ailiaLLMGetDeltaTextSize',['../classailiaLLM_1_1AiliaLLM.html#af4144f69070b768379d89de403c80ef4',1,'ailiaLLM::AiliaLLM']]],
+  ['ailiallmgettokencount_64',['ailiaLLMGetTokenCount',['../classailiaLLM_1_1AiliaLLM.html#ade874f9fee362701d8d19458ff25366d',1,'ailiaLLM::AiliaLLM']]],
+  ['ailiallmopenmodelfile_65',['ailiaLLMOpenModelFile',['../classailiaLLM_1_1AiliaLLM.html#a95e5f66e1c4556c8506bff1197bd05d2',1,'ailiaLLM::AiliaLLM']]],
+  ['ailiallmsetprompt_66',['ailiaLLMSetPrompt',['../classailiaLLM_1_1AiliaLLM.html#a1dd8f7bcc0377f9a50fa22e19927faaa',1,'ailiaLLM::AiliaLLM']]]
 ];

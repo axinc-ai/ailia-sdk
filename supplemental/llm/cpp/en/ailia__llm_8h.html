@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_llm
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -88,7 +88,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a3c69aad585c8ee619c34450cb5f35ea9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a></td></tr>
+<tr class="memitem:a3c69aad585c8ee619c34450cb5f35ea9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a>&#160;&#160;&#160;__stdcall</td></tr>
 <tr class="separator:a3c69aad585c8ee619c34450cb5f35ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72cbafcad4ce0dd29db5174e4348a67e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="memdesc:a72cbafcad4ce0dd29db5174e4348a67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Successful.  <a href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">More...</a><br /></td></tr>
@@ -160,6 +160,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2c2ed9a36373bc85611086e328f95493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a2c2ed9a36373bc85611086e328f95493">ailiaLLMGetDeltaText</a> (struct AILIALLM *llm, char *text, unsigned int buf_size)</td></tr>
 <tr class="memdesc:a2c2ed9a36373bc85611086e328f95493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the decoded text.  <a href="ailia__llm_8h.html#a2c2ed9a36373bc85611086e328f95493">More...</a><br /></td></tr>
 <tr class="separator:a2c2ed9a36373bc85611086e328f95493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7182c39100022c4868019eac7fef6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a7b7182c39100022c4868019eac7fef6c">ailiaLLMGetTokenCount</a> (struct AILIALLM *llm, unsigned int *cnt, const char *text)</td></tr>
+<tr class="memdesc:a7b7182c39100022c4868019eac7fef6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of token.  <a href="ailia__llm_8h.html#a7b7182c39100022c4868019eac7fef6c">More...</a><br /></td></tr>
+<tr class="separator:a7b7182c39100022c4868019eac7fef6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa365516599d78f9dc6b633defe1c5a97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">ailiaLLMDestroy</a> (struct AILIALLM *llm)</td></tr>
 <tr class="memdesc:aa365516599d78f9dc6b633defe1c5a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the LLM instance.  <a href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">More...</a><br /></td></tr>
 <tr class="separator:aa365516599d78f9dc6b633defe1c5a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,7 +179,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AILIA_LLM_API</td>
+          <td class="memname">#define AILIA_LLM_API&#160;&#160;&#160;__stdcall</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -618,7 +621,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">llm</td><td>A LLM instance pointer </td></tr>
     <tr><td class="paramname">text</td><td>Text(UTF8) </td></tr>
-    <tr><td class="paramname">len</td><td>Buffer size </td></tr>
+    <tr><td class="paramname">buf_size</td><td>Buffer size </td></tr>
   </table>
   </dd>
 </dl>
@@ -657,7 +660,52 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">llm</td><td>A LLM instance pointer </td></tr>
-    <tr><td class="paramname">len</td><td>The length of text </td></tr>
+    <tr><td class="paramname">buf_size</td><td>The length of text </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a7b7182c39100022c4868019eac7fef6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7182c39100022c4868019eac7fef6c">&#9670;&nbsp;</a></span>ailiaLLMGetTokenCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetTokenCount </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>cnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the count of token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>A LLM instance pointer </td></tr>
+    <tr><td class="paramname">cnt</td><td>The count of token </td></tr>
+    <tr><td class="paramname">text</td><td>Text(UTF8) </td></tr>
   </table>
   </dd>
 </dl>
