@@ -23,11 +23,12 @@ var searchData=
   ['ailiallmgetcontextsize_21',['ailiaLLMGetContextSize',['../ailia__llm_8h.html#ad15a0c90e5070fadd7dc2196c80e7641',1,'ailia_llm.h']]],
   ['ailiallmgetdeltatext_22',['ailiaLLMGetDeltaText',['../ailia__llm_8h.html#a2c2ed9a36373bc85611086e328f95493',1,'ailia_llm.h']]],
   ['ailiallmgetdeltatextsize_23',['ailiaLLMGetDeltaTextSize',['../ailia__llm_8h.html#a55660390df9d7937c0d264f1e32e4322',1,'ailia_llm.h']]],
-  ['ailiallmopenmodelfilea_24',['ailiaLLMOpenModelFileA',['../ailia__llm_8h.html#a884a746fb28b8f71fdd846ae50150c3d',1,'ailia_llm.h']]],
-  ['ailiallmopenmodelfilew_25',['ailiaLLMOpenModelFileW',['../ailia__llm_8h.html#a625f994626a8fc23a183c0f173184d6e',1,'ailia_llm.h']]],
-  ['ailiallmsetprompt_26',['ailiaLLMSetPrompt',['../ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab',1,'ailia_llm.h']]],
-  ['api_2emd_27',['api.md',['../api_8md.html',1,'']]],
-  ['ailia_20llm_20sdk_20document_28',['ailia LLM SDK Document',['../index.html',1,'']]],
-  ['api_29',['api',['../md_md-c_api.html',1,'(大域名前空間)'],['../api.html',1,'(大域名前空間)']]],
-  ['about_30',['about',['../md_md-common_about.html',1,'(大域名前空間)'],['../about.html',1,'(大域名前空間)']]]
+  ['ailiallmgettokencount_24',['ailiaLLMGetTokenCount',['../ailia__llm_8h.html#a7b7182c39100022c4868019eac7fef6c',1,'ailia_llm.h']]],
+  ['ailiallmopenmodelfilea_25',['ailiaLLMOpenModelFileA',['../ailia__llm_8h.html#a884a746fb28b8f71fdd846ae50150c3d',1,'ailia_llm.h']]],
+  ['ailiallmopenmodelfilew_26',['ailiaLLMOpenModelFileW',['../ailia__llm_8h.html#a625f994626a8fc23a183c0f173184d6e',1,'ailia_llm.h']]],
+  ['ailiallmsetprompt_27',['ailiaLLMSetPrompt',['../ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab',1,'ailia_llm.h']]],
+  ['api_2emd_28',['api.md',['../api_8md.html',1,'']]],
+  ['ailia_20llm_20sdk_20document_29',['ailia LLM SDK Document',['../index.html',1,'']]],
+  ['api_30',['api',['../md_md-c_api.html',1,'(大域名前空間)'],['../api.html',1,'(大域名前空間)']]],
+  ['about_31',['about',['../md_md-common_about.html',1,'(大域名前空間)'],['../about.html',1,'(大域名前空間)']]]
 ];
