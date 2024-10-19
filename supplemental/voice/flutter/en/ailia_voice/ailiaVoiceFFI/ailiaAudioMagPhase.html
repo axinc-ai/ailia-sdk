@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaAudioMagPhase method from the ailiaVoiceFFI class, for the Dart programming language.">
+  <title>ailiaAudioMagPhase method - ailiaVoiceFFI class - ailia_voice library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice.dart</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioMagPhase method</li>
+  </ol>
+  <div class="self-name">ailiaAudioMagPhase</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia_voice&#47;ailiaVoiceFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaAudioMagPhase</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaAudioMagPhase</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaAudioMagPhase-param-dst_mag"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dst_mag</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioMagPhase-param-dst_phase"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dst_phase</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioMagPhase-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioMagPhase-param-freq_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">freq_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioMagPhase-param-frame_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">frame_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioMagPhase-param-power"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">power</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioMagPhase-param-phase_form"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">phase_form</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief スペクトログラムから振幅と位相を計算します。
+@param dst_mag 振幅の出力先ポインタ、外側から freq_n, frame_n 順のメモリレイアウト
+@param dst_phase 位相の出力先ポインタ、外側から freq_n, frame_n, 2(実部、虚部) 順のメモリレイアウト
+@param src 入力データのポインタ、frame_n, freq_n, 2(実部、虚部) 順のメモリレイアウト
+@param freq_n 周波数のインデックス数
+@param frame_n 時間フレームの数
+@param power 振幅スペクトルの乗数 ( &gt; 0.0)、1.0: 振幅スペクトログラム、2.0: パワースペクトログラムに相当
+@param phase_form 位相の出力形式、AILIA_AUDIO_PHASE_FORM_* のいずれか
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+librosaのデフォルト値と互換の条件: phase_form =  \ref AILIA_AUDIO_PHASE_FORM_COMPLEX , power = 1.0
+PyTorchのデフォルト値と互換の条件: phase_form =  \ref AILIA_AUDIO_PHASE_FORM_REAL , power = 1.0
+phase_formによってdst_phaseの出力が変わります。</p>
+<ul>
+<li>\ref AILIA_AUDIO_PHASE_FORM_COMPLEX  : 実部と虚部の交互信号、サイズは freq_n * frame_n * 2</li>
+<li>\ref AILIA_AUDIO_PHASE_FORM_REAL  : 実部のみの信号、サイズは freq_n * frame_n</li>
+</ul>
+<p>~english
+@brief Get the amplitude and the phase from the spectrogram.
+@param dst_mag pointer to the outputted amplitudes, an array of length (freq_n * frame_n). (memory layout, using the
+row-major convention: (freq_n, frame_n))
+@param dst_phase pointer to the outputted phases, an array of length (2 * freq_n * frame_n) (sequence of complex
+pairs <code>real part, imaginary part</code>). (memory layout, using the row-major convention: (freq_n, frame_n, 2))
+@param src pointer to the input data, of length (2 * frame_n * freq_n) (a sequence of complex pairs <code>real,
+imaginary</code>). (memory layout, using the row-major convention: (frame_n, freq_n, 2))
+@param freq_n number of frequency indices
+@param frame_n number of time frames
+@param power exponent to apply to the spectrogram (&gt; 0.0). 1.0: amplitude spectrogram, 2.0: power spectrogram, etc,
+any other positive exponent value is allowed.
+@param phase_form format of the outputted phase: any of the AILIA_AUDIO_PHASE_FORM_* constants
+@return
+In case of success,  \ref AILIA_STATUS_SUCCESS , and else an error code is returned.
+@details
+To be compatible with librosa, use: phase_form =  \ref AILIA_AUDIO_PHASE_FORM_COMPLEX , power = 1.0
+To be compatible with PyTorch, use: phase_form =  \ref AILIA_AUDIO_PHASE_FORM_REAL , power = 1.0
+The dst_phase output depends on phase_form:</p>
+<ul>
+<li>\ref AILIA_AUDIO_PHASE_FORM_COMPLEX  : signal with real and imaginary parts, of size (freq_n * frame_n * 2)</li>
+<li>\ref AILIA_AUDIO_PHASE_FORM_REAL  : real signal, of size (freq_n * frame_n)</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaAudioMagPhase(
+  ffi.Pointer&lt;ffi.Void&gt; dst_mag,
+  ffi.Pointer&lt;ffi.Void&gt; dst_phase,
+  ffi.Pointer&lt;ffi.Void&gt; src,
+  int freq_n,
+  int frame_n,
+  double power,
+  int phase_form,
+) {
+  return _ailiaAudioMagPhase(
+    dst_mag,
+    dst_phase,
+    src,
+    freq_n,
+    frame_n,
+    power,
+    phase_form,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioMagPhase method</li>
+</ol>
+
+
+    <h5>ailiaVoiceFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia_voice
+      1.1.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

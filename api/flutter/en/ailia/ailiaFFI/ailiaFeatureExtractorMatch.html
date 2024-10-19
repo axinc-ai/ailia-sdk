@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaFeatureExtractorMatch method from the ailiaFFI class, for the Dart programming language.">
+  <title>ailiaFeatureExtractorMatch method - ailiaFFI class - ailia library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia</a></li>
+    <li><a href="../../ailia/ailia-library.html">ailia.dart</a></li>
+    <li><a href="../../ailia/ailiaFFI-class.html">ailiaFFI</a></li>
+    <li class="self-crumb">ailiaFeatureExtractorMatch method</li>
+  </ol>
+  <div class="self-name">ailiaFeatureExtractorMatch</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia&#47;ailiaFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaFeatureExtractorMatch</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaFeatureExtractorMatch</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaFeatureExtractorMatch-param-fextractor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../ailia/AILIAFeatureExtractor-class.html">AILIAFeatureExtractor</a></span>&gt;</span></span> <span class="parameter-name">fextractor</span>, </span></li>
+<li><span class="parameter" id="ailiaFeatureExtractorMatch-param-distance"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Float-class.html">Float</a></span>&gt;</span></span> <span class="parameter-name">distance</span>, </span></li>
+<li><span class="parameter" id="ailiaFeatureExtractorMatch-param-distace_type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">distace_type</span>, </span></li>
+<li><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature1"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">feature1</span>, </span></li>
+<li><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature1_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">feature1_size</span>, </span></li>
+<li><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature2"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">feature2</span>, </span></li>
+<li><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature2_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">feature2_size</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief 特徴間の距離を計算します。
+@param fextractor                  特徴抽出オブジェクトポインタ
+@param distance                    特徴間距離
+@param distance_type               特徴間距離の種別
+@param feature1                    一方の特徴の格納先ポインタ(numeric型)
+@param feature1_size               dstのサイズ(byte)
+@param feature2                    他方の特徴の格納先ポインタ(numeric型)
+@param feature2_size               dstのサイズ(byte)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</p>
+<p>~english
+@brief Computes distances in feature space.
+@param fextractor                  A feature extraction instance pointer
+@param distance                    A distance in feature space
+@param distance_type               The type of the distance in feature space
+@param feature1                    A pointer to the storage location of one feature (numeric type)
+@param feature1_size               The size of the feature1 (bytes)
+@param feature2                    A pointer to the storage location of the other feature (numeric type)
+@param feature2_size               The size of the feature2 (bytes)
+@return
+If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an error code otherwise.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaFeatureExtractorMatch(
+  ffi.Pointer&lt;AILIAFeatureExtractor&gt; fextractor,
+  ffi.Pointer&lt;ffi.Float&gt; distance,
+  int distace_type,
+  ffi.Pointer&lt;ffi.Void&gt; feature1,
+  int feature1_size,
+  ffi.Pointer&lt;ffi.Void&gt; feature2,
+  int feature2_size,
+) {
+  return _ailiaFeatureExtractorMatch(
+    fextractor,
+    distance,
+    distace_type,
+    feature1,
+    feature1_size,
+    feature2,
+    feature2_size,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia</a></li>
+    <li><a href="../../ailia/ailia-library.html">ailia</a></li>
+    <li><a href="../../ailia/ailiaFFI-class.html">ailiaFFI</a></li>
+    <li class="self-crumb">ailiaFeatureExtractorMatch method</li>
+</ol>
+
+
+    <h5>ailiaFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia
+      1.4.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

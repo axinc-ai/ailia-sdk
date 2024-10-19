@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaDetectorSetInputShape method from the ailiaFFI class, for the Dart programming language.">
+  <title>ailiaDetectorSetInputShape method - ailiaFFI class - ailia library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia</a></li>
+    <li><a href="../../ailia/ailia-library.html">ailia.dart</a></li>
+    <li><a href="../../ailia/ailiaFFI-class.html">ailiaFFI</a></li>
+    <li class="self-crumb">ailiaDetectorSetInputShape method</li>
+  </ol>
+  <div class="self-name">ailiaDetectorSetInputShape</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia&#47;ailiaFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaDetectorSetInputShape</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaDetectorSetInputShape</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaDetectorSetInputShape-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span></li>
+<li><span class="parameter" id="ailiaDetectorSetInputShape-param-input_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">input_width</span>, </span></li>
+<li><span class="parameter" id="ailiaDetectorSetInputShape-param-input_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">input_height</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief YoloV3またはYoloXでのモデルへの入力画像サイズを指定します。
+@param detector       検出オブジェクトポインタ
+@param input_width    モデルの入力画像幅
+@param input_height   モデルの入力画像高さ
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+YoloV3では単一のモデルが任意の入力解像度に対応します。(32 の倍数制限あり)
+YoloXでは単一のモデルが任意の入力解像度に対応します。
+計算量の削減等でモデルへの入力画像サイズを指定する場合この API を実行してください。
+ailiaCreateDetector() () と  ailiaDetectorCompute() () の間に実行する必要があります。
+この API を実行しない場合、デフォルトの 416x416 を利用します。
+YOLOv3またはYOLOX 以外で実行した場合、 \ref AILIA_STATUS_INVALID_STATE  を返します。</p>
+<p>~english
+@brief Sets the size of the input image for YoloV3 or YoloX model.
+@param detector       A detector instance pointer
+@param input_width    Width of the model's input image
+@param input_height   Height of the model's input image
+@return
+If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an error code otherwise.
+@details
+The same YoloV3 model can be used for any input image size that is a multiple of 32.
+The same YoloX model can be used for any input image size.
+You can use this API if you want to choose the input image size, for example to reduce the calculation complexity.
+It must be called between  ailiaCreateDetector() () and  ailiaDetectorCompute() ().
+If this API is not used, a default size of 416x416 is assumed.
+If used with some model other than YoloV3 or YoloX, it will return the error status  \ref
+AILIA_STATUS_INVALID_STATE .</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaDetectorSetInputShape(
+  ffi.Pointer&lt;AILIADetector&gt; detector,
+  int input_width,
+  int input_height,
+) {
+  return _ailiaDetectorSetInputShape(
+    detector,
+    input_width,
+    input_height,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia</a></li>
+    <li><a href="../../ailia/ailia-library.html">ailia</a></li>
+    <li><a href="../../ailia/ailiaFFI-class.html">ailiaFFI</a></li>
+    <li class="self-crumb">ailiaDetectorSetInputShape method</li>
+</ol>
+
+
+    <h5>ailiaFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia
+      1.4.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
