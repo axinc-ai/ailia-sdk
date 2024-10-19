@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaAudioFixFrameLen method from the ailiaVoiceFFI class, for the Dart programming language.">
+  <title>ailiaAudioFixFrameLen method - ailiaVoiceFFI class - ailia_voice library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice.dart</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioFixFrameLen method</li>
+  </ol>
+  <div class="self-name">ailiaAudioFixFrameLen</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia_voice&#47;ailiaVoiceFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaAudioFixFrameLen</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaAudioFixFrameLen</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaAudioFixFrameLen-param-dst"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dst</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioFixFrameLen-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioFixFrameLen-param-freq_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">freq_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioFixFrameLen-param-dst_frame_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_frame_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioFixFrameLen-param-src_frame_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_frame_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioFixFrameLen-param-pad_data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">pad_data</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief 実数スペクトログラム/メルスペクトログラムの時間フレーム数を調整します。
+@param dst 出力データのポインタ、freq_n, dst_frame_n 順のメモリレイアウト
+@param src 入力データのポインタ、freq_n, src_frame_n 順のメモリレイアウト
+@param freq_n 周波数のインデックス数
+@param dst_frame_n 出力データの時間フレームの数
+@param src_frame_n 入力データの時間フレームの数
+@param pad_data パディング（dst_frame_n &gt; src_frame_n の場合に使用）
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+dst_frame_n &gt; src_frame_n : 不足する時間フレームのデータを pad_data のデータで埋める。
+dst_frame_n &lt;= src_frame_n : 先頭から dst_frame_n のデータのみを切り出す。</p>
+<p>~english
+@brief Fix the number of time frames of a real-valued spectrogram/mel-spectrogram.
+@param dst pointer to the output data, of length (freq_n * dst_frame_n), and of memory layout (in row-major
+convention) (freq_n, dst_frame_n).
+@param src pointer to the input data, of length (freq_n * src_frame_n), and of memory layout (in row-major
+convention) (freq_n, src_frame_n).
+@param freq_n number of frequency indices
+@param dst_frame_n number of time frames in the output data
+@param src_frame_n number of time frames in the input data
+@param pad_data value inserted for padding (used when dst_frame_n &gt; src_frame_n)
+@return
+In case of success,  \ref AILIA_STATUS_SUCCESS , and else an error code is returned.
+@details
+dst_frame_n &gt; src_frame_n : missing time frames are added and filled with the value pad_data.
+dst_frame_n &lt;= src_frame_n : only keeps the first dst_frame_n data.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaAudioFixFrameLen(
+  ffi.Pointer&lt;ffi.Void&gt; dst,
+  ffi.Pointer&lt;ffi.Void&gt; src,
+  int freq_n,
+  int dst_frame_n,
+  int src_frame_n,
+  double pad_data,
+) {
+  return _ailiaAudioFixFrameLen(
+    dst,
+    src,
+    freq_n,
+    dst_frame_n,
+    src_frame_n,
+    pad_data,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioFixFrameLen method</li>
+</ol>
+
+
+    <h5>ailiaVoiceFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia_voice
+      1.1.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

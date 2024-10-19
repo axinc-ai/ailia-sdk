@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaAudioGetNonSilentPos method from the ailiaVoiceFFI class, for the Dart programming language.">
+  <title>ailiaAudioGetNonSilentPos method - ailiaVoiceFFI class - ailia_voice library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice.dart</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioGetNonSilentPos method</li>
+  </ol>
+  <div class="self-name">ailiaAudioGetNonSilentPos</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia_voice&#47;ailiaVoiceFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaAudioGetNonSilentPos</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaAudioGetNonSilentPos</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaAudioGetNonSilentPos-param-dst_start_pos"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int-class.html">Int</a></span>&gt;</span></span> <span class="parameter-name">dst_start_pos</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetNonSilentPos-param-dst_length"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int-class.html">Int</a></span>&gt;</span></span> <span class="parameter-name">dst_length</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetNonSilentPos-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetNonSilentPos-param-sample_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">sample_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetNonSilentPos-param-win_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">win_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetNonSilentPos-param-hop_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">hop_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetNonSilentPos-param-thr_db"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">thr_db</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief 信号の入力前後の無音域を除いた領域を検出します
+@param dst_start_pos 有音域の先頭サンプル位置出力先ポインタ、int 型
+@param dst_length 有音域の長さ出力先ポインタ、int 型
+@param src 入力データのポインタ、float 型、要素数 sample_n
+@param sample_n 入力データのサンプル数
+@param win_n 1フレームに含むサンプル数
+@param hop_n フレームのシフト数
+@param thr_db 有音を判断するdB (thr_db &gt; 0)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+全域が無音の場合、*dst_start_pos = -1,*dst_length = 0となります。</p>
+<p>~english
+@brief Find the region of the signal between the first and the last non-silence samples. Detects the area excluding
+the silent range before and after the signal input
+@param dst_start_pos pointer to the destination where to write the outputted start position of the non-silence area,
+of int format
+@param dst_length pointer to the destination where to write the outputted length of the non-silence area, of int
+format
+@param src pointer to the input data, of float format, and of length sample_n
+@param sample_n count of samples in the input data
+@param win_n size of the window function
+@param hop_n stride of each window shift (in number of samples)
+@param thr_db threshold (in dB) above which the signal is considered non-silence (thr_db &gt; 0)
+@return
+In case of success,  \ref AILIA_STATUS_SUCCESS , and else an error code is returned.
+@details
+In case the whole signal is considered silence, the following happens: *dst_start_pos = -1, *dst_length = 0</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaAudioGetNonSilentPos(
+  ffi.Pointer&lt;ffi.Int&gt; dst_start_pos,
+  ffi.Pointer&lt;ffi.Int&gt; dst_length,
+  ffi.Pointer&lt;ffi.Void&gt; src,
+  int sample_n,
+  int win_n,
+  int hop_n,
+  double thr_db,
+) {
+  return _ailiaAudioGetNonSilentPos(
+    dst_start_pos,
+    dst_length,
+    src,
+    sample_n,
+    win_n,
+    hop_n,
+    thr_db,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioGetNonSilentPos method</li>
+</ol>
+
+
+    <h5>ailiaVoiceFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia_voice
+      1.1.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

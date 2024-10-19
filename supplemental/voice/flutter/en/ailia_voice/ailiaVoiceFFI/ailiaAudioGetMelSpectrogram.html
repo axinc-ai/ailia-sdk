@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaAudioGetMelSpectrogram method from the ailiaVoiceFFI class, for the Dart programming language.">
+  <title>ailiaAudioGetMelSpectrogram method - ailiaVoiceFFI class - ailia_voice library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice.dart</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioGetMelSpectrogram method</li>
+  </ol>
+  <div class="self-name">ailiaAudioGetMelSpectrogram</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia_voice&#47;ailiaVoiceFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaAudioGetMelSpectrogram</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaAudioGetMelSpectrogram</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-dst"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dst</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-sample_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">sample_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-sample_rate"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">sample_rate</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-fft_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">fft_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-hop_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">hop_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-win_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">win_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-win_type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">win_type</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-max_frame_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">max_frame_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-center"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">center</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-power"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">power</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-fft_norm_type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">fft_norm_type</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-f_min"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">f_min</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-f_max"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">f_max</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-mel_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">mel_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-mel_norm_type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">mel_norm_type</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetMelSpectrogram-param-mel_formula"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">mel_formula</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief 音響信号からメルスペクトログラムを生成します。
+@param dst 出力データのポインタ、float 型、外側から mel_n, frame_n 順のメモリレイアウト
+@param src 入力データのポインタ、float 型、モノラル PCM データ
+@param sample_n 入力データのサンプル数
+@param sample_rate サンプリング周波数
+@param fft_n FFT点数
+@param hop_n フレームのシフト数
+@param win_n 1フレームに含むサンプル数
+@param win_type 窓関数の種類、AILIA_AUDIO_WIN_TYPE_* のいずれか
+@param max_frame_n 出力データの時間フレーム数の最大値
+@param center 入力データの前後へのパディングの有無、AILIA_AUDIO_STFT_CENTER_* のいずれか
+@param power スペクトログラムの乗数（ &gt; 0.0）1.0: 振幅スペクトログラム、2.0: パワースペクトログラム、その他:
+任意の累乗値の出力に相当
+@param fft_norm_type FFT後の正規化処理、AILIA_AUDIO_FFT_NORMALIZE_* のいずれか
+@param f_min 周波数の最小値
+@param f_max 周波数の最大値
+@param mel_n メル周波数のインデックス数（ &lt; freq_n）
+@param mel_norm_type MELスペクトログラムの正規化の有無、AILIA_AUDIO_MEL_NORMALIZE_* のいずれか
+@param mel_formula MEL尺度の形式、AILIA_AUDIO_MEL_SCALE_FORMULA_* のいずれか
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+時間フレームごとにFFT(STFT)→正規化処理→累乗（振幅・パワーに変換→メルフィルタバンクの係数取得→メル尺度への変換
+の順で処理を実行します。 出力データは実数の信号であり、長さはmel_n*時間フレーム長です。</p>
+<p>~english
+@brief Generate the mel spectrogram from the audio signal.
+@param dst pointer to the output data, of float format, and of length (mel_n * frame_n) (with frame_n the number of
+time frames outputted). (memory layout, using the row-major convention: (mel_n, frame_n))
+@param src pointer to the input data, of float format, monoral PCM audio data.
+@param sample_n count of samples in the input data
+@param sample_rate sampling rate of the input signal
+@param fft_n number of FFT components
+@param hop_n stride of each window shift (in number of samples). This is the size of the time increment for the
+spectrogram.
+@param win_n size of the window function (in number of samples)
+@param win_type type of the window function: any of the AILIA_AUDIO_WIN_TYPE_* constants
+@param max_frame_n maximum value of the time frame index in the outputted data
+@param center whether to pad or not (and the type of padding) before and after the input data: any of the
+AILIA_AUDIO_STFT_CENTER_* constants
+@param power exponent to apply to the spectrogram (&gt; 0.0). 1.0: amplitude spectrogram, 2.0: power spectrogram, etc,
+any other positive exponent value is allowed.
+@param fft_norm_type normalization after the FFT: any of the AILIA_AUDIO_FFT_NORMALIZE_* constants
+@param f_min lowest frequency
+@param f_max highest frequency
+@param mel_n number of mel frequency bins in the output (&lt; freq_n)
+@param mel_norm whether to normalize the mel spectrogram (and the type of the normalization): any of the
+AILIA_AUDIO_MEL_NORMALIZE_* constants
+@param mel_formula mel scale format: any of the AILIA_AUDIO_MEL_SCALE_FORMULA_* constants
+@return
+In case of success,  \ref AILIA_STATUS_SUCCESS , and else an error code is returned.
+@details
+For each time frame, the operations are processed in this order:
+FFT(STFT) -&gt; normalization -&gt; power exponentiation -&gt; get the mel filter-bank coefficients -&gt; convert to the mel
+scale. The output is real values, and its length is mel_n*frame_n (with frame_n the number of time frames outputted).</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaAudioGetMelSpectrogram(
+  ffi.Pointer&lt;ffi.Void&gt; dst,
+  ffi.Pointer&lt;ffi.Void&gt; src,
+  int sample_n,
+  int sample_rate,
+  int fft_n,
+  int hop_n,
+  int win_n,
+  int win_type,
+  int max_frame_n,
+  int center,
+  double power,
+  int fft_norm_type,
+  double f_min,
+  double f_max,
+  int mel_n,
+  int mel_norm_type,
+  int mel_formula,
+) {
+  return _ailiaAudioGetMelSpectrogram(
+    dst,
+    src,
+    sample_n,
+    sample_rate,
+    fft_n,
+    hop_n,
+    win_n,
+    win_type,
+    max_frame_n,
+    center,
+    power,
+    fft_norm_type,
+    f_min,
+    f_max,
+    mel_n,
+    mel_norm_type,
+    mel_formula,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioGetMelSpectrogram method</li>
+</ol>
+
+
+    <h5>ailiaVoiceFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia_voice
+      1.1.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
