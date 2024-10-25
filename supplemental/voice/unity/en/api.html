@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.1.0.0</span>
+   &#160;<span id="projectnumber">1.2.0.0</span>
    </div>
   </td>
  </tr>
@@ -82,7 +82,7 @@ Basic Usage</h1>
 <div class="line">        status = voice.OpenModel(path+&quot;onnx/nvidia/encoder.onnx&quot;, path+&quot;onnx/nvidia/decoder_iter.onnx&quot;, path+&quot;onnx/nvidia/postnet.onnx&quot;, path+&quot;onnx/nvidia/waveglow.onnx&quot;, null, AiliaVoice.AILIA_VOICE_MODEL_TYPE_TACOTRON2, AiliaVoice.AILIA_VOICE_CLEANER_TYPE_BASIC);</div>
 <div class="line">        break;</div>
 <div class="line">    case MODEL_GPT_SOVITS_JAPANESE:</div>
-<div class="line">        status = voice.OpenModel(path+&quot;onnx/gpt-sovits/t2s_encoder.onnx&quot;, path+&quot;onnx/gpt-sovits/t2s_fsdec.onnx&quot;, path+&quot;onnx/gpt-sovits/t2s_sdec.opt.onnx&quot;, path+&quot;onnx/gpt-sovits/vits.onnx&quot;, path+&quot;onnx/gpt-sovits/cnhubert.onnx&quot;, AiliaVoice.AILIA_VOICE_MODEL_TYPE_GPT_SOVITS, AiliaVoice.AILIA_VOICE_CLEANER_TYPE_BASIC);</div>
+<div class="line">        status = voice.OpenModel(path+&quot;onnx/gpt-sovits/t2s_encoder.onnx&quot;, path+&quot;onnx/gpt-sovits/t2s_fsdec.onnx&quot;, path+&quot;onnx/gpt-sovits/t2s_sdec.opt3.onnx&quot;, path+&quot;onnx/gpt-sovits/vits.onnx&quot;, path+&quot;onnx/gpt-sovits/cnhubert.onnx&quot;, AiliaVoice.AILIA_VOICE_MODEL_TYPE_GPT_SOVITS, AiliaVoice.AILIA_VOICE_CLEANER_TYPE_BASIC);</div>
 <div class="line">        break;</div>
 <div class="line">    }</div>
 <div class="line"> }</div>
