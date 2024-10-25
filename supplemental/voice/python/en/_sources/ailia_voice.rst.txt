@@ -9,6 +9,12 @@ Classes
    :undoc-members:
    :show-inheritance:
 
+.. autoclass:: ailia_voice.G2P
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 .. autoclass:: ailia_voice.GPTSoVITS
    :special-members: __init__, __name__
    :members:

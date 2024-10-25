@@ -47,6 +47,8 @@ var menudata={children:[
 {text:"i",url:"functions_func.html#index_i"},
 {text:"o",url:"functions_func.html#index_o"},
 {text:"s",url:"functions_func.html#index_s"}]},
-{text:"変数",url:"functions_vars.html"}]}]},
+{text:"変数",url:"functions_vars.html",children:[
+{text:"a",url:"functions_vars.html#index_a"},
+{text:"l",url:"functions_vars.html#index_l"}]}]}]},
 {text:"ファイル",url:"files.html",children:[
 {text:"ファイル一覧",url:"files.html"}]}]}

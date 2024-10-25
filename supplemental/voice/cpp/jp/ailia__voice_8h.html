@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.1.0.0</span>
+   &#160;<span id="projectnumber">1.2.0.0</span>
    </div>
   </td>
  </tr>
@@ -133,7 +133,7 @@ ailia_voice.h の依存先関係図:</div>
 <tr class="separator:a305cbb787542c7459c9690727dbba80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93cd14026647f029b4588dd944c8c38b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a93cd14026647f029b4588dd944c8c38b">AILIA_VOICE_USER_API</a></td></tr>
 <tr class="separator:a93cd14026647f029b4588dd944c8c38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2eb40be42730f1dd254b377b87fe516"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#ab2eb40be42730f1dd254b377b87fe516">AILIA_VOICE_API_CALLBACK_VERSION</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memitem:ab2eb40be42730f1dd254b377b87fe516"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#ab2eb40be42730f1dd254b377b87fe516">AILIA_VOICE_API_CALLBACK_VERSION</a>&#160;&#160;&#160;(2)</td></tr>
 <tr class="memdesc:ab2eb40be42730f1dd254b377b87fe516"><td class="mdescLeft">&#160;</td><td class="mdescRight">構造体バージョン  <a href="ailia__voice_8h.html#ab2eb40be42730f1dd254b377b87fe516">[詳解]</a><br /></td></tr>
 <tr class="separator:ab2eb40be42730f1dd254b377b87fe516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf33951bd8f879b88bf1c935c55375c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#abf33951bd8f879b88bf1c935c55375c4">ailiaVoiceOpenDictionaryFile</a>&#160;&#160;&#160;<a class="el" href="ailia__voice_8h.html#ae5970e17a0ea90bf8058d891e5bcc81b">ailiaVoiceOpenDictionaryFileW</a></td></tr>
@@ -177,6 +177,8 @@ ailia_voice.h の依存先関係図:</div>
 <tr class="separator:acd2c05bb726084589b8d33e79cc91a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8705178a977f3e64a62e62a84249b3c7"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__voice_8h.html#a93cd14026647f029b4588dd944c8c38b">AILIA_VOICE_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a8705178a977f3e64a62e62a84249b3c7">AILIA_VOICE_USER_API_AILIA_GET_OUTPUT_BLOB_COUNT</a>) (struct AILIANetwork *, unsigned int *)</td></tr>
 <tr class="separator:a8705178a977f3e64a62e62a84249b3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f12a0323f2f3740b495e4dfd952992"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="ailia__voice_8h.html#a93cd14026647f029b4588dd944c8c38b">AILIA_VOICE_USER_API</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#ae1f12a0323f2f3740b495e4dfd952992">AILIA_VOICE_USER_API_AILIA_COPY_BLOB_DATA</a>) (struct AILIANetwork *dst_net, unsigned int dst_blob_idx, struct AILIANetwork *src_net, unsigned int src_blob_idx)</td></tr>
+<tr class="separator:ae1f12a0323f2f3740b495e4dfd952992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93777a9377e0112c6ce5a83b3d1ef2d0"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__AILIAVoiceApiCallback.html">_AILIAVoiceApiCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a93777a9377e0112c6ce5a83b3d1ef2d0">AILIAVoiceApiCallback</a></td></tr>
 <tr class="separator:a93777a9377e0112c6ce5a83b3d1ef2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -256,7 +258,7 @@ ailia_voice.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AILIA_VOICE_API_CALLBACK_VERSION&#160;&#160;&#160;(1)</td>
+          <td class="memname">#define AILIA_VOICE_API_CALLBACK_VERSION&#160;&#160;&#160;(2)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -488,6 +490,20 @@ ailia_voice.h の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">typedef int(<a class="el" href="ailia__voice_8h.html#a93cd14026647f029b4588dd944c8c38b">AILIA_VOICE_USER_API</a>* AILIA_VOICE_USER_API_AILIA_AUDIO_RESAMPLE) (void *, const void *, int, int, int, int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1f12a0323f2f3740b495e4dfd952992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1f12a0323f2f3740b495e4dfd952992">&#9670;&nbsp;</a></span>AILIA_VOICE_USER_API_AILIA_COPY_BLOB_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(<a class="el" href="ailia__voice_8h.html#a93cd14026647f029b4588dd944c8c38b">AILIA_VOICE_USER_API</a>* AILIA_VOICE_USER_API_AILIA_COPY_BLOB_DATA) (struct AILIANetwork *dst_net, unsigned int dst_blob_idx, struct AILIANetwork *src_net, unsigned int src_blob_idx)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -800,7 +816,7 @@ ailia_voice.h の依存先関係図:</div>
     <tr><td class="paramname">env_id</td><td>計算に利用する推論実行環境のID( ailiaGetEnvironment() で取得) AILIA_ENVIRONMENT_ID_AUTO にした場合は自動で選択する </td></tr>
     <tr><td class="paramname">num_thread</td><td>スレッド数の上限( AILIA_MULTITHREAD_AUTO にした場合は自動で設定) </td></tr>
     <tr><td class="paramname">memory_mode</td><td>メモリモード(AILIA_MEMORY_MODE_*) </td></tr>
-    <tr><td class="paramname">flag</td><td>AILIA_Voice_FLAG_*の論理和 </td></tr>
+    <tr><td class="paramname">flag</td><td>AILIA_VOICE_FLAG_*の論理和 </td></tr>
     <tr><td class="paramname">api_callback</td><td>ailiaのAPIへのコールバック </td></tr>
     <tr><td class="paramname">version</td><td>AILIA_VOICE_API_CALLBACK_VERSION </td></tr>
   </table>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,16 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ailia_voice package &mdash; ailia Voice Python API 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=def9ab29"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=def9ab29"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -45,9 +43,13 @@
 <li><a class="reference internal" href="#">ailia_voice package</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a><ul>
 <li><a class="reference internal" href="#ailia_voice.AiliaVoiceModel"><code class="docutils literal notranslate"><span class="pre">AiliaVoiceModel</span></code></a></li>
+<li><a class="reference internal" href="#ailia_voice.G2P"><code class="docutils literal notranslate"><span class="pre">G2P</span></code></a><ul>
+<li><a class="reference internal" href="#ailia_voice.G2P.__init__"><code class="docutils literal notranslate"><span class="pre">G2P.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_voice.G2P.g2p"><code class="docutils literal notranslate"><span class="pre">G2P.g2p()</span></code></a></li>
+<li><a class="reference internal" href="#ailia_voice.G2P.initialize_model"><code class="docutils literal notranslate"><span class="pre">G2P.initialize_model()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#ailia_voice.GPTSoVITS"><code class="docutils literal notranslate"><span class="pre">GPTSoVITS</span></code></a><ul>
-<li><a class="reference internal" href="#ailia_voice.GPTSoVITS.__init__"><code class="docutils literal notranslate"><span class="pre">GPTSoVITS.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#ailia_voice.GPTSoVITS.g2p"><code class="docutils literal notranslate"><span class="pre">GPTSoVITS.g2p()</span></code></a></li>
 <li><a class="reference internal" href="#ailia_voice.GPTSoVITS.initialize_model"><code class="docutils literal notranslate"><span class="pre">GPTSoVITS.initialize_model()</span></code></a></li>
 <li><a class="reference internal" href="#ailia_voice.GPTSoVITS.set_reference_audio"><code class="docutils literal notranslate"><span class="pre">GPTSoVITS.set_reference_audio()</span></code></a></li>
 <li><a class="reference internal" href="#ailia_voice.GPTSoVITS.synthesize_voice"><code class="docutils literal notranslate"><span class="pre">GPTSoVITS.synthesize_voice()</span></code></a></li>
@@ -93,19 +95,30 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="ailia_voice.GPTSoVITS">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_voice.</span></span><span class="sig-name descname"><span class="pre">GPTSoVITS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.GPTSoVITS" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_voice.G2P">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_voice.</span></span><span class="sig-name descname"><span class="pre">G2P</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.G2P" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ailia_voice.AiliaVoiceModel" title="ailia_voice.AiliaVoiceModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">AiliaVoiceModel</span></code></a></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ailia_voice.GPTSoVITS.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.GPTSoVITS.__init__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_voice.G2P.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.G2P.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ailia_voice.GPTSoVITS.g2p">
-<span class="sig-name descname"><span class="pre">g2p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g2p_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.GPTSoVITS.g2p" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ailia_voice.G2P.g2p">
+<span class="sig-name descname"><span class="pre">g2p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g2p_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.G2P.g2p" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="ailia_voice.G2P.initialize_model">
+<span class="sig-name descname"><span class="pre">initialize_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.G2P.initialize_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ailia_voice.GPTSoVITS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_voice.</span></span><span class="sig-name descname"><span class="pre">GPTSoVITS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.GPTSoVITS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ailia_voice.G2P" title="ailia_voice.G2P"><code class="xref py py-class docutils literal notranslate"><span class="pre">G2P</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_voice.GPTSoVITS.initialize_model">
 <span class="sig-name descname"><span class="pre">initialize_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_voice.GPTSoVITS.initialize_model" title="Permalink to this definition">¶</a></dt>
