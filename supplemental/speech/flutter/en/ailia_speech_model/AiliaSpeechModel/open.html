@@ -145,16 +145,6 @@
   );
   throwError(&quot;ailiaSpeechSetIntermediateCallback&quot;, status);
 
-  &#47;*
-  bool dictionary = (strcmp(option, &quot;dictionary&quot;) == 0);
-  if (dictionary){
-    status = ailiaSpeechOpenDictionaryFileA(net, &quot;dict.csv&quot;, AILIA_SPEECH_DICTIONARY_TYPE_REPLACE);
-    if (status != AILIA_STATUS_SUCCESS){
-      printf(&quot;ailiaSpeechOpenDictionaryFileA Error %d\n&quot;, status);
-    }
-  }
-  *&#47;
-
   if (vad != null) {
     const double thresholdVad = 0.5;
     const double speechSec = 1.0;
@@ -204,7 +194,7 @@
 <footer>
   <span class="no-break">
     ailia_speech
-      1.3.1
+      1.3.2
   </span>
 
   
