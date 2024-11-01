@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the ailiaFinalize method from the ailiaSpeechFFI class, for the Dart programming language.">
-  <title>ailiaFinalize method - ailiaSpeechFFI class - ailia_speech library - Dart API</title>
+  <meta name="description" content="API docs for the dictionary method from the AiliaSpeechModel class, for the Dart programming language.">
+  <title>dictionary method - AiliaSpeechModel class - ailia_speech_model library - Dart API</title>
 
 
   
@@ -29,11 +29,11 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">ailia_speech</a></li>
-    <li><a href="../../ailia_speech/ailia_speech-library.html">ailia_speech.dart</a></li>
-    <li><a href="../../ailia_speech/ailiaSpeechFFI-class.html">ailiaSpeechFFI</a></li>
-    <li class="self-crumb">ailiaFinalize method</li>
+    <li><a href="../../ailia_speech_model/ailia_speech_model-library.html">ailia_speech_model.dart</a></li>
+    <li><a href="../../ailia_speech_model/AiliaSpeechModel-class.html">AiliaSpeechModel</a></li>
+    <li class="self-crumb">dictionary method</li>
   </ol>
-  <div class="self-name">ailiaFinalize</div>
+  <div class="self-name">dictionary</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,47 +54,49 @@
   <div
       id="dartdoc-main-content"
       class="main-content"
-      data-above-sidebar="ailia_speech&#47;ailiaSpeechFFI-class-sidebar.html"
+      data-above-sidebar="ailia_speech_model&#47;AiliaSpeechModel-class-sidebar.html"
       data-below-sidebar="">
       <div>
-<h1><span class="kind-method">ailiaFinalize</span> method 
+<h1><span class="kind-method">dictionary</span> method 
 </h1></div>
 
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
-<span class="name ">ailiaFinalize</span>(<wbr>)
+<span class="returntype">void</span>
+<span class="name ">dictionary</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="dictionary-param-dictionary"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-io/File-class.html">File</a></span> <span class="parameter-name">dictionary</span>, </span></li>
+<li><span class="parameter" id="dictionary-param-dictionaryType">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dictionaryType</span> = <span class="default-value">ailia_speech_dart.AILIA_SPEECH_DICTIONARY_TYPE_REPLACE</span>}</span></li>
+</ol>)
 
       
 
     </section>
     
-<section class="desc markdown">
-  <p>~japanese
-@brief ailiaがグローバルに確保したGPUリソース等を解放します
-@return
-成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返します。
-@details
-ailiaCreate() で作成したインスタンス全てを ailiaDestroy() で解放した状態で呼び出す必要があります。
-それ以外の状態で呼び出された場合 #ref AILIA_STATUS_INVALID_STATE を返します。
-Windows 環境の場合、DllMain 等からこの API を呼び出すとデッドロックする可能性があります。</p>
-<p>~english
-@brief Release GPU and other resources that have been globally allocated with ailia.
-@return
-If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an error code otherwise.
-@details
-It must be called with all ailia instances created by ailiaCreate() released by ailiaDestroy().
-Otherwise, #ref AILIA_STATUS_INVALID_STATE will be returned.
-Call this API from DllMain() on Windows OS, there is possibility of a deadlock.</p>
-</section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">int ailiaFinalize() {
-  return _ailiaFinalize();
+  <pre class="language-dart"><code class="language-dart">void dictionary(
+  File dictionary,
+  {int dictionaryType = ailia_speech_dart.AILIA_SPEECH_DICTIONARY_TYPE_REPLACE}
+){
+  int status = 0;
+  if (Platform.isWindows) {
+    status = ailiaSpeech.ailiaSpeechOpenDictionaryFileW(
+      ppAilia!.value,
+      dictionary.path.toNativeUtf16().cast&lt;ffi.Int16&gt;(),
+      dictionaryType,
+    );
+    throwError(&quot;ailiaSpeechOpenDictionaryFileW&quot;, status);
+  }else{
+    status = ailiaSpeech.ailiaSpeechOpenDictionaryFileA(
+      ppAilia!.value,
+      dictionary.path.toNativeUtf8().cast&lt;ffi.Int8&gt;(),
+      dictionaryType,
+    );
+    throwError(&quot;ailiaSpeechOpenPostProcessFileA&quot;, status);
+  }
 }</code></pre>
 </section>
 
@@ -111,13 +113,13 @@ Call this API from DllMain() on Windows OS, there is possibility of a deadlock.<
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">ailia_speech</a></li>
-    <li><a href="../../ailia_speech/ailia_speech-library.html">ailia_speech</a></li>
-    <li><a href="../../ailia_speech/ailiaSpeechFFI-class.html">ailiaSpeechFFI</a></li>
-    <li class="self-crumb">ailiaFinalize method</li>
+    <li><a href="../../ailia_speech_model/ailia_speech_model-library.html">ailia_speech_model</a></li>
+    <li><a href="../../ailia_speech_model/AiliaSpeechModel-class.html">AiliaSpeechModel</a></li>
+    <li class="self-crumb">dictionary method</li>
 </ol>
 
 
-    <h5>ailiaSpeechFFI class</h5>
+    <h5>AiliaSpeechModel class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 
