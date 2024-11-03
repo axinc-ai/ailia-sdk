@@ -1,6 +1,7 @@
 <map id="ailia_pose_estimator.h" name="ailia_pose_estimator.h">
-<area shape="rect" id="node1" title="AILIA library for human pose estimation and human face landmarks extraction." alt="" coords="21,5,173,32"/>
-<area shape="rect" id="node2" href="$ailia_8h.html" title="inference library" alt="" coords="19,80,75,107"/>
-<area shape="rect" id="node4" href="$ailia__format_8h.html" title="AILIA format definition and conversion." alt="" coords="99,80,197,107"/>
-<area shape="rect" id="node3" href="$ailia__call_8h.html" title="user&#45;defined callback" alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node1" title="AILIA library for human pose estimation and human face landmarks extraction." alt="" coords="63,5,215,32"/>
+<area shape="rect" id="node2" href="$ailia_8h.html" title="inference library" alt="" coords="61,80,117,107"/>
+<area shape="rect" id="node5" href="$ailia__format_8h.html" title="AILIA format definition and conversion." alt="" coords="141,80,239,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,73,181"/>
+<area shape="rect" id="node4" href="$ailia__call_8h.html" title="user&#45;defined callback" alt="" coords="98,155,181,181"/>
 </map>
