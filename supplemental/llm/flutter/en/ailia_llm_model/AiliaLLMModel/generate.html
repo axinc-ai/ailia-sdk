@@ -64,11 +64,7 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
-<span class="name ">generate</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="generate-param-top_k">{<span class="type-annotation">dynamic</span> <span class="parameter-name">top_k</span> = <span class="default-value">40</span>, </span></li>
-<li><span class="parameter" id="generate-param-top_p"><span class="type-annotation">dynamic</span> <span class="parameter-name">top_p</span> = <span class="default-value">0.9</span>, </span></li>
-<li><span class="parameter" id="generate-param-temp"><span class="type-annotation">dynamic</span> <span class="parameter-name">temp</span> = <span class="default-value">0.4</span>, </span></li>
-<li><span class="parameter" id="generate-param-dist"><span class="type-annotation">dynamic</span> <span class="parameter-name">dist</span> = <span class="default-value">1234</span>}</span></li>
-</ol>)
+<span class="name ">generate</span>(<wbr>)
 
       
 
@@ -83,20 +79,13 @@ This function properly handle incomplete multi-byte utf8 character.</p>
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">String? generate({top_k = 40, top_p = 0.9, temp = 0.4, dist = 1234}) {
+  <pre class="language-dart"><code class="language-dart">String? generate() {
   if (pLLm == nullptr) {
     throw Exception(&quot;ailia LLM not initialized.&quot;);
   }
 
-  var status = dllHandle.ailiaLLMSetSamplingParams(pLLm.value, top_k, top_p, temp, dist);
-  if (status != ailia_llm_dart.AILIA_LLM_STATUS_SUCCESS) {
-    throw Exception(&quot;ailiaLLMGenerate returned an error status $status&quot;);
-  }
-
-  _setPrompt();
-
   Pointer&lt;Uint32&gt; done = malloc&lt;Uint32&gt;();
-  status = dllHandle.ailiaLLMGenerate(
+  var status = dllHandle.ailiaLLMGenerate(
     pLLm.value,
     done,
   );
