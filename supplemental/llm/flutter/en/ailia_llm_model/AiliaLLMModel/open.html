@@ -65,7 +65,8 @@
 
 <span class="returntype">void</span>
 <span class="name ">open</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="open-param-modelPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">modelPath</span>, </span></li>
-<li><span class="parameter" id="open-param-nCtx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">nCtx</span></span></li>
+<li><span class="parameter" id="open-param-nCtx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">nCtx</span>, </span></li>
+<li><span class="parameter" id="open-param-backend">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">backend</span> = <span class="default-value">&quot;&quot;</span>}</span></li>
 </ol>)
 
       
@@ -80,10 +81,33 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">void open(String modelPath, int nCtx) {
+  <pre class="language-dart"><code class="language-dart">void open(String modelPath, int nCtx, {String backend = &quot;&quot;}) {
   if (pLLm != nullptr) {
     if (pLLm.value != nullptr) {
       dllHandle.ailiaLLMDestory(pLLm.value);
+    }
+  }
+
+  if (backend == &quot;&quot;) {
+    backend = _backend[1][0];
+  }
+
+  if (_currentBackend != backend) {
+    if (_library != null) {
+      _library!.close();
+      _library = null;
+    }
+    List&lt;String&gt; backendList = getBackendList();
+    for (int i = 0; i &lt; backendList.length; i++) {
+      if (backendList[i] == backend) {
+        _library = _ailiaCommonGetLibrary(_backend[0][i]);
+        dllHandle = ailia_llm_dart.ailiaLlmFFI(_library!);
+        _currentBackend = backend;
+        break;
+      }
+    }
+    if (_library == null) {
+      throw Exception(&quot;ailiaLLM backend not found&quot;);
     }
   }
 
@@ -96,14 +120,12 @@
   }
 
   if (Platform.isWindows) {
-    Pointer&lt;WChar&gt; path =  modelPath.toNativeUtf16().cast&lt;WChar&gt;();
-    status = dllHandle.ailiaLLMOpenModelFileW(
-        pLLm.value, path, nCtx);
+    Pointer&lt;WChar&gt; path = modelPath.toNativeUtf16().cast&lt;WChar&gt;();
+    status = dllHandle.ailiaLLMOpenModelFileW(pLLm.value, path, nCtx);
     malloc.free(path);
   } else {
-    Pointer&lt;Char&gt; path =  modelPath.toNativeUtf8().cast&lt;Char&gt;();
-    status = dllHandle.ailiaLLMOpenModelFileA(
-        pLLm.value, path, nCtx);
+    Pointer&lt;Char&gt; path = modelPath.toNativeUtf8().cast&lt;Char&gt;();
+    status = dllHandle.ailiaLLMOpenModelFileA(pLLm.value, path, nCtx);
     malloc.free(path);
   }
   if (status != 0) {
@@ -143,7 +165,7 @@
 <footer>
   <span class="no-break">
     ailia_llm
-      1.1.0
+      1.2.0
   </span>
 
   
