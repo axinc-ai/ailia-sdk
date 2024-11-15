@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_llm
-   &#160;<span id="projectnumber">1.1.0.0</span>
+   &#160;<span id="projectnumber">1.2.0.0</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a18440b233b17b4ae5dd257614a6a3e6c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLMModel.html#a18440b233b17b4ae5dd257614a6a3e6c">Dispose</a> ()</td></tr>
 <tr class="memdesc:a18440b233b17b4ae5dd257614a6a3e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release resources.  <a href="classailiaLLM_1_1AiliaLLMModel.html#a18440b233b17b4ae5dd257614a6a3e6c">More...</a><br /></td></tr>
 <tr class="separator:a18440b233b17b4ae5dd257614a6a3e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5f06a39299aa83e9bc0dbe79bdefcc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLMModel.html#a3f5f06a39299aa83e9bc0dbe79bdefcc">SetSamplingParam</a> (uint top_k, float top_p, float temp, uint dist)</td></tr>
+<tr class="memdesc:a3f5f06a39299aa83e9bc0dbe79bdefcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sampling parameter.  <a href="classailiaLLM_1_1AiliaLLMModel.html#a3f5f06a39299aa83e9bc0dbe79bdefcc">More...</a><br /></td></tr>
+<tr class="separator:a3f5f06a39299aa83e9bc0dbe79bdefcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1167fe00b2598e433b1ef09aa70734c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLMModel.html#a1167fe00b2598e433b1ef09aa70734c7">SetPrompt</a> (List&lt; <a class="el" href="classailiaLLM_1_1AiliaLLMChatMessage.html">AiliaLLMChatMessage</a> &gt; messages)</td></tr>
 <tr class="memdesc:a1167fe00b2598e433b1ef09aa70734c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set prompt messages.  <a href="classailiaLLM_1_1AiliaLLMModel.html#a1167fe00b2598e433b1ef09aa70734c7">More...</a><br /></td></tr>
 <tr class="separator:a1167fe00b2598e433b1ef09aa70734c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,9 +188,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Check if the context length limit has been reached. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if the limit is reached, false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">return</span> context_full;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">return</span> context_full;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -329,23 +332,23 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns array of tokens , or empty array otherwise. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        uint done_uint = 0;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordtype">int</span> status = AiliaLLM.ailiaLLMGenerate(net, ref done_uint);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        context_full = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        done = (done_uint == 1);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMGenerate failed &quot;</span> + status);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">if</span> (status == AiliaLLM.AILIA_LLM_STATUS_CONTEXT_FULL){</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                context_full = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        uint done_uint = 0;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordtype">int</span> status = AiliaLLM.ailiaLLMGenerate(net, ref done_uint);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        context_full = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        done = (done_uint == 1);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMGenerate failed &quot;</span> + status);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">if</span> (status == AiliaLLM.AILIA_LLM_STATUS_CONTEXT_FULL){</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                context_full = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -374,46 +377,46 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set prompt messages. </p>
 <dl class="section return"><dt>Returns</dt><dd>It returns text. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        uint len = 0;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordtype">int</span> status = AiliaLLM.ailiaLLMGetDeltaTextSize(net, ref len);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMGetDeltaTextSize failed &quot;</span> + status);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            }</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordtype">byte</span>[] text = <span class="keyword">new</span> <span class="keywordtype">byte</span> [len];</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        GCHandle handle = GCHandle.Alloc(text, GCHandleType.Pinned);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        IntPtr output = handle.AddrOfPinnedObject();</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        status = AiliaLLM.ailiaLLMGetDeltaText(net, output, len);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        handle.Free();</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMGetDeltaText failed &quot;</span> + status);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">byte</span>[] new_buf = <span class="keyword">new</span> <span class="keywordtype">byte</span> [buf.Length + len - 1];</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; buf.Length; i++){</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            new_buf[i] = buf[i];</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len - 1; i++){ <span class="comment">// NULLの削除</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            new_buf[buf.Length + i] = text[i];</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        buf = new_buf;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">string</span> decoded_text = System.Text.Encoding.UTF8.GetString(buf); <span class="comment">// Unicode Decode Errorは発生しない</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">string</span> delta_text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (decoded_text.Length &gt; before_text.Length){</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            delta_text = decoded_text.Substring(before_text.Length);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        before_text = decoded_text;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">return</span> delta_text;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        uint len = 0;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">int</span> status = AiliaLLM.ailiaLLMGetDeltaTextSize(net, ref len);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMGetDeltaTextSize failed &quot;</span> + status);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordtype">byte</span>[] text = <span class="keyword">new</span> <span class="keywordtype">byte</span> [len];</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        GCHandle handle = GCHandle.Alloc(text, GCHandleType.Pinned);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        IntPtr output = handle.AddrOfPinnedObject();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        status = AiliaLLM.ailiaLLMGetDeltaText(net, output, len);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        handle.Free();</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMGetDeltaText failed &quot;</span> + status);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordtype">byte</span>[] new_buf = <span class="keyword">new</span> <span class="keywordtype">byte</span> [buf.Length + len - 1];</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; buf.Length; i++){</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            new_buf[i] = buf[i];</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len - 1; i++){ <span class="comment">// NULLの削除</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            new_buf[buf.Length + i] = text[i];</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        buf = new_buf;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordtype">string</span> decoded_text = System.Text.Encoding.UTF8.GetString(buf); <span class="comment">// Unicode Decode Errorは発生しない</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordtype">string</span> delta_text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">if</span> (decoded_text.Length &gt; before_text.Length){</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            delta_text = decoded_text.Substring(before_text.Length);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        before_text = decoded_text;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">return</span> delta_text;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -513,72 +516,143 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns true , or false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        List&lt;GCHandle&gt; handle_list = <span class="keyword">new</span> List&lt;GCHandle&gt;();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">int</span> len = messages.Count;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">byte</span>[][] role_text_list = <span class="keyword">new</span> <span class="keywordtype">byte</span> [len][];</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">byte</span>[][] conntent_text_list = <span class="keyword">new</span> <span class="keywordtype">byte</span> [len][];</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        AiliaLLM.AILIAChatMessage [] message_list = <span class="keyword">new</span> AiliaLLM.AILIAChatMessage[len];</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i&lt; len; i++){</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            AiliaLLM.AILIAChatMessage message = <span class="keyword">new</span> AiliaLLM.AILIAChatMessage();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            role_text_list[i] = System.Text.Encoding.UTF8.GetBytes(messages[i].role+<span class="stringliteral">&quot;\u0000&quot;</span>);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            GCHandle role_handle = GCHandle.Alloc(role_text_list[i], GCHandleType.Pinned);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            IntPtr role_input = role_handle.AddrOfPinnedObject();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            conntent_text_list[i] = System.Text.Encoding.UTF8.GetBytes(messages[i].content+<span class="stringliteral">&quot;\u0000&quot;</span>);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            GCHandle content_handle = GCHandle.Alloc(conntent_text_list[i], GCHandleType.Pinned);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            IntPtr content_input = content_handle.AddrOfPinnedObject();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            message.role = role_input;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            message.content = content_input;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            message_list[i] = message;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            handle_list.Add(role_handle);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            handle_list.Add(content_handle);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordtype">int</span> size = Marshal.SizeOf(typeof(AiliaLLM.AILIAChatMessage)) * message_list.Length;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        IntPtr ptr = Marshal.AllocHGlobal(size);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordtype">int</span> status = 0;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; message_list.Length; i++)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                IntPtr offset = <span class="keyword">new</span> IntPtr(ptr.ToInt64() + i * Marshal.SizeOf(typeof(AiliaLLM.AILIAChatMessage)));</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                Marshal.StructureToPtr(message_list[i], offset, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            status = AiliaLLM.ailiaLLMSetPrompt(net, ptr, (uint)len);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            Marshal.FreeHGlobal(ptr);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; handle_list.Count; i++){</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            handle_list[i].Free();</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        context_full = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        buf = <span class="keyword">new</span> <span class="keywordtype">byte</span>[0];</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        before_text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMSetPrompt failed &quot;</span> + status);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">if</span> (status == AiliaLLM.AILIA_LLM_STATUS_CONTEXT_FULL){</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                context_full = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        List&lt;GCHandle&gt; handle_list = <span class="keyword">new</span> List&lt;GCHandle&gt;();</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">int</span> len = messages.Count;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordtype">byte</span>[][] role_text_list = <span class="keyword">new</span> <span class="keywordtype">byte</span> [len][];</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordtype">byte</span>[][] conntent_text_list = <span class="keyword">new</span> <span class="keywordtype">byte</span> [len][];</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        AiliaLLM.AILIAChatMessage [] message_list = <span class="keyword">new</span> AiliaLLM.AILIAChatMessage[len];</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i&lt; len; i++){</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            AiliaLLM.AILIAChatMessage message = <span class="keyword">new</span> AiliaLLM.AILIAChatMessage();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            role_text_list[i] = System.Text.Encoding.UTF8.GetBytes(messages[i].role+<span class="stringliteral">&quot;\u0000&quot;</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            GCHandle role_handle = GCHandle.Alloc(role_text_list[i], GCHandleType.Pinned);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            IntPtr role_input = role_handle.AddrOfPinnedObject();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            conntent_text_list[i] = System.Text.Encoding.UTF8.GetBytes(messages[i].content+<span class="stringliteral">&quot;\u0000&quot;</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            GCHandle content_handle = GCHandle.Alloc(conntent_text_list[i], GCHandleType.Pinned);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            IntPtr content_input = content_handle.AddrOfPinnedObject();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            message.role = role_input;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            message.content = content_input;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            message_list[i] = message;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            handle_list.Add(role_handle);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            handle_list.Add(content_handle);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordtype">int</span> size = Marshal.SizeOf(typeof(AiliaLLM.AILIAChatMessage)) * message_list.Length;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        IntPtr ptr = Marshal.AllocHGlobal(size);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordtype">int</span> status = 0;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; message_list.Length; i++)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                IntPtr offset = <span class="keyword">new</span> IntPtr(ptr.ToInt64() + i * Marshal.SizeOf(typeof(AiliaLLM.AILIAChatMessage)));</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                Marshal.StructureToPtr(message_list[i], offset, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            status = AiliaLLM.ailiaLLMSetPrompt(net, ptr, (uint)len);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            Marshal.FreeHGlobal(ptr);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; handle_list.Count; i++){</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            handle_list[i].Free();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        context_full = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        buf = <span class="keyword">new</span> <span class="keywordtype">byte</span>[0];</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        before_text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMSetPrompt failed &quot;</span> + status);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">if</span> (status == AiliaLLM.AILIA_LLM_STATUS_CONTEXT_FULL){</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                context_full = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3f5f06a39299aa83e9bc0dbe79bdefcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5f06a39299aa83e9bc0dbe79bdefcc">&#9670;&nbsp;</a></span>SetSamplingParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ailiaLLM.AiliaLLMModel.SetSamplingParam </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>top_k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>top_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the sampling parameter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">top_k</td><td>Sampling probability value's top number, default 40 </td></tr>
+    <tr><td class="paramname">top_p</td><td>Sampling probability value range, default 0.9 (0.9 to 1.0) </td></tr>
+    <tr><td class="paramname">temp</td><td>Temperature parameter, default 0.4 </td></tr>
+    <tr><td class="paramname">dist</td><td>Seed, default 1234 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns true , or false otherwise. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                                                                {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">int</span> status = AiliaLLM.ailiaLLMSetSamplingParams(net, top_k, top_p, temp, dist);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">if</span> (logging)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaLLMSetSamplingParams failed &quot;</span> + status);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

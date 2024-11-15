@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the ailiaLLMCreate method from the ailiaLlmFFI class, for the Dart programming language.">
-  <title>ailiaLLMCreate method - ailiaLlmFFI class - ailia_llm library - Dart API</title>
+  <meta name="description" content="API docs for the getBackendList method from the AiliaLLMModel class, for the Dart programming language.">
+  <title>getBackendList method - AiliaLLMModel class - ailia_llm_model library - Dart API</title>
 
 
   
@@ -29,11 +29,11 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">ailia_llm</a></li>
-    <li><a href="../../ailia_llm/ailia_llm-library.html">ailia_llm.dart</a></li>
-    <li><a href="../../ailia_llm/ailiaLlmFFI-class.html">ailiaLlmFFI</a></li>
-    <li class="self-crumb">ailiaLLMCreate method</li>
+    <li><a href="../../ailia_llm_model/ailia_llm_model-library.html">ailia_llm_model.dart</a></li>
+    <li><a href="../../ailia_llm_model/AiliaLLMModel-class.html">AiliaLLMModel</a></li>
+    <li class="self-crumb">getBackendList static method</li>
   </ol>
-  <div class="self-name">ailiaLLMCreate</div>
+  <div class="self-name">getBackendList</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,50 +54,45 @@
   <div
       id="dartdoc-main-content"
       class="main-content"
-      data-above-sidebar="ailia_llm&#47;ailiaLlmFFI-class-sidebar.html"
+      data-above-sidebar="ailia_llm_model&#47;AiliaLLMModel-class-sidebar.html"
       data-below-sidebar="">
       <div>
-<h1><span class="kind-method">ailiaLLMCreate</span> method 
+<h1><span class="kind-method">getBackendList</span> static method 
 </h1></div>
 
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
-<span class="name ">ailiaLLMCreate</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaLLMCreate-param-llm"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../ailia_llm/AILIALLM-class.html">AILIALLM</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">llm</span></span></li>
-</ol>)
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+<span class="name ">getBackendList</span>(<wbr>)
 
       
 
     </section>
     
-<section class="desc markdown">
-  <p>~japanese
-@brief LLMオブジェクトを作成します。
-@param llm LLMオブジェクトポインタへのポインタ
-@return
-成功した場合は \ref AILIA_LLM_STATUS_SUCCESS 、そうでなければエラーコードを返す。
-@details
-LLMオブジェクトを作成します。</p>
-<p>~english
-@brief Creates a LLM instance.
-@param llm A pointer to the LLM instance pointer
-@return
-If this function is successful, it returns  \ref AILIA_LLM_STATUS_SUCCESS , or an error code otherwise.
-@details
-Creates a LLM instance.</p>
-</section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">int ailiaLLMCreate(
-  ffi.Pointer&lt;ffi.Pointer&lt;AILIALLM&gt;&gt; llm,
-) {
-  return _ailiaLLMCreate(
-    llm,
-  );
+  <pre class="language-dart"><code class="language-dart">static List&lt;String&gt; getBackendList() {
+  if (_backend.length &gt; 0) {
+    return _backend[1];
+  }
+  _backend = List&lt;List&lt;String&gt;&gt;.empty(growable: true);
+  _backend.add(List&lt;String&gt;.empty(growable: true));
+  _backend.add(List&lt;String&gt;.empty(growable: true));
+  List&lt;List&lt;String&gt;&gt; libraries = _ailiaCommonGetLlmPath();
+  for (int i = 0; i &lt; libraries.length; i++) {
+    try {
+      DynamicLibrary library = _ailiaCommonGetLibrary(libraries[0][i]);
+      _backend[0].add(libraries[0][i]);
+      _backend[1].add(libraries[1][i]);
+      library.close();
+    } on Exception {
+    } on ArgumentError {}
+  }
+  return _backend[1];
 }</code></pre>
 </section>
 
@@ -114,13 +109,13 @@ Creates a LLM instance.</p>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">ailia_llm</a></li>
-    <li><a href="../../ailia_llm/ailia_llm-library.html">ailia_llm</a></li>
-    <li><a href="../../ailia_llm/ailiaLlmFFI-class.html">ailiaLlmFFI</a></li>
-    <li class="self-crumb">ailiaLLMCreate method</li>
+    <li><a href="../../ailia_llm_model/ailia_llm_model-library.html">ailia_llm_model</a></li>
+    <li><a href="../../ailia_llm_model/AiliaLLMModel-class.html">AiliaLLMModel</a></li>
+    <li class="self-crumb">getBackendList static method</li>
 </ol>
 
 
-    <h5>ailiaLlmFFI class</h5>
+    <h5>AiliaLLMModel class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 

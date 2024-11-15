@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_llm
-   &#160;<span id="projectnumber">1.1.0.0</span>
+   &#160;<span id="projectnumber">1.2.0.0</span>
    </div>
   </td>
  </tr>
@@ -148,6 +148,9 @@ $(function() {
 <tr class="memitem:ad15a0c90e5070fadd7dc2196c80e7641"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#ad15a0c90e5070fadd7dc2196c80e7641">ailiaLLMGetContextSize</a> (struct AILIALLM *llm, unsigned int *context_size)</td></tr>
 <tr class="memdesc:ad15a0c90e5070fadd7dc2196c80e7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテキストの長さを取得します。  <a href="ailia__llm_8h.html#ad15a0c90e5070fadd7dc2196c80e7641">[詳解]</a><br /></td></tr>
 <tr class="separator:ad15a0c90e5070fadd7dc2196c80e7641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8736950603715cb8e47792bd05376d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#aa8736950603715cb8e47792bd05376d9">ailiaLLMSetSamplingParams</a> (struct AILIALLM *llm, unsigned int top_k, float top_p, float temp, unsigned int dist)</td></tr>
+<tr class="memdesc:aa8736950603715cb8e47792bd05376d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">サンプリングのパラメータを設定します。  <a href="ailia__llm_8h.html#aa8736950603715cb8e47792bd05376d9">[詳解]</a><br /></td></tr>
+<tr class="separator:aa8736950603715cb8e47792bd05376d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b39179b9fc2b13f30f9b5ff257aaaab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab">ailiaLLMSetPrompt</a> (struct AILIALLM *llm, const <a class="el" href="ailia__llm_8h.html#a54ac4162a7bbc022ceb36634d2c7e632">AILIALLMChatMessage</a> *message, unsigned int message_cnt)</td></tr>
 <tr class="memdesc:a0b39179b9fc2b13f30f9b5ff257aaaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロンプトを設定します。  <a href="ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab">[詳解]</a><br /></td></tr>
 <tr class="separator:a0b39179b9fc2b13f30f9b5ff257aaaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -836,6 +839,66 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
 <p>LLMに問い合わせるプロンプトを設定します。 ChatHistoryもmessageに含めてください。 </p>
+
+</div>
+</div>
+<a id="aa8736950603715cb8e47792bd05376d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8736950603715cb8e47792bd05376d9">&#9670;&nbsp;</a></span>ailiaLLMSetSamplingParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMSetSamplingParams </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>top_k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>top_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>サンプリングのパラメータを設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>LLMオブジェクトポインタへのポインタ </td></tr>
+    <tr><td class="paramname">top_k</td><td>サンプリングする確率値の上位個数、デフォルト40 </td></tr>
+    <tr><td class="paramname">top_p</td><td>サンプリングする確率値の範囲、デフォルト0.9（0.9〜1.0） </td></tr>
+    <tr><td class="paramname">temp</td><td>温度パラメータ、デフォルト0.4 </td></tr>
+    <tr><td class="paramname">dist</td><td>シード、デフォルト1234 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> 、そうでなければエラーコードを返す。</dd></dl>
+<p>LLMのサンプリングの設定を行います。ailiaLLMSetPromptの前に実行する必要があります。 </p>
 
 </div>
 </div>
