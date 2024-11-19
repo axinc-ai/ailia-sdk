@@ -26,8 +26,9 @@ var searchData=
   ['ailiallmmodel_2ecs_23',['AiliaLLMModel.cs',['../AiliaLLMModel_8cs.html',1,'']]],
   ['ailiallmopenmodelfile_24',['ailiaLLMOpenModelFile',['../classailiaLLM_1_1AiliaLLM.html#a95e5f66e1c4556c8506bff1197bd05d2',1,'ailiaLLM::AiliaLLM']]],
   ['ailiallmsetprompt_25',['ailiaLLMSetPrompt',['../classailiaLLM_1_1AiliaLLM.html#a1dd8f7bcc0377f9a50fa22e19927faaa',1,'ailiaLLM::AiliaLLM']]],
-  ['api_2emd_26',['api.md',['../api_8md.html',1,'']]],
-  ['ailia_20llm_20unity_20plugin_20document_27',['ailia LLM Unity Plugin Document',['../index.html',1,'']]],
-  ['about_28',['about',['../md_md-common_about.html',1,'(Global Namespace)'],['../about.html',1,'(Global Namespace)']]],
-  ['api_29',['api',['../md_md-csharp_api.html',1,'(Global Namespace)'],['../api.html',1,'(Global Namespace)']]]
+  ['ailiallmsetsamplingparams_26',['ailiaLLMSetSamplingParams',['../classailiaLLM_1_1AiliaLLM.html#a1e035d98b06ee69b970aa8a629ff2239',1,'ailiaLLM::AiliaLLM']]],
+  ['api_2emd_27',['api.md',['../api_8md.html',1,'']]],
+  ['ailia_20llm_20unity_20plugin_20document_28',['ailia LLM Unity Plugin Document',['../index.html',1,'']]],
+  ['about_29',['about',['../md_md-common_about.html',1,'(Global Namespace)'],['../about.html',1,'(Global Namespace)']]],
+  ['api_30',['api',['../md_md-csharp_api.html',1,'(Global Namespace)'],['../api.html',1,'(Global Namespace)']]]
 ];

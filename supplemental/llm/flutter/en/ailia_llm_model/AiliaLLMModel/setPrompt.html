@@ -83,6 +83,10 @@ named 'role' and 'content'.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">void setPrompt(List&lt;Map&lt;String, dynamic&gt;&gt; messages) {
+  if (pLLm == nullptr) {
+    throw Exception(&quot;ailia LLM not initialized.&quot;);
+  }
+
   &#47;&#47; Allocate an array of ailia_llm_chat_message_t and initialize it
   &#47;&#47; with the messages data.
   final messagesPtr =
@@ -109,10 +113,10 @@ named 'role' and 'content'.</p>
     _buf = Uint8List(0);
     _beforeText = &quot;&quot;;
 
-    int status = dllHandle.ailiaLLMSetPrompt(
-        pLLm.value, messagesPtr, messages.length);
-    if (status != ailia_llm_dart.AILIA_LLM_STATUS_SUCCESS){
-      if (status == ailia_llm_dart.AILIA_LLM_STATUS_CONTEXT_FULL){
+    int status =
+        dllHandle.ailiaLLMSetPrompt(pLLm.value, messagesPtr, messages.length);
+    if (status != ailia_llm_dart.AILIA_LLM_STATUS_SUCCESS) {
+      if (status == ailia_llm_dart.AILIA_LLM_STATUS_CONTEXT_FULL) {
         _contextFull = true;
         return;
       }
@@ -122,10 +126,10 @@ named 'role' and 'content'.</p>
     &#47;&#47; free string
     for (var i = 0; i &lt; messages.length; i++) {
       final p = messagesPtr[i];
-      if (p.content != nullptr){
+      if (p.content != nullptr) {
         malloc.free(p.content);
       }
-      if (p.role != nullptr){
+      if (p.role != nullptr) {
         malloc.free(p.role);
       }
     }
@@ -165,7 +169,7 @@ named 'role' and 'content'.</p>
 <footer>
   <span class="no-break">
     ailia_llm
-      1.1.0
+      1.2.0
   </span>
 
   

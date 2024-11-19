@@ -27,8 +27,9 @@ var searchData=
   ['ailiallmopenmodelfilea_25',['ailiaLLMOpenModelFileA',['../ailia__llm_8h.html#a884a746fb28b8f71fdd846ae50150c3d',1,'ailia_llm.h']]],
   ['ailiallmopenmodelfilew_26',['ailiaLLMOpenModelFileW',['../ailia__llm_8h.html#a625f994626a8fc23a183c0f173184d6e',1,'ailia_llm.h']]],
   ['ailiallmsetprompt_27',['ailiaLLMSetPrompt',['../ailia__llm_8h.html#a0b39179b9fc2b13f30f9b5ff257aaaab',1,'ailia_llm.h']]],
-  ['api_2emd_28',['api.md',['../api_8md.html',1,'']]],
-  ['ailia_20llm_20sdk_20document_29',['ailia LLM SDK Document',['../index.html',1,'']]],
-  ['api_30',['api',['../md_md-c_api.html',1,'(大域名前空間)'],['../api.html',1,'(大域名前空間)']]],
-  ['about_31',['about',['../md_md-common_about.html',1,'(大域名前空間)'],['../about.html',1,'(大域名前空間)']]]
+  ['ailiallmsetsamplingparams_28',['ailiaLLMSetSamplingParams',['../ailia__llm_8h.html#aa8736950603715cb8e47792bd05376d9',1,'ailia_llm.h']]],
+  ['api_2emd_29',['api.md',['../api_8md.html',1,'']]],
+  ['ailia_20llm_20sdk_20document_30',['ailia LLM SDK Document',['../index.html',1,'']]],
+  ['api_31',['api',['../md_md-c_api.html',1,'(大域名前空間)'],['../api.html',1,'(大域名前空間)']]],
+  ['about_32',['about',['../md_md-common_about.html',1,'(大域名前空間)'],['../about.html',1,'(大域名前空間)']]]
 ];

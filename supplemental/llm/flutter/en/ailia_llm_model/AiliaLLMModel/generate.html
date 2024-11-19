@@ -80,7 +80,7 @@ This function properly handle incomplete multi-byte utf8 character.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">String? generate() {
-  if (pLLm == nullptr){
+  if (pLLm == nullptr) {
     throw Exception(&quot;ailia LLM not initialized.&quot;);
   }
 
@@ -89,7 +89,6 @@ This function properly handle incomplete multi-byte utf8 character.</p>
     pLLm.value,
     done,
   );
-
   int doneFlag = done.value;
   malloc.free(done);
 
@@ -100,7 +99,7 @@ This function properly handle incomplete multi-byte utf8 character.</p>
   }
 
   if (status != ailia_llm_dart.AILIA_LLM_STATUS_SUCCESS) {
-    if (status == ailia_llm_dart.AILIA_LLM_STATUS_CONTEXT_FULL){
+    if (status == ailia_llm_dart.AILIA_LLM_STATUS_CONTEXT_FULL) {
       _contextFull = true;
       return null;
     }
@@ -116,13 +115,14 @@ This function properly handle incomplete multi-byte utf8 character.</p>
   dllHandle.ailiaLLMGetDeltaText(pLLm.value, byteBuffer, size.value);
 
   var buffer = Uint8List(size.value - 1);
-  for (var i = 0; i &lt; size.value  - 1; i++) {
+  for (var i = 0; i &lt; size.value - 1; i++) {
     buffer[i] = byteBuffer.elementAt(i).value;
   }
 
   Uint8List combinedUint8List = Uint8List(_buf.length + buffer.length);
   combinedUint8List.setRange(0, _buf.length, _buf);
-  combinedUint8List.setRange(_buf.length, _buf.length + buffer.length, buffer);
+  combinedUint8List.setRange(
+      _buf.length, _buf.length + buffer.length, buffer);
   _buf = combinedUint8List;
 
   malloc.free(size);
@@ -131,11 +131,11 @@ This function properly handle incomplete multi-byte utf8 character.</p>
   String deltaText = &quot;&quot;;
   try {
     String text = utf8.decode(_buf);
-    if (_beforeText.length != text.length){
+    if (_beforeText.length != text.length) {
       deltaText = text.substring(_beforeText.length);
     }
     _beforeText = text;
-  } on FormatException catch(e) {
+  } on FormatException catch (e) {
     &#47;&#47; unicode decode error
   }
 
@@ -174,7 +174,7 @@ This function properly handle incomplete multi-byte utf8 character.</p>
 <footer>
   <span class="no-break">
     ailia_llm
-      1.1.0
+      1.2.0
   </span>
 
   

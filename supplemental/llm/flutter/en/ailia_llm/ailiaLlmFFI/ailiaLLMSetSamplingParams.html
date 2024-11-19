@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the ailiaLLMCreate method from the ailiaLlmFFI class, for the Dart programming language.">
-  <title>ailiaLLMCreate method - ailiaLlmFFI class - ailia_llm library - Dart API</title>
+  <meta name="description" content="API docs for the ailiaLLMSetSamplingParams method from the ailiaLlmFFI class, for the Dart programming language.">
+  <title>ailiaLLMSetSamplingParams method - ailiaLlmFFI class - ailia_llm library - Dart API</title>
 
 
   
@@ -31,9 +31,9 @@
     <li><a href="../../index.html">ailia_llm</a></li>
     <li><a href="../../ailia_llm/ailia_llm-library.html">ailia_llm.dart</a></li>
     <li><a href="../../ailia_llm/ailiaLlmFFI-class.html">ailiaLlmFFI</a></li>
-    <li class="self-crumb">ailiaLLMCreate method</li>
+    <li class="self-crumb">ailiaLLMSetSamplingParams method</li>
   </ol>
-  <div class="self-name">ailiaLLMCreate</div>
+  <div class="self-name">ailiaLLMSetSamplingParams</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -57,14 +57,18 @@
       data-above-sidebar="ailia_llm&#47;ailiaLlmFFI-class-sidebar.html"
       data-below-sidebar="">
       <div>
-<h1><span class="kind-method">ailiaLLMCreate</span> method 
+<h1><span class="kind-method">ailiaLLMSetSamplingParams</span> method 
 </h1></div>
 
     <section class="multi-line-signature">
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
-<span class="name ">ailiaLLMCreate</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaLLMCreate-param-llm"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../ailia_llm/AILIALLM-class.html">AILIALLM</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">llm</span></span></li>
+<span class="name ">ailiaLLMSetSamplingParams</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaLLMSetSamplingParams-param-llm"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../ailia_llm/AILIALLM-class.html">AILIALLM</a></span>&gt;</span></span> <span class="parameter-name">llm</span>, </span></li>
+<li><span class="parameter" id="ailiaLLMSetSamplingParams-param-top_k"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">top_k</span>, </span></li>
+<li><span class="parameter" id="ailiaLLMSetSamplingParams-param-top_p"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">top_p</span>, </span></li>
+<li><span class="parameter" id="ailiaLLMSetSamplingParams-param-temp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">temp</span>, </span></li>
+<li><span class="parameter" id="ailiaLLMSetSamplingParams-param-dist"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dist</span></span></li>
 </ol>)
 
       
@@ -73,30 +77,46 @@
     
 <section class="desc markdown">
   <p>~japanese
-@brief LLMオブジェクトを作成します。
+@brief サンプリングのパラメータを設定します。
 @param llm LLMオブジェクトポインタへのポインタ
+@param top_k サンプリングする確率値の上位個数、デフォルト40
+@param top_p サンプリングする確率値の範囲、デフォルト0.9（0.9〜1.0）
+@param temp 温度パラメータ、デフォルト0.4
+@param dist シード、デフォルト1234
 @return
 成功した場合は \ref AILIA_LLM_STATUS_SUCCESS 、そうでなければエラーコードを返す。
 @details
-LLMオブジェクトを作成します。</p>
+LLMのサンプリングの設定を行います。ailiaLLMSetPromptの前に実行する必要があります。</p>
 <p>~english
-@brief Creates a LLM instance.
+@brief Set the sampling parameter.
 @param llm A pointer to the LLM instance pointer
+@param top_k Sampling probability value's top number, default 40
+@param top_p Sampling probability value range, default 0.9 (0.9 to 1.0)
+@param temp Temperature parameter, default 0.4
+@param dist Seed, default 1234
 @return
 If this function is successful, it returns  \ref AILIA_LLM_STATUS_SUCCESS , or an error code otherwise.
 @details
-Creates a LLM instance.</p>
+Set LLM sampling parameters. Must be run before ailiaLLMSetPrompt.</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">int ailiaLLMCreate(
-  ffi.Pointer&lt;ffi.Pointer&lt;AILIALLM&gt;&gt; llm,
+  <pre class="language-dart"><code class="language-dart">int ailiaLLMSetSamplingParams(
+  ffi.Pointer&lt;AILIALLM&gt; llm,
+  int top_k,
+  double top_p,
+  double temp,
+  int dist,
 ) {
-  return _ailiaLLMCreate(
+  return _ailiaLLMSetSamplingParams(
     llm,
+    top_k,
+    top_p,
+    temp,
+    dist,
   );
 }</code></pre>
 </section>
@@ -116,7 +136,7 @@ Creates a LLM instance.</p>
     <li><a href="../../index.html">ailia_llm</a></li>
     <li><a href="../../ailia_llm/ailia_llm-library.html">ailia_llm</a></li>
     <li><a href="../../ailia_llm/ailiaLlmFFI-class.html">ailiaLlmFFI</a></li>
-    <li class="self-crumb">ailiaLLMCreate method</li>
+    <li class="self-crumb">ailiaLLMSetSamplingParams method</li>
 </ol>
 
 
