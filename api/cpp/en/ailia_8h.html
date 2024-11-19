@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.4.0.0</span>
+   &#160;<span id="projectnumber">1.5.0.0</span>
    </div>
   </td>
  </tr>
@@ -78,14 +78,16 @@ $(function() {
 
 <p>inference library  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="ailia__call_8h_source.html">ailia_call.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;wchar.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ailia__call_8h_source.html">ailia_call.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ailia.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="ailia_8h__incl.png" border="0" usemap="#aailia_8h" alt=""/></div>
 <map name="aailia_8h" id="aailia_8h">
-<area shape="rect" title="inference library" alt="" coords="19,5,75,32"/>
-<area shape="rect" href="ailia__call_8h.html" title="user&#45;defined callback" alt="" coords="5,80,88,107"/>
+<area shape="rect" title="inference library" alt="" coords="61,5,117,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,73,107"/>
+<area shape="rect" href="ailia__call_8h.html" title="user&#45;defined callback" alt="" coords="98,80,181,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -138,8 +140,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">AILIA_STATUS_INVALID_STATE</a>&#160;&#160;&#160;(-7)</td></tr>
 <tr class="memdesc:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The internal status of the ailia is incorrect.  <a href="ailia_8h.html#ae9f1df6fdfeebe95a12f5517840fd91d">More...</a><br /></td></tr>
 <tr class="separator:ae9f1df6fdfeebe95a12f5517840fd91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0855b3ad517f31c380bba21b29e44b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a5a0855b3ad517f31c380bba21b29e44b">AILIA_STATUS_UNSUPPORTED_NET</a>&#160;&#160;&#160;(-9)</td></tr>
+<tr class="memdesc:a5a0855b3ad517f31c380bba21b29e44b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsupported network.  <a href="ailia_8h.html#a5a0855b3ad517f31c380bba21b29e44b">More...</a><br /></td></tr>
+<tr class="separator:a5a0855b3ad517f31c380bba21b29e44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a7232c4fdb94cd20cacc730bb82661"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a28a7232c4fdb94cd20cacc730bb82661">AILIA_STATUS_UNSUPPORT_NET</a>&#160;&#160;&#160;(-9)</td></tr>
-<tr class="memdesc:a28a7232c4fdb94cd20cacc730bb82661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsupported network.  <a href="ailia_8h.html#a28a7232c4fdb94cd20cacc730bb82661">More...</a><br /></td></tr>
 <tr class="separator:a28a7232c4fdb94cd20cacc730bb82661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fcc45e28e0064142a58d30e0b15f1ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a4fcc45e28e0064142a58d30e0b15f1ed">AILIA_STATUS_INVALID_LAYER</a>&#160;&#160;&#160;(-10)</td></tr>
 <tr class="memdesc:a4fcc45e28e0064142a58d30e0b15f1ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incorrect layer weight, parameter, or input or output shape.  <a href="ailia_8h.html#a4fcc45e28e0064142a58d30e0b15f1ed">More...</a><br /></td></tr>
@@ -150,8 +154,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ac4e84214627c98ef7392e1e1a1749920"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#ac4e84214627c98ef7392e1e1a1749920">AILIA_STATUS_NOT_FOUND</a>&#160;&#160;&#160;(-12)</td></tr>
 <tr class="memdesc:ac4e84214627c98ef7392e1e1a1749920"><td class="mdescLeft">&#160;</td><td class="mdescRight">The specified element was not found.  <a href="ailia_8h.html#ac4e84214627c98ef7392e1e1a1749920">More...</a><br /></td></tr>
 <tr class="separator:ac4e84214627c98ef7392e1e1a1749920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c5b74653653f8be1859ff801facbce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#ad6c5b74653653f8be1859ff801facbce">AILIA_STATUS_GPU_UNSUPPORTED_LAYER</a>&#160;&#160;&#160;(-13)</td></tr>
+<tr class="memdesc:ad6c5b74653653f8be1859ff801facbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">A layer parameter not supported by the GPU was given.  <a href="ailia_8h.html#ad6c5b74653653f8be1859ff801facbce">More...</a><br /></td></tr>
+<tr class="separator:ad6c5b74653653f8be1859ff801facbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a846da7966e479ee2c7982e83f9ce24e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a846da7966e479ee2c7982e83f9ce24e5">AILIA_STATUS_GPU_UNSUPPORT_LAYER</a>&#160;&#160;&#160;(-13)</td></tr>
-<tr class="memdesc:a846da7966e479ee2c7982e83f9ce24e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A layer parameter not supported by the GPU was given.  <a href="ailia_8h.html#a846da7966e479ee2c7982e83f9ce24e5">More...</a><br /></td></tr>
 <tr class="separator:a846da7966e479ee2c7982e83f9ce24e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107793c83eaf027926582da2fa75b32b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia_8h.html#a107793c83eaf027926582da2fa75b32b">AILIA_STATUS_GPU_ERROR</a>&#160;&#160;&#160;(-14)</td></tr>
 <tr class="memdesc:a107793c83eaf027926582da2fa75b32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error during processing on the GPU.  <a href="ailia_8h.html#a107793c83eaf027926582da2fa75b32b">More...</a><br /></td></tr>
@@ -1103,6 +1109,21 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Please use AILIA_STATUS_GPU_UNSUPPORTED_LAYER. This macro has been deprecated. It will be removed in a future version. </p>
+
+</div>
+</div>
+<a id="ad6c5b74653653f8be1859ff801facbce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c5b74653653f8be1859ff801facbce">&#9670;&nbsp;</a></span>AILIA_STATUS_GPU_UNSUPPORTED_LAYER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_STATUS_GPU_UNSUPPORTED_LAYER&#160;&#160;&#160;(-13)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 <p>A layer parameter not supported by the GPU was given. </p>
 <dl class="section remark"><dt>Remarks</dt><dd>The layer or parameter that not supported by the GPU was given. Please check model file are correct or not and contact support desk that described on document. </dd></dl>
@@ -1309,7 +1330,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unknown error. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>The misc error has been occured. Please call <a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca" title="Returns the details of errors.">ailiaGetErrorDetail()</a> and check detail message. And, please contact support desk that described on document. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The misc error has been occurred. Please call <a class="el" href="ailia_8h.html#a2cae066af9b5d8e1f1e80965e4ee94ca" title="Returns the details of errors.">ailiaGetErrorDetail()</a> and check detail message. And, please contact support desk that described on document. </dd></dl>
 
 </div>
 </div>
@@ -1405,6 +1426,21 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define AILIA_STATUS_UNSUPPORT_NET&#160;&#160;&#160;(-9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Please use AILIA_STATUS_UNSUPPORTED_NET. This macro has been deprecated. It will be removed in a future version. </p>
+
+</div>
+</div>
+<a id="a5a0855b3ad517f31c380bba21b29e44b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0855b3ad517f31c380bba21b29e44b">&#9670;&nbsp;</a></span>AILIA_STATUS_UNSUPPORTED_NET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_STATUS_UNSUPPORTED_NET&#160;&#160;&#160;(-9)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2223,7 +2259,7 @@ Functions</h2></td></tr>
 <p>Gets the list of computational environments. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">env</td><td>The storage location of the computational environment information (valid until the AILIANetwork instance is destroyed) </td></tr>
+    <tr><td class="paramname">env</td><td>The storage location of the computational environment information (Valid until the library is released) </td></tr>
     <tr><td class="paramname">env_idx</td><td>The index of the computational environment information (0 to <a class="el" href="ailia_8h.html#a6d4fd6285ac9ec6795886c6e49e2d57c" title="Gets the number of available computational environments (CPU, GPU).">ailiaGetEnvironmentCount()</a> -1) </td></tr>
     <tr><td class="paramname">version</td><td>AILIA_ENVIRONMENT_VERSION </td></tr>
   </table>
@@ -2664,7 +2700,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
-    <tr><td class="paramname">env</td><td>The storage location of the computational environment information (valid until the AILIANetwork instance is destroyed) </td></tr>
+    <tr><td class="paramname">env</td><td>The storage location of the computational environment information (Valid until the library is released) </td></tr>
     <tr><td class="paramname">version</td><td>AILIA_ENVIRONMENT_VERSION </td></tr>
   </table>
   </dd>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia
-   &#160;<span id="projectnumber">1.4.0.0</span>
+   &#160;<span id="projectnumber">1.5.0.0</span>
    </div>
   </td>
  </tr>
@@ -83,10 +83,11 @@ ailia_feature_extractor.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="ailia__feature__extractor_8h__incl.png" border="0" usemap="#aailia__feature__extractor_8h" alt=""/></div>
 <map name="aailia__feature__extractor_8h" id="aailia__feature__extractor_8h">
-<area shape="rect" title="AILIA 特徴抽出ライブラリ" alt="" coords="17,5,178,32"/>
-<area shape="rect" href="ailia_8h.html" title="推論ライブラリ" alt="" coords="19,80,75,107"/>
-<area shape="rect" href="ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="99,80,197,107"/>
-<area shape="rect" href="ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="5,155,88,181"/>
+<area shape="rect" title="AILIA 特徴抽出ライブラリ" alt="" coords="59,5,220,32"/>
+<area shape="rect" href="ailia_8h.html" title="推論ライブラリ" alt="" coords="61,80,117,107"/>
+<area shape="rect" href="ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="141,80,239,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,73,181"/>
+<area shape="rect" href="ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="98,155,181,181"/>
 </map>
 </div>
 </div>
@@ -109,9 +110,9 @@ ailia_feature_extractor.h の依存先関係図:</div>
 <tr class="memitem:a6c7445935c450b096bc1c43c34da1066"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">ailiaFeatureExtractorCompute</a> (struct AILIAFeatureExtractor *fextractor, void *dst, unsigned int dst_size, const void *src, unsigned int src_stride, unsigned int src_width, unsigned int src_height, unsigned int src_format)</td></tr>
 <tr class="memdesc:a6c7445935c450b096bc1c43c34da1066"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴の抽出を行います。  <a href="ailia__feature__extractor_8h.html#a6c7445935c450b096bc1c43c34da1066">[詳解]</a><br /></td></tr>
 <tr class="separator:a6c7445935c450b096bc1c43c34da1066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e">ailiaFeatureExtractorMatch</a> (struct AILIAFeatureExtractor *fextractor, float *distance, unsigned int distace_type, const void *feature1, unsigned int feature1_size, const void *feature2, unsigned int feature2_size)</td></tr>
-<tr class="memdesc:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴間の距離を計算します。  <a href="ailia__feature__extractor_8h.html#a567f151b19b4dcf9e3a2eeaff4f4ca6e">[詳解]</a><br /></td></tr>
-<tr class="separator:a567f151b19b4dcf9e3a2eeaff4f4ca6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ee4b184e708600befc7aa5af03c9d5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__format_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__feature__extractor_8h.html#a69ee4b184e708600befc7aa5af03c9d5">ailiaFeatureExtractorMatch</a> (struct AILIAFeatureExtractor *fextractor, float *distance, unsigned int distance_type, const void *feature1, unsigned int feature1_size, const void *feature2, unsigned int feature2_size)</td></tr>
+<tr class="memdesc:a69ee4b184e708600befc7aa5af03c9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴間の距離を計算します。  <a href="ailia__feature__extractor_8h.html#a69ee4b184e708600befc7aa5af03c9d5">[詳解]</a><br /></td></tr>
+<tr class="separator:a69ee4b184e708600befc7aa5af03c9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>AILIA 特徴抽出ライブラリ </p>
@@ -307,8 +308,8 @@ ailia_feature_extractor.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a567f151b19b4dcf9e3a2eeaff4f4ca6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567f151b19b4dcf9e3a2eeaff4f4ca6e">&#9670;&nbsp;</a></span>ailiaFeatureExtractorMatch()</h2>
+<a id="a69ee4b184e708600befc7aa5af03c9d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ee4b184e708600befc7aa5af03c9d5">&#9670;&nbsp;</a></span>ailiaFeatureExtractorMatch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +330,7 @@ ailia_feature_extractor.h の依存先関係図:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>distace_type</em>, </td>
+          <td class="paramname"><em>distance_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
