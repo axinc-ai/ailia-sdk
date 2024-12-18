@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_tracker: ailia_tracker.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_tracker
+   &#160;<span id="projectnumber">0.9.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ailia_tracker.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ailia__tracker_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef INCLUDED_AILIA_TRACKER</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define INCLUDED_AILIA_TRACKER</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* エラーコードと構造体 */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;ailia.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;ailia_detector.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/* 呼び出し規約 */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#if defined(_WIN64) || defined(_M_X64) || defined(__amd64__) || defined(__x86_64__) || defined(__APPLE__) || \</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    defined(__ANDROID__) || defined(ANDROID) || defined(__linux__) || defined(NN_NINTENDO_SDK)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define AILIA_API</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">   23</a></span>&#160;<span class="preprocessor">#define AILIA_API __stdcall</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/****************************************************************</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * アルゴリズム定義</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> **/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="ailia__tracker_8h.html#a109e7b4c6158ac1de4915fd2fc3c7bb2">   43</a></span>&#160;<span class="preprocessor">#define AILIA_TRACKER_ALGORITHM_BYTE_TRACK (0)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/****************************************************************</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> * フラグ定義</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> **/</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">   58</a></span>&#160;<span class="preprocessor">#define AILIA_TRACKER_FLAG_NONE (0)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/****************************************************************</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> * 物体情報</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> **/</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="ailia__tracker_8h.html#af038140dddbbbe2e14244e20547403f2">   63</a></span>&#160;<span class="preprocessor">#define AILIA_TRACKER_OBJECT_VERSION (1)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html">   65</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__AILIATrackerObject.html">_AILIATrackerObject</a> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html#ade1116e10ae8e26b2327f8b1e8911562">   73</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct__AILIATrackerObject.html#ade1116e10ae8e26b2327f8b1e8911562">id</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html#a3ebe3b644806e6c56c0ce3e1706a942d">   81</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct__AILIATrackerObject.html#a3ebe3b644806e6c56c0ce3e1706a942d">category</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html#a534bdab13cb9b1461b8e5af86e469496">   89</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct__AILIATrackerObject.html#a534bdab13cb9b1461b8e5af86e469496">prob</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html#a15fe8922813314eca61f527084eb2a97">   97</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct__AILIATrackerObject.html#a15fe8922813314eca61f527084eb2a97">x</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html#ab0c76416c234516e7f313644b956ffae">  105</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct__AILIATrackerObject.html#ab0c76416c234516e7f313644b956ffae">y</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html#a47cb64467afdff2077ebc6b81d7b1d30">  113</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct__AILIATrackerObject.html#a47cb64467afdff2077ebc6b81d7b1d30">w</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="struct__AILIATrackerObject.html#a3e67b6d20003d00e688167b2b9c6ea81">  121</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct__AILIATrackerObject.html#a3e67b6d20003d00e688167b2b9c6ea81">h</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;} <a class="code" href="ailia__tracker_8h.html#a1466821db108897de988b11e44f2bbfc">AILIATrackerObject</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">/****************************************************************</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> * ネットワークオブジェクトのインスタンス</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> **/</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">struct </span>AILIATracker;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/****************************************************************</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> * Tracking API</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> **/</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tracker_8h.html#a50727b19db6d7516bd9e3b4445b6b493">ailiaTrackerCreate</a>(<span class="keyword">struct</span> AILIATracker** tracker, <span class="keywordtype">int</span> algorithm, <span class="keywordtype">int</span> flags);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<a class="code" href="ailia__tracker_8h.html#adb54a957450c87a19c366e5fbf3aea80">ailiaTrackerAddTarget</a>(<span class="keyword">struct</span> AILIATracker* tracker, AILIADetectorObject target_object);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<a class="code" href="ailia__tracker_8h.html#af9bdad234d7fb36bbc6c02d2470bf47c">ailiaTrackerCompute</a>(<span class="keyword">struct</span> AILIATracker* tracker, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> imageWidth, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> imageHeight);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tracker_8h.html#a7097f5ca5700fbc76152d655cf321077">ailiaTrackerGetObjectCount</a>(<span class="keyword">struct</span> AILIATracker* tracker, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* obj_count);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tracker_8h.html#af7a0d43b216df3d8288add419c8c3a05">ailiaTrackerGetObject</a>(<span class="keyword">struct</span> AILIATracker* tracker,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                                    <a class="code" href="struct__AILIATrackerObject.html">AILIATrackerObject</a>* obj,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index,</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> version);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tracker_8h.html#a9bc13ee04ef51c965f64ad6748c1212e">ailiaTrackerDestroy</a>(<span class="keyword">struct</span> AILIATracker *tracker);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> <a class="code" href="ailia__tracker_8h.html#ab602af97f37d31cd752e66a44b247474">ailiaTrackerGetErrorDetail</a>(<span class="keyword">struct</span> AILIATracker* tracker);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !defined(INCLUDED_AILIA_TRACKER) */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aailia__tracker_8h_html_a50727b19db6d7516bd9e3b4445b6b493"><div class="ttname"><a href="ailia__tracker_8h.html#a50727b19db6d7516bd9e3b4445b6b493">ailiaTrackerCreate</a></div><div class="ttdeci">int AILIA_API ailiaTrackerCreate(struct AILIATracker **tracker, int algorithm, int flags)</div><div class="ttdoc">ネットワークオブジェクトを作成します。</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html_a15fe8922813314eca61f527084eb2a97"><div class="ttname"><a href="struct__AILIATrackerObject.html#a15fe8922813314eca61f527084eb2a97">_AILIATrackerObject::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:97</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_a7097f5ca5700fbc76152d655cf321077"><div class="ttname"><a href="ailia__tracker_8h.html#a7097f5ca5700fbc76152d655cf321077">ailiaTrackerGetObjectCount</a></div><div class="ttdeci">int AILIA_API ailiaTrackerGetObjectCount(struct AILIATracker *tracker, unsigned int *obj_count)</div><div class="ttdoc">検出結果の数を取得します。</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_af7a0d43b216df3d8288add419c8c3a05"><div class="ttname"><a href="ailia__tracker_8h.html#af7a0d43b216df3d8288add419c8c3a05">ailiaTrackerGetObject</a></div><div class="ttdeci">int AILIA_API ailiaTrackerGetObject(struct AILIATracker *tracker, AILIATrackerObject *obj, unsigned int index, unsigned int version)</div><div class="ttdoc">検出結果を取得します。</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html_ab0c76416c234516e7f313644b956ffae"><div class="ttname"><a href="struct__AILIATrackerObject.html#ab0c76416c234516e7f313644b956ffae">_AILIATrackerObject::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:105</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html_a534bdab13cb9b1461b8e5af86e469496"><div class="ttname"><a href="struct__AILIATrackerObject.html#a534bdab13cb9b1461b8e5af86e469496">_AILIATrackerObject::prob</a></div><div class="ttdeci">float prob</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:89</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html_ade1116e10ae8e26b2327f8b1e8911562"><div class="ttname"><a href="struct__AILIATrackerObject.html#ade1116e10ae8e26b2327f8b1e8911562">_AILIATrackerObject::id</a></div><div class="ttdeci">unsigned int id</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:73</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html_a47cb64467afdff2077ebc6b81d7b1d30"><div class="ttname"><a href="struct__AILIATrackerObject.html#a47cb64467afdff2077ebc6b81d7b1d30">_AILIATrackerObject::w</a></div><div class="ttdeci">float w</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:113</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html_a3e67b6d20003d00e688167b2b9c6ea81"><div class="ttname"><a href="struct__AILIATrackerObject.html#a3e67b6d20003d00e688167b2b9c6ea81">_AILIATrackerObject::h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:121</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_a9bc13ee04ef51c965f64ad6748c1212e"><div class="ttname"><a href="ailia__tracker_8h.html#a9bc13ee04ef51c965f64ad6748c1212e">ailiaTrackerDestroy</a></div><div class="ttdeci">int AILIA_API ailiaTrackerDestroy(struct AILIATracker *tracker)</div><div class="ttdoc">AILIATrackerオブジェクトを破棄します。</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_af9bdad234d7fb36bbc6c02d2470bf47c"><div class="ttname"><a href="ailia__tracker_8h.html#af9bdad234d7fb36bbc6c02d2470bf47c">ailiaTrackerCompute</a></div><div class="ttdeci">int AILIA_API ailiaTrackerCompute(struct AILIATracker *tracker, const unsigned int imageWidth, const unsigned int imageHeight)</div><div class="ttdoc">トラッキングを行います。</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html_a3ebe3b644806e6c56c0ce3e1706a942d"><div class="ttname"><a href="struct__AILIATrackerObject.html#a3ebe3b644806e6c56c0ce3e1706a942d">_AILIATrackerObject::category</a></div><div class="ttdeci">unsigned int category</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:81</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_a1466821db108897de988b11e44f2bbfc"><div class="ttname"><a href="ailia__tracker_8h.html#a1466821db108897de988b11e44f2bbfc">AILIATrackerObject</a></div><div class="ttdeci">struct _AILIATrackerObject AILIATrackerObject</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_ab602af97f37d31cd752e66a44b247474"><div class="ttname"><a href="ailia__tracker_8h.html#ab602af97f37d31cd752e66a44b247474">ailiaTrackerGetErrorDetail</a></div><div class="ttdeci">const char *AILIA_API ailiaTrackerGetErrorDetail(struct AILIATracker *tracker)</div><div class="ttdoc">エラーの詳細を返します</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_a1c6a80cf85ef33500663112959784400"><div class="ttname"><a href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a></div><div class="ttdeci">#define AILIA_API</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:23</div></div>
+<div class="ttc" id="astruct__AILIATrackerObject_html"><div class="ttname"><a href="struct__AILIATrackerObject.html">_AILIATrackerObject</a></div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:65</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_adb54a957450c87a19c366e5fbf3aea80"><div class="ttname"><a href="ailia__tracker_8h.html#adb54a957450c87a19c366e5fbf3aea80">ailiaTrackerAddTarget</a></div><div class="ttdeci">int AILIA_API ailiaTrackerAddTarget(struct AILIATracker *tracker, AILIADetectorObject target_object)</div><div class="ttdoc">トラッキングの対象を登録します。</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
