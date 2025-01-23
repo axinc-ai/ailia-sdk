@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -66,43 +66,43 @@ $(function() {
 <div class="title">セットアップ </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md6"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md8"></a>
 コンパイラのセットアップ</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Windows</h2>
 <p>VisualStudio 2019以降とcmakeが必要です。</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 macOS</h2>
 <p>Xcode 14.2以降とcmakeが必要です。</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Linux</h2>
 <p>clangとcmakeが必要です。</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 ライセンスファイルの配置</h1>
 <p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Windows</h2>
 <p>ailia.dllと同じフォルダ（サンプルの場合はcppフォルダ）にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 macOS</h2>
 <p>~/Library/SHALO/にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 Linux</h2>
 <p>~/.shalo/にailia.licを配置します。</p>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 サンプルのビルド</h1>
 <p>cppフォルダに移動して、プラットフォーム別のビルドコマンドを実行します。</p>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Windows</h2>
 <div class="fragment"><div class="line">cl ailia_voice_sample.cpp wave_writer.cpp wave_reader.cpp ailia_voice.lib ailia.lib ailia_audio.lib</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md16"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
 macOS</h2>
 <div class="fragment"><div class="line">clang++ -o ailia_voice_sample ailia_voice_sample.cpp wave_writer.cpp wave_reader.cpp libailia_voice.dylib libailia.dylib libailia_audio.dylib -Wl,-rpath,./ -std=c++17</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
 Linux</h2>
 <div class="fragment"><div class="line">export LD_LIBRARY_PATH=./</div>
 <div class="line">g++ -o ailia_voice_sample ailia_voice_sample.cpp wave_writer.cpp wave_reader.cpp libailia_voice.so libailia.so libailia_audio.so</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
 サンプルの実行</h1>
 <p>下記のコマンドでサンプルを実行します。</p>
 <div class="fragment"><div class="line">./ailia_voice_sample tacotron2</div>
@@ -114,7 +114,7 @@ Linux</h2>
 <div class="line">Wave samples : 121344</div>
 <div class="line">Wave channles : 1</div>
 <div class="line">Wave sampling rate : 22050</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md19"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
 サンプルで指定可能なオプション</h1>
 <p>サンプルでは下記の引数を順に指定可能です。</p>
 <div class="fragment"><div class="line">./ailia_voice_sample [tacotron2/gpt-sovits/gpt-sovits-en] [input_text]</div>
@@ -127,9 +127,9 @@ Linux</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">入力テキスト </td><td class="markdownTableBodyNone">音声合成するテキストを指定します。  </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 プラットフォーム別の注意点</h1>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 macOSにおけるダウンロード属性の解除</h2>
 <p>macOSにおいてブラウザからダウンロードしたバイナリには、ダウンロード属性が付与され、実行できない場合があります。 その場合、dylibを右クリックから実行して開くことで、ダウンロード属性を解除することが可能です。 また、コマンドラインから下記のコマンドを実行することでも、ダウンロード属性を解除することが可能です。</p>
 <div class="fragment"><div class="line">xattr -d com.apple.quarantine libailia_voice.dylib</div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -66,7 +66,7 @@ $(function() {
 <div class="title">API Usage </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md5"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md6"></a>
 Basic Usage</h1>
 <p>Here is an example of speech synthesis using C#. You can obtain an AudioClip by creating an AiliaVoiceModel, loading the AI model with OpenModel, converting to phonemes with G2P, and calling Inference. In the case of GPT-SoVITS, you provide a reference AudioClip with SetReference before calling Inference.</p>
 <div class="fragment"><div class="line">void Initialize(){</div>
@@ -103,7 +103,12 @@ Basic Usage</h1>
 <div class="line">void Uninitialize(){</div>
 <div class="line">    voice.Close();</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Using the User Dictionary</h1>
+<p>The userdic.dic created with pyopenjtalk can be loaded by executing the SetUserDictionary API before the OpenDictionary API.</p>
+<div class="fragment"><div class="line">voice.SetUserDictionary(path + &quot;/userdic.dic&quot;, AiliaVoice.AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK);</div>
+<div class="line">voice.OpenDictionary(path, AiliaVoice.AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK);</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 Using a GPU</h1>
 <p>To use a GPU, specify the GPU's env_id in the env_id argument of AiliaVoice.Open. If you specify AILIA_ENVIRONMENT_ID_AUTO, the inference will be performed on the CPU. For how to obtain the GPU's env_id, please refer to GetEnvId() in AiliaSpeechSample.cs. In the example below, the environment is enumerated using the ailia API, and the GPU's env_id is obtained when env_type is 1.</p>
 <div class="fragment"><div class="line">private int GetEnvId(int env_type){</div>
@@ -126,12 +131,12 @@ Using a GPU</h1>
 <div class="line">    }</div>
 <div class="line">    return env_id;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 Notes by Platform</h1>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 iOS</h2>
 <p>When operating on iOS, please specify Increased Memory Limit in Capability.</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Android</h2>
 <p>Since direct access to StreamingAssets files is not possible on Android, the model file is transferred to TemporaryCachePath at startup. </p>
 </div></div><!-- contents -->

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -133,6 +133,8 @@ Macros</h2></td></tr>
 <tr class="memitem:ab2eb40be42730f1dd254b377b87fe516"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#ab2eb40be42730f1dd254b377b87fe516">AILIA_VOICE_API_CALLBACK_VERSION</a>&#160;&#160;&#160;(2)</td></tr>
 <tr class="memdesc:ab2eb40be42730f1dd254b377b87fe516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct version.  <a href="ailia__voice_8h.html#ab2eb40be42730f1dd254b377b87fe516">More...</a><br /></td></tr>
 <tr class="separator:ab2eb40be42730f1dd254b377b87fe516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8146e335c748c848ff43b89aec42c8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#ae8146e335c748c848ff43b89aec42c8d">ailiaVoiceSetUserDictionaryFile</a>&#160;&#160;&#160;<a class="el" href="ailia__voice_8h.html#a29f757ec57dd2a1680942d171de29f5a">ailiaVoiceSetUserDictionaryFileA</a></td></tr>
+<tr class="separator:ae8146e335c748c848ff43b89aec42c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf33951bd8f879b88bf1c935c55375c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#abf33951bd8f879b88bf1c935c55375c4">ailiaVoiceOpenDictionaryFile</a>&#160;&#160;&#160;<a class="el" href="ailia__voice_8h.html#ae5970e17a0ea90bf8058d891e5bcc81b">ailiaVoiceOpenDictionaryFileW</a></td></tr>
 <tr class="separator:abf33951bd8f879b88bf1c935c55375c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40afd90a455cd27c41af639c89c68b32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a40afd90a455cd27c41af639c89c68b32">ailiaVoiceOpenModelFile</a>&#160;&#160;&#160;<a class="el" href="ailia__voice_8h.html#a4abd904554d23dac05532aad6867cf8b">ailiaVoiceOpenModelFileW</a></td></tr>
@@ -186,6 +188,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a6f807d69708ee2d64230fc575253a07b"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__voice_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a6f807d69708ee2d64230fc575253a07b">ailiaVoiceCreate</a> (struct AILIAVoice **net, int env_id, int num_thread, int memory_mode, int flags, <a class="el" href="ailia__voice_8h.html#a93777a9377e0112c6ce5a83b3d1ef2d0">AILIAVoiceApiCallback</a> callback, int version)</td></tr>
 <tr class="memdesc:a6f807d69708ee2d64230fc575253a07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Voice instance.  <a href="ailia__voice_8h.html#a6f807d69708ee2d64230fc575253a07b">More...</a><br /></td></tr>
 <tr class="separator:a6f807d69708ee2d64230fc575253a07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f757ec57dd2a1680942d171de29f5a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__voice_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a29f757ec57dd2a1680942d171de29f5a">ailiaVoiceSetUserDictionaryFileA</a> (struct AILIAVoice *net, const char *dictionary_path, int dictionary_type)</td></tr>
+<tr class="memdesc:a29f757ec57dd2a1680942d171de29f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set user dictionary into a network instance.  <a href="ailia__voice_8h.html#a29f757ec57dd2a1680942d171de29f5a">More...</a><br /></td></tr>
+<tr class="separator:a29f757ec57dd2a1680942d171de29f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f294960cf1975ab07feff4d11dcb27"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__voice_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a84f294960cf1975ab07feff4d11dcb27">ailiaVoiceSetUserDictionaryFileW</a> (struct AILIAVoice *net, const wchar_t *dictionary_path, int dictionary_type)</td></tr>
+<tr class="memdesc:a84f294960cf1975ab07feff4d11dcb27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set user dictionary into a network instance.  <a href="ailia__voice_8h.html#a84f294960cf1975ab07feff4d11dcb27">More...</a><br /></td></tr>
+<tr class="separator:a84f294960cf1975ab07feff4d11dcb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dfa5dcce326c5101e95ffe17b2bd22a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__voice_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__voice_8h.html#a9dfa5dcce326c5101e95ffe17b2bd22a">ailiaVoiceOpenDictionaryFileA</a> (struct AILIAVoice *net, const char *dictionary_path, int dictionary_type)</td></tr>
 <tr class="memdesc:a9dfa5dcce326c5101e95ffe17b2bd22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set dictionary into a network instance.  <a href="ailia__voice_8h.html#a9dfa5dcce326c5101e95ffe17b2bd22a">More...</a><br /></td></tr>
 <tr class="separator:a9dfa5dcce326c5101e95ffe17b2bd22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -454,6 +462,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define ailiaVoiceOpenModelFile&#160;&#160;&#160;<a class="el" href="ailia__voice_8h.html#a4abd904554d23dac05532aad6867cf8b">ailiaVoiceOpenModelFileW</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8146e335c748c848ff43b89aec42c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8146e335c748c848ff43b89aec42c8d">&#9670;&nbsp;</a></span>ailiaVoiceSetUserDictionaryFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ailiaVoiceSetUserDictionaryFile&#160;&#160;&#160;<a class="el" href="ailia__voice_8h.html#a29f757ec57dd2a1680942d171de29f5a">ailiaVoiceSetUserDictionaryFileA</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1493,6 +1515,98 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a29f757ec57dd2a1680942d171de29f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f757ec57dd2a1680942d171de29f5a">&#9670;&nbsp;</a></span>ailiaVoiceSetUserDictionaryFileA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__voice_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaVoiceSetUserDictionaryFileA </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIAVoice *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dictionary_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dictionary_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set user dictionary into a network instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+    <tr><td class="paramname">dictionary_path</td><td>The path name to the user dictionary file (MBSC) </td></tr>
+    <tr><td class="paramname">dictionary_type</td><td>AILIA_VOICE_DICTIONARY_TYPE_* </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>You need to call before ailiaVoiceOpenDictionaryFileA. </p>
+
+</div>
+</div>
+<a id="a84f294960cf1975ab07feff4d11dcb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f294960cf1975ab07feff4d11dcb27">&#9670;&nbsp;</a></span>ailiaVoiceSetUserDictionaryFileW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="ailia__voice_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a> ailiaVoiceSetUserDictionaryFileW </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIAVoice *&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>dictionary_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dictionary_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set user dictionary into a network instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+    <tr><td class="paramname">dictionary_path</td><td>The path name to the user dictionary file (UTF16) </td></tr>
+    <tr><td class="paramname">dictionary_type</td><td>AILIA_VOICE_DICTIONARY_TYPE_* </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>You need to call before ailiaVoiceOpenDictionaryFileW. </p>
 
 </div>
 </div>

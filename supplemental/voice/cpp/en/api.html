@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_voice
-   &#160;<span id="projectnumber">1.2.0.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -66,9 +66,9 @@ $(function() {
 <div class="title">API usage </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md3"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
 Overview of ailia AI Voice API</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Basic usage</h2>
 <p>Below is an example of how to use the text-to-speech API in C++. After having created an <code>AILIAVoice</code> instance, and opened the model with <code>ailiaVoiceOpenModelFile</code>, use <code>ailiaVoiceGraphemeToPhoneme</code> to convert the text to phonemes, then use <code>ailiaVoiceInference</code> to perform the text-to-speech conversion, after which it is possible to get the resulting audio waveforms with <code>ailiaVoiceGetWave</code>. When using GPS-SoVITS, provide a reference audio file with <code>ailiaVoiceSetReference</code> before using <code>ailiaVoiceInference</code>.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ailia__voice_8h.html">ailia_voice.h</a>&quot;</span></div>
@@ -241,7 +241,12 @@ Basic usage</h2>
 <div class="line">    <a class="code" href="ailia__voice_8h.html#ae80dc9a146c34216c0b89a6011b03290">ailiaVoiceDestroy</a>(net);</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+Using the User Dictionary</h2>
+<p>The userdic.dic created with pyopenjtalk can be loaded by executing the ailiaVoiceSetUserDictionaryFile API before the ailiaVoiceOpenDictionaryFile API.</p>
+<div class="fragment"><div class="line">ailiaVoiceSetUserDictionaryFileA(net, &quot;./userdic/userdic.dic&quot;, AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK);</div>
+<div class="line">ailiaVoiceOpenDictionaryFileA(net, &quot;./open_jtalk_dic_utf_8-1.11&quot;, AILIA_VOICE_DICTIONARY_TYPE_OPEN_JTALK);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
 GPU usage</h2>
 <p>In order to use the GPU, pass the env_id corresponding to the GPU as the <code>env_id</code> argument of <code>ailiaVoiceCreate</code>. By default, the value AILIA_ENVIRONMENT_ID_AUTO is used, which indicates to perform the inference on the CPU. See <code>ailia_speech_sample.cpp</code> as an example of how to determine the GPU env_id to be passed as the <code>env_id</code> argument. </p>
 </div></div><!-- contents -->
