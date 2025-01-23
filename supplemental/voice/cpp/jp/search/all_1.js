@@ -71,8 +71,11 @@ var searchData=
   ['ailiavoiceopenmodelfilea_69',['ailiaVoiceOpenModelFileA',['../ailia__voice_8h.html#ac7875fc17c0e6d575cf39122d082fa7d',1,'ailia_voice.h']]],
   ['ailiavoiceopenmodelfilew_70',['ailiaVoiceOpenModelFileW',['../ailia__voice_8h.html#a4abd904554d23dac05532aad6867cf8b',1,'ailia_voice.h']]],
   ['ailiavoicesetreference_71',['ailiaVoiceSetReference',['../ailia__voice_8h.html#a105feca995cea741ff4ad5918bc20937',1,'ailia_voice.h']]],
-  ['api_2emd_72',['api.md',['../api_8md.html',1,'']]],
-  ['ailia_20voice_20sdk_20documentation_73',['ailia Voice SDK documentation',['../index.html',1,'']]],
-  ['api_74',['api',['../md_md-c_api.html',1,'(大域名前空間)'],['../api.html',1,'(大域名前空間)']]],
-  ['about_75',['about',['../md_md-common_about.html',1,'(大域名前空間)'],['../about.html',1,'(大域名前空間)']]]
+  ['ailiavoicesetuserdictionaryfile_72',['ailiaVoiceSetUserDictionaryFile',['../ailia__voice_8h.html#ae8146e335c748c848ff43b89aec42c8d',1,'ailia_voice.h']]],
+  ['ailiavoicesetuserdictionaryfilea_73',['ailiaVoiceSetUserDictionaryFileA',['../ailia__voice_8h.html#a29f757ec57dd2a1680942d171de29f5a',1,'ailia_voice.h']]],
+  ['ailiavoicesetuserdictionaryfilew_74',['ailiaVoiceSetUserDictionaryFileW',['../ailia__voice_8h.html#a84f294960cf1975ab07feff4d11dcb27',1,'ailia_voice.h']]],
+  ['api_2emd_75',['api.md',['../api_8md.html',1,'']]],
+  ['ailia_20voice_20sdk_20documentation_76',['ailia Voice SDK documentation',['../index.html',1,'']]],
+  ['api_77',['api',['../md_md-c_api.html',1,'(大域名前空間)'],['../api.html',1,'(大域名前空間)']]],
+  ['about_78',['about',['../md_md-common_about.html',1,'(大域名前空間)'],['../about.html',1,'(大域名前空間)']]]
 ];

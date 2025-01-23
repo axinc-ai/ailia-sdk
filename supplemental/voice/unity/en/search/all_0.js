@@ -87,9 +87,10 @@ var searchData=
   ['ailiavoiceopendictionaryfile_84',['ailiaVoiceOpenDictionaryFile',['../classailiaVoice_1_1AiliaVoice.html#a8dec565e56ca65e1b798cf60c3193659',1,'ailiaVoice::AiliaVoice']]],
   ['ailiavoiceopenmodelfile_85',['ailiaVoiceOpenModelFile',['../classailiaVoice_1_1AiliaVoice.html#a7f2f25248bf1cc97f31d0cf34484de77',1,'ailiaVoice::AiliaVoice']]],
   ['ailiavoicesetreference_86',['ailiaVoiceSetReference',['../classailiaVoice_1_1AiliaVoice.html#a15ecd0dababc282a60e53f74897991e2',1,'ailiaVoice::AiliaVoice']]],
-  ['api_2emd_87',['api.md',['../api_8md.html',1,'']]],
-  ['about_20feature_88',['About feature',['../feature.html',1,'']]],
-  ['ailia_20voice_20unity_20plugin_20documentation_89',['ailia Voice Unity Plugin documentation',['../index.html',1,'']]],
-  ['about_90',['about',['../md_md-common_about.html',1,'(Global Namespace)'],['../about.html',1,'(Global Namespace)']]],
-  ['api_91',['api',['../md_md-csharp_api.html',1,'(Global Namespace)'],['../api.html',1,'(Global Namespace)']]]
+  ['ailiavoicesetuserdictionaryfile_87',['ailiaVoiceSetUserDictionaryFile',['../classailiaVoice_1_1AiliaVoice.html#a8695d82ed4394ad198aaa6638054bdd8',1,'ailiaVoice::AiliaVoice']]],
+  ['api_2emd_88',['api.md',['../api_8md.html',1,'']]],
+  ['about_20feature_89',['About feature',['../feature.html',1,'']]],
+  ['ailia_20voice_20unity_20plugin_20documentation_90',['ailia Voice Unity Plugin documentation',['../index.html',1,'']]],
+  ['about_91',['about',['../md_md-common_about.html',1,'(Global Namespace)'],['../about.html',1,'(Global Namespace)']]],
+  ['api_92',['api',['../md_md-csharp_api.html',1,'(Global Namespace)'],['../api.html',1,'(Global Namespace)']]]
 ];

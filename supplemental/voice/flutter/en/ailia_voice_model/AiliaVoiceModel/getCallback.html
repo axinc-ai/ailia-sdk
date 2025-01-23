@@ -210,6 +210,15 @@
             ffi.Pointer&lt;ailia_voice_dart.AILIANetwork&gt;,
           )&gt;&gt;(&#39;ailiaGetErrorDetail&#39;);
 
+  callback.ref.ailiaCopyBlobData = ailia!.lookup&lt;
+      ffi.NativeFunction&lt;
+          ffi.Int Function(
+            ffi.Pointer&lt;ailia_voice_dart.AILIANetwork&gt;,
+            ffi.UnsignedInt,
+            ffi.Pointer&lt;ailia_voice_dart.AILIANetwork&gt;,
+            ffi.UnsignedInt,
+          )&gt;&gt;(&#39;ailiaCopyBlobData&#39;);
+
   return callback;
 }</code></pre>
 </section>
@@ -245,7 +254,7 @@
 <footer>
   <span class="no-break">
     ailia_voice
-      1.1.0
+      1.3.0
   </span>
 
   
