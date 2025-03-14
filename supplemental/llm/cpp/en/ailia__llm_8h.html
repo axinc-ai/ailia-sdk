@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_llm
-   &#160;<span id="projectnumber">1.2.1.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -166,6 +166,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a7b7182c39100022c4868019eac7fef6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#a7b7182c39100022c4868019eac7fef6c">ailiaLLMGetTokenCount</a> (struct AILIALLM *llm, unsigned int *cnt, const char *text)</td></tr>
 <tr class="memdesc:a7b7182c39100022c4868019eac7fef6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of token.  <a href="ailia__llm_8h.html#a7b7182c39100022c4868019eac7fef6c">More...</a><br /></td></tr>
 <tr class="separator:a7b7182c39100022c4868019eac7fef6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb295064cede64f543611c8fc0df0951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#adb295064cede64f543611c8fc0df0951">ailiaLLMGetPromptTokenCount</a> (struct AILIALLM *llm, unsigned int *cnt)</td></tr>
+<tr class="memdesc:adb295064cede64f543611c8fc0df0951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of prompt token.  <a href="ailia__llm_8h.html#adb295064cede64f543611c8fc0df0951">More...</a><br /></td></tr>
+<tr class="separator:adb295064cede64f543611c8fc0df0951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae43f3347fdd12df1a30d9302ff169d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#acae43f3347fdd12df1a30d9302ff169d">ailiaLLMGetGeneratedTokenCount</a> (struct AILIALLM *llm, unsigned int *cnt)</td></tr>
+<tr class="memdesc:acae43f3347fdd12df1a30d9302ff169d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of prompt token.  <a href="ailia__llm_8h.html#acae43f3347fdd12df1a30d9302ff169d">More...</a><br /></td></tr>
+<tr class="separator:acae43f3347fdd12df1a30d9302ff169d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa365516599d78f9dc6b633defe1c5a97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">ailiaLLMDestroy</a> (struct AILIALLM *llm)</td></tr>
 <tr class="memdesc:aa365516599d78f9dc6b633defe1c5a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the LLM instance.  <a href="ailia__llm_8h.html#aa365516599d78f9dc6b633defe1c5a97">More...</a><br /></td></tr>
 <tr class="separator:aa365516599d78f9dc6b633defe1c5a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -668,6 +674,84 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> , or an error code otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="acae43f3347fdd12df1a30d9302ff169d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae43f3347fdd12df1a30d9302ff169d">&#9670;&nbsp;</a></span>ailiaLLMGetGeneratedTokenCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetGeneratedTokenCount </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>cnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the count of prompt token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>A LLM instance pointer </td></tr>
+    <tr><td class="paramname">cnt</td><td>The count of generated token </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>It can be called after calling ailiaLLMGenerate. </p>
+
+</div>
+</div>
+<a id="adb295064cede64f543611c8fc0df0951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb295064cede64f543611c8fc0df0951">&#9670;&nbsp;</a></span>ailiaLLMGetPromptTokenCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ailia__llm_8h.html#a3c69aad585c8ee619c34450cb5f35ea9">AILIA_LLM_API</a> int ailiaLLMGetPromptTokenCount </td>
+          <td>(</td>
+          <td class="paramtype">struct AILIALLM *&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>cnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the count of prompt token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>A LLM instance pointer </td></tr>
+    <tr><td class="paramname">cnt</td><td>The count of prompt token </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="ailia__llm_8h.html#a72cbafcad4ce0dd29db5174e4348a67e">AILIA_LLM_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>It can be called after calling ailiaLLMSetPrompt. </p>
 
 </div>
 </div>
