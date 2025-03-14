@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_llm
-   &#160;<span id="projectnumber">1.2.1.0</span>
+   &#160;<span id="projectnumber">1.3.0.0</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade874f9fee362701d8d19458ff25366d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#ade874f9fee362701d8d19458ff25366d">ailiaLLMGetTokenCount</a> (IntPtr llm, ref uint cnt, IntPtr text)</td></tr>
 <tr class="memdesc:ade874f9fee362701d8d19458ff25366d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of token.  <a href="classailiaLLM_1_1AiliaLLM.html#ade874f9fee362701d8d19458ff25366d">More...</a><br /></td></tr>
 <tr class="separator:ade874f9fee362701d8d19458ff25366d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3fb8d50c4b71ffd12ff589b130c6ff9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#ae3fb8d50c4b71ffd12ff589b130c6ff9">ailiaLLMGetPromptTokenCount</a> (IntPtr llm, ref uint cnt)</td></tr>
+<tr class="memdesc:ae3fb8d50c4b71ffd12ff589b130c6ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of prompt token.  <a href="classailiaLLM_1_1AiliaLLM.html#ae3fb8d50c4b71ffd12ff589b130c6ff9">More...</a><br /></td></tr>
+<tr class="separator:ae3fb8d50c4b71ffd12ff589b130c6ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14bac2aaf0d16fce47bf57d2f2c1422"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#ae14bac2aaf0d16fce47bf57d2f2c1422">ailiaLLMGetGeneratedTokenCount</a> (IntPtr llm, ref uint cnt)</td></tr>
+<tr class="memdesc:ae14bac2aaf0d16fce47bf57d2f2c1422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of prompt token.  <a href="classailiaLLM_1_1AiliaLLM.html#ae14bac2aaf0d16fce47bf57d2f2c1422">More...</a><br /></td></tr>
+<tr class="separator:ae14bac2aaf0d16fce47bf57d2f2c1422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7432fef0b41ea6ff5cc889efece1f0f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaLLM_1_1AiliaLLM.html#a7432fef0b41ea6ff5cc889efece1f0f7">ailiaLLMDestroy</a> (IntPtr llm)</td></tr>
 <tr class="memdesc:a7432fef0b41ea6ff5cc889efece1f0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the LLM instance.  <a href="classailiaLLM_1_1AiliaLLM.html#a7432fef0b41ea6ff5cc889efece1f0f7">More...</a><br /></td></tr>
 <tr class="separator:a7432fef0b41ea6ff5cc889efece1f0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,6 +319,84 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ae14bac2aaf0d16fce47bf57d2f2c1422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14bac2aaf0d16fce47bf57d2f2c1422">&#9670;&nbsp;</a></span>ailiaLLMGetGeneratedTokenCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailiaLLM.AiliaLLM.ailiaLLMGetGeneratedTokenCount </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref uint&#160;</td>
+          <td class="paramname"><em>cnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the count of prompt token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>A LLM instance pointer </td></tr>
+    <tr><td class="paramname">cnt</td><td>The count of generated token </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="classailiaLLM_1_1AiliaLLM.html#a3d815c32d8319a43399d93ccd88b308b">AILIA_LLM_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>It can be called after calling ailiaLLMGenerate. </p>
+
+</div>
+</div>
+<a id="ae3fb8d50c4b71ffd12ff589b130c6ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3fb8d50c4b71ffd12ff589b130c6ff9">&#9670;&nbsp;</a></span>ailiaLLMGetPromptTokenCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailiaLLM.AiliaLLM.ailiaLLMGetPromptTokenCount </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>llm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref uint&#160;</td>
+          <td class="paramname"><em>cnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the count of prompt token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">llm</td><td>A LLM instance pointer </td></tr>
+    <tr><td class="paramname">cnt</td><td>The count of prompt token </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns <a class="el" href="classailiaLLM_1_1AiliaLLM.html#a3d815c32d8319a43399d93ccd88b308b">AILIA_LLM_STATUS_SUCCESS</a> , or an error code otherwise.</dd></dl>
+<p>It can be called after calling ailiaLLMSetPrompt. </p>
 
 </div>
 </div>
