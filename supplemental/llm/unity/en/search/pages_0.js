@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['ailia_20llm_20unity_20plugin_20document_97',['ailia LLM Unity Plugin Document',['../index.html',1,'']]],
-  ['about_98',['about',['../md_md-common_about.html',1,'(Global Namespace)'],['../about.html',1,'(Global Namespace)']]],
-  ['api_99',['api',['../md_md-csharp_api.html',1,'(Global Namespace)'],['../api.html',1,'(Global Namespace)']]]
+  ['about_101',['about',['../md_md_common_about.html',1,'']]],
+  ['about_20ailia_20llm_102',['About ailia LLM',['../about.html',1,'']]],
+  ['ailia_20llm_20unity_20plugin_20document_103',['ailia LLM Unity Plugin Document',['../index.html',1,'']]],
+  ['api_104',['api',['../md_md_csharp_api.html',1,'']]],
+  ['api_20usage_105',['API Usage',['../api.html',1,'']]]
 ];
