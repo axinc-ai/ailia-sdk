@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['feature_2emd_38',['feature.md',['../feature_8md.html',1,'']]],
-  ['feature_39',['feature',['../md_md-common_feature.html',1,'(Global Namespace)'],['../feature.html',1,'(Global Namespace)']]]
+  ['feature_41',['feature',['../md_md_common_feature.html',1,'']]],
+  ['feature_2emd_42',['feature.md',['../feature_8md.html',1,'']]],
+  ['features_43',['Features',['../feature.html',1,'']]]
 ];
