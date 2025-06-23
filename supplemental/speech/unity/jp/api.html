@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ailia_speech: APIの使用方法</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.3.2.0</span>
+   &#160;<span id="projectnumber">1.4.0.0</span>
    </div>
   </td>
  </tr>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -119,6 +119,10 @@ VAD</h2>
 </div><!-- fragment --><p>日本語から英語</p>
 <div class="fragment"><div class="line">ailia_speech.OpenPostProcess(asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_encoder_model.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_decoder_model.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_source.spm&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> +<span class="stringliteral">&quot;fugumt_ja_en_target.spm&quot;</span>, <span class="keyword">null</span>, AiliaSpeech.AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_JA_EN);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+話者分離</h2>
+<p>音声認識結果に対して、話者分離を行うことが可能です。話者分離を使用する場合、Open APIの後にOpenDiarization APIを呼び出します。</p>
+<div class="fragment"><div class="line">ailia_speech.OpenDiarization(asset_path + <span class="stringliteral">&quot;/&quot;</span> + <span class="stringliteral">&quot;segmentation.onnx&quot;</span>, asset_path + <span class="stringliteral">&quot;/&quot;</span> + <span class="stringliteral">&quot;speaker-embedding.onnx&quot;</span>, AiliaSpeech.AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
 翻訳</h2>
 <p>AiliaSpeechTranslateModelを使用することで、翻訳のみを実行することが可能です。</p>
 <div class="fragment"><div class="line">void OnEnable(){</div>
@@ -136,9 +140,9 @@ VAD</h2>
 <div class="line">  // インスタンス解放</div>
 <div class="line">  ailia_speech_translate.Close();</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
 Low Level API</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Low Level APIの概要</h2>
 <p>C::のLow Level APIでは、AiliaSpeech名前空間にC APIをそのままマッピングしています。</p>
 <p>ailia Speechでは、ailiaSpeechCreateでインスタンスを作成、ailiaSpeechOpenModelFileでモデルを開き、ailiaSpeechPushInputDataでPCMを入力、ailiaSpeechBufferedで十分なPCMが入力されたか確認、ailiaSpeechTranscribeでテキスト化、ailiaSpeechGetTextで認識結果を取得可能です。</p>
@@ -191,7 +195,7 @@ Low Level APIの概要</h2>
 <div class="line"> </div>
 <div class="line">// インスタンス解放</div>
 <div class="line">AiliaSpeech.ailiaSpeechDestroy(net);</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 GPUの使用</h1>
 <p>GPUを使用するには、AiliaSpeech.Openのenv_id引数にGPUのenv_idを指定します。 AILIA_ENVIRONMENT_ID_AUTOを指定した場合は、CPUで推論が行われます。 GPUのenv_idを取得する方法は、AiliaSpeechSample.csのGetEnvId()を参照してください。 下記の例では、ailiaのAPIを使用して環境を列挙し、env_typeが1の場合にGPUのenv_idを取得しています。</p>
 <div class="fragment"><div class="line">private int GetEnvId(int env_type){</div>
@@ -214,24 +218,22 @@ GPUの使用</h1>
 <div class="line">    }</div>
 <div class="line">    return env_id;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
 プラットフォームごとの注意点</h1>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Windows</h2>
 <p>Unity Pluginのサンプルでは、ファイルダイアログにStandaloneFileBrowserアセットを使用しています。StandaloneFileBrowserの制約で、Windows環境でil2cppでビルドするとエラーが発生するため、monoでビルドしてください。これはailia Speechの制約ではないため、ファイルダイアログを使用しない場合はil2cppを使用可能です。</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 iOS</h2>
 <p>iOSで動作させる場合は、CapabilityにIncreased Memory Limitを指定してください。Smallモデルで1.82GB程度のメモリが必要なためです。</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Android</h2>
 <p>AndroidではStreamingAssetsのファイルへの直接アクセスが行えないため、起動時にTemporaryCachePathにモデルファイルを転送します。 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

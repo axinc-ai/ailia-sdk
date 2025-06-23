@@ -1306,6 +1306,46 @@ ailiaSpeechFinalizeInputDataを実行後、ailiaSpeechPushInputDataの実行前�
 
 </dd>
 
+        <dt id="ailiaSpeechOpenDiarizationFileA" class="callable">
+  <span class="name"><a href="../ailia_speech/ailiaSpeechFFI/ailiaSpeechOpenDiarizationFileA.html">ailiaSpeechOpenDiarizationFileA</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSpeechOpenDiarizationFileA-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia_speech/AILIASpeech-class.html">AILIASpeech</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSpeechOpenDiarizationFileA-param-segmentation_path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Char-class.html">Char</a></span>&gt;</span></span> <span class="parameter-name">segmentation_path</span>, </span><span class="parameter" id="ailiaSpeechOpenDiarizationFileA-param-embedding_path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Char-class.html">Char</a></span>&gt;</span></span> <span class="parameter-name">embedding_path</span>, </span><span class="parameter" id="ailiaSpeechOpenDiarizationFileA-param-type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">type</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 話者分離に適用するAIモデルを指定します。(MBSC)
+@param net ネットワークオブジェクトポインタ
+@param segmentation_path onnxファイルのパス名(MBSC)
+@param embedding_path onnxファイルのパス名(MBSC)
+@param type AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaSpeechOpenDiarizationFileW" class="callable">
+  <span class="name"><a href="../ailia_speech/ailiaSpeechFFI/ailiaSpeechOpenDiarizationFileW.html">ailiaSpeechOpenDiarizationFileW</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSpeechOpenDiarizationFileW-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia_speech/AILIASpeech-class.html">AILIASpeech</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSpeechOpenDiarizationFileW-param-segmentation_path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/WChar-class.html">WChar</a></span>&gt;</span></span> <span class="parameter-name">segmentation_path</span>, </span><span class="parameter" id="ailiaSpeechOpenDiarizationFileW-param-embedding_path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/WChar-class.html">WChar</a></span>&gt;</span></span> <span class="parameter-name">embedding_path</span>, </span><span class="parameter" id="ailiaSpeechOpenDiarizationFileW-param-type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">type</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 話者分離に適用するAIモデルを指定します。(UTF16)
+@param net ネットワークオブジェクトポインタ
+@param segmentation_path onnxファイルのパス名(UTF16)
+@param embedding_path onnxファイルのパス名(UTF16)
+@param type AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
         <dt id="ailiaSpeechOpenDictionaryFileA" class="callable">
   <span class="name"><a href="../ailia_speech/ailiaSpeechFFI/ailiaSpeechOpenDictionaryFileA.html">ailiaSpeechOpenDictionaryFileA</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSpeechOpenDictionaryFileA-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia_speech/AILIASpeech-class.html">AILIASpeech</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSpeechOpenDictionaryFileA-param-dictionary_path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Char-class.html">Char</a></span>&gt;</span></span> <span class="parameter-name">dictionary_path</span>, </span><span class="parameter" id="ailiaSpeechOpenDictionaryFileA-param-dictionary_type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dictionary_type</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
@@ -1734,7 +1774,8 @@ idxがailiaSpeechGetTextCountよりも大きい場合、自動的に内部バッ
 @return
 成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
 @details
-認識した結果はailiaTokenizerGetText APIで取得します。
+デコードした結果はailiaTokenizerGetText APIで取得します。
+skip_special_tokens=Trueと同様に、Special Tokenは出力しません。
   
 
 </dd>
@@ -1875,6 +1916,39 @@ Mecabの辞書ファイルを読み込みます。AILIA_TOKENIZER_TYPE_BERT_JAPA
 
         <dt id="ailiaTokenizerOpenDictionaryFileW" class="callable">
   <span class="name"><a href="../ailia_speech/ailiaSpeechFFI/ailiaTokenizerOpenDictionaryFileW.html">ailiaTokenizerOpenDictionaryFileW</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaTokenizerOpenDictionaryFileW-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia_speech/AILIATokenizer-class.html">AILIATokenizer</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaTokenizerOpenDictionaryFileW-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/WChar-class.html">WChar</a></span>&gt;</span></span> <span class="parameter-name">path</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ailiaTokenizerOpenMergeFileA" class="callable">
+  <span class="name"><a href="../ailia_speech/ailiaSpeechFFI/ailiaTokenizerOpenMergeFileA.html">ailiaTokenizerOpenMergeFileA</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaTokenizerOpenMergeFileA-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia_speech/AILIATokenizer-class.html">AILIATokenizer</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaTokenizerOpenMergeFileA-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Char-class.html">Char</a></span>&gt;</span></span> <span class="parameter-name">path</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief マージファイルを読み込みます。
+@param net トークナイザオブジェクトポインタへのポインタ
+@param path マージファイルのパス
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+マージファイルを読み込みます。AILIA_TOKENIZER_TYPE_ROBERTAの場合のみ必要です。
+  
+
+</dd>
+
+        <dt id="ailiaTokenizerOpenMergeFileW" class="callable">
+  <span class="name"><a href="../ailia_speech/ailiaSpeechFFI/ailiaTokenizerOpenMergeFileW.html">ailiaTokenizerOpenMergeFileW</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaTokenizerOpenMergeFileW-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia_speech/AILIATokenizer-class.html">AILIATokenizer</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaTokenizerOpenMergeFileW-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/WChar-class.html">WChar</a></span>&gt;</span></span> <span class="parameter-name">path</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
   </span>
   

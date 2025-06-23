@@ -82,7 +82,8 @@
 @return
 成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
 @details
-認識した結果はailiaTokenizerGetText APIで取得します。</p>
+デコードした結果はailiaTokenizerGetText APIで取得します。
+skip_special_tokens=Trueと同様に、Special Tokenは出力しません。</p>
 <p>~english
 @brief Perform encode
 @param net A tokenizer instance pointer
@@ -91,7 +92,8 @@
 @return
 If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an error code otherwise.
 @details
-Get the decoded result with ailiaTokenizerGetText API.</p>
+Get the decoded result with ailiaTokenizerGetText API.
+Similarly to skip_special_tokens=True, special tokens will not be output.</p>
 </section>
 
 
