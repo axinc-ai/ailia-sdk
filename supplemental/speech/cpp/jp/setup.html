@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ailia_speech: セットアップ</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.3.2.0</span>
+   &#160;<span id="projectnumber">1.4.0.0</span>
    </div>
   </td>
  </tr>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -66,43 +66,43 @@ $(function() {
 <div class="title">セットアップ </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md20"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md22"></a>
 コンパイラのセットアップ</h1>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Windows</h2>
 <p>VisualStudio 2019以降が必要です。</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 macOS</h2>
 <p>Xcode 14.2以降が必要です。</p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Linux</h2>
 <p>clangが必要です。</p>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md26"></a>
 ライセンスファイルの配置</h1>
 <p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 Windows</h2>
 <p>ailia.dllと同じフォルダ（サンプルの場合はcppフォルダ）にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 macOS</h2>
 <p>~/Library/SHALO/にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 Linux</h2>
 <p>~/.shalo/にailia.licを配置します。</p>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 サンプルのビルド</h1>
 <p>cppフォルダに移動して、プラットフォーム別のビルドコマンドを実行します。</p>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Windows</h2>
 <div class="fragment"><div class="line">cl ailia_speech_sample.cpp wave_reader.cpp ailia.lib ailia_audio.lib ailia_tokenizer.lib ailia_speech.lib</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md32"></a>
 macOS</h2>
 <div class="fragment"><div class="line">clang++ -o ailia_speech_sample ailia_speech_sample.cpp wave_reader.cpp libailia.dylib libailia_audio.dylib libailia_speech.dylib libailia_tokenizer.dylib -Wl,-rpath,./ -std=c++17</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
 Linux</h2>
 <div class="fragment"><div class="line">export LD_LIBRARY_PATH=./</div>
 <div class="line">g++ -o ailia_speech_sample ailia_speech_sample.cpp wave_reader.cpp libailia.so libailia_audio.so libailia_tokenizer.so libailia_speech.so</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md32"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md34"></a>
 サンプルの実行</h1>
 <p>下記のコマンドでサンプルを実行します。</p>
 <div class="fragment"><div class="line">./ailia_speech_sample</div>
@@ -122,30 +122,30 @@ Linux</h2>
 <div class="line">Input wave sec 10.512000</div>
 <div class="line">[00:00.000 --&gt; 00:05.640] [0.9310]  He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat</div>
 <div class="line">[00:05.640 --&gt; 00:20.840] [0.7744]  mutton pieces to be ladled out in thick peppered flour fat and sauce.</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md35"></a>
 サンプルで指定可能なオプション</h1>
 <p>サンプルでは下記の引数を順に指定可能です。</p>
 <div class="fragment"><div class="line">./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word] [auto/cpu/blas/gpu]</div>
 </div><!-- fragment --><p>各引数の詳細は下記となります。</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">内容 </th><th class="markdownTableHeadNone">詳細  </th></tr>
+<th class="markdownTableHeadNone">内容   </th><th class="markdownTableHeadNone">詳細    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">入力ファイル名 </td><td class="markdownTableBodyNone">入力する音声ファイルを指定します。wavファイルのみ指定可能です。  </td></tr>
+<td class="markdownTableBodyNone">入力ファイル名   </td><td class="markdownTableBodyNone">入力する音声ファイルを指定します。wavファイルのみ指定可能です。    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">モデル </td><td class="markdownTableBodyNone">使用するモデルサイズを指定します。base、tiny、small、mediumの順で、後者ほど高精度になります。  </td></tr>
+<td class="markdownTableBodyNone">モデル   </td><td class="markdownTableBodyNone">使用するモデルサイズを指定します。base、tiny、small、mediumの順で、後者ほど高精度になります。    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">言語 </td><td class="markdownTableBodyNone">使用する言語を指定します。autoだと自動判定、jaだと日本語になります。  </td></tr>
+<td class="markdownTableBodyNone">言語   </td><td class="markdownTableBodyNone">使用する言語を指定します。autoだと自動判定、jaだと日本語になります。    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">モード </td><td class="markdownTableBodyNone">実行するモードを指定します。transcribeは文字起こし、translateは翻訳、liveはリアルタイム文字起こしになります。  </td></tr>
+<td class="markdownTableBodyNone">モード   </td><td class="markdownTableBodyNone">実行するモードを指定します。transcribeは文字起こし、translateは翻訳、liveはリアルタイム文字起こしになります。    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">VAD </td><td class="markdownTableBodyNone">VADを使用するかどうかを指定します。  </td></tr>
+<td class="markdownTableBodyNone">VAD   </td><td class="markdownTableBodyNone">VADを使用するかどうかを指定します。    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">オプション </td><td class="markdownTableBodyNone">オプションを指定します。silent_thresholdでは無音検知を有効にします。promptではコンテキストを与えます。constraint_charでは数値のみを認識します。constraint_wordでは指定した単語のみを認識します。  </td></tr>
+<td class="markdownTableBodyNone">オプション   </td><td class="markdownTableBodyNone">オプションを指定します。silent_thresholdでは無音検知を有効にします。promptではコンテキストを与えます。constraint_charでは数値のみを認識します。constraint_wordでは指定した単語のみを認識します。    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">実行環境 </td><td class="markdownTableBodyNone">実行環境を指定します。autoではcpuかblasを自動選択します。gpuを指定すると、GPUを使用した推論を行います。  </td></tr>
+<td class="markdownTableBodyNone">実行環境   </td><td class="markdownTableBodyNone">実行環境を指定します。autoではcpuかblasを自動選択します。gpuを指定すると、GPUを使用した推論を行います。   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md34"></a>
+<h1><a class="anchor" id="autotoc_md36"></a>
 高精度モデルのダウンロード</h1>
 <p>SDKにはSmallモデルが付属しています。Smallモデルよりも高精度なMediumモデルとLargeモデルは下記のURLからダウンロード可能です。</p>
 <p>Medium</p><ul>
@@ -168,7 +168,7 @@ Linux</h2>
 <li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_turbo_weights.opt.pb">https://storage.googleapis.com/ailia-models/whisper/encoder_turbo_weights.opt.pb</a></li>
 <li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_turbo_fix_kv_cache.opt.onnx">https://storage.googleapis.com/ailia-models/whisper/decoder_turbo_fix_kv_cache.opt.onnx</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md35"></a>
+<h1><a class="anchor" id="autotoc_md37"></a>
 ポストプロセスモデル</h1>
 <p>SDKにはポストプロセスモデルは付属していません。ポストプロセスを使用する場合、下記のURLからダウンロード可能です。</p>
 <p>T5</p><ul>
@@ -187,9 +187,9 @@ Linux</h2>
 <li><a href="https://storage.googleapis.com/ailia-models/fugumt-ja-en/source.spm">https://storage.googleapis.com/ailia-models/fugumt-ja-en/source.spm</a></li>
 <li><a href="https://storage.googleapis.com/ailia-models/fugumt-ja-en/target.spm">https://storage.googleapis.com/ailia-models/fugumt-ja-en/target.spm</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md36"></a>
+<h1><a class="anchor" id="autotoc_md38"></a>
 プラットフォーム別の注意点</h1>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 macOSにおけるダウンロード属性の解除</h2>
 <p>macOSにおいてブラウザからダウンロードしたバイナリには、ダウンロード属性が付与され、実行できない場合があります。 その場合、dylibを右クリックから実行して開くことで、ダウンロード属性を解除することが可能です。 また、コマンドラインから下記のコマンドを実行することでも、ダウンロード属性を解除することが可能です。</p>
 <div class="fragment"><div class="line">xattr -d com.apple.quarantine libailia_speech.dylib</div>
@@ -197,9 +197,7 @@ macOSにおけるダウンロード属性の解除</h2>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
