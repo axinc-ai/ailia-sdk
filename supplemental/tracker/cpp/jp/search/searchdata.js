@@ -1,13 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "_acfhipswxyãæ",
+  0: "_acfhipswxyセ機",
   1: "_",
   2: "afis",
   3: "a",
   4: "chipwxy",
   5: "a",
   6: "a",
-  7: "afsãæ"
+  7: "afsセ機"
 };
 
 var indexSectionNames =
