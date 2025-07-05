@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['getblobdata',['GetBlobData',['../classAiliaModel.html#a17b9ccc01b4fcc1e51182764467d46e7',1,'AiliaModel']]],
-  ['getblobshape',['GetBlobShape',['../classAiliaModel.html#a8a39cca2a3dbe85cf25d29e2f6207625',1,'AiliaModel.GetBlobShape(string layer_name)'],['../classAiliaModel.html#a0853c5882b06cbf76a9b78dd23550ce4',1,'AiliaModel.GetBlobShape(int idx)']]],
-  ['getenvironment',['GetEnvironment',['../classAiliaModel.html#a4887ae48bd7e69a9dde2a5af62ff1e67',1,'AiliaModel']]],
-  ['getenvironmentcount',['GetEnvironmentCount',['../classAiliaModel.html#acbff3496cddc748bfe1801016845d75f',1,'AiliaModel']]],
-  ['geterrordetail',['GetErrorDetail',['../classAiliaModel.html#a15d7c81aa1d64675c6f7ef8e9903ea7d',1,'AiliaModel']]],
-  ['getinputbloblist',['GetInputBlobList',['../classAiliaModel.html#a22e89111c7f8ed5856aaa4d74cde059e',1,'AiliaModel']]],
-  ['getinputshape',['GetInputShape',['../classAiliaModel.html#a522bdb07b9ca768f7daf7b6194fa20c7',1,'AiliaModel']]],
-  ['getinputshapend',['GetInputShapeND',['../classAiliaModel.html#a46c21c06610ae81f0eb35590c03e3d2e',1,'AiliaModel']]],
-  ['getoutputbloblist',['GetOutputBlobList',['../classAiliaModel.html#a78036a3dc0f2f889362551b6b0bc1869',1,'AiliaModel']]],
-  ['getoutputshape',['GetOutputShape',['../classAiliaModel.html#a613de484ee19e332b11fa1584252232d',1,'AiliaModel']]],
-  ['getoutputshapend',['GetOutputShapeND',['../classAiliaModel.html#a9762712d84b16a15f8cdf5a0aea1359a',1,'AiliaModel']]],
-  ['getselectedenvironment',['GetSelectedEnvironment',['../classAiliaModel.html#af07285e4e7cbe5d19eff9e072c9dd835',1,'AiliaModel']]],
-  ['getstatusstring',['GetStatusString',['../classAiliaModel.html#a780422bbc8b8910b9c399990faf4ebb4',1,'AiliaModel']]],
-  ['getsummary',['GetSummary',['../classAiliaModel.html#a53902c1097a57ff3ba5f1726033085d5',1,'AiliaModel']]]
+  ['getblobdata_524',['GetBlobData',['../classailia_1_1AiliaModel.html#a9b8404872a4d85c8e073e64db6afbf2f',1,'ailia.AiliaModel.GetBlobData(float[] output_data, int idx)'],['../classailia_1_1AiliaModel.html#a484adca62958e651a044583496ce3703',1,'ailia.AiliaModel.GetBlobData(float[] output_data, uint idx)']]],
+  ['getblobshape_525',['GetBlobShape',['../classailia_1_1AiliaModel.html#ad30c34642b06253c7d5072b447e1b5e6',1,'ailia.AiliaModel.GetBlobShape(string layer_name)'],['../classailia_1_1AiliaModel.html#ad4aeb7287b8647b71de9e551ee36d485',1,'ailia.AiliaModel.GetBlobShape(uint idx)'],['../classailia_1_1AiliaModel.html#a63ef1abad06689a477557a66f0e2b92e',1,'ailia.AiliaModel.GetBlobShape(int idx)']]],
+  ['getenvironment_526',['GetEnvironment',['../classailia_1_1AiliaModel.html#a3717c0109bca44bff9027df74745b315',1,'ailia::AiliaModel']]],
+  ['getenvironmentcount_527',['GetEnvironmentCount',['../classailia_1_1AiliaModel.html#a7f23d1d4c3c64d9bc970676bd50bf8eb',1,'ailia::AiliaModel']]],
+  ['geterrordetail_528',['GetErrorDetail',['../classailia_1_1AiliaModel.html#aec929d50044ae7c3d7881fddffaa2e15',1,'ailia::AiliaModel']]],
+  ['getinputbloblist_529',['GetInputBlobList',['../classailia_1_1AiliaModel.html#acacb01c83f6f4d0b8f69d64eecf70095',1,'ailia::AiliaModel']]],
+  ['getinputshape_530',['GetInputShape',['../classailia_1_1AiliaModel.html#a3dbcac0d62324a2bc59704697556659d',1,'ailia::AiliaModel']]],
+  ['getinputshapend_531',['GetInputShapeND',['../classailia_1_1AiliaModel.html#aa0f108cfb6dc3a7d98a4a1edcdb40717',1,'ailia::AiliaModel']]],
+  ['getoutputbloblist_532',['GetOutputBlobList',['../classailia_1_1AiliaModel.html#a97b396561f943927f444a372c647de55',1,'ailia::AiliaModel']]],
+  ['getoutputshape_533',['GetOutputShape',['../classailia_1_1AiliaModel.html#a976541f08077a8b8ca7becb468e64fbd',1,'ailia::AiliaModel']]],
+  ['getoutputshapend_534',['GetOutputShapeND',['../classailia_1_1AiliaModel.html#a1850430af9870a0c43fb00a08713c4ef',1,'ailia::AiliaModel']]],
+  ['getselectedenvironment_535',['GetSelectedEnvironment',['../classailia_1_1AiliaModel.html#af6d5abe0b15c766f7fb92b558c21802c',1,'ailia::AiliaModel']]],
+  ['getstatusstring_536',['GetStatusString',['../classailia_1_1AiliaModel.html#aaf806db29d4bdfd0d8a4f7e3c5c7a822',1,'ailia::AiliaModel']]],
+  ['getsummary_537',['GetSummary',['../classailia_1_1AiliaModel.html#a70cbd792cc314f497206173fe4c09e06',1,'ailia::AiliaModel']]]
 ];

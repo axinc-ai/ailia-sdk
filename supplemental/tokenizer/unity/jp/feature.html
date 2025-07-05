@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_tokenizer: 機能</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_tokenizer
+   &#160;<span id="projectnumber">1.5.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">機能 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md25"></a>
+ailia Tokenizerの機能</h1>
+<p>本ページでは、CとC#で共通に使用できる機能を解説します。</p>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Tokenizerの互換性</h2>
+<p>ailiaTokenizerEncodeは、transformersの下記の呼び出しと一致します。SpecialTokenはテキストとして符号化されます。パディングやトランケートは行われません。</p>
+<div class="fragment"><div class="line">input_ids = tokenizer(sents, split_special_tokens=True)</div>
+</div><!-- fragment --><p>ailiaTokenizerEncodeWithSpecialTokensは、transformersの下記の呼び出しと一致します。SpecialTokenはSpecialTokenとして符号化されます。パディングやトランケートは行われません。</p>
+<div class="fragment"><div class="line">input_ids = tokenizer(sents)</div>
+</div><!-- fragment --><p>ailiaTokenizerDecodeは、transformersの下記の呼び出しと一致します。SpecialTokenは出力されません。</p>
+<div class="fragment"><div class="line">tokenizer.decode(input_ids, skip_special_tokens=True)</div>
+</div><!-- fragment --><p>ailiaTokenizerDecodeWithSpecialTokensは、transformersの下記の呼び出しと一致します。SpecialTokenが出力されます。</p>
+<div class="fragment"><div class="line">tokenizer.decode(input_ids)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
+Tokenizerの種類</h2>
+<h3><a class="anchor" id="autotoc_md28"></a>
+AILIA_TOKENIZER_TYPE_WHISPER</h3>
+<p>Pythonの下記の処理に対応します。SOTとEOTが付与されます。</p>
+<div class="fragment"><div class="line">from transformers import WhisperTokenizer</div>
+<div class="line">tokenizer = WhisperTokenizer.from_pretrained(&quot;openai/whisper-base&quot;, predict_timestamps=True)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><p>OpenAIの下記の実装と一致させたい場合、先頭のSOTと末尾のEOTを削除してください。</p>
+<div class="fragment"><div class="line">from tokenizer import get_tokenizer</div>
+<div class="line">is_multilingual = True</div>
+<div class="line">tokenizer = get_tokenizer(is_multilingual)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md29"></a>
+AILIA_TOKENIZER_TYPE_CLIP</h3>
+<p>Pythonの下記の処理に対応します。SOTとEOTが付与されます。パディングは行われませんので、必要に応じて、77シンボルまで末尾に0埋めを行ってください。</p>
+<div class="fragment"><div class="line">from transformers import CLIPTokenizer</div>
+<div class="line">tokenizer = CLIPTokenizer.from_pretrained(&quot;openai/clip-vit-large-patch14&quot;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><div class="fragment"><div class="line">from simple_tokenizer import SimpleTokenizer as _Tokenizer</div>
+<div class="line">_tokenizer = _Tokenizer()</div>
+<div class="line">sot_token = _tokenizer.encoder[&quot;&lt;|startoftext|&gt;&quot;]</div>
+<div class="line">eot_token = _tokenizer.encoder[&quot;&lt;|endoftext|&gt;&quot;]</div>
+<div class="line">all_tokens = [[sot_token] + _tokenizer.encode(text) + [eot_token] for text in texts]</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md30"></a>
+AILIA_TOKENIZER_TYPE_XLM_ROBERTA</h3>
+<p>Pythonの下記の処理に対応します。別途、ailiaTokenizerOpenModelFileにsentencepiece.bpe.modelを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import XLMRobertaTokenizer</div>
+<div class="line">tokenizer = XLMRobertaTokenizer.from_pretrained(&#39;sentence-transformers/paraphrase-multilingual-mpnet-base-v2&#39;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md31"></a>
+AILIA_TOKENIZER_TYPE_MARIAN</h3>
+<p>Pythonの下記の処理に対応します。別途、ailiaTokenizerOpenModelFileにsource.spmを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import MarianTokenizer</div>
+<div class="line">tokenizer = MarianTokenizer.from_pretrained(&quot;staka/fugumt-en-ja&quot;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md32"></a>
+AILIA_TOKENIZER_TYPE_BERT_JAPANESE_WORDPIECE</h3>
+<p>Pythonの下記の処理に対応します。UKFC変換はailia Tokenizerで行われます。別途、ipadicとtokenizer_wordpiece/vocab.txtを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import BertJapaneseTokenizer</div>
+<div class="line">tokenizer = BertJapaneseTokenizer.from_pretrained(&#39;cl-tohoku/bert-base-japanese-whole-word-masking&#39;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><p>convert_tokens_to_idsと一致させたい場合は、先頭と終端の[CLS]と[SEP]のシンボルを削除する必要があります。</p>
+<div class="fragment"><div class="line">tokenized_text = tokenizer.tokenize(text)</div>
+<div class="line">indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md33"></a>
+AILIA_TOKENIZER_TYPE_BERT_JAPANESE_CHARACTER</h3>
+<p>Pythonの下記の処理に対応します。UKFC変換はailia Tokenizerで行われます。別途、ailiaTokenizerOpenDictionaryFileにipadic、ailiaTokenizerOpenVocabFileにtokenizer_character/vocab.txtを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import BertJapaneseTokenizer</div>
+<div class="line">tokenizer = BertJapaneseTokenizer.from_pretrained(&#39;cl-tohoku/bert-base-japanese-char-whole-word-maskin&#39;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><p>convert_tokens_to_idsと一致させたい場合は、先頭と終端の[CLS]と[SEP]のシンボルを削除する必要があります。</p>
+<div class="fragment"><div class="line">tokenized_text = tokenizer.tokenize(text)</div>
+<div class="line">indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md34"></a>
+AILIA_TOKENIZER_TYPE_T5</h3>
+<p>Pythonの下記の処理に対応します。add_special_tokens=Trueと同様に末尾にEOSシンボルを挿入します。japanese_clipなど、add_special_tokens=Falseと同様の動作にする場合は、出力の末尾のEOSシンボルを削除してください。別途、ailiaTokenizerOpenModelFileにspiece.modelを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import T5Tokenizer</div>
+<div class="line">tokenizer = T5Tokenizer.from_pretrained(&#39;sonoisa/t5-base-japanese-title-generation&#39;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md35"></a>
+AILIA_TOKENIZER_TYPE_ROBERTA</h3>
+<p>Pythonの下記の処理に対応します。末尾にEOSシンボルを挿入します。別途、ailiaTokenizerOpenVocabFileにvocab.jsonを、ailiaTokenizerOpenMergeFileにmerges.txtを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import RobertaTokenizer</div>
+<div class="line">tokenize = RobertaTokenizer.from_pretrained(&#39;roberta-base&#39;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md36"></a>
+AILIA_TOKENIZER_TYPE_BERT</h3>
+<p>Pythonの下記の処理に対応します。別途、vocab.txtとtokenizer_config.jsonを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import BertTokenizer</div>
+<div class="line">tokenizer = BertTokenizer.from_pretrained(&#39;google-bert/bert-base-uncased&#39;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><div class="fragment"><div class="line">from transformers import BertTokenizer</div>
+<div class="line">tokenizer = BertTokenizer.from_pretrained(&#39;google-bert/bert-base-cased&#39;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><p>convert_tokens_to_idsと一致させたい場合は、先頭と終端の[CLS]と[SEP]のシンボルを削除する必要があります。</p>
+<div class="fragment"><div class="line">tokenized_text = tokenizer.tokenize(text)</div>
+<div class="line">indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md37"></a>
+AILIA_TOKENIZER_TYPE_GPT2</h3>
+<p>Pythonの下記の処理に対応します。別途、vocab.jsonとmerges.txtを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import GPT2Tokenizer</div>
+<div class="line">tokenizer = GPT2Tokenizer.from_pretrained(&quot;gpt2&quot;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md38"></a>
+AILIA_TOKENIZER_TYPE_LLAMA</h3>
+<p>Pythonの下記の処理に対応します。別途、ailiaTokenizerOpenModelFileにtokenizer.modelを与える必要があります。</p>
+<div class="fragment"><div class="line">from transformers import LlamaTokenizer</div>
+<div class="line">tokenizer = LlamaTokenizer.from_pretrained(&quot;liuhaotian/llava-v1.5-7b&quot;)</div>
+<div class="line">inputs = tokenizer(sents)</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

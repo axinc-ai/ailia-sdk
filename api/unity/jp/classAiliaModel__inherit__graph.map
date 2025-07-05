@@ -1,6 +1,0 @@
-<map id="AiliaModel" name="AiliaModel">
-<area shape="rect" id="node3" href="$classAiliaClassifierModel.html" title="AiliaClassifierModel" alt="" coords="314,5,465,32"/>
-<area shape="rect" id="node4" href="$classAiliaDetectorModel.html" title="AiliaDetectorModel" alt="" coords="316,56,463,83"/>
-<area shape="rect" id="node5" href="$classAiliaFeatureExtractorModel.html" title="AiliaFeatureExtractorModel" alt="" coords="291,107,488,133"/>
-<area shape="rect" id="node6" href="$classAiliaPoseEstimatorModel.html" title="AiliaPoseEstimatorModel" alt="" coords="297,157,481,184"/>
-</map>

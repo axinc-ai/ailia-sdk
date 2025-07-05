@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['open_34',['Open',['../classAiliaTokenizerModel.html#a00f680c09de179cd0ee4242f3efe4005',1,'AiliaTokenizerModel']]]
+  ['how_20to_20import_20the_20unity_20package_20and_20run_20the_20sample_20program_62',['How to import the Unity package and run the sample program',['../setup.html',1,'']]]
 ];

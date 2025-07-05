@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ailia &mdash; ailia Python API 1.2.9 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+        <script src="_static/documentation_options.js?v=e917149c"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -25,11 +26,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> ailia Python API
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ailia Python API
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -53,8 +58,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>ailia</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ailia</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -64,14 +69,163 @@
            <div itemprop="articleBody">
              
   <section id="ailia">
-<h1>ailia<a class="headerlink" href="#ailia" title="Permalink to this headline">¶</a></h1>
+<h1>ailia<a class="headerlink" href="#ailia" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ailia.html">ailia package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ailia.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ailia.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ailia.html#objects">Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ailia.html#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ailia.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.Net"><code class="docutils literal notranslate"><span class="pre">Net</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.Blob"><code class="docutils literal notranslate"><span class="pre">Net.Blob</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.__init__"><code class="docutils literal notranslate"><span class="pre">Net.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.copy_blob_data"><code class="docutils literal notranslate"><span class="pre">Net.copy_blob_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.find_blob_index_by_name"><code class="docutils literal notranslate"><span class="pre">Net.find_blob_index_by_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_blob_count"><code class="docutils literal notranslate"><span class="pre">Net.get_blob_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_blob_data"><code class="docutils literal notranslate"><span class="pre">Net.get_blob_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_blob_name"><code class="docutils literal notranslate"><span class="pre">Net.get_blob_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_blob_shape"><code class="docutils literal notranslate"><span class="pre">Net.get_blob_shape()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_error_detail"><code class="docutils literal notranslate"><span class="pre">Net.get_error_detail()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_input_blob_list"><code class="docutils literal notranslate"><span class="pre">Net.get_input_blob_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_input_shape"><code class="docutils literal notranslate"><span class="pre">Net.get_input_shape()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_output_blob_list"><code class="docutils literal notranslate"><span class="pre">Net.get_output_blob_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_output_shape"><code class="docutils literal notranslate"><span class="pre">Net.get_output_shape()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_raw_pointer"><code class="docutils literal notranslate"><span class="pre">Net.get_raw_pointer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_results"><code class="docutils literal notranslate"><span class="pre">Net.get_results()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_selected_environment"><code class="docutils literal notranslate"><span class="pre">Net.get_selected_environment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.get_summary"><code class="docutils literal notranslate"><span class="pre">Net.get_summary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.predict"><code class="docutils literal notranslate"><span class="pre">Net.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.run"><code class="docutils literal notranslate"><span class="pre">Net.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.set_input_blob_data"><code class="docutils literal notranslate"><span class="pre">Net.set_input_blob_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.set_input_blob_shape"><code class="docutils literal notranslate"><span class="pre">Net.set_input_blob_shape()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.set_input_shape"><code class="docutils literal notranslate"><span class="pre">Net.set_input_shape()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.set_profile_mode"><code class="docutils literal notranslate"><span class="pre">Net.set_profile_mode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Net.update"><code class="docutils literal notranslate"><span class="pre">Net.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.Detector"><code class="docutils literal notranslate"><span class="pre">Detector</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Detector.__init__"><code class="docutils literal notranslate"><span class="pre">Detector.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Detector.compute"><code class="docutils literal notranslate"><span class="pre">Detector.compute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Detector.get_object"><code class="docutils literal notranslate"><span class="pre">Detector.get_object()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Detector.get_object_count"><code class="docutils literal notranslate"><span class="pre">Detector.get_object_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Detector.run"><code class="docutils literal notranslate"><span class="pre">Detector.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Detector.set_anchors"><code class="docutils literal notranslate"><span class="pre">Detector.set_anchors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Detector.set_input_shape"><code class="docutils literal notranslate"><span class="pre">Detector.set_input_shape()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.Classifier"><code class="docutils literal notranslate"><span class="pre">Classifier</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Classifier.__init__"><code class="docutils literal notranslate"><span class="pre">Classifier.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Classifier.compute"><code class="docutils literal notranslate"><span class="pre">Classifier.compute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Classifier.get_class"><code class="docutils literal notranslate"><span class="pre">Classifier.get_class()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Classifier.get_class_count"><code class="docutils literal notranslate"><span class="pre">Classifier.get_class_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Classifier.run"><code class="docutils literal notranslate"><span class="pre">Classifier.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.PoseEstimator"><code class="docutils literal notranslate"><span class="pre">PoseEstimator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.__init__"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.compute"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.compute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.get_object_count"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.get_object_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.get_object_hand"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.get_object_hand()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.get_object_pose"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.get_object_pose()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.get_object_up_pose"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.get_object_up_pose()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.run"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimator.set_threshold"><code class="docutils literal notranslate"><span class="pre">PoseEstimator.set_threshold()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ailia.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.set_temporary_cache_path"><code class="docutils literal notranslate"><span class="pre">set_temporary_cache_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.get_environment_count"><code class="docutils literal notranslate"><span class="pre">get_environment_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.get_environment"><code class="docutils literal notranslate"><span class="pre">get_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.get_environment_list"><code class="docutils literal notranslate"><span class="pre">get_environment_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.get_version"><code class="docutils literal notranslate"><span class="pre">get_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.get_gpu_environment_id"><code class="docutils literal notranslate"><span class="pre">get_gpu_environment_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.get_memory_mode"><code class="docutils literal notranslate"><span class="pre">get_memory_mode()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ailia.html#objects">Objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.ClassifierClass"><code class="docutils literal notranslate"><span class="pre">ClassifierClass</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.ClassifierClass.category"><code class="docutils literal notranslate"><span class="pre">ClassifierClass.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.ClassifierClass.prob"><code class="docutils literal notranslate"><span class="pre">ClassifierClass.prob</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.DetectorObject"><code class="docutils literal notranslate"><span class="pre">DetectorObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.DetectorObject.category"><code class="docutils literal notranslate"><span class="pre">DetectorObject.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.DetectorObject.h"><code class="docutils literal notranslate"><span class="pre">DetectorObject.h</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.DetectorObject.prob"><code class="docutils literal notranslate"><span class="pre">DetectorObject.prob</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.DetectorObject.w"><code class="docutils literal notranslate"><span class="pre">DetectorObject.w</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.DetectorObject.x"><code class="docutils literal notranslate"><span class="pre">DetectorObject.x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.DetectorObject.y"><code class="docutils literal notranslate"><span class="pre">DetectorObject.y</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.Environment"><code class="docutils literal notranslate"><span class="pre">Environment</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Environment.backend"><code class="docutils literal notranslate"><span class="pre">Environment.backend</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Environment.id"><code class="docutils literal notranslate"><span class="pre">Environment.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Environment.name"><code class="docutils literal notranslate"><span class="pre">Environment.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Environment.props"><code class="docutils literal notranslate"><span class="pre">Environment.props</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.Environment.type"><code class="docutils literal notranslate"><span class="pre">Environment.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorKeypoint"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorKeypoint</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorKeypoint.interpolated"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorKeypoint.interpolated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorKeypoint.score"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorKeypoint.score</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorKeypoint.x"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorKeypoint.x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorKeypoint.y"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorKeypoint.y</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorKeypoint.z_local"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorKeypoint.z_local</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectHand"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectHand</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectHand.points"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectHand.points</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectHand.total_score"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectHand.total_score</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose.angle_x"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose.angle_x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose.angle_y"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose.angle_y</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose.angle_z"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose.angle_z</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose.id"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose.num_valid_points"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose.num_valid_points</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose.points"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose.points</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectPose.total_score"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectPose.total_score</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose.angle_x"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose.angle_x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose.angle_y"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose.angle_y</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose.angle_z"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose.angle_z</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose.id"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose.num_valid_points"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose.num_valid_points</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose.points"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose.points</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ailia.html#ailia.PoseEstimatorObjectUpPose.total_score"><code class="docutils literal notranslate"><span class="pre">PoseEstimatorObjectUpPose.total_score</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ailia.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaException"><code class="docutils literal notranslate"><span class="pre">AiliaException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaInvalidArgumentException"><code class="docutils literal notranslate"><span class="pre">AiliaInvalidArgumentException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaFileIoException"><code class="docutils literal notranslate"><span class="pre">AiliaFileIoException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaInvalidVersionException"><code class="docutils literal notranslate"><span class="pre">AiliaInvalidVersionException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaBrokenDataException"><code class="docutils literal notranslate"><span class="pre">AiliaBrokenDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaResourceInsufficientException"><code class="docutils literal notranslate"><span class="pre">AiliaResourceInsufficientException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaInvalidStateException"><code class="docutils literal notranslate"><span class="pre">AiliaInvalidStateException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaUnsupportNetException"><code class="docutils literal notranslate"><span class="pre">AiliaUnsupportNetException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaInvalidLayerException"><code class="docutils literal notranslate"><span class="pre">AiliaInvalidLayerException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaInvalidParamException"><code class="docutils literal notranslate"><span class="pre">AiliaInvalidParamException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaNotFoundException"><code class="docutils literal notranslate"><span class="pre">AiliaNotFoundException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaGpuUnsupportLayerException"><code class="docutils literal notranslate"><span class="pre">AiliaGpuUnsupportLayerException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaGpuErrorException"><code class="docutils literal notranslate"><span class="pre">AiliaGpuErrorException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaUnimplementedException"><code class="docutils literal notranslate"><span class="pre">AiliaUnimplementedException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaPermissionDeniedException"><code class="docutils literal notranslate"><span class="pre">AiliaPermissionDeniedException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaExpiredException"><code class="docutils literal notranslate"><span class="pre">AiliaExpiredException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaUnsettledShapeException"><code class="docutils literal notranslate"><span class="pre">AiliaUnsettledShapeException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaDataRemovedException"><code class="docutils literal notranslate"><span class="pre">AiliaDataRemovedException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaDataHiddenException"><code class="docutils literal notranslate"><span class="pre">AiliaDataHiddenException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaLicenseNotFoundException"><code class="docutils literal notranslate"><span class="pre">AiliaLicenseNotFoundException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaLicenseBrokenException"><code class="docutils literal notranslate"><span class="pre">AiliaLicenseBrokenException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaLicenseExpiredException"><code class="docutils literal notranslate"><span class="pre">AiliaLicenseExpiredException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ailia.html#ailia.core.AiliaShapeHasExDimException"><code class="docutils literal notranslate"><span class="pre">AiliaShapeHasExDimException</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

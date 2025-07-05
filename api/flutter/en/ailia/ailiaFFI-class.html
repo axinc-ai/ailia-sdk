@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaFFI class from the ailia library, for the Dart programming language.">
+  <title>ailiaFFI class - ailia library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">ailia</a></li>
+    <li><a href="../ailia/ailia-library.html">ailia.dart</a></li>
+    <li class="self-crumb">ailiaFFI class</li>
+  </ol>
+  <div class="self-name">ailiaFFI</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia&#47;ailia-library-sidebar.html"
+      data-below-sidebar="ailia&#47;ailiaFFI-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">ailiaFFI</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Written for the FFI article</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ailiaFFI" class="callable">
+          <span class="name"><a href="../ailia/ailiaFFI/ailiaFFI.html">ailiaFFI</a></span><span class="signature">(<span class="parameter" id="-param-dynamicLibrary"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/DynamicLibrary-class.html">DynamicLibrary</a></span> <span class="parameter-name">dynamicLibrary</span></span>)</span>
+        </dt>
+        <dd>
+          The symbols are looked up in <code>dynamicLibrary</code>.
+        </dd>
+        <dt id="ailiaFFI.fromLookup" class="callable">
+          <span class="name"><a href="../ailia/ailiaFFI/ailiaFFI.fromLookup.html">ailiaFFI.fromLookup</a></span><span class="signature">(<span class="parameter" id="fromLookup-param-lookup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">lookup</span>(<span class="parameter" id="param-symbolName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">symbolName</span></span>)</span>)</span>
+        </dt>
+        <dd>
+          The symbols are looked up with <code>lookup</code>.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="ailiaClassifierCompute" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaClassifierCompute.html">ailiaClassifierCompute</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaClassifierCompute-param-classifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAClassifier-class.html">AILIAClassifier</a></span>&gt;</span></span> <span class="parameter-name">classifier</span>, </span><span class="parameter" id="ailiaClassifierCompute-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="ailiaClassifierCompute-param-src_stride"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_stride</span>, </span><span class="parameter" id="ailiaClassifierCompute-param-src_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_width</span>, </span><span class="parameter" id="ailiaClassifierCompute-param-src_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_height</span>, </span><span class="parameter" id="ailiaClassifierCompute-param-src_format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_format</span>, </span><span class="parameter" id="ailiaClassifierCompute-param-max_class_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">max_class_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 物体識別を行います。
+@param classifier                  識別オブジェクトポインタ
+@param src                         画像データ(32bpp)
+@param src_stride                  1ラインのバイト数
+@param src_width                   画像幅
+@param src_height                  画像高さ
+@param src_format                  画像のフォーマット (AILIA_IMAGE_FORMAT_*)
+@param max_class_count             識別結果の数の最大
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaClassifierGetClass" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaClassifierGetClass.html">ailiaClassifierGetClass</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaClassifierGetClass-param-classifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAClassifier-class.html">AILIAClassifier</a></span>&gt;</span></span> <span class="parameter-name">classifier</span>, </span><span class="parameter" id="ailiaClassifierGetClass-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAClassifierClass.html">AILIAClassifierClass</a></span>&gt;</span></span> <span class="parameter-name">obj</span>, </span><span class="parameter" id="ailiaClassifierGetClass-param-cls_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">cls_idx</span>, </span><span class="parameter" id="ailiaClassifierGetClass-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 識別結果を取得します。
+@param classifier 識別オブジェクトポインタ
+@param cls        クラス情報
+@param cls_idx    クラスインデックス
+@param version    \ref AILIA_CLASSIFIER_CLASS_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ailiaClassifierCompute() を一度も実行していない場合は \ref AILIA_STATUS_INVALID_STATE が返ります。
+識別結果は推定確率順でソートされます。
+  
+
+</dd>
+
+        <dt id="ailiaClassifierGetClassCount" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaClassifierGetClassCount.html">ailiaClassifierGetClassCount</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaClassifierGetClassCount-param-classifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAClassifier-class.html">AILIAClassifier</a></span>&gt;</span></span> <span class="parameter-name">classifier</span>, </span><span class="parameter" id="ailiaClassifierGetClassCount-param-cls_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">cls_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 識別結果の数を取得します。
+@param classifier 識別オブジェクトポインタ
+@param cls_count  クラス数
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaCopyBlobData" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaCopyBlobData.html">ailiaCopyBlobData</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaCopyBlobData-param-dst_net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">dst_net</span>, </span><span class="parameter" id="ailiaCopyBlobData-param-dst_blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_blob_idx</span>, </span><span class="parameter" id="ailiaCopyBlobData-param-src_net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">src_net</span>, </span><span class="parameter" id="ailiaCopyBlobData-param-src_blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 指定したBlob間でデータをコピーします
+  
+
+</dd>
+
+        <dt id="ailiaCreate" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaCreate.html">ailiaCreate</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaCreate-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaCreate-param-env_id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">env_id</span>, </span><span class="parameter" id="ailiaCreate-param-num_thread"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">num_thread</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトを作成します。
+@param net ネットワークオブジェクトポインタへのポインタ
+@param env_id 計算に利用する推論実行環境のID( ailiaGetEnvironment() で取得)  \ref AILIA_ENVIRONMENT_ID_AUTO
+にした場合は自動で選択する
+@param num_thread スレッド数の上限(  \ref AILIA_MULTITHREAD_AUTO  にした場合は自動で設定)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ネットワークオブジェクトを作成します。
+推論実行環境を自動にした場合はCPUモードになり、BLASが利用できる場合はBLASを利用します。
+なお、BLASを利用する場合num_threadは無視される場合があります。
+  
+
+</dd>
+
+        <dt id="ailiaCreateClassifier" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaCreateClassifier.html">ailiaCreateClassifier</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaCreateClassifier-param-classifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAClassifier-class.html">AILIAClassifier</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">classifier</span>, </span><span class="parameter" id="ailiaCreateClassifier-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaCreateClassifier-param-format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">format</span>, </span><span class="parameter" id="ailiaCreateClassifier-param-channel"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">channel</span>, </span><span class="parameter" id="ailiaCreateClassifier-param-range"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">range</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 識別オブジェクトを作成します。
+@param classifier 識別オブジェクトポインタへのポインタ
+@param net        ネットワークオブジェクトポインタ
+@param format     ネットワークの画像フォーマット （AILIA_NETWORK_IMAGE_FORMAT_<em>）
+@param channel    ネットワークの画像チャンネル (AILIA_NETWORK_IMAGE_CHANNEL_</em>)
+@param range      ネットワークの画像レンジ （AILIA_NETWORK_IMAGE_RANGE_*）
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaCreateDetector" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaCreateDetector.html">ailiaCreateDetector</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaCreateDetector-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span><span class="parameter" id="ailiaCreateDetector-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaCreateDetector-param-format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">format</span>, </span><span class="parameter" id="ailiaCreateDetector-param-channel"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">channel</span>, </span><span class="parameter" id="ailiaCreateDetector-param-range"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">range</span>, </span><span class="parameter" id="ailiaCreateDetector-param-algorithm"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">algorithm</span>, </span><span class="parameter" id="ailiaCreateDetector-param-category_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">category_count</span>, </span><span class="parameter" id="ailiaCreateDetector-param-flags"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">flags</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出オブジェクトを作成します。
+@param detector       検出オブジェクトポインタ
+@param net            ネットワークオブジェクトポインタ
+@param format         ネットワークの画像フォーマット (AILIA_NETWORK_IMAGE_FORMAT_<em>)
+@param channel        ネットワークの画像チャンネル (AILIA_NETWORK_IMAGE_CHANNEL_</em>)
+@param range          ネットワークの画像レンジ (AILIA_NETWORK_IMAGE_RANGE_<em>)
+@param algorithm      検出アルゴリズム(AILIA_DETECTOR_ALGORITHM_</em>)
+@param category_count 検出カテゴリ数(VOCの場合は20、COCOの場合は80、などを指定)
+@param flags          追加オプションフラグ(AILIA_DETECTOR_FLAG_*)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaCreateFeatureExtractor" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaCreateFeatureExtractor.html">ailiaCreateFeatureExtractor</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaCreateFeatureExtractor-param-fextractor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAFeatureExtractor-class.html">AILIAFeatureExtractor</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">fextractor</span>, </span><span class="parameter" id="ailiaCreateFeatureExtractor-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaCreateFeatureExtractor-param-format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">format</span>, </span><span class="parameter" id="ailiaCreateFeatureExtractor-param-channel"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">channel</span>, </span><span class="parameter" id="ailiaCreateFeatureExtractor-param-range"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">range</span>, </span><span class="parameter" id="ailiaCreateFeatureExtractor-param-layer_name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span> <span class="parameter-name">layer_name</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 特徴抽出オブジェクトを作成します。
+@param fextractor 特徴抽出オブジェクトポインタ
+@param net        ネットワークオブジェクトポインタ
+@param format     ネットワークの画像フォーマット (AILIA_NETWORK_IMAGE_FORMAT_<em>)
+@param channel    ネットワークの画像チャンネル (AILIA_NETWORK_IMAGE_CHANNEL_</em>)
+@param range      ネットワークの画像レンジ (AILIA_NETWORK_IMAGE_RANGE_*)
+@param layer_name 特徴に対応したレイヤーの名称 (VGG16の場合はfc1, NULLで最終レイヤー)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaCreatePoseEstimator" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaCreatePoseEstimator.html">ailiaCreatePoseEstimator</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaCreatePoseEstimator-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaCreatePoseEstimator-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaCreatePoseEstimator-param-algorithm"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">algorithm</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出オブジェクトを作成します。
+@param pose_estimator 検出オブジェクトポインタ
+@param net            ネットワークオブジェクトポインタ
+@param algorithm      検出アルゴリズム (AILIA_POSE_ESTIMATOR_ALGORITHM_*)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+caffemodelとprototxtを読み込んだAILIANetworkから検出オブジェクトを作成します。
+  
+
+</dd>
+
+        <dt id="ailiaDestroy" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDestroy.html">ailiaDestroy</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDestroy-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトを破棄します。
+@param net ネットワークオブジェクトポインタ
+  
+
+</dd>
+
+        <dt id="ailiaDestroyClassifier" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDestroyClassifier.html">ailiaDestroyClassifier</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDestroyClassifier-param-classifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAClassifier-class.html">AILIAClassifier</a></span>&gt;</span></span> <span class="parameter-name">classifier</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 識別オブジェクトを破棄します。
+@param classifier 識別オブジェクトポインタ
+  
+
+</dd>
+
+        <dt id="ailiaDestroyDetector" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDestroyDetector.html">ailiaDestroyDetector</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDestroyDetector-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span> <span class="parameter-name">detector</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出オブジェクトを破棄します。
+@param detector 検出オブジェクトポインタ
+  
+
+</dd>
+
+        <dt id="ailiaDestroyFeatureExtractor" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDestroyFeatureExtractor.html">ailiaDestroyFeatureExtractor</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDestroyFeatureExtractor-param-fextractor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAFeatureExtractor-class.html">AILIAFeatureExtractor</a></span>&gt;</span></span> <span class="parameter-name">fextractor</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 特徴抽出オブジェクトを破棄します。
+@param fextractor 特徴抽出オブジェクトポインタ
+  
+
+</dd>
+
+        <dt id="ailiaDestroyPoseEstimator" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDestroyPoseEstimator.html">ailiaDestroyPoseEstimator</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDestroyPoseEstimator-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出オブジェクトを破棄します。
+@param pose_estimator 検出オブジェクトポインタ
+  
+
+</dd>
+
+        <dt id="ailiaDetectorCompute" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDetectorCompute.html">ailiaDetectorCompute</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDetectorCompute-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span><span class="parameter" id="ailiaDetectorCompute-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="ailiaDetectorCompute-param-src_stride"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_stride</span>, </span><span class="parameter" id="ailiaDetectorCompute-param-src_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_width</span>, </span><span class="parameter" id="ailiaDetectorCompute-param-src_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_height</span>, </span><span class="parameter" id="ailiaDetectorCompute-param-src_format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_format</span>, </span><span class="parameter" id="ailiaDetectorCompute-param-threshold"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">threshold</span>, </span><span class="parameter" id="ailiaDetectorCompute-param-iou"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">iou</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 物体検出を行います。
+@param detector                    検出オブジェクトポインタ
+@param src                         画像データ(32bpp)
+@param src_stride                  1ラインのバイト数
+@param src_width                   画像幅
+@param src_height                  画像高さ
+@param src_format                  画像フォーマット (AILIA_IMAGE_FORMAT_*)
+@param threshold                   検出しきい値(0.1f等)(小さいほど検出されやすくなり、検出数増加)
+@param iou                         重複除外しきい値(0.45f等)(小さいほど重複を許容せず検出数減少)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaDetectorGetObject" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDetectorGetObject.html">ailiaDetectorGetObject</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDetectorGetObject-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span><span class="parameter" id="ailiaDetectorGetObject-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetectorObject.html">AILIADetectorObject</a></span>&gt;</span></span> <span class="parameter-name">obj</span>, </span><span class="parameter" id="ailiaDetectorGetObject-param-obj_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">obj_idx</span>, </span><span class="parameter" id="ailiaDetectorGetObject-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出結果を取得します。
+@param detector   検出オブジェクトポインタ
+@param obj        オブジェクト情報
+@param obj_idx    オブジェクトインデックス
+@param version    AILIA_DETECTOR_OBJECT_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ailiaDetectorCompute() を一度も実行していない場合は \ref AILIA_STATUS_INVALID_STATE が返ります。
+検出結果は推定確率順でソートされます。
+  
+
+</dd>
+
+        <dt id="ailiaDetectorGetObjectCount" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDetectorGetObjectCount.html">ailiaDetectorGetObjectCount</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDetectorGetObjectCount-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span><span class="parameter" id="ailiaDetectorGetObjectCount-param-obj_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">obj_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出結果の数を取得します。
+@param detector   検出オブジェクトポインタ
+@param obj_count  オブジェクト数
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaDetectorSetAnchors" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDetectorSetAnchors.html">ailiaDetectorSetAnchors</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDetectorSetAnchors-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span><span class="parameter" id="ailiaDetectorSetAnchors-param-anchors"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Float-class.html">Float</a></span>&gt;</span></span> <span class="parameter-name">anchors</span>, </span><span class="parameter" id="ailiaDetectorSetAnchors-param-anchors_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">anchors_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief YoloV2などのためにアンカーズ (anchorsまたはbiases) の情報を設定します。
+@param detector       検出オブジェクトポインタ
+@param anchors        アンカーズの寸法 (検出ボックスの形状、高さと幅)
+@param anchors_count  アンカーズの数 (anchorsの配列サイズの半分)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+YoloV2などは学習時に決定された複数の検出ボックスを使用して物体検出を行います。このAPIで学習時に決定された検出ボックスの形状を設定することで、正しい推論を行います。
+anchorsには{x,y,x,y...}の形式で格納します。
+anchors_countが5の場合、anchorsは10次元の配列になります。
+  
+
+</dd>
+
+        <dt id="ailiaDetectorSetInputShape" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDetectorSetInputShape.html">ailiaDetectorSetInputShape</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDetectorSetInputShape-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span><span class="parameter" id="ailiaDetectorSetInputShape-param-input_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">input_width</span>, </span><span class="parameter" id="ailiaDetectorSetInputShape-param-input_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">input_height</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief YoloV3またはYoloXでのモデルへの入力画像サイズを指定します。
+@param detector       検出オブジェクトポインタ
+@param input_width    モデルの入力画像幅
+@param input_height   モデルの入力画像高さ
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+YoloV3では単一のモデルが任意の入力解像度に対応します。(32 の倍数制限あり)
+YoloXでは単一のモデルが任意の入力解像度に対応します。
+計算量の削減等でモデルへの入力画像サイズを指定する場合この API を実行してください。
+ailiaCreateDetector() () と  ailiaDetectorCompute() () の間に実行する必要があります。
+この API を実行しない場合、デフォルトの 416x416 を利用します。
+YOLOv3またはYOLOX 以外で実行した場合、 \ref AILIA_STATUS_INVALID_STATE  を返します。
+  
+
+</dd>
+
+        <dt id="ailiaDisableLayerFusion" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaDisableLayerFusion.html">ailiaDisableLayerFusion</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaDisableLayerFusion-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時のレイヤー統合を無効化します
+@param net ネットワークオブジェクトポインタ
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+レイヤー統合により取得できなくなるBlobを取得する必要がある場合などに用います。
+ailiaCreate() の直後に指定する必要があります。ailiaOpenを呼び出した後は変更することができません。
+なお、レイヤー統合を無効化すると推論速度が低下する場合があります。
+  
+
+</dd>
+
+        <dt id="ailiaFeatureExtractorCompute" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaFeatureExtractorCompute.html">ailiaFeatureExtractorCompute</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaFeatureExtractorCompute-param-fextractor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAFeatureExtractor-class.html">AILIAFeatureExtractor</a></span>&gt;</span></span> <span class="parameter-name">fextractor</span>, </span><span class="parameter" id="ailiaFeatureExtractorCompute-param-dst"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dst</span>, </span><span class="parameter" id="ailiaFeatureExtractorCompute-param-dst_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_size</span>, </span><span class="parameter" id="ailiaFeatureExtractorCompute-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="ailiaFeatureExtractorCompute-param-src_stride"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_stride</span>, </span><span class="parameter" id="ailiaFeatureExtractorCompute-param-src_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_width</span>, </span><span class="parameter" id="ailiaFeatureExtractorCompute-param-src_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_height</span>, </span><span class="parameter" id="ailiaFeatureExtractorCompute-param-src_format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_format</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 特徴の抽出を行います。
+@param fextractor                  特徴抽出オブジェクトポインタ
+@param dst                         特徴の格納先ポインタ(numeric型)
+@param dst_size                    dstのサイズ(byte)
+@param src                         画像データ(32bpp)
+@param src_stride                  1ラインのバイト数
+@param src_width                   画像幅
+@param src_height                  画像高さ
+@param src_format                  画像フォーマット (AILIA_IMAGE_FORMAT_*)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaFeatureExtractorMatch" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaFeatureExtractorMatch.html">ailiaFeatureExtractorMatch</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaFeatureExtractorMatch-param-fextractor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAFeatureExtractor-class.html">AILIAFeatureExtractor</a></span>&gt;</span></span> <span class="parameter-name">fextractor</span>, </span><span class="parameter" id="ailiaFeatureExtractorMatch-param-distance"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Float-class.html">Float</a></span>&gt;</span></span> <span class="parameter-name">distance</span>, </span><span class="parameter" id="ailiaFeatureExtractorMatch-param-distace_type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">distace_type</span>, </span><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature1"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">feature1</span>, </span><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature1_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">feature1_size</span>, </span><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature2"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">feature2</span>, </span><span class="parameter" id="ailiaFeatureExtractorMatch-param-feature2_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">feature2_size</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 特徴間の距離を計算します。
+@param fextractor                  特徴抽出オブジェクトポインタ
+@param distance                    特徴間距離
+@param distance_type               特徴間距離の種別
+@param feature1                    一方の特徴の格納先ポインタ(numeric型)
+@param feature1_size               dstのサイズ(byte)
+@param feature2                    他方の特徴の格納先ポインタ(numeric型)
+@param feature2_size               dstのサイズ(byte)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaFinalize" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaFinalize.html">ailiaFinalize</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ailiaがグローバルに確保したGPUリソース等を解放します
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返します。
+@details
+ailiaCreate() で作成したインスタンス全てを ailiaDestroy() で解放した状態で呼び出す必要があります。
+それ以外の状態で呼び出された場合 #ref AILIA_STATUS_INVALID_STATE を返します。
+Windows 環境の場合、DllMain 等からこの API を呼び出すとデッドロックする可能性があります。
+  
+
+</dd>
+
+        <dt id="ailiaFindBlobIndexByName" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaFindBlobIndexByName.html">ailiaFindBlobIndexByName</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaFindBlobIndexByName-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaFindBlobIndexByName-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">blob_idx</span>, </span><span class="parameter" id="ailiaFindBlobIndexByName-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)のインデックスを名前で探し取得します。
+@param net ネットワークオブジェクトポインタ
+@param blob_idx blobのインデックス (0～ ailiaGetBlobCount() -1)
+@param name 検索するBlob名
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが検索可能です。中間Blobを検索する場合ailiaOpneWeightXXXを呼び出す必要があります。
+  
+
+</dd>
+
+        <dt id="ailiaFindBlobNameByIndex" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaFindBlobNameByIndex.html">ailiaFindBlobNameByIndex</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaFindBlobNameByIndex-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaFindBlobNameByIndex-param-buffer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span> <span class="parameter-name">buffer</span>, </span><span class="parameter" id="ailiaFindBlobNameByIndex-param-buffer_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">buffer_size</span>, </span><span class="parameter" id="ailiaFindBlobNameByIndex-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)の名前をインデックスで探し取得します。
+@param net ネットワークオブジェクトポインタ
+@param buffer Blob名の出力先バッファ
+@param buffer_size バッファのサイズ(終端null文字分を含む)
+@param blob_idx 検索するblobのインデックス
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが検索可能です。中間Blobを検索する場合ailiaOpneWeightXXXを呼び出す必要があります。
+  
+
+</dd>
+
+        <dt id="ailiaFormatConvert" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaFormatConvert.html">ailiaFormatConvert</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaFormatConvert-param-dst"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dst</span>, </span><span class="parameter" id="ailiaFormatConvert-param-dst_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_width</span>, </span><span class="parameter" id="ailiaFormatConvert-param-dst_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_height</span>, </span><span class="parameter" id="ailiaFormatConvert-param-dst_format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_format</span>, </span><span class="parameter" id="ailiaFormatConvert-param-dst_channel"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_channel</span>, </span><span class="parameter" id="ailiaFormatConvert-param-dst_range"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_range</span>, </span><span class="parameter" id="ailiaFormatConvert-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="ailiaFormatConvert-param-src_stride"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_stride</span>, </span><span class="parameter" id="ailiaFormatConvert-param-src_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_width</span>, </span><span class="parameter" id="ailiaFormatConvert-param-src_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_height</span>, </span><span class="parameter" id="ailiaFormatConvert-param-src_format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_format</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 画像のフォーマットを変換します。
+@param dst                  変換後画像の格納先(numeric型、sizeof(float) * dst_width * dst_height *
+チャンネル数(解説参照)以上のサイズを確保すること)
+@param dst_width            変換後画像の横幅
+@param dst_height           変換後画像の高さ
+@param dst_format           変換後画像の形式 (AILIA_NETWORK_IMAGE_FORMAT_<em>)
+@param dst_channel          変換後画像のチャンネル順 (AILIA_NETWORK_IMAGE_CHANNEL_</em>)
+@param dst_range            変換後画像のレンジ (AILIA_NETWORK_IMAGE_RANGE_<em>)
+@param src                  変換元画像の格納先(32bpp)
+@param src_stride           変換元画像のラインバイト数
+@param src_width            変換元画像の横幅
+@param src_height           変換元画像の高さ
+@param src_format           変換元画像の形式 (AILIA_IMAGE_FORMAT_</em>)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+画像フォーマットを変更します。dst_formatが \ref AILIA_NETWORK_IMAGE_FORMAT_BGR
+もしくはAILIA_NETWORK_IMAGE_FORMAT_RGB の場合、チャンネル数は3,  \ref AILIA_NETWORK_IMAGE_FORMAT_GRAY
+の場合チャンネル数は1となります。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobCount" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobCount.html">ailiaGetBlobCount</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobCount-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobCount-param-blob_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">blob_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)の数を取得します。
+@param net ネットワークオブジェクトポインタ
+@param blob_count blobの数の格納先
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが列挙され、ailiaOpneWeightXXX呼び出し時に中間Blobの列挙が行われます。
+そのためailiaOpenStreamXXX呼び出し直後とailiaOpneWeightXXX呼び出し直後で返答する数が変わる場合があります。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobData" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobData.html">ailiaGetBlobData</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobData-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobData-param-dest"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dest</span>, </span><span class="parameter" id="ailiaGetBlobData-param-dest_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dest_size</span>, </span><span class="parameter" id="ailiaGetBlobData-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)を取得します。
+@param net ネットワークオブジェクトポインタ
+@param dest 推論結果の書き出し先バッファにX,Y,Z,Wの順でnumeric型で格納
+@param dest_size 推論結果の書き出し先バッファのbyte数
+@param blob_idx blobのインデックス (0～ ailiaGetBlobCount() -1)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ailiaPredict() または ailiaUpdate() を一度も実行していない場合は \ref AILIA_STATUS_INVALID_STATE が返ります。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobDataType" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobDataType.html">ailiaGetBlobDataType</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobDataType-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobDataType-param-type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int32-class.html">Int32</a></span>&gt;</span></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="ailiaGetBlobDataType-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)の型を取得します。
+@param net ネットワークオブジェクトポインタ
+@param type データ型の書き出し先バッファ。値は AILIA_DATATYPE_XXX で定義されています。
+@param blob_idx blobのインデックス (0～ ailiaGetBlobCount() -1)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobDim" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobDim.html">ailiaGetBlobDim</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobDim-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobDim-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">dim</span>, </span><span class="parameter" id="ailiaGetBlobDim-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)の次元を取得します。
+@param net ネットワークオブジェクトポインタ
+@param dim blobの次元の格納先
+@param blob_idx blobのインデックス (0～ ailiaGetBlobCount() -1)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、それ以外のエラーの場合はエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobIndexByInputIndex" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobIndexByInputIndex.html">ailiaGetBlobIndexByInputIndex</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobIndexByInputIndex-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobIndexByInputIndex-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">blob_idx</span>, </span><span class="parameter" id="ailiaGetBlobIndexByInputIndex-param-input_blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">input_blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 入力データ(Blob)のインデックスを取得します
+@param net ネットワークオブジェクトポインタ
+@param blob_idx blobのインデックス(0～ ailiaGetBlobCount() -1)
+@param input_blob_idx 入力blob内でのインデックス(0～ ailiaGetInputBlobCount() -1)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+なお、ailiaOpenStreamXXX呼び出し時に列挙されたinput_blob_idx及びblob_idxは保持されるためailiaOpneWeightXXX呼び出し後も同じ値が返ることが保証されます。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobIndexByOutputIndex" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobIndexByOutputIndex.html">ailiaGetBlobIndexByOutputIndex</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobIndexByOutputIndex-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobIndexByOutputIndex-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">blob_idx</span>, </span><span class="parameter" id="ailiaGetBlobIndexByOutputIndex-param-output_blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">output_blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 出力データ(Blob)のインデックスを取得します
+@param net ネットワークオブジェクトポインタ
+@param blob_idx blobのインデックス(0～ ailiaGetBlobCount() -1)
+@param output_blob_idx 出力blob内でのインデックス(0～ ailiaGetOutputBlobCount() -1)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobNameLengthByIndex" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobNameLengthByIndex.html">ailiaGetBlobNameLengthByIndex</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobNameLengthByIndex-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobNameLengthByIndex-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span>, </span><span class="parameter" id="ailiaGetBlobNameLengthByIndex-param-buffer_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">buffer_size</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 内部データ(Blob)の名前の出力に必要なバッファのサイズを取得します。
+@param net ネットワークオブジェクトポインタ
+@param blob_idx blobのインデックス (0～ ailiaGetBlobCount() -1)
+@param buffer_size Blob名の出力に必要なバッファのサイズ(終端null文字分を含む)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+なお、ailiaOpenStreamXXX呼び出し時は入出力Blobのみが検索可能です。中間Blobを検索する場合ailiaOpneWeightXXXを呼び出す必要があります。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobShape" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobShape.html">ailiaGetBlobShape</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobShape-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobShape-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAShape.html">AILIAShape</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaGetBlobShape-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span>, </span><span class="parameter" id="ailiaGetBlobShape-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)の形状を取得します。
+@param net ネットワークオブジェクトポインタ
+@param shape データの形状情報の格納先
+@param blob_idx blobのインデックス (0～ ailiaGetBlobCount() -1)
+@param version AILIA_SHAPE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、5次元以上の場合 \ref AILIA_STATUS_NDIMENSION_SHAPE 、
+それ以外のエラーの場合はエラーコードを返す。
+@details
+形状が5次元以上の場合は ailiaGetBlobDim() 、 ailiaGetBlobShapeND() を利用してください。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetBlobShapeND" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetBlobShapeND.html">ailiaGetBlobShapeND</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetBlobShapeND-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetBlobShapeND-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaGetBlobShapeND-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dim</span>, </span><span class="parameter" id="ailiaGetBlobShapeND-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の内部データ(Blob)の形状を取得します。
+@param net ネットワークオブジェクトポインタ
+@param shape blobの各次元の大きさの格納先配列(dim-1, dim-2, ... ,1, 0順で格納)
+@param dim shapeの次元
+@param blob_idx blobのインデックス (0～ ailiaGetBlobCount() -1)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、それ以外のエラーの場合はエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetEnvironment" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetEnvironment.html">ailiaGetEnvironment</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetEnvironment-param-env"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAEnvironment.html">AILIAEnvironment</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">env</span>, </span><span class="parameter" id="ailiaGetEnvironment-param-env_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">env_idx</span>, </span><span class="parameter" id="ailiaGetEnvironment-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 計算環境の一覧を取得します
+@param env 計算環境情報の格納先(AILIANetworkインスタンスを破棄するまで有効)
+@param env_idx 計算環境情報のインデックス(0～ ailiaGetEnvironmentCount() -1)
+@param version AILIA_ENVIRONMENT_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaGetEnvironmentCount" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetEnvironmentCount.html">ailiaGetEnvironmentCount</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetEnvironmentCount-param-env_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">env_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 利用可能な計算環境(CPU, GPU)の数を取得します
+@param env_count 計算環境情報の数の格納先
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaGetErrorDetail" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetErrorDetail.html">ailiaGetErrorDetail</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetErrorDetail-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief エラーの詳細を返します
+@param net   ネットワークオブジェクトポインタ
+@return
+エラー詳細
+@details
+返値は解放する必要はありません。
+文字列の有効期間は次にailiaのAPIを呼ぶまでです。
+モデルが暗号化されている場合は空文字を返します。
+  
+
+</dd>
+
+        <dt id="ailiaGetInputBlobCount" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetInputBlobCount.html">ailiaGetInputBlobCount</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetInputBlobCount-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetInputBlobCount-param-input_blob_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">input_blob_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 入力データ(Blob)の数を取得します。
+@param net ネットワークオブジェクトポインタ
+@param input_blob_count 入力blobの数の格納先
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+なお、入力Blobの列挙はailiaOpenStreamXXX呼び出し時に行われますが変更可能な重み(input付きinitialzier)の列挙はailiaOpneWeightXXX呼び出し時に行われます。
+そのためailiaOpenStreamXXX呼び出し直後とailiaOpneWeightXXX呼び出し直後で返答する数が変わる場合があります。
+  
+
+</dd>
+
+        <dt id="ailiaGetInputDim" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetInputDim.html">ailiaGetInputDim</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetInputDim-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetInputDim-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">dim</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の入力データの次元を取得します。
+@param net ネットワークオブジェクトポインタ
+@param dim 入力データの次元の格納先
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、それ以外のエラーの場合はエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetInputShape" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetInputShape.html">ailiaGetInputShape</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetInputShape-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetInputShape-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAShape.html">AILIAShape</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaGetInputShape-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の入力データの形状を取得します。
+@param net ネットワークオブジェクトポインタ
+@param shape 入力データの形状情報
+@param version AILIA_SHAPE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、5次元以上の場合 \ref AILIA_STATUS_NDIMENSION_SHAPE 、
+形状の一部が未確定の場合 \ref AILIA_STATUS_UNSETTLED_SHAPE 、それ以外のエラーの場合はエラーコードを返す。
+@details
+形状が5次元以上の場合は ailiaGetInputDim() 、 ailiaGetInputShapeND() を利用してください。
+形状の一部が未確定の場合、該当する次元の値は0となり、それ以外の次元の値は有効な値が格納されます。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetInputShapeND" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetInputShapeND.html">ailiaGetInputShapeND</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetInputShapeND-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetInputShapeND-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaGetInputShapeND-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dim</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の入力データの形状を取得します。
+@param net ネットワークオブジェクトポインタ
+@param shape 入力データの各次元の大きさの格納先配列(dim-1, dim-2, ... ,1, 0順で格納)
+@param dim shapeの次元
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、形状の一部が未確定の場合 \ref AILIA_STATUS_UNSETTLED_SHAPE 、
+それ以外のエラーの場合はエラーコードを返す。
+@details
+形状の一部が未確定の場合、該当する次元の値は0となり、それ以外の次元の値は有効な値が格納されます。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetOutputBlobCount" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetOutputBlobCount.html">ailiaGetOutputBlobCount</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetOutputBlobCount-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetOutputBlobCount-param-output_blob_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">output_blob_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 出力データ(Blob)の数を取得します。
+@param net ネットワークオブジェクトポインタ
+@param output_blob_count 出力blobの数の格納先
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenStreamXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetOutputDim" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetOutputDim.html">ailiaGetOutputDim</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetOutputDim-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetOutputDim-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">dim</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の出力データの次元を取得します。
+@param net ネットワークオブジェクトポインタ
+@param dim 出力データの次元の格納先
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、それ以外のエラーの場合はエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetOutputShape" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetOutputShape.html">ailiaGetOutputShape</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetOutputShape-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetOutputShape-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAShape.html">AILIAShape</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaGetOutputShape-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の出力データの形状を取得します。
+@param net ネットワークオブジェクトポインタ
+@param shape 出力データの形状情報
+@param version AILIA_SHAPE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、5次元以上の場合 \ref AILIA_STATUS_NDIMENSION_SHAPE 、
+それ以外のエラーの場合エラーコードを返す。
+形状が5次元以上の場合は ailiaGetOutputDim() 、 ailiaGetOutputShapeND() を利用してください。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetOutputShapeND" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetOutputShapeND.html">ailiaGetOutputShapeND</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetOutputShapeND-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetOutputShapeND-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaGetOutputShapeND-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dim</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の出力データの形状を取得します。
+@param net ネットワークオブジェクトポインタ
+@param shape 出力データの各次元の大きさの格納先配列(dim-1, dim-2, ... ,1, 0順で格納)
+@param dim shapeの次元
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、それ以外のエラーの場合はエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetSelectedEnvironment" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetSelectedEnvironment.html">ailiaGetSelectedEnvironment</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetSelectedEnvironment-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetSelectedEnvironment-param-env"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAEnvironment.html">AILIAEnvironment</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">env</span>, </span><span class="parameter" id="ailiaGetSelectedEnvironment-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 選択された計算環境を取得します
+@param net ネットワークオブジェクトポインタ
+@param env 計算環境情報の格納先(AILIANetworkインスタンスを破棄するまで有効)
+@param version AILIA_ENVIRONMENT_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaGetStatusString" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetStatusString.html">ailiaGetStatusString</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetStatusString-param-status_code"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">status_code</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ステータスコードに対応する文字列を返します。
+@param status_code   ステータスコード
+@return
+ステータスコードに対応する文字列。
+@details
+返値は解放する必要はありません。
+返された文字列は ailia のライブラリ(ailia.dll, libailia.so 等)をアンロードするまで有効です。
+AILIANetwork のインスタンスがある場合は ailiaGetErrorDetail() でエラーの詳細を取得できます。
+  
+
+</dd>
+
+        <dt id="ailiaGetSummaryLength" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetSummaryLength.html">ailiaGetSummaryLength</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaGetSummaryLength-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaGetSummaryLength-param-buffer_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">buffer_size</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークSummary用に必要なバッファのサイズを取得します。
+@param net ネットワークオブジェクトポインタ
+@param buffer_size バッファのサイズの格納先(終端null文字分を含む)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaGetVersion" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaGetVersion.html">ailiaGetVersion</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ライブラリバージョンを取得します
+@return
+バージョン番号
+@details
+返値は解放する必要はありません。
+  
+
+</dd>
+
+        <dt id="ailiaOpenStreamEx" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenStreamEx.html">ailiaOpenStreamEx</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenStreamEx-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenStreamEx-param-fopen_args"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">fopen_args</span>, </span><span class="parameter" id="ailiaOpenStreamEx-param-callback"><span class="type-annotation"><a href="../ailia/ailiaFileCallback.html">ailiaFileCallback</a></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="ailiaOpenStreamEx-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトを初期化します。(ユーザ定義ファイルアクセスコールバック)
+@param net ネットワークオブジェクトポインタ
+@param fopen_args  \ref AILIA_USER_API_FOPEN に通知される引数ポインタ
+@param callback ユーザ定義ファイルアクセスコールバック関数構造体
+@param version ファイルアクセスコールバック関数構造体のバージョン( \ref AILIA_FILE_CALLBACK_VERSION )
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ファイルから読み込み、ネットワークオブジェクトを初期化します。
+  
+
+</dd>
+
+        <dt id="ailiaOpenStreamFileA" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenStreamFileA.html">ailiaOpenStreamFileA</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenStreamFileA-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenStreamFileA-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span> <span class="parameter-name">path</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトを初期化します。(ファイルから読み込み)
+@param net ネットワークオブジェクトポインタ
+@param path prototxtファイルのパス名(MBSC or UTF16)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ファイルから読み込み、ネットワークオブジェクトを初期化します。
+  
+
+</dd>
+
+        <dt id="ailiaOpenStreamFileW" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenStreamFileW.html">ailiaOpenStreamFileW</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenStreamFileW-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenStreamFileW-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/wchar_t.html">wchar_t</a></span>&gt;</span></span> <span class="parameter-name">path</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ailiaOpenStreamMem" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenStreamMem.html">ailiaOpenStreamMem</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenStreamMem-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenStreamMem-param-buf"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">buf</span>, </span><span class="parameter" id="ailiaOpenStreamMem-param-buf_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">buf_size</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトを初期化します。(メモリから読み込み)
+@param net ネットワークオブジェクトポインタ
+@param buf prototxtファイルのデータへのポインタ
+@param buf_size prototxtファイルのデータサイズ
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+メモリから読み込み、ネットワークオブジェクトを初期化します。
+  
+
+</dd>
+
+        <dt id="ailiaOpenWeightEx" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenWeightEx.html">ailiaOpenWeightEx</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenWeightEx-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenWeightEx-param-fopen_args"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">fopen_args</span>, </span><span class="parameter" id="ailiaOpenWeightEx-param-callback"><span class="type-annotation"><a href="../ailia/ailiaFileCallback.html">ailiaFileCallback</a></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="ailiaOpenWeightEx-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトに重み係数を読み込みます。(ユーザ定義ファイルアクセスコールバック)
+@param net ネットワークオブジェクトポインタ
+@param fopen_args  \ref AILIA_USER_API_FOPEN に通知される引数ポインタ
+@param callback ユーザ定義ファイルアクセスコールバック関数構造体
+@param version ファイルアクセスコールバック関数構造体のバージョン( \ref AILIA_FILE_CALLBACK_VERSION )
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ファイルからネットワークオブジェクトに重み係数を読み込みます。
+  
+
+</dd>
+
+        <dt id="ailiaOpenWeightFileA" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenWeightFileA.html">ailiaOpenWeightFileA</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenWeightFileA-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenWeightFileA-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span> <span class="parameter-name">path</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトに重み係数を読み込みます。(ファイルから読み込み)
+@param net ネットワークオブジェクトポインタ
+@param path protobuf/onnxファイルのパス名(MBSC or UTF16)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ファイルからネットワークオブジェクトに重み係数を読み込みます。
+  
+
+</dd>
+
+        <dt id="ailiaOpenWeightFileW" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenWeightFileW.html">ailiaOpenWeightFileW</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenWeightFileW-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenWeightFileW-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/wchar_t.html">wchar_t</a></span>&gt;</span></span> <span class="parameter-name">path</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ailiaOpenWeightMem" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaOpenWeightMem.html">ailiaOpenWeightMem</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaOpenWeightMem-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaOpenWeightMem-param-buf"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">buf</span>, </span><span class="parameter" id="ailiaOpenWeightMem-param-buf_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">buf_size</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief ネットワークオブジェクトに重み係数を読み込みます。(メモリから読み込み)
+@param net ネットワークオブジェクトポインタ
+@param buf protobuf/onnxファイルのデータへのポインタ
+@param buf_size protobuf/onnxファイルのデータサイズ
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+メモリからネットワークオブジェクトに重み係数を読み込みます。
+  
+
+</dd>
+
+        <dt id="ailiaPoseEstimatorCompute" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPoseEstimatorCompute.html">ailiaPoseEstimatorCompute</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPoseEstimatorCompute-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaPoseEstimatorCompute-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="ailiaPoseEstimatorCompute-param-src_stride"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_stride</span>, </span><span class="parameter" id="ailiaPoseEstimatorCompute-param-src_width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_width</span>, </span><span class="parameter" id="ailiaPoseEstimatorCompute-param-src_height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_height</span>, </span><span class="parameter" id="ailiaPoseEstimatorCompute-param-src_format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_format</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 骨格検出・顔特徴点検出を行います。
+@param pose_estimator              検出オブジェクトポインタ
+@param src                         画像データ(32bpp)
+@param src_stride                  1ラインのバイト数
+@param src_width                   画像幅
+@param src_height                  画像高さ
+@param src_format                  画像形式 (AILIA_IMAGE_FORMAT_*)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaPoseEstimatorGetObjectCount" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPoseEstimatorGetObjectCount.html">ailiaPoseEstimatorGetObjectCount</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPoseEstimatorGetObjectCount-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectCount-param-obj_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">obj_count</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出結果の数を取得します。
+@param pose_estimator  検出オブジェクトポインタ
+@param obj_count       オブジェクト数  顔特徴点の場合は1または0となります。
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaPoseEstimatorGetObjectFace" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPoseEstimatorGetObjectFace.html">ailiaPoseEstimatorGetObjectFace</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPoseEstimatorGetObjectFace-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectFace-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimatorObjectFace.html">AILIAPoseEstimatorObjectFace</a></span>&gt;</span></span> <span class="parameter-name">obj</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectFace-param-obj_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">obj_idx</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectFace-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 顔特徴点検出結果を取得します。
+@param pose_estimator  検出オブジェクトポインタ
+@param obj             オブジェクト情報
+@param obj_idx         オブジェクトインデックス 必ず 0 を指定してください。
+@param version         AILIA_POSE_ESTIMATOR_OBJECT_FACE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaPoseEstimatorGetObjectHand" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPoseEstimatorGetObjectHand.html">ailiaPoseEstimatorGetObjectHand</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPoseEstimatorGetObjectHand-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectHand-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimatorObjectHand.html">AILIAPoseEstimatorObjectHand</a></span>&gt;</span></span> <span class="parameter-name">obj</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectHand-param-obj_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">obj_idx</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectHand-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief Hand 認識結果を取得します。
+@param pose_estimator  検出オブジェクトポインタ
+@param obj             オブジェクト情報
+@param obj_idx         オブジェクトインデックス 必ず 0 を指定してください。
+@param version         AILIA_POSE_ESTIMATOR_OBJECT_HAND_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaPoseEstimatorGetObjectPose" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPoseEstimatorGetObjectPose.html">ailiaPoseEstimatorGetObjectPose</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPoseEstimatorGetObjectPose-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectPose-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimatorObjectPose.html">AILIAPoseEstimatorObjectPose</a></span>&gt;</span></span> <span class="parameter-name">obj</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectPose-param-obj_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">obj_idx</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectPose-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 骨格検出結果を取得します。
+@param pose_estimator  検出オブジェクトポインタ
+@param obj             オブジェクト情報
+@param obj_idx         オブジェクトインデックス
+@param version         AILIA_POSE_ESTIMATOR_OBJECT_POSE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaPoseEstimatorGetObjectUpPose" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPoseEstimatorGetObjectUpPose.html">ailiaPoseEstimatorGetObjectUpPose</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPoseEstimatorGetObjectUpPose-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectUpPose-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimatorObjectUpPose.html">AILIAPoseEstimatorObjectUpPose</a></span>&gt;</span></span> <span class="parameter-name">obj</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectUpPose-param-obj_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">obj_idx</span>, </span><span class="parameter" id="ailiaPoseEstimatorGetObjectUpPose-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief UpPose 認識結果を取得します。
+@param pose_estimator  検出オブジェクトポインタ
+@param obj             オブジェクト情報
+@param obj_idx         オブジェクトインデックス
+@param version         AILIA_POSE_ESTIMATOR_OBJECT_POSE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaPoseEstimatorSetThreshold" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPoseEstimatorSetThreshold.html">ailiaPoseEstimatorSetThreshold</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPoseEstimatorSetThreshold-param-pose_estimator"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAPoseEstimator-class.html">AILIAPoseEstimator</a></span>&gt;</span></span> <span class="parameter-name">pose_estimator</span>, </span><span class="parameter" id="ailiaPoseEstimatorSetThreshold-param-threshold"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">threshold</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 検出閾値を設定します。
+@param pose_estimator              検出オブジェクトポインタ
+@param threshold                   検出閾値 0.0以上1.0以下の値で、値が小さいほど検出しやすくなります。
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+  
+
+</dd>
+
+        <dt id="ailiaPredict" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaPredict.html">ailiaPredict</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaPredict-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaPredict-param-dest"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">dest</span>, </span><span class="parameter" id="ailiaPredict-param-dest_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dest_size</span>, </span><span class="parameter" id="ailiaPredict-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="ailiaPredict-param-src_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_size</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論を行い推論結果を取得します。
+@param net ネットワークオブジェクトポインタ
+@param dest 推論結果の書き出し先バッファにX,Y,Z,Wの順でnumeric型で格納  サイズはネットファイルのoutputSizeとなる
+@param dest_size 推論結果の書き出し先バッファのbyte数
+@param src 推論データ X,Y,Z,Wの順でnumeric型で格納 サイズはネットファイルのinputSizeとなる
+@param src_size 推論データのbyte数
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaSetInputBlobData" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetInputBlobData.html">ailiaSetInputBlobData</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetInputBlobData-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSetInputBlobData-param-src"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Void-class.html">Void</a></span>&gt;</span></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="ailiaSetInputBlobData-param-src_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_size</span>, </span><span class="parameter" id="ailiaSetInputBlobData-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 指定したBlobに入力データを与えます。
+@param net ネットワークオブジェクトポインタ
+@param src 推論データ X,Y,Z,Wの順でnumeric型で格納
+@param src_size 推論データのbyte数
+@param blob_idx 入力するblobのインデックス
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+複数入力があるネットワークなどで入力を指定する場合に用います。
+blob_idxで入力レイヤーのblob以外のものを指定した場合、 \ref AILIA_STATUS_INVALID_ARGUMENT が返ります。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaSetInputBlobShape" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetInputBlobShape.html">ailiaSetInputBlobShape</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetInputBlobShape-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSetInputBlobShape-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAShape.html">AILIAShape</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaSetInputBlobShape-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span>, </span><span class="parameter" id="ailiaSetInputBlobShape-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 指定したBlobの形状を変更します。
+@param net ネットワークオブジェクトポインタ
+@param shape 入力データの形状情報
+@param blob_idx 変更するblobのインデックス
+@param version AILIA_SHAPE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+複数入力があるネットワークなどで入力形状を変更する場合に用います。
+blob_idxは入力レイヤーのblob以外のものを指定した場合 \ref AILIA_STATUS_INVALID_ARGUMENT が返ります。
+その他の注意点は ailiaSetInputShape() の解説を参照してください。
+入力形状のランクが5次元以上の場合は ailiaSetInputBlobShapeND() を利用してください。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaSetInputBlobShapeND" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetInputBlobShapeND.html">ailiaSetInputBlobShapeND</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetInputBlobShapeND-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSetInputBlobShapeND-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaSetInputBlobShapeND-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dim</span>, </span><span class="parameter" id="ailiaSetInputBlobShapeND-param-blob_idx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">blob_idx</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 指定したBlobの形状を変更します。
+@param net ネットワークオブジェクトポインタ
+@param shape 入力データの各次元の大きさの配列(dim-1, dim-2, ... ,1, 0)
+@param dim shapeの次元
+@param blob_idx 変更するblobのインデックス
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+複数入力があるネットワークなどで入力形状を変更する場合に用います。
+blob_idxは入力レイヤーのblob以外のものを指定した場合 \ref AILIA_STATUS_INVALID_ARGUMENT が返ります。
+その他の注意点は ailiaSetInputShapeND() の解説を参照してください。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaSetInputShape" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetInputShape.html">ailiaSetInputShape</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetInputShape-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSetInputShape-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIAShape.html">AILIAShape</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaSetInputShape-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">version</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の入力データの形状を変更します。
+@param net ネットワークオブジェクトポインタ
+@param shape 入力データの形状情報
+@param version AILIA_SHAPE_VERSION
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+prototxtで定義されている入力形状を変更します。
+prototxtに記述されているランクと同じにする必要があります。
+なお、重み係数の形状が入力形状に依存しているなどによりエラーが返る場合があります。
+prototxtで定義されているランクが4次元未満の場合は未使用の要素に1を設定する必要があります。
+prototxtで定義されているランクが5次元以上の場合は ailiaSetInputShapeND() を利用してください。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaSetInputShapeND" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetInputShapeND.html">ailiaSetInputShapeND</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetInputShapeND-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSetInputShapeND-param-shape"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Uint32-class.html">Uint32</a></span>&gt;</span></span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="ailiaSetInputShapeND-param-dim"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dim</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時の入力データの形状を変更します。
+@param net ネットワークオブジェクトポインタ
+@param shape 入力データの各次元の大きさの配列(dim-1, dim-2, ... ,1, 0)
+@param dim shapeの次元
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+prototxtで定義されている入力形状を変更します。
+prototxtに記述されているランクと同じにする必要があります。
+なお、重み係数の形状が入力形状に依存しているなどによりエラーが返る場合があります。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaSetMemoryMode" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetMemoryMode.html">ailiaSetMemoryMode</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetMemoryMode-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSetMemoryMode-param-mode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">mode</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 推論時のメモリの使用方針を設定します
+@param net ネットワークオブジェクトポインタ
+@param mode メモリモード(論理和で複数指定可) AILIA_MEMORY_XXX (デフォルト: \ref AILIA_MEMORY_REDUCE_CONSTANT )
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+メモリの使用方針を変更します。 \ref AILIA_MEMORY_NO_OPTIMIZATION 以外を指定した場合は、
+推論時に確保する中間バッファーを開放するため、推論時のメモリ使用量を削減することができます。
+ailiaCreate() の直後に指定する必要があります。ailiaOpenを呼び出した後は変更することができません。
+なお、中間バッファーを開放するように指定した場合、該当するBlobに対し、 ailiaGetBlobData() を呼び出すと
+\ref AILIA_STATUS_DATA_HIDDEN エラーが返ります。
+  
+
+</dd>
+
+        <dt id="ailiaSetProfileMode" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetProfileMode.html">ailiaSetProfileMode</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetProfileMode-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSetProfileMode-param-mode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">mode</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief プロファイルモードをセットします
+@param net          ネットワークオブジェクトポインタ
+@param mode         プロファイルモード
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+プロファイルモードを指定します。デフォルトは無効です。
+ailiaOpenStreamXXXを呼び出したあとに呼び出してください。
+プロファイルモードを有効にした場合、 ailiaSummary() の出力にプロファイル結果が追加されます。
+  
+
+</dd>
+
+        <dt id="ailiaSetTemporaryCachePathA" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetTemporaryCachePathA.html">ailiaSetTemporaryCachePathA</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetTemporaryCachePathA-param-cache_dir"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span> <span class="parameter-name">cache_dir</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 一時キャッシュディレクトリを指定します
+@param cache_dir 一時キャッシュディレクトリ
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+指定したキャッシュディレクトリは推論実行環境毎に最適化したマシンコードを生成して保存するためにシステムが利用します。
+ailia の実行開始時に一度だけ呼び出してください。二回目以降の呼び出しに対しては無視して成功を返します。
+複数スレッドから呼び出された場合も内部で排他制御しているので特に問題は発生しません。
+Vulkan のシェーダーキャッシュ機能など、この API を呼ぶまで利用できないものがあります。
+cache_dirにはContext.getCacheDir()で取得したファイルパスを指定してください。
+  
+
+</dd>
+
+        <dt id="ailiaSetTemporaryCachePathW" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSetTemporaryCachePathW.html">ailiaSetTemporaryCachePathW</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSetTemporaryCachePathW-param-cache_dir"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/wchar_t.html">wchar_t</a></span>&gt;</span></span> <span class="parameter-name">cache_dir</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ailiaSummary" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaSummary.html">ailiaSummary</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaSummary-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span><span class="parameter" id="ailiaSummary-param-buffer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int8-class.html">Int8</a></span>&gt;</span></span> <span class="parameter-name">buffer</span>, </span><span class="parameter" id="ailiaSummary-param-buffer_size"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">buffer_size</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 各Blobの名前と形状を表示します。
+@param net ネットワークオブジェクトポインタ
+@param buffer Summaryの出力先
+@param buffer_size 出力バッファのサイズ(終端null文字分を含む)。 ailiaGetSummaryLength()
+で取得した値を設定してください。
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="ailiaUpdate" class="callable">
+  <span class="name"><a href="../ailia/ailiaFFI/ailiaUpdate.html">ailiaUpdate</a></span><span class="signature">(<wbr><span class="parameter" id="ailiaUpdate-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  ~japanese
+@brief 事前に指定した入力データで推論を行います。
+@param net ネットワークオブジェクトポインタ
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+ailiaSetInputBlobData() を用いて入力を与えた場合などに用います。
+推論結果は ailiaGetBlobData() で取得してください。
+このAPIはailiaOpenWeighXXX呼び出し後より利用可能です。
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">ailia</a></li>
+    <li><a href="../ailia/ailia-library.html">ailia</a></li>
+    <li class="self-crumb">ailiaFFI class</li>
+</ol>
+
+
+    <h5>ailia library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia
+      1.4.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

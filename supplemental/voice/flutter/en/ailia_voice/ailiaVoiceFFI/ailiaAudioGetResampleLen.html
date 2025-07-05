@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaAudioGetResampleLen method from the ailiaVoiceFFI class, for the Dart programming language.">
+  <title>ailiaAudioGetResampleLen method - ailiaVoiceFFI class - ailia_voice library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice.dart</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioGetResampleLen method</li>
+  </ol>
+  <div class="self-name">ailiaAudioGetResampleLen</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia_voice&#47;ailiaVoiceFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaAudioGetResampleLen</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaAudioGetResampleLen</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaAudioGetResampleLen-param-dst_sample_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Int-class.html">Int</a></span>&gt;</span></span> <span class="parameter-name">dst_sample_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetResampleLen-param-dst_sample_rate"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">dst_sample_rate</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetResampleLen-param-src_sample_n"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_sample_n</span>, </span></li>
+<li><span class="parameter" id="ailiaAudioGetResampleLen-param-src_sample_rate"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">src_sample_rate</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief リサンプル後のサンプル数を計算します
+@param dst_sample_n リサンプル後サンプル数出力先ポインタ
+@param dst_sample_rate 変換後のサンプリングレート
+@param src_sample_n 入力データのサンプル数
+@param src_sample_rate 入力データのサンプリングレート
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</p>
+<p>~english
+@brief Get the number of samples after the resampling.
+@param dst_sample_n pointer to the destination where to write the output (the number of samples after resampling)
+@param dst_sample_rate sampling rate after the resampling
+@param src_sample_n number of samples in the input signal
+@param src_sample_rate sampling rate of the input signal
+@return
+In case of success,  \ref AILIA_STATUS_SUCCESS , and else an error code is returned.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaAudioGetResampleLen(
+  ffi.Pointer&lt;ffi.Int&gt; dst_sample_n,
+  int dst_sample_rate,
+  int src_sample_n,
+  int src_sample_rate,
+) {
+  return _ailiaAudioGetResampleLen(
+    dst_sample_n,
+    dst_sample_rate,
+    src_sample_n,
+    src_sample_rate,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailia_voice-library.html">ailia_voice</a></li>
+    <li><a href="../../ailia_voice/ailiaVoiceFFI-class.html">ailiaVoiceFFI</a></li>
+    <li class="self-crumb">ailiaAudioGetResampleLen method</li>
+</ol>
+
+
+    <h5>ailiaVoiceFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia_voice
+      1.3.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

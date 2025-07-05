@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['ailia_5fvoice_5fuser_5fapi_5failia_5fget_5ferror_5fdetail_92',['AILIA_VOICE_USER_API_AILIA_GET_ERROR_DETAIL',['../ailia__voice_8h.html#a61dced33da3499dac83f00162f7c9e98',1,'ailia_voice.h']]],
+  ['ailiavoicecreate_93',['ailiaVoiceCreate',['../ailia__voice_8h.html#a6f807d69708ee2d64230fc575253a07b',1,'ailia_voice.h']]],
+  ['ailiavoicedestroy_94',['ailiaVoiceDestroy',['../ailia__voice_8h.html#ae80dc9a146c34216c0b89a6011b03290',1,'ailia_voice.h']]],
+  ['ailiavoiceextractfullcontext_95',['ailiaVoiceExtractFullContext',['../ailia__voice_8h.html#a35b4a873e40b46036bf2cac92cbd8dac',1,'ailia_voice.h']]],
+  ['ailiavoicegeterrordetail_96',['ailiaVoiceGetErrorDetail',['../ailia__voice_8h.html#a39b5235473a85eb3d9784ac943ce9f32',1,'ailia_voice.h']]],
+  ['ailiavoicegetfeaturelength_97',['ailiaVoiceGetFeatureLength',['../ailia__voice_8h.html#a49bb73dacbc04ee17ceb86d59059b75c',1,'ailia_voice.h']]],
+  ['ailiavoicegetfeatures_98',['ailiaVoiceGetFeatures',['../ailia__voice_8h.html#a94b599cdaa8af2ed98a8352bbedaa21d',1,'ailia_voice.h']]],
+  ['ailiavoicegetwave_99',['ailiaVoiceGetWave',['../ailia__voice_8h.html#a4c66d0f4b691cb5055dec12bbb6f9f59',1,'ailia_voice.h']]],
+  ['ailiavoicegetwaveinfo_100',['ailiaVoiceGetWaveInfo',['../ailia__voice_8h.html#a5cb48189e1a778dd9f20f2346a9d9d40',1,'ailia_voice.h']]],
+  ['ailiavoicegraphemetophoneme_101',['ailiaVoiceGraphemeToPhoneme',['../ailia__voice_8h.html#a03c8e8a9d2a51be435f5a1ef92079e12',1,'ailia_voice.h']]],
+  ['ailiavoiceinference_102',['ailiaVoiceInference',['../ailia__voice_8h.html#a3f013aceead50fef4ab3ecb69703001e',1,'ailia_voice.h']]],
+  ['ailiavoiceopendictionaryfilea_103',['ailiaVoiceOpenDictionaryFileA',['../ailia__voice_8h.html#a9dfa5dcce326c5101e95ffe17b2bd22a',1,'ailia_voice.h']]],
+  ['ailiavoiceopendictionaryfilew_104',['ailiaVoiceOpenDictionaryFileW',['../ailia__voice_8h.html#ae5970e17a0ea90bf8058d891e5bcc81b',1,'ailia_voice.h']]],
+  ['ailiavoiceopenmodelfilea_105',['ailiaVoiceOpenModelFileA',['../ailia__voice_8h.html#ac7875fc17c0e6d575cf39122d082fa7d',1,'ailia_voice.h']]],
+  ['ailiavoiceopenmodelfilew_106',['ailiaVoiceOpenModelFileW',['../ailia__voice_8h.html#a4abd904554d23dac05532aad6867cf8b',1,'ailia_voice.h']]],
+  ['ailiavoicesetreference_107',['ailiaVoiceSetReference',['../ailia__voice_8h.html#a105feca995cea741ff4ad5918bc20937',1,'ailia_voice.h']]],
+  ['ailiavoicesetuserdictionaryfilea_108',['ailiaVoiceSetUserDictionaryFileA',['../ailia__voice_8h.html#a29f757ec57dd2a1680942d171de29f5a',1,'ailia_voice.h']]],
+  ['ailiavoicesetuserdictionaryfilew_109',['ailiaVoiceSetUserDictionaryFileW',['../ailia__voice_8h.html#a84f294960cf1975ab07feff4d11dcb27',1,'ailia_voice.h']]]
+];

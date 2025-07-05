@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['confidence_336',['confidence',['../classAiliaSpeech_1_1AILIASpeechText.html#a987789b157b5b597d3866e63c1e270af',1,'AiliaSpeech::AILIASpeechText']]]
+  ['confidence_379',['confidence',['../classailiaSpeech_1_1AiliaSpeech_1_1AILIASpeechText.html#a514f96cf713f6861dc4fb025bbcec886',1,'ailiaSpeech::AiliaSpeech::AILIASpeechText']]]
 ];

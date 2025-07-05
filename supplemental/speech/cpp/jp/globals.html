@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.3.2.0</span>
    </div>
   </td>
  </tr>
@@ -89,6 +89,12 @@ $(function() {
 <li>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_BASE
 : <a class="el" href="ailia__speech_8h.html#a9fc75a2d1cc76e9b5b3b8c47fe5cef3a">ailia_speech.h</a>
 </li>
+<li>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE
+: <a class="el" href="ailia__speech_8h.html#adea7fe73f3ced47c872a3fa5046a442d">ailia_speech.h</a>
+</li>
+<li>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3
+: <a class="el" href="ailia__speech_8h.html#a1015f925e7e40c21266700c787ae664d">ailia_speech.h</a>
+</li>
 <li>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_MEDIUM
 : <a class="el" href="ailia__speech_8h.html#ac762d8a0a1a2dec1a6db9b7f5092e725">ailia_speech.h</a>
 </li>
@@ -97,6 +103,15 @@ $(function() {
 </li>
 <li>AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY
 : <a class="el" href="ailia__speech_8h.html#ab132a3fef343dc6a53c67ebc9e083ac8">ailia_speech.h</a>
+</li>
+<li>AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_EN_JA
+: <a class="el" href="ailia__speech_8h.html#aaf5a6d06f98a08b4de1e12f8ab9cdff0">ailia_speech.h</a>
+</li>
+<li>AILIA_SPEECH_POST_PROCESS_TYPE_FUGUMT_JA_EN
+: <a class="el" href="ailia__speech_8h.html#ace3d91933728265d04244b7bbee02bd7">ailia_speech.h</a>
+</li>
+<li>AILIA_SPEECH_POST_PROCESS_TYPE_T5
+: <a class="el" href="ailia__speech_8h.html#aa736cca7a8882df8ac10be1fa43b607d">ailia_speech.h</a>
 </li>
 <li>AILIA_SPEECH_TASK_TRANSCRIBE
 : <a class="el" href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">ailia_speech.h</a>
@@ -191,6 +206,12 @@ $(function() {
 <li>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_GET_TOKENS
 : <a class="el" href="ailia__speech_8h.html#aea87f915ebc9d09576bbbd472d63b40c">ailia_speech.h</a>
 </li>
+<li>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_OPEN_MODEL_FILE_A
+: <a class="el" href="ailia__speech_8h.html#a16617045929eff094e2e870e774fab8c">ailia_speech.h</a>
+</li>
+<li>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_OPEN_MODEL_FILE_W
+: <a class="el" href="ailia__speech_8h.html#a9ecc14aced6123b63660e34ef1a9ef2b">ailia_speech.h</a>
+</li>
 <li>AILIA_SPEECH_USER_API_AILIA_TOKENIZER_UTF32_TO_UTF8
 : <a class="el" href="ailia__speech_8h.html#a6c438ca7355c7461a6ec6f3ac33da2e4">ailia_speech.h</a>
 </li>
@@ -233,6 +254,9 @@ $(function() {
 <li>ailiaSpeechGetTextCount()
 : <a class="el" href="ailia__speech_8h.html#a848b4bd906ed522b28e99b4be4696e74">ailia_speech.h</a>
 </li>
+<li>ailiaSpeechOpenDictionaryFile
+: <a class="el" href="ailia__speech_8h.html#a8ad13513fc3db0a694cb9552f91cce0a">ailia_speech.h</a>
+</li>
 <li>ailiaSpeechOpenDictionaryFileA()
 : <a class="el" href="ailia__speech_8h.html#afac9e14f7e23c3ba7814a681e28f6064">ailia_speech.h</a>
 </li>
@@ -248,11 +272,26 @@ $(function() {
 <li>ailiaSpeechOpenModelFileW()
 : <a class="el" href="ailia__speech_8h.html#aa5464f6ddf36140566c164bcd4e62f76">ailia_speech.h</a>
 </li>
+<li>ailiaSpeechOpenPostProcessFile
+: <a class="el" href="ailia__speech_8h.html#a8e0e2ad4a456095374ca366c58a4532c">ailia_speech.h</a>
+</li>
+<li>ailiaSpeechOpenPostProcessFileA()
+: <a class="el" href="ailia__speech_8h.html#a8e08325626a89f6a75eb13affa5da94b">ailia_speech.h</a>
+</li>
+<li>ailiaSpeechOpenPostProcessFileW()
+: <a class="el" href="ailia__speech_8h.html#adcdd00684ba0685321ecebe78255c0f6">ailia_speech.h</a>
+</li>
+<li>ailiaSpeechOpenVadFile
+: <a class="el" href="ailia__speech_8h.html#a3c2fe42362a239ef1d865e6e850de667">ailia_speech.h</a>
+</li>
 <li>ailiaSpeechOpenVadFileA()
 : <a class="el" href="ailia__speech_8h.html#a056e1ee88e608beb3e850c3c7d9dbfe5">ailia_speech.h</a>
 </li>
 <li>ailiaSpeechOpenVadFileW()
 : <a class="el" href="ailia__speech_8h.html#a1a277038d7a6fa8a95a8123b987c2d68">ailia_speech.h</a>
+</li>
+<li>ailiaSpeechPostProcess()
+: <a class="el" href="ailia__speech_8h.html#a732a73c50fcef127a40067467a007af5">ailia_speech.h</a>
 </li>
 <li>ailiaSpeechPushInputData()
 : <a class="el" href="ailia__speech_8h.html#a453c7c1308539e9bc89239bfd9d0e831">ailia_speech.h</a>
@@ -274,6 +313,9 @@ $(function() {
 </li>
 <li>ailiaSpeechSetSilentThreshold()
 : <a class="el" href="ailia__speech_8h.html#ade285d5e54d18ee5d71f982015d813cc">ailia_speech.h</a>
+</li>
+<li>ailiaSpeechSetText()
+: <a class="el" href="ailia__speech_8h.html#a2131ac341ff463df60c82068ae11e376">ailia_speech.h</a>
 </li>
 <li>AILIASpeechText
 : <a class="el" href="ailia__speech_8h.html#a7e8b03c09f769f4685384822abbd269d">ailia_speech.h</a>

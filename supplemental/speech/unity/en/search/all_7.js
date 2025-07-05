@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['language_151',['language',['../classAiliaSpeech_1_1AILIASpeechText.html#a9a5e887fbe56dca4d38525479ecf2366',1,'AiliaSpeech::AILIASpeechText']]],
-  ['library_5fname_152',['LIBRARY_NAME',['../classAiliaSpeech.html#abed14a1a0e2f5944f304b93e6469d7c0',1,'AiliaSpeech']]]
+  ['language_169',['language',['../classailiaSpeech_1_1AiliaSpeech_1_1AILIASpeechText.html#ac596e26fad5e7bfbe529cc2603e50090',1,'ailiaSpeech::AiliaSpeech::AILIASpeechText']]],
+  ['library_5fname_170',['LIBRARY_NAME',['../classailiaSpeech_1_1AiliaSpeech.html#afc239eb9cf62907c9b2f59d68ede249e',1,'ailiaSpeech::AiliaSpeech']]]
 ];

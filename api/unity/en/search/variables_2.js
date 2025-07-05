@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['category',['category',['../classAiliaClassifier_1_1AILIAClassifierClass.html#ac4f1e9594fb74b97b98c13b3d2dc6f14',1,'AiliaClassifier.AILIAClassifierClass.category()'],['../classAiliaDetector_1_1AILIADetectorObject.html#a297ef10cba22426c526fa1b70d7c2a80',1,'AiliaDetector.AILIADetectorObject.category()']]]
+  ['category_703',['category',['../classailia_1_1AiliaClassifier_1_1AILIAClassifierClass.html#aaef4c3794b9666ddeb3406bca84c19d0',1,'ailia.AiliaClassifier.AILIAClassifierClass.category()'],['../classailia_1_1AiliaDetector_1_1AILIADetectorObject.html#ae5c8cc2e6e76ee772c641f7f909982ce',1,'ailia.AiliaDetector.AILIADetectorObject.category()']]]
 ];

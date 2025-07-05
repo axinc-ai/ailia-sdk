@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.3.2.0</span>
    </div>
   </td>
  </tr>
@@ -66,43 +66,43 @@ $(function() {
 <div class="title">セットアップ </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md8"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md20"></a>
 コンパイラのセットアップ</h1>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 Windows</h2>
-<p>VisualStudio 2019以降とcmakeが必要です。</p>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<p>VisualStudio 2019以降が必要です。</p>
+<h2><a class="anchor" id="autotoc_md22"></a>
 macOS</h2>
-<p>Xcode 14.2以降とcmakeが必要です。</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<p>Xcode 14.2以降が必要です。</p>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Linux</h2>
-<p>clangとcmakeが必要です。</p>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<p>clangが必要です。</p>
+<h1><a class="anchor" id="autotoc_md24"></a>
 ライセンスファイルの配置</h1>
 <p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Windows</h2>
 <p>ailia.dllと同じフォルダ（サンプルの場合はcppフォルダ）にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 macOS</h2>
 <p>~/Library/SHALO/にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 Linux</h2>
 <p>~/.shalo/にailia.licを配置します。</p>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
 サンプルのビルド</h1>
 <p>cppフォルダに移動して、プラットフォーム別のビルドコマンドを実行します。</p>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 Windows</h2>
 <div class="fragment"><div class="line">cl ailia_speech_sample.cpp wave_reader.cpp ailia.lib ailia_audio.lib ailia_tokenizer.lib ailia_speech.lib</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
 macOS</h2>
 <div class="fragment"><div class="line">clang++ -o ailia_speech_sample ailia_speech_sample.cpp wave_reader.cpp libailia.dylib libailia_audio.dylib libailia_speech.dylib libailia_tokenizer.dylib -Wl,-rpath,./ -std=c++17</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md31"></a>
 Linux</h2>
 <div class="fragment"><div class="line">export LD_LIBRARY_PATH=./</div>
 <div class="line">g++ -o ailia_speech_sample ailia_speech_sample.cpp wave_reader.cpp libailia.so libailia_audio.so libailia_tokenizer.so libailia_speech.so</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md32"></a>
 サンプルの実行</h1>
 <p>下記のコマンドでサンプルを実行します。</p>
 <div class="fragment"><div class="line">./ailia_speech_sample</div>
@@ -122,7 +122,7 @@ Linux</h2>
 <div class="line">Input wave sec 10.512000</div>
 <div class="line">[00:00.000 --&gt; 00:05.640] [0.9310]  He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat</div>
 <div class="line">[00:05.640 --&gt; 00:20.840] [0.7744]  mutton pieces to be ladled out in thick peppered flour fat and sauce.</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
 サンプルで指定可能なオプション</h1>
 <p>サンプルでは下記の引数を順に指定可能です。</p>
 <div class="fragment"><div class="line">./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word] [auto/cpu/blas/gpu]</div>
@@ -145,16 +145,51 @@ Linux</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">実行環境 </td><td class="markdownTableBodyNone">実行環境を指定します。autoではcpuかblasを自動選択します。gpuを指定すると、GPUを使用した推論を行います。  </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md34"></a>
 高精度モデルのダウンロード</h1>
-<p>SDKにはSmallモデルが付属しています。Smallモデルよりも高精度なMediumモデルは下記のURLからダウンロード可能です。</p>
-<ul>
-<li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_medium.opt.onnx">https://storage.googleapis.com/ailia-models/whisper/encoder_medium.opt.onnx</a></li>
-<li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_medium_fix_kv_cache.opt2.onnx">https://storage.googleapis.com/ailia-models/whisper/decoder_medium_fix_kv_cache.opt2.onnx</a></li>
+<p>SDKにはSmallモデルが付属しています。Smallモデルよりも高精度なMediumモデルとLargeモデルは下記のURLからダウンロード可能です。</p>
+<p>Medium</p><ul>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_medium.opt3.onnx">https://storage.googleapis.com/ailia-models/whisper/encoder_medium.opt3.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_medium_fix_kv_cache.opt3.onnx">https://storage.googleapis.com/ailia-models/whisper/decoder_medium_fix_kv_cache.opt3.onnx</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md23"></a>
+<p>Large</p><ul>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_large.onnx">https://storage.googleapis.com/ailia-models/whisper/encoder_large.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_large_fix_kv_cache.onnx">https://storage.googleapis.com/ailia-models/whisper/decoder_large_fix_kv_cache.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_large_fix_kv_cache_weights.pb">https://storage.googleapis.com/ailia-models/whisper/decoder_large_fix_kv_cache_weights.pb</a></li>
+</ul>
+<p>Large V3</p><ul>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_large_v3.onnx">https://storage.googleapis.com/ailia-models/whisper/encoder_large_v3.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_large_v3_weights.pb">https://storage.googleapis.com/ailia-models/whisper/encoder_large_v3_weights.pb</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_large_v3_fix_kv_cache.onnx">https://storage.googleapis.com/ailia-models/whisper/decoder_large_v3_fix_kv_cache.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_large_v3_fix_kv_cache_weights.pb">https://storage.googleapis.com/ailia-models/whisper/decoder_large_v3_fix_kv_cache_weights.pb</a></li>
+</ul>
+<p>Large V3 Turbo</p><ul>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_turbo.opt.onnx">https://storage.googleapis.com/ailia-models/whisper/encoder_turbo.opt.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/encoder_turbo_weights.opt.pb">https://storage.googleapis.com/ailia-models/whisper/encoder_turbo_weights.opt.pb</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/whisper/decoder_turbo_fix_kv_cache.opt.onnx">https://storage.googleapis.com/ailia-models/whisper/decoder_turbo_fix_kv_cache.opt.onnx</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md35"></a>
+ポストプロセスモデル</h1>
+<p>SDKにはポストプロセスモデルは付属していません。ポストプロセスを使用する場合、下記のURLからダウンロード可能です。</p>
+<p>T5</p><ul>
+<li><a href="https://storage.googleapis.com/ailia-models/t5_whisper_medical/t5_whisper_medical-encoder.onnx">https://storage.googleapis.com/ailia-models/t5_whisper_medical/t5_whisper_medical-encoder.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/t5_whisper_medical/t5_whisper_medical-decoder-with-lm-head.onnx">https://storage.googleapis.com/ailia-models/t5_whisper_medical/t5_whisper_medical-decoder-with-lm-head.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/t5_whisper_medical/spiece.model">https://storage.googleapis.com/ailia-models/t5_whisper_medical/spiece.model</a></li>
+</ul>
+<p>FuguMT EN JA</p><ul>
+<li><a href="https://storage.googleapis.com/ailia-models/fugumt-en-ja/seq2seq-lm-with-past.onnx">https://storage.googleapis.com/ailia-models/fugumt-en-ja/seq2seq-lm-with-past.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/fugumt-en-ja/source.spm">https://storage.googleapis.com/ailia-models/fugumt-en-ja/source.spm</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/fugumt-en-ja/target.spm">https://storage.googleapis.com/ailia-models/fugumt-en-ja/target.spm</a></li>
+</ul>
+<p>FuguMT JA EN</p><ul>
+<li><a href="https://storage.googleapis.com/ailia-models/fugumt-ja-en/encoder_model.onnx">https://storage.googleapis.com/ailia-models/fugumt-ja-en/encoder_model.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/fugumt-ja-en/decoder_model.onnx">https://storage.googleapis.com/ailia-models/fugumt-ja-en/decoder_model.onnx</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/fugumt-ja-en/source.spm">https://storage.googleapis.com/ailia-models/fugumt-ja-en/source.spm</a></li>
+<li><a href="https://storage.googleapis.com/ailia-models/fugumt-ja-en/target.spm">https://storage.googleapis.com/ailia-models/fugumt-ja-en/target.spm</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md36"></a>
 プラットフォーム別の注意点</h1>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 macOSにおけるダウンロード属性の解除</h2>
 <p>macOSにおいてブラウザからダウンロードしたバイナリには、ダウンロード属性が付与され、実行できない場合があります。 その場合、dylibを右クリックから実行して開くことで、ダウンロード属性を解除することが可能です。 また、コマンドラインから下記のコマンドを実行することでも、ダウンロード属性を解除することが可能です。</p>
 <div class="fragment"><div class="line">xattr -d com.apple.quarantine libailia_speech.dylib</div>

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['ailiaaudiogetresamplelen_110',['ailiaAudioGetResampleLen',['../struct__AILIAVoiceApiCallback.html#afccfdeb16326d69fb3829c76cd4549f0',1,'_AILIAVoiceApiCallback']]],
+  ['ailiaaudioresample_111',['ailiaAudioResample',['../struct__AILIAVoiceApiCallback.html#aa4f47233de08c8f58139eb3a921f4023',1,'_AILIAVoiceApiCallback']]],
+  ['ailiacopyblobdata_112',['ailiaCopyBlobData',['../struct__AILIAVoiceApiCallback.html#a8f10d52cb6260116095f7f403670fd06',1,'_AILIAVoiceApiCallback']]],
+  ['ailiacreate_113',['ailiaCreate',['../struct__AILIAVoiceApiCallback.html#a0e9407740eae9bcd670195d17694a3b2',1,'_AILIAVoiceApiCallback']]],
+  ['ailiadestroy_114',['ailiaDestroy',['../struct__AILIAVoiceApiCallback.html#ac32bf20441a3159dc51a0212a8fa6f77',1,'_AILIAVoiceApiCallback']]],
+  ['ailiagetblobdata_115',['ailiaGetBlobData',['../struct__AILIAVoiceApiCallback.html#a309b85df1bb69b35712639724eea7b2c',1,'_AILIAVoiceApiCallback']]],
+  ['ailiagetblobindexbyinputindex_116',['ailiaGetBlobIndexByInputIndex',['../struct__AILIAVoiceApiCallback.html#ab6823e24d1295d6449f8dab3fb3faf6a',1,'_AILIAVoiceApiCallback']]],
+  ['ailiagetblobindexbyoutputindex_117',['ailiaGetBlobIndexByOutputIndex',['../struct__AILIAVoiceApiCallback.html#a406548473a48ef5a776f32023c080cf0',1,'_AILIAVoiceApiCallback']]],
+  ['ailiagetblobshape_118',['ailiaGetBlobShape',['../struct__AILIAVoiceApiCallback.html#a5229ab07bc20580a7b70ef2b44b5f64e',1,'_AILIAVoiceApiCallback']]],
+  ['ailiageterrordetail_119',['ailiaGetErrorDetail',['../struct__AILIAVoiceApiCallback.html#af51f107cab20e4ede2f4a8ddd4017bf4',1,'_AILIAVoiceApiCallback']]],
+  ['ailiagetinputblobcount_120',['ailiaGetInputBlobCount',['../struct__AILIAVoiceApiCallback.html#aa76f45b55c4e0f1cbc02def7c9d6f027',1,'_AILIAVoiceApiCallback']]],
+  ['ailiagetoutputblobcount_121',['ailiaGetOutputBlobCount',['../struct__AILIAVoiceApiCallback.html#a1bf5427ad7fce256decbc4e78a78aa11',1,'_AILIAVoiceApiCallback']]],
+  ['ailiaopenweightfilea_122',['ailiaOpenWeightFileA',['../struct__AILIAVoiceApiCallback.html#a62e176510384917596ba4b1801469b9a',1,'_AILIAVoiceApiCallback']]],
+  ['ailiaopenweightfilew_123',['ailiaOpenWeightFileW',['../struct__AILIAVoiceApiCallback.html#a5da7f422638c3f7b595310a06085f23b',1,'_AILIAVoiceApiCallback']]],
+  ['ailiaopenweightmem_124',['ailiaOpenWeightMem',['../struct__AILIAVoiceApiCallback.html#ae919dd71b508567a2261c80fd4efe77a',1,'_AILIAVoiceApiCallback']]],
+  ['ailiasetinputblobdata_125',['ailiaSetInputBlobData',['../struct__AILIAVoiceApiCallback.html#ad3d59890249a6033873e9ad5d10b9ded',1,'_AILIAVoiceApiCallback']]],
+  ['ailiasetinputblobshape_126',['ailiaSetInputBlobShape',['../struct__AILIAVoiceApiCallback.html#a9320e3f9bc70d2cb6ae8efda1c7f3b54',1,'_AILIAVoiceApiCallback']]],
+  ['ailiasetmemorymode_127',['ailiaSetMemoryMode',['../struct__AILIAVoiceApiCallback.html#a7798f6d21e9b2202f0e09d104a7d371a',1,'_AILIAVoiceApiCallback']]],
+  ['ailiaupdate_128',['ailiaUpdate',['../struct__AILIAVoiceApiCallback.html#a3bab2c2b56c0b4f40a513d9676da49dd',1,'_AILIAVoiceApiCallback']]]
+];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['library_5fname',['LIBRARY_NAME',['../classAilia.html#a5a2a5c51b8f32e444aff6426261a9449',1,'Ailia.LIBRARY_NAME()'],['../classAiliaAudio.html#a2c7a02666ff58b0c3f64734aa0d72594',1,'AiliaAudio.LIBRARY_NAME()']]],
-  ['logging',['logging',['../classAiliaModel.html#a14e1424dd14780106365607a00e5a5dd',1,'AiliaModel']]]
+  ['library_5fname_714',['LIBRARY_NAME',['../classailia_1_1Ailia.html#a3565813476cebd75abd61d570785ff87',1,'ailia.Ailia.LIBRARY_NAME()'],['../classailiaAudio_1_1AiliaAudio.html#ae2d47752c379a5e5bcc34ae8b0e27089',1,'ailiaAudio.AiliaAudio.LIBRARY_NAME()']]],
+  ['logging_715',['logging',['../classailia_1_1AiliaModel.html#ade8fa978d679ea8a7dfc27fda7db77b5',1,'ailia::AiliaModel']]]
 ];

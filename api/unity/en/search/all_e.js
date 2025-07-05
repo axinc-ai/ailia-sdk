@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['score',['score',['../structAiliaPoseEstimator_1_1AILIAPoseEstimatorKeypoint.html#ab6adaea40058ca468f5bb45fd2e742ff',1,'AiliaPoseEstimator::AILIAPoseEstimatorKeypoint']]],
-  ['selectenvironment',['SelectEnvironment',['../classAiliaModel.html#a608da869b0a415e61c734f8b8730dc7a',1,'AiliaModel']]],
-  ['setinputblobdata',['SetInputBlobData',['../classAiliaModel.html#aca99605fec6ab7dc061ff18012fc836a',1,'AiliaModel']]],
-  ['setinputblobshape',['SetInputBlobShape',['../classAiliaModel.html#a6418c8242717b1d3334a15398b6e51d7',1,'AiliaModel']]],
-  ['setinputblobshapend',['SetInputBlobShapeND',['../classAiliaModel.html#a83d52265e8e3c4a518002efbaf9cebdb',1,'AiliaModel']]],
-  ['setinputshape',['SetInputShape',['../classAiliaDetectorModel.html#a653deb198a61e3ff87c00d884b0fbb70',1,'AiliaDetectorModel.SetInputShape()'],['../classAiliaModel.html#a892a547188ea59c953ba4aa32cf1d4d3',1,'AiliaModel.SetInputShape()']]],
-  ['setinputshapend',['SetInputShapeND',['../classAiliaModel.html#a302adda92b0eb76a4582a8bce751f04e',1,'AiliaModel']]],
-  ['setmemorymode',['SetMemoryMode',['../classAiliaModel.html#ac4394b66505e94b075fa0daf239145f8',1,'AiliaModel']]],
-  ['setprofilemode',['SetProfileMode',['../classAiliaModel.html#adbe5518eadcef84e0550bc761c1811da',1,'AiliaModel']]],
-  ['setthreshold',['SetThreshold',['../classAiliaPoseEstimatorModel.html#aecd22ba83add6bf03d3aff77feb853ff',1,'AiliaPoseEstimatorModel']]],
-  ['settings',['Settings',['../classAiliaClassifierModel.html#a1e73c66771635ba3bba0e2af5ee7456f',1,'AiliaClassifierModel.Settings()'],['../classAiliaDetectorModel.html#a100280b58e098499b896d2de399becb7',1,'AiliaDetectorModel.Settings()'],['../classAiliaFeatureExtractorModel.html#a845e781e6954fc022a9ba5a83723ee90',1,'AiliaFeatureExtractorModel.Settings()'],['../classAiliaPoseEstimatorModel.html#a8eb2a9ec19a50795e6c24ae1927155ae',1,'AiliaPoseEstimatorModel.Settings()']]],
-  ['status',['Status',['../classAiliaModel.html#a9bce5970568250fbbb9213851a19e3f6',1,'AiliaModel']]]
+  ['score_345',['score',['../structailia_1_1AiliaPoseEstimator_1_1AILIAPoseEstimatorKeypoint.html#a9464ee39868f0c58cb35013f6f29034a',1,'ailia::AiliaPoseEstimator::AILIAPoseEstimatorKeypoint']]],
+  ['selectenvironment_346',['SelectEnvironment',['../classailia_1_1AiliaModel.html#a408b16cbdedaeb5ff8fbcd02932393e8',1,'ailia::AiliaModel']]],
+  ['setinputblobdata_347',['SetInputBlobData',['../classailia_1_1AiliaModel.html#a462a204337ce4c6bd85fd97da0e07d65',1,'ailia.AiliaModel.SetInputBlobData(float[] input_data, uint idx)'],['../classailia_1_1AiliaModel.html#a70431141f35b62d24c8594f0ffb9d029',1,'ailia.AiliaModel.SetInputBlobData(float[] input_data, int idx)']]],
+  ['setinputblobshape_348',['SetInputBlobShape',['../classailia_1_1AiliaModel.html#afd126ee1e6abeb9baa6af89d718d4177',1,'ailia.AiliaModel.SetInputBlobShape(Ailia.AILIAShape shape, uint idx)'],['../classailia_1_1AiliaModel.html#a09d53c480b60c3130ec96170bb79f0c2',1,'ailia.AiliaModel.SetInputBlobShape(Ailia.AILIAShape shape, int idx)']]],
+  ['setinputblobshapend_349',['SetInputBlobShapeND',['../classailia_1_1AiliaModel.html#a7ac1ed73ad736cee02b08e1faa1417b4',1,'ailia.AiliaModel.SetInputBlobShapeND(uint[] shape, uint dim, uint idx)'],['../classailia_1_1AiliaModel.html#a3fe3a18d025a7df7b6ab74b3f517c283',1,'ailia.AiliaModel.SetInputBlobShapeND(uint[] shape, int dim, int idx)']]],
+  ['setinputshape_350',['SetInputShape',['../classailia_1_1AiliaModel.html#a204e9bb2214deb17ad261addae09140a',1,'ailia.AiliaModel.SetInputShape()'],['../classailia_1_1AiliaDetectorModel.html#a685008443f9f86b949574f2ae67fa86a',1,'ailia.AiliaDetectorModel.SetInputShape()']]],
+  ['setinputshapend_351',['SetInputShapeND',['../classailia_1_1AiliaModel.html#abb60656121857dcc2173e65f07c1f1d2',1,'ailia::AiliaModel']]],
+  ['setmemorymode_352',['SetMemoryMode',['../classailia_1_1AiliaModel.html#ab9ad9768aaffeeda13e00fe913120121',1,'ailia::AiliaModel']]],
+  ['setprofilemode_353',['SetProfileMode',['../classailia_1_1AiliaModel.html#afba4af10eca313a38680548324cc44a9',1,'ailia::AiliaModel']]],
+  ['setthreshold_354',['SetThreshold',['../classailia_1_1AiliaPoseEstimatorModel.html#a12e4797896a8894f3d10affa45752c0d',1,'ailia::AiliaPoseEstimatorModel']]],
+  ['settings_355',['Settings',['../classailia_1_1AiliaClassifierModel.html#ab31fa97e9cfe3ba7be84cfb3c34d1da8',1,'ailia.AiliaClassifierModel.Settings()'],['../classailia_1_1AiliaDetectorModel.html#af7a8a3fda47797bba0a3a2254a4ddcb0',1,'ailia.AiliaDetectorModel.Settings()'],['../classailia_1_1AiliaFeatureExtractorModel.html#ab10753682205dc035e07bdcee537021c',1,'ailia.AiliaFeatureExtractorModel.Settings()'],['../classailia_1_1AiliaPoseEstimatorModel.html#a5b845f4f86f13c5a30fbf60606e7dd66',1,'ailia.AiliaPoseEstimatorModel.Settings()']]],
+  ['status_356',['Status',['../classailia_1_1AiliaModel.html#ad3eb6ccead4bfb02b206d09f02e18e01',1,'ailia::AiliaModel']]]
 ];

@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia: ailia.AiliaFeatureExtractor クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia
+   &#160;<span id="projectnumber">1.5.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceailia.html">ailia</a></li><li class="navelem"><a class="el" href="classailia_1_1AiliaFeatureExtractor.html">AiliaFeatureExtractor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="classailia_1_1AiliaFeatureExtractor-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ailia.AiliaFeatureExtractor クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a04ccf8dde3edfe94adc6d31022d8b08d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaFeatureExtractor.html#a04ccf8dde3edfe94adc6d31022d8b08d">ailiaCreateFeatureExtractor</a> (ref IntPtr fextractor, IntPtr net, UInt32 format, UInt32 channel, UInt32 range, string layer_name)</td></tr>
+<tr class="memdesc:a04ccf8dde3edfe94adc6d31022d8b08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴抽出オブジェクトを作成します。  <a href="classailia_1_1AiliaFeatureExtractor.html#a04ccf8dde3edfe94adc6d31022d8b08d">[詳解]</a><br /></td></tr>
+<tr class="separator:a04ccf8dde3edfe94adc6d31022d8b08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3341b74e979475c13372dbb2051e518d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaFeatureExtractor.html#a3341b74e979475c13372dbb2051e518d">ailiaDestroyFeatureExtractor</a> (IntPtr fextractor)</td></tr>
+<tr class="memdesc:a3341b74e979475c13372dbb2051e518d"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴抽出オブジェクトを破棄します。  <a href="classailia_1_1AiliaFeatureExtractor.html#a3341b74e979475c13372dbb2051e518d">[詳解]</a><br /></td></tr>
+<tr class="separator:a3341b74e979475c13372dbb2051e518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83159656a5726726e5921525495e0a6b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaFeatureExtractor.html#a83159656a5726726e5921525495e0a6b">ailiaFeatureExtractorCompute</a> (IntPtr fextractor, IntPtr dst, UInt32 dst_size, IntPtr src, UInt32 src_stride, UInt32 src_width, UInt32 src_height, UInt32 src_format)</td></tr>
+<tr class="memdesc:a83159656a5726726e5921525495e0a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴の抽出を行います。  <a href="classailia_1_1AiliaFeatureExtractor.html#a83159656a5726726e5921525495e0a6b">[詳解]</a><br /></td></tr>
+<tr class="separator:a83159656a5726726e5921525495e0a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84301d61a6aa3e7c594d1ba55dde9f97"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaFeatureExtractor.html#a84301d61a6aa3e7c594d1ba55dde9f97">ailiaFeatureExtractorMatch</a> (IntPtr fextractor, ref float distance, UInt32 distace_type, IntPtr feature1, UInt32 feature1_size, IntPtr feature2, UInt32 feature2_size)</td></tr>
+<tr class="memdesc:a84301d61a6aa3e7c594d1ba55dde9f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">特徴間の距離を計算します。  <a href="classailia_1_1AiliaFeatureExtractor.html#a84301d61a6aa3e7c594d1ba55dde9f97">[詳解]</a><br /></td></tr>
+<tr class="separator:a84301d61a6aa3e7c594d1ba55dde9f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a6a9d766bcb22ae86bbe99a2bc765109a"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailia_1_1AiliaFeatureExtractor.html#a6a9d766bcb22ae86bbe99a2bc765109a">AILIA_FEATURE_EXTRACTOR_DISTANCE_L2NORM</a> =(0)</td></tr>
+<tr class="separator:a6a9d766bcb22ae86bbe99a2bc765109a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a04ccf8dde3edfe94adc6d31022d8b08d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ccf8dde3edfe94adc6d31022d8b08d">&#9670;&nbsp;</a></span>ailiaCreateFeatureExtractor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailia.AiliaFeatureExtractor.ailiaCreateFeatureExtractor </td>
+          <td>(</td>
+          <td class="paramtype">ref IntPtr&#160;</td>
+          <td class="paramname"><em>fextractor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>layer_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特徴抽出オブジェクトを作成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>特徴抽出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">format</td><td>ネットワークの画像フォーマット (AILIA_NETWORK_IMAGE_FORMAT_*) </td></tr>
+    <tr><td class="paramname">channel</td><td>ネットワークの画像チャンネル (AILIA_NETWORK_IMAGE_CHANNEL_*) </td></tr>
+    <tr><td class="paramname">range</td><td>ネットワークの画像レンジ (AILIA_NETWORK_IMAGE_RANGE_*) </td></tr>
+    <tr><td class="paramname">layer_name</td><td>特徴に対応したレイヤーの名称 (VGG16の場合はfc1, nullで最終レイヤー) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a3341b74e979475c13372dbb2051e518d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3341b74e979475c13372dbb2051e518d">&#9670;&nbsp;</a></span>ailiaDestroyFeatureExtractor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ailia.AiliaFeatureExtractor.ailiaDestroyFeatureExtractor </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>fextractor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特徴抽出オブジェクトを破棄します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>特徴抽出オブジェクトポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a83159656a5726726e5921525495e0a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83159656a5726726e5921525495e0a6b">&#9670;&nbsp;</a></span>ailiaFeatureExtractorCompute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailia.AiliaFeatureExtractor.ailiaFeatureExtractorCompute </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>fextractor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>dst_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>src_format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特徴の抽出を行います。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>特徴抽出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">dst</td><td>特徴の格納先ポインタ(numeric型) </td></tr>
+    <tr><td class="paramname">dst_size</td><td>dstのサイズ(byte) </td></tr>
+    <tr><td class="paramname">src</td><td>画像データ(32bpp) </td></tr>
+    <tr><td class="paramname">src_stride</td><td>1ラインのバイト数 </td></tr>
+    <tr><td class="paramname">src_width</td><td>画像幅 </td></tr>
+    <tr><td class="paramname">src_height</td><td>画像高さ </td></tr>
+    <tr><td class="paramname">src_format</td><td>画像フォーマット (AILIA_IMAGE_FORMAT_*) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a84301d61a6aa3e7c594d1ba55dde9f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84301d61a6aa3e7c594d1ba55dde9f97">&#9670;&nbsp;</a></span>ailiaFeatureExtractorMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ailia.AiliaFeatureExtractor.ailiaFeatureExtractorMatch </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>fextractor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>distace_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>feature1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>feature1_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr&#160;</td>
+          <td class="paramname"><em>feature2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UInt32&#160;</td>
+          <td class="paramname"><em>feature2_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特徴間の距離を計算します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fextractor</td><td>特徴抽出オブジェクトポインタ </td></tr>
+    <tr><td class="paramname">distance</td><td>特徴間距離 </td></tr>
+    <tr><td class="paramname">distance_type</td><td>特徴間距離の種別 </td></tr>
+    <tr><td class="paramname">feature1</td><td>特徴の格納先ポインタ(numeric型) </td></tr>
+    <tr><td class="paramname">feature1_size</td><td>dstのサイズ(byte) </td></tr>
+    <tr><td class="paramname">feature2</td><td>特徴の格納先ポインタ(numeric型) </td></tr>
+    <tr><td class="paramname">feature2_size</td><td>dstのサイズ(byte) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a6a9d766bcb22ae86bbe99a2bc765109a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9d766bcb22ae86bbe99a2bc765109a">&#9670;&nbsp;</a></span>AILIA_FEATURE_EXTRACTOR_DISTANCE_L2NORM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 ailia.AiliaFeatureExtractor.AILIA_FEATURE_EXTRACTOR_DISTANCE_L2NORM =(0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>L2ノルム </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="AiliaFeatureExtractor_8cs.html">AiliaFeatureExtractor.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

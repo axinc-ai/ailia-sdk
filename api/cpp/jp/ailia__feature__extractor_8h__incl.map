@@ -1,5 +1,7 @@
 <map id="ailia_feature_extractor.h" name="ailia_feature_extractor.h">
-<area shape="rect" id="node2" href="$ailia_8h.html" title="推論ライブラリ " alt="" coords="20,80,83,107"/>
-<area shape="rect" id="node4" href="$ailia__format_8h.html" title="AILIA フォーマット定義・変換 " alt="" coords="107,80,220,107"/>
-<area shape="rect" id="node3" href="$ailia__call_8h.html" title="ユーザ定義コールバック " alt="" coords="5,155,97,181"/>
+<area shape="rect" id="node1" title="AILIA 特徴抽出ライブラリ" alt="" coords="59,5,220,32"/>
+<area shape="rect" id="node2" href="$ailia_8h.html" title="推論ライブラリ" alt="" coords="61,80,117,107"/>
+<area shape="rect" id="node5" href="$ailia__format_8h.html" title="AILIA フォーマット定義・変換" alt="" coords="141,80,239,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,73,181"/>
+<area shape="rect" id="node4" href="$ailia__call_8h.html" title="ユーザ定義コールバック" alt="" coords="98,155,181,181"/>
 </map>

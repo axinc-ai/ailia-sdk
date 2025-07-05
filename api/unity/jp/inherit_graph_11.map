@@ -1,7 +1,8 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$classAiliaClassifierModel.html" title="AiliaClassifierModel" alt="" coords="5,56,156,83"/>
-<area shape="rect" id="node2" href="$classAiliaModel.html" title="AiliaModel" alt="" coords="204,56,295,83"/>
-<area shape="rect" id="node3" href="$classAiliaDetectorModel.html" title="AiliaDetectorModel" alt="" coords="368,5,515,32"/>
-<area shape="rect" id="node4" href="$classAiliaFeatureExtractorModel.html" title="AiliaFeatureExtractorModel" alt="" coords="343,56,540,83"/>
-<area shape="rect" id="node5" href="$classAiliaPoseEstimatorModel.html" title="AiliaPoseEstimatorModel" alt="" coords="349,107,533,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,85,96,112"/>
+<area shape="rect" id="node2" href="$classailia_1_1AiliaModel.html" title=" " alt="" coords="144,85,253,112"/>
+<area shape="rect" id="node3" href="$classailia_1_1AiliaClassifierModel.html" title=" " alt="" coords="305,5,469,32"/>
+<area shape="rect" id="node4" href="$classailia_1_1AiliaDetectorModel.html" title=" " alt="" coords="307,56,466,83"/>
+<area shape="rect" id="node5" href="$classailia_1_1AiliaFeatureExtractorModel.html" title=" " alt="" coords="301,107,472,149"/>
+<area shape="rect" id="node6" href="$classailia_1_1AiliaPoseEstimatorModel.html" title=" " alt="" coords="307,173,467,214"/>
 </map>

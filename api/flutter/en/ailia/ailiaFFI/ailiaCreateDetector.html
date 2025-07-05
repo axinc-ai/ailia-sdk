@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ailiaCreateDetector method from the ailiaFFI class, for the Dart programming language.">
+  <title>ailiaCreateDetector method - ailiaFFI class - ailia library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">ailia</a></li>
+    <li><a href="../../ailia/ailia-library.html">ailia.dart</a></li>
+    <li><a href="../../ailia/ailiaFFI-class.html">ailiaFFI</a></li>
+    <li class="self-crumb">ailiaCreateDetector method</li>
+  </ol>
+  <div class="self-name">ailiaCreateDetector</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="ailia&#47;ailiaFFI-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ailiaCreateDetector</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="name ">ailiaCreateDetector</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ailiaCreateDetector-param-detector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../ailia/AILIADetector-class.html">AILIADetector</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">detector</span>, </span></li>
+<li><span class="parameter" id="ailiaCreateDetector-param-net"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../ailia/AILIANetwork-class.html">AILIANetwork</a></span>&gt;</span></span> <span class="parameter-name">net</span>, </span></li>
+<li><span class="parameter" id="ailiaCreateDetector-param-format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">format</span>, </span></li>
+<li><span class="parameter" id="ailiaCreateDetector-param-channel"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">channel</span>, </span></li>
+<li><span class="parameter" id="ailiaCreateDetector-param-range"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">range</span>, </span></li>
+<li><span class="parameter" id="ailiaCreateDetector-param-algorithm"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">algorithm</span>, </span></li>
+<li><span class="parameter" id="ailiaCreateDetector-param-category_count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">category_count</span>, </span></li>
+<li><span class="parameter" id="ailiaCreateDetector-param-flags"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">flags</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>~japanese
+@brief 検出オブジェクトを作成します。
+@param detector       検出オブジェクトポインタ
+@param net            ネットワークオブジェクトポインタ
+@param format         ネットワークの画像フォーマット (AILIA_NETWORK_IMAGE_FORMAT_<em>)
+@param channel        ネットワークの画像チャンネル (AILIA_NETWORK_IMAGE_CHANNEL_</em>)
+@param range          ネットワークの画像レンジ (AILIA_NETWORK_IMAGE_RANGE_<em>)
+@param algorithm      検出アルゴリズム(AILIA_DETECTOR_ALGORITHM_</em>)
+@param category_count 検出カテゴリ数(VOCの場合は20、COCOの場合は80、などを指定)
+@param flags          追加オプションフラグ(AILIA_DETECTOR_FLAG_*)
+@return
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</p>
+<p>~english
+@brief Creates a detector instance.
+@param detector       A detector instance pointer
+@param net            The network instance pointer
+@param format         The network image format (AILIA_NETWORK_IMAGE_FORMAT_<em>)
+@param channel        The network image channel (AILIA_NETWORK_IMAGE_CHANNEL_</em>)
+@param range          The network image range (AILIA_NETWORK_IMAGE_RANGE_<em>)
+@param algorithm      Detection algorithm(AILIA_DETECTOR_ALGORITHM_</em>)
+@param category_count The number of detection categories (specify 20 for VOC or 80 for COCO, etc.)
+@param flags          Additional option(AILIA_DETECTOR_FLAG_*)
+@return
+If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an error code otherwise.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">int ailiaCreateDetector(
+  ffi.Pointer&lt;ffi.Pointer&lt;AILIADetector&gt;&gt; detector,
+  ffi.Pointer&lt;AILIANetwork&gt; net,
+  int format,
+  int channel,
+  int range,
+  int algorithm,
+  int category_count,
+  int flags,
+) {
+  return _ailiaCreateDetector(
+    detector,
+    net,
+    format,
+    channel,
+    range,
+    algorithm,
+    category_count,
+    flags,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">ailia</a></li>
+    <li><a href="../../ailia/ailia-library.html">ailia</a></li>
+    <li><a href="../../ailia/ailiaFFI-class.html">ailiaFFI</a></li>
+    <li class="self-crumb">ailiaCreateDetector method</li>
+</ol>
+
+
+    <h5>ailiaFFI class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ailia
+      1.4.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

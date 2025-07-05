@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.3.2.0</span>
    </div>
   </td>
  </tr>
@@ -66,24 +66,26 @@ $(function() {
 <div class="title">Unity Packageのインポートとサンプルの実行 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md20"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md26"></a>
 Unityのバージョン</h1>
 <p>Unity 2021.3.10f1以降が必要です。</p>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Unity Pluginのインポート</h1>
 <p>unityフォルダのailia_speech.unity_packageをプロジェクトにインポートします。</p>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
+依存ライブラリのPackage Managerからのインストール</h1>
+<p>ailia SDKをUnity Package Managerからインストールします。下記のURLを追加してください。</p>
+<div class="fragment"><div class="line">https://github.com/axinc-ai/ailia-sdk-unity.git</div>
+<div class="line">https://github.com/axinc-ai/ailia-audio-unity.git</div>
+<div class="line">https://github.com/axinc-ai/ailia-tokenizer-unity.git</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
 Unity Pluginのフォルダ構成</h1>
 <p>ailia SpeechのUnity Packageは下記の構成を持ちます。</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">フォルダ </th><th class="markdownTableHeadNone">内容  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Ailia </td><td class="markdownTableBodyNone">推論のコアを行うailia SDKのインタフェースが含まれています。  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classAiliaSpeech.html">AiliaSpeech</a> </td><td class="markdownTableBodyNone">音声認識を行うailia Speechのインタフェースが含まれています。  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Plugins </td><td class="markdownTableBodyNone">ailia SDKとailia Speechのネイティブプラグインのバイナリが含まれています。  </td></tr>
+<td class="markdownTableBodyNone">ailia_speech </td><td class="markdownTableBodyNone">音声認識を行うailia Speechのインタフェースが含まれています。  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Resources </td><td class="markdownTableBodyNone">デモアプリの画像ファイルなどが含まれています。  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -93,23 +95,23 @@ Unity Pluginのフォルダ構成</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">TextMeshPro </td><td class="markdownTableBodyNone">テキストを描画するための拡張機能が含まれています。  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">AiliaSpeechSample.cs </td><td class="markdownTableBodyNone">メインとなるサンプルファイルです。  </td></tr>
+<td class="markdownTableBodyNone">Samples/Scripts/AiliaSpeechSample.cs </td><td class="markdownTableBodyNone">メインとなるサンプルファイルです。  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">AiliaSpeechScene.unity </td><td class="markdownTableBodyNone">メインとなるサンプルシーンです。  </td></tr>
+<td class="markdownTableBodyNone">Samples/Scenes/AiliaSpeechScene.unity </td><td class="markdownTableBodyNone">メインとなるサンプルシーンです。  </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md23"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 ライセンスファイルの配置</h1>
 <p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Windows</h2>
 <p>ailia.dllと同じフォルダ（サンプルの場合はAssets/Plugins/x86_64）にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 macOS</h2>
 <p>~/Library/SHALO/にailia.licを配置します。</p>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 Linux</h2>
 <p>~/.shalo/にailia.licを配置します。</p>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md34"></a>
 サンプルの実行</h1>
 <p>AiliaSpeechScene.unityをUnityで開いて実行します。 </p>
 </div></div><!-- contents -->

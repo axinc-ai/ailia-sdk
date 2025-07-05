@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ailia_speech: ailiaSpeech.AiliaSpeechTranslateModel クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ailia_speech
+   &#160;<span id="projectnumber">1.3.2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceailiaSpeech.html">ailiaSpeech</a></li><li class="navelem"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html">AiliaSpeechTranslateModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="classailiaSpeech_1_1AiliaSpeechTranslateModel-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ailiaSpeech.AiliaSpeechTranslateModel クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+ailiaSpeech.AiliaSpeechTranslateModel の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="classailiaSpeech_1_1AiliaSpeechTranslateModel__inherit__graph.png" border="0" usemap="#ailiaSpeech_8AiliaSpeechTranslateModel_inherit__map" alt="Inheritance graph"/></div>
+<map name="ailiaSpeech_8AiliaSpeechTranslateModel_inherit__map" id="ailiaSpeech_8AiliaSpeechTranslateModel_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,241,121"/>
+<area shape="rect" title=" " alt="" coords="74,5,173,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ailiaSpeech.AiliaSpeechTranslateModel 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="classailiaSpeech_1_1AiliaSpeechTranslateModel__coll__graph.png" border="0" usemap="#ailiaSpeech_8AiliaSpeechTranslateModel_coll__map" alt="Collaboration graph"/></div>
+<map name="ailiaSpeech_8AiliaSpeechTranslateModel_coll__map" id="ailiaSpeech_8AiliaSpeechTranslateModel_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,241,121"/>
+<area shape="rect" title=" " alt="" coords="74,5,173,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5488867e048a638504d65048c1022f7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a5488867e048a638504d65048c1022f7b">IsError</a> ()</td></tr>
+<tr class="memdesc:a5488867e048a638504d65048c1022f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーが発生したか確認します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a5488867e048a638504d65048c1022f7b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5488867e048a638504d65048c1022f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b4c7bc7be0b4c11495d3b2f0060df2"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a60b4c7bc7be0b4c11495d3b2f0060df2">GetErrorDetail</a> ()</td></tr>
+<tr class="memdesc:a60b4c7bc7be0b4c11495d3b2f0060df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を取得します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a60b4c7bc7be0b4c11495d3b2f0060df2">[詳解]</a><br /></td></tr>
+<tr class="separator:a60b4c7bc7be0b4c11495d3b2f0060df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cbadd21798dc16435c26fed5bf31c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#af0cbadd21798dc16435c26fed5bf31c5">GetEnvironmentId</a> (bool is_gpu)</td></tr>
+<tr class="memdesc:af0cbadd21798dc16435c26fed5bf31c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行環境を取得します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#af0cbadd21798dc16435c26fed5bf31c5">[詳解]</a><br /></td></tr>
+<tr class="separator:af0cbadd21798dc16435c26fed5bf31c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55dd1659e6acdb208d34ee721be74558"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a55dd1659e6acdb208d34ee721be74558">GetEnvironmentName</a> ()</td></tr>
+<tr class="memdesc:a55dd1659e6acdb208d34ee721be74558"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行環境の名称を取得します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a55dd1659e6acdb208d34ee721be74558">[詳解]</a><br /></td></tr>
+<tr class="separator:a55dd1659e6acdb208d34ee721be74558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b5e0c4500f42ddd0a4d82e47bb305d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#ad9b5e0c4500f42ddd0a4d82e47bb305d">Open</a> (string encoder_path, string decoder_path, string source_path, string target_path, int type, int env_id, int memory_mode)</td></tr>
+<tr class="memdesc:ad9b5e0c4500f42ddd0a4d82e47bb305d"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを作成します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#ad9b5e0c4500f42ddd0a4d82e47bb305d">[詳解]</a><br /></td></tr>
+<tr class="separator:ad9b5e0c4500f42ddd0a4d82e47bb305d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff933f631562e61e6a1f813f6959f38"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a2ff933f631562e61e6a1f813f6959f38">Close</a> ()</td></tr>
+<tr class="memdesc:a2ff933f631562e61e6a1f813f6959f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを破棄します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a2ff933f631562e61e6a1f813f6959f38">[詳解]</a><br /></td></tr>
+<tr class="separator:a2ff933f631562e61e6a1f813f6959f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a105aded9410f4eba29f93eb9bc4c9d48"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a105aded9410f4eba29f93eb9bc4c9d48">Dispose</a> ()</td></tr>
+<tr class="memdesc:a105aded9410f4eba29f93eb9bc4c9d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースを解放します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a105aded9410f4eba29f93eb9bc4c9d48">[詳解]</a><br /></td></tr>
+<tr class="separator:a105aded9410f4eba29f93eb9bc4c9d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd3d89c448933fbd2d566157eab4efd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a5cd3d89c448933fbd2d566157eab4efd">Translate</a> (string input_text)</td></tr>
+<tr class="memdesc:a5cd3d89c448933fbd2d566157eab4efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻訳を実行します。  <a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a5cd3d89c448933fbd2d566157eab4efd">[詳解]</a><br /></td></tr>
+<tr class="separator:a5cd3d89c448933fbd2d566157eab4efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8bbe5678736d9cfd52de124ecb9c90c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a8bbe5678736d9cfd52de124ecb9c90c7">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:a8bbe5678736d9cfd52de124ecb9c90c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2ff933f631562e61e6a1f813f6959f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff933f631562e61e6a1f813f6959f38">&#9670;&nbsp;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ailiaSpeech.AiliaSpeechTranslateModel.Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンスを破棄します。 </p>
+<p>インスタンスを破棄し、初期化します。 </p>
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">if</span> (net != IntPtr.Zero){</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            AiliaSpeech.ailiaSpeechDestroy(net);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            net = IntPtr.Zero;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a105aded9410f4eba29f93eb9bc4c9d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105aded9410f4eba29f93eb9bc4c9d48">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ailiaSpeech.AiliaSpeechTranslateModel.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リソースを解放します。 </p>
+<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <a class="code" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a105aded9410f4eba29f93eb9bc4c9d48">Dispose</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8bbe5678736d9cfd52de124ecb9c90c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbe5678736d9cfd52de124ecb9c90c7">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ailiaSpeech.AiliaSpeechTranslateModel.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disposing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (disposing){</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="comment">// release managed resource</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a2ff933f631562e61e6a1f813f6959f38">Close</a>(); <span class="comment">// release unmanaged resource</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af0cbadd21798dc16435c26fed5bf31c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0cbadd21798dc16435c26fed5bf31c5">&#9670;&nbsp;</a></span>GetEnvironmentId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ailiaSpeech.AiliaSpeechTranslateModel.GetEnvironmentId </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_gpu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>実行環境を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_gpu</td><td>GPUを使用するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>env_id </dd></dl>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                            {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">int</span> env_id = Ailia.AILIA_ENVIRONMENT_ID_AUTO;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (is_gpu) { <span class="comment">// GPU</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            Ailia.ailiaGetEnvironmentCount(ref count);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                IntPtr env_ptr = IntPtr.Zero;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                Ailia.ailiaGetEnvironment(ref env_ptr, (uint)i, Ailia.AILIA_ENVIRONMENT_VERSION);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                Ailia.AILIAEnvironment env = (Ailia.AILIAEnvironment)Marshal.PtrToStructure(env_ptr, typeof(Ailia.AILIAEnvironment));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">if</span> (env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_MPS || env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_CUDA || env.backend == Ailia.AILIA_ENVIRONMENT_BACKEND_VULKAN){</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    env_id = env.id;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    env_name = Marshal.PtrToStringAnsi(env.name);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            env_name = <span class="stringliteral">&quot;cpu&quot;</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> env_id;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a55dd1659e6acdb208d34ee721be74558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55dd1659e6acdb208d34ee721be74558">&#9670;&nbsp;</a></span>GetEnvironmentName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ailiaSpeech.AiliaSpeechTranslateModel.GetEnvironmentName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>実行環境の名称を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>env_name </dd></dl>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                      {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> env_name;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a60b4c7bc7be0b4c11495d3b2f0060df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b4c7bc7be0b4c11495d3b2f0060df2">&#9670;&nbsp;</a></span>GetErrorDetail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ailiaSpeech.AiliaSpeechTranslateModel.GetErrorDetail </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エラーの詳細を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>エラーの詳細を示す文字列。 </dd></dl>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> m_error_detail;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5488867e048a638504d65048c1022f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5488867e048a638504d65048c1022f7b">&#9670;&nbsp;</a></span>IsError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ailiaSpeech.AiliaSpeechTranslateModel.IsError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エラーが発生したか確認します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>エラーが発生した場合はtrue、発生していない場合はfalseを返す。 </dd></dl>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                         {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> m_error;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad9b5e0c4500f42ddd0a4d82e47bb305d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b5e0c4500f42ddd0a4d82e47bb305d">&#9670;&nbsp;</a></span>Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ailiaSpeech.AiliaSpeechTranslateModel.Open </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>encoder_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>decoder_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>source_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>target_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>env_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>memory_mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンスを作成します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encoder_path</td><td>onnxファイルのパス名 </td></tr>
+    <tr><td class="paramname">decoder_path</td><td>onnxファイルのパス名 </td></tr>
+    <tr><td class="paramname">source_path</td><td>Tokenizerのmodelファイルのパス名 </td></tr>
+    <tr><td class="paramname">target_path</td><td>Tokenizerのmodelファイルのパス名 </td></tr>
+    <tr><td class="paramname">post_process_type</td><td>AILIA_SPEECH_POST_PROCESS_TYPE_* </td></tr>
+    <tr><td class="paramname">env_id</td><td>実行環境 (Ailia.AILIA_ENVIRONMENT_ID_AUTOで自動選択) </td></tr>
+    <tr><td class="paramname">memory_mode</td><td>メモリモード (Ailia.AILIA_MEMORY_REDUCE_CONSTANT | Ailia.AILIA_MEMORY_REDUCE_CONSTANT_WITH_INPUT_INITIALIZER | Ailia.AILIA_MEMORY_REUSE_INTERSTAGE など) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合はtrue、失敗した場合はfalseを返す。 </dd></dl>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                                                                                                                             {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        AiliaLicense.CheckAndDownloadLicense();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (net != <span class="keyword">null</span>){</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a2ff933f631562e61e6a1f813f6959f38">Close</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        AiliaSpeech.AILIASpeechApiCallback callback = AiliaSpeech.GetCallback();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">int</span> task = AiliaSpeech.AILIA_SPEECH_TASK_TRANSCRIBE;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">int</span> flag = AiliaSpeech.AILIA_SPEECH_FLAG_NONE;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">int</span> status = AiliaSpeech.ailiaSpeechCreate(ref net, env_id, Ailia.AILIA_MULTITHREAD_AUTO, memory_mode, task, flag, callback, AiliaSpeech.AILIA_SPEECH_API_CALLBACK_VERSION);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        Check(status, <span class="stringliteral">&quot;ailiaSpeechCreate&quot;</span>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        status = AiliaSpeech.ailiaSpeechOpenPostProcessFile(net, encoder_path, decoder_path, source_path, target_path, IntPtr.Zero, type);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        Check(status, <span class="stringliteral">&quot;ailiaSpeechOpenPostProcessFile&quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        m_error = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        m_error_detail = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5cd3d89c448933fbd2d566157eab4efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd3d89c448933fbd2d566157eab4efd">&#9670;&nbsp;</a></span>Translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ailiaSpeech.AiliaSpeechTranslateModel.Translate </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>input_text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>翻訳を実行します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_text</td><td>入力テキスト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は翻訳後の文字列、失敗した場合はnullを返す。 @detail 翻訳を実行します。 ブロッキングAPIです。 </dd></dl>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                                              {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        AiliaSpeech.AILIASpeechText text = <span class="keyword">new</span> AiliaSpeech.AILIASpeechText();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordtype">byte</span>[] input_text_byte = System.Text.Encoding.UTF8.GetBytes(input_text+<span class="stringliteral">&quot;\u0000&quot;</span>);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        GCHandle input_text_handle = GCHandle.Alloc(input_text_byte, GCHandleType.Pinned);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        IntPtr input_text_ptr = input_text_handle.AddrOfPinnedObject();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordtype">byte</span>[] language_text_byte = System.Text.Encoding.UTF8.GetBytes(<span class="stringliteral">&quot;None\u0000&quot;</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        GCHandle language_handle = GCHandle.Alloc(language_text_byte, GCHandleType.Pinned);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        IntPtr language_text_ptr = language_handle.AddrOfPinnedObject();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        text.text = input_text_ptr;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        text.time_stamp_begin = 0.0f;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        text.time_stamp_end = 0.0f;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        text.confidence = 0.0f;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        text.person_id = 0;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        text.language = language_text_ptr;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        uint idx = 0;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordtype">int</span> status = AiliaSpeech.ailiaSpeechSetText(net, text, AiliaSpeech.AILIA_SPEECH_TEXT_VERSION, idx);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">if</span>(status!=0){</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            Check(status, <span class="stringliteral">&quot;ailiaSpeechSetText&quot;</span>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        status = AiliaSpeech.ailiaSpeechPostProcess(net);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">if</span>(status!=0){</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            Check(status, <span class="stringliteral">&quot;ailiaSpeechPostProcess&quot;</span>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        status = AiliaSpeech.ailiaSpeechGetText(net, text, AiliaSpeech.AILIA_SPEECH_TEXT_VERSION, idx);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">if</span>(status!=0){</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            Check(status, <span class="stringliteral">&quot;ailiaSpeechGetText&quot;</span>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        input_text_handle.Free();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        language_handle.Free();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">return</span> Marshal.PtrToStringAnsi(text.text);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="AiliaSpeechTranslateModel_8cs.html">AiliaSpeechTranslateModel.cs</a></li>
+</ul>
+</div><!-- contents -->
+<div class="ttc" id="aclassailiaSpeech_1_1AiliaSpeechTranslateModel_html_a2ff933f631562e61e6a1f813f6959f38"><div class="ttname"><a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a2ff933f631562e61e6a1f813f6959f38">ailiaSpeech.AiliaSpeechTranslateModel.Close</a></div><div class="ttdeci">virtual void Close()</div><div class="ttdoc">インスタンスを破棄します。</div><div class="ttdef"><b>Definition:</b> AiliaSpeechTranslateModel.cs:202</div></div>
+<div class="ttc" id="aclassailiaSpeech_1_1AiliaSpeechTranslateModel_html_a105aded9410f4eba29f93eb9bc4c9d48"><div class="ttname"><a href="classailiaSpeech_1_1AiliaSpeechTranslateModel.html#a105aded9410f4eba29f93eb9bc4c9d48">ailiaSpeech.AiliaSpeechTranslateModel.Dispose</a></div><div class="ttdeci">virtual void Dispose()</div><div class="ttdoc">リソースを解放します。</div><div class="ttdef"><b>Definition:</b> AiliaSpeechTranslateModel.cs:217</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
