@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_55',['y',['../struct__AILIATrackerObject.html#ab0c76416c234516e7f313644b956ffae',1,'_AILIATrackerObject']]]
+  ['score_5fthreshold_63',['score_threshold',['../struct__AILIATrackerSettings.html#a8c843247b100c3ceb2d4935dbc3e5f77',1,'_AILIATrackerSettings']]]
 ];

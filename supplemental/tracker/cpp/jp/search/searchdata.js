@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "_acfhipswxyセ機",
+  0: "_acfhimnpstwxyセ機",
   1: "_",
   2: "afis",
   3: "a",
-  4: "chipwxy",
+  4: "chimnpstwxy",
   5: "a",
   6: "a",
   7: "afsセ機"

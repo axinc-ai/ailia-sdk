@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setup_28',['setup',['../md_md_c_setup.html',1,'']]],
-  ['setup_2emd_29',['setup.md',['../setup_8md.html',1,'']]]
+  ['nms_5fthreshold_30',['nms_threshold',['../struct__AILIATrackerSettings.html#a609f06d183fc96c21673e5305b4fb09c',1,'_AILIATrackerSettings']]]
 ];
