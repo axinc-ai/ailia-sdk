@@ -87,6 +87,13 @@ ailia LLM is a library for running local LLMs. It can load GGUF and easily imple
 - [Python API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/python/en/)
 - [Flutter API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/llm/flutter/en/)
 
+### ailia Tracker
+
+ailia Tracker is a library for tracking the movement of objects based on object detection results. 
+
+- [C++ API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tracker/cpp/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tracker/cpp/jp/)
+- [Unity API (EN)](https://axinc-ai.github.io/ailia-sdk/supplemental/tracker/unity/en/) [(JP)](https://axinc-ai.github.io/ailia-sdk/supplemental/tracker/unity/jp/)
+
 ## Videos
 
 - [youtube](https://www.youtube.com/channel/UCN-KzWACywDpBNOQ6FkIm0g)
