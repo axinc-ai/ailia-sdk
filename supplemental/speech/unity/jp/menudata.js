@@ -59,6 +59,7 @@ var menudata={children:[
 {text:"c",url:"functions_vars.html#index_c"},
 {text:"l",url:"functions_vars.html#index_l"},
 {text:"p",url:"functions_vars.html#index_p"},
+{text:"s",url:"functions_vars.html#index_s"},
 {text:"t",url:"functions_vars.html#index_t"}]}]}]},
 {text:"ファイル",url:"files.html",children:[
 {text:"ファイル一覧",url:"files.html"}]}]}

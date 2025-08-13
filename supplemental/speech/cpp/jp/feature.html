@@ -90,7 +90,7 @@ ailia Speechの機能</h1>
 <p>仮想メモリモードを使用することでメモリ消費量を抑制することが可能です。具体的に、Whisper MediumをCPU推論した場合、デフォルト設定では5.66GBのメモリが必要ですが、仮想メモリモードを使用することで、2.59GBのメモリで推論が可能です。但し、推論時間は16程度低下します。仮想メモリモードを有効にする場合、ailiaSpeechCreateを呼び出す前にailiaSetTemporaryCachePathで一時ファイルを保存するディレクトリを指定した後、ailiaSpeechCreateのmemory_mode引数にAILIA_MEMORY_REDUCE_CONSTANT | AILIA_MEMORY_REDUCE_CONSTANT_WITH_INPUT_INITIALIZER | AILIA_MEMORY_REUSE_INTERSTAGE | AILIA_MEMORY_REDUCE_CONSTANT_WITH_FILE_MAPPEDを指定してください。</p>
 <h3><a class="anchor" id="autotoc_md81"></a>
 話者分離</h3>
-<p>話者分離を使用することで、person_idを付与することが可能です。話者分離のアルゴリズムとしてはPyannoteAudioに対応しています。</p>
+<p>話者分離を使用することで、speaker_idを付与することが可能です。話者分離のアルゴリズムとしてはPyannoteAudioに対応しています。</p>
 <h2><a class="anchor" id="autotoc_md82"></a>
 インタフェース</h2>
 <h3><a class="anchor" id="autotoc_md83"></a>
@@ -106,7 +106,7 @@ ailia Speechの機能</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">time_stamp_end   </td><td class="markdownTableBodyNone">テキストの終了時間。秒単位。    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">person_id   </td><td class="markdownTableBodyNone">人物のユニークID。    </td></tr>
+<td class="markdownTableBodyNone">speaker_id   </td><td class="markdownTableBodyNone">人物のユニークID。    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">language   </td><td class="markdownTableBodyNone">テキストの言語コード。自動認識した場合は認識結果、指定した場合は指定した言語コードが入る。    </td></tr>
 <tr class="markdownTableRowEven">

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setup_140',['setup',['../md_md_c_setup.html',1,'']]],
-  ['setup_20and_20build_141',['Setup and Build',['../setup.html',1,'']]],
-  ['setup_2emd_142',['setup.md',['../setup_8md.html',1,'']]]
+  ['text_143',['text',['../struct__AILIASpeechText.html#ae53e0da708907b4ccd40ba796fa97833',1,'_AILIASpeechText']]],
+  ['time_5fstamp_5fbegin_144',['time_stamp_begin',['../struct__AILIASpeechText.html#afa317ae0e97f34bf603bf174fa57638b',1,'_AILIASpeechText']]],
+  ['time_5fstamp_5fend_145',['time_stamp_end',['../struct__AILIASpeechText.html#aa68dc0ba9cda57315271a26a574561c4',1,'_AILIASpeechText']]]
 ];

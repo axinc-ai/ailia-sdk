@@ -104,7 +104,7 @@ Text</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">time_stamp_begin   </td><td class="markdownTableBodyNone">Timestamp of the end of the transcribed audio segment, in seconds.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">person_id   </td><td class="markdownTableBodyNone">Unique ID identifying the speaking person.    </td></tr>
+<td class="markdownTableBodyNone">speaker_id   </td><td class="markdownTableBodyNone">Unique ID identifying the speaking person.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">language   </td><td class="markdownTableBodyNone">Language code of the text. When using autodetection, this contains the detected language, else it contains just the language that has been set.    </td></tr>
 <tr class="markdownTableRowEven">
@@ -123,7 +123,7 @@ VAD (Voice Activity Detection)</h3>
 <p>It is possible to detect silence with AI by using AILIA_SPEECH_VAD_TYPE_SILERO and the OpenVadFile API method. Compared to silence detection using the volume, this allows to achieve silence detection with a very high accuracy. When silent audio data is fed into AI, it can happen that it outputs something like "Thank you for your attention", so it is recommended to use VAD silence detection in order to skip speech recognition on these parts.</p>
 <h3><a class="anchor" id="autotoc_md108"></a>
 Speaker Diarization</h3>
-<p>By using speaker diarization, it is possible to assign a person_id. It is compatible with PyannoteAudio as a speaker separation algorithm.</p>
+<p>By using speaker diarization, it is possible to assign a speaker_id. It is compatible with PyannoteAudio as a speaker separation algorithm.</p>
 <h2><a class="anchor" id="autotoc_md109"></a>
 Specialized features</h2>
 <h3><a class="anchor" id="autotoc_md110"></a>

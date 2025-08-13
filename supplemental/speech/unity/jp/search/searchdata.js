@@ -5,7 +5,7 @@ var indexSectionsWithContent =
   2: "a",
   3: "afis",
   4: "acdgiorst",
-  5: "aclpt",
+  5: "aclpst",
   6: "afsu機"
 };
 
