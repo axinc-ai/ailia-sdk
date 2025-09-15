@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "acdfgiloprstuæ",
+  0: "acdfgiloprstu機",
   1: "a",
   2: "a",
   3: "afis",
   4: "acdgiorst",
-  5: "aclpt",
-  6: "afsuæ"
+  5: "aclpst",
+  6: "afsu機"
 };
 
 var indexSectionNames =
