@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.4.0.0</span>
+   &#160;<span id="projectnumber">1.5.0.0</span>
    </div>
   </td>
  </tr>
@@ -76,13 +76,17 @@ Text transcription and translation</h3>
 <p>You can transcribe a text from an audio input by passing AILIA_SPEECH_TASK_TRANSCRIBE as an argument. Passing AILIA_SPEECH_TASK_TRANSLATE in argument allows to transcribe and then translate into English.</p>
 <h3><a class="anchor" id="autotoc_md98"></a>
 Available AI models</h3>
-<p>As AI model, you can use the Whisper variants base, tiny, small, or medium. The models listed in this order are of increasing accuracy. We recommend at least "small" to get an accuracy good enough to be useful.</p>
-<p>"medium" is of an even greater accuracy than "small", but at a cost of a big processing load.</p>
+<p>As AI models, Whisper and SenseVoice are available.</p>
+<p>For Whisper, base, tiny, small, medium, largev3, and largev3-turbo are available. The latter models are more accurate. To achieve practical accuracy, models of small or higher are recommended. Medium is more accurate than small but has a higher processing load.</p>
+<p>For SenseVoice, the small model is available. It operates at the same speed as Whisper Tiny and achieves the same accuracy as Whisper Medium.</p>
+<p>Note that AILIA_SPEECH_TASK_TRANSLATE cannot be used with Whisper LargeV3 Turbo or SenseVoice.</p>
 <h3><a class="anchor" id="autotoc_md99"></a>
 Set the language</h3>
 <p>By default, the language is deduced for each audio segment. When using the API method <code>SetLanguage</code>, the language is fixed. As for short audio input the language deduction can be erroneous, please call the SetLanguage API in case the language is clearly known by other means.</p>
-<p>The languages codes that can be indicated are listed below:</p>
+<p>The language codes that can be specified in Whisper are as follows.</p>
 <div class="fragment"><div class="line">&quot;en&quot;, &quot;zh&quot;, &quot;de&quot;, &quot;es&quot;, &quot;ru&quot;, &quot;ko&quot;, &quot;fr&quot;, &quot;ja&quot;, &quot;pt&quot;, &quot;tr&quot;, &quot;pl&quot;, &quot;ca&quot;, &quot;nl&quot;, &quot;ar&quot;, &quot;sv&quot;, &quot;it&quot;, &quot;id&quot;, &quot;hi&quot;, &quot;fi&quot;, &quot;vi&quot;, &quot;iw&quot;, &quot;uk&quot;, &quot;el&quot;, &quot;ms&quot;, &quot;cs&quot;, &quot;ro&quot;, &quot;da&quot;, &quot;hu&quot;, &quot;ta&quot;, &quot;no&quot;, &quot;th&quot;, &quot;ur&quot;, &quot;hr&quot;, &quot;bg&quot;, &quot;lt&quot;, &quot;la&quot;, &quot;mi&quot;, &quot;ml&quot;, &quot;cy&quot;, &quot;sk&quot;, &quot;te&quot;, &quot;fa&quot;, &quot;lv&quot;, &quot;bn&quot;, &quot;sr&quot;, &quot;az&quot;, &quot;sl&quot;, &quot;kn&quot;, &quot;et&quot;, &quot;mk&quot;, &quot;br&quot;, &quot;eu&quot;, &quot;is&quot;, &quot;hy&quot;, &quot;ne&quot;, &quot;mn&quot;, &quot;bs&quot;, &quot;kk&quot;, &quot;sq&quot;, &quot;sw&quot;, &quot;gl&quot;, &quot;mr&quot;, &quot;pa&quot;, &quot;si&quot;, &quot;km&quot;, &quot;sn&quot;, &quot;yo&quot;, &quot;so&quot;, &quot;af&quot;, &quot;oc&quot;, &quot;ka&quot;, &quot;be&quot;, &quot;tg&quot;, &quot;sd&quot;, &quot;gu&quot;, &quot;am&quot;, &quot;yi&quot;, &quot;lo&quot;, &quot;uz&quot;, &quot;fo&quot;, &quot;ht&quot;, &quot;ps&quot;, &quot;tk&quot;, &quot;nn&quot;, &quot;mt&quot;, &quot;sa&quot;, &quot;lb&quot;, &quot;my&quot;, &quot;bo&quot;, &quot;tl&quot;, &quot;mg&quot;, &quot;as&quot;, &quot;tt&quot;, &quot;haw&quot;, &quot;ln&quot;, &quot;ha&quot;, &quot;ba&quot;, &quot;jw&quot;, &quot;su&quot;</div>
+</div><!-- fragment --><p>The language codes that can be specified in SenseVoice are as follows.</p>
+<div class="fragment"><div class="line">&quot;zh&quot;, &quot;en&quot;, &quot;yue&quot;, &quot;ja&quot;, &quot;ko&quot;</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md100"></a>
 Enable live processing</h3>
 <p>When live processing is enabled, it is possible to run and preview a tentative inference on the current buffer content, without even waiting for 30 seconds of audio data to arrive. In normal speech recognition, inference does not happen until the next voice input border is detected, e.g. a silence detected using VAD. By contrast, with ailia Speech, when enabling live processing, it is possible to perform inference even before detecting an audio border. To enable live conversion, use the flag AILIA_SPEECH_FLAG_LIVE. The inference preview is notified to IntermediateCallback. Inference is more accurate when the live setting is not enabled, because it can refer to past audio data. For this reason, in case of processing an audio file, it is recommended to not use the live mode, and enable it only if some audio input has to be processed realtime.</p>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.4.0.0</span>
+   &#160;<span id="projectnumber">1.5.0.0</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a1015f925e7e40c21266700c787ae664d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a1015f925e7e40c21266700c787ae664d">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3</a>&#160;&#160;&#160;(5)</td></tr>
 <tr class="memdesc:a1015f925e7e40c21266700c787ae664d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Large V3 model.  <a href="ailia__speech_8h.html#a1015f925e7e40c21266700c787ae664d">More...</a><br /></td></tr>
 <tr class="separator:a1015f925e7e40c21266700c787ae664d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8343e45e3ca420a03525d92c6dd915a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ab8343e45e3ca420a03525d92c6dd915a">AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL</a>&#160;&#160;&#160;(10)</td></tr>
+<tr class="memdesc:ab8343e45e3ca420a03525d92c6dd915a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SenseVoice Small model.  <a href="ailia__speech_8h.html#ab8343e45e3ca420a03525d92c6dd915a">More...</a><br /></td></tr>
+<tr class="separator:ab8343e45e3ca420a03525d92c6dd915a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="memdesc:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transcribe mode.  <a href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">More...</a><br /></td></tr>
 <tr class="separator:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,7 +316,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6c25986e571ce83f49b523e2b59607da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a callback to get intermediate results of recognition.  <a href="ailia__speech_8h.html#a6c25986e571ce83f49b523e2b59607da">More...</a><br /></td></tr>
 <tr class="separator:a6c25986e571ce83f49b523e2b59607da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb4f738437f4663bf6cc12bb088cecfc"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">ailiaSpeechTranscribe</a> (struct AILIASpeech *net)</td></tr>
-<tr class="memdesc:adb4f738437f4663bf6cc12bb088cecfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speech recognition.  <a href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">More...</a><br /></td></tr>
+<tr class="memdesc:adb4f738437f4663bf6cc12bb088cecfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform speech recognition.  <a href="ailia__speech_8h.html#adb4f738437f4663bf6cc12bb088cecfc">More...</a><br /></td></tr>
 <tr class="separator:adb4f738437f4663bf6cc12bb088cecfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a732a73c50fcef127a40067467a007af5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__speech_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a732a73c50fcef127a40067467a007af5">ailiaSpeechPostProcess</a> (struct AILIASpeech *net)</td></tr>
 <tr class="memdesc:a732a73c50fcef127a40067467a007af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute post process.  <a href="ailia__speech_8h.html#a732a73c50fcef127a40067467a007af5">More...</a><br /></td></tr>
@@ -461,6 +464,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default flag. </p>
+
+</div>
+</div>
+<a id="ab8343e45e3ca420a03525d92c6dd915a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8343e45e3ca420a03525d92c6dd915a">&#9670;&nbsp;</a></span>AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL&#160;&#160;&#160;(10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SenseVoice Small model. </p>
 
 </div>
 </div>
@@ -2092,7 +2111,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>To enable VAD, you need to set the detection threshold using ailiaSpeechSetSilentThreshold. </p>
 
 </div>
 </div>
@@ -2137,7 +2157,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
+<p>To enable VAD, you need to set the detection threshold using ailiaSpeechSetSilentThreshold. </p>
 
 </div>
 </div>
@@ -2466,9 +2487,9 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
-    <tr><td class="paramname">silent_threshold</td><td>volume threshold </td></tr>
-    <tr><td class="paramname">speech_sec</td><td>speech time </td></tr>
-    <tr><td class="paramname">no_speech_sec</td><td>no_speech time </td></tr>
+    <tr><td class="paramname">silent_threshold</td><td>volume threshold (Standard value 0.5) </td></tr>
+    <tr><td class="paramname">speech_sec</td><td>speech time (sec) (Standard value 1.0) </td></tr>
+    <tr><td class="paramname">no_speech_sec</td><td>no_speech time (sec) (Standard value 1.0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -2546,7 +2567,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Speech recognition. </p>
+<p>Perform speech recognition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>

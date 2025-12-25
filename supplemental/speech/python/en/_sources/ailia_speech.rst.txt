@@ -14,3 +14,9 @@ Classes
    :members:
    :undoc-members:
    :show-inheritance:
+
+.. autoclass:: ailia_speech.SenseVoice
+   :special-members: __init__, __name__
+   :members:
+   :undoc-members:
+   :show-inheritance:
