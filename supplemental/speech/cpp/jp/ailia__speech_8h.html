@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_speech
-   &#160;<span id="projectnumber">1.4.0.0</span>
+   &#160;<span id="projectnumber">1.5.0.0</span>
    </div>
   </td>
  </tr>
@@ -122,6 +122,9 @@ ailia_speech.h の依存先関係図:</div>
 <tr class="memitem:a1015f925e7e40c21266700c787ae664d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a1015f925e7e40c21266700c787ae664d">AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3</a>&#160;&#160;&#160;(5)</td></tr>
 <tr class="memdesc:a1015f925e7e40c21266700c787ae664d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whisper Large V3 model  <a href="ailia__speech_8h.html#a1015f925e7e40c21266700c787ae664d">[詳解]</a><br /></td></tr>
 <tr class="separator:a1015f925e7e40c21266700c787ae664d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8343e45e3ca420a03525d92c6dd915a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#ab8343e45e3ca420a03525d92c6dd915a">AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL</a>&#160;&#160;&#160;(10)</td></tr>
+<tr class="memdesc:ab8343e45e3ca420a03525d92c6dd915a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SenseVoice Small model  <a href="ailia__speech_8h.html#ab8343e45e3ca420a03525d92c6dd915a">[詳解]</a><br /></td></tr>
+<tr class="separator:ab8343e45e3ca420a03525d92c6dd915a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">AILIA_SPEECH_TASK_TRANSCRIBE</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="memdesc:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">音声のテキスト化を行います  <a href="ailia__speech_8h.html#a6f87fdadb3ef26a39a787c4891c1a27e">[詳解]</a><br /></td></tr>
 <tr class="separator:a6f87fdadb3ef26a39a787c4891c1a27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,8 +346,8 @@ ailia_speech.h の依存先関係図:</div>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>ailia Speech AI音声認識 ライブラリ </p>
-<dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ax Inc. </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2024/01/13 </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ailia Inc. </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2025/12/18 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a1c6a80cf85ef33500663112959784400"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c6a80cf85ef33500663112959784400">&#9670;&nbsp;</a></span>AILIA_API</h2>
@@ -469,6 +472,22 @@ ailia_speech.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>フラグを設定しません </p>
+
+</div>
+</div>
+<a id="ab8343e45e3ca420a03525d92c6dd915a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8343e45e3ca420a03525d92c6dd915a">&#9670;&nbsp;</a></span>AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL&#160;&#160;&#160;(10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SenseVoice Small model </p>
 
 </div>
 </div>
@@ -2101,7 +2120,8 @@ ailia_speech.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>VADを有効にするにはailiaSpeechSetSilentThresholdで判定しきい値を設定する必要があります。 </p>
 
 </div>
 </div>
@@ -2146,7 +2166,8 @@ ailia_speech.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
+<p>VADを有効にするにはailiaSpeechSetSilentThresholdで判定しきい値を設定する必要があります。 </p>
 
 </div>
 </div>
@@ -2475,9 +2496,9 @@ ailia_speech.h の依存先関係図:</div>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">net</td><td>ネットワークオブジェクトポインタ </td></tr>
-    <tr><td class="paramname">silent_threshold</td><td>有音判定のしきい値 </td></tr>
-    <tr><td class="paramname">speech_sec</td><td>有音区間の時間（秒数） </td></tr>
-    <tr><td class="paramname">no_speech_sec</td><td>無音区間の時間（秒数） </td></tr>
+    <tr><td class="paramname">silent_threshold</td><td>有音判定のしきい値（標準値0.5） </td></tr>
+    <tr><td class="paramname">speech_sec</td><td>有音区間の時間（秒数）（標準値1.0） </td></tr>
+    <tr><td class="paramname">no_speech_sec</td><td>無音区間の時間（秒数）（標準値1.0） </td></tr>
   </table>
   </dd>
 </dl>
