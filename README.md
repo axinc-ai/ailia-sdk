@@ -100,5 +100,5 @@ ailia Tracker is a library for tracking the movement of objects based on object 
 
 ## Contact
 
-- [ax Inc.](https://axinc.jp/en/)
+- [ailia Inc.](https://ailia.ai/en/)
 
