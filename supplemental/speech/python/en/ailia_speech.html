@@ -114,24 +114,30 @@
 <dt class="sig sig-object py" id="ailia_speech.AiliaSpeechModel.transcribe">
 <span class="sig-name descname"><span class="pre">transcribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_waveform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_speech.AiliaSpeechModel.transcribe" title="Link to this definition">¶</a></dt>
 <dd><p>Perform speech recognition. Processes the entire audio at once.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>audio_waveform</strong> (<em>np.array</em>) – PCM data</p></li>
+<li><p><strong>audio_waveform</strong> (<em>np.ndarray</em>) – PCM data, formatted as either <cite>(num_samples)</cite> or <cite>(channels, num_samples)</cite></p></li>
 <li><p><strong>sampling_rate</strong> (<em>int</em>) – Sampling rate (Hz)</p></li>
-<li><p><strong>lang</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default : None</em>) – Language code (ja, en, etc.) (automatic detection if None)</p></li>
+<li><p><strong>lang</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Language code (ja, en, etc.) (automatic detection if None)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>text</strong> (<em>Speech recognition result text</em>)</p></li>
-<li><p><strong>time_stamp_begin</strong> (<em>Start Time (seconds)</em>)</p></li>
-<li><p><strong>time_stamp_end</strong> (<em>End Time (seconds)</em>)</p></li>
-<li><p><strong>speaker_id</strong> (<em>Speaker ID (when diarization is enabled)</em>)</p></li>
-<li><p><strong>language</strong> (<em>Language code</em>)</p></li>
-<li><p><strong>confidence</strong> (<em>Confidence level</em>)</p></li>
-</ul>
-</p>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>text<span class="classifier">str</span></dt><dd><p>Recognized speech text</p>
+</dd>
+<dt>time_stamp_begin<span class="classifier">float</span></dt><dd><p>Start time (seconds)</p>
+</dd>
+<dt>time_stamp_end<span class="classifier">float</span></dt><dd><p>End time (seconds)</p>
+</dd>
+<dt>speaker_id<span class="classifier">int or None</span></dt><dd><p>Speaker ID (when diarization is enabled)</p>
+</dd>
+<dt>language<span class="classifier">str</span></dt><dd><p>Language code</p>
+</dd>
+<dt>confidence<span class="classifier">float</span></dt><dd><p>Confidence level</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -140,26 +146,32 @@
 <dt class="sig sig-object py" id="ailia_speech.AiliaSpeechModel.transcribe_step">
 <span class="sig-name descname"><span class="pre">transcribe_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_waveform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complete</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_speech.AiliaSpeechModel.transcribe_step" title="Link to this definition">¶</a></dt>
 <dd><p>Perform speech recognition. Processes the audio sequentially.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>audio_waveform</strong> (<em>np.array</em>) – PCM data</p></li>
+<li><p><strong>audio_waveform</strong> (<em>np.ndarray</em>) – PCM data, formatted as either <cite>(num_samples)</cite> or <cite>(channels, num_samples)</cite></p></li>
 <li><p><strong>sampling_rate</strong> (<em>int</em>) – Sampling rate (Hz)</p></li>
-<li><p><strong>lang</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default : None</em>) – Language code (ja, en, etc.) (automatic detection if None)</p></li>
 <li><p><strong>complete</strong> (<em>bool</em>) – True if this is the final audio input.
 transcribe_step executes a step each time there is microphone input, and by setting complete to True at the end, the buffer can be flushed.</p></li>
+<li><p><strong>lang</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Language code (ja, en, etc.) (automatic detection if None)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>text</strong> (<em>Speech recognition result text</em>)</p></li>
-<li><p><strong>time_stamp_begin</strong> (<em>Start Time (seconds)</em>)</p></li>
-<li><p><strong>time_stamp_end</strong> (<em>End Time (seconds)</em>)</p></li>
-<li><p><strong>speaker_id</strong> (<em>Speaker ID (when diarization is enabled)</em>)</p></li>
-<li><p><strong>language</strong> (<em>Language code</em>)</p></li>
-<li><p><strong>confidence</strong> (<em>Confidence level</em>)</p></li>
-</ul>
-</p>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>text<span class="classifier">str</span></dt><dd><p>Recognized speech text</p>
+</dd>
+<dt>time_stamp_begin<span class="classifier">float</span></dt><dd><p>Start time (seconds)</p>
+</dd>
+<dt>time_stamp_end<span class="classifier">float</span></dt><dd><p>End time (seconds)</p>
+</dd>
+<dt>speaker_id<span class="classifier">int or None</span></dt><dd><p>Speaker ID (when diarization is enabled)</p>
+</dd>
+<dt>language<span class="classifier">str</span></dt><dd><p>Language code</p>
+</dd>
+<dt>confidence<span class="classifier">float</span></dt><dd><p>Confidence level</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -173,11 +185,11 @@ transcribe_step executes a step each time there is microphone input, and by sett
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_speech.Whisper.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_speech.Whisper.__init__" title="Link to this definition">¶</a></dt>
-<dd><p>constructor of ailia Specch model instance.</p>
+<dd><p>Constructor of ailia Speech model instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia excecution.
+<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia execution.
 To retrieve env_id value, use</p>
 <blockquote>
 <div><p>ailia.get_environment_count() / ailia.get_environment() pair</p>
@@ -194,18 +206,16 @@ valid values:</p>
 1 to 32.</p>
 </div></blockquote>
 </p></li>
-<li><p><strong>memory_mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 11</em><em> (</em><em>reuse interstage</em><em>)</em>) – memory management mode of ailia excecution.
+<li><p><strong>memory_mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 11</em><em> (</em><em>reuse interstage</em><em>)</em>) – memory management mode of ailia execution.
 To retrieve memory_mode value, use ailia.get_memory_mode() .</p></li>
 <li><p><strong>task</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_TASK_TRANSCRIBE</em>) – AILIA_SPEECH_TASK_TRANSCRIBE or AILIA_SPEECH_TASK_TRANSLATE</p></li>
 <li><p><strong>flags</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_FLAG_NONE</em>) – Reserved</p></li>
 <li><p><strong>callback</strong> (<em>func</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – <p>Callback for receiving intermediate result text .
-Example</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def f_callback(text):</dt><dd><p>print(text)</p>
-</dd>
-</dl>
-</div></blockquote>
+.. rubric:: Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">f_callback</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
 </p></li>
 </ul>
 </dd>
@@ -219,13 +229,13 @@ Example</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_path</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default : &quot;./&quot;</em>) – Destination for saving the model file</p></li>
-<li><p><strong>model_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default : AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY</em>) – Type of model. Can be set to AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_BASE, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_MEDIUM, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3 or AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3_TURBO.</p></li>
-<li><p><strong>vad_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default : AILIA_SPEECH_VAD_TYPE_SILERO</em>) – Type of VAD. Can be set to None or AILIA_SPEECH_VAD_TYPE_SILERO.</p></li>
-<li><p><strong>vad_version</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default : &quot;4&quot;</em>) – Versions 4, 5, and 6.2 of SileroVAD can be specified.</p></li>
-<li><p><strong>diarization_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default : None</em>) – Type of diarization. Can be set to None or AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO.
-transcribe_step executes a step each time there is microphone input, and by setting complete to True at the end, the buffer can be flushed.</p></li>
-<li><p><strong>is_fp16</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default : False</em>) – Whether to use an FP16 model.</p></li>
+<li><p><strong>model_path</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default: &quot;./&quot;</em>) – Destination for saving the model file</p></li>
+<li><p><strong>model_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY</em>) – Type of model. Can be set to AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_TINY, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_BASE, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_SMALL, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_MEDIUM, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE, AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3 or AILIA_SPEECH_MODEL_TYPE_WHISPER_MULTILINGUAL_LARGE_V3_TURBO.</p></li>
+<li><p><strong>vad_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_VAD_TYPE_SILERO</em>) – Type of VAD. Can be set to None or AILIA_SPEECH_VAD_TYPE_SILERO.</p></li>
+<li><p><strong>vad_version</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default: &quot;4&quot;</em>) – Versions 4, 5, and 6.2 of SileroVAD can be specified.</p></li>
+<li><p><strong>diarization_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Type of diarization. Can be set to None or AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO.
+By specifying AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO, speaker diarization can be enabled. The results of the speaker diarization are stored in speaker_id.</p></li>
+<li><p><strong>is_fp16</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – Whether to use an FP16 model.</p></li>
 </ul>
 </dd>
 </dl>
@@ -240,11 +250,11 @@ transcribe_step executes a step each time there is microphone input, and by sett
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_speech.SenseVoice.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_thread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_speech.SenseVoice.__init__" title="Link to this definition">¶</a></dt>
-<dd><p>constructor of ailia Specch model instance.</p>
+<dd><p>Constructor of ailia Speech model instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default:ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia excecution.
+<li><p><strong>env_id</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: ENVIRONMENT_AUTO</em><em>(</em><em>-1</em><em>)</em>) – <p>environment id of ailia execution.
 To retrieve env_id value, use</p>
 <blockquote>
 <div><p>ailia.get_environment_count() / ailia.get_environment() pair</p>
@@ -261,18 +271,16 @@ valid values:</p>
 1 to 32.</p>
 </div></blockquote>
 </p></li>
-<li><p><strong>memory_mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 11</em><em> (</em><em>reuse interstage</em><em>)</em>) – memory management mode of ailia excecution.
+<li><p><strong>memory_mode</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: 11</em><em> (</em><em>reuse interstage</em><em>)</em>) – memory management mode of ailia execution.
 To retrieve memory_mode value, use ailia.get_memory_mode() .</p></li>
 <li><p><strong>task</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_TASK_TRANSCRIBE</em>) – AILIA_SPEECH_TASK_TRANSCRIBE or AILIA_SPEECH_TASK_TRANSLATE</p></li>
 <li><p><strong>flags</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_FLAG_NONE</em>) – Reserved</p></li>
 <li><p><strong>callback</strong> (<em>func</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – <p>Callback for receiving intermediate result text .
-Example</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def f_callback(text):</dt><dd><p>print(text)</p>
-</dd>
-</dl>
-</div></blockquote>
+.. rubric:: Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">f_callback</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
 </p></li>
 </ul>
 </dd>
@@ -286,13 +294,13 @@ Example</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_path</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default : &quot;./&quot;</em>) – Destination for saving the model file</p></li>
-<li><p><strong>model_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default : AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL</em>) – Type of model. Can be set to AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL.</p></li>
-<li><p><strong>vad_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default : AILIA_SPEECH_VAD_TYPE_SILERO</em>) – Type of VAD. Can be set to None or AILIA_SPEECH_VAD_TYPE_SILERO.</p></li>
-<li><p><strong>vad_version</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default : &quot;4&quot;</em>) – Versions 4, 5, and 6.2 of SileroVAD can be specified.</p></li>
-<li><p><strong>diarization_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default : None</em>) – Type of diarization. Can be set to None or AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO.
-transcribe_step executes a step each time there is microphone input, and by setting complete to True at the end, the buffer can be flushed.</p></li>
-<li><p><strong>is_fp16</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default : False</em>) – Whether to use an FP16 model.</p></li>
+<li><p><strong>model_path</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default: &quot;./&quot;</em>) – Destination for saving the model file</p></li>
+<li><p><strong>model_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL</em>) – Type of model. Can be set to AILIA_SPEECH_MODEL_TYPE_SENSEVOICE_SMALL.</p></li>
+<li><p><strong>vad_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: AILIA_SPEECH_VAD_TYPE_SILERO</em>) – Type of VAD. Can be set to None or AILIA_SPEECH_VAD_TYPE_SILERO.</p></li>
+<li><p><strong>vad_version</strong> (<em>string</em><em>, </em><em>optional</em><em>, </em><em>default: &quot;4&quot;</em>) – Versions 4, 5, and 6.2 of SileroVAD can be specified.</p></li>
+<li><p><strong>diarization_type</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – Type of diarization. Can be set to None or AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO.
+By specifying AILIA_SPEECH_DIARIZATION_TYPE_PYANNOTE_AUDIO, speaker diarization can be enabled. The results of the speaker diarization are stored in speaker_id.</p></li>
+<li><p><strong>is_fp16</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default: False</em>) – Whether to use an FP16 model.</p></li>
 </ul>
 </dd>
 </dl>
