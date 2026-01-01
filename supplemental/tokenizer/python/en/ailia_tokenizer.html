@@ -6,12 +6,12 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ailia_tokenizer package &mdash; ailia Tokenizer Python API 1.2.0 documentation</title>
+  <title>ailia_tokenizer package &mdash; ailia Tokenizer Python API 1.5.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-      <script src="_static/documentation_options.js?v=6efca38a"></script>
+      <script src="_static/documentation_options.js?v=44dfd65d"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -148,37 +148,189 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.char_to_token">
 <span class="sig-name descname"><span class="pre">char_to_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_or_char_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.char_to_token" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return the token index corresponding to a character position.</p>
+<p>Equivalent to HuggingFace’s <cite>EncodingFast.char_to_token()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_or_char_index</strong> (<em>int</em>) – If <cite>char_index</cite> is None, interpreted as <cite>char_index</cite> (batch=0).
+Otherwise, interpreted as batch index.</p></li>
+<li><p><strong>char_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Character position within the text.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Token index corresponding to the specified character position.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If the tokenizer does not support word mappings.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode_plus</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="o">.</span><span class="n">char_to_token</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.items">
 <span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.items" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return available key-value pairs as a dictionary view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Iterable object containing key-value pairs (excluding internal fields).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict_items</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode_plus</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="go">{&#39;input_ids&#39;: array([...]), &#39;attention_mask&#39;: array([...])}</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.keys">
 <span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.keys" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return available key names excluding internal attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Iterable object containing available field names, excluding
+<cite>_sequence_ids</cite>, <cite>_word_ids</cite>, <cite>_char_starts</cite>, and <cite>_char_ends</cite>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict_keys</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode_plus</span><span class="p">(</span><span class="s2">&quot;This is a test.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">[&#39;input_ids&#39;, &#39;attention_mask&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.sequence_ids">
 <span class="sig-name descname"><span class="pre">sequence_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.sequence_ids" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return sequence group IDs for a given batch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> (<em>int</em>) – Index of the batch instance.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sequence IDs for each token.
+0 indicates tokens from text, 1 from text_pair.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of int or None</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;np&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="o">.</span><span class="n">sequence_ids</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">[0, 0, 0, 1, 1]</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.token_to_word">
 <span class="sig-name descname"><span class="pre">token_to_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_or_token_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.token_to_word" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return the word index corresponding to a token index.</p>
+<p>Equivalent to HuggingFace’s <cite>EncodingFast.token_to_word()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_or_token_index</strong> (<em>int</em>) – If <cite>token_index</cite> is None, interpreted as token index (batch 0).
+Otherwise, interpreted as batch index.</p></li>
+<li><p><strong>token_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Token index to map to a word index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Word index corresponding to token index or None if not applicable.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If the tokenizer does not support word mapping.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode_plus</span><span class="p">(</span><span class="s2">&quot;beautiful sunshine&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="o">.</span><span class="n">token_to_word</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.word_ids">
 <span class="sig-name descname"><span class="pre">word_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.word_ids" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return mapping from token index to word index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch_index</strong> (<em>int</em><em>, </em><em>optional</em><em>, </em><em>default=0</em>) – Batch element index to retrieve mapping for.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Each element corresponds to the word index associated
+with that token. May contain <cite>None</cite> for special or non-word tokens.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[Optional[int]]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If word ID mapping is not supported for this tokenizer.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode_plus</span><span class="p">(</span><span class="s2">&quot;The quick brown fox.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="o">.</span><span class="n">word_ids</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">[0, 1, 2, 3, None]  # (None for special token like [CLS]/[SEP])</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.AiliaTokenizerResult.word_to_chars">
 <span class="sig-name descname"><span class="pre">word_to_chars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_or_word_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.AiliaTokenizerResult.word_to_chars" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return the character span (start, end) for a given word index.</p>
+<p>Equivalent to HuggingFace’s <cite>EncodingFast.word_to_chars()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_or_word_index</strong> (<em>int</em>) – If <cite>word_index</cite> is None, interpreted as word index (batch 0).
+Otherwise, interpreted as batch index.</p></li>
+<li><p><strong>word_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Word index for which to retrieve character range.</p></li>
+<li><p><strong>sequence_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Sequence group ID (0 for first sequence, 1 for pair).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Character start/end positions for the specified word.
+Returns None if the word is not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>namedtuple(CharSpan, [‘start’, ‘end’]) or None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If the tokenizer does not support word mappings.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode_plus</span><span class="p">(</span><span class="s2">&quot;Nice weather today&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="o">.</span><span class="n">word_to_chars</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">CharSpan(start=12, end=17)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -186,50 +338,286 @@
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ailia_tokenizer.</span></span><span class="sig-name descname"><span class="pre">PreTrainedTokenizer</span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class compatible with the HuggingFace Transformers Tokenizer API.</p>
+<p>This class provides common preprocessing, encoding, decoding,
+padding, and truncation behaviors for various tokenizer models
+implemented using the ailia Tokenizer backend.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.add_special_tokens">
 <span class="sig-name descname"><span class="pre">add_special_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">special_tokens_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.add_special_tokens" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Add or configure special tokens (e.g. [PAD], additional tokens).</p>
+<p>Equivalent to HuggingFace’s <cite>add_special_tokens()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>special_tokens_dict</strong> (<em>dict</em>) – <dl class="simple">
+<dt>Dictionary describing special tokens. Supported keys:</dt><dd><ul class="simple">
+<li><p>”pad_token” : str</p></li>
+<li><p>”additional_special_tokens” : list[str]</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>AiliaTokenizerError</strong> – If unsupported token type is provided.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">T5Tokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;t5-small&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">add_special_tokens</span><span class="p">({</span><span class="s2">&quot;pad_token&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;pad&gt;&quot;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">add_special_tokens</span><span class="p">({</span><span class="s2">&quot;additional_special_tokens&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;extra_id_0&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;extra_id_1&gt;&quot;</span><span class="p">]})</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.batch_decode">
 <span class="sig-name descname"><span class="pre">batch_decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.batch_decode" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Batch decode a list of token ID sequences into strings.</p>
+<p>Equivalent to HuggingFace’s <cite>Tokenizer.batch_decode()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequences</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>int</em><em>]</em><em>]</em>) – Sequences of token IDs to decode.</p></li>
+<li><p><strong>skip_special_tokens</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Remove special tokens from decoded outputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of decoded UTF-8 text strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.batch_encode_plus">
 <span class="sig-name descname"><span class="pre">batch_encode_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_token_type_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.batch_encode_plus" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Batch encode multiple texts or text pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>list</em><em>[</em><em>str</em><em>] or </em><em>list</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – List of input strings or list of [text, text_pair] pairs.</p></li>
+<li><p><strong>text_pair</strong> (<em>list</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Optional list of second input sequences.</p></li>
+<li><p><strong>padding</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>default=True</em>) – Padding mode (‘longest’, ‘max_length’, True, or False).</p></li>
+<li><p><strong>truncation</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>default=True</em>) – Truncation strategy to apply if sequences exceed max_length.</p></li>
+<li><p><strong>return_tensors</strong> (<em>str</em><em>, </em><em>optional</em>) – If ‘np’, returns NumPy arrays with proper shape.</p></li>
+<li><p><strong>max_length</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum token length.</p></li>
+<li><p><strong>split_special_tokens</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to split special tokens separately.</p></li>
+<li><p><strong>return_token_type_ids</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to return token type ids.</p></li>
+<li><p><strong>add_special_tokens</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Include special tokens ([CLS], [SEP], etc.).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Structured result with batched encodings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult" title="ailia_tokenizer.AiliaTokenizerResult">AiliaTokenizerResult</a> or AiliaTokenizerResultWithTokenTypeIds</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>When <code class="docutils literal notranslate"><span class="pre">text</span></code> is a single string, each character is treated as a separate item.
+To encode a single sentence as one sequence, prefer <code class="docutils literal notranslate"><span class="pre">encode()</span></code> or <code class="docutils literal notranslate"><span class="pre">encode_plus()</span></code>.</p></li>
+</ul>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.convert_ids_to_tokens">
 <span class="sig-name descname"><span class="pre">convert_ids_to_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.convert_ids_to_tokens" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Convert token IDs to token strings using loaded vocabulary.</p>
+<p>Equivalent to HuggingFace’s <cite>convert_ids_to_tokens()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ids</strong> (<em>int</em><em> or </em><em>list</em><em>[</em><em>int</em><em>]</em>) – Token ID or list of token IDs.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Corresponding token(s) from the tokenizer vocabulary.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or list[str]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If model not yet initialized or vocab not loaded.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">convert_ids_to_tokens</span><span class="p">([</span><span class="mi">101</span><span class="p">,</span> <span class="mi">2023</span><span class="p">,</span> <span class="mi">2003</span><span class="p">,</span> <span class="mi">1037</span><span class="p">,</span> <span class="mi">3231</span><span class="p">,</span> <span class="mi">102</span><span class="p">])</span>
+<span class="go">[&#39;[CLS]&#39;, &#39;this&#39;, &#39;is&#39;, &#39;a&#39;, &#39;test&#39;, &#39;[SEP]&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.convert_tokens_to_ids">
 <span class="sig-name descname"><span class="pre">convert_tokens_to_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.convert_tokens_to_ids" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Convert string token(s) to integer token IDs.</p>
+<p>Equivalent to HuggingFace’s <cite>convert_tokens_to_ids()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tokens</strong> (<em>str</em><em> or </em><em>list</em><em>[</em><em>str</em><em>]</em>) – Token or list of tokens to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Token ID or list of token IDs corresponding to given tokens.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or list[int]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If tokenizer vocabulary not loaded or token not found.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">convert_tokens_to_ids</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="go">7592</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">convert_tokens_to_ids</span><span class="p">([</span><span class="s2">&quot;[CLS]&quot;</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;[SEP]&quot;</span><span class="p">])</span>
+<span class="go">[101, 7592, 102]</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.decode">
 <span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.decode" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Decodes a sequence of token IDs into text.</p>
+<p>Equivalent to HuggingFace’s <cite>Tokenizer.decode()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_ids</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – Token IDs to decode.</p></li>
+<li><p><strong>skip_special_tokens</strong> (<em>bool</em><em>, </em><em>default=False</em>) – If True, special tokens (e.g. [CLS], [SEP]) are removed
+from the output.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Decoded UTF-8 text corresponding to token IDs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If tokenizer not initialized or decoding fails.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.encode">
 <span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_token_type_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.encode" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Encodes text into token IDs.</p>
+<p>Equivalent to HuggingFace’s <cite>Tokenizer.encode()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – Single input string to encode.</p></li>
+<li><p><strong>text_pair</strong> (<em>str</em><em>, </em><em>optional</em>) – Second input string for paired encoding.</p></li>
+<li><p><strong>padding</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>default=True</em>) – Padding strategy. True/’longest’ for dynamic padding,
+‘max_length’ for fixed length, False for no padding.</p></li>
+<li><p><strong>truncation</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>default=True</em>) – Truncation strategy. ‘longest_first’, ‘only_first’, etc.</p></li>
+<li><p><strong>return_tensors</strong> (<em>str</em><em>, </em><em>optional</em>) – Specify tensor format (‘np’ for NumPy array).</p></li>
+<li><p><strong>max_length</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum allowed sequence length for truncation/padding.</p></li>
+<li><p><strong>split_special_tokens</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=False</em>) – Whether to split out special tokens explicitly.</p></li>
+<li><p><strong>return_token_type_ids</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to return token type IDs.</p></li>
+<li><p><strong>add_special_tokens</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default=True</em>) – Add special tokens (e.g., [CLS], [SEP]).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Encoded integer token IDs representing the input text.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[int] or numpy.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If the tokenizer has not been initialized by <cite>from_pretrained</cite>
+    or invalid parameters are provided.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.encode_plus">
 <span class="sig-name descname"><span class="pre">encode_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_token_type_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_special_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.encode_plus" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Encodes a single text or text pair into dictionary-style results.</p>
+<p>Equivalent to HuggingFace’s <cite>Tokenizer.encode_plus()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – Input sentence text.</p></li>
+<li><p><strong>text_pair</strong> (<em>str</em><em>, </em><em>optional</em>) – Second sentence text for paired encoding.</p></li>
+<li><p><strong>padding</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>default=True</em>) – Padding strategy.
+Examples: True, False, ‘max_length’, ‘longest’, ‘do_not_pad’.</p></li>
+<li><p><strong>truncation</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>default=True</em>) – Truncation strategy.
+Examples: True, ‘longest_first’, ‘only_first’, ‘only_second’.</p></li>
+<li><p><strong>return_tensors</strong> (<em>str</em><em>, </em><em>optional</em>) – Tensor type to return. ‘np’ returns numpy.ndarray outputs.
+If None, returns Python list type.</p></li>
+<li><p><strong>max_length</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum allowed sequence length.</p></li>
+<li><p><strong>split_special_tokens</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Whether to split out special tokens during encoding.</p></li>
+<li><p><strong>return_token_type_ids</strong> (<em>bool</em><em>, </em><em>optional</em>) – Return token_type_ids for paired encodings (default: automatically enabled for some models).</p></li>
+<li><p><strong>add_special_tokens</strong> (<em>bool</em><em>, </em><em>default=True</em>) – Add model-specific special tokens ([CLS], [SEP], etc.) automatically.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Object containing:</dt><dd><ul class="simple">
+<li><p>input_ids          : list[int] or ndarray</p></li>
+<li><p>attention_masks    : list[int] or ndarray</p></li>
+<li><p>token_type_ids     : list[int] or ndarray (optional)</p></li>
+<li><p>sequence_ids       : sequence group ids</p></li>
+<li><p>word_ids           : corresponding word indices</p></li>
+<li><p>char_starts/ends   : character start/end positions</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.AiliaTokenizerResult" title="ailia_tokenizer.AiliaTokenizerResult">AiliaTokenizerResult</a> or AiliaTokenizerResultWithTokenTypeIds</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If invalid arguments or tokenizer not properly initialized.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode_plus</span><span class="p">(</span><span class="s2">&quot;This is a test.&quot;</span><span class="p">,</span> <span class="s2">&quot;Another example.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;input_ids&quot;</span><span class="p">]</span>
+<span class="go">array([101, 1188, 1110, 170, 2774, 119, 102, ..., 102])</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.PreTrainedTokenizer.tokenize">
 <span class="sig-name descname"><span class="pre">tokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ailia_tokenizer.PreTrainedTokenizer.tokenize" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Tokenizes an input string into subword string tokens.</p>
+<p>Equivalent to HuggingFace’s <cite>Tokenizer.tokenize()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Input text to tokenize.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of subword tokens.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>AiliaTokenizerError</strong> – If non-string input is provided or tokenizer is not loaded.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">CLIPTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;openai/clip-vit-base-patch32&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+<span class="go">[&#39;hello&#39;, &#39;world&#39;, &#39;!&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -240,7 +628,31 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.WhisperTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.WhisperTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load pretrained Whisper tokenizer from local path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em><em>, </em><em>optional</em>) – Directory path to the tokenizer configuration files.
+Expected files:
+- vocab.json
+- merges.txt
+- added_tokens.json</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Initialized Whisper tokenizer ready for encoding/decoding.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.WhisperTokenizer" title="ailia_tokenizer.WhisperTokenizer">WhisperTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function loads vocabulary and merge configuration compatible
+with Whisper models. PAD token uses EOS (id=50257).</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">WhisperTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s2">&quot;This is a test.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -251,7 +663,33 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.CLIPTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.CLIPTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load a pretrained CLIP tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em><em>, </em><em>optional</em>) – Directory path to the tokenizer configuration files,
+if available. CLIP does not require external files.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Initialized CLIP-compatible tokenizer instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.CLIPTokenizer" title="ailia_tokenizer.CLIPTokenizer">CLIPTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>PAD token uses EOS (ID 49407).</p></li>
+<li><p>Both SOT and EOT tokens are retained.</p></li>
+<li><p>Text pairs will be concatenated by replacing SOT in pair sequence
+with EOT if <cite>_retain_sot_replace_to_eot=True</cite>.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">CLIPTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s2">&quot;This is a test.&quot;</span><span class="p">)</span>
+<span class="go">[&#39;this&#39;, &#39;is&#39;, &#39;a&#39;, &#39;test&#39;, &#39;.&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -262,7 +700,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.XLMRobertaTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.XLMRobertaTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load a pretrained XLM-Roberta tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Directory path that contains ‘sentencepiece.bpe.model’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Initialized tokenizer compatible with XLM-Roberta architecture.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.XLMRobertaTokenizer" title="ailia_tokenizer.XLMRobertaTokenizer">XLMRobertaTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>SentencePiece model required (<cite>sentencepiece.bpe.model</cite>).</p></li>
+<li><p>PAD token ID is set to 1 as used in fairseq.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">XLMRobertaTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ids</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;This is multilingual.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -273,7 +733,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.MarianTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.MarianTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load a pretrained Marian tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Directory path containing ‘source.spm’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tokenizer for Marian machine translation models.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.MarianTokenizer" title="ailia_tokenizer.MarianTokenizer">MarianTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Uses SentencePiece (‘source.spm’) vocabulary.</p></li>
+<li><p>Does not use SOT tokens (SOT offset = 0).</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">MarianTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;Translate this sentence.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -284,7 +766,34 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.BertJapaneseWordPieceTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseWordPieceTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load Japanese WordPiece BERT tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Directory path containing ‘vocab.txt’.</p></li>
+<li><p><strong>dict_path</strong> (<em>str</em>) – Path to MeCab-compatible dictionary file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fully initialized tokenizer compatible with Japanese BERT WordPiece.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.BertJapaneseWordPieceTokenizer" title="ailia_tokenizer.BertJapaneseWordPieceTokenizer">BertJapaneseWordPieceTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Retains EOT, not SOT.</p></li>
+<li><p>Supports <cite>word_ids</cite>.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">BertJapaneseWordPieceTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s2">&quot;./tokenizer/&quot;</span><span class="p">,</span> <span class="n">dict_path</span><span class="o">=</span><span class="s2">&quot;./ipadic/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s2">&quot;日本語のテキストを分かち書きします。&quot;</span><span class="p">)</span>
+<span class="go">[&#39;日本&#39;, &#39;語&#39;, &#39;の&#39;, &#39;テキスト&#39;, &#39;を&#39;, &#39;分&#39;, &#39;か&#39;, &#39;ち&#39;, &#39;書&#39;, &#39;き&#39;, &#39;します&#39;, &#39;。&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -295,7 +804,27 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.BertJapaneseCharacterTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertJapaneseCharacterTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load Japanese Character BERT tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Path containing ‘vocab.txt’.</p></li>
+<li><p><strong>dict_path</strong> (<em>str</em>) – Path to character dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Character-level tokenizer for Japanese BERT variants.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.BertJapaneseCharacterTokenizer" title="ailia_tokenizer.BertJapaneseCharacterTokenizer">BertJapaneseCharacterTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">BertJapaneseCharacterTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s2">&quot;./tokenizer/&quot;</span><span class="p">,</span> <span class="n">dict_path</span><span class="o">=</span><span class="s2">&quot;./ipadic/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -306,7 +835,24 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.T5Tokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.T5Tokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load pretrained T5 tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Directory path containing ‘spiece.model’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Initialized tokenizer for T5 seq2seq models.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.T5Tokenizer" title="ailia_tokenizer.T5Tokenizer">T5Tokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">T5Tokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;Translate English to German: Hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -317,7 +863,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.RobertaTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.RobertaTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load pretrained RoBERTa tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Path containing ‘vocab.json’ and ‘merges.txt’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fully initialized RoBERTa tokenizer.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.RobertaTokenizer" title="ailia_tokenizer.RobertaTokenizer">RobertaTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Retains both SOT and EOT tokens.</p></li>
+<li><p>Supports word-level positions.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">RobertaTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;This is a RoBERTa-style sentence.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -328,7 +896,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.BertTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.BertTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load pretrained BERT tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Path containing ‘vocab.txt’ and ‘tokenizer_config.json’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fully initialized BERT tokenizer with word boundary support.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.BertTokenizer" title="ailia_tokenizer.BertTokenizer">BertTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>PAD token is determined from “[PAD]” encoding.</p></li>
+<li><p>Supports token_type_ids and word_ids.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ids</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;A test sentence.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -339,7 +929,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.GPT2Tokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.GPT2Tokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load pretrained GPT-2 tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Path containing ‘vocab.json’ and ‘merges.txt’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fully initialized GPT-2 BPE tokenizer.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.GPT2Tokenizer" title="ailia_tokenizer.GPT2Tokenizer">GPT2Tokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Uses EOS (ID 50256) for padding.</p></li>
+<li><p>GPT-2 architecture does not use SOT/EOT markers.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">GPT2Tokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ids</span> <span class="o">=</span> <span class="n">tok</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;Hello GPT-2 world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -350,7 +962,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ailia_tokenizer.LlamaTokenizer.from_pretrained">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pretrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_model_name_or_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ailia_tokenizer.LlamaTokenizer.from_pretrained" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load pretrained LLaMA tokenizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pretrained_model_name_or_path</strong> (<em>str</em>) – Path containing ‘tokenizer.model’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Initialized SentencePiece-based LLaMA tokenizer.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ailia_tokenizer.LlamaTokenizer" title="ailia_tokenizer.LlamaTokenizer">LlamaTokenizer</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Uses SentencePiece model.</p></li>
+<li><p>Only SOT (start of text) marker is used, EOT is omitted.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">LlamaTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;Generate text with LLaMA model.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -365,7 +999,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023 - 2024, AXELL CORPORATION, ax Inc..</p>
+    <p>&#169; Copyright 2023 - 2026, AXELL CORPORATION, ailia Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
