@@ -1,26 +1,17 @@
-# ailia SDK
+# ailia SDK Documentation
 
-SDK for optimized running of many popular neural networks on multiple platform
+The ailia SDK is an inference engine that supports cross-platform operation. ONNX can perform GPU inference using Metal and Vulkan. It offers a model library with over 390 types and supports advanced pre-processing and post-processing. Bindings are provided for Python, C++, C#, and Flutter.
 
-<img src="ailia_logo.png" width=256px>
+## Inference Library Documentation
 
-## About ailia SDK
-
-[ailia SDK](https://ailia.jp/en/) is a cross-platform high speed inference SDK. The ailia SDK provides a consistent C++ API on Windows, Mac, Linux, iOS, Android, Jetson and RaspberryPi. It supports Unity, Python and JNI for efficient AI implementation. The ailia SDK makes great use of the GPU via Vulkan and Metal to serve accelerated computing.
-
-## Install ailia SDK
-
-- [Download a free evaluation version of ailia SDK](https://axip-console.appspot.com/trial/terms/AILIA?lang=en)
-
-## Core Library Documentation
-
-The core library is a standard package of the ailia SDK. Make some basic inferences.
+This is the ONNX inference API, which serves as the core of everything.
 
 ### Python
 
 - [API (EN)](https://ailia-ai.github.io/ailia-sdk/api/python/en/)
 - [Tutorial (EN)](https://medium.com/ailia-ai/ailia-sdk-tutorial-python-ea29ae990cf6) [(JP)](https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-python-28379dbc9649)
 - [Models](https://github.com/ailia-ai/ailia-models)
+- [PyPI](https://pypi.org/project/ailia/)
 
 ### C++
 
@@ -47,7 +38,7 @@ The core library is a standard package of the ailia SDK. Make some basic inferen
 - [API (EN)](https://ailia-ai.github.io/ailia-sdk/api/java/en/)
 - [Tutorial (EN)](https://medium.com/ailia-ai/ailia-sdk-tutorial-jni-92b797725e08) [(JP)](https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-jni-7a11c1da08dc)
 - [Android Studio Sample Project (Java)](https://github.com/ailia-ai/ailia-android-studio)
-- [Android Studio Sample Project (Kotlin)](https://github.com/ailia-ai/ailia-android-studio-kotlin)
+- [Android Studio Sample Project (Kotlin)](https://github.com/ailia-ai/ailia-models-kotlin)
 
 ## Supplemental and Specific Library Documentation
 
@@ -58,6 +49,7 @@ ailia Tokenizer is a library for encode NLP text and decode NLP tokens. ailia To
 - [C++ API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/tokenizer/cpp/jp/)
 - [Unity API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/tokenizer/unity/jp/)
 - [Python API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/tokenizer/python/en/)
+- [Python Example (EN) (PyPI)](https://pypi.org/project/ailia-tokenizer/)
 - [Flutter API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/tokenizer/flutter/en/)
 
 ### ailia Speech
@@ -67,6 +59,7 @@ ailia Speech is a library for speech recognition. It uses ailia SDK and ailia.au
 - [C++ API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/speech/cpp/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/)
 - [Unity API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/speech/unity/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/speech/unity/jp/)
 - [Python API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/speech/python/en/)
+- [Python Example (EN) (PyPI)](https://pypi.org/project/ailia-speech/)
 - [Flutter API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/speech/flutter/en/)
 
 ### ailia Voice
@@ -76,6 +69,7 @@ ailia AI Voice is a library generating speech from text. Using ailia AI Voice, y
 - [C++ API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/voice/cpp/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/voice/cpp/jp/)
 - [Unity API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/voice/unity/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/voice/unity/jp/)
 - [Python API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/voice/python/en/)
+- [Python Example (EN) (PyPI)](https://pypi.org/project/ailia-voice/)
 - [Flutter API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/voice/flutter/en/)
 
 ### ailia LLM
@@ -85,6 +79,7 @@ ailia LLM is a library for running local LLMs. It can load GGUF and easily imple
 - [C++ API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/llm/cpp/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/llm/cpp/jp/)
 - [Unity API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/llm/unity/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/llm/unity/jp/)
 - [Python API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/llm/python/en/)
+- [Python Example (EN) (PyPI)](https://pypi.org/project/ailia-llm/)
 - [Flutter API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/llm/flutter/en/)
 
 ### ailia Tracker
@@ -93,6 +88,10 @@ ailia Tracker is a library for tracking the movement of objects based on object 
 
 - [C++ API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/tracker/cpp/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/tracker/cpp/jp/)
 - [Unity API (EN)](https://ailia-ai.github.io/ailia-sdk/supplemental/tracker/unity/en/) [(JP)](https://ailia-ai.github.io/ailia-sdk/supplemental/tracker/unity/jp/)
+
+## Download SDK Package
+
+- [Download a free evaluation version of ailia SDK](https://axip-console.appspot.com/trial/terms/AILIA?lang=en)
 
 ## Videos
 
