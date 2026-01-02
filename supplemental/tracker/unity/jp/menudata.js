@@ -23,4 +23,15 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"総合概要",url:"index.html"}]}
+{text:"総合概要",url:"index.html"},
+{text:"名前空間",url:"namespaces.html",children:[
+{text:"名前空間一覧",url:"namespaces.html"}]},
+{text:"クラス",url:"annotated.html",children:[
+{text:"クラス一覧",url:"annotated.html"},
+{text:"クラス索引",url:"classes.html"},
+{text:"クラスメンバ",url:"functions.html",children:[
+{text:"全て",url:"functions.html"},
+{text:"関数",url:"functions_func.html"},
+{text:"変数",url:"functions_vars.html"}]}]},
+{text:"ファイル",url:"files.html",children:[
+{text:"ファイル一覧",url:"files.html"}]}]}
