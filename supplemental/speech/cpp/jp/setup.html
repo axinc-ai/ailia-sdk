@@ -107,7 +107,7 @@ Linux</h2>
 <p>下記のコマンドでサンプルを実行します。</p>
 <div class="fragment"><div class="line">./ailia_speech_sample</div>
 </div><!-- fragment --><p>出力例です。</p>
-<div class="fragment"><div class="line">Usage ./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word/dictionary] [auto/cpu/blas/gpu]</div>
+<div class="fragment"><div class="line">Usage ./ailia_speech_sample input.wav [base/tiny/small/medium/large/large_v3/large_v3_turbo/sensevoice] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word/dictionary] [auto/cpu/blas/gpu]</div>
 <div class="line">Input path:./demo.wav</div>
 <div class="line">Model type:small</div>
 <div class="line">Language type:auto</div>
@@ -125,7 +125,7 @@ Linux</h2>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md35"></a>
 サンプルで指定可能なオプション</h1>
 <p>サンプルでは下記の引数を順に指定可能です。</p>
-<div class="fragment"><div class="line">./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word] [auto/cpu/blas/gpu]</div>
+<div class="fragment"><div class="line">./ailia_speech_sample input.wav [base/tiny/small/medium/large/large_v3/large_v3_turbo/sensevoice] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word] [auto/cpu/blas/gpu]</div>
 </div><!-- fragment --><p>各引数の詳細は下記となります。</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -133,7 +133,7 @@ Linux</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">入力ファイル名   </td><td class="markdownTableBodyNone">入力する音声ファイルを指定します。wavファイルのみ指定可能です。    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">モデル   </td><td class="markdownTableBodyNone">使用するモデルサイズを指定します。base、tiny、small、mediumの順で、後者ほど高精度になります。    </td></tr>
+<td class="markdownTableBodyNone">モデル   </td><td class="markdownTableBodyNone">使用するモデルサイズを指定します。base、tiny、small、medium、large、large_v3の順で、後者ほど高精度になります。    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">言語   </td><td class="markdownTableBodyNone">使用する言語を指定します。autoだと自動判定、jaだと日本語になります。    </td></tr>
 <tr class="markdownTableRowEven">

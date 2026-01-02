@@ -113,7 +113,7 @@ Running the sample</h1>
 <p>Run the sample by executing the command below.</p>
 <div class="fragment"><div class="line">./ailia_speech_sample</div>
 </div><!-- fragment --><p>Example of output:</p>
-<div class="fragment"><div class="line">Usage ./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word/dictionary] [auto/cpu/blas/gpu]</div>
+<div class="fragment"><div class="line">Usage ./ailia_speech_sample input.wav [base/tiny/small/medium/large/large_v3/large_v3_turbo/sensevoice] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word/dictionary] [auto/cpu/blas/gpu]</div>
 <div class="line">Input path:./demo.wav</div>
 <div class="line">Model type:small</div>
 <div class="line">Language type:auto</div>
@@ -131,7 +131,7 @@ Running the sample</h1>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md53"></a>
 Available options when executing the sample</h1>
 <p>The sample executable can take the following options.</p>
-<div class="fragment"><div class="line">./ailia_speech_sample input.wav [base/tiny/small/medium] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word] [auto/cpu/blas/gpu]</div>
+<div class="fragment"><div class="line">./ailia_speech_sample input.wav [base/tiny/small/medium/large/large_v3/large_v3_turbo/sensevoice] [auto/ja] [transcribe/translate/live] [vad_enable/vad_disable] [none/silent_threshold/prompt/constraint_char/constraint_word] [auto/cpu/blas/gpu]</div>
 </div><!-- fragment --><p>See below for details about each argument:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -139,7 +139,7 @@ Available options when executing the sample</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Input file name   </td><td class="markdownTableBodyNone">Indicates the audio input file. Only accepts WAV files.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Model   </td><td class="markdownTableBodyNone">The size category of the model to use. Among: base, tiny, small, medium. Given here by order of increasing model accuracy.    </td></tr>
+<td class="markdownTableBodyNone">Model   </td><td class="markdownTableBodyNone">The size category of the model to use. Among: base, tiny, small, medium, large, large_v3. Given here by order of increasing model accuracy.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Language   </td><td class="markdownTableBodyNone">Indicates the language to use. If the value is auto the language is automatically detected. Use the value ja for Japanese.    </td></tr>
 <tr class="markdownTableRowEven">
