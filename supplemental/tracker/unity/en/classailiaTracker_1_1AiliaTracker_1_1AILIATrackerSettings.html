@@ -99,7 +99,10 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>matching threshold for tracking default=0.8 </p>
+<p>IoU threshold used for matching objects between frames. <br  />
+ Detections with an IoU greater than or equal to this value are treated as the same object. <br  />
+ Higher values make the matching stricter. <br  />
+ Default: 0.8 </p>
 
 </div>
 </div>
@@ -114,7 +117,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>NMS threshold default=0.7 </p>
+<p>Non‑Maximum Suppression (NMS) threshold used to remove duplicate detections. <br  />
+ Detections whose Intersection over Union (IoU) exceeds this value are merged. <br  />
+ Default: 0.7 </p>
 
 </div>
 </div>
@@ -129,7 +134,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Score threshold to filter the result default=0.1 </p>
+<p>Minimum confidence score to accept a detection result. <br  />
+ Detections with scores below this value are ignored. <br  />
+ Default: 0.1 </p>
 
 </div>
 </div>
@@ -144,7 +151,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>the frames for keep lost tracks default=30 </p>
+<p>Maximum number of frames to keep lost tracks in memory. <br  />
+ If the same object is detected again within this period, tracking is resumed. <br  />
+ Default: 30 </p>
 
 </div>
 </div>
@@ -159,7 +168,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>tracking confidence threshold default=0.5 </p>
+<p>Confidence threshold for updating active tracks. <br  />
+ Normally, only detections with scores above this value are used to update existing tracks. <br  />
+ However, in the ByteTrack approach, detections with lower scores (between <code>score_threshold</code> and this value) <br  />
+ may also be used for updates if they achieve sufficient IoU matching with existing tracks. <br  />
+ A higher value makes the tracking stricter, while a lower value allows objects with temporarily low confidence to be maintained. <br  />
+ Default: 0.5 </p>
 
 </div>
 </div>

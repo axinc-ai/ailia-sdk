@@ -66,9 +66,9 @@ $(function() {
 <div class="title">How to use the API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md2"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
 Overview of ailia Tracker API</h1>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Basic usage</h2>
 <p>With ailia Trakcer, you can create an instance with <code>ailiaTrackerCreate</code>, then set tracking targets using results of object detection with <code>ailiaTrackerAddTarget</code>, execute <code>ailiaTrackerCompute</code> to track objects, and get tracking results with <code>ailiaTrackerGetObject</code>.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;ctime&gt;</span></div>
@@ -249,7 +249,7 @@ Basic usage</h2>
 <div class="ttc" id="aailia__tracker_8h_html_a109e7b4c6158ac1de4915fd2fc3c7bb2"><div class="ttname"><a href="ailia__tracker_8h.html#a109e7b4c6158ac1de4915fd2fc3c7bb2">AILIA_TRACKER_ALGORITHM_BYTE_TRACK</a></div><div class="ttdeci">#define AILIA_TRACKER_ALGORITHM_BYTE_TRACK</div><div class="ttdoc">ByteTrack.</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:43</div></div>
 <div class="ttc" id="aailia__tracker_8h_html_a49d9807a95a319ba5e305358d50a413e"><div class="ttname"><a href="ailia__tracker_8h.html#a49d9807a95a319ba5e305358d50a413e">ailiaTrackerAddTarget</a></div><div class="ttdeci">int AILIA_API ailiaTrackerAddTarget(struct AILIATracker *tracker, const AILIADetectorObject *detector_object, int version)</div><div class="ttdoc">Set tracking target.</div></div>
 <div class="ttc" id="aailia__tracker_8h_html_a7097f5ca5700fbc76152d655cf321077"><div class="ttname"><a href="ailia__tracker_8h.html#a7097f5ca5700fbc76152d655cf321077">ailiaTrackerGetObjectCount</a></div><div class="ttdeci">int AILIA_API ailiaTrackerGetObjectCount(struct AILIATracker *tracker, unsigned int *obj_count)</div><div class="ttdoc">Gets the number of detection results.</div></div>
-<div class="ttc" id="aailia__tracker_8h_html_a84ba2dbe1f25e2b761f818464ab26bee"><div class="ttname"><a href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">AILIA_TRACKER_FLAG_NONE</a></div><div class="ttdeci">#define AILIA_TRACKER_FLAG_NONE</div><div class="ttdoc">Default flag.</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:170</div></div>
+<div class="ttc" id="aailia__tracker_8h_html_a84ba2dbe1f25e2b761f818464ab26bee"><div class="ttname"><a href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">AILIA_TRACKER_FLAG_NONE</a></div><div class="ttdeci">#define AILIA_TRACKER_FLAG_NONE</div><div class="ttdoc">Default flag.</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:202</div></div>
 <div class="ttc" id="aailia__tracker_8h_html_a9bc13ee04ef51c965f64ad6748c1212e"><div class="ttname"><a href="ailia__tracker_8h.html#a9bc13ee04ef51c965f64ad6748c1212e">ailiaTrackerDestroy</a></div><div class="ttdeci">int AILIA_API ailiaTrackerDestroy(struct AILIATracker *tracker)</div><div class="ttdoc">It destroys the AILIATracker instance.</div></div>
 <div class="ttc" id="aailia__tracker_8h_html_aae45adaf13ec56adb65810527204ef06"><div class="ttname"><a href="ailia__tracker_8h.html#aae45adaf13ec56adb65810527204ef06">ailiaTrackerCreate</a></div><div class="ttdeci">int AILIA_API ailiaTrackerCreate(struct AILIATracker **tracker, int algorithm, const AILIATrackerSettings *settings, int version, int flags)</div><div class="ttdoc">Creates a AILIATracker instance.</div></div>
 <div class="ttc" id="aailia__tracker_8h_html_ae155bdb6d119771ae2cb32df912b6683"><div class="ttname"><a href="ailia__tracker_8h.html#ae155bdb6d119771ae2cb32df912b6683">ailiaTrackerCompute</a></div><div class="ttdeci">int AILIA_API ailiaTrackerCompute(struct AILIATracker *tracker)</div><div class="ttdoc">Perform tracking.</div></div>
@@ -263,12 +263,59 @@ Basic usage</h2>
 <div class="ttc" id="astruct__AILIATrackerObject_html_ab0c76416c234516e7f313644b956ffae"><div class="ttname"><a href="struct__AILIATrackerObject.html#ab0c76416c234516e7f313644b956ffae">_AILIATrackerObject::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:90</div></div>
 <div class="ttc" id="astruct__AILIATrackerObject_html_ade1116e10ae8e26b2327f8b1e8911562"><div class="ttname"><a href="struct__AILIATrackerObject.html#ade1116e10ae8e26b2327f8b1e8911562">_AILIATrackerObject::id</a></div><div class="ttdeci">unsigned int id</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:58</div></div>
 <div class="ttc" id="astruct__AILIATrackerSettings_html"><div class="ttname"><a href="struct__AILIATrackerSettings.html">_AILIATrackerSettings</a></div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:114</div></div>
-<div class="ttc" id="astruct__AILIATrackerSettings_html_a609f06d183fc96c21673e5305b4fb09c"><div class="ttname"><a href="struct__AILIATrackerSettings.html#a609f06d183fc96c21673e5305b4fb09c">_AILIATrackerSettings::nms_threshold</a></div><div class="ttdeci">float nms_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:130</div></div>
-<div class="ttc" id="astruct__AILIATrackerSettings_html_a8c843247b100c3ceb2d4935dbc3e5f77"><div class="ttname"><a href="struct__AILIATrackerSettings.html#a8c843247b100c3ceb2d4935dbc3e5f77">_AILIATrackerSettings::score_threshold</a></div><div class="ttdeci">float score_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:122</div></div>
-<div class="ttc" id="astruct__AILIATrackerSettings_html_add8c33cfbfb077419bfeeec4e71e229a"><div class="ttname"><a href="struct__AILIATrackerSettings.html#add8c33cfbfb077419bfeeec4e71e229a">_AILIATrackerSettings::match_threshold</a></div><div class="ttdeci">float match_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:154</div></div>
-<div class="ttc" id="astruct__AILIATrackerSettings_html_ae094831bfd443dbd115bf5f64a9d1d5a"><div class="ttname"><a href="struct__AILIATrackerSettings.html#ae094831bfd443dbd115bf5f64a9d1d5a">_AILIATrackerSettings::track_buffer</a></div><div class="ttdeci">int track_buffer</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:146</div></div>
-<div class="ttc" id="astruct__AILIATrackerSettings_html_affd84c6b8a0772cbddbfd29bd88822c0"><div class="ttname"><a href="struct__AILIATrackerSettings.html#affd84c6b8a0772cbddbfd29bd88822c0">_AILIATrackerSettings::track_threshold</a></div><div class="ttdeci">float track_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:138</div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="astruct__AILIATrackerSettings_html_a609f06d183fc96c21673e5305b4fb09c"><div class="ttname"><a href="struct__AILIATrackerSettings.html#a609f06d183fc96c21673e5305b4fb09c">_AILIATrackerSettings::nms_threshold</a></div><div class="ttdeci">float nms_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:139</div></div>
+<div class="ttc" id="astruct__AILIATrackerSettings_html_a8c843247b100c3ceb2d4935dbc3e5f77"><div class="ttname"><a href="struct__AILIATrackerSettings.html#a8c843247b100c3ceb2d4935dbc3e5f77">_AILIATrackerSettings::score_threshold</a></div><div class="ttdeci">float score_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:126</div></div>
+<div class="ttc" id="astruct__AILIATrackerSettings_html_add8c33cfbfb077419bfeeec4e71e229a"><div class="ttname"><a href="struct__AILIATrackerSettings.html#add8c33cfbfb077419bfeeec4e71e229a">_AILIATrackerSettings::match_threshold</a></div><div class="ttdeci">float match_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:186</div></div>
+<div class="ttc" id="astruct__AILIATrackerSettings_html_ae094831bfd443dbd115bf5f64a9d1d5a"><div class="ttname"><a href="struct__AILIATrackerSettings.html#ae094831bfd443dbd115bf5f64a9d1d5a">_AILIATrackerSettings::track_buffer</a></div><div class="ttdeci">int track_buffer</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:171</div></div>
+<div class="ttc" id="astruct__AILIATrackerSettings_html_affd84c6b8a0772cbddbfd29bd88822c0"><div class="ttname"><a href="struct__AILIATrackerSettings.html#affd84c6b8a0772cbddbfd29bd88822c0">_AILIATrackerSettings::track_threshold</a></div><div class="ttdeci">float track_threshold</div><div class="ttdef"><b>Definition:</b> ailia_tracker.h:158</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+ailia Tracker Parameters</h2>
+<p>Byte Track, the tracking algorithm used by ailia Tracker, performs tracking based solely on the shape of the bounding box using a Kalman filter. Image features are not used.</p>
+<div class="fragment"><div class="line">1. Obtain detection results  </div>
+<div class="line">  ↓  </div>
+<div class="line">2. Filter out low‑score detections using **score_threshold**  </div>
+<div class="line">  ↓  </div>
+<div class="line">3. Remove duplicate detections using **nms_threshold** (Non‑Maximum Suppression)  </div>
+<div class="line">  ↓  </div>
+<div class="line">4. Select high‑confidence detections (scores ≥ **track_threshold**)  </div>
+<div class="line">  as candidates for the **first‑stage matching**  </div>
+<div class="line">  ↓  </div>
+<div class="line">5. Use **match_threshold** to perform IoU‑based matching  </div>
+<div class="line">  → Associate tracks from the previous frame with detections in the current frame  </div>
+<div class="line">  ↓  </div>
+<div class="line">6. For tracks that were not matched in the first stage,  </div>
+<div class="line">  attempt **second‑stage matching** using lower‑score detections  </div>
+<div class="line">  (scores between **score_threshold** and **track_threshold**)  </div>
+<div class="line">  if their IoU is sufficiently high.  </div>
+<div class="line">  → **match_threshold** is also applied in this step.  </div>
+<div class="line">  ↓  </div>
+<div class="line">7. Manage lost tracks using **track_buffer**,  </div>
+<div class="line">  which defines how long a track is retained after being lost  </div>
+</div><!-- fragment --><p>The configurable parameters are shown below.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Parameter Name   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>score_threshold</b>   </td><td class="markdownTableBodyNone">The lower limit of the score (confidence) used to determine whether to accept a detection result. Objects with detection scores below this value are excluded from tracking. Increasing the value will handle only reliable detections, while decreasing it will retain detections that may include noise.<br  />
+<b>Default: 0.1</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>nms_threshold</b>   </td><td class="markdownTableBodyNone">The NMS (Non-Maximum Suppression) threshold used to remove duplicate detections. Detections whose IoU (overlap between objects) exceeds this value are considered to be the same object, and only the one with the highest score will remain. A smaller value removes duplicate detections more strictly, while a larger value makes it more lenient.<br  />
+<b>Default: 0.7</b>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>track_threshold</b>   </td><td class="markdownTableBodyNone">The confidence threshold used when updating active tracks. Normally, only detections with scores above this value are used to update tracks. However, in the ByteTrack algorithm, detections with lower scores (between <code>score_threshold</code> and this threshold) may also be used for updates if their IoU with an existing track is sufficiently high. A higher value makes tracking stricter, while a lower value allows temporarily low‑confidence objects to be maintained.<br  />
+<b>Default: 0.5</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>track_buffer</b>   </td><td class="markdownTableBodyNone">The maximum number of frames to keep a lost object track. If the same object is detected again within the specified number of frames, tracking resumes. Increasing this value retains lost objects longer, while decreasing it ends tracking sooner.<br  />
+<b>Default: 30</b>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>match_threshold</b>   </td><td class="markdownTableBodyNone">The IoU (Intersection over Union) threshold for associating objects between frames. When the IoU is equal to or greater than this value, the track from the previous frame and the detection from the current frame are considered to be the same object. Increasing the value makes matching stricter, while decreasing it makes it more lenient.<br  />
+<b>Default: 0.8</b>   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md7"></a>
+ailia Tracker Flags</h2>
+<p>By default, it operates in a mode optimized for human detection. According to the standard Byte Track algorithm, images with an aspect ratio of 1.6 or greater (wider than tall) are excluded from tracking.</p>
+<p>By specifying AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO, wide images can also be included in tracking. This is useful for tasks such as vehicle detection. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

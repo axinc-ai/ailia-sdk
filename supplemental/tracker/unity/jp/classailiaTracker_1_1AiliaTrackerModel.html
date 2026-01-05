@@ -159,7 +159,7 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ailiaDetectorObjectList.Count; i++){</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            AiliaDetector.AILIADetectorObject detectorObj = ailiaDetectorObjectList[i];</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            status = AiliaTracker.ailiaTrackerAddTarget(ailia_tracker, ref detectorObj, AiliaDetector.AILIA_DETECTOR_OBJECT_VERSION);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            status = AiliaTracker.ailiaTrackerAddTarget(ailia_tracker, detectorObj, AiliaDetector.AILIA_DETECTOR_OBJECT_VERSION);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">if</span> (status != Ailia.AILIA_STATUS_SUCCESS) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span>(logging){</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    Debug.Log(<span class="stringliteral">&quot;ailiaTrackerAddTarget failed &quot;</span>+status);</div>
@@ -243,7 +243,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                                                                                                   {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">int</span> status = AiliaTracker.ailiaTrackerCreate(ref ailia_tracker, algorithm, ref settings, AiliaTracker.AILIA_TRACKER_SETTINGS_VERSION, flags);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">int</span> status = AiliaTracker.ailiaTrackerCreate(ref ailia_tracker, algorithm, settings, AiliaTracker.AILIA_TRACKER_SETTINGS_VERSION, flags);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(status!=Ailia.AILIA_STATUS_SUCCESS){</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span>(logging){</div>

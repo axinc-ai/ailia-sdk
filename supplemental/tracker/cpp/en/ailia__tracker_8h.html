@@ -108,7 +108,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:a84ba2dbe1f25e2b761f818464ab26bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default flag.  <a href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">More...</a><br /></td></tr>
 <tr class="separator:a84ba2dbe1f25e2b761f818464ab26bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#ad68b0ce785fa54ab6b38d9d7e38d759c">AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO</a>&#160;&#160;&#160;(1)</td></tr>
-<tr class="memdesc:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the rule that excludes targets from tracking when the aspect ratio is less than 1.6 for person tracking; this is useful for tracking cars and similar objects.  <a href="ailia__tracker_8h.html#ad68b0ce785fa54ab6b38d9d7e38d759c">More...</a><br /></td></tr>
+<tr class="memdesc:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, targets with an aspect ratio (width / height) greater than 1.6 are ignored in person tracking. Enabling this flag disables that restriction, making it suitable for tracking wide objects such as cars.  <a href="ailia__tracker_8h.html#ad68b0ce785fa54ab6b38d9d7e38d759c">More...</a><br /></td></tr>
 <tr class="separator:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -185,7 +185,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disable the rule that excludes targets from tracking when the aspect ratio is less than 1.6 for person tracking; this is useful for tracking cars and similar objects. </p>
+<p>By default, targets with an aspect ratio (width / height) greater than 1.6 are ignored in person tracking. Enabling this flag disables that restriction, making it suitable for tracking wide objects such as cars. </p>
 
 </div>
 </div>
