@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['setup_235',['setup',['../md_md-csharp_setup.html',1,'(Global Namespace)'],['../setup.html',1,'(Global Namespace)']]]
+  ['setup_241',['setup',['../md_md_csharp_setup.html',1,'']]],
+  ['setup_20and_20build_242',['Setup and Build',['../setup.html',1,'']]]
 ];
