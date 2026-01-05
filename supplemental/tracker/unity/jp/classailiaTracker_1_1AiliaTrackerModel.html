@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tracker
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -77,8 +77,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a2ad632b8dbd18ffafbed29344bd6ab09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTrackerModel.html#a2ad632b8dbd18ffafbed29344bd6ab09">Create</a> (int algorithm, <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AiliaTracker.AILIATrackerSettings</a> settings)</td></tr>
-<tr class="separator:a2ad632b8dbd18ffafbed29344bd6ab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5328dbd01999171eb7d781776ec9f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTrackerModel.html#aac5328dbd01999171eb7d781776ec9f1">Create</a> (int algorithm, <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AiliaTracker.AILIATrackerSettings</a> settings, int flags=<a class="el" href="classailiaTracker_1_1AiliaTracker.html#a32972a1b75aa78c4373541d9625efcba">AiliaTracker.AILIA_TRACKER_FLAG_NONE</a>)</td></tr>
+<tr class="separator:aac5328dbd01999171eb7d781776ec9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f4a44f66693165b563f6830b75c2617"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerObject.html">AiliaTracker.AILIATrackerObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTrackerModel.html#a6f4a44f66693165b563f6830b75c2617">Compute</a> (List&lt; AiliaDetector.AILIADetectorObject &gt; ailiaDetectorObjectList)</td></tr>
 <tr class="separator:a6f4a44f66693165b563f6830b75c2617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99d678d937b24ee0d2ce054dd60c2dde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTrackerModel.html#a99d678d937b24ee0d2ce054dd60c2dde">Close</a> ()</td></tr>
@@ -120,12 +120,12 @@ $(function() {
 <p>追跡オブジェクトを破棄します。 </p>
 <dl class="section return"><dt>戻り値</dt><dd>なし</dd></dl>
 <p>追跡オブジェクトを破棄します。 </p>
-<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                       {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span>(ailia_tracker!=IntPtr.Zero){</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            AiliaTracker.ailiaTrackerDestroy(ailia_tracker);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            ailia_tracker=IntPtr.Zero;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                       {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span>(ailia_tracker!=IntPtr.Zero){</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            AiliaTracker.ailiaTrackerDestroy(ailia_tracker);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            ailia_tracker=IntPtr.Zero;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -157,58 +157,54 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> status = 0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//if (ailiaDetectorObjectList.Count == 0){</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//    return null;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//}</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ailiaDetectorObjectList.Count; i++){</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            status = AiliaTracker.ailiaTrackerAddTarget(ailia_tracker, ailiaDetectorObjectList[i]);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">if</span> (status != Ailia.AILIA_STATUS_SUCCESS) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">if</span>(logging){</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    Debug.Log(<span class="stringliteral">&quot;ailiaTrackerAddTarget failed &quot;</span>+status);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        status = AiliaTracker.ailiaTrackerCompute(ailia_tracker);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span>(status != Ailia.AILIA_STATUS_SUCCESS){</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span>(logging){</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaTrackerCompute failed&quot;</span>+status);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        uint onlineSize = 0;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        status = AiliaTracker.ailiaTrackerGetObjectCount(ailia_tracker, ref onlineSize);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span>(status != Ailia.AILIA_STATUS_SUCCESS){</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span>(logging){</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaTrackerGetObjectCount failed&quot;</span>+status);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; onlineSize; i++){</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            AiliaTracker.AILIATrackerObject obj = <span class="keyword">new</span> AiliaTracker.AILIATrackerObject();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            status = AiliaTracker.ailiaTrackerGetObject(ailia_tracker, obj, (uint)i, AiliaTracker.AILIA_TRACKER_OBJECT_VERSION);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">//Debug.Log(&quot;x &quot; + obj.x + &quot; y &quot; + obj.y + &quot; w &quot; + obj.w + &quot; h &quot; + obj.h);</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span>(status != Ailia.AILIA_STATUS_SUCCESS){</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">if</span>(logging){</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    Debug.Log(<span class="stringliteral">&quot;ailiaTrackerGetObjectfailed&quot;</span>+status);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            ailiaTrackerObject.Add(obj);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> ailiaTrackerObject;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ailiaDetectorObjectList.Count; i++){</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            AiliaDetector.AILIADetectorObject detectorObj = ailiaDetectorObjectList[i];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            status = AiliaTracker.ailiaTrackerAddTarget(ailia_tracker, ref detectorObj, AiliaDetector.AILIA_DETECTOR_OBJECT_VERSION);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">if</span> (status != Ailia.AILIA_STATUS_SUCCESS) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span>(logging){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    Debug.Log(<span class="stringliteral">&quot;ailiaTrackerAddTarget failed &quot;</span>+status);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        status = AiliaTracker.ailiaTrackerCompute(ailia_tracker);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span>(status != Ailia.AILIA_STATUS_SUCCESS){</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span>(logging){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaTrackerCompute failed&quot;</span>+status);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        uint onlineSize = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        status = AiliaTracker.ailiaTrackerGetObjectCount(ailia_tracker, ref onlineSize);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span>(status != Ailia.AILIA_STATUS_SUCCESS){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span>(logging){</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                Debug.Log(<span class="stringliteral">&quot;ailiaTrackerGetObjectCount failed&quot;</span>+status);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; onlineSize; i++){</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            AiliaTracker.AILIATrackerObject obj = <span class="keyword">new</span> AiliaTracker.AILIATrackerObject();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            status = AiliaTracker.ailiaTrackerGetObject(ailia_tracker, obj, (uint)i, AiliaTracker.AILIA_TRACKER_OBJECT_VERSION);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">//Debug.Log(&quot;x &quot; + obj.x + &quot; y &quot; + obj.y + &quot; w &quot; + obj.w + &quot; h &quot; + obj.h);</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">if</span>(status != Ailia.AILIA_STATUS_SUCCESS){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">if</span>(logging){</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    Debug.Log(<span class="stringliteral">&quot;ailiaTrackerGetObjectfailed&quot;</span>+status);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            ailiaTrackerObject.Add(obj);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> ailiaTrackerObject;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2ad632b8dbd18ffafbed29344bd6ab09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ad632b8dbd18ffafbed29344bd6ab09">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="aac5328dbd01999171eb7d781776ec9f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5328dbd01999171eb7d781776ec9f1">&#9670;&nbsp;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +222,13 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AiliaTracker.AILIATrackerSettings</a>&#160;</td>
-          <td class="paramname"><em>settings</em>&#160;</td>
+          <td class="paramname"><em>settings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a32972a1b75aa78c4373541d9625efcba">AiliaTracker.AILIA_TRACKER_FLAG_NONE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -240,8 +242,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                                                 {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">int</span> status = AiliaTracker.ailiaTrackerCreate(ref ailia_tracker, algorithm, settings, AiliaTracker.AILIA_TRACKER_SETTINGS_VERSION);</div>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                                                                                                   {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">int</span> status = AiliaTracker.ailiaTrackerCreate(ref ailia_tracker, algorithm, ref settings, AiliaTracker.AILIA_TRACKER_SETTINGS_VERSION, flags);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(status!=Ailia.AILIA_STATUS_SUCCESS){</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span>(logging){</div>
@@ -252,7 +254,7 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="ttc" id="aclassailiaTracker_1_1AiliaTrackerModel_html_a99d678d937b24ee0d2ce054dd60c2dde"><div class="ttname"><a href="classailiaTracker_1_1AiliaTrackerModel.html#a99d678d937b24ee0d2ce054dd60c2dde">ailiaTracker.AiliaTrackerModel.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">追跡オブジェクトを破棄します。</div><div class="ttdef"><b>Definition:</b> AiliaTrackerModel.cs:112</div></div>
+<div class="ttc" id="aclassailiaTracker_1_1AiliaTrackerModel_html_a99d678d937b24ee0d2ce054dd60c2dde"><div class="ttname"><a href="classailiaTracker_1_1AiliaTrackerModel.html#a99d678d937b24ee0d2ce054dd60c2dde">ailiaTracker.AiliaTrackerModel.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">追跡オブジェクトを破棄します。</div><div class="ttdef"><b>Definition:</b> AiliaTrackerModel.cs:108</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,10 +282,10 @@ $(function() {
 </div><div class="memdoc">
 
 <p>リソースを解放します。 </p>
-<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="classailiaTracker_1_1AiliaTrackerModel.html#a3c3a70047dd5f9d082ffe4a0d26919f5">Dispose</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="ttc" id="aclassailiaTracker_1_1AiliaTrackerModel_html_a3c3a70047dd5f9d082ffe4a0d26919f5"><div class="ttname"><a href="classailiaTracker_1_1AiliaTrackerModel.html#a3c3a70047dd5f9d082ffe4a0d26919f5">ailiaTracker.AiliaTrackerModel.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">リソースを解放します。</div><div class="ttdef"><b>Definition:</b> AiliaTrackerModel.cs:126</div></div>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="classailiaTracker_1_1AiliaTrackerModel.html#a3c3a70047dd5f9d082ffe4a0d26919f5">Dispose</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="ttc" id="aclassailiaTracker_1_1AiliaTrackerModel_html_a3c3a70047dd5f9d082ffe4a0d26919f5"><div class="ttname"><a href="classailiaTracker_1_1AiliaTrackerModel.html#a3c3a70047dd5f9d082ffe4a0d26919f5">ailiaTracker.AiliaTrackerModel.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">リソースを解放します。</div><div class="ttdef"><b>Definition:</b> AiliaTrackerModel.cs:122</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,12 +312,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> (disposing){</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="comment">// release managed resource</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="classailiaTracker_1_1AiliaTrackerModel.html#a99d678d937b24ee0d2ce054dd60c2dde">Close</a>(); <span class="comment">// release unmanaged resource</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">if</span> (disposing){</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="comment">// release managed resource</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classailiaTracker_1_1AiliaTrackerModel.html#a99d678d937b24ee0d2ce054dd60c2dde">Close</a>(); <span class="comment">// release unmanaged resource</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

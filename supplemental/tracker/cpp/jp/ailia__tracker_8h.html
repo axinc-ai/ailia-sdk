@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tracker
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,12 @@ ailia_tracker.h の依存先関係図:</div>
 <tr class="separator:af038140dddbbbe2e14244e20547403f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5dc9c6782b9179c72444519cff8d2de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#af5dc9c6782b9179c72444519cff8d2de">AILIA_TRACKER_SETTINGS_VERSION</a>&#160;&#160;&#160;(1)</td></tr>
 <tr class="separator:af5dc9c6782b9179c72444519cff8d2de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ba2dbe1f25e2b761f818464ab26bee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">AILIA_TRACKER_FLAG_NONE</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:a84ba2dbe1f25e2b761f818464ab26bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">フラグを設定しません  <a href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">[詳解]</a><br /></td></tr>
+<tr class="separator:a84ba2dbe1f25e2b761f818464ab26bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#ad68b0ce785fa54ab6b38d9d7e38d759c">AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="mdescLeft">&#160;</td><td class="mdescRight">人物のトラッキングのために縦横比が1.6未満の場合はトラッキング対象外にする判定を無効にします、車のトラッキングなどで有効です  <a href="ailia__tracker_8h.html#ad68b0ce785fa54ab6b38d9d7e38d759c">[詳解]</a><br /></td></tr>
+<tr class="separator:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 型定義</h2></td></tr>
@@ -117,12 +123,12 @@ ailia_tracker.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:adf27cf7ee65201d205ff700bae5df423"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#adf27cf7ee65201d205ff700bae5df423">ailiaTrackerCreate</a> (struct AILIATracker **tracker, int algorithm, <a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a> settings, int version)</td></tr>
-<tr class="memdesc:adf27cf7ee65201d205ff700bae5df423"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークオブジェクトを作成します。  <a href="ailia__tracker_8h.html#adf27cf7ee65201d205ff700bae5df423">[詳解]</a><br /></td></tr>
-<tr class="separator:adf27cf7ee65201d205ff700bae5df423"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb54a957450c87a19c366e5fbf3aea80"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#adb54a957450c87a19c366e5fbf3aea80">ailiaTrackerAddTarget</a> (struct AILIATracker *tracker, AILIADetectorObject target_object)</td></tr>
-<tr class="memdesc:adb54a957450c87a19c366e5fbf3aea80"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラッキングの対象を登録します。  <a href="ailia__tracker_8h.html#adb54a957450c87a19c366e5fbf3aea80">[詳解]</a><br /></td></tr>
-<tr class="separator:adb54a957450c87a19c366e5fbf3aea80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae45adaf13ec56adb65810527204ef06"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#aae45adaf13ec56adb65810527204ef06">ailiaTrackerCreate</a> (struct AILIATracker **tracker, int algorithm, const <a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a> *settings, int version, int flags)</td></tr>
+<tr class="memdesc:aae45adaf13ec56adb65810527204ef06"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラッカーオブジェクトを作成します。  <a href="ailia__tracker_8h.html#aae45adaf13ec56adb65810527204ef06">[詳解]</a><br /></td></tr>
+<tr class="separator:aae45adaf13ec56adb65810527204ef06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d9807a95a319ba5e305358d50a413e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#a49d9807a95a319ba5e305358d50a413e">ailiaTrackerAddTarget</a> (struct AILIATracker *tracker, const AILIADetectorObject *detector_object, int version)</td></tr>
+<tr class="memdesc:a49d9807a95a319ba5e305358d50a413e"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラッキングの対象を登録します。  <a href="ailia__tracker_8h.html#a49d9807a95a319ba5e305358d50a413e">[詳解]</a><br /></td></tr>
+<tr class="separator:a49d9807a95a319ba5e305358d50a413e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae155bdb6d119771ae2cb32df912b6683"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#ae155bdb6d119771ae2cb32df912b6683">ailiaTrackerCompute</a> (struct AILIATracker *tracker)</td></tr>
 <tr class="memdesc:ae155bdb6d119771ae2cb32df912b6683"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラッキングを行います。  <a href="ailia__tracker_8h.html#ae155bdb6d119771ae2cb32df912b6683">[詳解]</a><br /></td></tr>
 <tr class="separator:ae155bdb6d119771ae2cb32df912b6683"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,7 +139,7 @@ ailia_tracker.h の依存先関係図:</div>
 <tr class="memdesc:af7a0d43b216df3d8288add419c8c3a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出結果を取得します。  <a href="ailia__tracker_8h.html#af7a0d43b216df3d8288add419c8c3a05">[詳解]</a><br /></td></tr>
 <tr class="separator:af7a0d43b216df3d8288add419c8c3a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bc13ee04ef51c965f64ad6748c1212e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#a9bc13ee04ef51c965f64ad6748c1212e">ailiaTrackerDestroy</a> (struct AILIATracker *tracker)</td></tr>
-<tr class="memdesc:a9bc13ee04ef51c965f64ad6748c1212e"><td class="mdescLeft">&#160;</td><td class="mdescRight">AILIATrackerオブジェクトを破棄します。  <a href="ailia__tracker_8h.html#a9bc13ee04ef51c965f64ad6748c1212e">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a9bc13ee04ef51c965f64ad6748c1212e"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラッカーオブジェクトを破棄します。  <a href="ailia__tracker_8h.html#a9bc13ee04ef51c965f64ad6748c1212e">[詳解]</a><br /></td></tr>
 <tr class="separator:a9bc13ee04ef51c965f64ad6748c1212e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab602af97f37d31cd752e66a44b247474"><td class="memItemLeft" align="right" valign="top">const char *<a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#ab602af97f37d31cd752e66a44b247474">ailiaTrackerGetErrorDetail</a> (struct AILIATracker *tracker)</td></tr>
 <tr class="memdesc:ab602af97f37d31cd752e66a44b247474"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーの詳細を返します  <a href="ailia__tracker_8h.html#ab602af97f37d31cd752e66a44b247474">[詳解]</a><br /></td></tr>
@@ -142,7 +148,7 @@ ailia_tracker.h の依存先関係図:</div>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>ailia Tracking 物体追跡 ライブラリ </p>
 <dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ailia Inc. </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2025/07/05 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2026/01/05 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a1c6a80cf85ef33500663112959784400"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c6a80cf85ef33500663112959784400">&#9670;&nbsp;</a></span>AILIA_API</h2>
@@ -171,6 +177,38 @@ ailia_tracker.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>ByteTrack </p>
+
+</div>
+</div>
+<a id="ad68b0ce785fa54ab6b38d9d7e38d759c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68b0ce785fa54ab6b38d9d7e38d759c">&#9670;&nbsp;</a></span>AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>人物のトラッキングのために縦横比が1.6未満の場合はトラッキング対象外にする判定を無効にします、車のトラッキングなどで有効です </p>
+
+</div>
+</div>
+<a id="a84ba2dbe1f25e2b761f818464ab26bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ba2dbe1f25e2b761f818464ab26bee">&#9670;&nbsp;</a></span>AILIA_TRACKER_FLAG_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TRACKER_FLAG_NONE&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フラグを設定しません </p>
 
 </div>
 </div>
@@ -232,8 +270,8 @@ ailia_tracker.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="adb54a957450c87a19c366e5fbf3aea80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb54a957450c87a19c366e5fbf3aea80">&#9670;&nbsp;</a></span>ailiaTrackerAddTarget()</h2>
+<a id="a49d9807a95a319ba5e305358d50a413e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d9807a95a319ba5e305358d50a413e">&#9670;&nbsp;</a></span>ailiaTrackerAddTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,8 +285,14 @@ ailia_tracker.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">AILIADetectorObject&#160;</td>
-          <td class="paramname"><em>target_object</em>&#160;</td>
+          <td class="paramtype">const AILIADetectorObject *&#160;</td>
+          <td class="paramname"><em>detector_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -261,8 +305,9 @@ ailia_tracker.h の依存先関係図:</div>
 <p>トラッキングの対象を登録します。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tracker</td><td>AILIATrackerオブジェクトポインタ </td></tr>
-    <tr><td class="paramname">target_objects</td><td>トラッキング対象の物体 </td></tr>
+    <tr><td class="paramname">tracker</td><td>トラッカーオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">detector_object</td><td>トラッキング対象の物体へのポインター </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_DETECTOR_OBJECT_VERSION </td></tr>
   </table>
   </dd>
 </dl>
@@ -289,7 +334,7 @@ ailia_tracker.h の依存先関係図:</div>
 <p>トラッキングを行います。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tracker</td><td>AILIATrackerオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">tracker</td><td>トラッカーオブジェクトポインタ </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,8 +343,8 @@ ailia_tracker.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="adf27cf7ee65201d205ff700bae5df423"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf27cf7ee65201d205ff700bae5df423">&#9670;&nbsp;</a></span>ailiaTrackerCreate()</h2>
+<a id="aae45adaf13ec56adb65810527204ef06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae45adaf13ec56adb65810527204ef06">&#9670;&nbsp;</a></span>ailiaTrackerCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,14 +364,20 @@ ailia_tracker.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a> *&#160;</td>
           <td class="paramname"><em>settings</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>version</em>&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -336,13 +387,14 @@ ailia_tracker.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>ネットワークオブジェクトを作成します。 </p>
+<p>トラッカーオブジェクトを作成します。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tracker</td><td>AILIATrackerポインタへのポインタ </td></tr>
-    <tr><td class="paramname">algorithm</td><td>AILIA_TRAÇKER_ALGORITHM_* </td></tr>
-    <tr><td class="paramname">settings</td><td>AILIATrackerSettings </td></tr>
+    <tr><td class="paramname">tracker</td><td>AILIATracker構造体のポインタへのポインタ </td></tr>
+    <tr><td class="paramname">algorithm</td><td>AILIA_TRACKER_ALGORITHM_* </td></tr>
+    <tr><td class="paramname">settings</td><td>AILIATrackerSettingsへのポインタ </td></tr>
     <tr><td class="paramname">version</td><td>AILIA_TRACKER_SETTINGS_VERSION </td></tr>
+    <tr><td class="paramname">flags</td><td>AILIA_TRACKER_FLAG_*の論理和 </td></tr>
   </table>
   </dd>
 </dl>
@@ -367,10 +419,10 @@ ailia_tracker.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>AILIATrackerオブジェクトを破棄します。 </p>
+<p>トラッカーオブジェクトを破棄します。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tracker</td><td>AILIATrackerオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">tracker</td><td>トラッカーオブジェクトポインタ </td></tr>
   </table>
   </dd>
 </dl>
@@ -397,7 +449,7 @@ ailia_tracker.h の依存先関係図:</div>
 <p>エラーの詳細を返します </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tracker</td><td>AILIATrackerオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">tracker</td><td>トラッカーオブジェクトポインタ </td></tr>
   </table>
   </dd>
 </dl>
@@ -447,7 +499,7 @@ ailia_tracker.h の依存先関係図:</div>
 <p>検出結果を取得します。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tracker</td><td>AILIATrackerオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">tracker</td><td>トラッカーオブジェクトポインタ </td></tr>
     <tr><td class="paramname">obj</td><td>オブジェクト情報 </td></tr>
     <tr><td class="paramname">index</td><td>取得するオブジェクトのインデックス </td></tr>
     <tr><td class="paramname">version</td><td>AILIA_TRACKER_OBJECT_VERSION </td></tr>
@@ -455,7 +507,7 @@ ailia_tracker.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
-<p>ailiaDetectorCompute() を一度も実行していない場合は AILIA_STATUS_INVALID_STATE が返ります。 検出結果は推定確率順でソートされます。 </p>
+<p><a class="el" href="ailia__tracker_8h.html#ae155bdb6d119771ae2cb32df912b6683" title="トラッキングを行います。">ailiaTrackerCompute()</a> を一度も実行していない場合は AILIA_STATUS_INVALID_STATE が返ります。 検出結果は推定確率順でソートされます。 </p>
 
 </div>
 </div>
@@ -488,7 +540,7 @@ ailia_tracker.h の依存先関係図:</div>
 <p>検出結果の数を取得します。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tracker</td><td>AILIATrackerオブジェクトポインタ </td></tr>
+    <tr><td class="paramname">tracker</td><td>トラッカーオブジェクトポインタ </td></tr>
     <tr><td class="paramname">obj_count</td><td>オブジェクト数 </td></tr>
   </table>
   </dd>

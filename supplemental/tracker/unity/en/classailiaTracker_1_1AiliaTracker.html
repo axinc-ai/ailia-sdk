@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tracker
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -85,23 +85,23 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae43300f456f32e363aaffecef280f4ce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#ae43300f456f32e363aaffecef280f4ce">ailiaTrackerCreate</a> (ref IntPtr net, int algorithm, <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AILIATrackerSettings</a> settings, int version)</td></tr>
-<tr class="memdesc:ae43300f456f32e363aaffecef280f4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a network instance.  <a href="classailiaTracker_1_1AiliaTracker.html#ae43300f456f32e363aaffecef280f4ce">More...</a><br /></td></tr>
-<tr class="separator:ae43300f456f32e363aaffecef280f4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88c364fe58746b6f812e745313ea696d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a88c364fe58746b6f812e745313ea696d">ailiaTrackerAddTarget</a> (IntPtr net, AiliaDetector.AILIADetectorObject target_objects)</td></tr>
-<tr class="memdesc:a88c364fe58746b6f812e745313ea696d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set tracking target.  <a href="classailiaTracker_1_1AiliaTracker.html#a88c364fe58746b6f812e745313ea696d">More...</a><br /></td></tr>
-<tr class="separator:a88c364fe58746b6f812e745313ea696d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0a0c1c226fe32d64a91d1d6ecc9620"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a2d0a0c1c226fe32d64a91d1d6ecc9620">ailiaTrackerCreate</a> (ref IntPtr net, int algorithm, ref <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AILIATrackerSettings</a> settings, int version, int flags)</td></tr>
+<tr class="memdesc:a2d0a0c1c226fe32d64a91d1d6ecc9620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a AILIATracker instance.  <a href="classailiaTracker_1_1AiliaTracker.html#a2d0a0c1c226fe32d64a91d1d6ecc9620">More...</a><br /></td></tr>
+<tr class="separator:a2d0a0c1c226fe32d64a91d1d6ecc9620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5940d018edeced77899dd49af229ad2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#aa5940d018edeced77899dd49af229ad2">ailiaTrackerAddTarget</a> (IntPtr net, ref AiliaDetector.AILIADetectorObject detector_object, int version)</td></tr>
+<tr class="memdesc:aa5940d018edeced77899dd49af229ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set tracking target.  <a href="classailiaTracker_1_1AiliaTracker.html#aa5940d018edeced77899dd49af229ad2">More...</a><br /></td></tr>
+<tr class="separator:aa5940d018edeced77899dd49af229ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d9607c923ca362776ff6ce6d4e763b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a48d9607c923ca362776ff6ce6d4e763b">ailiaTrackerCompute</a> (IntPtr net)</td></tr>
 <tr class="memdesc:a48d9607c923ca362776ff6ce6d4e763b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform tracking.  <a href="classailiaTracker_1_1AiliaTracker.html#a48d9607c923ca362776ff6ce6d4e763b">More...</a><br /></td></tr>
 <tr class="separator:a48d9607c923ca362776ff6ce6d4e763b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c3749699ca7c4147856c80575158165"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a5c3749699ca7c4147856c80575158165">ailiaTrackerGetObjectCount</a> (IntPtr detector, ref uint obj_count)</td></tr>
-<tr class="memdesc:a5c3749699ca7c4147856c80575158165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of detection results.  <a href="classailiaTracker_1_1AiliaTracker.html#a5c3749699ca7c4147856c80575158165">More...</a><br /></td></tr>
-<tr class="separator:a5c3749699ca7c4147856c80575158165"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16eeb8fc09304f0aad089ee16ba3a9ec"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a16eeb8fc09304f0aad089ee16ba3a9ec">ailiaTrackerGetObject</a> (IntPtr detector, [In, Out] <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerObject.html">AILIATrackerObject</a> obj, uint index, uint version)</td></tr>
-<tr class="memdesc:a16eeb8fc09304f0aad089ee16ba3a9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the detection results.  <a href="classailiaTracker_1_1AiliaTracker.html#a16eeb8fc09304f0aad089ee16ba3a9ec">More...</a><br /></td></tr>
-<tr class="separator:a16eeb8fc09304f0aad089ee16ba3a9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23a6774f6c5e14d12629051cd0ecd9a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#ae23a6774f6c5e14d12629051cd0ecd9a">ailiaTrackerGetObjectCount</a> (IntPtr tracker, ref uint obj_count)</td></tr>
+<tr class="memdesc:ae23a6774f6c5e14d12629051cd0ecd9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of detection results.  <a href="classailiaTracker_1_1AiliaTracker.html#ae23a6774f6c5e14d12629051cd0ecd9a">More...</a><br /></td></tr>
+<tr class="separator:ae23a6774f6c5e14d12629051cd0ecd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206ce034d9e5eba037cacf9894a60d75"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a206ce034d9e5eba037cacf9894a60d75">ailiaTrackerGetObject</a> (IntPtr tracker, [In, Out] <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerObject.html">AILIATrackerObject</a> obj, uint index, uint version)</td></tr>
+<tr class="memdesc:a206ce034d9e5eba037cacf9894a60d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the detection results.  <a href="classailiaTracker_1_1AiliaTracker.html#a206ce034d9e5eba037cacf9894a60d75">More...</a><br /></td></tr>
+<tr class="separator:a206ce034d9e5eba037cacf9894a60d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d57c6d0d969a97da4bbee2acac7efa8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a3d57c6d0d969a97da4bbee2acac7efa8">ailiaTrackerDestroy</a> (IntPtr net)</td></tr>
-<tr class="memdesc:a3d57c6d0d969a97da4bbee2acac7efa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the network instance.  <a href="classailiaTracker_1_1AiliaTracker.html#a3d57c6d0d969a97da4bbee2acac7efa8">More...</a><br /></td></tr>
+<tr class="memdesc:a3d57c6d0d969a97da4bbee2acac7efa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">It destroys the AILIATracker instance.  <a href="classailiaTracker_1_1AiliaTracker.html#a3d57c6d0d969a97da4bbee2acac7efa8">More...</a><br /></td></tr>
 <tr class="separator:a3d57c6d0d969a97da4bbee2acac7efa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e399069b9fd2623182c2ff640b4d55"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a25e399069b9fd2623182c2ff640b4d55">ailiaTrackerGetErrorDetail</a> (IntPtr net)</td></tr>
 <tr class="memdesc:a25e399069b9fd2623182c2ff640b4d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the details of errors.  <a href="classailiaTracker_1_1AiliaTracker.html#a25e399069b9fd2623182c2ff640b4d55">More...</a><br /></td></tr>
@@ -117,10 +117,14 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:ad1f1ab4cb8877cac4e5f9124622c4e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabc4067355259af607ffae3699eaad31"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#aabc4067355259af607ffae3699eaad31">AILIA_TRACKER_SETTINGS_VERSION</a> = (1)</td></tr>
 <tr class="separator:aabc4067355259af607ffae3699eaad31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32972a1b75aa78c4373541d9625efcba"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a32972a1b75aa78c4373541d9625efcba">AILIA_TRACKER_FLAG_NONE</a> = (0)</td></tr>
+<tr class="separator:a32972a1b75aa78c4373541d9625efcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b86c803899b00bd72f8e74d0d61c6be"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTracker_1_1AiliaTracker.html#a7b86c803899b00bd72f8e74d0d61c6be">AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO</a> = (1)</td></tr>
+<tr class="separator:a7b86c803899b00bd72f8e74d0d61c6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a88c364fe58746b6f812e745313ea696d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88c364fe58746b6f812e745313ea696d">&#9670;&nbsp;</a></span>ailiaTrackerAddTarget()</h2>
+<a id="aa5940d018edeced77899dd49af229ad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5940d018edeced77899dd49af229ad2">&#9670;&nbsp;</a></span>ailiaTrackerAddTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,8 +138,14 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">AiliaDetector.AILIADetectorObject&#160;</td>
-          <td class="paramname"><em>target_objects</em>&#160;</td>
+          <td class="paramtype">ref AiliaDetector.AILIADetectorObject&#160;</td>
+          <td class="paramname"><em>detector_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -149,7 +159,8 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tracker</td><td>An AILIATracker instance pointer </td></tr>
-    <tr><td class="paramname">target_objects</td><td>Tracking target </td></tr>
+    <tr><td class="paramname">detector_object</td><td>A pointer to the tracking target </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_DETECTOR_OBJECT_VERSION </td></tr>
   </table>
   </dd>
 </dl>
@@ -176,7 +187,7 @@ Static Public Attributes</h2></td></tr>
 <p>Perform tracking. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+    <tr><td class="paramname">tracker</td><td>An AILIATracker instance pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -185,8 +196,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae43300f456f32e363aaffecef280f4ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae43300f456f32e363aaffecef280f4ce">&#9670;&nbsp;</a></span>ailiaTrackerCreate()</h2>
+<a id="a2d0a0c1c226fe32d64a91d1d6ecc9620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d0a0c1c226fe32d64a91d1d6ecc9620">&#9670;&nbsp;</a></span>ailiaTrackerCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,14 +217,20 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AILIATrackerSettings</a>&#160;</td>
+          <td class="paramtype">ref <a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AILIATrackerSettings</a>&#160;</td>
           <td class="paramname"><em>settings</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>version</em>&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -223,18 +240,19 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a network instance. </p>
+<p>Creates a AILIATracker instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>A pointer to the network instance pointer </td></tr>
-    <tr><td class="paramname">algorithm</td><td>AILIA_TRAÇKER_ALGORITHM_* </td></tr>
+    <tr><td class="paramname">tracker</td><td>A pointer to the AILIATracker instance pointer </td></tr>
+    <tr><td class="paramname">algorithm</td><td>AILIA_TRACKER_ALGORITHM_* </td></tr>
     <tr><td class="paramname">settings</td><td><a class="el" href="classailiaTracker_1_1AiliaTracker_1_1AILIATrackerSettings.html">AILIATrackerSettings</a> </td></tr>
     <tr><td class="paramname">version</td><td>AILIA_TRACKER_SETTINGS_VERSION </td></tr>
+    <tr><td class="paramname">flags</td><td>Logical OR of AILIA_TRACKER_FLAG_* </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
-<p>Creates a network instance. </p>
+<p>Creates a AILIATracker instance. </p>
 
 </div>
 </div>
@@ -254,10 +272,10 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>It destroys the network instance. </p>
+<p>It destroys the AILIATracker instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+    <tr><td class="paramname">tracker</td><td>An AILIATracker instance pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -284,7 +302,7 @@ Static Public Attributes</h2></td></tr>
 <p>Returns the details of errors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">net</td><td>The network instance pointer </td></tr>
+    <tr><td class="paramname">tracker</td><td>The AILIATracker instance pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -293,8 +311,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a16eeb8fc09304f0aad089ee16ba3a9ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16eeb8fc09304f0aad089ee16ba3a9ec">&#9670;&nbsp;</a></span>ailiaTrackerGetObject()</h2>
+<a id="a206ce034d9e5eba037cacf9894a60d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206ce034d9e5eba037cacf9894a60d75">&#9670;&nbsp;</a></span>ailiaTrackerGetObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +321,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">static int ailiaTracker.AiliaTracker.ailiaTrackerGetObject </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
-          <td class="paramname"><em>detector</em>, </td>
+          <td class="paramname"><em>tracker</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -342,12 +360,12 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
-<p>If ailiaDetectorCompute() is not run at all, the function returns AILIA_STATUS_INVALID_STATE . The detection results are sorted in the order of estimated probability. </p>
+<p>If <a class="el" href="classailiaTracker_1_1AiliaTracker.html#a48d9607c923ca362776ff6ce6d4e763b" title="Perform tracking.">ailiaTrackerCompute()</a> is not run at all, the function returns AILIA_STATUS_INVALID_STATE . The detection results are sorted in the order of estimated probability. </p>
 
 </div>
 </div>
-<a id="a5c3749699ca7c4147856c80575158165"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c3749699ca7c4147856c80575158165">&#9670;&nbsp;</a></span>ailiaTrackerGetObjectCount()</h2>
+<a id="ae23a6774f6c5e14d12629051cd0ecd9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23a6774f6c5e14d12629051cd0ecd9a">&#9670;&nbsp;</a></span>ailiaTrackerGetObjectCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +374,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">static int ailiaTracker.AiliaTracker.ailiaTrackerGetObjectCount </td>
           <td>(</td>
           <td class="paramtype">IntPtr&#160;</td>
-          <td class="paramname"><em>detector</em>, </td>
+          <td class="paramname"><em>tracker</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -375,7 +393,7 @@ Static Public Attributes</h2></td></tr>
 <p>Gets the number of detection results. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">detector</td><td>A detector instance pointer </td></tr>
+    <tr><td class="paramname">tracker</td><td>An AILIATracker instance pointer </td></tr>
     <tr><td class="paramname">obj_count</td><td>The number of objects </td></tr>
   </table>
   </dd>
@@ -396,6 +414,50 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const int ailiaTracker.AiliaTracker.AILIA_TRACKER_ALGORITHM_BYTE_TRACK = (0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b86c803899b00bd72f8e74d0d61c6be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b86c803899b00bd72f8e74d0d61c6be">&#9670;&nbsp;</a></span>AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ailiaTracker.AiliaTracker.AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO = (1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32972a1b75aa78c4373541d9625efcba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32972a1b75aa78c4373541d9625efcba">&#9670;&nbsp;</a></span>AILIA_TRACKER_FLAG_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ailiaTracker.AiliaTracker.AILIA_TRACKER_FLAG_NONE = (0)</td>
         </tr>
       </table>
   </td>

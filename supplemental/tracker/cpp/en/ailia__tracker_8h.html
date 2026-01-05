@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tracker
-   &#160;<span id="projectnumber">1.0.0.0</span>
+   &#160;<span id="projectnumber">1.1.0.0</span>
    </div>
   </td>
  </tr>
@@ -104,6 +104,12 @@ Macros</h2></td></tr>
 <tr class="separator:af038140dddbbbe2e14244e20547403f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5dc9c6782b9179c72444519cff8d2de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#af5dc9c6782b9179c72444519cff8d2de">AILIA_TRACKER_SETTINGS_VERSION</a>&#160;&#160;&#160;(1)</td></tr>
 <tr class="separator:af5dc9c6782b9179c72444519cff8d2de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ba2dbe1f25e2b761f818464ab26bee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">AILIA_TRACKER_FLAG_NONE</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:a84ba2dbe1f25e2b761f818464ab26bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default flag.  <a href="ailia__tracker_8h.html#a84ba2dbe1f25e2b761f818464ab26bee">More...</a><br /></td></tr>
+<tr class="separator:a84ba2dbe1f25e2b761f818464ab26bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#ad68b0ce785fa54ab6b38d9d7e38d759c">AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the rule that excludes targets from tracking when the aspect ratio is less than 1.6 for person tracking; this is useful for tracking cars and similar objects.  <a href="ailia__tracker_8h.html#ad68b0ce785fa54ab6b38d9d7e38d759c">More...</a><br /></td></tr>
+<tr class="separator:ad68b0ce785fa54ab6b38d9d7e38d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -114,12 +120,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adf27cf7ee65201d205ff700bae5df423"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#adf27cf7ee65201d205ff700bae5df423">ailiaTrackerCreate</a> (struct AILIATracker **tracker, int algorithm, <a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a> settings, int version)</td></tr>
-<tr class="memdesc:adf27cf7ee65201d205ff700bae5df423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a AILIATracker instance.  <a href="ailia__tracker_8h.html#adf27cf7ee65201d205ff700bae5df423">More...</a><br /></td></tr>
-<tr class="separator:adf27cf7ee65201d205ff700bae5df423"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb54a957450c87a19c366e5fbf3aea80"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#adb54a957450c87a19c366e5fbf3aea80">ailiaTrackerAddTarget</a> (struct AILIATracker *tracker, AILIADetectorObject target_object)</td></tr>
-<tr class="memdesc:adb54a957450c87a19c366e5fbf3aea80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set tracking target.  <a href="ailia__tracker_8h.html#adb54a957450c87a19c366e5fbf3aea80">More...</a><br /></td></tr>
-<tr class="separator:adb54a957450c87a19c366e5fbf3aea80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae45adaf13ec56adb65810527204ef06"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#aae45adaf13ec56adb65810527204ef06">ailiaTrackerCreate</a> (struct AILIATracker **tracker, int algorithm, const <a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a> *settings, int version, int flags)</td></tr>
+<tr class="memdesc:aae45adaf13ec56adb65810527204ef06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a AILIATracker instance.  <a href="ailia__tracker_8h.html#aae45adaf13ec56adb65810527204ef06">More...</a><br /></td></tr>
+<tr class="separator:aae45adaf13ec56adb65810527204ef06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d9807a95a319ba5e305358d50a413e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#a49d9807a95a319ba5e305358d50a413e">ailiaTrackerAddTarget</a> (struct AILIATracker *tracker, const AILIADetectorObject *detector_object, int version)</td></tr>
+<tr class="memdesc:a49d9807a95a319ba5e305358d50a413e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set tracking target.  <a href="ailia__tracker_8h.html#a49d9807a95a319ba5e305358d50a413e">More...</a><br /></td></tr>
+<tr class="separator:a49d9807a95a319ba5e305358d50a413e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae155bdb6d119771ae2cb32df912b6683"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="ailia__tracker_8h.html#a1c6a80cf85ef33500663112959784400">AILIA_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tracker_8h.html#ae155bdb6d119771ae2cb32df912b6683">ailiaTrackerCompute</a> (struct AILIATracker *tracker)</td></tr>
 <tr class="memdesc:ae155bdb6d119771ae2cb32df912b6683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform tracking.  <a href="ailia__tracker_8h.html#ae155bdb6d119771ae2cb32df912b6683">More...</a><br /></td></tr>
 <tr class="separator:ae155bdb6d119771ae2cb32df912b6683"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +170,38 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ByteTrack. </p>
+
+</div>
+</div>
+<a id="ad68b0ce785fa54ab6b38d9d7e38d759c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68b0ce785fa54ab6b38d9d7e38d759c">&#9670;&nbsp;</a></span>AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TRACKER_FLAG_ALLOW_WIDE_ASPECT_RATIO&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable the rule that excludes targets from tracking when the aspect ratio is less than 1.6 for person tracking; this is useful for tracking cars and similar objects. </p>
+
+</div>
+</div>
+<a id="a84ba2dbe1f25e2b761f818464ab26bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ba2dbe1f25e2b761f818464ab26bee">&#9670;&nbsp;</a></span>AILIA_TRACKER_FLAG_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TRACKER_FLAG_NONE&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default flag. </p>
 
 </div>
 </div>
@@ -225,8 +263,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="adb54a957450c87a19c366e5fbf3aea80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb54a957450c87a19c366e5fbf3aea80">&#9670;&nbsp;</a></span>ailiaTrackerAddTarget()</h2>
+<a id="a49d9807a95a319ba5e305358d50a413e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d9807a95a319ba5e305358d50a413e">&#9670;&nbsp;</a></span>ailiaTrackerAddTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,8 +278,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">AILIADetectorObject&#160;</td>
-          <td class="paramname"><em>target_object</em>&#160;</td>
+          <td class="paramtype">const AILIADetectorObject *&#160;</td>
+          <td class="paramname"><em>detector_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -255,7 +299,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tracker</td><td>An AILIATracker instance pointer </td></tr>
-    <tr><td class="paramname">target_objects</td><td>Tracking target </td></tr>
+    <tr><td class="paramname">detector_object</td><td>A pointer to the tracking target </td></tr>
+    <tr><td class="paramname">version</td><td>AILIA_DETECTOR_OBJECT_VERSION </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,8 +336,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adf27cf7ee65201d205ff700bae5df423"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf27cf7ee65201d205ff700bae5df423">&#9670;&nbsp;</a></span>ailiaTrackerCreate()</h2>
+<a id="aae45adaf13ec56adb65810527204ef06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae45adaf13ec56adb65810527204ef06">&#9670;&nbsp;</a></span>ailiaTrackerCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,14 +357,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="ailia__tracker_8h.html#a3d0e66f9ba2dbf53f6b5d791a4a296ed">AILIATrackerSettings</a> *&#160;</td>
           <td class="paramname"><em>settings</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>version</em>&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -333,9 +384,10 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tracker</td><td>A pointer to the AILIATracker instance pointer </td></tr>
-    <tr><td class="paramname">algorithm</td><td>AILIA_TRAÇKER_ALGORITHM_* </td></tr>
-    <tr><td class="paramname">settings</td><td>AILIATrackerSettings </td></tr>
+    <tr><td class="paramname">algorithm</td><td>AILIA_TRACKER_ALGORITHM_* </td></tr>
+    <tr><td class="paramname">settings</td><td>A pointer to the AILIATrackerSettings </td></tr>
     <tr><td class="paramname">version</td><td>AILIA_TRACKER_SETTINGS_VERSION </td></tr>
+    <tr><td class="paramname">flags</td><td>Logical OR of AILIA_TRACKER_FLAG_* </td></tr>
   </table>
   </dd>
 </dl>
@@ -448,7 +500,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
-<p>If ailiaDetectorCompute() is not run at all, the function returns AILIA_STATUS_INVALID_STATE . The detection results are sorted in the order of estimated probability. </p>
+<p>If <a class="el" href="ailia__tracker_8h.html#ae155bdb6d119771ae2cb32df912b6683" title="Perform tracking.">ailiaTrackerCompute()</a> is not run at all, the function returns AILIA_STATUS_INVALID_STATE . The detection results are sorted in the order of estimated probability. </p>
 
 </div>
 </div>
