@@ -66,52 +66,52 @@ $(function() {
 <div class="title">セットアップ </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md8"></a>
 コンパイラのセットアップ</h1>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Windows</h2>
-<p>VisualStudio 2019以降とcmakeが必要です。</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
-macOS</h2>
-<p>Xcode 14.2以降とcmakeが必要です。</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
-Linux</h2>
-<p>clangとcmakeが必要です。</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
-ライセンスファイルの配置</h1>
-<p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
 <h2><a class="anchor" id="autotoc_md9"></a>
 Windows</h2>
-<p>ailia.dllと同じフォルダ（サンプルの場合はcppフォルダ）にailia.licを配置します。</p>
+<p>VisualStudio 2019以降とcmakeが必要です。</p>
 <h2><a class="anchor" id="autotoc_md10"></a>
 macOS</h2>
-<p>~/Library/SHALO/にailia.licを配置します。</p>
+<p>Xcode 14.2以降とcmakeが必要です。</p>
 <h2><a class="anchor" id="autotoc_md11"></a>
 Linux</h2>
-<p>~/.shalo/にailia.licを配置します。</p>
+<p>clangとcmakeが必要です。</p>
 <h1><a class="anchor" id="autotoc_md12"></a>
+ライセンスファイルの配置</h1>
+<p>評価版の利用にはライセンスファイルが必要です。 下記のフォルダにライセンスファイルを配置してください。</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Windows</h2>
+<p>ailia.dllと同じフォルダ（サンプルの場合はcppフォルダ）にailia.licを配置します。</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+macOS</h2>
+<p>~/Library/SHALO/にailia.licを配置します。</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Linux</h2>
+<p>~/.shalo/にailia.licを配置します。</p>
+<h1><a class="anchor" id="autotoc_md16"></a>
 サンプルのビルド</h1>
 <p>cppフォルダに移動して、プラットフォーム別のビルドコマンドを実行します。</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Windows</h2>
 <div class="fragment"><div class="line">cmake -G &quot;NMakeMakefiles&quot; .</div>
 <div class="line">nmake</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
 macOS</h2>
 <div class="fragment"><div class="line">cmake .</div>
 <div class="line">make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
 Linux</h2>
 <div class="fragment"><div class="line">cmake .</div>
 <div class="line">make</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md16"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
 モデルファイルのダウンロード</h1>
 <p>以下のリンクより、モデルファイルをダウンロードします。ダウンロードしたモデルファイルはビルドして生成したバイナリと同じフォルダに配置してください</p>
 <ul>
 <li><a href="https://storage.googleapis.com/ailia-models/yolox/yolox_s.opt.onnx">重みファイル</a></li>
 <li><a href="https://storage.googleapis.com/ailia-models/yolox/yolox_s.opt.onnx.prototxt">モデルファイル</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md21"></a>
 サンプルの実行</h1>
 <div class="fragment"><div class="line">./ailia_tracker_sample &lt;ビデオのパス&gt;</div>
 </div><!-- fragment --><p>出力例です。</p>
@@ -122,7 +122,7 @@ Linux</h2>
 <div class="line">enb_id: 2</div>
 <div class="line">selected enb name : MPSDNN-Apple M2</div>
 <div class="line">Program finished successfully.</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md22"></a>
 サンプルで指定可能なオプション</h1>
 <p>サンプルでは下記の引数を順に指定可能です。</p>
 <div class="fragment"><div class="line">./ailia_tracker_sample [-h, --help] VIDEO_PATH [-w WEB_CAMERA] [-o OUTPUT_VIDEO_PATH] [-e ENV_ID]</div>
@@ -139,9 +139,9 @@ Linux</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">バックエンドの環境   </td><td class="markdownTableBodyNone">バックエンドの環境を設定します   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 プラットフォーム別の注意点</h1>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 macOSにおけるダウンロード属性の解除</h2>
 <p>macOSにおいてブラウザからダウンロードしたバイナリには、ダウンロード属性が付与され、実行できない場合があります。 その場合、dylibを右クリックから実行して開くことで、ダウンロード属性を解除することが可能です。 また、コマンドラインから下記のコマンドを実行することでも、ダウンロード属性を解除することが可能です。</p>
 <div class="fragment"><div class="line">xattr -d com.apple.quarantine libailia_tracker.dylib</div>

@@ -66,17 +66,17 @@ $(function() {
 <div class="title">機能 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md50"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md54"></a>
 ailia Trackerの機能</h1>
 <p>本ページでは、CとC#で共通に使用できる機能を解説します。</p>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md55"></a>
 基本タスク</h2>
-<h3><a class="anchor" id="autotoc_md52"></a>
+<h3><a class="anchor" id="autotoc_md56"></a>
 使用可能なAIモデル</h3>
 <p>物体検知モデルとして、yolox_sが使用可能です。また、物体追跡モデルとして、BYTETrackが使用可能です。</p>
-<h2><a class="anchor" id="autotoc_md53"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 インタフェース</h2>
-<h3><a class="anchor" id="autotoc_md54"></a>
+<h3><a class="anchor" id="autotoc_md58"></a>
 トラッキング結果</h3>
 <p>トラッキング結果として、下記の内容が取得可能です。</p>
 <table class="markdownTable">
@@ -97,12 +97,12 @@ ailia Trackerの機能</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">h   </td><td class="markdownTableBodyNone">バウンディングボックスの縦幅   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md55"></a>
+<h2><a class="anchor" id="autotoc_md59"></a>
 用途特化型の機能</h2>
-<h3><a class="anchor" id="autotoc_md56"></a>
+<h3><a class="anchor" id="autotoc_md60"></a>
 トラッキング対象の制約</h3>
 <p>ailiaTrackerGetObjectで取得できるAILAITrackerObjectインスタンスのcategoryに対象物体のカテゴリが含まれています。そのため、例えば人のみの追跡結果を利用したい場合は対応カテゴリが0なので、categoryが0であるAILIATrackerObjectを利用するようにフィルタリングいただくことで実現することが可能です。</p>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 GPUの使用</h2>
 <p>物体検知を実行する際に、WindowsとLinux環境ではcuDNNを使用したGPU推論が可能です。 cuDNNを使用するには、NVIDIAのサイトから、CUDA ToolkitとcuDNNをインストールする必要があります。</p>
 <ul>

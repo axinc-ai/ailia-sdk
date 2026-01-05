@@ -97,7 +97,10 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>matching threshold for tracking default=0.8 </p>
+<p>フレーム間での物体対応付け（マッチング）を行う際の IoU しきい値です。 <br  />
+ IoU がこの値以上の場合、同一物体としてマッチングされます。 <br  />
+ 値を大きくするとマッチングが厳密になります。 <br  />
+ デフォルト値：0.8 </p>
 
 </div>
 </div>
@@ -112,7 +115,9 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>NMS threshold default=0.7 </p>
+<p>重複する検出を除去するための NMS（非最大抑制）しきい値です。 <br  />
+ Intersection over Union (IoU) がこの値を超える検出結果は重複として統合されます。 <br  />
+ デフォルト値：0.7 </p>
 
 </div>
 </div>
@@ -127,7 +132,9 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Score threshold to filter the result default=0.1 </p>
+<p>検出結果を有効とみなすスコア（信頼度）の下限値です。 <br  />
+ この値より小さいスコアの検出は無視されます。 <br  />
+ デフォルト値：0.1 </p>
 
 </div>
 </div>
@@ -142,7 +149,9 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>the frames for keep lost tracks default=30 </p>
+<p>見失ったトラック情報を保持しておく最大フレーム数です。 <br  />
+ この間に同一物体を再検出できた場合、トラッキングを再開します。 <br  />
+ デフォルト値：30 </p>
 
 </div>
 </div>
@@ -157,7 +166,12 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>tracking confidence threshold default=0.5 </p>
+<p>トラッキング対象として更新に使用する検出スコアのしきい値です。 <br  />
+ 通常はこの値以上のスコアを持つ検出のみでトラックを更新しますが、 <br  />
+ ByteTrack の手法では、より低いスコア（<code>score_threshold</code> 以上～この値未満）の検出であっても <br  />
+ IoU によるマッチングが成立した場合は補助的にトラック更新に利用されることがあります。 <br  />
+ 値を高くすると厳密な追跡となり、低くすると一時的に信頼度が下がった物体も追跡しやすくなります。 <br  />
+ デフォルト値：0.5 </p>
 
 </div>
 </div>
