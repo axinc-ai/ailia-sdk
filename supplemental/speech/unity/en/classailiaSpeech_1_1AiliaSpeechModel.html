@@ -135,6 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3777edaf1b0efc36bfd5c7eb1e8ac550"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechModel.html#a3777edaf1b0efc36bfd5c7eb1e8ac550">SetConstraint</a> (string constraint, int constraint_type)</td></tr>
 <tr class="memdesc:a3777edaf1b0efc36bfd5c7eb1e8ac550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set constraint.  <a href="classailiaSpeech_1_1AiliaSpeechModel.html#a3777edaf1b0efc36bfd5c7eb1e8ac550">More...</a><br /></td></tr>
 <tr class="separator:a3777edaf1b0efc36bfd5c7eb1e8ac550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf26992376fb791d11fd22ae543acb10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechModel.html#aaf26992376fb791d11fd22ae543acb10">SetSilentThreshold</a> (float silent_threshold, float speech_sec, float no_speech_sec)</td></tr>
+<tr class="memdesc:aaf26992376fb791d11fd22ae543acb10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set silent threshold.  <a href="classailiaSpeech_1_1AiliaSpeechModel.html#aaf26992376fb791d11fd22ae543acb10">More...</a><br /></td></tr>
+<tr class="separator:aaf26992376fb791d11fd22ae543acb10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad347c1bc5581de11c99c7dacd8ba5e10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaSpeech_1_1AiliaSpeechModel.html#ad347c1bc5581de11c99c7dacd8ba5e10">Transcribe</a> (float[] waveData, uint frequency, uint channels, bool tail)</td></tr>
 <tr class="memdesc:ad347c1bc5581de11c99c7dacd8ba5e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform speech recognition.  <a href="classailiaSpeech_1_1AiliaSpeechModel.html#ad347c1bc5581de11c99c7dacd8ba5e10">More...</a><br /></td></tr>
 <tr class="separator:ad347c1bc5581de11c99c7dacd8ba5e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -414,11 +417,11 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get the intermediate result of Speech2Text. </p>
 <dl class="section return"><dt>Returns</dt><dd>Transcribe results. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;                                       {</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        lock (m_intermediate_lock_async){</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;            <span class="keywordflow">return</span> m_intermediate_text;</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        }</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;                                       {</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;        lock (m_intermediate_lock_async){</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;            <span class="keywordflow">return</span> m_intermediate_text;</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        }</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -447,14 +450,14 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get results and clear of Speech2Text. </p>
 <dl class="section return"><dt>Returns</dt><dd>Transcribe results. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                                    {</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;        lock (m_lock_async)</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        {</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            List&lt;string&gt; results = <span class="keyword">new</span> List&lt;string&gt;(m_results);</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            m_results.Clear();</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;            <span class="keywordflow">return</span> results;</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        }</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;                                    {</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        lock (m_lock_async)</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        {</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;            List&lt;string&gt; results = <span class="keyword">new</span> List&lt;string&gt;(m_results);</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;            m_results.Clear();</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            <span class="keywordflow">return</span> results;</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        }</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -483,14 +486,14 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get structured results and clear of Speech2Text. </p>
 <dl class="section return"><dt>Returns</dt><dd>Transcribe results. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        {</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;            lock (m_lock_async)</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;            {</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;                List&lt;AiliaSpeechText&gt; results_struct = <span class="keyword">new</span> List&lt;AiliaSpeechText&gt;(m_results_struct);</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                m_results_struct.Clear();</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;                <span class="keywordflow">return</span> results_struct;</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            }</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;        }</div>
+<div class="fragment"><div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        {</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;            lock (m_lock_async)</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;            {</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;                List&lt;AiliaSpeechText&gt; results_struct = <span class="keyword">new</span> List&lt;AiliaSpeechText&gt;(m_results_struct);</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;                m_results_struct.Clear();</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;                <span class="keywordflow">return</span> results_struct;</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;            }</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -527,19 +530,19 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        lock (m_intermediate_lock_async){</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                 <span class="keywordtype">string</span> decoded_text = Marshal.PtrToStringAnsi(text);</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                 m_intermediate_text = decoded_text;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;            }<span class="keywordflow">catch</span>(Exception e){</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;            }</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        }</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keywordflow">if</span> (Marshal.ReadInt32(handle) != 0){</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;            <span class="keywordflow">return</span> -1; <span class="comment">// 中断</span></div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        }</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        lock (m_intermediate_lock_async){</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                 <span class="keywordtype">string</span> decoded_text = Marshal.PtrToStringAnsi(text);</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                 m_intermediate_text = decoded_text;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;            }<span class="keywordflow">catch</span>(Exception e){</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;            }</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        }</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keywordflow">if</span> (Marshal.ReadInt32(handle) != 0){</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            <span class="keywordflow">return</span> -1; <span class="comment">// 中断</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        }</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -568,12 +571,12 @@ Protected Member Functions</h2></td></tr>
 
 <p>Gets whether all audio processing is complete. </p>
 <dl class="section return"><dt>Returns</dt><dd>If Speech2Text is complete, it returns true , or false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                             {</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        lock (m_lock_async)</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        {</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;            <span class="keywordflow">return</span> m_complete;</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        }</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                             {</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        lock (m_lock_async)</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        {</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;            <span class="keywordflow">return</span> m_complete;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        }</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -633,12 +636,12 @@ Protected Member Functions</h2></td></tr>
 
 <p>Check is processing sub thread. </p>
 <dl class="section return"><dt>Returns</dt><dd>If sub thread is processing, it returns true , or false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                              {</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        lock (m_lock_async)</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        {</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;            <span class="keywordflow">return</span> m_processing;</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        }</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;                              {</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        lock (m_lock_async)</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        {</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;            <span class="keywordflow">return</span> m_processing;</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        }</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -667,12 +670,12 @@ Protected Member Functions</h2></td></tr>
 
 <p>Check is running Speech2Text. </p>
 <dl class="section return"><dt>Returns</dt><dd>If Speech2Text is running, it returns true , or false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                                {</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        lock (m_lock_async)</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        {</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            <span class="keywordflow">return</span> m_decoding;</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        }</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                                {</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        lock (m_lock_async)</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        {</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;            <span class="keywordflow">return</span> m_decoding;</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        }</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -817,7 +820,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
-<div class="ttc" id="aclassailiaSpeech_1_1AiliaSpeechModel_html_a7423ac9567d7dadce3385c8a7a421d44"><div class="ttname"><a href="classailiaSpeech_1_1AiliaSpeechModel.html#a7423ac9567d7dadce3385c8a7a421d44">ailiaSpeech.AiliaSpeechModel.IntermediateCallback</a></div><div class="ttdeci">static int IntermediateCallback(IntPtr handle, IntPtr text)</div><div class="ttdef"><b>Definition:</b> AiliaSpeechModel.cs:552</div></div>
+<div class="ttc" id="aclassailiaSpeech_1_1AiliaSpeechModel_html_a7423ac9567d7dadce3385c8a7a421d44"><div class="ttname"><a href="classailiaSpeech_1_1AiliaSpeechModel.html#a7423ac9567d7dadce3385c8a7a421d44">ailiaSpeech.AiliaSpeechModel.IntermediateCallback</a></div><div class="ttdeci">static int IntermediateCallback(IntPtr handle, IntPtr text)</div><div class="ttdef"><b>Definition:</b> AiliaSpeechModel.cs:584</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1125,17 +1128,17 @@ Protected Member Functions</h2></td></tr>
 
 <p>Initialize the Speech2Text state. </p>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns true , or false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;                                      {</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        <span class="keywordtype">int</span> status = AiliaSpeech.ailiaSpeechResetTranscribeState(net);</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        lock (m_lock_async)</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        {</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;            m_complete = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        }</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;        <span class="keywordflow">if</span> (status == 0){</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;        }</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                                      {</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <span class="keywordtype">int</span> status = AiliaSpeech.ailiaSpeechResetTranscribeState(net);</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;        lock (m_lock_async)</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        {</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;            m_complete = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        }</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        <span class="keywordflow">if</span> (status == 0){</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        }</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1242,6 +1245,68 @@ Protected Member Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="aaf26992376fb791d11fd22ae543acb10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf26992376fb791d11fd22ae543acb10">&#9670;&nbsp;</a></span>SetSilentThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ailiaSpeech.AiliaSpeechModel.SetSilentThreshold </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>silent_threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>speech_sec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>no_speech_sec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set silent threshold. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">net</td><td>A network instance pointer </td></tr>
+    <tr><td class="paramname">silent_threshold</td><td>volume threshold (Standard value 0.5) </td></tr>
+    <tr><td class="paramname">speech_sec</td><td>speech time (sec) (Standard value 1.0) </td></tr>
+    <tr><td class="paramname">no_speech_sec</td><td>no_speech time (sec) (Standard value 1.0) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns true , or false otherwise. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;                                                                                                 {</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordtype">int</span> status = AiliaSpeech.ailiaSpeechSetSilentThreshold(net, silent_threshold, speech_sec, no_speech_sec);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        Check(status, <span class="stringliteral">&quot;ailiaSpeechSetSilentThreshold&quot;</span>);</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordflow">if</span> (status != 0){</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        }</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ad347c1bc5581de11c99c7dacd8ba5e10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad347c1bc5581de11c99c7dacd8ba5e10">&#9670;&nbsp;</a></span>Transcribe()</h2>
 
@@ -1299,21 +1364,21 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns true , or false otherwise. @detail Run speech recognition. Non -blocked API. When the execution is completed, the IsTranscribed API returns True. Execution results can be obtained with the GetResults API. The result of execution can be obtained with the GetIntermediateText API. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    {</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        <span class="keywordflow">if</span> (waveData.Length == 0){</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        }</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        lock (m_lock_async)</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        {</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;            threadChannels = channels;</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;            threadFrequency = frequency;</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;            threadWaveQueue.Add(waveData);</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;            threadComplete = tail;</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            m_processing = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            m_auto_event.Set();</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        }</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    {</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        <span class="keywordflow">if</span> (waveData.Length == 0){</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        }</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        lock (m_lock_async)</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        {</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            threadChannels = channels;</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            threadFrequency = frequency;</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            threadWaveQueue.Add(waveData);</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;            threadComplete = tail;</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;            m_processing = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            m_auto_event.Set();</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        }</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
