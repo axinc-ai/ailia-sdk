@@ -102,7 +102,8 @@ ailia Tracker is a library for tracking the movement of objects based on object 
 
 - [Release note](https://github.com/ailia-ai/ailia-sdk/wiki)
 - [Download a free evaluation version of ailia SDK](https://axip-console.appspot.com/trial/terms/AILIA?lang=en)
-- [youtube](https://www.youtube.com/channel/UCN-KzWACywDpBNOQ6FkIm0g)
+- [YouTube Channel](https://www.youtube.com/channel/UCN-KzWACywDpBNOQ6FkIm0g)
+- [TFLite version](https://github.com/ailia-ai/ailia-tflite-runtime)
 
 ## Contact
 
