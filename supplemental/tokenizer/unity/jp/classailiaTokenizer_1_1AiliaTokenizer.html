@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.5.1.0</span>
+   &#160;<span id="projectnumber">1.6.0.0</span>
    </div>
   </td>
  </tr>
@@ -176,6 +176,8 @@ $(function() {
 <tr class="separator:abbdcf826ea2b5aeaf76340d4e90bcb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aabb46d8825d8ed402a6f55a53b49b8"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a4aabb46d8825d8ed402a6f55a53b49b8">AILIA_TOKENIZER_TYPE_LLAMA</a> = (10)</td></tr>
 <tr class="separator:a4aabb46d8825d8ed402a6f55a53b49b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95744006146fa1df15334754b37e5a87"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a95744006146fa1df15334754b37e5a87">AILIA_TOKENIZER_TYPE_GEMMA</a> = (11)</td></tr>
+<tr class="separator:a95744006146fa1df15334754b37e5a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d9bc9caf5d8bf603b38d04fe4729270"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a4d9bc9caf5d8bf603b38d04fe4729270">AILIA_TOKENIZER_FLAG_NONE</a> = (0)</td></tr>
 <tr class="separator:a4d9bc9caf5d8bf603b38d04fe4729270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a669a27e11383ab58d2cd06731138f1b2"><td class="memItemLeft" align="right" valign="top">const Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classailiaTokenizer_1_1AiliaTokenizer.html#a669a27e11383ab58d2cd06731138f1b2">AILIA_TOKENIZER_FLAG_UTF8_SAFE</a> = (1)</td></tr>
@@ -891,7 +893,7 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
-<p>追加トークンファイル (json) を読み込みます。AILIA_TOKENIZER_TYPE_WHISPERの場合のみ有効です。 </p>
+<p>追加トークンファイル (json) を読み込みます。AILIA_TOKENIZER_TYPE_WHISPERもしくはAILIA_TOKENIZER_TYPE_XLM_ROBERTAの場合のみ有効です。 </p>
 
 </div>
 </div>
@@ -1309,6 +1311,28 @@ $(function() {
       <table class="memname">
         <tr>
           <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_CLIP = (1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95744006146fa1df15334754b37e5a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95744006146fa1df15334754b37e5a87">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_GEMMA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int32 ailiaTokenizer.AiliaTokenizer.AILIA_TOKENIZER_TYPE_GEMMA = (11)</td>
         </tr>
       </table>
   </td>

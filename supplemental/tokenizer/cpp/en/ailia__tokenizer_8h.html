@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.5.1.0</span>
+   &#160;<span id="projectnumber">1.6.0.0</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,9 @@ Macros</h2></td></tr>
 <tr class="memitem:aff7ac086f50335f5ed92aa341afe042d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#aff7ac086f50335f5ed92aa341afe042d">AILIA_TOKENIZER_TYPE_LLAMA</a>&#160;&#160;&#160;(10)</td></tr>
 <tr class="memdesc:aff7ac086f50335f5ed92aa341afe042d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenizer for LLAMA.  <a href="ailia__tokenizer_8h.html#aff7ac086f50335f5ed92aa341afe042d">More...</a><br /></td></tr>
 <tr class="separator:aff7ac086f50335f5ed92aa341afe042d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc176502a252a49cdb4c02f16ff5475"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#abfc176502a252a49cdb4c02f16ff5475">AILIA_TOKENIZER_TYPE_GEMMA</a>&#160;&#160;&#160;(11)</td></tr>
+<tr class="memdesc:abfc176502a252a49cdb4c02f16ff5475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenizer for GEMMA.  <a href="ailia__tokenizer_8h.html#abfc176502a252a49cdb4c02f16ff5475">More...</a><br /></td></tr>
+<tr class="separator:abfc176502a252a49cdb4c02f16ff5475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28433a1ad8439f695ea99f23b4bc2d47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#a28433a1ad8439f695ea99f23b4bc2d47">AILIA_TOKENIZER_FLAG_NONE</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="memdesc:a28433a1ad8439f695ea99f23b4bc2d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default flag.  <a href="ailia__tokenizer_8h.html#a28433a1ad8439f695ea99f23b4bc2d47">More...</a><br /></td></tr>
 <tr class="separator:a28433a1ad8439f695ea99f23b4bc2d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +342,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Tokenizer for Clip. </p>
+
+</div>
+</div>
+<a id="abfc176502a252a49cdb4c02f16ff5475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc176502a252a49cdb4c02f16ff5475">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_GEMMA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TOKENIZER_TYPE_GEMMA&#160;&#160;&#160;(11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tokenizer for GEMMA. </p>
 
 </div>
 </div>
@@ -1253,7 +1272,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If this function is successful, it returns AILIA_STATUS_SUCCESS , or an error code otherwise.</dd></dl>
-<p>Open a added tokens file (json). This API only requires for AILIA_TOKENIZER_TYPE_WHISPER. </p>
+<p>Open a added tokens file (json). This API only requires for AILIA_TOKENIZER_TYPE_WHISPER or AILIA_TOKENIZER_TYPE_XLM_ROBERTA. </p>
 
 </div>
 </div>
