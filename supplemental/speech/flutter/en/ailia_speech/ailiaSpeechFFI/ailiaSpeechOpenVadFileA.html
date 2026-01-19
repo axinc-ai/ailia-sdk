@@ -71,14 +71,18 @@
 @param vad_path onnxファイルのパス名(MBSC)
 @param vad_type AILIA_SPEECH_VAD_TYPE_*
 @return
-成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</p>
+成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+VADを有効にするにはailiaSpeechSetSilentThresholdで判定しきい値を設定する必要があります。</p>
 <p>~english
 @brief Set vad model for voice activity detection.
 @param net A network instance pointer
 @param vad_path The path name to the onnx file (MBSC)
 @param vad_type AILIA_SPEECH_VAD_TYPE_*
 @return
-If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an error code otherwise.</p>
+If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an error code otherwise.
+@details
+To enable VAD, you need to set the detection threshold using ailiaSpeechSetSilentThreshold.</p>
 </section>
 
 
@@ -123,7 +127,7 @@ If this function is successful, it returns  \ref AILIA_STATUS_SUCCESS , or an er
 <footer>
   <span class="no-break">
     ailia_speech
-      1.5.0
+      1.5.2
   </span>
   
 </footer>

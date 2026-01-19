@@ -1429,7 +1429,7 @@ ailiaSpeechFinalizeInputDataを実行後、ailiaSpeechPushInputDataの実行前�
 </dt>
 <dd>
   ~japanese
-@brief 後処理知に適用するAIモデルを指定します。(MBSC)
+@brief 後処理に適用するAIモデルを指定します。(MBSC)
 @param net ネットワークオブジェクトポインタ
 @param encoder_path onnxファイルのパス名(MBSC)
 @param decoder_path onnxファイルのパス名(MBSC)
@@ -1452,7 +1452,7 @@ ailiaSpeechFinalizeInputDataを実行後、ailiaSpeechPushInputDataの実行前�
 </dt>
 <dd>
   ~japanese
-@brief 後処理知に適用するAIモデルを指定します。(UTF16)
+@brief 後処理に適用するAIモデルを指定します。(UTF16)
 @param net ネットワークオブジェクトポインタ
 @param encoder_path onnxファイルのパス名(UTF16)
 @param decoder_path onnxファイルのパス名(UTF16)
@@ -1481,6 +1481,8 @@ ailiaSpeechFinalizeInputDataを実行後、ailiaSpeechPushInputDataの実行前�
 @param vad_type AILIA_SPEECH_VAD_TYPE_*
 @return
 成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+VADを有効にするにはailiaSpeechSetSilentThresholdで判定しきい値を設定する必要があります。
   
 
 </dd>
@@ -1500,6 +1502,8 @@ ailiaSpeechFinalizeInputDataを実行後、ailiaSpeechPushInputDataの実行前�
 @param vad_type AILIA_SPEECH_VAD_TYPE_*
 @return
 成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。
+@details
+VADを有効にするにはailiaSpeechSetSilentThresholdで判定しきい値を設定する必要があります。
   
 
 </dd>
@@ -1655,9 +1659,9 @@ languageに"auto"を指定すると自動選択を行います。
   ~japanese
 @brief 無音判定の閾値を設定します。
 @param net ネットワークオブジェクトポインタ
-@param silent_threshold  有音判定のしきい値
-@param speech_sec    有音区間の時間（秒数）
-@param no_speech_sec 無音区間の時間（秒数）
+@param silent_threshold  有音判定のしきい値（標準値0.5）
+@param speech_sec    有音区間の時間（秒数）（標準値1.0）
+@param no_speech_sec 無音区間の時間（秒数）（標準値1.0）
 @return
 成功した場合は \ref AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す
 @details
@@ -2156,7 +2160,7 @@ ailiaSetInputBlobData() を用いて入力を与えた場合などに用いま�
 <footer>
   <span class="no-break">
     ailia_speech
-      1.5.0
+      1.5.2
   </span>
   
 </footer>
