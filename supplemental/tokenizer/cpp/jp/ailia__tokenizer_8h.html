@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ailia_tokenizer
-   &#160;<span id="projectnumber">1.5.1.0</span>
+   &#160;<span id="projectnumber">1.6.0.0</span>
    </div>
   </td>
  </tr>
@@ -126,6 +126,9 @@ ailia_tokenizer.h の依存先関係図:</div>
 <tr class="memitem:aff7ac086f50335f5ed92aa341afe042d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#aff7ac086f50335f5ed92aa341afe042d">AILIA_TOKENIZER_TYPE_LLAMA</a>&#160;&#160;&#160;(10)</td></tr>
 <tr class="memdesc:aff7ac086f50335f5ed92aa341afe042d"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLAMA向けのトークナイザ  <a href="ailia__tokenizer_8h.html#aff7ac086f50335f5ed92aa341afe042d">[詳解]</a><br /></td></tr>
 <tr class="separator:aff7ac086f50335f5ed92aa341afe042d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc176502a252a49cdb4c02f16ff5475"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#abfc176502a252a49cdb4c02f16ff5475">AILIA_TOKENIZER_TYPE_GEMMA</a>&#160;&#160;&#160;(11)</td></tr>
+<tr class="memdesc:abfc176502a252a49cdb4c02f16ff5475"><td class="mdescLeft">&#160;</td><td class="mdescRight">GEMMA向けのトークナイザ  <a href="ailia__tokenizer_8h.html#abfc176502a252a49cdb4c02f16ff5475">[詳解]</a><br /></td></tr>
+<tr class="separator:abfc176502a252a49cdb4c02f16ff5475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28433a1ad8439f695ea99f23b4bc2d47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ailia__tokenizer_8h.html#a28433a1ad8439f695ea99f23b4bc2d47">AILIA_TOKENIZER_FLAG_NONE</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="memdesc:a28433a1ad8439f695ea99f23b4bc2d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">フラグを設定しません  <a href="ailia__tokenizer_8h.html#a28433a1ad8439f695ea99f23b4bc2d47">[詳解]</a><br /></td></tr>
 <tr class="separator:a28433a1ad8439f695ea99f23b4bc2d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,7 +238,7 @@ ailia_tokenizer.h の依存先関係図:</div>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>ailia Tokenizer NLP TOKENIZER ライブラリ </p>
 <dl class="section copyright"><dt>著作権所有</dt><dd>AXELL CORPORATION, ailia Inc. </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2024/07/26 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2026/01/18 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a1c6a80cf85ef33500663112959784400"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c6a80cf85ef33500663112959784400">&#9670;&nbsp;</a></span>AILIA_API</h2>
@@ -346,6 +349,22 @@ ailia_tokenizer.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>Clip向けのトークナイザ </p>
+
+</div>
+</div>
+<a id="abfc176502a252a49cdb4c02f16ff5475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc176502a252a49cdb4c02f16ff5475">&#9670;&nbsp;</a></span>AILIA_TOKENIZER_TYPE_GEMMA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AILIA_TOKENIZER_TYPE_GEMMA&#160;&#160;&#160;(11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GEMMA向けのトークナイザ </p>
 
 </div>
 </div>
@@ -1256,7 +1275,7 @@ ailia_tokenizer.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>成功した場合は AILIA_STATUS_SUCCESS 、そうでなければエラーコードを返す。</dd></dl>
-<p>追加トークンファイル (json) を読み込みます。AILIA_TOKENIZER_TYPE_WHISPERの場合のみ有効です。 </p>
+<p>追加トークンファイル (json) を読み込みます。AILIA_TOKENIZER_TYPE_WHISPERもしくはAILIA_TOKENIZER_TYPE_XLM_ROBERTAの場合のみ有効です。 </p>
 
 </div>
 </div>

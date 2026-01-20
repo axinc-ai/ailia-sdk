@@ -6,12 +6,12 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ailia_tokenizer package &mdash; ailia Tokenizer Python API 1.5.1 documentation</title>
+  <title>ailia_tokenizer package &mdash; ailia Tokenizer Python API 1.6.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
-      <script src="_static/documentation_options.js?v=44dfd65d"></script>
+      <script src="_static/documentation_options.js?v=72d88caf"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -716,6 +716,7 @@ with EOT if <cite>_retain_sot_replace_to_eot=True</cite>.</p></li>
 <ul class="simple">
 <li><p>SentencePiece model required (<cite>sentencepiece.bpe.model</cite>).</p></li>
 <li><p>PAD token ID is set to 1 as used in fairseq.</p></li>
+<li><p>If added_tokens.json exists in the tokenizer folder, load it additionally.</p></li>
 </ul>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span> <span class="o">=</span> <span class="n">XLMRobertaTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;./tokenizer/&quot;</span><span class="p">)</span>
